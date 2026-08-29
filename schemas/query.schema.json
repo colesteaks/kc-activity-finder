@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/kc-activity-finder/query.schema.json",
+  "title": "KC activity query",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "mode", "as_of", "window", "home_base", "preferences"],
+  "properties": {
+    "version": {"const": 1},
+    "mode": {"enum": ["weekend-current", "signup-horizon"]},
+    "as_of": {"type": "string", "format": "date-time"},
+    "window": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["start", "end"],
+      "properties": {
+        "start": {"type": "string", "format": "date"},
+        "end": {"type": "string", "format": "date"}
+      }
+    },
+    "home_base": {"type": "string", "minLength": 1},
+    "party": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "adults": {"type": "integer", "minimum": 0},
+        "children": {"type": "integer", "minimum": 0},
+        "access_needs": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "preferences": {"type": "array", "items": {"type": "string"}},
+    "constraints": {"type": "array", "items": {"type": "string"}},
+    "regional_wildcards": {"type": "boolean", "default": true}
+  }
+}

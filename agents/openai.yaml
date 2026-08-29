@@ -1,0 +1,4 @@
+interface:
+  display_name: "KC Activity Finder"
+  short_description: "Source-first Kansas City activity recommendations"
+  default_prompt: "Use $kc-activity-finder to find well-verified activities that fit my timing and preferences."

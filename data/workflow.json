@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "ordered_stage_ids": [
+    "source-graph",
+    "deep-first-party-sweep",
+    "candidate-capture",
+    "broader-web-search",
+    "merge",
+    "fit-based-ranking",
+    "adversarial-review",
+    "recommendation"
+  ],
+  "modes": {
+    "weekend-current": {
+      "typical_horizon_days": [0, 10],
+      "focus": [
+        "live availability",
+        "schedule accuracy",
+        "weather sensitivity",
+        "door-to-door logistics"
+      ]
+    },
+    "signup-horizon": {
+      "typical_horizon_days": [7, 365],
+      "focus": [
+        "registration or on-sale status",
+        "deadline urgency",
+        "lead time",
+        "calendar value"
+      ],
+      "activity_types": [
+        "race",
+        "festival",
+        "class",
+        "timed-entry",
+        "ticketed-event"
+      ]
+    }
+  },
+  "geography": {
+    "center": "Kansas City metro",
+    "coverage_areas": [
+      "Kansas City metro",
+      "Lawrence",
+      "Columbia",
+      "Bentonville",
+      "surrounding areas"
+    ],
+    "priority_bands": [
+      {
+        "id": "core",
+        "areas": ["Kansas City metro"],
+        "guidance": "Default center of gravity for every run."
+      },
+      {
+        "id": "regional",
+        "areas": ["Lawrence", "Columbia", "Bentonville", "surrounding areas"],
+        "guidance": "Include when fit or distinctiveness earns the extra travel."
+      }
+    ]
+  }
+}

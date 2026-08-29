@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/kc-activity-finder/recommendation.schema.json",
+  "title": "KC activity recommendation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "mode", "as_of", "window", "selected", "provenance_summary", "caveats"],
+  "properties": {
+    "version": {"const": 1},
+    "mode": {"enum": ["weekend-current", "signup-horizon"]},
+    "as_of": {"type": "string", "format": "date-time"},
+    "window": {
+      "type": "object",
+      "required": ["start", "end"],
+      "properties": {
+        "start": {"type": "string", "format": "date"},
+        "end": {"type": "string", "format": "date"}
+      }
+    },
+    "selected": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "candidate_id",
+          "title",
+          "why_fit",
+          "when",
+          "where",
+          "cost",
+          "action_url",
+          "confidence",
+          "deadline",
+          "caveats"
+        ],
+        "properties": {
+          "candidate_id": {"type": "string"},
+          "title": {"type": "string"},
+          "why_fit": {"type": "string"},
+          "when": {"type": "string"},
+          "where": {"type": "string"},
+          "cost": {"type": "string"},
+          "action_url": {"type": ["string", "null"], "format": "uri"},
+          "confidence": {"enum": ["high", "medium", "low"]},
+          "deadline": {"type": ["string", "null"]},
+          "caveats": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "provenance_summary": {
+      "type": "object",
+      "required": ["source_graph_swept", "first_party_verified", "web_supplements_used"],
+      "properties": {
+        "source_graph_swept": {"type": "boolean"},
+        "first_party_verified": {"type": "integer", "minimum": 0},
+        "web_supplements_used": {"type": "integer", "minimum": 0}
+      }
+    },
+    "caveats": {"type": "array", "items": {"type": "string"}}
+  }
+}

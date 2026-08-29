@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "mode": "weekend-current",
+  "as_of": "2030-09-05T12:00:00-05:00",
+  "window": {
+    "start": "2030-09-06",
+    "end": "2030-09-08"
+  },
+  "home_base": "Kansas City, MO",
+  "party": {
+    "adults": 2,
+    "children": 0,
+    "access_needs": []
+  },
+  "preferences": ["outdoors", "local art", "one regional wildcard"],
+  "constraints": ["under $50 per person"],
+  "regional_wildcards": true
+}

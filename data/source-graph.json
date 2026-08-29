@@ -1,0 +1,67 @@
+{
+  "$schema": "../schemas/source-graph.schema.json",
+  "version": 1,
+  "last_reviewed": "2026-08-29",
+  "seed_material": {
+    "path": "data/primary-sources.txt",
+    "preservation": "verbatim",
+    "sha256": "0e97b1dcc63044e82a25fb4bc117496be943d87e630734a92ed2469c45179a24"
+  },
+  "nodes": [
+    {
+      "id": "kc-daily",
+      "label": "KC Daily",
+      "canonical_url": "https://www.kcdaily.com/",
+      "source_class": "local-editorial",
+      "roles": ["discovery", "graph-expansion"],
+      "status": "active",
+      "coverage": ["Kansas City metro"],
+      "provenance": {
+        "kind": "provided-seed",
+        "raw_value": "KC daily",
+        "seed_line": 1
+      },
+      "verification": {
+        "last_checked": "2026-08-29",
+        "evidence_url": "https://www.kcdaily.com/"
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://www.kcdaily.com/",
+          "https://www.kcdaily.com/t/latest-newsletters"
+        ],
+        "sweep_targets": [
+          "current issue and weekend roundups",
+          "relevant archives containing future announcements",
+          "outbound organizer, venue, registration, and ticket links"
+        ]
+      }
+    }
+  ],
+  "edges": [],
+  "frontier_rules": [
+    {
+      "relationship": "mentions-first-party",
+      "from_roles": ["discovery", "graph-expansion"],
+      "allowed_target_classes": [
+        "event-organizer",
+        "venue",
+        "registration-provider",
+        "ticket-provider",
+        "official-calendar"
+      ],
+      "required_evidence": [
+        "discovery URL containing the relationship",
+        "canonical target URL",
+        "date observed"
+      ]
+    }
+  ],
+  "supplement_policy": {
+    "allowed_after_stage": "broader-web-search",
+    "label": "web-supplement",
+    "must_resolve_to_first_party_before_recommendation": true,
+    "may_become_graph_node_only_with_observed_relation": true,
+    "never_promote_to_provided_seed": true
+  }
+}

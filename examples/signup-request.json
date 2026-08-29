@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "mode": "signup-horizon",
+  "as_of": "2030-09-05T12:00:00-05:00",
+  "window": {
+    "start": "2030-09-12",
+    "end": "2031-09-05"
+  },
+  "home_base": "Kansas City, MO",
+  "party": {
+    "adults": 2,
+    "children": 0,
+    "access_needs": []
+  },
+  "preferences": ["fitness goal", "creative weekend", "worth planning ahead"],
+  "constraints": ["one regional trip maximum"],
+  "regional_wildcards": true
+}

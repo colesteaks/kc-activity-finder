@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "mode": "weekend-current",
+  "as_of": "2030-09-05T12:00:00-05:00",
+  "window": {
+    "start": "2030-09-06",
+    "end": "2030-09-08"
+  },
+  "selected": [
+    {
+      "candidate_id": "fixture-riverfront-lantern-walk",
+      "title": "Fixture: Riverfront Lantern Walk",
+      "why_fit": "A free, distinctive outdoor evening that keeps the plan centered in Kansas City.",
+      "when": "Friday, September 6, 7:30-9:30 p.m.",
+      "where": "Example Riverfront Park, Kansas City, MO",
+      "cost": "Free",
+      "action_url": "https://example.test/organizer/riverfront-lantern-walk",
+      "confidence": "high",
+      "deadline": null,
+      "caveats": ["Fictional test fixture", "Recheck weather before leaving"]
+    },
+    {
+      "candidate_id": "fixture-lawrence-print-studio",
+      "title": "Fixture: Lawrence Printmaking Open Studio",
+      "why_fit": "The regional wildcard adds hands-on local art while staying below the stated budget.",
+      "when": "Saturday, September 7, 1-4 p.m.",
+      "where": "Example Community Print Shop, Lawrence, KS",
+      "cost": "$18 per person, materials included",
+      "action_url": "https://example.test/print-shop/open-studio",
+      "confidence": "high",
+      "deadline": null,
+      "caveats": ["Fictional test fixture", "Closed-toe shoes required"]
+    }
+  ],
+  "provenance_summary": {
+    "source_graph_swept": true,
+    "first_party_verified": 2,
+    "web_supplements_used": 1
+  },
+  "caveats": ["All activities in this file are fictional deterministic test fixtures."]
+}

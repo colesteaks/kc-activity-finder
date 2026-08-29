@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "mode": "signup-horizon",
+  "as_of": "2030-09-05T12:00:00-05:00",
+  "window": {
+    "start": "2030-09-12",
+    "end": "2031-09-05"
+  },
+  "selected": [
+    {
+      "candidate_id": "fixture-kc-river-10k",
+      "title": "Fixture: Kansas City River 10K",
+      "why_fit": "A local fitness goal with enough lead time to train and a near-term registration decision.",
+      "when": "Sunday, November 3, 8 a.m.",
+      "where": "Example River District Course, Kansas City, MO",
+      "cost": "$42 plus possible processing fees",
+      "action_url": "https://example.test/race-organizer/kc-river-10k",
+      "confidence": "high",
+      "deadline": "Register by September 20",
+      "caveats": ["Fictional test fixture", "Registration fees may apply"]
+    },
+    {
+      "candidate_id": "fixture-bentonville-photo-workshop",
+      "title": "Fixture: Bentonville Trail Photography Workshop",
+      "why_fit": "A distinctive creative weekend that earns the request's single regional trip slot.",
+      "when": "March 15-16",
+      "where": "Example Ozark Arts Campus, Bentonville, AR",
+      "cost": "$95; participant supplies a camera",
+      "action_url": "https://example.test/arts-campus/trail-photo-workshop",
+      "confidence": "high",
+      "deadline": "Limited space; register by October 1",
+      "caveats": ["Fictional test fixture", "Outdoor portions are weather-sensitive"]
+    }
+  ],
+  "provenance_summary": {
+    "source_graph_swept": true,
+    "first_party_verified": 2,
+    "web_supplements_used": 1
+  },
+  "caveats": ["All activities in this file are fictional deterministic test fixtures."]
+}

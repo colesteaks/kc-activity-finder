@@ -1,0 +1,139 @@
+{
+  "fixture": true,
+  "mode": "weekend-current",
+  "as_of": "2030-09-05T12:00:00-05:00",
+  "candidates": [
+    {
+      "candidate_id": "fixture-riverfront-lantern-walk",
+      "title": "Fixture: Riverfront Lantern Walk",
+      "mode": "weekend-current",
+      "event_type": "outdoor",
+      "timing": {
+        "start": "2030-09-06T19:30:00-05:00",
+        "end": "2030-09-06T21:30:00-05:00",
+        "timezone": "America/Chicago"
+      },
+      "place": {
+        "venue": "Example Riverfront Park",
+        "city": "Kansas City",
+        "state": "MO",
+        "region": "Kansas City metro"
+      },
+      "discovery": {
+        "channel": "source-graph",
+        "source_node_id": "kc-daily",
+        "discovery_url": "https://example.test/editorial/riverfront-lantern-walk",
+        "captured_at": "2030-09-05T10:05:00-05:00"
+      },
+      "verification": [
+        {
+          "evidence_type": "first-party-event",
+          "url": "https://example.test/organizer/riverfront-lantern-walk",
+          "observed_at": "2030-09-05T10:12:00-05:00",
+          "supports": ["identity", "date", "time", "location", "cost", "availability"]
+        }
+      ],
+      "action_url": "https://example.test/organizer/riverfront-lantern-walk",
+      "availability": {
+        "status": "available",
+        "checked_at": "2030-09-05T10:12:00-05:00",
+        "deadline": null
+      },
+      "cost": {
+        "currency": "USD",
+        "min": 0,
+        "max": 0,
+        "fees_unknown": false
+      },
+      "restrictions": ["Fixture only; not a real event"],
+      "weather_sensitive": true,
+      "dedupe_key": "riverfront-lantern-walk|2030-09-06|kansas-city",
+      "ranking": {
+        "personal_fit": 27,
+        "timing_actionability": 14,
+        "distinctiveness": 13,
+        "evidence_confidence": 15,
+        "logistics": 9,
+        "value": 10,
+        "geographic_intent": 5,
+        "penalties": 0,
+        "total": 93
+      },
+      "adversarial_review": {
+        "overall": "pass",
+        "checks": [
+          {"id": "schedule", "status": "pass", "notes": "Correct fixture occurrence verified."},
+          {"id": "availability", "status": "pass", "notes": "No reservation required in fixture."},
+          {"id": "weather", "status": "pass", "notes": "Weather sensitivity is disclosed."},
+          {"id": "provenance", "status": "pass", "notes": "Graph discovery and first-party verification retained."}
+        ]
+      }
+    },
+    {
+      "candidate_id": "fixture-lawrence-print-studio",
+      "title": "Fixture: Lawrence Printmaking Open Studio",
+      "mode": "weekend-current",
+      "event_type": "drop-in",
+      "timing": {
+        "start": "2030-09-07T13:00:00-05:00",
+        "end": "2030-09-07T16:00:00-05:00",
+        "timezone": "America/Chicago"
+      },
+      "place": {
+        "venue": "Example Community Print Shop",
+        "city": "Lawrence",
+        "state": "KS",
+        "region": "Lawrence"
+      },
+      "discovery": {
+        "channel": "broader-web-search",
+        "source_node_id": null,
+        "discovery_url": "https://example.test/search-result/lawrence-printmaking",
+        "captured_at": "2030-09-05T10:30:00-05:00"
+      },
+      "verification": [
+        {
+          "evidence_type": "first-party-venue",
+          "url": "https://example.test/print-shop/open-studio",
+          "observed_at": "2030-09-05T10:35:00-05:00",
+          "supports": ["identity", "date", "time", "location", "cost", "availability", "materials"]
+        }
+      ],
+      "action_url": "https://example.test/print-shop/open-studio",
+      "availability": {
+        "status": "available",
+        "checked_at": "2030-09-05T10:35:00-05:00",
+        "deadline": null
+      },
+      "cost": {
+        "currency": "USD",
+        "min": 18,
+        "max": 18,
+        "fees_unknown": false
+      },
+      "restrictions": ["Fixture only; not a real event", "Closed-toe shoes required"],
+      "weather_sensitive": false,
+      "dedupe_key": "lawrence-printmaking-open-studio|2030-09-07|lawrence",
+      "ranking": {
+        "personal_fit": 23,
+        "timing_actionability": 13,
+        "distinctiveness": 12,
+        "evidence_confidence": 15,
+        "logistics": 6,
+        "value": 8,
+        "geographic_intent": 4,
+        "penalties": 0,
+        "total": 81
+      },
+      "adversarial_review": {
+        "overall": "pass",
+        "checks": [
+          {"id": "schedule", "status": "pass", "notes": "Fixture hours verified on venue page."},
+          {"id": "travel", "status": "pass", "notes": "Presented as an optional regional wildcard."},
+          {"id": "price", "status": "pass", "notes": "Materials are included in the fixture price."},
+          {"id": "provenance", "status": "pass", "notes": "Web discovery remains labeled and first-party verification is present."}
+        ]
+      }
+    }
+  ]
+}
