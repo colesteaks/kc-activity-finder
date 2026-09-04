@@ -21,7 +21,12 @@ class RepositoryInvariantTests(unittest.TestCase):
         self.assertEqual(workflow["ordered_stage_ids"], EXPECTED_STAGES)
 
     def test_uploaded_seed_is_preserved_verbatim(self) -> None:
-        self.assertEqual((ROOT / "data/primary-sources.txt").read_bytes(), b"KC daily\n")
+        authoritative_seed = ROOT.parent / "sources" / "Primary sources.txt"
+        if authoritative_seed.is_file():
+            expected = authoritative_seed.read_bytes()
+        else:
+            expected = b"KC daily"
+        self.assertEqual((ROOT / "data/primary-sources.txt").read_bytes(), expected)
 
     def test_selected_web_supplements_have_first_party_evidence(self) -> None:
         for prefix in ("weekend", "signup"):

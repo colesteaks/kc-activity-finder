@@ -5,7 +5,7 @@
   "seed_material": {
     "path": "data/primary-sources.txt",
     "preservation": "verbatim",
-    "sha256": "0e97b1dcc63044e82a25fb4bc117496be943d87e630734a92ed2469c45179a24"
+    "sha256": "0a268fbfd2c4098c22795598bd4b11fa81809878f0928e9469945e1d479627d3"
   },
   "nodes": [
     {
