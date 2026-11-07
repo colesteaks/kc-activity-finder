@@ -189,11 +189,14 @@ def age_rules(raw):
 def explicit_age_guidance(title, description):
     """Recognize explicit audience rules, not generic family/category labels."""
     text = clean(title + ' ' + clean(description))
-    match = re.search(r'\b(?:ages?|aged)\s*:?\s*(\d{1,2})\s*(?:[-–]|to|through)\s*(\d{1,2})\b', text, re.I)
+    prefix = r'(?:\bfor\s+(?:(?:children|adults|participants)\s+)?ages?\s*:?|\bages?\s*:)\s*'
+    match = re.search(prefix + r'(\d{1,2})\s*(?:[-–]|to|through)\s*(\d{1,2})\b', text, re.I)
     if match:
         low, high = map(int, match.groups())
         if low <= high: return age_rules(f'{low}–{high}')
-    match = re.search(r'\b(?:ages?\s*)?(\d{1,2})\s*(?:\+|(?:and|or) (?:up|older|over))', text, re.I)
+    match = re.search(prefix + r'(\d{1,2})\s*(?:\+|(?:and|or) (?:up|older|over))', text, re.I)
+    if match: return age_rules(match[1] + '+')
+    match = re.search(r'\b(18|21)\s*\+\s*[)\]]?\s*$', title)
     if match: return age_rules(match[1] + '+')
     if re.search(r'\b(?:for all ages|all ages (?:are )?welcome|open to all ages)\b', text, re.I): return age_rules('All ages')
     return age_rules('')

@@ -1865,10 +1865,10 @@
       "type": "Arts & museums",
       "type_inferred": true,
       "ages": {
-        "min": 20,
+        "min": null,
         "max": null,
         "all_ages": false,
-        "label": "20+"
+        "label": "Age guidance not supplied"
       },
       "status": "scheduled",
       "ticket_status": "unknown",
@@ -3416,10 +3416,10 @@
       "type": "Sports & movement",
       "type_inferred": true,
       "ages": {
-        "min": 6,
+        "min": null,
         "max": null,
         "all_ages": false,
-        "label": "6+"
+        "label": "Age guidance not supplied"
       },
       "status": "scheduled",
       "ticket_status": "unknown",
@@ -4074,10 +4074,10 @@
       "type": "Festivals & seasonal",
       "type_inferred": true,
       "ages": {
-        "min": 55,
+        "min": null,
         "max": null,
         "all_ages": false,
-        "label": "55+"
+        "label": "Age guidance not supplied"
       },
       "status": "scheduled",
       "ticket_status": "unknown",
@@ -4309,10 +4309,10 @@
       "type": "Festivals & seasonal",
       "type_inferred": true,
       "ages": {
-        "min": 60,
+        "min": null,
         "max": null,
         "all_ages": false,
-        "label": "60+"
+        "label": "Age guidance not supplied"
       },
       "status": "scheduled",
       "ticket_status": "unknown",
@@ -4967,10 +4967,10 @@
       "type": "Arts & museums",
       "type_inferred": true,
       "ages": {
-        "min": 18,
+        "min": null,
         "max": null,
         "all_ages": false,
-        "label": "18+"
+        "label": "Age guidance not supplied"
       },
       "status": "scheduled",
       "ticket_status": "unknown",
@@ -5484,10 +5484,10 @@
       "type": "Festivals & seasonal",
       "type_inferred": true,
       "ages": {
-        "min": 3,
-        "max": 9,
+        "min": null,
+        "max": null,
         "all_ages": false,
-        "label": "3–9"
+        "label": "Age guidance not supplied"
       },
       "status": "scheduled",
       "ticket_status": "unknown",
@@ -9808,10 +9808,10 @@
       "type": "Arts & museums",
       "type_inferred": true,
       "ages": {
-        "min": 18,
+        "min": null,
         "max": null,
         "all_ages": false,
-        "label": "18+"
+        "label": "Age guidance not supplied"
       },
       "status": "scheduled",
       "ticket_status": "unknown",
@@ -14085,10 +14085,10 @@
       "type": "Music & performance",
       "type_inferred": true,
       "ages": {
-        "min": 3,
+        "min": null,
         "max": null,
         "all_ages": false,
-        "label": "3+"
+        "label": "Age guidance not supplied"
       },
       "status": "scheduled",
       "ticket_status": "unknown",

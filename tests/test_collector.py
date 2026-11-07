@@ -31,6 +31,8 @@ class CollectorTests(unittest.TestCase):
         self.assertEqual(explicit_age_guidance('Concert 21+','')['min'],21)
         self.assertTrue(explicit_age_guidance('Art','Open to all ages')['all_ages'])
         self.assertIsNone(explicit_age_guidance('Exhibition','Artists of all ages contribute')['min'])
+        self.assertIsNone(explicit_age_guidance('Exhibition','Featuring 20+ local artists')['min'])
+        self.assertIsNone(explicit_age_guidance('Holiday visit','Children ages 3 to 9 pay $5. Adults pay $10.')['min'])
 
     def test_jsonld_graph_and_multiline_strings(self):
         body='<script type="application/ld+json">{"@graph":[{"@type":"MusicEvent","name":"Live\nMusic","startDate":"2026-11-08"}]}</script>'
