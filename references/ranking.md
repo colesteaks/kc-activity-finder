@@ -1,5 +1,7 @@
 # Ranking methodology
 
+This rubric scores individual event candidates. For day trips, use the [destination-level assessment](day-trips.md#destination-ranking): compelling anchors, party fit, day cohesion, time value and confidence, followed by driving and itinerary feasibility gates.
+
 Collect before selecting. Hard filters do not delete inventory rows. The executable scoring model supersedes the older seven-factor `ranking` example fields, which remain only for schema compatibility.
 
 ## Eligibility gates

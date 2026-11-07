@@ -14,6 +14,14 @@ The [weekly Codex source-improvement loop](references/weekly-source-improvement.
 
 Supports `weekend-current` and `signup-horizon` (events worth reserving ahead). The required order is source graph → deep first-party sweep → candidate capture → broader web search → merge → fit ranking → adversarial review → recommendations.
 
+**Day trips (skill only):** ask “What destinations have something worth a day trip within two hours of [origin]?” The skill compares compelling anchors, then helps plan a selected day with hours, transfers, meals, booking and return-time checks. It searches beyond the default regions when the drive limit allows. See the [workflow](references/day-trips.md), [reusable prompts](prompts/day-trip.md) and [fictional research example](examples/day-trip-research.json). The deterministic helper checks driving limits and itinerary feasibility without model/API calls:
+
+```sh
+python3 scripts/day_trip_planner.py examples/day-trip-research.json --output /tmp/day-trip-checks.json
+```
+
+Day-trip inputs use their own schema; the existing event-ledger modes are unchanged. The helper checks submitted facts; a browsing agent still researches, ranks destinations and reviews eligibility, costs, sources and availability.
+
 ## What executes
 
 Python manages the research ledger, validates JSON Schema and timestamps, conservatively merges occurrences, preserves evidence and conflicts, computes configurable scores, applies filters, requires adversarial checks, and renders reports with the full inventory and coverage gaps. A human or browsing agent performs live research and interprets pages. There is no unattended scraper or autonomous web-search service hidden behind the CLI.

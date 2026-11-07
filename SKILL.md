@@ -1,9 +1,14 @@
 ---
 name: kc-activity-finder
-description: Build broad, first-party-verified activity inventories for Kansas City, Lawrence, Columbia, Bentonville and surrounding areas; filter and rank separately for adults, kids or families, for weekends and advance registration.
+description: Build broad, first-party-verified activity inventories for Kansas City and surrounding regions; compare worthwhile day trips within a user-specified driving limit, plan realistic itineraries, and filter separately for adults, kids or families, weekends and advance registration.
 ---
 
 # KC Activity Finder
+
+## Choose the outing
+
+- For a day trip, “within X hours of driving,” destination comparisons or a same-day itinerary, read [day-trip planning](references/day-trips.md) and use its destination-first workflow. Start with origin and drive limit, compare compelling anchors, then plan the selected destination/date. Include qualifying places beyond the default regional graph. Use the [entry prompts](prompts/day-trip.md) and [deterministic feasibility checker](scripts/day_trip_planner.py); no website or paid routing integration is needed.
+- For weekend activity recommendations or advance-registration radar, use the event-ledger workflow below and its existing query schema. Dates/party preferences govern selection, never the breadth of discovery.
 
 Read [activity modeling and coverage](references/activity-model-and-coverage.md) for broad category discovery and the separate schedule, registration and commitment contracts. Explore every taxonomy category in every regional band; record gaps instead of claiming an exhaustive sweep. Inspect outdoor-place directories, sports-season registration and schedule portals, exhibit runs, term catalogs, recurring series and evergreen offerings in addition to event calendars. Preserve unknown dates and hours; never turn a signup window into an activity run or a run into invented daily sessions.
 
@@ -14,6 +19,8 @@ The static site and daily deterministic collection workflow are documented in [h
 Read [execution](references/execution.md), [research workflow](references/workflow.md), [ranking](references/ranking.md), and [adversarial review](references/adversarial-review.md). Run from the repository root with Python 3.11+ and `pip install -r requirements.txt`.
 
 ## Non-negotiable sequence
+
+The command-backed sequence below applies to weekend and signup event ledgers. Day trips preserve these eight stages through the destination-based protocol in [day-trip planning](references/day-trips.md), with a separate research schema and feasibility helper.
 
 1. **Source graph:** load `data/source-graph.json`; verify the preserved original seed hash. Record graph identity and every active source in the run ledger. Treat KC Daily as a sensor, not an official producer.
 2. **Deep first-party source sweep:** visit anchors and descend through calendars, pagination, program PDFs, session schedules, news, official social and organizer-linked registration portals. Capture raw observations during research. Record checked, empty, failed or deferred routes; failed is never empty.
@@ -26,7 +33,7 @@ Read [execution](references/execution.md), [research workflow](references/workfl
 
 ## Scope and decisions
 
-Default timezone is America/Chicago. Resolve relative dates to exact local dates before research. Weekend defaults to the relevant Saturday–Sunday; on Sunday “this weekend” includes that Sunday. Signup horizon defaults to 21–365 days ahead, but include nearer live deadlines when useful. The CLI takes explicit dates so these choices remain reviewable.
+Default timezone is America/Chicago. Resolve relative dates to exact local dates before research. Weekend defaults to the relevant Saturday–Sunday; on Sunday “this weekend” includes that Sunday. Signup horizon defaults to 21–365 days ahead, but include nearer live deadlines when useful. The event CLI takes explicit dates so these choices remain reviewable. Day-trip destination exploration may be undated; obtain an exact day and departure/return bounds before turning it into an actionable itinerary. State whether the drive limit is one way or total; never silently exceed it.
 
 Default to broad discovery. Ask or infer from explicit context whether the outing is adults-only, kids, or mixed family; never infer a home address, exact ages, disabilities, budget or travel radius. Keep narrow constraints out of discovery. Rank only after inventory capture and merging. Physical engagement is an optional preference, not a universal definition of quality.
 

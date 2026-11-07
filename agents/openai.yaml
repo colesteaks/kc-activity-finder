@@ -1,4 +1,4 @@
 interface:
   display_name: "KC Activity Finder"
-  short_description: "Source-first Kansas City activity recommendations"
-  default_prompt: "Use $kc-activity-finder to find well-verified activities that fit my timing and preferences."
+  short_description: "Verified activities and worthwhile day trips from KC"
+  default_prompt: "Use $kc-activity-finder to find well-verified activities or compare day-trip destinations within my driving limit, then help plan an outing that fits my timing and preferences."

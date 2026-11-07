@@ -1,0 +1,384 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Day-trip research and feasibility input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "fixture",
+    "request",
+    "destinations",
+    "itinerary"
+  ],
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "fixture": {
+      "type": "boolean"
+    },
+    "request": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "origin",
+        "timezone",
+        "as_of",
+        "date",
+        "max_drive_minutes",
+        "drive_limit_basis",
+        "max_total_driving_minutes",
+        "depart_at",
+        "return_by",
+        "party_ages",
+        "preferences",
+        "constraints"
+      ],
+      "properties": {
+        "origin": {
+          "type": "string",
+          "minLength": 1
+        },
+        "timezone": {
+          "type": "string",
+          "default": "America/Chicago"
+        },
+        "as_of": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "date": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "max_drive_minutes": {
+          "type": "number",
+          "minimum": 1
+        },
+        "drive_limit_basis": {
+          "enum": [
+            "one_way",
+            "round_trip"
+          ]
+        },
+        "max_total_driving_minutes": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "depart_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "return_by": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "party_ages": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": 0
+          }
+        },
+        "preferences": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "constraints": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "destinations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "route",
+          "anchors",
+          "tradeoffs"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "route": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": false,
+            "required": [
+              "origin",
+              "destination",
+              "outbound_max_minutes",
+              "return_max_minutes",
+              "method",
+              "source_url",
+              "checked_at",
+              "note"
+            ],
+            "properties": {
+              "origin": {
+                "type": "string"
+              },
+              "destination": {
+                "type": "string"
+              },
+              "outbound_max_minutes": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "return_max_minutes": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "method": {
+                "enum": [
+                  "routing_estimate",
+                  "rough_estimate"
+                ]
+              },
+              "source_url": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "uri"
+              },
+              "checked_at": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date-time"
+              },
+              "note": {
+                "type": "string"
+              }
+            }
+          },
+          "anchors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "id",
+                "title",
+                "url",
+                "kind",
+                "why_compelling",
+                "duration_minutes",
+                "checked_at",
+                "availability",
+                "booking_status",
+                "open_windows",
+                "notes"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "title": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "kind": {
+                  "enum": [
+                    "evergreen",
+                    "dated",
+                    "exhibit",
+                    "seasonal"
+                  ]
+                },
+                "why_compelling": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "duration_minutes": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "minimum": 1
+                },
+                "checked_at": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "availability": {
+                  "enum": [
+                    "available",
+                    "unknown",
+                    "sold_out",
+                    "closed",
+                    "cancelled",
+                    "registration_required"
+                  ]
+                },
+                "booking_status": {
+                  "enum": [
+                    "not_required",
+                    "confirmed",
+                    "needed",
+                    "unknown"
+                  ]
+                },
+                "open_windows": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "start",
+                      "end"
+                    ],
+                    "properties": {
+                      "start": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "end": {
+                        "type": "string",
+                        "format": "date-time"
+                      }
+                    }
+                  }
+                },
+                "notes": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "tradeoffs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "itinerary": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "required": [
+        "destination_id",
+        "steps"
+      ],
+      "properties": {
+        "destination_id": {
+          "type": "string"
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "kind",
+              "start",
+              "end",
+              "activity_id",
+              "drive_role",
+              "travel_minutes",
+              "route_source_url",
+              "note"
+            ],
+            "properties": {
+              "kind": {
+                "enum": [
+                  "drive",
+                    "walk",
+                  "activity",
+                  "break",
+                  "meal",
+                  "buffer"
+                ]
+              },
+              "start": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "end": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "activity_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "drive_role": {
+                "enum": [
+                  "outbound",
+                  "local",
+                  "return",
+                  null
+                ]
+              },
+              "travel_minutes": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "route_source_url": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "uri"
+              },
+              "note": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -41,6 +41,19 @@
         "timed-entry",
         "ticketed-event"
       ]
+    },
+    "day-trip": {
+      "focus": [
+        "destination-first comparison of compelling anchors",
+        "user-specified origin and one-way or round-trip driving limit",
+        "evergreen, seasonal, exhibit and dated activities",
+        "party fit, coherent pacing and same-day return",
+        "verified hours, transfers, booking and weather backup"
+      ],
+      "scope": "skill only; expand beyond default regions when the driving limit permits",
+      "research_schema": "schemas/day-trip.schema.json",
+      "feasibility_helper": "scripts/day_trip_planner.py",
+      "reference": "references/day-trips.md"
     }
   },
   "geography": {

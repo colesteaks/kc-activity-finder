@@ -1,5 +1,7 @@
 # Execution guide
 
+For day-trip destination comparisons and itineraries, use [day-trip planning](day-trips.md), `schemas/day-trip.schema.json` and `scripts/day_trip_planner.py`. The event-ledger commands and fixed-time candidate rules below apply to weekend/signup modes; do not invent event dates to put an evergreen day-trip anchor into them.
+
 ## Research artifacts
 
 Initialize from a request matching `schemas/query.schema.json`. Copy an example request and replace the dates, as_of time and party. Use an offset-aware as_of timestamp in America/Chicago, e.g. `2026-11-07T09:00:00-06:00`. The date window includes both endpoints.

@@ -1,0 +1,223 @@
+{
+  "version": 1,
+  "fixture": true,
+  "request": {
+    "origin": "Kansas City, MO",
+    "timezone": "America/Chicago",
+    "as_of": "2030-06-14T12:00:00-05:00",
+    "date": "2030-06-15",
+    "max_drive_minutes": 120,
+    "drive_limit_basis": "one_way",
+    "max_total_driving_minutes": 240,
+    "depart_at": "2030-06-15T08:00:00-05:00",
+    "return_by": "2030-06-15T19:00:00-05:00",
+    "party_ages": [],
+    "preferences": [
+      "Nature",
+      "Local history",
+      "Relaxed pace"
+    ],
+    "constraints": [
+      "Return the same day"
+    ]
+  },
+  "destinations": [
+    {
+      "id": "river-town",
+      "name": "Fictional River Town",
+      "route": {
+        "origin": "Kansas City, MO",
+        "destination": "Fictional River Town",
+        "outbound_max_minutes": 90,
+        "return_max_minutes": 100,
+        "method": "routing_estimate",
+        "source_url": "https://example.test/routes/river-town",
+        "checked_at": "2030-06-14T12:00:00-05:00",
+        "note": "Fictional conservative driving estimates, not a real route."
+      },
+      "anchors": [
+        {
+          "id": "river-walk",
+          "title": "Fictional riverside nature walk",
+          "url": "https://example.test/river-walk",
+          "kind": "evergreen",
+          "why_compelling": "A distinctive river landscape worth visiting on its own.",
+          "duration_minutes": 75,
+          "checked_at": "2030-06-14T12:00:00-05:00",
+          "availability": "available",
+          "booking_status": "not_required",
+          "open_windows": [
+            {
+              "start": "2030-06-15T10:00:00-05:00",
+              "end": "2030-06-15T17:00:00-05:00"
+            }
+          ],
+          "notes": "Fictional source evidence and hours, solely for demonstrating the planner."
+        },
+        {
+          "id": "history-gallery",
+          "title": "Fictional local-history gallery",
+          "url": "https://example.test/history-gallery",
+          "kind": "exhibit",
+          "why_compelling": "An unusual local collection within walking distance of the trail.",
+          "duration_minutes": 60,
+          "checked_at": "2030-06-14T12:00:00-05:00",
+          "availability": "available",
+          "booking_status": "not_required",
+          "open_windows": [
+            {
+              "start": "2030-06-15T10:00:00-05:00",
+              "end": "2030-06-15T17:00:00-05:00"
+            }
+          ],
+          "notes": "Fictional source evidence and hours, solely for demonstrating the planner."
+        }
+      ],
+      "tradeoffs": [
+        "Outdoor anchor is weather sensitive.",
+        "Both stops need current access and audience checks."
+      ]
+    },
+    {
+      "id": "far-town",
+      "name": "Fictional Far Town",
+      "route": {
+        "origin": "Kansas City, MO",
+        "destination": "Fictional Far Town",
+        "outbound_max_minutes": 170,
+        "return_max_minutes": 180,
+        "method": "routing_estimate",
+        "source_url": "https://example.test/routes/river-town",
+        "checked_at": "2030-06-14T12:00:00-05:00",
+        "note": "Fictional conservative driving estimates, not a real route."
+      },
+      "anchors": [
+        {
+          "id": "river-walk",
+          "title": "Fictional riverside nature walk",
+          "url": "https://example.test/river-walk",
+          "kind": "evergreen",
+          "why_compelling": "A distinctive river landscape worth visiting on its own.",
+          "duration_minutes": 75,
+          "checked_at": "2030-06-14T12:00:00-05:00",
+          "availability": "available",
+          "booking_status": "not_required",
+          "open_windows": [
+            {
+              "start": "2030-06-15T10:00:00-05:00",
+              "end": "2030-06-15T17:00:00-05:00"
+            }
+          ],
+          "notes": "Fictional source evidence and hours, solely for demonstrating the planner."
+        },
+        {
+          "id": "history-gallery",
+          "title": "Fictional local-history gallery",
+          "url": "https://example.test/history-gallery",
+          "kind": "exhibit",
+          "why_compelling": "An unusual local collection within walking distance of the trail.",
+          "duration_minutes": 60,
+          "checked_at": "2030-06-14T12:00:00-05:00",
+          "availability": "available",
+          "booking_status": "not_required",
+          "open_windows": [
+            {
+              "start": "2030-06-15T10:00:00-05:00",
+              "end": "2030-06-15T17:00:00-05:00"
+            }
+          ],
+          "notes": "Fictional source evidence and hours, solely for demonstrating the planner."
+        }
+      ],
+      "tradeoffs": [
+        "Outdoor anchor is weather sensitive.",
+        "Both stops need current access and audience checks."
+      ]
+    }
+  ],
+  "itinerary": {
+    "destination_id": "river-town",
+    "steps": [
+      {
+        "kind": "drive",
+        "start": "2030-06-15T08:00:00-05:00",
+        "end": "2030-06-15T09:35:00-05:00",
+        "activity_id": null,
+        "drive_role": "outbound",
+        "travel_minutes": 90,
+        "route_source_url": "https://example.test/routes/river-town",
+        "note": "Includes five minutes beyond the synthetic routing upper estimate."
+      },
+      {
+        "kind": "buffer",
+        "start": "2030-06-15T09:35:00-05:00",
+        "end": "2030-06-15T10:00:00-05:00",
+        "activity_id": null,
+        "drive_role": null,
+        "travel_minutes": null,
+        "route_source_url": null,
+        "note": "Parking, toilets and reaching the trail."
+      },
+      {
+        "kind": "activity",
+        "start": "2030-06-15T10:00:00-05:00",
+        "end": "2030-06-15T11:15:00-05:00",
+        "activity_id": "river-walk",
+        "drive_role": null,
+        "travel_minutes": null,
+        "route_source_url": null,
+        "note": ""
+      },
+      {
+        "kind": "walk",
+        "start": "2030-06-15T11:15:00-05:00",
+        "end": "2030-06-15T11:30:00-05:00",
+        "activity_id": null,
+        "drive_role": null,
+        "travel_minutes": 10,
+        "route_source_url": "https://example.test/river-town-map",
+        "note": "Fictional 10-minute walking transfer with five minutes of slack."
+      },
+      {
+        "kind": "activity",
+        "start": "2030-06-15T11:30:00-05:00",
+        "end": "2030-06-15T12:30:00-05:00",
+        "activity_id": "history-gallery",
+        "drive_role": null,
+        "travel_minutes": null,
+        "route_source_url": null,
+        "note": ""
+      },
+      {
+        "kind": "meal",
+        "start": "2030-06-15T12:30:00-05:00",
+        "end": "2030-06-15T13:15:00-05:00",
+        "activity_id": null,
+        "drive_role": null,
+        "travel_minutes": null,
+        "route_source_url": null,
+        "note": "Flexible meal break; no restaurant availability asserted."
+      },
+      {
+        "kind": "buffer",
+        "start": "2030-06-15T13:15:00-05:00",
+        "end": "2030-06-15T13:30:00-05:00",
+        "activity_id": null,
+        "drive_role": null,
+        "travel_minutes": null,
+        "route_source_url": null,
+        "note": "Rest and return-to-car buffer."
+      },
+      {
+        "kind": "drive",
+        "start": "2030-06-15T13:30:00-05:00",
+        "end": "2030-06-15T15:15:00-05:00",
+        "activity_id": null,
+        "drive_role": "return",
+        "travel_minutes": 100,
+        "route_source_url": "https://example.test/routes/river-town",
+        "note": "Return before the stated latest return; extra free time is not a scheduled activity."
+      }
+    ]
+  }
+}
