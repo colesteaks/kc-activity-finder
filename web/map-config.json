@@ -1,0 +1,4 @@
+{
+  "tile_url": "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+  "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors · <a href=\"https://www.openstreetmap.org/fixthemap\">Report a map issue</a>"
+}

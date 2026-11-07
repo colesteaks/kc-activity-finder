@@ -27,7 +27,8 @@
         "season schedule or exhibit run",
         "hours and closures"
       ],
-      "provenance": "provided-seed"
+      "provenance": "provided-seed",
+      "place_ids": []
     },
     {
       "id": "watkins",
@@ -51,7 +52,10 @@
         "season schedule or exhibit run",
         "hours and closures"
       ],
-      "provenance": "reviewed-supplement"
+      "provenance": "reviewed-supplement",
+      "place_ids": [
+        "watkins"
+      ]
     },
     {
       "id": "lawrence-arts",
@@ -77,7 +81,10 @@
         "season schedule or exhibit run",
         "hours and closures"
       ],
-      "provenance": "reviewed-supplement"
+      "provenance": "reviewed-supplement",
+      "place_ids": [
+        "lawrence-arts"
+      ]
     },
     {
       "id": "momentary",
@@ -102,7 +109,10 @@
         "season schedule or exhibit run",
         "hours and closures"
       ],
-      "provenance": "reviewed-supplement"
+      "provenance": "reviewed-supplement",
+      "place_ids": [
+        "momentary"
+      ]
     },
     {
       "id": "crystal-bridges",
@@ -127,7 +137,11 @@
         "season schedule or exhibit run",
         "hours and closures"
       ],
-      "provenance": "reviewed-supplement"
+      "provenance": "reviewed-supplement",
+      "place_ids": [
+        "crystal-trails",
+        "crystal-museum"
+      ]
     },
     {
       "id": "columbia-cvb",
@@ -151,7 +165,8 @@
         "season schedule or exhibit run",
         "hours and closures"
       ],
-      "provenance": "reviewed-supplement"
+      "provenance": "reviewed-supplement",
+      "place_ids": []
     },
     {
       "id": "kc-zoo",
@@ -176,7 +191,10 @@
         "season schedule or exhibit run",
         "hours and closures"
       ],
-      "provenance": "reviewed-supplement"
+      "provenance": "reviewed-supplement",
+      "place_ids": [
+        "kc-zoo"
+      ]
     },
     {
       "id": "nelson",
@@ -201,7 +219,8 @@
         "season schedule or exhibit run",
         "hours and closures"
       ],
-      "provenance": "reviewed-supplement"
+      "provenance": "reviewed-supplement",
+      "place_ids": []
     },
     {
       "id": "kc-library",
@@ -226,7 +245,8 @@
         "season schedule or exhibit run",
         "hours and closures"
       ],
-      "provenance": "reviewed-supplement"
+      "provenance": "reviewed-supplement",
+      "place_ids": []
     },
     {
       "id": "kc-parks",
@@ -251,7 +271,8 @@
         "season schedule or exhibit run",
         "hours and closures"
       ],
-      "provenance": "reviewed-supplement"
+      "provenance": "reviewed-supplement",
+      "place_ids": []
     },
     {
       "id": "bentonville-downtown",
@@ -275,7 +296,8 @@
         "season schedule or exhibit run",
         "hours and closures"
       ],
-      "provenance": "reviewed-supplement"
+      "provenance": "reviewed-supplement",
+      "place_ids": []
     },
     {
       "id": "weston-bend",
@@ -297,7 +319,10 @@
         "registration opens and deadline",
         "sessions, exceptions, operating hours and conditions"
       ],
-      "provenance": "reviewed-supplement"
+      "provenance": "reviewed-supplement",
+      "place_ids": [
+        "weston-bend"
+      ]
     },
     {
       "id": "jcprd-adult-sports",
@@ -319,7 +344,8 @@
         "registration opens and deadline",
         "sessions, exceptions, operating hours and conditions"
       ],
-      "provenance": "reviewed-supplement"
+      "provenance": "reviewed-supplement",
+      "place_ids": []
     },
     {
       "id": "jcprd-youth-sports",
@@ -342,7 +368,8 @@
         "registration opens and deadline",
         "sessions, exceptions, operating hours and conditions"
       ],
-      "provenance": "reviewed-supplement"
+      "provenance": "reviewed-supplement",
+      "place_ids": []
     },
     {
       "id": "lawrence-programs",
@@ -370,7 +397,8 @@
         "registration opens and deadline",
         "sessions, exceptions, operating hours and conditions"
       ],
-      "provenance": "reviewed-supplement"
+      "provenance": "reviewed-supplement",
+      "place_ids": []
     },
     {
       "id": "lawrence-youth-soccer",
@@ -390,7 +418,8 @@
         "registration opens and deadline",
         "sessions, exceptions, operating hours and conditions"
       ],
-      "provenance": "reviewed-supplement"
+      "provenance": "reviewed-supplement",
+      "place_ids": []
     },
     {
       "id": "columbia-programs",
@@ -417,7 +446,8 @@
         "registration opens and deadline",
         "sessions, exceptions, operating hours and conditions"
       ],
-      "provenance": "reviewed-supplement"
+      "provenance": "reviewed-supplement",
+      "place_ids": []
     },
     {
       "id": "columbia-parks",
@@ -440,7 +470,8 @@
         "registration opens and deadline",
         "sessions, exceptions, operating hours and conditions"
       ],
-      "provenance": "reviewed-supplement"
+      "provenance": "reviewed-supplement",
+      "place_ids": []
     },
     {
       "id": "bentonville-soccer",
@@ -460,7 +491,8 @@
         "registration opens and deadline",
         "sessions, exceptions, operating hours and conditions"
       ],
-      "provenance": "reviewed-supplement"
+      "provenance": "reviewed-supplement",
+      "place_ids": []
     },
     {
       "id": "bentonville-outdoors",
@@ -485,7 +517,8 @@
         "registration opens and deadline",
         "sessions, exceptions, operating hours and conditions"
       ],
-      "provenance": "reviewed-supplement"
+      "provenance": "reviewed-supplement",
+      "place_ids": []
     },
     {
       "id": "bentonville-schedules",
@@ -506,7 +539,8 @@
         "registration opens and deadline",
         "sessions, exceptions, operating hours and conditions"
       ],
-      "provenance": "reviewed-supplement"
+      "provenance": "reviewed-supplement",
+      "place_ids": []
     },
     {
       "id": "kc-volunteer",
@@ -528,7 +562,8 @@
         "registration opens and deadline",
         "sessions, exceptions, operating hours and conditions"
       ],
-      "provenance": "reviewed-supplement"
+      "provenance": "reviewed-supplement",
+      "place_ids": []
     },
     {
       "id": "crystal-exhibits",
@@ -548,7 +583,8 @@
         "registration opens and deadline",
         "sessions, exceptions, operating hours and conditions"
       ],
-      "provenance": "reviewed-supplement"
+      "provenance": "reviewed-supplement",
+      "place_ids": []
     },
     {
       "id": "clinton-state-park",
@@ -570,7 +606,8 @@
         "opening hours closures and exceptions",
         "registration deadline and participation commitment"
       ],
-      "provenance": "reviewed-supplement"
+      "provenance": "reviewed-supplement",
+      "place_ids": []
     },
     {
       "id": "rock-bridge-state-park",
@@ -592,7 +629,10 @@
         "opening hours closures and exceptions",
         "registration deadline and participation commitment"
       ],
-      "provenance": "reviewed-supplement"
+      "provenance": "reviewed-supplement",
+      "place_ids": [
+        "rock-bridge"
+      ]
     },
     {
       "id": "crystal-trails",
@@ -614,7 +654,10 @@
         "opening hours closures and exceptions",
         "registration deadline and participation commitment"
       ],
-      "provenance": "reviewed-supplement"
+      "provenance": "reviewed-supplement",
+      "place_ids": [
+        "crystal-trails"
+      ]
     },
     {
       "id": "science-city",
@@ -639,7 +682,10 @@
         "opening hours closures and exceptions",
         "registration deadline and participation commitment"
       ],
-      "provenance": "reviewed-supplement"
+      "provenance": "reviewed-supplement",
+      "place_ids": [
+        "science-city"
+      ]
     },
     {
       "id": "prairie-park",
@@ -664,7 +710,8 @@
         "opening hours closures and exceptions",
         "registration deadline and participation commitment"
       ],
-      "provenance": "reviewed-supplement"
+      "provenance": "reviewed-supplement",
+      "place_ids": []
     },
     {
       "id": "lawrence-library",
@@ -689,7 +736,8 @@
         "opening hours closures and exceptions",
         "registration deadline and participation commitment"
       ],
-      "provenance": "reviewed-supplement"
+      "provenance": "reviewed-supplement",
+      "place_ids": []
     },
     {
       "id": "bentonville-trails",
@@ -711,7 +759,8 @@
         "opening hours closures and exceptions",
         "registration deadline and participation commitment"
       ],
-      "provenance": "reviewed-supplement"
+      "provenance": "reviewed-supplement",
+      "place_ids": []
     },
     {
       "id": "naturals-schedule",
@@ -732,7 +781,8 @@
         "opening hours closures and exceptions",
         "registration deadline and participation commitment"
       ],
-      "provenance": "reviewed-supplement"
+      "provenance": "reviewed-supplement",
+      "place_ids": []
     },
     {
       "id": "wonderscope-volunteer",
@@ -754,7 +804,8 @@
         "opening hours closures and exceptions",
         "registration deadline and participation commitment"
       ],
-      "provenance": "reviewed-supplement"
+      "provenance": "reviewed-supplement",
+      "place_ids": []
     }
   ],
   "edges": [
@@ -11411,5 +11462,131 @@
       }
     ],
     "note": "A route is a research lead, not proof that every program has been collected. Gaps are explicit; this matrix is not an exhaustiveness claim."
-  }
+  },
+  "place_leaves": [
+    {
+      "id": "weston-bend",
+      "label": "Weston Bend State Park",
+      "url": "https://mostateparks.com/park/weston-bend-state-park",
+      "parent_route_ids": [
+        "weston-bend"
+      ],
+      "hours_source": "https://mostateparks.com/hours/691/park/weston-bend-state-park",
+      "coordinate_source": "https://mostateparks.com/park/weston-bend-state-park/map",
+      "offering_sources": [
+        "https://mostateparks.com/park/west-bend-state-park/trails",
+        "https://mostateparks.com/park/weston-bend-state-park/picnicking",
+        "https://mostateparks.com/park/weston-bend-state-park/weston-bend-state-park/camping"
+      ],
+      "provenance": "reviewed-place-registry"
+    },
+    {
+      "id": "rock-bridge",
+      "label": "Rock Bridge Memorial State Park",
+      "url": "https://mostateparks.com/park/rock-bridge-memorial-state-park",
+      "parent_route_ids": [
+        "rock-bridge-state-park"
+      ],
+      "hours_source": "https://mostateparks.com/hours/511/park/rock-bridge-memorial-state-park",
+      "coordinate_source": "https://mostateparks.com/park/rock-bridge-memorial-state-park/map",
+      "offering_sources": [
+        "https://mostateparks.com/key-location/playground-rock-bridge",
+        "https://mostateparks.com/park/rock-bridge-memorial-state-park/picnicking",
+        "https://mostateparks.com/park/rock-bridge-memorial-state-park/trails"
+      ],
+      "provenance": "reviewed-place-registry"
+    },
+    {
+      "id": "crystal-trails",
+      "label": "Crystal Bridges trails & grounds",
+      "url": "https://crystalbridges.org/visit/nature-trails",
+      "parent_route_ids": [
+        "crystal-trails",
+        "crystal-bridges"
+      ],
+      "hours_source": "https://crystalbridges.org/visit/nature-trails",
+      "coordinate_source": "https://crystalbridges.org/visit/nature-trails",
+      "offering_sources": [
+        "https://crystalbridges.org/visit/nature-trails"
+      ],
+      "provenance": "reviewed-place-registry"
+    },
+    {
+      "id": "crystal-museum",
+      "label": "Crystal Bridges museum campus",
+      "url": "https://crystalbridges.org/",
+      "parent_route_ids": [
+        "crystal-bridges"
+      ],
+      "hours_source": null,
+      "coordinate_source": "https://crystalbridges.org/visit/nature-trails",
+      "offering_sources": [],
+      "provenance": "reviewed-place-registry"
+    },
+    {
+      "id": "momentary",
+      "label": "The Momentary",
+      "url": "https://themomentary.org/plan-your-visit/",
+      "parent_route_ids": [
+        "momentary"
+      ],
+      "hours_source": null,
+      "coordinate_source": "https://themomentary.org/plan-your-visit/",
+      "offering_sources": [],
+      "provenance": "reviewed-place-registry"
+    },
+    {
+      "id": "lawrence-arts",
+      "label": "Lawrence Arts Center",
+      "url": "https://lawrenceartscenter.org/",
+      "parent_route_ids": [
+        "lawrence-arts"
+      ],
+      "hours_source": null,
+      "coordinate_source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=940+New+Hampshire+St%2C+Lawrence+KS+66044&benchmark=Public_AR_Current&format=json",
+      "offering_sources": [],
+      "provenance": "reviewed-place-registry"
+    },
+    {
+      "id": "watkins",
+      "label": "Watkins Museum of History",
+      "url": "https://www.watkinsmuseum.org/visit/",
+      "parent_route_ids": [
+        "watkins",
+        "watkins-visit"
+      ],
+      "hours_source": "https://www.watkinsmuseum.org/visit/",
+      "coordinate_source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1047+Massachusetts+St%2C+Lawrence+KS+66044&benchmark=Public_AR_Current&format=json",
+      "offering_sources": [
+        "https://www.watkinsmuseum.org/visit/"
+      ],
+      "provenance": "reviewed-place-registry"
+    },
+    {
+      "id": "science-city",
+      "label": "Science City at Union Station",
+      "url": "https://sciencecity.unionstation.org/plan-your-visit/",
+      "parent_route_ids": [
+        "science-city"
+      ],
+      "hours_source": null,
+      "coordinate_source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=30+W+Pershing+Rd%2C+Kansas+City+MO+64108&benchmark=Public_AR_Current&format=json",
+      "offering_sources": [
+        "https://sciencecity.unionstation.org/plan-your-visit/"
+      ],
+      "provenance": "reviewed-place-registry"
+    },
+    {
+      "id": "kc-zoo",
+      "label": "Kansas City Zoo & Aquarium",
+      "url": "https://kansascityzoo.org/visit/hours-location-parking",
+      "parent_route_ids": [
+        "kc-zoo"
+      ],
+      "hours_source": null,
+      "coordinate_source": "https://kansascityzoo.org/visit/hours-location-parking",
+      "offering_sources": [],
+      "provenance": "reviewed-place-registry"
+    }
+  ]
 }

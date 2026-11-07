@@ -4,6 +4,8 @@ An executable, evidence-first activity research skill for Kansas City metro, Law
 
 **Hosted activity browser:** `web/` is a static GitHub Pages site with age, location, type and date filters. Daily GitHub Actions collect seven months ahead into `web/activities.json`, without any LLM calls. See [hosting and collection](references/hosting-and-collection.md) for scheduling, source expansion, costs and maintenance.
 
+**Ongoing places and map:** parks and permanent attractions have separate hours, seasonal rules and amenities. The optional Leaflet map shares the list filters, groups co-located activities, supports searching the visible area, and links to activity details. [Place and map maintenance](references/places-and-map.md) explains provenance, missing coordinates and tile hosting.
+
 Activities now have a [show page](web/activity.html) reached from each card, and a [schedule-aware model](references/activity-model-and-coverage.md) for outdoor offerings, seasons, exhibits, courses, camps and recurring programs. The graph audits 22 subjects across five regions and distinguishes reviewed routes from actual collected category/format coverage.
 
 **Discover broadly. Filter later.** Collect adult-only events, kids’ activities, family outings, active experiences, arts, performances, classes, races, seasonal events and niche discoveries. Preserve closed, full, canceled and unresolved records. Build separate recommendations for different outings from that inventory.

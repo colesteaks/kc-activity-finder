@@ -808,3 +808,137 @@ footer > a:last-child {
     padding-top: 20px;
   }
 }
+
+/* Optional map: no tiles are requested until the visitor chooses it. */
+[hidden] {
+  display: none !important;
+}
+.view-toggle {
+  display: flex;
+  gap: 6px;
+  margin: 0 0 22px;
+}
+.view-toggle button,
+.map-toolbar button {
+  border: 1px solid var(--line);
+  background: var(--paper);
+  padding: 9px 13px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+.view-toggle button[aria-pressed="true"] {
+  background: var(--green);
+  color: white;
+  border-color: var(--green);
+}
+.map-panel {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 26px;
+  background: #fffdf7;
+}
+.map-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px;
+}
+#activity-map {
+  height: 460px;
+  width: 100%;
+  background: var(--light);
+  isolation: isolate;
+  z-index: 0;
+}
+#map-status,
+.map-note {
+  font-size: 12px;
+  margin: 12px 16px;
+}
+.map-note {
+  color: var(--muted);
+}
+.activity-pin {
+  background: var(--green);
+  color: white;
+  border: 2px solid white;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px #0005;
+  text-align: center;
+  font:
+    600 13px/30px "DM Sans",
+    sans-serif;
+}
+.map-popup {
+  color: var(--ink);
+  font-family: "DM Sans", sans-serif;
+}
+.map-popup h3 {
+  font-size: 17px;
+  margin: 0 0 8px;
+}
+.map-popup p,
+.map-popup small {
+  font-size: 11px;
+  line-height: 1.5;
+}
+.map-popup ul {
+  padding-left: 16px;
+  margin-bottom: 0;
+}
+.map-popup li {
+  margin: 12px 0;
+}
+.map-popup small {
+  display: block;
+  color: var(--muted);
+}
+.map-popup a {
+  color: var(--green);
+  font-weight: 600;
+}
+.map-precision {
+  color: var(--muted);
+}
+.place-hours,
+.place-amenities {
+  font-size: 12px;
+  margin: 10px 0;
+  color: var(--green);
+}
+.map-find {
+  font-size: 12px;
+  margin-top: 14px;
+}
+.place-offerings {
+  padding-left: 20px;
+}
+.place-offerings li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+.place-offerings p {
+  margin: 6px 0;
+}
+@media (max-width: 700px) {
+  #activity-map {
+    height: 350px;
+  }
+  .map-toolbar button {
+    font-size: 11px;
+    padding: 8px;
+  }
+}
+.activity-cluster {
+  background: var(--accent);
+  border: 5px solid #f7f5efb8;
+  border-radius: 50%;
+  background-clip: padding-box;
+  color: white;
+  box-shadow: 0 0 0 2px #cd5b3666;
+  text-align: center;
+  font:
+    600 13px/34px "DM Sans",
+    sans-serif;
+}

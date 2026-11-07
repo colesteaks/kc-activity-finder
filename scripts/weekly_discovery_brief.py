@@ -103,14 +103,23 @@ def build(root=ROOT, today=None):
     repairs=sorted([{'id':h['id'],'name':h['name'],'events':h['events'],'unparsed_count':h.get('unparsed_count',0),
                     'errors':h.get('errors',[])[:2],'url':h['url']} for h in public['sources'] if h['events']==0],
                    key=lambda h:(-h['unparsed_count'],h['id']))[:3]
+    place_health = []
+    for place in public.get('places', []):
+        hours = place.get('hours')
+        age = (today-date.fromisoformat(hours['checked_at'][:10])).days if hours else None
+        if not hours or age > 21:
+            place_health.append({'id':place['id'], 'url':hours['source_url'] if hours else place['source_url'],
+                                 'reason':'Missing verified hours' if not hours else 'Hours approaching the 30-day freshness limit'})
     return {'version':1,'as_of':today.isoformat(),'repository':policy['repository'],'budgets':policy['budgets'],
         'baseline':{'routes':len(registry),'records':len(public['activities']),
             'unique_offerings':len({a.get('offering_id',a['id']) for a in public['activities']}),
             'coverage_cells':dict(Counter(c['status'] for c in cells)),
             'activity_kinds':dict(Counter(a['schedule']['kind'] for a in public['activities'])),
             'stale_records':sum(a['stale'] for a in public['activities']),
+            'places':len(public.get('places',[])),
+            'unmapped_offerings':len({a.get('offering_id',a['id']) for a in public['activities'] if not a.get('geo')}),
             'unreviewed_proposals':len(scored)},
-        'candidates':selected,'gap_searches':searches,'repair_candidates':repairs,
+        'candidates':selected,'gap_searches':searches,'repair_candidates':repairs,'place_maintenance':place_health[:6],
         'publication_policy':policy['publication']}
 
 

@@ -1,0 +1,31 @@
+# Ongoing places, hours and the map
+
+An evergreen listing describes a potential visit, not a date-specific event and not 24/7 access. Parks, trails, museums, playgrounds and other permanent attractions use null activity dates and `schedule.kind=evergreen`. The date-window filter includes them when “Include ongoing & dates-to-confirm activities” is enabled. It does not promise availability on every selected date.
+
+## Separate the place from its offerings
+
+`data/places.json` is a reviewed registry. `scripts/place_model.py` attaches a place only when both the approved source ID and explicit venue alias match. An organizer can hold events offsite; a city name or source affiliation alone cannot establish the venue. Each public record has nullable `place_id` and `geo`. The collector publishes public place definitions under `places` in the same small `web/activities.json` file. No database, geocoding service or model call is needed for daily runs.
+
+A place has identity/address, optional coordinates, optional hours and an array of ongoing activities. Each amenity has its own official source, restrictions and availability: `during_place_hours`, `seasonal`, `reservation_required`, `admission_required` or `unknown`. It can have separate hours. Camping does not inherit day-use hours; a playground or swimming area may close while park grounds remain open. Capture these exceptions rather than calling all amenities “always available.” Ticketed museum access does not become free because its grounds are free.
+
+`schemas/place.schema.json` defines the contract. Clock rules use Monday=0 through Sunday=6, the America/Chicago time zone, half-open opening/closing intervals, optional inclusive annual MM-DD seasons (including winter wraparound), and explicit dated closure/special-hour exceptions. Grounds, gates and visitor facilities have separate scopes. Preserve published sunrise/sunset values; the browser does not invent astronomical clock times. Use 00:00–24:00 only when full-day access is explicitly published. Empty exceptions mean no verified exceptions recorded, not proof of no closures.
+
+The UI says “Within published hours,” not “Open now.” It never checks live weather or access, capacity, holiday announcements or maintenance closures. Unknown/incomplete hours stay unknown. Hours older than 30 days need a fresh check; visiting an event calendar does **not** refresh the separate hours verification timestamp. Current place rules take priority over inherited legacy schedule prose. Event show pages label place hours separately from event times. Amenity filtering applies only to evergreen visits, not to every concert or special event at that venue.
+
+## Verified map points
+
+Coordinate provenance is required. Initial points come from official maps/directions or a US Census address match using a verified street address. An official park access point or campus point is labeled as such; it is not an exact trailhead or room. Explicit event JSON-LD `location.geo` takes precedence over a registered campus point. Invalid numbers and booleans are rejected. No city-center fallback, silent proximity guess or browser geolocation is used. Records without points remain in the list, with an unmapped count shown in map view.
+
+The optional **Map + list** view uses vendored Leaflet 1.9.4 and Leaflet.markercluster 1.5.3. It plots all matching records, beyond list pagination. Co-located occurrences group into a numbered pin showing the number of distinct offerings, with popup links to activity pages. Nearby points cluster at wider zoom levels and expand as you zoom in. “Search this area” explicitly applies the current map bounds; panning alone does not change results. Unmapped records cannot match a spatial filter. “Clear area filter” or “Show all matching places” removes that constraint. Region changes, switching back to List, and Reset clear it too. Filter/view/bounds state can be shared through URL parameters; activity pages link back to a focused pin.
+
+OpenStreetMap tiles load directly in the visitor's browser only after selecting the map. The default list makes no tile requests. Preserve visible attribution, standard browser caching and the Referer header. Never bulk-download, prefetch or offer offline tiles. The public tile endpoint is best-effort, without a service-level guarantee; a basemap failure leaves the activity list usable. See the [OSM tile policy](https://operations.osmfoundation.org/policies/tiles/). The site does not add API keys or paid infrastructure. If traffic grows, switch `web/map-config.json` to an appropriate hosted tile service and update attribution/terms before relying on it at scale.
+
+## Extend and maintain
+
+1. Find the actual official place page, visitor hours, access map and individual facility pages. Check seasonal rules, closures, permitted trail uses and booking requirements. Do not transfer hours between a museum and its grounds.
+2. Add a reviewed entry to `data/places.json`, preserving verification dates and source URLs. Use a specific official map/directions coordinate or verified address result; record precision and entrance caveats. Add explicit aliases only for actual venues on that source.
+3. Add/repair the evergreen collection route in `data/collection-sources.json` when needed. Place definitions by themselves are not activity listings. The generated graph retains reviewed `place_leaves`, official hours/amenity links and parent route IDs. A listed leaf is not proof it was crawled today.
+4. Run collection normally to attach places. `refresh_sources.py --coverage-only` updates graph links without network collection. Do not fabricate new event/hours observation timestamps to migrate existing rows.
+5. Run `python3 -m unittest discover -s tests -q`, `node --test tests/test_*.mjs`, both validators, and browser checks for map/list filters, popups, missing points, detail pages and mobile layout.
+
+The weekly improvement brief includes missing/aging hours and unmapped offering counts. Within its existing discovery budget, prioritize useful places and neglected regions, verify hours approaching 30 days, and improve coordinate coverage with provenance. Changes to the registry flow through the next daily collection. Current coverage is partial; expanding the place registry is part of that loop.

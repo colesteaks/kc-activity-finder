@@ -1,4 +1,6 @@
 import { safeLink, chicagoToday } from "./filters.mjs";
+import { hoursState, placeFor, persistentActivities } from "./place-hours.mjs";
+import { hasCoordinates } from "./map-data.mjs";
 import {
   KIND_LABELS,
   scheduleLabel,
@@ -45,7 +47,7 @@ function checkedLabel(value) {
 function paragraph(parent, value) {
   parent.append(el("p", value));
 }
-function render(rows, all, taxonomy) {
+function render(rows, all, taxonomy, places) {
   const today = chicagoToday();
   const upcoming = rows.filter((a) => !a.end_date || a.end_date >= today);
   const a = (upcoming.length ? upcoming : rows).sort((x, y) =>
@@ -93,6 +95,90 @@ function render(rows, all, taxonomy) {
   official.className = "detail-button";
   about.append(official);
   body.append(about);
+  const place = placeFor(a, places);
+  if (place || hasCoordinates(a)) {
+    const location = section("The place");
+    if (place) {
+      paragraph(location, place.name + " · " + place.address);
+      location.append(
+        external(place.source_url, "Official visitor information ↗"),
+      );
+      if (place.hours) {
+        location.append(el("h3", "Published place hours"));
+        paragraph(location, place.hours.text);
+        paragraph(
+          location,
+          hoursState(place.hours).label + " · " + place.hours.notice,
+        );
+        paragraph(
+          location,
+          "Hours checked: " + checkedLabel(place.hours.checked_at),
+        );
+        location.append(
+          external(place.hours.source_url, "Source for opening hours ↗"),
+        );
+        if (a.schedule.kind !== "evergreen")
+          paragraph(
+            location,
+            "Place hours do not establish the event time, admission or access to individual facilities. Use the activity schedule.",
+          );
+        for (const exception of place.hours.exceptions)
+          paragraph(location, exception.date + ": " + exception.note);
+      } else
+        paragraph(
+          location,
+          "Place opening hours have not been verified. Check the official visitor information.",
+        );
+      const amenities = persistentActivities(a, places);
+      if (amenities.length) {
+        location.append(el("h3", "Things to do here"));
+        paragraph(
+          location,
+          "These are ongoing offerings. Weather, closures and facility-specific rules can affect access.",
+        );
+        const list = el("ul", "", "place-offerings");
+        for (const item of amenities) {
+          const li = el("li");
+          li.append(el("strong", item.name));
+          paragraph(
+            li,
+            {
+              during_place_hours: "During published place hours",
+              seasonal: "Seasonal availability",
+              reservation_required: "Reservation required",
+              admission_required: "Admission required",
+              unknown: "Availability needs confirmation",
+            }[item.availability] +
+              " · " +
+              item.note,
+          );
+          if (item.hours) {
+            paragraph(
+              li,
+              item.hours.text + " · " + hoursState(item.hours).label,
+            );
+            li.append(external(item.hours.source_url, "Facility hours ↗"));
+          }
+          li.append(external(item.source_url, "Official details ↗"));
+          list.append(li);
+        }
+        location.append(list);
+      }
+    }
+    if (hasCoordinates(a)) {
+      const mapLink = el(
+        "a",
+        "See this activity on the map →",
+        "detail-button",
+      );
+      mapLink.href =
+        "./?view=map&focus=" + encodeURIComponent(a.offering_id || a.id);
+      location.append(mapLink);
+      paragraph(location, a.geo.note);
+      location.append(external(a.geo.source_url, "Location evidence ↗"));
+    }
+    body.append(location);
+  }
   const schedule = section("When & how it works");
   paragraph(schedule, scheduleLabel(a));
   paragraph(schedule, a.schedule.note);
@@ -279,7 +365,7 @@ async function start() {
       );
       return;
     }
-    render(rows, data.activities, data.taxonomy);
+    render(rows, data.activities, data.taxonomy, data.places || []);
   } catch (error) {
     root.replaceChildren(
       el("h1", "We couldn’t load this activity."),

@@ -6,6 +6,7 @@ is labeled as such. Never expand a date range into invented daily sessions.
 import hashlib
 import re
 from urllib.parse import urlsplit, urlunsplit
+from place_model import attach_place
 
 KINDS = ('one_off', 'multi_day', 'exhibit', 'sports_season', 'course', 'camp',
          'recurring_program', 'evergreen', 'program_catalog', 'date_range_unknown')
@@ -74,7 +75,7 @@ def enrich(row, raw=None, source=None):
         'url': None, 'note': 'Event being listed does not confirm registration or ticket availability.'}
     row['commitment'] = raw.get('_commitment') or {'attendance': 'unknown', 'duration': None,
         'equipment': None, 'note': 'Check whether this is drop-in, a single session or a full-season commitment.'}
-    return row
+    return attach_place(row, raw)
 
 
 def in_horizon(row, first, last):

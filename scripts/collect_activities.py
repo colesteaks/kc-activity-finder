@@ -23,6 +23,7 @@ from bs4 import BeautifulSoup
 from dateutil.parser import isoparse, parse
 from dateutil.relativedelta import relativedelta
 from activity_model import enrich, in_horizon, coverage_matrix
+from place_model import public_places, attach_place
 
 ROOT = Path(__file__).resolve().parents[1]
 TZ = ZoneInfo('America/Chicago')
@@ -346,6 +347,7 @@ def collect_source(source, start, until, observed, cache):
 def reconcile(old, fresh, health, now):
     for row in old + fresh:
         if 'schedule' not in row: enrich(row)
+        if not row.get('geo') or row['geo'].get('precision') != 'source_point': attach_place(row)
     new = {r['id']: r for r in fresh}; old_by_id = {r['id']: r for r in old}
     for key, row in new.items():
         if key in old_by_id: row['first_seen'] = old_by_id[key]['first_seen']
@@ -380,6 +382,7 @@ def run(registry, output, cache, now=None):
               'activities': reconcile(old['activities'], fresh, health, now)}
     taxonomy = json.loads((ROOT / 'data/activity-taxonomy.json').read_text())
     result['taxonomy'] = taxonomy
+    result['places'] = public_places()
     result['coverage_matrix'] = coverage_matrix(sources, taxonomy, health)
     output.parent.mkdir(parents=True, exist_ok=True)
     temp = output.with_suffix('.tmp'); temp.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n'); temp.replace(output)

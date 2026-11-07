@@ -1323,7 +1323,9 @@
           "format": "jsonld",
           "start_as_published": "2026-04-19T11:00-05:00"
         }
-      ]
+      ],
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "e6010c1f181ffaded037",
@@ -1401,7 +1403,9 @@
           "format": "jsonld",
           "start_as_published": "2026-04-19T11:00-05:00"
         }
-      ]
+      ],
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "f1d3c5cb75e799807a79",
@@ -1479,7 +1483,16 @@
           "format": "jsonld",
           "start_as_published": "2026-04-19T11:45-05:00"
         }
-      ]
+      ],
+      "place_id": "crystal-museum",
+      "geo": {
+        "lat": 36.381868,
+        "lng": -94.202653,
+        "precision": "campus",
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
+      }
     },
     {
       "id": "808745b48e4bc8876e66",
@@ -1557,7 +1570,16 @@
           "format": "jsonld",
           "start_as_published": "2026-04-19T13:00:00-05:00"
         }
-      ]
+      ],
+      "place_id": "crystal-museum",
+      "geo": {
+        "lat": 36.381868,
+        "lng": -94.202653,
+        "precision": "campus",
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
+      }
     },
     {
       "id": "ce8124963e96b94e17ce",
@@ -1635,7 +1657,16 @@
           "format": "jsonld",
           "start_as_published": "2026-04-19T14:15:00-05:00"
         }
-      ]
+      ],
+      "place_id": "crystal-museum",
+      "geo": {
+        "lat": 36.381868,
+        "lng": -94.202653,
+        "precision": "campus",
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
+      }
     },
     {
       "id": "bdfd67dcd08e290bdf99",
@@ -1713,7 +1744,16 @@
           "format": "jsonld",
           "start_as_published": "2026-04-22T13:00:00-05:00"
         }
-      ]
+      ],
+      "place_id": "crystal-museum",
+      "geo": {
+        "lat": 36.381868,
+        "lng": -94.202653,
+        "precision": "campus",
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
+      }
     },
     {
       "id": "74a50ab13d8f65d0c6f7",
@@ -1791,7 +1831,9 @@
           "format": "jsonld",
           "start_as_published": "2026-04-24T10:30:00-05:00"
         }
-      ]
+      ],
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "f5615dfe90938b90eef0",
@@ -1869,7 +1911,9 @@
           "format": "jsonld",
           "start_as_published": "2026-06-06T11:00-05:00"
         }
-      ]
+      ],
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "380c801bbfe94af5e516",
@@ -1947,7 +1991,16 @@
           "format": "jsonld",
           "start_as_published": "2026-06-06T11:00-05:00"
         }
-      ]
+      ],
+      "place_id": "crystal-museum",
+      "geo": {
+        "lat": 36.381868,
+        "lng": -94.202653,
+        "precision": "campus",
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
+      }
     },
     {
       "id": "8f7f9326e637ddd1f06d",
@@ -2025,7 +2078,9 @@
           "format": "jsonld",
           "start_as_published": "2026-06-13T14:30-05:00"
         }
-      ]
+      ],
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "b753698558cbf16c825e",
@@ -2103,7 +2158,16 @@
           "format": "jsonld",
           "start_as_published": "2026-09-12T11:00-05:00"
         }
-      ]
+      ],
+      "place_id": "crystal-museum",
+      "geo": {
+        "lat": 36.381868,
+        "lng": -94.202653,
+        "precision": "campus",
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
+      }
     },
     {
       "id": "b8b891b77bec17a459f7",
@@ -2181,7 +2245,16 @@
           "format": "jsonld",
           "start_as_published": "2026-09-12T13:00-05:00"
         }
-      ]
+      ],
+      "place_id": "crystal-museum",
+      "geo": {
+        "lat": 36.381868,
+        "lng": -94.202653,
+        "precision": "campus",
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
+      }
     },
     {
       "id": "1d9ae50606b19b1b4e95",
@@ -2259,7 +2332,16 @@
           "format": "jsonld",
           "start_as_published": "2026-10-09T11:00-05:00"
         }
-      ]
+      ],
+      "place_id": "crystal-museum",
+      "geo": {
+        "lat": 36.381868,
+        "lng": -94.202653,
+        "precision": "campus",
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
+      }
     },
     {
       "id": "65793b646bc8a647ca9a",
@@ -2337,7 +2419,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-02T00:00:00+0000"
         }
-      ]
+      ],
+      "place_id": "kc-zoo",
+      "geo": {
+        "lat": 39.006873279554,
+        "lng": -94.564183321107,
+        "precision": "campus",
+        "source_url": "https://kansascityzoo.org/visit/hours-location-parking",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Center of the zoo map embedded on its official directions page; internal locations differ."
+      }
     },
     {
       "id": "79bfccc828edd6aaf08b",
@@ -2415,7 +2506,9 @@
           "format": "columbia",
           "start_as_published": "2026-11-07T09:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "2c7edbf4dd4843e491c1",
@@ -2493,7 +2586,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-07T10:00-05:00"
         }
-      ]
+      ],
+      "place_id": "crystal-museum",
+      "geo": {
+        "lat": 36.381868,
+        "lng": -94.202653,
+        "precision": "campus",
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
+      }
     },
     {
       "id": "0e74cdfcb256304646e8",
@@ -2571,7 +2673,9 @@
           "format": "jsonld",
           "start_as_published": "2026-11-07T10:30-05:00"
         }
-      ]
+      ],
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "477dda873cda0db86655",
@@ -2649,7 +2753,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-07T15:30:00+0000"
         }
-      ]
+      ],
+      "place_id": "kc-zoo",
+      "geo": {
+        "lat": 39.006873279554,
+        "lng": -94.564183321107,
+        "precision": "campus",
+        "source_url": "https://kansascityzoo.org/visit/hours-location-parking",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Center of the zoo map embedded on its official directions page; internal locations differ."
+      }
     },
     {
       "id": "f291e2a8e58001d562da",
@@ -2727,7 +2840,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-07T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "dba8e3e180f5c03db869",
@@ -2805,7 +2927,9 @@
           "format": "jsonld",
           "start_as_published": "2026-11-07T11:00-05:00"
         }
-      ]
+      ],
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "8d69c5ecac6e960d7f99",
@@ -2883,7 +3007,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-07T11:00-05:00"
         }
-      ]
+      ],
+      "place_id": "crystal-museum",
+      "geo": {
+        "lat": 36.381868,
+        "lng": -94.202653,
+        "precision": "campus",
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
+      }
     },
     {
       "id": "87ad496a445cb6762345",
@@ -2961,7 +3094,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "342a2c4a8fca77859dcd",
@@ -3039,7 +3174,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "7991d659ead00101fce8",
@@ -3117,7 +3254,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-07T16:00:00+0000"
         }
-      ]
+      ],
+      "place_id": "kc-zoo",
+      "geo": {
+        "lat": 39.006873279554,
+        "lng": -94.564183321107,
+        "precision": "campus",
+        "source_url": "https://kansascityzoo.org/visit/hours-location-parking",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Center of the zoo map embedded on its official directions page; internal locations differ."
+      }
     },
     {
       "id": "20f95bdc223b68b3a003",
@@ -3195,7 +3341,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-07T16:00:00+0000"
         }
-      ]
+      ],
+      "place_id": "kc-zoo",
+      "geo": {
+        "lat": 39.006873279554,
+        "lng": -94.564183321107,
+        "precision": "campus",
+        "source_url": "https://kansascityzoo.org/visit/hours-location-parking",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Center of the zoo map embedded on its official directions page; internal locations differ."
+      }
     },
     {
       "id": "ba85a366d056293eb4a5",
@@ -3273,7 +3428,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "b8a7e6a010bffc23220b",
@@ -3351,7 +3508,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-07T11:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "lawrence-arts",
+      "geo": {
+        "lat": 38.966746641964,
+        "lng": -95.234622585443,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=940+New+Hampshire+St%2C+Lawrence+KS+66044&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      }
     },
     {
       "id": "f1ffa90f124215b3e1e5",
@@ -3429,7 +3595,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-07T11:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "d1bbe22cc949a2ad1bc4",
@@ -3507,7 +3682,9 @@
           "format": "columbia",
           "start_as_published": "2026-11-07T11:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "19afe4bdd51791fde594",
@@ -3585,7 +3762,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-07T13:00-05:00"
         }
-      ]
+      ],
+      "place_id": "crystal-museum",
+      "geo": {
+        "lat": 36.381868,
+        "lng": -94.202653,
+        "precision": "campus",
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
+      }
     },
     {
       "id": "b4d666e84bb12a3227a9",
@@ -3663,7 +3849,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-07T16:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "lawrence-arts",
+      "geo": {
+        "lat": 38.966746641964,
+        "lng": -95.234622585443,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=940+New+Hampshire+St%2C+Lawrence+KS+66044&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      }
     },
     {
       "id": "f2e3ed5d524e533c79a5",
@@ -3741,7 +3936,9 @@
           "format": "columbia",
           "start_as_published": "2026-11-07T18:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "30a411db88ad6bcca1e9",
@@ -3819,7 +4016,9 @@
           "format": "columbia",
           "start_as_published": "2026-11-07T19:30:00-06:00"
         }
-      ]
+      ],
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "cd3810744623e2dff8fc",
@@ -3897,7 +4096,9 @@
           "format": "columbia",
           "start_as_published": "2026-11-07T19:30:00-06:00"
         }
-      ]
+      ],
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "b129f9dbe6fda4315826",
@@ -3975,7 +4176,9 @@
           "format": "columbia",
           "start_as_published": "2026-11-07T20:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "b00b0dd6fb4e8791bded",
@@ -4053,7 +4256,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-08T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "fddf6937111df6a5d5d4",
@@ -4131,7 +4343,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-08T10:00-05:00"
         }
-      ]
+      ],
+      "place_id": "crystal-museum",
+      "geo": {
+        "lat": 36.381868,
+        "lng": -94.202653,
+        "precision": "campus",
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
+      }
     },
     {
       "id": "0f82e5cb3aad67b35644",
@@ -4209,7 +4430,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-08T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "12a564d650731194d8e2",
@@ -4287,7 +4517,9 @@
           "format": "columbia",
           "start_as_published": "2026-11-08T11:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "4749e8c2941c4c98e1c3",
@@ -4365,7 +4597,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-08T13:00-05:00"
         }
-      ]
+      ],
+      "place_id": "crystal-museum",
+      "geo": {
+        "lat": 36.381868,
+        "lng": -94.202653,
+        "precision": "campus",
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
+      }
     },
     {
       "id": "c25976c458c5ed7745a4",
@@ -4443,7 +4684,9 @@
           "format": "columbia",
           "start_as_published": "2026-11-08T14:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "4cc4fe94f80620fcf9b3",
@@ -4521,7 +4764,9 @@
           "format": "columbia",
           "start_as_published": "2026-11-08T14:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "094b1b3d3b8325534743",
@@ -4599,7 +4844,9 @@
           "format": "tribe",
           "start_as_published": "2026-11-08 22:00:00+00:00"
         }
-      ]
+      ],
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "2f918898231677ce84f0",
@@ -4677,7 +4924,9 @@
           "format": "columbia",
           "start_as_published": "2026-11-08T19:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "a9b5fae6baca7667a186",
@@ -4755,7 +5004,9 @@
           "format": "columbia",
           "start_as_published": "2026-11-09T19:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "0778b55f9767a84bbf96",
@@ -4833,7 +5084,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-10T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "a0fded7274ee0f420b32",
@@ -4911,7 +5171,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-10T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "898003a256378f2762e2",
@@ -4989,7 +5258,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-10T13:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "ebc8e5c906e0451a1906",
@@ -5067,7 +5345,9 @@
           "format": "columbia",
           "start_as_published": "2026-11-10T19:30:00-06:00"
         }
-      ]
+      ],
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "de073834b113602fb04d",
@@ -5145,7 +5425,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-11T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "616971daa12ca0de2f7d",
@@ -5223,7 +5512,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-11T08:30-05:00"
         }
-      ]
+      ],
+      "place_id": "crystal-museum",
+      "geo": {
+        "lat": 36.381868,
+        "lng": -94.202653,
+        "precision": "campus",
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
+      }
     },
     {
       "id": "509b4dfe94fe9f05c94f",
@@ -5301,7 +5599,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-11T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "0cd6491fb2764d2c3559",
@@ -5379,7 +5686,9 @@
           "format": "columbia",
           "start_as_published": "2026-11-11T17:30:00-06:00"
         }
-      ]
+      ],
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "c46d56810b8752ac19ee",
@@ -5457,7 +5766,9 @@
           "format": "columbia",
           "start_as_published": "2026-11-11T19:30:00-06:00"
         }
-      ]
+      ],
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "65d8e577fe4f0af2b13b",
@@ -5535,7 +5846,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-12T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "062d8b0bd6b27ffb4a13",
@@ -5613,7 +5933,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-12T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "875e1be22ac87e8b6715",
@@ -5691,7 +6020,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-12T18:00-05:00"
         }
-      ]
+      ],
+      "place_id": "crystal-museum",
+      "geo": {
+        "lat": 36.381868,
+        "lng": -94.202653,
+        "precision": "campus",
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
+      }
     },
     {
       "id": "626b76f6c0fee8ca248a",
@@ -5769,7 +6107,9 @@
           "format": "columbia",
           "start_as_published": "2026-11-12T19:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "cdd5689cd01180e287c7",
@@ -5847,7 +6187,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-12T19:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "lawrence-arts",
+      "geo": {
+        "lat": 38.966746641964,
+        "lng": -95.234622585443,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=940+New+Hampshire+St%2C+Lawrence+KS+66044&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      }
     },
     {
       "id": "2e70a9bcace212777ea0",
@@ -5925,7 +6274,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-13T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "776b35e7a49ad4486205",
@@ -6003,7 +6361,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-13T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "a17a8280324ca04e182b",
@@ -6081,7 +6448,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-13T17:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "b35ed8c200f56337d0bd",
@@ -6159,7 +6535,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-14T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "6e00d682733a5bf04fe6",
@@ -6237,7 +6622,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "03efc327f09ed8ec7cef",
@@ -6315,7 +6702,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-14T10:00-05:00"
         }
-      ]
+      ],
+      "place_id": "crystal-museum",
+      "geo": {
+        "lat": 36.381868,
+        "lng": -94.202653,
+        "precision": "campus",
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
+      }
     },
     {
       "id": "bdbcb33d3fc22cc8de3e",
@@ -6393,7 +6789,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-14T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "b051129d478dd80f9891",
@@ -6471,7 +6876,16 @@
           "format": "tribe",
           "start_as_published": "2026-11-15 01:00:00+00:00"
         }
-      ]
+      ],
+      "place_id": "watkins",
+      "geo": {
+        "lat": 38.964767182484,
+        "lng": -95.235980232701,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1047+Massachusetts+St%2C+Lawrence+KS+66044&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      }
     },
     {
       "id": "a5efc950511a98860da7",
@@ -6549,7 +6963,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-15T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "cd497dfb7848f9c18b91",
@@ -6627,7 +7050,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-15T11:00-05:00"
         }
-      ]
+      ],
+      "place_id": "crystal-museum",
+      "geo": {
+        "lat": 36.381868,
+        "lng": -94.202653,
+        "precision": "campus",
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
+      }
     },
     {
       "id": "d8f03794638a4883c081",
@@ -6705,7 +7137,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-15T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "2562a333539c84dd723d",
@@ -6783,7 +7224,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-17T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "efe1f207f01a6f26a86c",
@@ -6861,7 +7311,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-17T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "a0a627a0095ab5f945b7",
@@ -6939,7 +7398,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-17T13:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "2ffd382385793b598620",
@@ -7017,7 +7485,9 @@
           "format": "jsonld",
           "start_as_published": "2026-11-17T18:00-05:00"
         }
-      ]
+      ],
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "7d98c2555adc7738c514",
@@ -7095,7 +7565,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "3c3f1ad5704aff8a5aa5",
@@ -7173,7 +7645,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-18T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "cf592bc59e2535e4fac8",
@@ -7251,7 +7732,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-18T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "91f30c111ce189b040a8",
@@ -7329,7 +7819,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "fbe2d394d2bd9b9b358a",
@@ -7407,7 +7899,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-18T18:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "d618f22c0807a5eb350b",
@@ -7485,7 +7986,16 @@
           "format": "tribe",
           "start_as_published": "2026-11-19 01:00:00+00:00"
         }
-      ]
+      ],
+      "place_id": "watkins",
+      "geo": {
+        "lat": 38.964767182484,
+        "lng": -95.235980232701,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1047+Massachusetts+St%2C+Lawrence+KS+66044&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      }
     },
     {
       "id": "eae3446b48e632c1b8ad",
@@ -7563,7 +8073,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-19T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "cc37287a1c1d73268d81",
@@ -7641,7 +8160,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-19T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "4bc20657b6ed301c04df",
@@ -7719,7 +8247,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "50799df2f6fa11f8256b",
@@ -7797,7 +8327,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-19T17:00-05:00"
         }
-      ]
+      ],
+      "place_id": "crystal-trails",
+      "geo": {
+        "lat": 36.381868,
+        "lng": -94.202653,
+        "precision": "campus",
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
+      }
     },
     {
       "id": "dac89bd739359fb943da",
@@ -7875,7 +8414,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-19T18:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "crystal-museum",
+      "geo": {
+        "lat": 36.381868,
+        "lng": -94.202653,
+        "precision": "campus",
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
+      }
     },
     {
       "id": "e8de628acd30d5b9a3e3",
@@ -7953,7 +8501,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-20T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "233599506f2e318cb507",
@@ -8031,7 +8588,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-20T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "ae205db606d9e6e7c364",
@@ -8109,7 +8675,16 @@
           "format": "tribe",
           "start_as_published": "2026-11-20 23:30:00+00:00"
         }
-      ]
+      ],
+      "place_id": "watkins",
+      "geo": {
+        "lat": 38.964767182484,
+        "lng": -95.235980232701,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1047+Massachusetts+St%2C+Lawrence+KS+66044&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      }
     },
     {
       "id": "2a0f4730da0206883bb3",
@@ -8187,7 +8762,16 @@
           "format": "tribe",
           "start_as_published": "2026-11-21 00:00:00+00:00"
         }
-      ]
+      ],
+      "place_id": "watkins",
+      "geo": {
+        "lat": 38.964767182484,
+        "lng": -95.235980232701,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1047+Massachusetts+St%2C+Lawrence+KS+66044&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      }
     },
     {
       "id": "4588424cb2b9672403cb",
@@ -8265,7 +8849,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-21T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "638e10c4b2f68fccbbb4",
@@ -8343,7 +8936,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "7a9a14bf08aebe6610c5",
@@ -8421,7 +9016,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-21T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "976ab6448fadbb6989f0",
@@ -8499,7 +9103,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "cd5a773a1892301540d2",
@@ -8577,7 +9183,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-21T11:00-05:00"
         }
-      ]
+      ],
+      "place_id": "crystal-museum",
+      "geo": {
+        "lat": 36.381868,
+        "lng": -94.202653,
+        "precision": "campus",
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
+      }
     },
     {
       "id": "af05f095825bf9a9aab6",
@@ -8655,7 +9270,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-21T12:00-05:00"
         }
-      ]
+      ],
+      "place_id": "crystal-museum",
+      "geo": {
+        "lat": 36.381868,
+        "lng": -94.202653,
+        "precision": "campus",
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
+      }
     },
     {
       "id": "3748afa285b05b790a15",
@@ -8733,7 +9357,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-22T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "199522b9fdae2ccd7914",
@@ -8811,7 +9444,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "0ca56c7273749e942a80",
@@ -8889,7 +9524,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-22T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "69640536054acd268441",
@@ -8967,7 +9611,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-24T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "95ba37a8b81e3069821a",
@@ -9045,7 +9698,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-24T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "0cf0d9479981136b8795",
@@ -9123,7 +9785,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-24T13:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "9cd9c77746d7057e3d52",
@@ -9201,7 +9872,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-25T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "ae428dab54bd55390d71",
@@ -9279,7 +9959,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-25T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "5b61e2df99a28a448cf9",
@@ -9357,7 +10046,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-27T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "60aa639252f439cfd3b8",
@@ -9435,7 +10133,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-27T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "62e5d48f8eb97304438c",
@@ -9513,7 +10220,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-27T17:00:00+0000"
         }
-      ]
+      ],
+      "place_id": "kc-zoo",
+      "geo": {
+        "lat": 39.006873279554,
+        "lng": -94.564183321107,
+        "precision": "campus",
+        "source_url": "https://kansascityzoo.org/visit/hours-location-parking",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Center of the zoo map embedded on its official directions page; internal locations differ."
+      }
     },
     {
       "id": "8e8c685bb62b82cff2f0",
@@ -9591,7 +10307,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-28T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "24cd90f1bd292c96dbce",
@@ -9669,7 +10394,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "1fe9c7ddb0c2a05cdd34",
@@ -9747,7 +10474,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-28T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "1c613be106fe5147e4de",
@@ -9825,7 +10561,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-28T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "fa439f3d0b775ca4d4ae",
@@ -9903,7 +10648,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-29T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "283fbcc80d11bd09152c",
@@ -9981,7 +10735,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-29T10:00-05:00"
         }
-      ]
+      ],
+      "place_id": "crystal-museum",
+      "geo": {
+        "lat": 36.381868,
+        "lng": -94.202653,
+        "precision": "campus",
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
+      }
     },
     {
       "id": "bd3cd0a3ba4418bb506f",
@@ -10059,7 +10822,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-29T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "f71af860c8a8512971c9",
@@ -10137,7 +10909,16 @@
           "format": "jsonld",
           "start_as_published": "2026-11-29T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "024b8b186ddb0584e550",
@@ -10215,7 +10996,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-01T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "fde3b53ebee2411e661b",
@@ -10293,7 +11083,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "7b509fbd8616a09a2f32",
@@ -10371,7 +11163,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-01T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "21611ca8df6cb5eb0b6b",
@@ -10449,7 +11250,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-01T11:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "8f04b8f1b9904590e400",
@@ -10527,7 +11337,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-01T13:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "01e2e73ce7c4a5105c4a",
@@ -10605,7 +11424,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "dca970b043e5ee6f7261",
@@ -10683,7 +11504,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-02T00:00:00+0000"
         }
-      ]
+      ],
+      "place_id": "kc-zoo",
+      "geo": {
+        "lat": 39.006873279554,
+        "lng": -94.564183321107,
+        "precision": "campus",
+        "source_url": "https://kansascityzoo.org/visit/hours-location-parking",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Center of the zoo map embedded on its official directions page; internal locations differ."
+      }
     },
     {
       "id": "2179a8d7df09d92a0f9f",
@@ -10761,7 +11591,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-01T18:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "61a25bbc1242e8438048",
@@ -10839,7 +11678,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-02T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "fd9a789eb4a7b848ffb6",
@@ -10917,7 +11765,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-02T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "4cdf5bbbff74605c3260",
@@ -10995,7 +11852,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-02T11:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "ebcf366d5f71839d8a28",
@@ -11073,7 +11939,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-02T17:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "f5cf336ea8b1c8c397cd",
@@ -11151,7 +12026,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "9e13dd0762a9d37b5f06",
@@ -11229,7 +12106,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-02T18:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "a0f2de73c66a9c65b955",
@@ -11307,7 +12193,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-03T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "967bedacde70f3a13261",
@@ -11385,7 +12280,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-03T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "e7006c2fd3da8f7651c4",
@@ -11463,7 +12367,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-03T11:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "e0d95b7e87665ca5107f",
@@ -11541,7 +12454,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-03T17:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "c9c5c7c6a81b242e56ae",
@@ -11619,7 +12541,9 @@
           "format": "jsonld",
           "start_as_published": "2026-12-03T18:30:00-06:00"
         }
-      ]
+      ],
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "35600a8e409104a07e3a",
@@ -11697,7 +12621,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-04T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "6fd0ada433e49e06c306",
@@ -11775,7 +12708,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-04T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "bbfea37392c3f55ebf6c",
@@ -11853,7 +12795,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-04T11:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "f2a7db317299a97d5d51",
@@ -11931,7 +12882,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-04T18:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "fde6111428dc47f7d477",
@@ -12009,7 +12969,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-04T18:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "6413a720718db10c3832",
@@ -12087,7 +13056,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-04T19:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "crystal-museum",
+      "geo": {
+        "lat": 36.381868,
+        "lng": -94.202653,
+        "precision": "campus",
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
+      }
     },
     {
       "id": "6978af45430c633ec69b",
@@ -12165,7 +13143,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-05T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "82b4ad81fc335d69d08c",
@@ -12243,7 +13230,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-05T14:30:00+0000"
         }
-      ]
+      ],
+      "place_id": "kc-zoo",
+      "geo": {
+        "lat": 39.006873279554,
+        "lng": -94.564183321107,
+        "precision": "campus",
+        "source_url": "https://kansascityzoo.org/visit/hours-location-parking",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Center of the zoo map embedded on its official directions page; internal locations differ."
+      }
     },
     {
       "id": "9694bdd7e423bf13ae90",
@@ -12321,7 +13317,16 @@
           "format": "tribe",
           "start_as_published": "2026-12-05 15:00:00+00:00"
         }
-      ]
+      ],
+      "place_id": "watkins",
+      "geo": {
+        "lat": 38.964767182484,
+        "lng": -95.235980232701,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1047+Massachusetts+St%2C+Lawrence+KS+66044&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      }
     },
     {
       "id": "4151daf3605f7908155b",
@@ -12399,7 +13404,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-05T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "2b4d222a3711b8c0b7ae",
@@ -12477,7 +13491,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "9f298bc274e9bc0064f2",
@@ -12555,7 +13571,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-05T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "ef0056cd1d0f86a1bc6c",
@@ -12633,7 +13658,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "75e648ad6c09e87d7e54",
@@ -12711,7 +13738,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-05T11:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "6cd4c71a4480a65d6ad5",
@@ -12789,7 +13825,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-05T17:00:00+0000"
         }
-      ]
+      ],
+      "place_id": "kc-zoo",
+      "geo": {
+        "lat": 39.006873279554,
+        "lng": -94.564183321107,
+        "precision": "campus",
+        "source_url": "https://kansascityzoo.org/visit/hours-location-parking",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Center of the zoo map embedded on its official directions page; internal locations differ."
+      }
     },
     {
       "id": "73dfd88b9da2f2a70ca4",
@@ -12867,7 +13912,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-05T13:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "fb40820bd8f8257e032e",
@@ -12945,7 +13999,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "279c4580f2f7348f39b9",
@@ -13023,7 +14079,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-05T16:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "1c038776915b2d66a74e",
@@ -13101,7 +14166,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-06T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "215244c1c04ae4fb792c",
@@ -13179,7 +14253,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-06T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "7e5a31420bc921c4fcf4",
@@ -13257,7 +14340,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-06T11:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "7cc17d8daa2051440560",
@@ -13335,7 +14427,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-06T13:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "2e8c3ea7de3527489351",
@@ -13413,7 +14514,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-06T19:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "7e06bb5b480773483f1c",
@@ -13491,7 +14601,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-08T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "835bf81c80ef0432536a",
@@ -13569,7 +14688,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "afb253cf5842b27e39aa",
@@ -13647,7 +14768,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-08T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "0db0b9ef95f94ae4f4ec",
@@ -13725,7 +14855,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-08T13:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "6538c2f56b003092f0e6",
@@ -13803,7 +14942,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "565bc72e643aa7174bad",
@@ -13881,7 +15022,16 @@
           "format": "tribe",
           "start_as_published": "2026-12-09 00:00:00+00:00"
         }
-      ]
+      ],
+      "place_id": "watkins",
+      "geo": {
+        "lat": 38.964767182484,
+        "lng": -95.235980232701,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1047+Massachusetts+St%2C+Lawrence+KS+66044&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      }
     },
     {
       "id": "2f4dfc8b0fd7f43f3628",
@@ -13959,7 +15109,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-09T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "b6dbadc6071389e13ff7",
@@ -14037,7 +15196,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-09T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "df526037c322a85cd59c",
@@ -14115,7 +15283,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-09T18:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "crystal-museum",
+      "geo": {
+        "lat": 36.381868,
+        "lng": -94.202653,
+        "precision": "campus",
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
+      }
     },
     {
       "id": "eb1f47d9e9b6e260bbd9",
@@ -14193,7 +15370,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-10T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "42ad55ecf36a288cbc84",
@@ -14271,7 +15457,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-10T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "bca2d34d6adba41aa287",
@@ -14349,7 +15544,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-11T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "65c589fa18206530fe4e",
@@ -14427,7 +15631,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-11T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "70f302488f5824217c38",
@@ -14505,7 +15718,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-11T17:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "23682d8e567af3a3e5dd",
@@ -14583,7 +15805,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-11T19:30:00-06:00"
         }
-      ]
+      ],
+      "place_id": "crystal-museum",
+      "geo": {
+        "lat": 36.381868,
+        "lng": -94.202653,
+        "precision": "campus",
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
+      }
     },
     {
       "id": "7932fb8b9b164a53149b",
@@ -14661,7 +15892,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-12T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "8b0f6844454959f652e2",
@@ -14739,7 +15979,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-12T10:00-05:00"
         }
-      ]
+      ],
+      "place_id": "crystal-museum",
+      "geo": {
+        "lat": 36.381868,
+        "lng": -94.202653,
+        "precision": "campus",
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
+      }
     },
     {
       "id": "5f06d284b0f25cbebfa1",
@@ -14817,7 +16066,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "d2b0e8329a5b06c684e8",
@@ -14895,7 +16146,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-12T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "669ef2ec0ed809b0efc6",
@@ -14973,7 +16233,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "58d81e8ab45127f2cb43",
@@ -15051,7 +16313,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-12T17:00:00+0000"
         }
-      ]
+      ],
+      "place_id": "kc-zoo",
+      "geo": {
+        "lat": 39.006873279554,
+        "lng": -94.564183321107,
+        "precision": "campus",
+        "source_url": "https://kansascityzoo.org/visit/hours-location-parking",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Center of the zoo map embedded on its official directions page; internal locations differ."
+      }
     },
     {
       "id": "dff33963b3bfc4297e5b",
@@ -15129,7 +16400,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-12T11:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "73ebe8cd693e68b61aca",
@@ -15207,7 +16487,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "f46930a06d91c427a34c",
@@ -15285,7 +16567,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "9bd68743d92ab13a9572",
@@ -15363,7 +16647,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-13T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "0b105998dfa7a53f8c0c",
@@ -15441,7 +16734,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-13T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "c89ab02fee49947734d0",
@@ -15519,7 +16821,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-15T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "95febece8c6facbe8ed4",
@@ -15597,7 +16908,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "05960e8a96bc24c567fe",
@@ -15675,7 +16988,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-15T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "a0087c4de8a61d00761e",
@@ -15753,7 +17075,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-15T13:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "cc9f075de2200dfb9c0d",
@@ -15831,7 +17162,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-16T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "e1382db902ca946040fc",
@@ -15909,7 +17249,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-16T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "b75d1118fef6ba526f5f",
@@ -15987,7 +17336,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-16T18:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "5bee909dd2d2d2413aa7",
@@ -16065,7 +17423,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-17T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "c70bc9514859472ebfd3",
@@ -16143,7 +17510,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-17T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "a5d4791babff0f5178eb",
@@ -16221,7 +17597,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-17T19:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "crystal-museum",
+      "geo": {
+        "lat": 36.381868,
+        "lng": -94.202653,
+        "precision": "campus",
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
+      }
     },
     {
       "id": "a032a77e01663ffd6618",
@@ -16299,7 +17684,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-18T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "112897ec07e1655e24e7",
@@ -16377,7 +17771,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-18T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "08d241ec620f67361960",
@@ -16455,7 +17858,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-19T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "02f7520819727a68942d",
@@ -16533,7 +17945,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-19T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "5e0dae26ea63eb1595a8",
@@ -16611,7 +18032,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-19T11:00-05:00"
         }
-      ]
+      ],
+      "place_id": "crystal-museum",
+      "geo": {
+        "lat": 36.381868,
+        "lng": -94.202653,
+        "precision": "campus",
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
+      }
     },
     {
       "id": "ef24cb97678df0588c89",
@@ -16689,7 +18119,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-19T17:00:00+0000"
         }
-      ]
+      ],
+      "place_id": "kc-zoo",
+      "geo": {
+        "lat": 39.006873279554,
+        "lng": -94.564183321107,
+        "precision": "campus",
+        "source_url": "https://kansascityzoo.org/visit/hours-location-parking",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Center of the zoo map embedded on its official directions page; internal locations differ."
+      }
     },
     {
       "id": "0f8efed3349096c0a175",
@@ -16767,7 +18206,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-20T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "40344dbc76a339f7a0ae",
@@ -16845,7 +18293,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "72dc1c70396a648e9ee6",
@@ -16923,7 +18373,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-20T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "0047603f53fc9ba5fc5e",
@@ -17001,7 +18460,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-20T19:00:00+0000"
         }
-      ]
+      ],
+      "place_id": "kc-zoo",
+      "geo": {
+        "lat": 39.006873279554,
+        "lng": -94.564183321107,
+        "precision": "campus",
+        "source_url": "https://kansascityzoo.org/visit/hours-location-parking",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Center of the zoo map embedded on its official directions page; internal locations differ."
+      }
     },
     {
       "id": "13f83d8add99d6440855",
@@ -17079,7 +18547,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-22T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "4172019690c1cc821c1c",
@@ -17157,7 +18634,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "a82307497ef7a2ae6521",
@@ -17235,7 +18714,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-22T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "92fadf268deed116acc9",
@@ -17313,7 +18801,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-22T13:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "b80124960142b3751f3d",
@@ -17391,7 +18888,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-23T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "4baae97d16031e5b93ef",
@@ -17469,7 +18975,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-23T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "9a8ad92a110af49c1e91",
@@ -17547,7 +19062,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-24T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "289d6e584e2fba100476",
@@ -17625,7 +19149,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-24T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "d75ed65a69d47f730ec7",
@@ -17703,7 +19236,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-26T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "3054f7c9f0ab87aead85",
@@ -17781,7 +19323,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "1ff34bbf58ac059876b2",
@@ -17859,7 +19403,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-26T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "067dcbb3b64aa2c81e9d",
@@ -17937,7 +19490,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-26T17:00:00+0000"
         }
-      ]
+      ],
+      "place_id": "kc-zoo",
+      "geo": {
+        "lat": 39.006873279554,
+        "lng": -94.564183321107,
+        "precision": "campus",
+        "source_url": "https://kansascityzoo.org/visit/hours-location-parking",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Center of the zoo map embedded on its official directions page; internal locations differ."
+      }
     },
     {
       "id": "1523c70225ffaa2b222a",
@@ -18015,7 +19577,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-27T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "4c06d37395cc676a81f5",
@@ -18093,7 +19664,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-27T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "1efa2359d0349c9cc4a8",
@@ -18171,7 +19751,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-29T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "fc49f3062d5c4378c99a",
@@ -18249,7 +19838,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "acd8d3cabacf2ed512ce",
@@ -18327,7 +19918,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-29T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "c241f2d8145ee7df6670",
@@ -18405,7 +20005,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-29T13:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "956ca15fc7e6eb13a78c",
@@ -18483,7 +20092,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-30T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "cb6bfa434f494cca9306",
@@ -18561,7 +20179,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-30T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "fbf7ae27da84f695a390",
@@ -18639,7 +20266,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-31T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "e5e1c67e74591756ece5",
@@ -18717,7 +20353,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-31T10:00-05:00"
         }
-      ]
+      ],
+      "place_id": "crystal-museum",
+      "geo": {
+        "lat": 36.381868,
+        "lng": -94.202653,
+        "precision": "campus",
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
+      }
     },
     {
       "id": "d077614c1526aa5e9a57",
@@ -18795,7 +20440,16 @@
           "format": "jsonld",
           "start_as_published": "2026-12-31T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "8e643357db76da8a6957",
@@ -18873,7 +20527,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-01T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "0ff2d9e92a4db361becc",
@@ -18951,7 +20614,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-01T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "40e9df5d73b8e7a3c924",
@@ -19029,7 +20701,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-02T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "74363fb8cfbd3b238e1e",
@@ -19107,7 +20788,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "0bea088c2b25886bee56",
@@ -19185,7 +20868,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-02T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "9c2dce140c50717f5279",
@@ -19263,7 +20955,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "4e8b60412d6b0bfdf3a5",
@@ -19341,7 +21035,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-02T17:00:00+0000"
         }
-      ]
+      ],
+      "place_id": "kc-zoo",
+      "geo": {
+        "lat": 39.006873279554,
+        "lng": -94.564183321107,
+        "precision": "campus",
+        "source_url": "https://kansascityzoo.org/visit/hours-location-parking",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Center of the zoo map embedded on its official directions page; internal locations differ."
+      }
     },
     {
       "id": "9734d10b61ea4c8c6152",
@@ -19419,7 +21122,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-03T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "050d1a138d461f15bb29",
@@ -19497,7 +21209,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-03T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "4958346afaa5c02b4ae4",
@@ -19575,7 +21296,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-05T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "04d3545eb32b3f5e1cbe",
@@ -19653,7 +21383,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "43bb085043c6aa7bfa10",
@@ -19731,7 +21463,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-05T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "d6a8e523d6be46be5923",
@@ -19809,7 +21550,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-06T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "d38f7dbf12345104a021",
@@ -19887,7 +21637,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-06T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "c6e3877114121b612a85",
@@ -19965,7 +21724,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-07T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "45a08a14d7cf3b6d34e5",
@@ -20043,7 +21811,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-07T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "168fbbe61b6567a706cb",
@@ -20121,7 +21898,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-08T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "73fdb63be8f3bbbf9291",
@@ -20199,7 +21985,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-08T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "986d3118d3b3daa4bb68",
@@ -20277,7 +22072,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-09T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "a875a5cfa3afb784d569",
@@ -20355,7 +22159,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-09T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "1e02bc649d70f96eec55",
@@ -20433,7 +22246,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-09T17:00:00+0000"
         }
-      ]
+      ],
+      "place_id": "kc-zoo",
+      "geo": {
+        "lat": 39.006873279554,
+        "lng": -94.564183321107,
+        "precision": "campus",
+        "source_url": "https://kansascityzoo.org/visit/hours-location-parking",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Center of the zoo map embedded on its official directions page; internal locations differ."
+      }
     },
     {
       "id": "ca06cffcb1e6b67930ab",
@@ -20511,7 +22333,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-09T19:00:00+0000"
         }
-      ]
+      ],
+      "place_id": "kc-zoo",
+      "geo": {
+        "lat": 39.006873279554,
+        "lng": -94.564183321107,
+        "precision": "campus",
+        "source_url": "https://kansascityzoo.org/visit/hours-location-parking",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Center of the zoo map embedded on its official directions page; internal locations differ."
+      }
     },
     {
       "id": "2ffc8e21ad1e818c6a0e",
@@ -20589,7 +22420,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-10T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "405fcdb10a1adbe30474",
@@ -20667,7 +22507,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-10T10:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "12ce970b3c01cd58a754",
@@ -20745,7 +22594,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-12T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "b1678ca3caa1f30085af",
@@ -20823,7 +22681,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "2c1600c79f2c45d94e25",
@@ -20901,7 +22761,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-13T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "0b537521457bd324b2da",
@@ -20979,7 +22848,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-14T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "0f5092e84d4e2bdf309d",
@@ -21057,7 +22935,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-15T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "4bcda664ca12eab5e10e",
@@ -21135,7 +23022,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-16T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "3642ab5b70f050f31db2",
@@ -21213,7 +23109,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-16T17:00:00+0000"
         }
-      ]
+      ],
+      "place_id": "kc-zoo",
+      "geo": {
+        "lat": 39.006873279554,
+        "lng": -94.564183321107,
+        "precision": "campus",
+        "source_url": "https://kansascityzoo.org/visit/hours-location-parking",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Center of the zoo map embedded on its official directions page; internal locations differ."
+      }
     },
     {
       "id": "d054c009e02e6e801fd0",
@@ -21291,7 +23196,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-17T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "edb69f7631c658039999",
@@ -21369,7 +23283,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-19T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "85d1563446103f34e5d9",
@@ -21447,7 +23370,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-20T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "a7d73d9bdc125665ae3d",
@@ -21525,7 +23457,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-21T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "87da14e6ab0dca64d5c5",
@@ -21603,7 +23544,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-21T20:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "ad3c40300b3e992d9499",
@@ -21681,7 +23631,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-22T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "1d0f317f9f01f571c173",
@@ -21759,7 +23718,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-23T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "1cd10a3c4c0a650cbc0c",
@@ -21837,7 +23805,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-23T17:00:00+0000"
         }
-      ]
+      ],
+      "place_id": "kc-zoo",
+      "geo": {
+        "lat": 39.006873279554,
+        "lng": -94.564183321107,
+        "precision": "campus",
+        "source_url": "https://kansascityzoo.org/visit/hours-location-parking",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Center of the zoo map embedded on its official directions page; internal locations differ."
+      }
     },
     {
       "id": "e91a8ef9350edd6efce4",
@@ -21915,7 +23892,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-24T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "80ef0f48e7c281b35ffd",
@@ -21993,7 +23979,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-26T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "e5f4f2116cfa0cec4e60",
@@ -22071,7 +24066,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-27T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "dda651848d9e29032e07",
@@ -22149,7 +24153,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-28T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "c20966ad7886a0d35ba4",
@@ -22227,7 +24240,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-29T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "774a6f508ae183bf96f1",
@@ -22305,7 +24327,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-30T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "a9ecc199818ab114660f",
@@ -22383,7 +24414,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-30T17:00:00+0000"
         }
-      ]
+      ],
+      "place_id": "kc-zoo",
+      "geo": {
+        "lat": 39.006873279554,
+        "lng": -94.564183321107,
+        "precision": "campus",
+        "source_url": "https://kansascityzoo.org/visit/hours-location-parking",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Center of the zoo map embedded on its official directions page; internal locations differ."
+      }
     },
     {
       "id": "fc254646f040b9f57648",
@@ -22461,7 +24501,16 @@
           "format": "jsonld",
           "start_as_published": "2027-01-31T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "b84e745aac3d686ff8ca",
@@ -22539,7 +24588,16 @@
           "format": "jsonld",
           "start_as_published": "2027-02-02T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "5159894b0b910d6977ce",
@@ -22617,7 +24675,16 @@
           "format": "jsonld",
           "start_as_published": "2027-02-03T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "3cf0195649acd1c12f4b",
@@ -22695,7 +24762,16 @@
           "format": "jsonld",
           "start_as_published": "2027-02-04T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "c7e50e7a738c0bbde7c3",
@@ -22773,7 +24849,16 @@
           "format": "jsonld",
           "start_as_published": "2027-02-05T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "347084552a6aeca1568c",
@@ -22851,7 +24936,16 @@
           "format": "jsonld",
           "start_as_published": "2027-02-06T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "48d455406ec7fd526d63",
@@ -22929,7 +25023,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "31b8911c9780770388e3",
@@ -23007,7 +25103,16 @@
           "format": "jsonld",
           "start_as_published": "2027-02-06T17:00:00+0000"
         }
-      ]
+      ],
+      "place_id": "kc-zoo",
+      "geo": {
+        "lat": 39.006873279554,
+        "lng": -94.564183321107,
+        "precision": "campus",
+        "source_url": "https://kansascityzoo.org/visit/hours-location-parking",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Center of the zoo map embedded on its official directions page; internal locations differ."
+      }
     },
     {
       "id": "2db70f6a932027d438e1",
@@ -23085,7 +25190,16 @@
           "format": "jsonld",
           "start_as_published": "2027-02-07T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "1d1699c8d79b8c857556",
@@ -23163,7 +25277,16 @@
           "format": "jsonld",
           "start_as_published": "2027-02-09T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "921dbb93779dc23ea23c",
@@ -23241,7 +25364,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "ab2caaf30074c3005412",
@@ -23319,7 +25444,16 @@
           "format": "jsonld",
           "start_as_published": "2027-02-10T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "c0495f1b4f6ce116506f",
@@ -23397,7 +25531,16 @@
           "format": "jsonld",
           "start_as_published": "2027-02-11T00:00:00-06:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "2c4ed77b98584e020586",
@@ -23475,7 +25618,16 @@
           "format": "jsonld",
           "start_as_published": "2027-02-13T17:00:00+0000"
         }
-      ]
+      ],
+      "place_id": "kc-zoo",
+      "geo": {
+        "lat": 39.006873279554,
+        "lng": -94.564183321107,
+        "precision": "campus",
+        "source_url": "https://kansascityzoo.org/visit/hours-location-parking",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Center of the zoo map embedded on its official directions page; internal locations differ."
+      }
     },
     {
       "id": "d96868c4000c3873e9a4",
@@ -23553,7 +25705,16 @@
           "format": "jsonld",
           "start_as_published": "2027-02-20T17:00:00+0000"
         }
-      ]
+      ],
+      "place_id": "kc-zoo",
+      "geo": {
+        "lat": 39.006873279554,
+        "lng": -94.564183321107,
+        "precision": "campus",
+        "source_url": "https://kansascityzoo.org/visit/hours-location-parking",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Center of the zoo map embedded on its official directions page; internal locations differ."
+      }
     },
     {
       "id": "e2ce4afbc536c251b468",
@@ -23631,7 +25792,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "6f1d32e13a4aade62698",
@@ -23709,7 +25872,16 @@
           "format": "jsonld",
           "start_as_published": "2027-02-27T17:00:00+0000"
         }
-      ]
+      ],
+      "place_id": "kc-zoo",
+      "geo": {
+        "lat": 39.006873279554,
+        "lng": -94.564183321107,
+        "precision": "campus",
+        "source_url": "https://kansascityzoo.org/visit/hours-location-parking",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Center of the zoo map embedded on its official directions page; internal locations differ."
+      }
     },
     {
       "id": "c556c2316e711fd838e6",
@@ -23787,7 +25959,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "13957fc4ac287ce95310",
@@ -23865,7 +26039,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "96a56f94e42c1797039d",
@@ -23943,7 +26119,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "e08878e0f9eb77a6dbfb",
@@ -24021,7 +26199,16 @@
           "format": "jsonld",
           "start_as_published": "2027-04-19T14:30:00+0000"
         }
-      ]
+      ],
+      "place_id": "kc-zoo",
+      "geo": {
+        "lat": 39.006873279554,
+        "lng": -94.564183321107,
+        "precision": "campus",
+        "source_url": "https://kansascityzoo.org/visit/hours-location-parking",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Center of the zoo map embedded on its official directions page; internal locations differ."
+      }
     },
     {
       "id": "d75ba0932ecc16c7e649",
@@ -24099,7 +26286,16 @@
           "format": "jsonld",
           "start_as_published": "2027-04-23T20:00:00-05:00"
         }
-      ]
+      ],
+      "place_id": "momentary",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      }
     },
     {
       "id": "1337f15c36fafcbb74dc",
@@ -24177,7 +26373,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "a96ef6c8ec80499f15ac",
@@ -24255,7 +26453,9 @@
         "duration": null,
         "equipment": null,
         "note": "Check whether this is drop-in, a single session or a full-season commitment."
-      }
+      },
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "42fe08fdcd1b13c9f57b",
@@ -24333,7 +26533,9 @@
           "format": "offering",
           "start_as_published": null
         }
-      ]
+      ],
+      "place_id": null,
+      "geo": null
     },
     {
       "id": "1bdbdb97c52c09382a8e",
@@ -24413,7 +26615,16 @@
           "format": "offering",
           "start_as_published": null
         }
-      ]
+      ],
+      "place_id": "crystal-trails",
+      "geo": {
+        "lat": 36.381868,
+        "lng": -94.202653,
+        "precision": "campus",
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
+      }
     },
     {
       "id": "e0d4010a475d2e7d0b3c",
@@ -24493,7 +26704,16 @@
           "format": "offering",
           "start_as_published": null
         }
-      ]
+      ],
+      "place_id": "rock-bridge",
+      "geo": {
+        "lat": 38.870892,
+        "lng": -92.326634,
+        "precision": "access_point",
+        "source_url": "https://mostateparks.com/park/rock-bridge-memorial-state-park/map",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official park map: Devil’s Icebox entrance; other trailheads have separate access points."
+      }
     },
     {
       "id": "9b7395c7a60e6e0ac32f",
@@ -24573,7 +26793,16 @@
           "format": "offering",
           "start_as_published": null
         }
-      ]
+      ],
+      "place_id": "weston-bend",
+      "geo": {
+        "lat": 39.392295,
+        "lng": -94.866428,
+        "precision": "access_point",
+        "source_url": "https://mostateparks.com/park/weston-bend-state-park/map",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official park map: park office location. Consult the park map for trail and day-use entrances."
+      }
     },
     {
       "id": "9ab3faf6e7cf4fdaa75c",
@@ -24652,7 +26881,16 @@
           "format": "offering",
           "start_as_published": null
         }
-      ]
+      ],
+      "place_id": "science-city",
+      "geo": {
+        "lat": 39.083958562379,
+        "lng": -94.584678169511,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=30+W+Pershing+Rd%2C+Kansas+City+MO+64108&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      }
     }
   ],
   "taxonomy": {
@@ -26014,5 +28252,394 @@
       }
     ],
     "note": "A route is a research lead, not proof that every program has been collected. Gaps are explicit; this matrix is not an exhaustiveness claim."
-  }
+  },
+  "places": [
+    {
+      "id": "weston-bend",
+      "name": "Weston Bend State Park",
+      "address": "16600 Highway 45 N, Weston, MO",
+      "geo": {
+        "lat": 39.392295,
+        "lng": -94.866428,
+        "precision": "access_point",
+        "source_url": "https://mostateparks.com/park/weston-bend-state-park/map",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official park map: park office location. Consult the park map for trail and day-use entrances."
+      },
+      "hours": {
+        "text": "Day-use areas: 7 a.m. to sunset daily. Gates: 7 a.m.–9 p.m. April 15–October 31; 7 a.m.–6 p.m. November 1–April 14.",
+        "timezone": "America/Chicago",
+        "rules": [
+          {
+            "days": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "opens": "07:00",
+            "closes": "sunset",
+            "scope": "grounds"
+          },
+          {
+            "days": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "opens": "07:00",
+            "closes": "21:00",
+            "scope": "gate",
+            "season_start": "04-15",
+            "season_end": "10-31"
+          },
+          {
+            "days": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "opens": "07:00",
+            "closes": "18:00",
+            "scope": "gate",
+            "season_start": "11-01",
+            "season_end": "04-14"
+          }
+        ],
+        "exceptions": [],
+        "complete_week": true,
+        "source_url": "https://mostateparks.com/hours/691/park/weston-bend-state-park",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "notice": "Published regular hours are not live closure or admission confirmation."
+      },
+      "activities": [
+        {
+          "id": "walking",
+          "name": "Walking & hiking",
+          "availability": "during_place_hours",
+          "hours": null,
+          "note": "Subject to posted conditions and closures.",
+          "source_url": "https://mostateparks.com/park/west-bend-state-park/trails"
+        },
+        {
+          "id": "cycling",
+          "name": "Cycling on the designated paved trail",
+          "availability": "during_place_hours",
+          "hours": null,
+          "note": "Use designated cycling routes; a hiking trail is not automatically open to bicycles.",
+          "source_url": "https://mostateparks.com/park/west-bend-state-park/trails"
+        },
+        {
+          "id": "picnicking",
+          "name": "Picnicking",
+          "availability": "during_place_hours",
+          "hours": null,
+          "note": "Subject to posted conditions and closures.",
+          "source_url": "https://mostateparks.com/park/weston-bend-state-park/picnicking"
+        },
+        {
+          "id": "camping",
+          "name": "Camping",
+          "availability": "reservation_required",
+          "hours": null,
+          "note": "Campsite availability, fees and overnight rules are separate from day-use access.",
+          "source_url": "https://mostateparks.com/park/weston-bend-state-park/weston-bend-state-park/camping"
+        }
+      ],
+      "source_url": "https://mostateparks.com/park/weston-bend-state-park"
+    },
+    {
+      "id": "rock-bridge",
+      "name": "Rock Bridge Memorial State Park",
+      "address": "5901 S Highway 163, Columbia, MO",
+      "geo": {
+        "lat": 38.870892,
+        "lng": -92.326634,
+        "precision": "access_point",
+        "source_url": "https://mostateparks.com/park/rock-bridge-memorial-state-park/map",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official park map: Devil’s Icebox entrance; other trailheads have separate access points."
+      },
+      "hours": {
+        "text": "Park grounds: sunrise to sunset year-round. Park office hours are separate.",
+        "timezone": "America/Chicago",
+        "rules": [
+          {
+            "days": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "opens": "sunrise",
+            "closes": "sunset",
+            "scope": "grounds"
+          }
+        ],
+        "exceptions": [],
+        "complete_week": true,
+        "source_url": "https://mostateparks.com/hours/511/park/rock-bridge-memorial-state-park",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "notice": "Published regular hours are not live closure or admission confirmation."
+      },
+      "activities": [
+        {
+          "id": "walking",
+          "name": "Hiking & nature walks",
+          "availability": "during_place_hours",
+          "hours": null,
+          "note": "Subject to posted conditions and closures.",
+          "source_url": "https://mostateparks.com/park/rock-bridge-memorial-state-park/trails"
+        },
+        {
+          "id": "cycling",
+          "name": "Cycling on designated routes",
+          "availability": "during_place_hours",
+          "hours": null,
+          "note": "Check route-specific permitted uses and trail conditions.",
+          "source_url": "https://mostateparks.com/park/rock-bridge-memorial-state-park/trails"
+        },
+        {
+          "id": "picnicking",
+          "name": "Picnicking",
+          "availability": "during_place_hours",
+          "hours": null,
+          "note": "Subject to posted conditions and closures.",
+          "source_url": "https://mostateparks.com/park/rock-bridge-memorial-state-park/picnicking"
+        },
+        {
+          "id": "playground",
+          "name": "Playground",
+          "availability": "during_place_hours",
+          "hours": null,
+          "note": "Subject to posted conditions and closures.",
+          "source_url": "https://mostateparks.com/key-location/playground-rock-bridge"
+        }
+      ],
+      "source_url": "https://mostateparks.com/park/rock-bridge-memorial-state-park"
+    },
+    {
+      "id": "crystal-trails",
+      "name": "Crystal Bridges trails & grounds",
+      "address": "600 Museum Way, Bentonville, AR",
+      "geo": {
+        "lat": 36.381868,
+        "lng": -94.202653,
+        "precision": "campus",
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
+      },
+      "hours": {
+        "text": "Trails and grounds: daily, sunrise to sunset. Museum gallery hours differ.",
+        "timezone": "America/Chicago",
+        "rules": [
+          {
+            "days": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "opens": "sunrise",
+            "closes": "sunset",
+            "scope": "grounds"
+          }
+        ],
+        "exceptions": [],
+        "complete_week": true,
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "notice": "Published regular hours are not live closure or admission confirmation."
+      },
+      "activities": [
+        {
+          "id": "walking",
+          "name": "Walking & hiking",
+          "availability": "during_place_hours",
+          "hours": null,
+          "note": "Subject to posted conditions and closures.",
+          "source_url": "https://crystalbridges.org/visit/nature-trails"
+        },
+        {
+          "id": "cycling",
+          "name": "Cycling on designated shared paths",
+          "availability": "during_place_hours",
+          "hours": null,
+          "note": "Only designated walking/biking paths allow bicycles.",
+          "source_url": "https://crystalbridges.org/visit/nature-trails"
+        },
+        {
+          "id": "outdoor_art",
+          "name": "Outdoor art & nature exploration",
+          "availability": "during_place_hours",
+          "hours": null,
+          "note": "Subject to posted conditions and closures.",
+          "source_url": "https://crystalbridges.org/visit/nature-trails"
+        },
+        {
+          "id": "playground",
+          "name": "Ozark Discovery Canopy playscape",
+          "availability": "during_place_hours",
+          "hours": null,
+          "note": "Follow posted access and safety rules; trails can close for maintenance.",
+          "source_url": "https://crystalbridges.org/visit/nature-trails"
+        }
+      ],
+      "source_url": "https://crystalbridges.org/visit/nature-trails"
+    },
+    {
+      "id": "crystal-museum",
+      "name": "Crystal Bridges museum campus",
+      "address": "600 Museum Way, Bentonville, AR",
+      "geo": {
+        "lat": 36.381868,
+        "lng": -94.202653,
+        "precision": "campus",
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://crystalbridges.org/"
+    },
+    {
+      "id": "momentary",
+      "name": "The Momentary",
+      "address": "507 SE E St, Bentonville, AR",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://themomentary.org/plan-your-visit/"
+    },
+    {
+      "id": "lawrence-arts",
+      "name": "Lawrence Arts Center",
+      "address": "940 New Hampshire St, Lawrence, KS",
+      "geo": {
+        "lat": 38.966746641964,
+        "lng": -95.234622585443,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=940+New+Hampshire+St%2C+Lawrence+KS+66044&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://lawrenceartscenter.org/"
+    },
+    {
+      "id": "watkins",
+      "name": "Watkins Museum of History",
+      "address": "1047 Massachusetts St, Lawrence, KS",
+      "geo": {
+        "lat": 38.964767182484,
+        "lng": -95.235980232701,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1047+Massachusetts+St%2C+Lawrence+KS+66044&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": {
+        "text": "Tuesday–Saturday, 10 a.m.–4 p.m.; closed Sunday and Monday.",
+        "timezone": "America/Chicago",
+        "rules": [
+          {
+            "days": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "opens": "10:00",
+            "closes": "16:00",
+            "scope": "visitor"
+          }
+        ],
+        "exceptions": [],
+        "complete_week": true,
+        "source_url": "https://www.watkinsmuseum.org/visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "notice": "Published regular hours are not live closure or admission confirmation."
+      },
+      "activities": [
+        {
+          "id": "museum",
+          "name": "Explore history exhibits",
+          "availability": "during_place_hours",
+          "hours": null,
+          "note": "Subject to posted conditions and closures.",
+          "source_url": "https://www.watkinsmuseum.org/visit/"
+        }
+      ],
+      "source_url": "https://www.watkinsmuseum.org/visit/"
+    },
+    {
+      "id": "science-city",
+      "name": "Science City at Union Station",
+      "address": "30 W Pershing Rd, Kansas City, MO",
+      "geo": {
+        "lat": 39.083958562379,
+        "lng": -94.584678169511,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=30+W+Pershing+Rd%2C+Kansas+City+MO+64108&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": null,
+      "activities": [
+        {
+          "id": "hands_on_science",
+          "name": "Hands-on science exhibits",
+          "availability": "admission_required",
+          "hours": null,
+          "note": "Check admission, current hours and exhibit-specific restrictions.",
+          "source_url": "https://sciencecity.unionstation.org/plan-your-visit/"
+        }
+      ],
+      "source_url": "https://sciencecity.unionstation.org/plan-your-visit/"
+    },
+    {
+      "id": "kc-zoo",
+      "name": "Kansas City Zoo & Aquarium",
+      "address": "6800 Zoo Dr, Kansas City, MO",
+      "geo": {
+        "lat": 39.006873279554,
+        "lng": -94.564183321107,
+        "precision": "campus",
+        "source_url": "https://kansascityzoo.org/visit/hours-location-parking",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Center of the zoo map embedded on its official directions page; internal locations differ."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://kansascityzoo.org/visit/hours-location-parking"
+    }
+  ]
 }

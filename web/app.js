@@ -1,4 +1,7 @@
 import { KIND_LABELS, scheduleLabel, activityHref } from "./activity-view.mjs";
+import { hoursState, placeFor, persistentActivities } from "./place-hours.mjs";
+import { hasCoordinates, withinBounds, mapGroups } from "./map-data.mjs";
+import { ActivityMap } from "./map.mjs";
 import {
   chicagoToday,
   windowDates,
@@ -9,12 +12,18 @@ import {
 const $ = (id) => document.getElementById(id);
 let data,
   visible = 30;
+let mapView = false,
+  mapController,
+  mapBounds = null,
+  focusId = null,
+  mapRender = 0;
 const form = $("filters"),
   inputs = {
     q: $("search"),
     location: $("location"),
     type: $("type"),
     kind: $("kind"),
+    amenity: $("amenity"),
     undated: $("undated"),
     age_min: $("age-min"),
     age_max: $("age-max"),
@@ -113,6 +122,15 @@ function card(a) {
       el("span", `${a.currency || "Price"} ${a.price} · check fees`, "tag"),
     );
   c.append(tags);
+  if (a.schedule?.kind === "evergreen") {
+    const place = placeFor(a, data.places);
+    c.append(el("p", hoursState(place?.hours).label, "place-hours"));
+    const amenities = persistentActivities(a, data.places);
+    if (amenities.length)
+      c.append(
+        el("p", amenities.map((x) => x.name).join(" · "), "place-amenities"),
+      );
+  }
   const bottom = el("div", "", "card-bottom");
   bottom.append(
     el("span", a.source_name),
@@ -123,6 +141,17 @@ function card(a) {
     })(),
   );
   c.append(bottom);
+  if (hasCoordinates(a)) {
+    const button = el("button", "Find on map", "text-button map-find");
+    button.type = "button";
+    button.addEventListener("click", () => {
+      focusId = a.offering_id || a.id;
+      mapView = true;
+      render();
+      $("map-panel").scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+    c.append(button);
+  }
   return c;
 }
 function render() {
@@ -137,6 +166,15 @@ function render() {
     } else if (v) params.set(k, v);
   }
   if ($("sort").value !== "date") params.set("sort", $("sort").value);
+  if (mapView) params.set("view", "map");
+  if (focusId) params.set("focus", focusId);
+  if (mapBounds)
+    params.set(
+      "area",
+      [mapBounds.south, mapBounds.west, mapBounds.north, mapBounds.east]
+        .map((x) => x.toFixed(5))
+        .join(","),
+    );
   history.replaceState(
     null,
     "",
@@ -150,7 +188,11 @@ function render() {
   const rows = invalid
     ? []
     : sortedActivities(
-        data.activities.filter((a) => matches(a, f)),
+        data.activities.filter(
+          (a) =>
+            matches(a, f, data.places) &&
+            (!mapBounds || withinBounds(a, mapBounds)),
+        ),
         $("sort").value,
       );
   $("result-count").textContent =
@@ -163,6 +205,32 @@ function render() {
       ? "Nothing matches just yet. Try a wider date range, another location, or include unspecified ages."
       : "No dated activities have been collected yet. See source coverage below.";
   $("more").hidden = rows.length <= visible;
+  $("map-panel").hidden = !mapView;
+  $("view-list").setAttribute("aria-pressed", String(!mapView));
+  $("view-map").setAttribute("aria-pressed", String(mapView));
+  $("map-clear-area").hidden = !mapBounds;
+  if (mapView) {
+    const revision = ++mapRender;
+    mapController ||= new ActivityMap($("activity-map"), $("map-status"));
+    const mapped = rows.filter(hasCoordinates),
+      unique = new Set(mapped.map((a) => a.offering_id || a.id)).size;
+    const unmapped = new Set(
+      rows.filter((a) => !hasCoordinates(a)).map((a) => a.offering_id || a.id),
+    ).size;
+    $("map-status").textContent =
+      `${unique} distinct activities at ${mapGroups(mapped).length} map points · ${unmapped} activities without verified coordinates${mapBounds ? " · Area filter active (unmapped listings excluded)" : ""}.`;
+    mapController
+      .update(rows, data.places || [], {
+        preserveView: !!mapBounds,
+        focus: focusId,
+      })
+      .catch((error) => {
+        if (revision === mapRender)
+          $("map-status").textContent =
+            "The map is unavailable. All matching activities are still listed below.";
+        console.error(error);
+      });
+  }
 }
 function coverage() {
   const gaps = data.sources.filter((s) => s.status !== "checked").length;
@@ -205,6 +273,7 @@ function coverage() {
 }
 form.addEventListener("submit", (e) => e.preventDefault());
 form.addEventListener("input", () => {
+  focusId = null;
   visible = 30;
   document
     .querySelectorAll("[data-window]")
@@ -217,6 +286,8 @@ $("more").addEventListener("click", () => {
   render();
 });
 $("reset").addEventListener("click", () => {
+  mapBounds = null;
+  focusId = null;
   form.reset();
   inputs.from.value = chicagoToday();
   inputs.to.value = "";
@@ -225,6 +296,41 @@ $("reset").addEventListener("click", () => {
   document
     .querySelectorAll("[data-window]")
     .forEach((e) => e.classList.remove("active"));
+  render();
+});
+$("location").addEventListener("change", () => {
+  mapBounds = null;
+  focusId = null;
+  render();
+});
+$("view-list").addEventListener("click", () => {
+  mapView = false;
+  mapBounds = null;
+  focusId = null;
+  render();
+});
+$("view-map").addEventListener("click", () => {
+  mapView = true;
+  render();
+});
+$("map-search-area").addEventListener("click", () => {
+  const b = mapController?.bounds();
+  if (b) {
+    mapBounds = b;
+    focusId = null;
+    visible = 30;
+    render();
+  }
+});
+$("map-clear-area").addEventListener("click", () => {
+  mapBounds = null;
+  mapController?.fit();
+  render();
+});
+$("map-fit").addEventListener("click", () => {
+  mapBounds = null;
+  focusId = null;
+  mapController?.fit();
   render();
 });
 document.querySelectorAll("[data-window]").forEach((b) =>
@@ -256,7 +362,45 @@ async function start() {
       o.value = value;
       inputs.kind.append(o);
     }
+    const amenities = new Map(
+      (data.places || [])
+        .flatMap((p) => p.activities)
+        .map((a) => [
+          a.id,
+          {
+            walking: "Walking & hiking",
+            cycling: "Cycling",
+            picnicking: "Picnicking",
+            playground: "Playgrounds",
+            camping: "Camping",
+            museum: "History exhibits",
+            hands_on_science: "Hands-on science",
+            outdoor_art: "Outdoor art & nature",
+          }[a.id] || a.name,
+        ]),
+    );
+    for (const [value, label] of [...amenities].sort((a, b) =>
+      a[1].localeCompare(b[1]),
+    )) {
+      const o = el("option", label);
+      o.value = value;
+      inputs.amenity.append(o);
+    }
     const params = new URLSearchParams(location.search);
+    mapView = params.get("view") === "map";
+    focusId = params.get("focus");
+    if (params.has("area")) {
+      const b = params.get("area").split(",").map(Number);
+      if (
+        b.length === 4 &&
+        b.every(Number.isFinite) &&
+        b[0] >= -90 &&
+        b[2] <= 90 &&
+        b[0] < b[2] &&
+        b[1] < b[3]
+      )
+        mapBounds = { south: b[0], west: b[1], north: b[2], east: b[3] };
+    }
     inputs.from.value = chicagoToday();
     for (const [k, e] of Object.entries(inputs))
       if (params.has(k)) {

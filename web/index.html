@@ -10,6 +10,11 @@
     <meta name="theme-color" content="#183f37" />
     <title>What to do, KC — Find your next good day</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
+    <link
+      rel="stylesheet"
+      href="vendor/leaflet-markercluster/MarkerCluster.css"
+    />
     <script type="module" src="app.js"></script>
     <link
       rel="icon"
@@ -88,6 +93,14 @@
               ><input id="undated" name="undated" type="checkbox" checked />
               Include ongoing & dates-to-confirm activities</label
             >
+            <label for="amenity">Things to do at a place</label>
+            <select id="amenity" name="amenity">
+              <option value="">All amenities</option>
+            </select>
+            <p class="hint">
+              Find ongoing places with these activities. Hours, seasons and
+              booking rules still apply.
+            </p>
             <fieldset>
               <legend>Age range</legend>
               <div class="two-fields">
@@ -165,6 +178,42 @@
               </select></label
             >
           </div>
+          <div class="view-toggle" role="group" aria-label="Activity view">
+            <button id="view-list" type="button" aria-pressed="true">
+              List
+            </button>
+            <button id="view-map" type="button" aria-pressed="false">
+              Map + list
+            </button>
+          </div>
+          <section
+            id="map-panel"
+            class="map-panel"
+            aria-label="Activity map"
+            hidden
+          >
+            <div class="map-toolbar">
+              <button id="map-search-area" type="button">
+                Search this area
+              </button>
+              <button id="map-clear-area" type="button" hidden>
+                Clear area filter
+              </button>
+              <button id="map-fit" type="button">
+                Show all matching places
+              </button>
+            </div>
+            <div
+              id="activity-map"
+              aria-label="Map of matching activities"
+            ></div>
+            <p id="map-status" role="status" aria-live="polite"></p>
+            <p class="map-note">
+              Pins group distinct activities at the same location. Some points
+              represent a campus or an entrance, rather than the exact activity
+              spot. Listings without verified coordinates remain in the list.
+            </p>
+          </section>
           <p id="message" role="status" class="message" hidden></p>
           <div id="results" class="cards" tabindex="-1"></div>
           <button id="more" class="more" type="button" hidden>

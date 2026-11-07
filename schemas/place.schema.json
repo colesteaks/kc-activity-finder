@@ -1,0 +1,221 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Persistent place and its ongoing offerings",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "address",
+    "geo",
+    "hours",
+    "activities",
+    "source_url"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "address": {
+      "type": "string"
+    },
+    "geo": {
+      "type": ["object", "null"],
+      "required": [
+        "lat",
+        "lng",
+        "precision",
+        "source_url",
+        "checked_at",
+        "note"
+      ],
+      "properties": {
+        "lat": {
+          "type": "number",
+          "minimum": -90,
+          "maximum": 90
+        },
+        "lng": {
+          "type": "number",
+          "minimum": -180,
+          "maximum": 180
+        },
+        "precision": {
+          "enum": ["access_point", "campus", "address", "source_point"]
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "checked_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "note": {
+          "type": "string"
+        }
+      }
+    },
+    "hours": {
+      "$ref": "#/$defs/hours"
+    },
+    "source_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "activities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "availability",
+          "hours",
+          "note",
+          "source_url"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "availability": {
+            "enum": [
+              "during_place_hours",
+              "seasonal",
+              "reservation_required",
+              "admission_required",
+              "unknown"
+            ]
+          },
+          "hours": {
+            "$ref": "#/$defs/hours"
+          },
+          "note": {
+            "type": "string"
+          },
+          "source_url": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "hours": {
+      "type": ["object", "null"],
+      "required": [
+        "text",
+        "timezone",
+        "rules",
+        "exceptions",
+        "complete_week",
+        "source_url",
+        "checked_at",
+        "notice"
+      ],
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "timezone": {
+          "const": "America/Chicago"
+        },
+        "rules": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/hoursRule"
+          }
+        },
+        "exceptions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/hoursException"
+          }
+        },
+        "complete_week": {
+          "type": "boolean"
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "checked_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "notice": {
+          "type": "string"
+        }
+      }
+    },
+    "hoursRule": {
+      "type": "object",
+      "required": ["days", "opens", "closes", "scope"],
+      "properties": {
+        "days": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 6
+          }
+        },
+        "opens": {
+          "type": "string",
+          "pattern": "^(?:(?:[01][0-9]|2[0-3]):[0-5][0-9]|24:00|sunrise|sunset)$"
+        },
+        "closes": {
+          "type": "string",
+          "pattern": "^(?:(?:[01][0-9]|2[0-3]):[0-5][0-9]|24:00|sunrise|sunset)$"
+        },
+        "scope": {
+          "enum": ["grounds", "gate", "visitor"]
+        },
+        "season_start": {
+          "type": "string",
+          "pattern": "^(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])$"
+        },
+        "season_end": {
+          "type": "string",
+          "pattern": "^(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])$"
+        }
+      },
+      "dependentRequired": {
+        "season_start": ["season_end"],
+        "season_end": ["season_start"]
+      }
+    },
+    "hoursException": {
+      "type": "object",
+      "required": ["date", "closed", "note"],
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date"
+        },
+        "closed": {
+          "type": "boolean"
+        },
+        "note": {
+          "type": "string"
+        },
+        "rules": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/hoursRule"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,3 +1,4 @@
+import { persistentActivities } from "./place-hours.mjs";
 export function chicagoToday(now = new Date()) {
   return new Intl.DateTimeFormat("en-CA", {
     timeZone: "America/Chicago",
@@ -19,7 +20,12 @@ export function windowDates(kind, today = chicagoToday()) {
   if (kind === "ahead") return { from: addDays(today, 30), to: "" };
   return { from: today, to: "" };
 }
-export function matches(a, f) {
+export function matches(a, f, places = []) {
+  if (
+    f.amenity &&
+    !persistentActivities(a, places).some((x) => x.id === f.amenity)
+  )
+    return false;
   if (!f.unavailable && ["canceled", "postponed"].includes(a.status))
     return false;
   if (f.location && a.region !== f.location) return false;
@@ -45,7 +51,14 @@ export function matches(a, f) {
   if (f.to && low && low > f.to) return false;
   if (
     f.q &&
-    ![a.title, a.city, a.venue, a.type, a.description]
+    ![
+      a.title,
+      a.city,
+      a.venue,
+      a.type,
+      a.description,
+      ...persistentActivities(a, places).map((x) => x.name),
+    ]
       .join(" ")
       .toLowerCase()
       .includes(f.q.trim().toLowerCase())

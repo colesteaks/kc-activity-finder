@@ -26,6 +26,8 @@ The offline brief summarizes coverage, unique offerings, source health and the h
 4. **Investigate one useful repair.** Prefer an existing source that can fill a meaningful gap over adding another generic newsletter. Try offered public exports, APIs, embedded data and permitted rendering. Do not bypass logins, denied access, CAPTCHA, robots policies or rate limits.
 5. **Validate each promising source.** Check the real region and first-party ownership or organizer-linked provider relationship. Verify correct year, actual activity dates versus registration dates, recurring exceptions, exhibit hours, age-policy evidence, fees and status. Check whether it offers additional unique activities or supports a poorly covered subject/format. Search placement and cross-link count are not proof of quality.
 
+Include the brief's `place_maintenance` queue within the same visit budget: verify missing/aging opening hours, seasonal facility restrictions and useful unmapped venues. Preserve coordinate and hours provenance in `data/places.json`; do not renew hours timestamps without checking their source. Follow [the place contract](places-and-map.md), distinguishing park access, gates and reservation-only amenities. Seek permanent places across regions as well as dated events.
+
 ## Promotion gates and implementation
 
 For a data-only source using an existing adapter:

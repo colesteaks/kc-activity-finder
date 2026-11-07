@@ -16,6 +16,22 @@ from collect_activities import ROOT, TZ, Fetcher, safe_url, canonical
 from activity_model import coverage_matrix
 
 
+def add_place_leaves(graph, root=ROOT):
+    """Reviewed place facts are leaves, not automatically followed crawl routes."""
+    path = root / 'data/places.json'
+    definitions = json.loads(path.read_text())['places'] if path.exists() else []
+    graph['place_leaves'] = [{
+        'id': p['id'], 'label': p['name'], 'url': p['source_url'],
+        'parent_route_ids': p['match']['source_ids'],
+        'hours_source': p['hours']['source_url'] if p['hours'] else None,
+        'coordinate_source': p['geo']['source_url'] if p['geo'] else None,
+        'offering_sources': sorted({a['source_url'] for a in p['activities']}),
+        'provenance': 'reviewed-place-registry',
+    } for p in definitions]
+    for node in graph['nodes']:
+        node['place_ids'] = [p['id'] for p in definitions if node['id'] in p['match']['source_ids']]
+
+
 def refresh(root=ROOT):
     original = json.loads((root / 'data/source-graph.json').read_text())
     seed = root / original['seed_material']['path']
@@ -81,6 +97,7 @@ def refresh(root=ROOT):
     public_path = root / 'web/activities.json'
     health = json.loads(public_path.read_text()).get('sources', []) if public_path.exists() else []
     graph['coverage_matrix'] = coverage_matrix(registry, taxonomy, health)
+    add_place_leaves(graph, root)
     (root / 'data/generated-source-graph.json').write_text(json.dumps(graph, indent=2) + '\n')
     (root / 'data/source-proposals.json').write_text(json.dumps({'updated_at': now, 'proposals': sorted(proposals.values(), key=lambda x:x['url'])}, indent=2) + '\n')
     print(f"Refreshed {len(graph['nodes'])} approved routes; {len(proposals)} unreviewed proposals")
@@ -93,6 +110,7 @@ def refresh_coverage(root=ROOT):
     registry = json.loads((root / 'data/collection-sources.json').read_text())['sources']
     taxonomy = json.loads((root / 'data/activity-taxonomy.json').read_text())
     graph['coverage_matrix'] = coverage_matrix(registry, taxonomy, public['sources'])
+    add_place_leaves(graph, root)
     path.write_text(json.dumps(graph, indent=2) + '\n')
 
 

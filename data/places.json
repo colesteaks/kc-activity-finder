@@ -1,0 +1,486 @@
+{
+  "version": 1,
+  "places": [
+    {
+      "id": "weston-bend",
+      "name": "Weston Bend State Park",
+      "address": "16600 Highway 45 N, Weston, MO",
+      "geo": {
+        "lat": 39.392295,
+        "lng": -94.866428,
+        "precision": "access_point",
+        "source_url": "https://mostateparks.com/park/weston-bend-state-park/map",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official park map: park office location. Consult the park map for trail and day-use entrances."
+      },
+      "hours": {
+        "text": "Day-use areas: 7 a.m. to sunset daily. Gates: 7 a.m.–9 p.m. April 15–October 31; 7 a.m.–6 p.m. November 1–April 14.",
+        "timezone": "America/Chicago",
+        "rules": [
+          {
+            "days": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "opens": "07:00",
+            "closes": "sunset",
+            "scope": "grounds"
+          },
+          {
+            "days": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "opens": "07:00",
+            "closes": "21:00",
+            "scope": "gate",
+            "season_start": "04-15",
+            "season_end": "10-31"
+          },
+          {
+            "days": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "opens": "07:00",
+            "closes": "18:00",
+            "scope": "gate",
+            "season_start": "11-01",
+            "season_end": "04-14"
+          }
+        ],
+        "exceptions": [],
+        "complete_week": true,
+        "source_url": "https://mostateparks.com/hours/691/park/weston-bend-state-park",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "notice": "Published regular hours are not live closure or admission confirmation."
+      },
+      "activities": [
+        {
+          "id": "walking",
+          "name": "Walking & hiking",
+          "availability": "during_place_hours",
+          "hours": null,
+          "note": "Subject to posted conditions and closures.",
+          "source_url": "https://mostateparks.com/park/west-bend-state-park/trails"
+        },
+        {
+          "id": "cycling",
+          "name": "Cycling on the designated paved trail",
+          "availability": "during_place_hours",
+          "hours": null,
+          "note": "Use designated cycling routes; a hiking trail is not automatically open to bicycles.",
+          "source_url": "https://mostateparks.com/park/west-bend-state-park/trails"
+        },
+        {
+          "id": "picnicking",
+          "name": "Picnicking",
+          "availability": "during_place_hours",
+          "hours": null,
+          "note": "Subject to posted conditions and closures.",
+          "source_url": "https://mostateparks.com/park/weston-bend-state-park/picnicking"
+        },
+        {
+          "id": "camping",
+          "name": "Camping",
+          "availability": "reservation_required",
+          "hours": null,
+          "note": "Campsite availability, fees and overnight rules are separate from day-use access.",
+          "source_url": "https://mostateparks.com/park/weston-bend-state-park/weston-bend-state-park/camping"
+        }
+      ],
+      "source_url": "https://mostateparks.com/park/weston-bend-state-park",
+      "match": {
+        "source_ids": [
+          "weston-bend"
+        ],
+        "venue_aliases": [
+          "Weston Bend State Park"
+        ]
+      }
+    },
+    {
+      "id": "rock-bridge",
+      "name": "Rock Bridge Memorial State Park",
+      "address": "5901 S Highway 163, Columbia, MO",
+      "geo": {
+        "lat": 38.870892,
+        "lng": -92.326634,
+        "precision": "access_point",
+        "source_url": "https://mostateparks.com/park/rock-bridge-memorial-state-park/map",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official park map: Devil’s Icebox entrance; other trailheads have separate access points."
+      },
+      "hours": {
+        "text": "Park grounds: sunrise to sunset year-round. Park office hours are separate.",
+        "timezone": "America/Chicago",
+        "rules": [
+          {
+            "days": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "opens": "sunrise",
+            "closes": "sunset",
+            "scope": "grounds"
+          }
+        ],
+        "exceptions": [],
+        "complete_week": true,
+        "source_url": "https://mostateparks.com/hours/511/park/rock-bridge-memorial-state-park",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "notice": "Published regular hours are not live closure or admission confirmation."
+      },
+      "activities": [
+        {
+          "id": "walking",
+          "name": "Hiking & nature walks",
+          "availability": "during_place_hours",
+          "hours": null,
+          "note": "Subject to posted conditions and closures.",
+          "source_url": "https://mostateparks.com/park/rock-bridge-memorial-state-park/trails"
+        },
+        {
+          "id": "cycling",
+          "name": "Cycling on designated routes",
+          "availability": "during_place_hours",
+          "hours": null,
+          "note": "Check route-specific permitted uses and trail conditions.",
+          "source_url": "https://mostateparks.com/park/rock-bridge-memorial-state-park/trails"
+        },
+        {
+          "id": "picnicking",
+          "name": "Picnicking",
+          "availability": "during_place_hours",
+          "hours": null,
+          "note": "Subject to posted conditions and closures.",
+          "source_url": "https://mostateparks.com/park/rock-bridge-memorial-state-park/picnicking"
+        },
+        {
+          "id": "playground",
+          "name": "Playground",
+          "availability": "during_place_hours",
+          "hours": null,
+          "note": "Subject to posted conditions and closures.",
+          "source_url": "https://mostateparks.com/key-location/playground-rock-bridge"
+        }
+      ],
+      "source_url": "https://mostateparks.com/park/rock-bridge-memorial-state-park",
+      "match": {
+        "source_ids": [
+          "rock-bridge-state-park"
+        ],
+        "venue_aliases": [
+          "Rock Bridge Memorial State Park"
+        ]
+      }
+    },
+    {
+      "id": "crystal-trails",
+      "name": "Crystal Bridges trails & grounds",
+      "address": "600 Museum Way, Bentonville, AR",
+      "geo": {
+        "lat": 36.381868,
+        "lng": -94.202653,
+        "precision": "campus",
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
+      },
+      "hours": {
+        "text": "Trails and grounds: daily, sunrise to sunset. Museum gallery hours differ.",
+        "timezone": "America/Chicago",
+        "rules": [
+          {
+            "days": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "opens": "sunrise",
+            "closes": "sunset",
+            "scope": "grounds"
+          }
+        ],
+        "exceptions": [],
+        "complete_week": true,
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "notice": "Published regular hours are not live closure or admission confirmation."
+      },
+      "activities": [
+        {
+          "id": "walking",
+          "name": "Walking & hiking",
+          "availability": "during_place_hours",
+          "hours": null,
+          "note": "Subject to posted conditions and closures.",
+          "source_url": "https://crystalbridges.org/visit/nature-trails"
+        },
+        {
+          "id": "cycling",
+          "name": "Cycling on designated shared paths",
+          "availability": "during_place_hours",
+          "hours": null,
+          "note": "Only designated walking/biking paths allow bicycles.",
+          "source_url": "https://crystalbridges.org/visit/nature-trails"
+        },
+        {
+          "id": "outdoor_art",
+          "name": "Outdoor art & nature exploration",
+          "availability": "during_place_hours",
+          "hours": null,
+          "note": "Subject to posted conditions and closures.",
+          "source_url": "https://crystalbridges.org/visit/nature-trails"
+        },
+        {
+          "id": "playground",
+          "name": "Ozark Discovery Canopy playscape",
+          "availability": "during_place_hours",
+          "hours": null,
+          "note": "Follow posted access and safety rules; trails can close for maintenance.",
+          "source_url": "https://crystalbridges.org/visit/nature-trails"
+        }
+      ],
+      "source_url": "https://crystalbridges.org/visit/nature-trails",
+      "match": {
+        "source_ids": [
+          "crystal-trails",
+          "crystal-bridges"
+        ],
+        "venue_aliases": [
+          "Crystal Bridges nature and trails",
+          "Ozark Discovery Canopy"
+        ]
+      }
+    },
+    {
+      "id": "crystal-museum",
+      "name": "Crystal Bridges museum campus",
+      "address": "600 Museum Way, Bentonville, AR",
+      "geo": {
+        "lat": 36.381868,
+        "lng": -94.202653,
+        "precision": "campus",
+        "source_url": "https://crystalbridges.org/visit/nature-trails",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://crystalbridges.org/",
+      "match": {
+        "source_ids": [
+          "crystal-bridges"
+        ],
+        "venue_aliases": [
+          "Garrison Lobby",
+          "Great Hall",
+          "Museum Wide",
+          "Museum Store",
+          "Studio F",
+          "Studio D",
+          "Temporary Exhibition Gallery",
+          "South Exhibition Gallery",
+          "Box Gallery B, Bigelow Bridge",
+          "Bigelow Bridge, Box A",
+          "Eleven Restaurant",
+          "The Commons",
+          "Arvest Bank Courtyard"
+        ]
+      }
+    },
+    {
+      "id": "momentary",
+      "name": "The Momentary",
+      "address": "507 SE E St, Bentonville, AR",
+      "geo": {
+        "lat": 36.366524,
+        "lng": -94.202591,
+        "precision": "campus",
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Coordinates from the Apple Maps directions link published by the venue."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://themomentary.org/plan-your-visit/",
+      "match": {
+        "source_ids": [
+          "momentary"
+        ],
+        "venue_aliases": [
+          "The Momentary",
+          "RØDE House",
+          "Fermentation Hall",
+          "Tower Bar"
+        ]
+      }
+    },
+    {
+      "id": "lawrence-arts",
+      "name": "Lawrence Arts Center",
+      "address": "940 New Hampshire St, Lawrence, KS",
+      "geo": {
+        "lat": 38.966746641964,
+        "lng": -95.234622585443,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=940+New+Hampshire+St%2C+Lawrence+KS+66044&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://lawrenceartscenter.org/",
+      "match": {
+        "source_ids": [
+          "lawrence-arts"
+        ],
+        "venue_aliases": [
+          "Lawrence Arts Center"
+        ]
+      }
+    },
+    {
+      "id": "watkins",
+      "name": "Watkins Museum of History",
+      "address": "1047 Massachusetts St, Lawrence, KS",
+      "geo": {
+        "lat": 38.964767182484,
+        "lng": -95.235980232701,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1047+Massachusetts+St%2C+Lawrence+KS+66044&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": {
+        "text": "Tuesday–Saturday, 10 a.m.–4 p.m.; closed Sunday and Monday.",
+        "timezone": "America/Chicago",
+        "rules": [
+          {
+            "days": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "opens": "10:00",
+            "closes": "16:00",
+            "scope": "visitor"
+          }
+        ],
+        "exceptions": [],
+        "complete_week": true,
+        "source_url": "https://www.watkinsmuseum.org/visit/",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "notice": "Published regular hours are not live closure or admission confirmation."
+      },
+      "activities": [
+        {
+          "id": "museum",
+          "name": "Explore history exhibits",
+          "availability": "during_place_hours",
+          "hours": null,
+          "note": "Subject to posted conditions and closures.",
+          "source_url": "https://www.watkinsmuseum.org/visit/"
+        }
+      ],
+      "source_url": "https://www.watkinsmuseum.org/visit/",
+      "match": {
+        "source_ids": [
+          "watkins",
+          "watkins-visit"
+        ],
+        "venue_aliases": [
+          "Watkins Museum of History"
+        ]
+      }
+    },
+    {
+      "id": "science-city",
+      "name": "Science City at Union Station",
+      "address": "30 W Pershing Rd, Kansas City, MO",
+      "geo": {
+        "lat": 39.083958562379,
+        "lng": -94.584678169511,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=30+W+Pershing+Rd%2C+Kansas+City+MO+64108&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": null,
+      "activities": [
+        {
+          "id": "hands_on_science",
+          "name": "Hands-on science exhibits",
+          "availability": "admission_required",
+          "hours": null,
+          "note": "Check admission, current hours and exhibit-specific restrictions.",
+          "source_url": "https://sciencecity.unionstation.org/plan-your-visit/"
+        }
+      ],
+      "source_url": "https://sciencecity.unionstation.org/plan-your-visit/",
+      "match": {
+        "source_ids": [
+          "science-city"
+        ],
+        "venue_aliases": [
+          "Science City"
+        ]
+      }
+    },
+    {
+      "id": "kc-zoo",
+      "name": "Kansas City Zoo & Aquarium",
+      "address": "6800 Zoo Dr, Kansas City, MO",
+      "geo": {
+        "lat": 39.006873279554,
+        "lng": -94.564183321107,
+        "precision": "campus",
+        "source_url": "https://kansascityzoo.org/visit/hours-location-parking",
+        "checked_at": "2026-11-07T09:17:40.572854-06:00",
+        "note": "Center of the zoo map embedded on its official directions page; internal locations differ."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://kansascityzoo.org/visit/hours-location-parking",
+      "match": {
+        "source_ids": [
+          "kc-zoo"
+        ],
+        "venue_aliases": [
+          "Kansas City Zoo & Aquarium",
+          "Helzberg Penguin Plaza",
+          "Zoo Learning Center",
+          "Indoor Viewing at Polar Bear Passage",
+          "Purple Parking Lot"
+        ]
+      }
+    }
+  ]
+}

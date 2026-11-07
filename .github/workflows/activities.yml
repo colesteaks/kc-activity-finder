@@ -16,14 +16,19 @@ on:
       - 'scripts/refresh_sources.py'
       - 'scripts/validate_public_data.py'
       - 'scripts/activity_model.py'
+      - 'scripts/place_model.py'
       - 'data/activity-taxonomy.json'
+      - 'data/places.json'
       - 'schemas/activity.schema.json'
+      - 'schemas/place.schema.json'
       - 'data/collection-sources.json'
       - 'requirements-collector.txt'
       - '.github/workflows/activities.yml'
       - 'tests/test_collector.py'
       - 'tests/test_filters.mjs'
       - 'tests/test_activity_model.py'
+      - 'tests/test_place_model.py'
+      - 'tests/test_places.mjs'
 permissions:
   contents: read
 concurrency:
@@ -51,7 +56,7 @@ jobs:
         run: |
           python3 scripts/validate_repo.py
           python3 -m unittest discover -s tests -v
-          node --test tests/test_filters.mjs
+          node --test tests/test_*.mjs
       - uses: actions/cache@0400d5f644dc74513175e3cd8d07132dd4860809 # v4.2.4
         with:
           path: .collector-cache

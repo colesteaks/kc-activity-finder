@@ -71,7 +71,7 @@ python3 scripts/refresh_sources.py
 python3 scripts/collect_activities.py
 python3 scripts/validate_public_data.py
 python3 -m unittest discover -s tests -v
-node --test tests/test_filters.mjs
+node --test tests/test_*.mjs
 python3 -m http.server --directory web
 ```
 
@@ -82,3 +82,7 @@ Check new adapters against representative raw source fixtures, wrong-year pages,
 Domain discovery on November 7, 2026 returned `what-to-do-kc.com`, `whattodokc.com`, `kcactivityfinder.com` and `whatsonkc.com` available at a quoted $12.03 registration and $12.03 renewal for one year through Vercel Registrar (non-premium). Availability and pricing may change. No domain has been purchased.
 
 After the owner selects and purchases a domain, add it in repository Pages settings, configure the exact DNS records returned/documented by GitHub at the registrar, verify ownership and enable HTTPS after certificate provisioning. Purchasing a domain does not require hosting on that registrar's platform. Do not commit a `web/CNAME` until ownership and DNS are ready.
+
+## Ongoing places and optional map
+
+See [places and map](places-and-map.md) for the reviewed place registry, independent hours/amenity rules, coordinate evidence, map configuration and tile usage policy. Daily collection carries these definitions forward without model calls or paid geocoding. Weekly maintenance checks missing/aging hours and expands verified location coverage.

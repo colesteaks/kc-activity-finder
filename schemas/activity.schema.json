@@ -18,7 +18,9 @@
     "categories",
     "category_inferred",
     "ages",
-    "evidence"
+    "evidence",
+    "place_id",
+    "geo"
   ],
   "properties": {
     "id": {
@@ -276,6 +278,57 @@
     },
     "category_inferred": {
       "type": "boolean"
+    },
+    "place_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "geo": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "required": [
+        "lat",
+        "lng",
+        "precision",
+        "source_url",
+        "checked_at",
+        "note"
+      ],
+      "properties": {
+        "lat": {
+          "type": "number",
+          "minimum": -90,
+          "maximum": 90
+        },
+        "lng": {
+          "type": "number",
+          "minimum": -180,
+          "maximum": 180
+        },
+        "precision": {
+          "enum": [
+            "access_point",
+            "campus",
+            "address",
+            "source_point"
+          ]
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "checked_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "note": {
+          "type": "string"
+        }
+      }
     }
   }
 }
