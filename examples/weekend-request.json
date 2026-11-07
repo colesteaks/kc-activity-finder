@@ -10,9 +10,17 @@
   "party": {
     "adults": 2,
     "children": 0,
-    "access_needs": []
+    "ages": [
+      35,
+      35
+    ]
   },
-  "preferences": ["outdoors", "local art", "one regional wildcard"],
-  "constraints": ["under $50 per person"],
-  "regional_wildcards": true
+  "preferences": [
+    "Discover distinctive activities broadly; rank for this adult outing"
+  ],
+  "constraints": [
+    "under $50 per person"
+  ],
+  "regional_wildcards": true,
+  "filters": {}
 }

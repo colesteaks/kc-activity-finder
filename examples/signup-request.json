@@ -10,9 +10,17 @@
   "party": {
     "adults": 2,
     "children": 0,
-    "access_needs": []
+    "ages": [
+      35,
+      35
+    ]
   },
-  "preferences": ["fitness goal", "creative weekend", "worth planning ahead"],
-  "constraints": ["one regional trip maximum"],
-  "regional_wildcards": true
+  "preferences": [
+    "Discover distinctive activities broadly; rank for this adult outing"
+  ],
+  "constraints": [
+    "one regional trip maximum"
+  ],
+  "regional_wildcards": true,
+  "filters": {}
 }

@@ -1,37 +1,31 @@
 ---
 name: kc-activity-finder
-description: Find and rank well-verified activities in and around Kansas City for current/weekend plans or longer-horizon signups. Use when recommendations should begin with the maintained KC source graph, verify details on first-party pages, and use broader web search only to fill gaps.
+description: Build broad, first-party-verified activity inventories for Kansas City, Lawrence, Columbia, Bentonville and surrounding areas; filter and rank separately for adults, kids or families, for weekends and advance registration.
 ---
 
 # KC Activity Finder
 
-Recommend activities through the fixed sequence below. Do not skip or reorder stages:
+Read [execution](references/execution.md), [research workflow](references/workflow.md), [ranking](references/ranking.md), and [adversarial review](references/adversarial-review.md). Run from the repository root with Python 3.11+ and `pip install -r requirements.txt`.
 
-**source graph -> deep first-party sweep -> candidate capture -> broader web search -> merge -> fit-based ranking -> adversarial review -> recommendation**
+## Non-negotiable sequence
 
-## Invariants
+1. **Source graph:** load `data/source-graph.json`; verify the preserved original seed hash. Record graph identity and every active source in the run ledger. Treat KC Daily as a sensor, not an official producer.
+2. **Deep first-party source sweep:** visit anchors and descend through calendars, pagination, program PDFs, session schedules, news, official social and organizer-linked registration portals. Capture raw observations during research. Record checked, empty, failed or deferred routes; failed is never empty.
+3. **Candidate capture:** preserve all plausible activities before filtering, including adult-only, kids, family, passive, active, expensive, sold out, closed, canceled and unresolved. Use null for unknown facts. Keep parent programs and child sessions distinct. Save exact evidence quotes, ownership classification and observation times.
+4. **Broader web search:** search Kansas City metro, Lawrence, Columbia, Bentonville and surrounding areas. Explicitly include Kansas suburbs, Douglas County, Boone County and Rogers/Springdale/Fayetteville/Northwest Arkansas. Cover categories missing from the graph and date window. Use aggregators as sensors, then confirm on official pages. Log queries and outcomes; propose graph additions separately.
+5. **Deduplication and merging:** execute `merge`. Review near-duplicates manually. Exact occurrence merges preserve originals and discovery channels. Conflicting material values block selection until resolved; preserve the original evidence and document resolution.
+6. **Fit ranking:** execute `fit-based-ranking`. Apply the outing’s age, interest, region, movement, budget and travel choices to the complete inventory. Never narrow research to ages 0–5. Offer separate adults-only, children and family views when useful. No popularity or sponsorship bonus.
+7. **Adversarial review:** reopen official shortlisted pages and attempt to disprove each recommendation. Check identity, schedule/year, location, availability, audience, cost, registration, conflicts, logistics and provenance. Record a named reviewer and notes for each check. Resolve blocking findings. Execute `adversarial-review`; subsequent content changes invalidate the review.
+8. **Final recommendations:** execute `report`. Lead with coverage limits, then picks, exact status and deadlines, fit, friction, source links/timestamps, full inventory, exclusions, source-health ledger, broader-search outcomes and proposed graph additions. Do not claim completeness from a one-seed graph or from a missing ledger.
 
-- Start every run from [`data/source-graph.json`](data/source-graph.json). Broader web search supplements that graph; it never replaces the graph sweep.
-- Follow source-graph links through to the organizer, venue, registration, or ticketing page. Treat snippets, aggregators, newsletters, and search results as discovery evidence, not final verification.
-- Verify date, time, location, price, availability, deadline, and material restrictions from first-party evidence whenever those fields affect the recommendation. Label anything still uncertain.
-- Keep Kansas City metro central. Include Lawrence, Columbia, Bentonville, and surrounding areas when the fit or distinctiveness justifies the trip; do not let distant results crowd out strong KC options.
-- Separate source prominence from user fit. Sponsorship, repetition, and search rank do not earn ranking points.
-- Preserve provenance through merging. A broader-search discovery remains labeled as such even after first-party verification.
-- Do not recommend a candidate that fails a hard gate or the adversarial review.
+## Scope and decisions
 
-## Choose a mode
+Default timezone is America/Chicago. Resolve relative dates to exact local dates before research. Weekend defaults to the relevant Saturday–Sunday; on Sunday “this weekend” includes that Sunday. Signup horizon defaults to 21–365 days ahead, but include nearer live deadlines when useful. The CLI takes explicit dates so these choices remain reviewable.
 
-- `weekend-current`: actionable options now, tonight, this week, or this weekend. Emphasize live availability, schedule accuracy, weather sensitivity, and practical logistics.
-- `signup-horizon`: races, festivals, classes, timed-entry experiences, and ticketed events worth reserving in advance. Emphasize on-sale status, registration deadlines, lead time, and calendar value.
+Default to broad discovery. Ask or infer from explicit context whether the outing is adults-only, kids, or mixed family; never infer a home address, exact ages, disabilities, budget or travel radius. Keep narrow constraints out of discovery. Rank only after inventory capture and merging. Physical engagement is an optional preference, not a universal definition of quality.
 
-If the request spans both, run both modes and present separate sections.
+Discovery-first requests should lead with distinctive and newly found options and show practical backups separately. Fit-first requests should optimize the stated outing. Do not let convenience eliminate interesting candidates during collection. Return fewer verified picks when evidence is insufficient rather than padding the shortlist.
 
-## Run the workflow
+## Execution boundary
 
-Read [`references/workflow.md`](references/workflow.md) for the stage-by-stage procedure and candidate evidence rules. Capture candidates in the shape defined by [`schemas/candidate.schema.json`](schemas/candidate.schema.json).
-
-Before scoring, read [`references/ranking.md`](references/ranking.md). Apply hard gates first, then the mode-aware 100-point rubric. Scores organize judgment; they do not replace it.
-
-Before producing the answer, read and apply [`references/adversarial-review.md`](references/adversarial-review.md). Use [`references/output-contract.md`](references/output-contract.md) for the final response.
-
-When maintaining the graph itself, follow [`references/updating-sources.md`](references/updating-sources.md). Never rewrite the supplied seed file to make maintenance more convenient.
+The engine is executable and testable, but browsing and judgment remain host responsibilities. A stage attestation cannot prove that live research happened. Never present synthetic fixtures or unvisited URLs as researched events. The current source graph is sparse; expand it through observed relationships and disclose gaps.

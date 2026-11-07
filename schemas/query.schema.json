@@ -4,32 +4,194 @@
   "title": "KC activity query",
   "type": "object",
   "additionalProperties": false,
-  "required": ["version", "mode", "as_of", "window", "home_base", "preferences"],
+  "required": [
+    "version",
+    "mode",
+    "as_of",
+    "window",
+    "home_base",
+    "preferences"
+  ],
   "properties": {
-    "version": {"const": 1},
-    "mode": {"enum": ["weekend-current", "signup-horizon"]},
-    "as_of": {"type": "string", "format": "date-time"},
+    "version": {
+      "const": 1
+    },
+    "mode": {
+      "enum": [
+        "weekend-current",
+        "signup-horizon"
+      ]
+    },
+    "as_of": {
+      "type": "string",
+      "format": "date-time"
+    },
     "window": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["start", "end"],
+      "required": [
+        "start",
+        "end"
+      ],
       "properties": {
-        "start": {"type": "string", "format": "date"},
-        "end": {"type": "string", "format": "date"}
+        "start": {
+          "type": "string",
+          "format": "date"
+        },
+        "end": {
+          "type": "string",
+          "format": "date"
+        }
       }
     },
-    "home_base": {"type": "string", "minLength": 1},
+    "home_base": {
+      "type": "string",
+      "minLength": 1
+    },
     "party": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "adults": {"type": "integer", "minimum": 0},
-        "children": {"type": "integer", "minimum": 0},
-        "access_needs": {"type": "array", "items": {"type": "string"}}
+        "adults": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "children": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "access_needs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ages": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": 0
+          },
+          "description": "Actual ages of all participants who must be eligible. Empty means audience-neutral discovery."
+        }
       }
     },
-    "preferences": {"type": "array", "items": {"type": "string"}},
-    "constraints": {"type": "array", "items": {"type": "string"}},
-    "regional_wildcards": {"type": "boolean", "default": true}
+    "preferences": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "regional_wildcards": {
+      "type": "boolean",
+      "default": true
+    },
+    "filters": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "regions": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "Kansas City metro",
+              "Lawrence",
+              "Columbia",
+              "Bentonville",
+              "surrounding areas"
+            ]
+          }
+        },
+        "event_types": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "drop-in",
+              "performance",
+              "race",
+              "festival",
+              "class",
+              "timed-entry",
+              "ticketed-event",
+              "outdoor",
+              "other"
+            ]
+          }
+        },
+        "max_price_per_person": {
+          "type": "number",
+          "minimum": 0
+        },
+        "max_travel_minutes": {
+          "type": "number",
+          "minimum": 0
+        },
+        "min_movement": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "evidence_max_age_hours": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 168
+        }
+      }
+    },
+    "weights": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "age_fit",
+        "interest_fit",
+        "movement",
+        "distinctiveness",
+        "logistics",
+        "value"
+      ],
+      "properties": {
+        "age_fit": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "interest_fit": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "movement": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "distinctiveness": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "logistics": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "value": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      }
+    },
+    "limit": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 100
+    }
   }
 }

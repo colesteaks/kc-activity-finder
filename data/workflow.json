@@ -12,7 +12,10 @@
   ],
   "modes": {
     "weekend-current": {
-      "typical_horizon_days": [0, 10],
+      "typical_horizon_days": [
+        0,
+        10
+      ],
       "focus": [
         "live availability",
         "schedule accuracy",
@@ -21,7 +24,10 @@
       ]
     },
     "signup-horizon": {
-      "typical_horizon_days": [7, 365],
+      "typical_horizon_days": [
+        7,
+        365
+      ],
       "focus": [
         "registration or on-sale status",
         "deadline urgency",
@@ -49,14 +55,26 @@
     "priority_bands": [
       {
         "id": "core",
-        "areas": ["Kansas City metro"],
+        "areas": [
+          "Kansas City metro"
+        ],
         "guidance": "Default center of gravity for every run."
       },
       {
         "id": "regional",
-        "areas": ["Lawrence", "Columbia", "Bentonville", "surrounding areas"],
+        "areas": [
+          "Lawrence",
+          "Columbia",
+          "Bentonville",
+          "surrounding areas"
+        ],
         "guidance": "Include when fit or distinctiveness earns the extra travel."
       }
     ]
+  },
+  "audience_policy": {
+    "discovery": "all ages, including adults-only, children, and mixed family groups",
+    "selection": "filter the complete inventory for each outing; never prefilter the sweep by age",
+    "default_focus": "broad discovery; optional age, movement, interest, budget, travel and category filters"
   }
 }

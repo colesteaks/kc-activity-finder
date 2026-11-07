@@ -1,0 +1,969 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Research run",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "fixture",
+    "request",
+    "graph_digest",
+    "completed",
+    "coverage",
+    "searches",
+    "candidates",
+    "merged",
+    "ranking",
+    "graph_proposals",
+    "review"
+  ],
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "fixture": {
+      "type": "boolean"
+    },
+    "request": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "$id": "https://example.invalid/kc-activity-finder/query.schema.json",
+      "title": "KC activity query",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "version",
+        "mode",
+        "as_of",
+        "window",
+        "home_base",
+        "preferences"
+      ],
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "mode": {
+          "enum": [
+            "weekend-current",
+            "signup-horizon"
+          ]
+        },
+        "as_of": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "window": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "start",
+            "end"
+          ],
+          "properties": {
+            "start": {
+              "type": "string",
+              "format": "date"
+            },
+            "end": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        },
+        "home_base": {
+          "type": "string",
+          "minLength": 1
+        },
+        "party": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "adults": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "children": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "access_needs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "ages": {
+              "type": "array",
+              "items": {
+                "type": "number",
+                "minimum": 0
+              },
+              "description": "Actual ages of all participants who must be eligible. Empty means audience-neutral discovery."
+            }
+          }
+        },
+        "preferences": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "constraints": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "regional_wildcards": {
+          "type": "boolean",
+          "default": true
+        },
+        "filters": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "regions": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "Kansas City metro",
+                  "Lawrence",
+                  "Columbia",
+                  "Bentonville",
+                  "surrounding areas"
+                ]
+              }
+            },
+            "event_types": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "drop-in",
+                  "performance",
+                  "race",
+                  "festival",
+                  "class",
+                  "timed-entry",
+                  "ticketed-event",
+                  "outdoor",
+                  "other"
+                ]
+              }
+            },
+            "max_price_per_person": {
+              "type": "number",
+              "minimum": 0
+            },
+            "max_travel_minutes": {
+              "type": "number",
+              "minimum": 0
+            },
+            "min_movement": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 5
+            },
+            "evidence_max_age_hours": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 168
+            }
+          }
+        },
+        "weights": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "age_fit",
+            "interest_fit",
+            "movement",
+            "distinctiveness",
+            "logistics",
+            "value"
+          ],
+          "properties": {
+            "age_fit": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "interest_fit": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "movement": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "distinctiveness": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "logistics": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "value": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            }
+          }
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100
+        }
+      }
+    },
+    "graph_digest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "completed": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "coverage": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "node_id",
+          "status",
+          "observed_at",
+          "visited_urls",
+          "notes"
+        ],
+        "properties": {
+          "node_id": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "pending",
+              "checked",
+              "empty",
+              "failed",
+              "deferred"
+            ]
+          },
+          "observed_at": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "visited_urls": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "searches": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "region",
+          "query",
+          "observed_at",
+          "outcome"
+        ],
+        "properties": {
+          "region": {
+            "type": "string"
+          },
+          "query": {
+            "type": "string"
+          },
+          "observed_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "outcome": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "candidates": {
+      "type": "array",
+      "items": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://example.invalid/kc-activity-finder/candidate.schema.json",
+        "title": "KC activity candidate",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "candidate_id",
+          "title",
+          "mode",
+          "event_type",
+          "timing",
+          "place",
+          "discovery",
+          "verification",
+          "availability",
+          "cost",
+          "dedupe_key",
+          "ranking",
+          "adversarial_review"
+        ],
+        "properties": {
+          "candidate_id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]*$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "mode": {
+            "enum": [
+              "weekend-current",
+              "signup-horizon"
+            ]
+          },
+          "event_type": {
+            "enum": [
+              "drop-in",
+              "performance",
+              "race",
+              "festival",
+              "class",
+              "timed-entry",
+              "ticketed-event",
+              "outdoor",
+              "other"
+            ]
+          },
+          "timing": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "start",
+              "end",
+              "timezone"
+            ],
+            "properties": {
+              "start": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date-time"
+              },
+              "end": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date-time"
+              },
+              "timezone": {
+                "const": "America/Chicago"
+              }
+            }
+          },
+          "place": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "venue",
+              "city",
+              "region"
+            ],
+            "properties": {
+              "venue": {
+                "type": "string",
+                "minLength": 1
+              },
+              "city": {
+                "type": "string",
+                "minLength": 1
+              },
+              "state": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "region": {
+                "enum": [
+                  "Kansas City metro",
+                  "Lawrence",
+                  "Columbia",
+                  "Bentonville",
+                  "surrounding areas"
+                ]
+              }
+            }
+          },
+          "discovery": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "channel",
+              "discovery_url",
+              "captured_at"
+            ],
+            "properties": {
+              "channel": {
+                "enum": [
+                  "source-graph",
+                  "broader-web-search"
+                ]
+              },
+              "source_node_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "discovery_url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "captured_at": {
+                "type": "string",
+                "format": "date-time"
+              }
+            }
+          },
+          "verification": {
+            "type": "array",
+            "minItems": 0,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "evidence_type",
+                "url",
+                "observed_at",
+                "supports"
+              ],
+              "properties": {
+                "evidence_type": {
+                  "enum": [
+                    "first-party-event",
+                    "first-party-organizer",
+                    "first-party-venue",
+                    "first-party-registration",
+                    "editorial",
+                    "web-search"
+                  ]
+                },
+                "url": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "observed_at": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "supports": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "quote": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          },
+          "action_url": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "uri"
+          },
+          "availability": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status",
+              "checked_at",
+              "deadline"
+            ],
+            "properties": {
+              "status": {
+                "enum": [
+                  "available",
+                  "limited",
+                  "waitlist",
+                  "unknown",
+                  "sold-out",
+                  "cancelled",
+                  "closed",
+                  "not-open"
+                ]
+              },
+              "checked_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "deadline": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date-time"
+              }
+            }
+          },
+          "cost": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "currency",
+              "min",
+              "max",
+              "fees_unknown"
+            ],
+            "properties": {
+              "currency": {
+                "const": "USD"
+              },
+              "min": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "max": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "fees_unknown": {
+                "type": "boolean"
+              }
+            }
+          },
+          "restrictions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "weather_sensitive": {
+            "type": "boolean"
+          },
+          "dedupe_key": {
+            "type": "string",
+            "minLength": 1
+          },
+          "ranking": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "personal_fit",
+              "timing_actionability",
+              "distinctiveness",
+              "evidence_confidence",
+              "logistics",
+              "value",
+              "geographic_intent",
+              "penalties",
+              "total"
+            ],
+            "properties": {
+              "personal_fit": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 30
+              },
+              "timing_actionability": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 15
+              },
+              "distinctiveness": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 15
+              },
+              "evidence_confidence": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 15
+              },
+              "logistics": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 10
+              },
+              "value": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 10
+              },
+              "geographic_intent": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 5
+              },
+              "penalties": {
+                "type": "integer",
+                "maximum": 0
+              },
+              "total": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 100
+              }
+            }
+          },
+          "adversarial_review": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "overall",
+              "checks"
+            ],
+            "properties": {
+              "overall": {
+                "enum": [
+                  "pass",
+                  "hold",
+                  "fail"
+                ]
+              },
+              "checks": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "status",
+                    "notes"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "enum": [
+                        "pass",
+                        "uncertain",
+                        "fail"
+                      ]
+                    },
+                    "notes": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "parent_event_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "conflicts": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "discoveries": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "channel",
+                "discovery_url",
+                "captured_at"
+              ],
+              "properties": {
+                "channel": {
+                  "enum": [
+                    "source-graph",
+                    "broader-web-search"
+                  ]
+                },
+                "source_node_id": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "discovery_url": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "captured_at": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            }
+          },
+          "audience": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "min_age",
+              "max_age",
+              "notes"
+            ],
+            "properties": {
+              "min_age": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "max_age": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "notes": {
+                "type": "string"
+              }
+            }
+          },
+          "registration": {
+            "type": "object",
+            "required": [
+              "required",
+              "notes"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "required": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "notes": {
+                "type": "string"
+              }
+            }
+          },
+          "travel_minutes": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "tradeoffs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "fit": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "age_fit",
+              "interest_fit",
+              "movement",
+              "distinctiveness",
+              "logistics",
+              "value"
+            ],
+            "properties": {
+              "age_fit": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "score",
+                  "reason"
+                ],
+                "properties": {
+                  "score": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 5
+                  },
+                  "reason": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              },
+              "interest_fit": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "score",
+                  "reason"
+                ],
+                "properties": {
+                  "score": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 5
+                  },
+                  "reason": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              },
+              "movement": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "score",
+                  "reason"
+                ],
+                "properties": {
+                  "score": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 5
+                  },
+                  "reason": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              },
+              "distinctiveness": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "score",
+                  "reason"
+                ],
+                "properties": {
+                  "score": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 5
+                  },
+                  "reason": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              },
+              "logistics": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "score",
+                  "reason"
+                ],
+                "properties": {
+                  "score": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 5
+                  },
+                  "reason": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              },
+              "value": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "score",
+                  "reason"
+                ],
+                "properties": {
+                  "score": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 5
+                  },
+                  "reason": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "merged": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "ranking": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "candidate_id",
+          "score",
+          "exclusions"
+        ],
+        "properties": {
+          "candidate_id": {
+            "type": "string"
+          },
+          "score": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "exclusions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "graph_proposals": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "review": {
+      "type": [
+        "object",
+        "null"
+      ]
+    }
+  }
+}

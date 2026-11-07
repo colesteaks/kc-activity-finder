@@ -30,7 +30,18 @@
           "evidence_type": "first-party-registration",
           "url": "https://example.test/race-organizer/kc-river-10k",
           "observed_at": "2030-09-05T09:08:00-05:00",
-          "supports": ["identity", "date", "time", "course", "price", "availability", "deadline"]
+          "supports": [
+            "identity",
+            "date",
+            "time",
+            "course",
+            "price",
+            "availability",
+            "deadline",
+            "ages",
+            "registration"
+          ],
+          "quote": "Fictional page excerpt: all ages welcome; schedule and availability as stated in fixture."
         }
       ],
       "action_url": "https://example.test/race-organizer/kc-river-10k",
@@ -45,7 +56,10 @@
         "max": 42,
         "fees_unknown": true
       },
-      "restrictions": ["Fixture only; not a real event", "Registration waiver required"],
+      "restrictions": [
+        "Fixture only; not a real event",
+        "Registration waiver required"
+      ],
       "weather_sensitive": true,
       "dedupe_key": "kc-river-10k|2030-11-03|kansas-city",
       "ranking": {
@@ -62,11 +76,68 @@
       "adversarial_review": {
         "overall": "pass",
         "checks": [
-          {"id": "registration", "status": "pass", "notes": "Fixture registration is open and deadline is distinct from event date."},
-          {"id": "price", "status": "pass", "notes": "Possible processing fees are disclosed."},
-          {"id": "schedule", "status": "pass", "notes": "Correct fixture year and occurrence verified."},
-          {"id": "provenance", "status": "pass", "notes": "Graph discovery and first-party registration evidence retained."}
+          {
+            "id": "registration",
+            "status": "pass",
+            "notes": "Fixture registration is open and deadline is distinct from event date."
+          },
+          {
+            "id": "price",
+            "status": "pass",
+            "notes": "Possible processing fees are disclosed."
+          },
+          {
+            "id": "schedule",
+            "status": "pass",
+            "notes": "Correct fixture year and occurrence verified."
+          },
+          {
+            "id": "provenance",
+            "status": "pass",
+            "notes": "Graph discovery and first-party registration evidence retained."
+          }
         ]
+      },
+      "audience": {
+        "min_age": 0,
+        "max_age": 120,
+        "notes": "Fictional all-ages eligibility; not a real organizer policy."
+      },
+      "registration": {
+        "required": true,
+        "notes": "Fictional registration policy"
+      },
+      "conflicts": [],
+      "parent_event_id": null,
+      "travel_minutes": 25,
+      "tradeoffs": [
+        "Fictional example, never use as a live recommendation."
+      ],
+      "fit": {
+        "age_fit": {
+          "score": 4,
+          "reason": "Fictional assessment for an adult outing; replace with request-specific evidence."
+        },
+        "interest_fit": {
+          "score": 4,
+          "reason": "Fictional assessment for an adult outing; replace with request-specific evidence."
+        },
+        "movement": {
+          "score": 4,
+          "reason": "Fictional assessment for an adult outing; replace with request-specific evidence."
+        },
+        "distinctiveness": {
+          "score": 4,
+          "reason": "Fictional assessment for an adult outing; replace with request-specific evidence."
+        },
+        "logistics": {
+          "score": 4,
+          "reason": "Fictional assessment for an adult outing; replace with request-specific evidence."
+        },
+        "value": {
+          "score": 4,
+          "reason": "Fictional assessment for an adult outing; replace with request-specific evidence."
+        }
       }
     },
     {
@@ -96,7 +167,19 @@
           "evidence_type": "first-party-organizer",
           "url": "https://example.test/arts-campus/trail-photo-workshop",
           "observed_at": "2030-09-05T09:38:00-05:00",
-          "supports": ["identity", "date", "time", "location", "price", "availability", "deadline", "prerequisites"]
+          "supports": [
+            "identity",
+            "date",
+            "time",
+            "location",
+            "price",
+            "availability",
+            "deadline",
+            "prerequisites",
+            "ages",
+            "registration"
+          ],
+          "quote": "Fictional page excerpt: all ages welcome; schedule and availability as stated in fixture."
         }
       ],
       "action_url": "https://example.test/arts-campus/trail-photo-workshop",
@@ -111,7 +194,10 @@
         "max": 95,
         "fees_unknown": false
       },
-      "restrictions": ["Fixture only; not a real event", "Participants provide their own camera"],
+      "restrictions": [
+        "Fixture only; not a real event",
+        "Participants provide their own camera"
+      ],
       "weather_sensitive": true,
       "dedupe_key": "bentonville-trail-photo-workshop|2031-03-15|bentonville",
       "ranking": {
@@ -128,11 +214,68 @@
       "adversarial_review": {
         "overall": "pass",
         "checks": [
-          {"id": "registration", "status": "pass", "notes": "Limited fixture inventory and deadline verified."},
-          {"id": "travel", "status": "pass", "notes": "Distinctiveness supports the single requested regional trip."},
-          {"id": "prerequisites", "status": "pass", "notes": "Camera requirement is disclosed."},
-          {"id": "provenance", "status": "pass", "notes": "Web discovery remains labeled and official organizer evidence is present."}
+          {
+            "id": "registration",
+            "status": "pass",
+            "notes": "Limited fixture inventory and deadline verified."
+          },
+          {
+            "id": "travel",
+            "status": "pass",
+            "notes": "Distinctiveness supports the single requested regional trip."
+          },
+          {
+            "id": "prerequisites",
+            "status": "pass",
+            "notes": "Camera requirement is disclosed."
+          },
+          {
+            "id": "provenance",
+            "status": "pass",
+            "notes": "Web discovery remains labeled and official organizer evidence is present."
+          }
         ]
+      },
+      "audience": {
+        "min_age": 0,
+        "max_age": 120,
+        "notes": "Fictional all-ages eligibility; not a real organizer policy."
+      },
+      "registration": {
+        "required": true,
+        "notes": "Fictional registration policy"
+      },
+      "conflicts": [],
+      "parent_event_id": null,
+      "travel_minutes": 25,
+      "tradeoffs": [
+        "Fictional example, never use as a live recommendation."
+      ],
+      "fit": {
+        "age_fit": {
+          "score": 4,
+          "reason": "Fictional assessment for an adult outing; replace with request-specific evidence."
+        },
+        "interest_fit": {
+          "score": 4,
+          "reason": "Fictional assessment for an adult outing; replace with request-specific evidence."
+        },
+        "movement": {
+          "score": 4,
+          "reason": "Fictional assessment for an adult outing; replace with request-specific evidence."
+        },
+        "distinctiveness": {
+          "score": 4,
+          "reason": "Fictional assessment for an adult outing; replace with request-specific evidence."
+        },
+        "logistics": {
+          "score": 4,
+          "reason": "Fictional assessment for an adult outing; replace with request-specific evidence."
+        },
+        "value": {
+          "score": 4,
+          "reason": "Fictional assessment for an adult outing; replace with request-specific evidence."
+        }
       }
     }
   ]

@@ -1,58 +1,26 @@
-# Fit-based ranking
+# Ranking methodology
 
-Rank for the request, not for general popularity. Apply hard gates before assigning points.
+Collect before selecting. Hard filters do not delete inventory rows. The executable scoring model supersedes the older seven-factor `ranking` example fields, which remain only for schema compatibility.
 
-## Hard gates
+## Eligibility gates
 
-Drop a candidate when any of these is true:
+Exclude from recommendations, retain in inventory: outside the exact Chicago-local date window; unknown time; unavailable/closed/full/canceled/not-open/waitlist; unresolved material conflicts; unsupported or stale official identity/date/time/place/availability; missing or failed required registration action; passed deadline; or violated explicit age, region, category, budget, movement or travel filters. All supplied participant ages must be eligible, including caregivers. “Family friendly” is not evidence of toddler participation. Unknown eligibility stays unresolved when ages constrain selection.
 
-- it falls outside the requested window or signup horizon;
-- it is cancelled, conclusively sold out, or registration is closed, unless the user asked for resale or waitlist options;
-- a stated age, accessibility, budget, travel, or schedule constraint makes it unusable;
-- its identity, date, place, or availability cannot be verified well enough to act;
-- the only support is a search result, aggregator, or editorial mention with no first-party confirmation;
-- a material conflict between sources remains unresolved.
+## Transparent score
 
-## 100-point rubric
+Assign 0–5 and a request-specific reason to each dimension. Score = sum(weight × dimension / 5), on a 100-point scale. Default weights:
 
-| Dimension | Max | Question |
+| Dimension | Weight | Interpretation |
 | --- | ---: | --- |
-| Personal fit | 30 | How directly does it match stated interests, group needs, constraints, and desired energy? |
-| Timing and actionability | 15 | Can the user act at the right time, and is there useful urgency? |
-| Distinctiveness | 15 | Is it unusually memorable, seasonal, limited, local, or hard to replicate? |
-| Evidence confidence | 15 | Are material details current and supported by first-party evidence? |
-| Logistics | 10 | Are travel, duration, parking/transit, accessibility, and schedule friction manageable? |
-| Value | 10 | Is the experience compelling relative to full cost and time? |
-| Geographic intent | 5 | Does it preserve KC as the center or earn a requested regional wildcard slot? |
+| Age fit | 20 | Suitability for actual party; neutral when ages are unspecified |
+| Interest fit | 30 | Match to stated interests; neutral when unknown |
+| Movement | 0 | Physical engagement, activated only when desired |
+| Distinctiveness | 20 | Seasonal, unusual, local, participatory or rare qualities |
+| Logistics | 20 | Travel, timing, duration, access and commitment |
+| Value | 10 | Experience relative to full cost and time |
 
-Record integer points for each dimension. `total` is the sum of all seven dimensions plus penalties, floored at zero.
+Use 0 for a poor match, 3 for a reasonable/neutral match, 5 for excellent supported fit. Unknown preference fit is neutral, not evidence of excellence. Explain uncertainty. Ties sort by stable candidate ID for reproducibility; use editorial judgment to diversify a final shortlist without altering facts or claiming the score scientifically measures enjoyment.
 
-## Mode interpretation
+Custom weights must contain all six dimensions and sum to 100. Suggested active-family profile: age_fit 25, interest_fit 20, movement 25, distinctiveness 10, logistics 15, value 5. Adult arts profile can keep movement at zero. A hard minimum movement filter is separate from weighting. No positive score rescues a failed gate.
 
-For `weekend-current`, timing and actionability reward confirmed hours, live inventory, sensible sequencing, weather resilience, and low last-minute friction.
-
-For `signup-horizon`, timing and actionability reward an open registration or on-sale window, a verified deadline, appropriate lead time, and an event substantial enough to reserve calendar space.
-
-Distinctiveness should not automatically favor distant options. A Lawrence, Columbia, Bentonville, or surrounding-area candidate earns its place by offering a better fit or more distinctive experience than available KC-metro alternatives.
-
-## Penalties
-
-Use negative integers and explain each applied penalty in working notes.
-
-| Condition | Typical penalty |
-| --- | ---: |
-| Availability is unknown but the event is otherwise actionable | -10 |
-| A material field is supported only by stale evidence | -10 to -20 |
-| Price or fees are meaningfully unclear | -5 |
-| Weather risk has no reasonable fallback | -5 to -10 |
-| Travel friction is easy to underestimate | -5 to -15 |
-| Non-fatal preference conflict | -5 to -20 |
-
-Do not use a penalty to rescue a hard-gate failure.
-
-## Bias controls and ties
-
-- Sponsorship, placement in a newsletter, repetition across aggregators, and search rank receive no points.
-- Multiple pages copying one announcement do not count as independent confirmation.
-- Do not reward a source merely because it was in the seed graph; reward the candidate's fit and evidence.
-- Break close ties by evidence confidence, then personal fit, then lower logistics burden. Use geographic variety only when it adds genuine choice.
+Discovery-first output should highlight deep discoveries and signature experiences before practical backups. Fit-first output should prioritize the party’s needs. Rankings are decision support, not probabilities of satisfaction. Never award points for sponsorship, source placement, copying, search rank or popularity. Geographic variety should add meaningful choice, not token distant entries.

@@ -47,3 +47,15 @@ Every persisted edge should contain:
 ```
 
 Do not add credentials, private subscriber content, copied article bodies, or personal data to the graph.
+
+
+
+## Release and runtime maintenance
+
+Preserve the supplied seed exactly, including capitalization and absence of a trailing newline. The current artifact is only `KC daily`. Do not silently replace it with another file presented as the original. If the user supplies a richer Primary sources.txt, archive the old bytes, record provenance, review the migration, update the hash and provided-seed nodes, then update seed preservation tests accordingly.
+
+Monthly: visit each active route and inspect redirected domains, missing calendars, pagination, PDFs, registration leaves and seasonal feeds. Record actual observed dates. Add official routes with observed relationship evidence; propose unrelated useful sources separately for review. Failed pages are not evidence of no events. Check coverage across all regions and active/passive, adult/kids/family, indoor/outdoor and paid/free categories. Before peak signup seasons, inspect camps, races, leagues and workshops farther ahead.
+
+On every change: install requirements, run repository validation, run all tests, regenerate fictional reports, inspect the diff and confirm no private runs or secrets are included. CI runs the same validation and tests. Run a live smoke sweep only when browsing is available, and label coverage honestly; offline tests do not establish live event accuracy.
+
+Refresh evidence and re-review after any fact, request or ranking change. Resolve conflicts with dated official evidence and retain the prior values in the merge log. Never erase a cancellation or closed signup just to improve the recommendation count.

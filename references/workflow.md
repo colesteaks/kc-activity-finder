@@ -42,7 +42,7 @@ Write every plausible activity to a candidate ledger before ordinary web search.
 - restrictions, weather sensitivity, and logistics relevant to fit;
 - a stable dedupe key.
 
-Capture exclusions separately with a short reason such as `outside-window`, `sold-out`, `preference-conflict`, or `unverified` so later search does not repeatedly rediscover them.
+Keep excluded candidates in the same complete ledger with a short reason such as `outside-window`, `sold-out`, `preference-conflict`, or `unverified` so later search does not repeatedly rediscover them.
 
 ## 4. Broader web search
 
@@ -82,7 +82,7 @@ If an attractive result fails, review the next ranked candidate rather than weak
 
 ## 8. Recommendation
 
-Use `references/output-contract.md`. Lead with a small, useful set rather than an exhaustive dump. Each selection must explain the fit, give actionable logistics and a first-party link, and disclose material uncertainty or urgency.
+Use `references/output-contract.md`. Lead with a small useful recommendation layer, followed by the complete inventory and exclusions. Each selection must explain the fit, give actionable logistics and a first-party link, and disclose material uncertainty or urgency.
 
 ## Completion condition
 
@@ -95,3 +95,4 @@ Stop when:
 - another search pass is unlikely to change the selected set materially.
 
 If evidence is insufficient, return fewer recommendations and say what could not be verified.
+

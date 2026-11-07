@@ -1,0 +1,482 @@
+{
+  "version": 1,
+  "fixture": true,
+  "request": {
+    "version": 1,
+    "mode": "weekend-current",
+    "as_of": "2030-09-05T12:00:00-05:00",
+    "window": {
+      "start": "2030-09-06",
+      "end": "2030-09-08"
+    },
+    "home_base": "Kansas City, MO",
+    "party": {
+      "adults": 2,
+      "children": 0,
+      "ages": [
+        35,
+        35
+      ]
+    },
+    "preferences": [
+      "Discover distinctive activities broadly; rank for this adult outing"
+    ],
+    "constraints": [
+      "under $50 per person"
+    ],
+    "regional_wildcards": true,
+    "filters": {}
+  },
+  "graph_digest": "bba85ef1e2054f11fccd7acb16f3d3d480f3a3fdc356659b8b653a844b2a6d7b",
+  "completed": [
+    "source-graph",
+    "deep-first-party-sweep",
+    "candidate-capture",
+    "broader-web-search",
+    "merge",
+    "fit-based-ranking",
+    "adversarial-review"
+  ],
+  "coverage": [
+    {
+      "node_id": "kc-daily",
+      "status": "checked",
+      "observed_at": "2030-09-05T12:00:00-05:00",
+      "visited_urls": [
+        "https://example.test/seed"
+      ],
+      "notes": "Synthetic sweep only"
+    }
+  ],
+  "searches": [
+    {
+      "region": "Kansas City metro",
+      "query": "Fictional search",
+      "outcome": "Synthetic fixture; no live search",
+      "observed_at": "2030-09-05T12:00:00-05:00"
+    },
+    {
+      "region": "Lawrence",
+      "query": "Fictional search",
+      "outcome": "Synthetic fixture; no live search",
+      "observed_at": "2030-09-05T12:00:00-05:00"
+    },
+    {
+      "region": "Columbia",
+      "query": "Fictional search",
+      "outcome": "Synthetic fixture; no live search",
+      "observed_at": "2030-09-05T12:00:00-05:00"
+    },
+    {
+      "region": "Bentonville",
+      "query": "Fictional search",
+      "outcome": "Synthetic fixture; no live search",
+      "observed_at": "2030-09-05T12:00:00-05:00"
+    },
+    {
+      "region": "surrounding areas",
+      "query": "Fictional search",
+      "outcome": "Synthetic fixture; no live search",
+      "observed_at": "2030-09-05T12:00:00-05:00"
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "fixture-riverfront-lantern-walk",
+      "title": "Fixture: Riverfront Lantern Walk",
+      "mode": "weekend-current",
+      "event_type": "outdoor",
+      "timing": {
+        "start": "2030-09-06T19:30:00-05:00",
+        "end": "2030-09-06T21:30:00-05:00",
+        "timezone": "America/Chicago"
+      },
+      "place": {
+        "venue": "Example Riverfront Park",
+        "city": "Kansas City",
+        "state": "MO",
+        "region": "Kansas City metro"
+      },
+      "discovery": {
+        "channel": "source-graph",
+        "source_node_id": "kc-daily",
+        "discovery_url": "https://example.test/editorial/riverfront-lantern-walk",
+        "captured_at": "2030-09-05T10:05:00-05:00"
+      },
+      "verification": [
+        {
+          "evidence_type": "first-party-event",
+          "url": "https://example.test/organizer/riverfront-lantern-walk",
+          "observed_at": "2030-09-05T10:12:00-05:00",
+          "supports": [
+            "identity",
+            "date",
+            "time",
+            "location",
+            "cost",
+            "availability",
+            "ages",
+            "registration"
+          ],
+          "quote": "Fictional page excerpt: all ages welcome; schedule and availability as stated in fixture."
+        }
+      ],
+      "action_url": "https://example.test/organizer/riverfront-lantern-walk",
+      "availability": {
+        "status": "available",
+        "checked_at": "2030-09-05T10:12:00-05:00",
+        "deadline": null
+      },
+      "cost": {
+        "currency": "USD",
+        "min": 0,
+        "max": 0,
+        "fees_unknown": false
+      },
+      "restrictions": [
+        "Fixture only; not a real event"
+      ],
+      "weather_sensitive": true,
+      "dedupe_key": "riverfront-lantern-walk|2030-09-06|kansas-city",
+      "ranking": {
+        "personal_fit": 27,
+        "timing_actionability": 14,
+        "distinctiveness": 13,
+        "evidence_confidence": 15,
+        "logistics": 9,
+        "value": 10,
+        "geographic_intent": 5,
+        "penalties": 0,
+        "total": 93
+      },
+      "adversarial_review": {
+        "overall": "pass",
+        "checks": [
+          {
+            "id": "schedule",
+            "status": "pass",
+            "notes": "Correct fixture occurrence verified."
+          },
+          {
+            "id": "availability",
+            "status": "pass",
+            "notes": "No reservation required in fixture."
+          },
+          {
+            "id": "weather",
+            "status": "pass",
+            "notes": "Weather sensitivity is disclosed."
+          },
+          {
+            "id": "provenance",
+            "status": "pass",
+            "notes": "Graph discovery and first-party verification retained."
+          }
+        ]
+      },
+      "audience": {
+        "min_age": 0,
+        "max_age": 120,
+        "notes": "Fictional all-ages eligibility; not a real organizer policy."
+      },
+      "registration": {
+        "required": false,
+        "notes": "Fictional registration policy"
+      },
+      "conflicts": [],
+      "parent_event_id": null,
+      "travel_minutes": 25,
+      "tradeoffs": [
+        "Fictional example, never use as a live recommendation."
+      ],
+      "fit": {
+        "age_fit": {
+          "score": 4,
+          "reason": "Fictional assessment for an adult outing; replace with request-specific evidence."
+        },
+        "interest_fit": {
+          "score": 4,
+          "reason": "Fictional assessment for an adult outing; replace with request-specific evidence."
+        },
+        "movement": {
+          "score": 4,
+          "reason": "Fictional assessment for an adult outing; replace with request-specific evidence."
+        },
+        "distinctiveness": {
+          "score": 4,
+          "reason": "Fictional assessment for an adult outing; replace with request-specific evidence."
+        },
+        "logistics": {
+          "score": 4,
+          "reason": "Fictional assessment for an adult outing; replace with request-specific evidence."
+        },
+        "value": {
+          "score": 4,
+          "reason": "Fictional assessment for an adult outing; replace with request-specific evidence."
+        }
+      }
+    },
+    {
+      "candidate_id": "fixture-lawrence-print-studio",
+      "title": "Fixture: Lawrence Printmaking Open Studio",
+      "mode": "weekend-current",
+      "event_type": "drop-in",
+      "timing": {
+        "start": "2030-09-07T13:00:00-05:00",
+        "end": "2030-09-07T16:00:00-05:00",
+        "timezone": "America/Chicago"
+      },
+      "place": {
+        "venue": "Example Community Print Shop",
+        "city": "Lawrence",
+        "state": "KS",
+        "region": "Lawrence"
+      },
+      "discovery": {
+        "channel": "broader-web-search",
+        "source_node_id": null,
+        "discovery_url": "https://example.test/search-result/lawrence-printmaking",
+        "captured_at": "2030-09-05T10:30:00-05:00"
+      },
+      "verification": [
+        {
+          "evidence_type": "first-party-venue",
+          "url": "https://example.test/print-shop/open-studio",
+          "observed_at": "2030-09-05T10:35:00-05:00",
+          "supports": [
+            "identity",
+            "date",
+            "time",
+            "location",
+            "cost",
+            "availability",
+            "materials",
+            "ages",
+            "registration"
+          ],
+          "quote": "Fictional page excerpt: all ages welcome; schedule and availability as stated in fixture."
+        }
+      ],
+      "action_url": "https://example.test/print-shop/open-studio",
+      "availability": {
+        "status": "available",
+        "checked_at": "2030-09-05T10:35:00-05:00",
+        "deadline": null
+      },
+      "cost": {
+        "currency": "USD",
+        "min": 18,
+        "max": 18,
+        "fees_unknown": false
+      },
+      "restrictions": [
+        "Fixture only; not a real event",
+        "Closed-toe shoes required"
+      ],
+      "weather_sensitive": false,
+      "dedupe_key": "lawrence-printmaking-open-studio|2030-09-07|lawrence",
+      "ranking": {
+        "personal_fit": 23,
+        "timing_actionability": 13,
+        "distinctiveness": 12,
+        "evidence_confidence": 15,
+        "logistics": 6,
+        "value": 8,
+        "geographic_intent": 4,
+        "penalties": 0,
+        "total": 81
+      },
+      "adversarial_review": {
+        "overall": "pass",
+        "checks": [
+          {
+            "id": "schedule",
+            "status": "pass",
+            "notes": "Fixture hours verified on venue page."
+          },
+          {
+            "id": "travel",
+            "status": "pass",
+            "notes": "Presented as an optional regional wildcard."
+          },
+          {
+            "id": "price",
+            "status": "pass",
+            "notes": "Materials are included in the fixture price."
+          },
+          {
+            "id": "provenance",
+            "status": "pass",
+            "notes": "Web discovery remains labeled and first-party verification is present."
+          }
+        ]
+      },
+      "audience": {
+        "min_age": 0,
+        "max_age": 120,
+        "notes": "Fictional all-ages eligibility; not a real organizer policy."
+      },
+      "registration": {
+        "required": false,
+        "notes": "Fictional registration policy"
+      },
+      "conflicts": [],
+      "parent_event_id": null,
+      "travel_minutes": 25,
+      "tradeoffs": [
+        "Fictional example, never use as a live recommendation."
+      ],
+      "fit": {
+        "age_fit": {
+          "score": 4,
+          "reason": "Fictional assessment for an adult outing; replace with request-specific evidence."
+        },
+        "interest_fit": {
+          "score": 4,
+          "reason": "Fictional assessment for an adult outing; replace with request-specific evidence."
+        },
+        "movement": {
+          "score": 4,
+          "reason": "Fictional assessment for an adult outing; replace with request-specific evidence."
+        },
+        "distinctiveness": {
+          "score": 4,
+          "reason": "Fictional assessment for an adult outing; replace with request-specific evidence."
+        },
+        "logistics": {
+          "score": 4,
+          "reason": "Fictional assessment for an adult outing; replace with request-specific evidence."
+        },
+        "value": {
+          "score": 4,
+          "reason": "Fictional assessment for an adult outing; replace with request-specific evidence."
+        }
+      }
+    }
+  ],
+  "merged": [],
+  "ranking": [
+    {
+      "candidate_id": "fixture-lawrence-print-studio",
+      "score": 80.0,
+      "exclusions": []
+    },
+    {
+      "candidate_id": "fixture-riverfront-lantern-walk",
+      "score": 80.0,
+      "exclusions": []
+    }
+  ],
+  "graph_proposals": [],
+  "review": {
+    "reviewer": "Synthetic test reviewer",
+    "blocking_findings": [],
+    "candidates": {
+      "fixture-riverfront-lantern-walk": [
+        {
+          "id": "audience",
+          "status": "pass",
+          "notes": "Synthetic check"
+        },
+        {
+          "id": "availability",
+          "status": "pass",
+          "notes": "Synthetic check"
+        },
+        {
+          "id": "conflicts",
+          "status": "pass",
+          "notes": "Synthetic check"
+        },
+        {
+          "id": "cost",
+          "status": "pass",
+          "notes": "Synthetic check"
+        },
+        {
+          "id": "identity",
+          "status": "pass",
+          "notes": "Synthetic check"
+        },
+        {
+          "id": "location",
+          "status": "pass",
+          "notes": "Synthetic check"
+        },
+        {
+          "id": "logistics",
+          "status": "pass",
+          "notes": "Synthetic check"
+        },
+        {
+          "id": "provenance",
+          "status": "pass",
+          "notes": "Synthetic check"
+        },
+        {
+          "id": "registration",
+          "status": "pass",
+          "notes": "Synthetic check"
+        },
+        {
+          "id": "schedule",
+          "status": "pass",
+          "notes": "Synthetic check"
+        }
+      ],
+      "fixture-lawrence-print-studio": [
+        {
+          "id": "audience",
+          "status": "pass",
+          "notes": "Synthetic check"
+        },
+        {
+          "id": "availability",
+          "status": "pass",
+          "notes": "Synthetic check"
+        },
+        {
+          "id": "conflicts",
+          "status": "pass",
+          "notes": "Synthetic check"
+        },
+        {
+          "id": "cost",
+          "status": "pass",
+          "notes": "Synthetic check"
+        },
+        {
+          "id": "identity",
+          "status": "pass",
+          "notes": "Synthetic check"
+        },
+        {
+          "id": "location",
+          "status": "pass",
+          "notes": "Synthetic check"
+        },
+        {
+          "id": "logistics",
+          "status": "pass",
+          "notes": "Synthetic check"
+        },
+        {
+          "id": "provenance",
+          "status": "pass",
+          "notes": "Synthetic check"
+        },
+        {
+          "id": "registration",
+          "status": "pass",
+          "notes": "Synthetic check"
+        },
+        {
+          "id": "schedule",
+          "status": "pass",
+          "notes": "Synthetic check"
+        }
+      ]
+    },
+    "digest": "2dfbf8ce35105ba97a6c4aafd8213f931f4ccf0ddf18a79fcb9594657405e311"
+  }
+}
