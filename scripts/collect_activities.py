@@ -7,12 +7,14 @@ import concurrent.futures
 import gzip
 import hashlib
 import html
+import io
 import json
 import re
 import time
 import urllib.error
 import urllib.request
 import urllib.robotparser
+import zlib
 from datetime import date, datetime, time as dt_time, timezone
 from pathlib import Path
 from urllib.parse import urlencode, urljoin, urlsplit, urlunsplit
@@ -24,12 +26,26 @@ from dateutil.parser import isoparse, parse
 from dateutil.relativedelta import relativedelta
 from activity_model import enrich, in_horizon, coverage_matrix
 from place_model import public_places, attach_place
+from calendar_adapters import html_events, visitkc_events, visitkc_api_events
 
 ROOT = Path(__file__).resolve().parents[1]
 TZ = ZoneInfo('America/Chicago')
 AGENT = 'KCActivityFinder/1.0 (+https://github.com/colesteaks/kc-activity-finder)'
 MAX_PAGES = 12
 MAX_BYTES = 6_000_000
+
+
+def response_body(body, encoding=''):
+    """Decode supported HTTP compression before UTF-8, with a decoded size cap."""
+    if encoding.lower() == 'gzip' or body.startswith(b'\x1f\x8b'):
+        body = gzip.GzipFile(fileobj=io.BytesIO(body)).read(MAX_BYTES + 1)
+    elif encoding.lower() == 'deflate':
+        decoder = zlib.decompressobj()
+        body = decoder.decompress(body, MAX_BYTES + 1)
+    elif encoding.lower() not in ('', 'identity'):
+        raise ValueError('Unsupported HTTP content encoding: ' + encoding)
+    if len(body) > MAX_BYTES: raise ValueError('Decoded source response exceeded size limit')
+    return body
 
 
 def clean(value):
@@ -91,13 +107,16 @@ class Fetcher:
                     raise ValueError('Cross-host redirect requires source registry review')
                 body = response.read(MAX_BYTES + 1)
                 if len(body) > MAX_BYTES: raise ValueError('Source response exceeded size limit')
+                body = response_body(body, response.headers.get('Content-Encoding', ''))
                 text = body.decode('utf-8', errors='replace')
+                if '/.well-known/sgcaptcha/' in text or '<title>Just a moment...</title>' in text:
+                    raise ValueError('Access challenge: source needs an offered feed or manual review, not an empty calendar')
                 gzip.open(body_path, 'wb').write(body)
                 meta_path.write_text(json.dumps({'etag': response.headers.get('ETag'), 'modified': response.headers.get('Last-Modified')}))
                 return text
         except urllib.error.HTTPError as e:
             if e.code == 304 and body_path.exists():
-                return gzip.open(body_path, 'rb').read().decode('utf-8', errors='replace')
+                return response_body(gzip.open(body_path, 'rb').read()).decode('utf-8', errors='replace')
             # 403/429 are reported, never bypassed or converted into empty calendars.
             raise
 
@@ -139,8 +158,8 @@ def flight_objects(body):
         except (ValueError, TypeError): continue
 
 
-def structured_events(body, source):
-    result = jsonld_events(body)
+def structured_events(body, source, page=None):
+    result = jsonld_events(body) + html_events(body, source, page or source['url'])
     for obj in flight_objects(body):
         if source['id'] == 'kc-zoo' and obj.get('type') == 'special_event':
             data = obj.get('data', {})
@@ -161,6 +180,8 @@ def structured_events(body, source):
                 '_is_exhibition': bool(obj.get('isExhibition')),
                 'url': urljoin(source['url'], obj.get('href') or '/events/' + obj.get('slug', obj.get('id', ''))),
                 'description': obj.get('description', ''), 'location': {'name': obj.get('location') or source['name']}})
+    if source.get('event_name_suffix'):
+        result=[r for r in result if str(r.get('name','')).casefold().endswith(source['event_name_suffix'].casefold())]
     return result
 
 
@@ -170,7 +191,7 @@ def classify(title, categories=''):
              ('Classes & workshops', r'workshop|\bclass\b|camp|lesson|conference'),
              ('Music & performance', r'concert|music|theat|ballet|comedy|performance|choir'),
              ('Food & markets', r'market|food|dinner|tasting|supper'),
-             ('Festivals & seasonal', r'festival|holiday|christmas|halloween|parade'),
+             ('Festivals & seasonal', r'festival|\bfest\b|matsuri|día.*muertos|holiday|christmas|halloween|parade'),
              ('Arts & museums', r'art|museum|gallery|exhibition|tour|print'),
              ('Nature & animals', r'zoo|animal|nature|garden|penguin|bird'),
              ('Talks & community', r'talk|lecture|book|storytime|community')]
@@ -238,7 +259,8 @@ def normalize(raw, source, observed, page):
             'deadline': None, 'url': link, 'source_id': source['id'], 'source_name': source['name'],
             'source_kind': source['kind'], 'checked_at': observed, 'first_seen': observed,
             'description': clean(raw.get('description'))[:200],
-            'evidence': {'url': page, 'format': source['format'], 'start_as_published': str(start_raw) if start_raw else None},
+            'evidence': {'url': page, 'format': source['format'], 'start_as_published': str(start_raw) if start_raw else None,
+                         'quote': clean(raw.get('_evidence_quote')) or None},
             'stale': False, 'conflicts': [], 'disappeared': False}, raw, source)
 
 
@@ -271,7 +293,19 @@ def collect_source(source, start, until, observed, cache):
         source = dict(source, url=source['month_template'].format(month=start.strftime('%Y-%m')))
     f = Fetcher(cache); records = []; errors = []; visited = []; leads = []; truncated = False
     try:
-        if source['format'] == 'offering':
+        if source['format'] == 'reviewed-capture':
+            body=f.fetch(source['url']);visited.append(source['url'])
+            visible=clean(BeautifulSoup(body,'html.parser').get_text(' ',strip=True))
+            for required in source['required_text']:
+                if required.casefold() not in visible.casefold():raise ValueError('Reviewed source text changed; recapture dates/status before publication: '+required)
+            for raw in source['captures']:
+                raw=dict(raw)
+                raw.setdefault('_categories',source.get('categories'))
+                row=normalize(raw,source,observed,source['url'])
+                if row:
+                    row['evidence']['quote']=' | '.join(source['required_text'])
+                    records.append(row)
+        elif source['format'] == 'offering':
             body = f.fetch(source['url']); visited.append(source['url'])
             soup = BeautifulSoup(body, 'html.parser')
             if not soup.select_one('h1'): raise ValueError('Offering page lacks a recognizable heading; review required')
@@ -279,6 +313,24 @@ def collect_source(source, start, until, observed, cache):
                    '_schedule': source['offering']['schedule'], '_categories': source['offering'].get('categories', source['categories'])}
             row = normalize(raw, source, observed, source['url'])
             if row: records.append(row)
+        elif source['format'] == 'visitkc':
+            previous=None
+            limit=source.get('max_pages',MAX_PAGES)
+            for page in range(1,limit+1):
+                target=source['api_url']+'?'+urlencode({'start_date':start.isoformat(),'end_date':until.isoformat(),'pg':page,'per_page':40,'init_per_page':40})
+                body=f.fetch(target);visited.append(target);data=json.loads(body);items=visitkc_api_events(data,target)
+                signature=tuple((r['url'],r['startDate']) for r in items)
+                if signature and signature==previous:raise ValueError('Calendar ignored pagination; remaining rows uncollected')
+                previous=signature
+                for item in items:
+                    try:
+                        row=normalize(item,source,observed,target)
+                        if row:records.append(row)
+                    except (ValueError,TypeError) as e:errors.append(str(e))
+                soup=BeautifulSoup(data.get('pagination',{}).get('html',''),'html.parser')
+                pages=[int(x['data-pg']) for x in soup.select('[data-pg]') if str(x['data-pg']).isdigit()]
+                if not items or page>=max(pages,default=1):break
+                if page==limit:truncated=True
         elif source['format'] == 'tribe':
             for page in range(1, MAX_PAGES + 1):
                 target = source['url'] + '?' + urlencode({'start_date': start.isoformat(), 'end_date': until.isoformat(), 'per_page': 50, 'page': page})
@@ -297,11 +349,11 @@ def collect_source(source, start, until, observed, cache):
             seen_pages = set(); detail_links = {}
             for entry in entries:
                 next_page = entry
-                for _ in range(MAX_PAGES):
+                for _ in range(source.get('max_pages',MAX_PAGES)):
                     if next_page in seen_pages: break
                     body = f.fetch(next_page); seen_pages.add(next_page); visited.append(next_page)
                     soup = BeautifulSoup(body, 'html.parser')
-                    for event in structured_events(body, source):
+                    for event in structured_events(body, source, next_page):
                         try:
                             row = normalize(event, source, observed, next_page)
                             if row: records.append(row)
@@ -310,18 +362,21 @@ def collect_source(source, start, until, observed, cache):
                         link = urljoin(next_page, a['href']); p = urlsplit(link)
                         if p.hostname == urlsplit(source['url']).hostname and re.search(source['pattern'], p.path):
                             detail_links.setdefault(canonical(link), None)
-                    nxt = soup.select_one('a[rel="next"], a.next.page-numbers')
+                    nxt = soup.select_one('a[rel="next"], a.next.page-numbers, .pager__item--next a, a[data-drupal-views-infinite-scroll-pager]')
                     if not nxt: break
                     candidate = urljoin(next_page, nxt['href'])
                     if urlsplit(candidate).hostname != urlsplit(source['url']).hostname: break
                     next_page = candidate
                 else: truncated = True
+            parsed_urls={canonical(r['url']) for r in records}
+            detail_links={u:v for u,v in detail_links.items() if u not in parsed_urls and u not in {canonical(x) for x in seen_pages}}
             limit = source.get('max_details', 60)
+            if source['format'] in ('library','carbonhouse','squarespace') and limit==0:detail_links={}
             truncated |= len(detail_links) > limit
             for link in list(detail_links)[:limit]:
                 try:
                     body = f.fetch(link); visited.append(link)
-                    items = structured_events(body, source)
+                    items = structured_events(body, source, link)
                     if not items and source['format'] == 'columbia': items = columbia_event(body, link)
                     found = False
                     for item in items:
@@ -334,7 +389,8 @@ def collect_source(source, start, until, observed, cache):
     records = [r for r in records if in_horizon(r, start.isoformat(), until.isoformat())]
     unique = {r['id']: r for r in records}
     return list(unique.values()), {'id': source['id'], 'name': source['name'], 'url': source['url'], 'region': source['region'],
-        'status': 'partial' if errors or leads or truncated else ('checked' if records else 'no-structured-events'),
+        'status': ('discovery-only' if source['format']=='discovery' and not errors else 'partial' if errors or leads or truncated else 'checked' if records else 'no-structured-events'),
+        'format': source['format'], 'captured_count': len(records),
         'checked_at': observed, 'events': len(unique), 'requests': f.requests, 'visited_count': len(visited),
         'errors': errors[:15], 'unparsed_count': len(leads), 'unparsed_leads': leads[:25], 'truncated': truncated,
         'latest_published_date': max((r['date'] for r in records if r['date']), default=None),
@@ -363,12 +419,31 @@ def reconcile(old, fresh, health, now):
             row['sources'] = row.get('sources') or [row['evidence']]; result[key] = row; continue
         kept = result[key]; kept['sources'].append(row['evidence'])
         if kept['status'] != row['status']: kept['conflicts'].append('Source status disagreement')
-    return sorted(result.values(), key=lambda r: (r['start'] or '9999', r['title']))
+    # Date-only area-calendar rows can corroborate one exactly named/located
+    # organizer occurrence; a multi-session day remains ambiguous and separate.
+    rows=list(result.values());removed=set();organizers={}
+    for row in rows:
+        if row['source_kind']=='organizer':organizers.setdefault((norm(row['title']),norm(row['venue'])),[]).append(row)
+    for row in rows:
+        if row['source_kind']!='official-calendar' or row['evidence']['format']!='visitkc' or not row['all_day']:continue
+        matches=[other for other in organizers.get((norm(row['title']),norm(row['venue'])),[])
+                 if other.get('date') and other['date']<=row['date']<=(other.get('end_date') or other['date'])]
+        if len(matches)!=1:continue
+        kept=matches[0]
+        for proof in row.get('sources',[row['evidence']]):
+            if proof not in kept['sources']:kept['sources'].append(proof)
+        if not kept.get('geo') and row.get('geo'):kept['geo']=row['geo']
+        if kept['status']!=row['status']:kept['conflicts'].append('Organizer and area-calendar status disagreement')
+        removed.add(row['id'])
+    return sorted((r for r in rows if r['id'] not in removed), key=lambda r: (r['start'] or '9999', r['title']))
 
 
-def run(registry, output, cache, now=None):
+def run(registry, output, cache, now=None, only=None):
     now = now or datetime.now(TZ); start = now.date(); until = start + relativedelta(months=7)
-    observed = now.isoformat(); sources = json.loads(registry.read_text())['sources']
+    observed = now.isoformat(); all_sources = json.loads(registry.read_text())['sources']
+    selected=set(only or [s['id'] for s in all_sources])
+    if selected-{s['id'] for s in all_sources}:raise ValueError('Unknown selected source')
+    sources=[s for s in all_sources if s['id'] in selected]
     old = json.loads(output.read_text()) if output.exists() else {'activities': []}
     health = []; fresh = []
     with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
@@ -377,13 +452,19 @@ def run(registry, output, cache, now=None):
             rows, status = job.result(); fresh.extend(rows); health.append(status)
             print(status['id'], status['status'], status['events'], flush=True)
     if not any(h['visited_count'] for h in health): raise RuntimeError('All sources failed; preserving previous dataset')
+    if only:
+        # A repair probe must not mark untouched providers stale or erase their health.
+        fresh.extend(r for r in old['activities'] if r['source_id'] not in selected)
+        health_by_id={h['id']:h for h in old.get('sources',[])}
+        health_by_id.update({h['id']:h for h in health})
+        health=[health_by_id[s['id']] for s in all_sources if s['id'] in health_by_id]
     result = {'version': 1, 'updated_at': observed, 'horizon_start': start.isoformat(), 'horizon_end': until.isoformat(),
               'timezone': 'America/Chicago', 'collection_mode': 'deterministic-no-llm', 'sources': health,
               'activities': reconcile(old['activities'], fresh, health, now)}
     taxonomy = json.loads((ROOT / 'data/activity-taxonomy.json').read_text())
     result['taxonomy'] = taxonomy
     result['places'] = public_places()
-    result['coverage_matrix'] = coverage_matrix(sources, taxonomy, health)
+    result['coverage_matrix'] = coverage_matrix(all_sources, taxonomy, health)
     output.parent.mkdir(parents=True, exist_ok=True)
     temp = output.with_suffix('.tmp'); temp.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n'); temp.replace(output)
     return result
@@ -394,5 +475,6 @@ if __name__ == '__main__':
     p.add_argument('--sources', type=Path, default=ROOT / 'data/collection-sources.json')
     p.add_argument('--out', type=Path, default=ROOT / 'web/activities.json')
     p.add_argument('--cache', type=Path, default=ROOT / '.collector-cache')
-    a = p.parse_args(); result = run(a.sources, a.out, a.cache)
+    p.add_argument('--only', action='append', help='Refresh one approved source; repeat to select more. Untouched sources are preserved.')
+    a = p.parse_args(); result = run(a.sources, a.out, a.cache, only=a.only)
     print(f"Saved {len(result['activities'])} activities; horizon ends {result['horizon_end']}")

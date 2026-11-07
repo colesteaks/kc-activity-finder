@@ -13,6 +13,7 @@ from collections import Counter
 from datetime import date, timedelta
 from pathlib import Path
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
+from check_recall import compare
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -110,6 +111,12 @@ def build(root=ROOT, today=None):
         if not hours or age > 21:
             place_health.append({'id':place['id'], 'url':hours['source_url'] if hours else place['source_url'],
                                  'reason':'Missing verified hours' if not hours else 'Hours approaching the 30-day freshness limit'})
+    benchmarks=sorted((root/'data/recall-benchmarks').glob('*.json')) if (root/'data/recall-benchmarks').exists() else []
+    recall=None
+    if benchmarks:
+        benchmark=load(benchmarks[-1]);recall=compare(public,benchmark)
+        recall['needs_new_weekend_benchmark']=benchmark['window']['end']<today.isoformat()
+        recall['results']=[r for r in recall['results'] if r['status']=='gap']
     return {'version':1,'as_of':today.isoformat(),'repository':policy['repository'],'budgets':policy['budgets'],
         'baseline':{'routes':len(registry),'records':len(public['activities']),
             'unique_offerings':len({a.get('offering_id',a['id']) for a in public['activities']}),
@@ -120,6 +127,7 @@ def build(root=ROOT, today=None):
             'unmapped_offerings':len({a.get('offering_id',a['id']) for a in public['activities'] if not a.get('geo')}),
             'unreviewed_proposals':len(scored)},
         'candidates':selected,'gap_searches':searches,'repair_candidates':repairs,'place_maintenance':place_health[:6],
+        'weekend_recall':recall,
         'publication_policy':policy['publication']}
 
 

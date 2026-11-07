@@ -30,7 +30,25 @@ Evidence: https://example.test/arts-campus/trail-photo-workshop (observed 2030-0
 
 ## Coverage ledger
 
-- {"node_id": "kc-daily", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/seed"], "notes": "Synthetic sweep only"}
+- {"node_id": "kc-daily", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "kc-zoo", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "kc-library", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "science-city", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "visitkc", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "tmobile", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "midland", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "truman", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "downtown-ls", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "kcopera", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "kc-pet-fest", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "central-avenue-dia", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "troost-united", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "mavericks", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "independence-japan", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "dfscon", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "kc-convention", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "crossroads-flea", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "ls-mistletoe", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
 
 ## Broader search coverage
 

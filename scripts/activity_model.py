@@ -65,8 +65,9 @@ def enrich(row, raw=None, source=None):
         ('volunteering', r'\bvolunteer\b'), ('games_hobbies', r'\bboard game|\bchess\b'),
         ('fitness_wellness', r'\byoga\b|\bworkout\b|\bfitness\b'),
         ('markets_shopping', r'\bmarket\b'), ('science_technology', r'\brobot|\bplanetarium|\bscience\b')) if re.search(pattern, text)]
-    row['categories'] = raw.get('_categories') or (source.get('categories') if source.get('offering') else None) or subjects or [fallback.get(row['type'], 'community_social')]
-    row['category_inferred'] = not bool(raw.get('_categories'))
+    supplied_categories = raw.get('_categories') or (source.get('categories') if source.get('offering') else None)
+    row['categories'] = list(dict.fromkeys(supplied_categories + subjects)) if supplied_categories else subjects or [fallback.get(row['type'], 'community_social')]
+    row['category_inferred'] = not bool(raw.get('_categories')) or any(c not in (supplied_categories or []) for c in subjects)
     row['schedule'] = schedule_model(raw, row.get('start'), row.get('end'))
     if source.get('offering'):
         row['schedule'] = schedule_model({'_schedule': source['offering']['schedule']}, row.get('start'), row.get('end'))

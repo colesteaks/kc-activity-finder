@@ -942,3 +942,12 @@ footer > a:last-child {
     600 13px/34px "DM Sans",
     sans-serif;
 }
+.coverage-note {
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--muted);
+  padding: 12px 15px;
+  background: var(--light);
+  border-radius: 5px;
+  margin: 14px 0;
+}

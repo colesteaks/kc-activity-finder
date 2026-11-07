@@ -17,11 +17,15 @@ on:
       - 'scripts/validate_public_data.py'
       - 'scripts/activity_model.py'
       - 'scripts/place_model.py'
+      - 'scripts/calendar_adapters.py'
+      - 'scripts/newsletter_sources.py'
+      - 'scripts/check_recall.py'
       - 'data/activity-taxonomy.json'
       - 'data/places.json'
       - 'schemas/activity.schema.json'
       - 'schemas/place.schema.json'
       - 'data/collection-sources.json'
+      - 'data/kc-daily-source-map.json'
       - 'requirements-collector.txt'
       - '.github/workflows/activities.yml'
       - 'tests/test_collector.py'
@@ -29,6 +33,7 @@ on:
       - 'tests/test_activity_model.py'
       - 'tests/test_place_model.py'
       - 'tests/test_places.mjs'
+      - 'tests/test_recall.py'
 permissions:
   contents: read
 concurrency:

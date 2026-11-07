@@ -105,3 +105,49 @@ test("unknown season end is not replaced by first session date", () => {
     true,
   );
 });
+
+test("repeated dates are grouped without destroying the matching inventory", async () => {
+  const { distinctOfferings } = await import("../web/filters.mjs");
+  const rows = [
+    { id: "one", offering_id: "exhibit", date: "2026-11-07" },
+    { id: "two", offering_id: "exhibit", date: "2026-11-08" },
+    { id: "three", offering_id: "concert", date: "2026-11-08" },
+  ];
+  const cards = distinctOfferings(rows);
+  assert.equal(cards.length, 2);
+  assert.deepEqual(cards[0].matching_dates, ["2026-11-07", "2026-11-08"]);
+  assert.equal(rows.length, 3);
+});
+test("menu advertising stays in inventory but is optional in the activity browser", async () => {
+  const { isPromotion } = await import("../web/filters.mjs");
+  assert.equal(
+    isPromotion({ title: "Autumn Salads – Back at Minsky’s!" }),
+    true,
+  );
+  assert.equal(
+    matches({ ...a, title: "Happy Hour Refresh at North Italia" }, f),
+    false,
+  );
+  assert.equal(
+    matches(
+      { ...a, title: "Happy Hour Refresh at North Italia" },
+      { ...f, include_offers: true },
+    ),
+    true,
+  );
+  assert.equal(isPromotion({ title: "Pottery happy hour workshop" }), false);
+});
+test("source coverage counts gaps rather than calling every route checked", async () => {
+  const { coverageStatus } = await import("../web/filters.mjs");
+  assert.deepEqual(
+    coverageStatus(
+      [
+        { region: "KC", events: 10, status: "checked" },
+        { region: "KC", events: 0, status: "partial" },
+        { region: "Lawrence", events: 4, status: "checked" },
+      ],
+      "KC",
+    ),
+    { routes: 2, contributing: 1, gaps: 1 },
+  );
+});

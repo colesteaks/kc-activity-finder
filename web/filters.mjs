@@ -21,6 +21,7 @@ export function windowDates(kind, today = chicagoToday()) {
   return { from: today, to: "" };
 }
 export function matches(a, f, places = []) {
+  if (!f.include_offers && isPromotion(a)) return false;
   if (
     f.amenity &&
     !persistentActivities(a, places).some((x) => x.id === f.amenity)
@@ -73,6 +74,45 @@ export function matches(a, f, places = []) {
       return false;
   }
   return true;
+}
+export function isPromotion(a) {
+  const title = a.title || "";
+  if (
+    /workshop|class|tasting|live music|concert|pottery|tour|festival/i.test(
+      title,
+    )
+  )
+    return false;
+  return /happy hour refresh|half.price happy hour|new .+ drinks|back at minsky|is back at minsky/i.test(
+    title,
+  );
+}
+export function distinctOfferings(rows) {
+  const grouped = new Map();
+  for (const row of rows) {
+    const id = row.offering_id || row.id;
+    if (!grouped.has(id)) grouped.set(id, []);
+    grouped.get(id).push(row);
+  }
+  return [...grouped.values()].map((group) => ({
+    ...group[0],
+    matching_dates: [
+      ...new Set(
+        group
+          .filter((r) => !r.end_date || r.end_date === r.date)
+          .map((r) => r.date)
+          .filter(Boolean),
+      ),
+    ].sort(),
+  }));
+}
+export function coverageStatus(sources, region = "") {
+  const scoped = sources.filter((s) => !region || s.region === region);
+  return {
+    routes: scoped.length,
+    contributing: scoped.filter((s) => s.events > 0).length,
+    gaps: scoped.filter((s) => s.status !== "checked").length,
+  };
 }
 export function sortedActivities(rows, sort) {
   return [...rows].sort((a, b) =>

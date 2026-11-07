@@ -4,3 +4,4 @@ __pycache__/
 .collector-cache/
 dist/
 .venv/
+data/*.partial.json

@@ -14,8 +14,9 @@ def ready(mode='weekend'):
     graph = load(ROOT / 'data/source-graph.json')
     run = initialize(load(ROOT / f'examples/{mode}-request.json'), graph, True)
     run['candidates'] = load(ROOT / f'examples/{mode}-candidates.json')['candidates']
-    run['coverage'][0].update(status='checked', observed_at=run['request']['as_of'],
-                              visited_urls=['https://example.test/seed'], notes='Synthetic sweep only')
+    for coverage in run['coverage']:
+        coverage.update(status='checked', observed_at=run['request']['as_of'],
+                        visited_urls=['https://example.test/synthetic-route'], notes='Synthetic sweep only; not a claim of live visits')
     run['searches'] = [{'region': region, 'query': 'Fictional search', 'outcome': 'Synthetic fixture; no live search',
                         'observed_at': run['request']['as_of']} for region in
                        ['Kansas City metro', 'Lawrence', 'Columbia', 'Bentonville', 'surrounding areas']]

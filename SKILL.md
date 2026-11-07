@@ -5,7 +5,7 @@ license: MIT
 compatibility: Requires Python 3.11+ and jsonschema for executable helpers. Live research needs host-provided browsing; verified drive limits need routing evidence. Collector dependencies are optional. No API keys are required by the core skill.
 metadata:
   author: colesteaks
-  version: "1.0.1"
+  version: "1.1.0"
   repository: https://github.com/colesteaks/kc-activity-finder
 ---
 
@@ -37,7 +37,7 @@ The command-backed sequence below applies to weekend and signup event ledgers. D
 5. **Deduplication and merging:** execute `merge`. Review near-duplicates manually. Exact occurrence merges preserve originals and discovery channels. Conflicting material values block selection until resolved; preserve the original evidence and document resolution.
 6. **Fit ranking:** execute `fit-based-ranking`. Apply the outing’s age, interest, region, movement, budget and travel choices to the complete inventory. Never narrow research to ages 0–5. Offer separate adults-only, children and family views when useful. No popularity or sponsorship bonus.
 7. **Adversarial review:** reopen official shortlisted pages and attempt to disprove each recommendation. Check identity, schedule/year, location, availability, audience, cost, registration, conflicts, logistics and provenance. Record a named reviewer and notes for each check. Resolve blocking findings. Execute `adversarial-review`; subsequent content changes invalidate the review.
-8. **Final recommendations:** execute `report`. Lead with coverage limits, then picks, exact status and deadlines, fit, friction, source links/timestamps, full inventory, exclusions, source-health ledger, broader-search outcomes and proposed graph additions. Do not claim completeness from a one-seed graph or from a missing ledger.
+8. **Final recommendations:** execute `report`. Lead with coverage limits, then picks, exact status and deadlines, fit, friction, source links/timestamps, full inventory, exclusions, source-health ledger, broader-search outcomes and proposed graph additions. Do not claim completeness from the graph size or from a missing ledger.
 
 ## Scope and decisions
 
@@ -47,6 +47,8 @@ Default to broad discovery. Ask or infer from explicit context whether the outin
 
 Discovery-first requests should lead with distinctive and newly found options and show practical backups separately. Fit-first requests should optimize the stated outing. Do not let convenience eliminate interesting candidates during collection. Return fewer verified picks when evidence is insufficient rather than padding the shortlist.
 
+For a weekend sweep or a recall complaint, compare the inventory against the actual current KC Daily weekend edition and independent listicles, then reverse-engineer their producer/venue links. Use [recall maintenance](references/recall-and-newsletters.md) and `scripts/check_recall.py`. Preserve the complete inventory, but keep menu advertising out of default activity suggestions and do not count repeated dates as separate discoveries. A calendar route, a large record count or a passing sample benchmark cannot establish completeness.
+
 ## Execution boundary
 
-The engine is executable and testable, but browsing and judgment remain host responsibilities. A stage attestation cannot prove that live research happened. Never present synthetic fixtures or unvisited URLs as researched events. The current source graph is sparse; expand it through observed relationships and disclose gaps.
+The engine is executable and testable, but browsing and judgment remain host responsibilities. A stage attestation cannot prove that live research happened. Never present synthetic fixtures or unvisited URLs as researched events. The source graph is a reviewed starting network; expand it through observed relationships and disclose the remaining coverage gaps.

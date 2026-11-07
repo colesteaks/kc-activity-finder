@@ -2,6 +2,12 @@
 
 Releases follow Semantic Versioning for the skill instructions, executable contracts and helpers. Daily activity observations are timestamped data, not new software releases.
 
+## [1.1.0] - 2026-11-07
+
+- Repair KC weekend recall through full public KC Daily archive/source-link extraction, current-issue discovery, independent roundup benchmarks and a weekly recall check.
+- Add Visit KC's dated public API and map markers, library Load More pagination, venue/opera/Squarespace adapters and guarded first-party event captures. Preserve untouched sources during selected refreshes.
+- Decode compressed HTTP correctly, report access challenges, group repeated dates, make menu promotions optional and show actual coverage gaps beside results.
+
 ## [1.0.1] - 2026-11-07
 
 ### Fixed

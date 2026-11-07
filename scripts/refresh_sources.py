@@ -14,6 +14,7 @@ from urllib.parse import urljoin, urlsplit
 from bs4 import BeautifulSoup
 from collect_activities import ROOT, TZ, Fetcher, safe_url, canonical
 from activity_model import coverage_matrix
+from newsletter_sources import archive_page, issue_record, discovery_kind
 
 
 def add_place_leaves(graph, root=ROOT):
@@ -42,16 +43,28 @@ def refresh(root=ROOT):
     previous_path = root / 'data/source-proposals.json'
     previous = json.loads(previous_path.read_text()) if previous_path.exists() else {'proposals': []}
     proposals = {x['url']: x for x in previous['proposals']}
+    history_path=root/'data/kc-daily-source-map.json'
+    history=json.loads(history_path.read_text()) if history_path.exists() else None
+    if history:
+        for target in history['targets']:
+            if target.get('discovery_kind') in ('media-sensor','advertising-or-subscription','map-or-location-lead'):continue
+            if not any(k in (target['label']+' '+target['url']).lower() for k in ('event','calendar','ticket','register','festival','museum','race','class','camp','concert','park','trail','league','season','exhibit','program','volunteer','market','theat','music','family','opera','flea')):continue
+            url=canonical(target['url'])
+            proposals.setdefault(url,{'url':url,'label':target['label'],'discovered_on':target.get('latest_issue') or target['example_issues'][0],
+                'first_seen':history['checked_at'],'last_seen':history['checked_at'],'status':'unreviewed',
+                'discovery_kind':target.get('discovery_kind'),'newsletter_published_at':target.get('latest_published_at')})
     approved = {urlsplit(s['url']).hostname for s in registry}
     graph = {'version': 1, 'generated_at': now, 'seed_sha256': original['seed_material']['sha256'],
              'authority': 'data/source-graph.json', 'approved_registry': 'data/collection-sources.json',
              'nodes': [], 'edges': [], 'discovery_health': []}
+    if history:graph['newsletter_source_map']={'path':'data/kc-daily-source-map.json','summary':history['summary'],'archive':history['archive']}
     for source in registry:
         if source.get('month_template'):
             source = dict(source, url=source['month_template'].format(month=now[:7]))
         graph['nodes'].append({'id': source['id'], 'label': source['name'], 'url': source['url'],
             'role': source['kind'], 'region': source['region'], 'categories': source.get('categories', []),
             'activity_kinds': source.get('activity_kinds', []), 'required_leaves': source.get('required_leaves', []),
+            'discovery_evidence': source.get('discovery_evidence', []),
             'provenance': 'provided-seed' if source['id'] == 'kc-daily' else 'reviewed-supplement'})
         fetcher = Fetcher(root / '.collector-cache' / source['id'])
         try:
@@ -59,13 +72,26 @@ def refresh(root=ROOT):
             if source['format'] == 'tribe': continue
             page = fetcher.fetch(source['url']); pages = [(source['url'], page)]
             if source['id'] == 'kc-daily':
-                soup = BeautifulSoup(page, 'html.parser')
-                issues = list(dict.fromkeys(urljoin(source['url'], a['href']) for a in soup.select('a[href]')
-                    if '/p/' in a['href'] and urlsplit(urljoin(source['url'], a['href'])).hostname == urlsplit(source['url']).hostname))[:4]
+                # Latest archive pages include the weekend edition; homepage featured
+                # guides must never crowd recent newsletters out of the frontier.
+                issues={};archive_url=urljoin(source['url'],'/archive')
+                for _ in range(2):
+                    if not archive_url:break
+                    archive_body=fetcher.fetch(archive_url);pages.append((archive_url,archive_body))
+                    found,archive_url=archive_page(archive_body,archive_url);issues.update(found)
                 for issue in issues:
                     try: pages.append((issue, fetcher.fetch(issue)))
                     except Exception as e: graph['discovery_health'].append({'url': issue, 'error': str(e)})
             for page_url, body in pages:
+                if source['id']=='kc-daily' and urlsplit(page_url).path.startswith('/p/'):
+                    newsletter=issue_record(body,page_url)
+                    for item in newsletter['links']:
+                        target=canonical(item['url']);host=urlsplit(target).hostname or ''
+                        proposals.setdefault(target,{'url':target,'label':item['label'],'discovered_on':page_url,
+                            'first_seen':now,'status':'unreviewed','discovery_kind':discovery_kind(host,item['label']),
+                            'newsletter_published_at':newsletter.get('published_at')})
+                        proposals[target]['last_seen']=now
+                        graph['edges'].append({'from':source['id'],'to_url':target,'relationship':'unreviewed-newsletter-link','observed_on':page_url})
                 soup = BeautifulSoup(body, 'html.parser')
                 for alternate in soup.select('link[rel="alternate"][href], a[href]'):
                     target = safe_url(urljoin(page_url, alternate['href']))

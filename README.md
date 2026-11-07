@@ -4,19 +4,21 @@ An executable, evidence-first activity research skill for Kansas City metro, Law
 
 ## Install the public skill
 
-The skill uses the portable [Agent Skills format](https://agentskills.io/specification) and is MIT licensed. Install the **v1.0.1** release in a compatible agent:
+The skill uses the portable [Agent Skills format](https://agentskills.io/specification) and is MIT licensed. Install the **v1.1.0** release in a compatible agent:
 
 ```sh
-npx skills@latest add https://github.com/colesteaks/kc-activity-finder/tree/v1.0.1 --skill kc-activity-finder
+npx skills@latest add https://github.com/colesteaks/kc-activity-finder/tree/v1.1.0 --skill kc-activity-finder
 ```
 
-[Download v1.0.1](https://github.com/colesteaks/kc-activity-finder/releases/tag/v1.0.1) · [Installation and versioning](references/installation.md) · [Changelog](CHANGELOG.md) · [License](LICENSE). Releases include a self-contained ZIP, exact-commit/per-file manifest and SHA-256 checksums. Live activity facts still require current research; versioning pins the skill, not event availability.
+[Download v1.1.0](https://github.com/colesteaks/kc-activity-finder/releases/tag/v1.1.0) · [Installation and versioning](references/installation.md) · [Changelog](CHANGELOG.md) · [License](LICENSE). Releases include a self-contained ZIP, exact-commit/per-file manifest and SHA-256 checksums. Live activity facts still require current research; versioning pins the skill, not event availability.
 
 **Hosted activity browser:** `web/` is a static GitHub Pages site with age, location, type and date filters. Daily GitHub Actions collect seven months ahead into `web/activities.json`, without any LLM calls. See [hosting and collection](references/hosting-and-collection.md) for scheduling, source expansion, costs and maintenance.
 
 **Ongoing places and map:** parks and permanent attractions have separate hours, seasonal rules and amenities. The optional Leaflet map shares the list filters, groups co-located activities, supports searching the visible area, and links to activity details. [Place and map maintenance](references/places-and-map.md) explains provenance, missing coordinates and tile hosting.
 
 Activities now have a [show page](web/activity.html) reached from each card, and a [schedule-aware model](references/activity-model-and-coverage.md) for outdoor offerings, seasons, exhibits, courses, camps and recurring programs. The graph audits 22 subjects across five regions and distinguishes reviewed routes from actual collected category/format coverage.
+
+**Recall maintenance:** [Newsletter/source audits and dated roundup benchmarks](references/recall-and-newsletters.md) keep discovery accountable. The full public KC Daily archive was traced to its outbound sources; daily discovery reads current archive issues, while weekly maintenance checks missed anchors and repairs calendar adapters.
 
 **Discover broadly. Filter later.** Collect adult-only events, kids’ activities, family outings, active experiences, arts, performances, classes, races, seasonal events and niche discoveries. Preserve closed, full, canceled and unresolved records. Build separate recommendations for different outings from that inventory.
 
@@ -71,7 +73,7 @@ Stage commands attest to human/agent research; they do not perform it. The engin
 
 The existing repository preserves the supplied source artifact at [data/primary-sources.txt](data/primary-sources.txt). Its exact bytes are `KC daily`; the graph resolves this to KC Daily. The SHA-256 is checked on every run. It is a discovery sensor, not first-party confirmation. We preserve the seed rather than inventing a larger original file.
 
-**The maintained graph currently contains one seed.** Regional coverage depends on descending to official producer pages and explicitly recorded broader searches. This is not yet a mature, comprehensive source registry. Report that limitation. Add observed official routes with relationship evidence through [the maintenance process](references/updating-sources.md); never relabel supplements as supplied seeds or fabricate historical verification dates.
+**The graph preserves one supplied seed and now includes 18 reviewed first-party supplement nodes.** The collector has additional approved routes, and the newsletter history retains unreviewed provider leads. Regional coverage still requires deep producer-page sweeps and broader searches; route counts and successful sample benchmarks do not establish completeness. Add observed official routes with relationship evidence through [the maintenance process](references/updating-sources.md); never relabel supplements as supplied seeds or fabricate historical verification dates.
 
 ## Filtering and ranking
 

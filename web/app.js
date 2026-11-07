@@ -8,7 +8,9 @@ import {
   matches,
   sortedActivities,
   safeLink,
-} from "./filters.mjs";
+  distinctOfferings,
+  coverageStatus,
+} from "./filters.mjs?v=1.1.0";
 const $ = (id) => document.getElementById(id);
 let data,
   visible = 30;
@@ -31,6 +33,7 @@ const form = $("filters"),
     to: $("date-to"),
     unknown_ages: $("unknown-ages"),
     unavailable: $("include-unavailable"),
+    include_offers: $("include-offers"),
   };
 const day = new Intl.DateTimeFormat("en-US", {
     timeZone: "America/Chicago",
@@ -107,6 +110,14 @@ function card(a) {
   const tags = el("div", "", "card-meta");
   tags.append(el("span", a.ages.label, "tag"));
   if (a.schedule) tags.append(el("span", KIND_LABELS[a.schedule.kind], "tag"));
+  if (a.matching_dates?.length > 1)
+    tags.append(
+      el("span", `${a.matching_dates.length} dates in this range`, "tag"),
+    );
+  if (a.source_kind === "official-calendar")
+    tags.append(el("span", "Area calendar listing", "tag"));
+  if (a.evidence?.format === "visitkc")
+    tags.append(el("span", "Confirm time & availability", "tag"));
   if (a.status !== "scheduled")
     tags.append(el("span", a.status, "tag warning"));
   if (a.stale || Date.now() - new Date(a.checked_at) > 72 * 3600e3)
@@ -161,7 +172,7 @@ function render() {
   for (const [k, v] of Object.entries(f)) {
     if (k === "unknown_ages" || k === "undated") {
       if (!v) params.set(k, "0");
-    } else if (k === "unavailable") {
+    } else if (k === "unavailable" || k === "include_offers") {
       if (v) params.set(k, "1");
     } else if (v) params.set(k, v);
   }
@@ -195,16 +206,21 @@ function render() {
         ),
         $("sort").value,
       );
+  const offerings = distinctOfferings(rows);
   $("result-count").textContent =
-    `${rows.length.toLocaleString()} ${rows.length === 1 ? "good idea" : "good ideas"}`;
-  $("results").replaceChildren(...rows.slice(0, visible).map(card));
+    `${offerings.length.toLocaleString()} ${offerings.length === 1 ? "activity" : "activities"}`;
+  $("results").replaceChildren(...offerings.slice(0, visible).map(card));
+  const status = coverageStatus(data.sources, f.location);
+  $("coverage-note").hidden = false;
+  $("coverage-note").textContent =
+    `Coverage is partial${f.location ? " for " + f.location : ""}. ${status.contributing} source calendars contributed listings; ${status.gaps} routes have gaps or collection notes. Repeated dates are grouped. This list is not a complete or personally ranked weekend guide.`;
   $("message").hidden = rows.length > 0;
   $("message").textContent = invalid
     ? "The start of a range needs to come before its end."
     : data.activities.length
       ? "Nothing matches just yet. Try a wider date range, another location, or include unspecified ages."
       : "No dated activities have been collected yet. See source coverage below.";
-  $("more").hidden = rows.length <= visible;
+  $("more").hidden = offerings.length <= visible;
   $("map-panel").hidden = !mapView;
   $("view-list").setAttribute("aria-pressed", String(!mapView));
   $("view-map").setAttribute("aria-pressed", String(mapView));
@@ -235,7 +251,7 @@ function render() {
 function coverage() {
   const gaps = data.sources.filter((s) => s.status !== "checked").length;
   $("coverage-summary").textContent =
-    `${data.sources.length} sources checked · ${gaps} with gaps or collection notes`;
+    `${data.sources.length} source routes · ${gaps} with gaps or collection notes`;
   $("horizon").textContent =
     `Collection window: ${data.horizon_start} through ${data.horizon_end} (seven calendar months). This is the search horizon, not a promise of events every month.`;
   for (const s of data.sources) {
@@ -410,7 +426,7 @@ async function start() {
     if (params.has("sort")) $("sort").value = params.get("sort");
     const hours = (Date.now() - new Date(data.updated_at)) / 36e5;
     $("freshness").textContent =
-      `${data.activities.length.toLocaleString()} activities · Updated ${day.format(new Date(data.updated_at))} · ${hours > 72 ? "Collection needs a fresh check" : "Scheduled daily"}`;
+      `${new Set(data.activities.map((a) => a.offering_id || a.id)).size.toLocaleString()} distinct activities · Updated ${day.format(new Date(data.updated_at))} · ${hours > 72 ? "Collection needs a fresh check" : "Scheduled daily"}`;
     coverage();
     if (data.coverage_matrix) {
       const matrix = data.coverage_matrix.category_by_region;

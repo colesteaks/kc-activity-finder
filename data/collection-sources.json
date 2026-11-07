@@ -229,10 +229,10 @@
       "region": "Kansas City metro",
       "city": "Kansas City",
       "kind": "organizer",
-      "format": "jsonld",
-      "url": "https://kclibrary.org/events",
-      "pattern": "/events/[^/?]+",
-      "max_details": 60,
+      "format": "library",
+      "url": "https://kclibrary.org/calendar",
+      "pattern": "/(calendar|events)/[^/?]+",
+      "max_details": 0,
       "categories": [
         "libraries_learning",
         "film_literature",
@@ -249,7 +249,8 @@
         "registration and deadlines",
         "season schedule or exhibit run",
         "hours and closures"
-      ]
+      ],
+      "max_pages": 120
     },
     {
       "id": "kc-parks",
@@ -932,6 +933,607 @@
         "season schedule or exhibit run",
         "opening hours closures and exceptions",
         "registration deadline and participation commitment"
+      ]
+    },
+    {
+      "id": "visitkc",
+      "name": "Visit KC events",
+      "url": "https://www.visitkc.com/events/",
+      "region": "Kansas City metro",
+      "city": "Kansas City",
+      "format": "visitkc",
+      "pattern": "/events/[^/?]+",
+      "max_details": 0,
+      "kind": "official-calendar",
+      "categories": [
+        "community_social",
+        "music_performance",
+        "arts_exhibits",
+        "festivals_seasonal",
+        "sports_spectating",
+        "outdoor_recreation",
+        "markets_shopping"
+      ],
+      "activity_kinds": [
+        "one_off",
+        "multi_day",
+        "recurring_program"
+      ],
+      "reviewed_at": "2026-11-07",
+      "required_leaves": [
+        "all events and pagination",
+        "official schedule and booking",
+        "opening hours and exceptions"
+      ],
+      "discovery_evidence": [
+        {
+          "url": "https://www.kcdaily.com/p/what-s-your-halloween-costume",
+          "target_url": "https://www.visitkc.com/",
+          "relationship": "newsletter-linked provider; calendar inspected on 2026-11-07"
+        }
+      ],
+      "page_template": "https://www.visitkc.com/events/page/{page}/",
+      "max_pages": 120,
+      "api_url": "https://www.visitkc.com/wp-json/vkc/v1/events"
+    },
+    {
+      "id": "tmobile",
+      "name": "T-Mobile Center",
+      "url": "https://www.t-mobilecenter.com/events",
+      "region": "Kansas City metro",
+      "city": "Kansas City",
+      "format": "jsonld",
+      "pattern": "/events/detail/[^/]+",
+      "max_details": 90,
+      "kind": "organizer",
+      "categories": [
+        "music_performance",
+        "sports_spectating",
+        "festivals_seasonal"
+      ],
+      "activity_kinds": [
+        "one_off",
+        "multi_day",
+        "recurring_program"
+      ],
+      "reviewed_at": "2026-11-07",
+      "required_leaves": [
+        "all events and pagination",
+        "official schedule and booking",
+        "opening hours and exceptions"
+      ],
+      "discovery_evidence": [
+        {
+          "url": "https://www.kcdaily.com/p/weekend-roundup",
+          "relationship": "newsletter-linked provider; source reviewed on 2026-11-07"
+        }
+      ]
+    },
+    {
+      "id": "midland",
+      "name": "The Midland",
+      "url": "https://www.midlandkc.com/events/all",
+      "region": "Kansas City metro",
+      "city": "Kansas City",
+      "format": "carbonhouse",
+      "pattern": "/events/detail/[^/]+",
+      "max_details": 0,
+      "kind": "organizer",
+      "categories": [
+        "music_performance",
+        "community_social"
+      ],
+      "activity_kinds": [
+        "one_off",
+        "multi_day",
+        "recurring_program"
+      ],
+      "reviewed_at": "2026-11-07",
+      "required_leaves": [
+        "all events and pagination",
+        "official schedule and booking",
+        "opening hours and exceptions"
+      ],
+      "discovery_evidence": [
+        {
+          "url": "https://www.kcdaily.com/p/memorial-day-memories",
+          "target_url": "https://www.midlandkc.com/events/detail/1360449",
+          "relationship": "newsletter-linked provider; calendar inspected on 2026-11-07"
+        }
+      ]
+    },
+    {
+      "id": "truman",
+      "name": "The Truman",
+      "url": "https://www.thetrumankc.com/events",
+      "region": "Kansas City metro",
+      "city": "Kansas City",
+      "format": "carbonhouse",
+      "pattern": "/events/detail/[^/]+",
+      "max_details": 0,
+      "kind": "organizer",
+      "categories": [
+        "music_performance",
+        "community_social"
+      ],
+      "activity_kinds": [
+        "one_off",
+        "multi_day",
+        "recurring_program"
+      ],
+      "reviewed_at": "2026-11-07",
+      "required_leaves": [
+        "all events and pagination",
+        "official schedule and booking",
+        "opening hours and exceptions"
+      ],
+      "discovery_evidence": [
+        {
+          "url": "https://www.kcdaily.com/p/august-rush-3c6616e6fe84a100",
+          "target_url": "https://www.thetrumankc.com/events/detail/1023317",
+          "relationship": "newsletter-linked provider; calendar inspected on 2026-11-07"
+        }
+      ]
+    },
+    {
+      "id": "downtown-ls",
+      "name": "Downtown Lee\u2019s Summit",
+      "url": "https://downtownls.org/wp-json/tribe/events/v1/events",
+      "region": "Kansas City metro",
+      "city": "Lee's Summit",
+      "format": "tribe",
+      "pattern": "/event/[^/]+",
+      "max_details": 0,
+      "kind": "organizer",
+      "categories": [
+        "festivals_seasonal",
+        "markets_shopping",
+        "community_social"
+      ],
+      "activity_kinds": [
+        "one_off",
+        "multi_day",
+        "recurring_program"
+      ],
+      "reviewed_at": "2026-11-07",
+      "required_leaves": [
+        "all events and pagination",
+        "official schedule and booking",
+        "opening hours and exceptions"
+      ],
+      "discovery_evidence": [
+        {
+          "url": "https://www.kcdaily.com/p/weekend-roundup",
+          "relationship": "newsletter-linked provider; source reviewed on 2026-11-07"
+        }
+      ]
+    },
+    {
+      "id": "kcopera",
+      "name": "Lyric Opera of Kansas City",
+      "url": "https://kcopera.org/event/the-marriage-of-figaro/",
+      "region": "Kansas City metro",
+      "city": "Kansas City",
+      "format": "opera",
+      "pattern": "/event/[^/]+",
+      "max_details": 40,
+      "kind": "organizer",
+      "categories": [
+        "music_performance",
+        "arts_exhibits"
+      ],
+      "activity_kinds": [
+        "one_off",
+        "multi_day",
+        "recurring_program"
+      ],
+      "reviewed_at": "2026-11-07",
+      "required_leaves": [
+        "all events and pagination",
+        "official schedule and booking",
+        "opening hours and exceptions"
+      ],
+      "discovery_evidence": [
+        {
+          "url": "https://www.kcdaily.com/p/weekend-roundup",
+          "relationship": "newsletter-linked provider; source reviewed on 2026-11-07"
+        }
+      ]
+    },
+    {
+      "id": "kc-pet-fest",
+      "name": "KC Pet Fest",
+      "url": "https://www.kcpetfest.com/",
+      "city": "Kansas City",
+      "categories": [
+        "nature_animals",
+        "festivals_seasonal",
+        "play_attractions"
+      ],
+      "required_text": [
+        "November 6th (4 pm- 8 pm) & 7th (9 am - 8 pm)",
+        "2026 KC Pet Fest Activities"
+      ],
+      "captures": [
+        {
+          "name": "KC Pet Fest",
+          "startDate": "2026-11-07T09:00:00-06:00",
+          "endDate": "2026-11-07T20:00:00-06:00",
+          "location": {
+            "name": "American Royal, Hale Arena"
+          },
+          "description": "Pet festival with rescue organizations, demonstrations, interactive activities and vendors. Ticket/admission policies are on the organizer page."
+        }
+      ],
+      "region": "Kansas City metro",
+      "kind": "organizer",
+      "format": "reviewed-capture",
+      "pattern": "/",
+      "max_details": 0,
+      "activity_kinds": [
+        "one_off"
+      ],
+      "reviewed_at": "2026-11-07",
+      "required_leaves": [
+        "official date and schedule",
+        "current registration and admission status"
+      ],
+      "discovery_evidence": [
+        {
+          "url": "https://www.kcdaily.com/p/weekend-roundup",
+          "relationship": "current weekend roundup links directly to this organizer"
+        }
+      ]
+    },
+    {
+      "id": "central-avenue-dia",
+      "name": "Central Avenue Betterment Association",
+      "url": "https://www.cabakck.org/dia-de-muertos",
+      "city": "Kansas City, KS",
+      "categories": [
+        "festivals_seasonal",
+        "arts_exhibits",
+        "community_social"
+      ],
+      "required_text": [
+        "November 7th, 2026",
+        "Face Painting - 11:00am - 5:00pm",
+        "All fun ends at 9:00pm"
+      ],
+      "captures": [
+        {
+          "name": "D\u00eda de Muertos on Central Avenue",
+          "startDate": "2026-11-07T11:00:00-06:00",
+          "endDate": "2026-11-07T21:00:00-06:00",
+          "location": {
+            "name": "1120 Central Avenue, Kansas City, KS"
+          },
+          "description": "Day of the Dead celebration: face painting, food, art, ofrendas, live entertainment, Catrinas and an evening parade. Individual activities have different hours."
+        }
+      ],
+      "region": "Kansas City metro",
+      "kind": "organizer",
+      "format": "reviewed-capture",
+      "pattern": "/",
+      "max_details": 0,
+      "activity_kinds": [
+        "one_off"
+      ],
+      "reviewed_at": "2026-11-07",
+      "required_leaves": [
+        "official date and schedule",
+        "current registration and admission status"
+      ],
+      "discovery_evidence": [
+        {
+          "url": "https://www.kcdaily.com/p/weekend-roundup",
+          "relationship": "current weekend roundup links directly to this organizer"
+        }
+      ]
+    },
+    {
+      "id": "troost-united",
+      "name": "Reconciliation Services",
+      "url": "https://www.rs3101.org/troostunitedfest",
+      "city": "Kansas City",
+      "categories": [
+        "festivals_seasonal",
+        "music_performance",
+        "community_social"
+      ],
+      "required_text": [
+        "November 7, 2026",
+        "11 a.m. to 3 p.m.",
+        "walk-up registrations are still welcome"
+      ],
+      "captures": [
+        {
+          "name": "Troost United Fest",
+          "startDate": "2026-11-07T11:00:00-06:00",
+          "endDate": "2026-11-07T15:00:00-06:00",
+          "location": {
+            "name": "Reconciliation Services"
+          },
+          "description": "Community festival with live music, food, games and historical displays. Advance free registrations are sold out; the organizer says walk-up registrations remain welcome, with lunch/tote bags subject to availability.",
+          "_registration": {
+            "status": "unknown",
+            "opens_at": null,
+            "deadline": null,
+            "url": "https://www.rs3101.org/troostunitedfest",
+            "note": "Advance free registrations are sold out. Walk-up registrations are welcome; lunch and tote bags are not guaranteed."
+          }
+        }
+      ],
+      "region": "Kansas City metro",
+      "kind": "organizer",
+      "format": "reviewed-capture",
+      "pattern": "/",
+      "max_details": 0,
+      "activity_kinds": [
+        "one_off"
+      ],
+      "reviewed_at": "2026-11-07",
+      "required_leaves": [
+        "official date and schedule",
+        "current registration and admission status"
+      ],
+      "discovery_evidence": [
+        {
+          "url": "https://www.kcdaily.com/p/weekend-roundup",
+          "relationship": "current weekend roundup links directly to this organizer"
+        }
+      ]
+    },
+    {
+      "id": "mavericks",
+      "name": "Kansas City Mavericks home games",
+      "url": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters",
+      "city": "Independence",
+      "format": "jsonld",
+      "pattern": "/games/20\\d\\d/",
+      "max_details": 90,
+      "event_name_suffix": "@ Kansas City Mavericks",
+      "categories": [
+        "sports_spectating",
+        "community_social"
+      ],
+      "activity_kinds": [
+        "one_off"
+      ],
+      "region": "Kansas City metro",
+      "kind": "organizer",
+      "reviewed_at": "2026-11-07",
+      "required_leaves": [
+        "official schedule and location",
+        "admission options and exceptions"
+      ],
+      "discovery_evidence": [
+        {
+          "url": "https://thingstodoinkc.com/15-things-to-do-in-kansas-city-this-weekend-november-6-8-2026/",
+          "relationship": "weekend listicle lead; official source inspected"
+        }
+      ]
+    },
+    {
+      "id": "independence-japan",
+      "name": "Independence Japanese Sister City Committee",
+      "url": "https://www.indepmojscc.com/events",
+      "city": "Independence",
+      "format": "squarespace",
+      "pattern": "/events/[^/?]+",
+      "max_details": 0,
+      "categories": [
+        "festivals_seasonal",
+        "arts_exhibits",
+        "community_social"
+      ],
+      "activity_kinds": [
+        "one_off"
+      ],
+      "region": "Kansas City metro",
+      "kind": "organizer",
+      "reviewed_at": "2026-11-07",
+      "required_leaves": [
+        "official schedule and location",
+        "admission options and exceptions"
+      ],
+      "discovery_evidence": [
+        {
+          "url": "https://thingstodoinkc.com/15-things-to-do-in-kansas-city-this-weekend-november-6-8-2026/",
+          "relationship": "weekend listicle lead; official source inspected"
+        }
+      ]
+    },
+    {
+      "id": "dfscon",
+      "name": "Dark Flame Society \u2014 DFSCON ticketing",
+      "url": "https://darkflamesociety.ticketspice.com/dfscon",
+      "city": "Kansas City",
+      "format": "reviewed-capture",
+      "pattern": "/",
+      "max_details": 0,
+      "categories": [
+        "film_literature",
+        "community_social"
+      ],
+      "activity_kinds": [
+        "multi_day",
+        "one_off"
+      ],
+      "required_text": [
+        "November 7 & 8, 2026",
+        "Free DFSCON Saturday November 7, 2026",
+        "Free DFSCON Sunday November 8, 2026",
+        "Access to book market 1pm - 4pm",
+        "Event Host: Dark Flame Society"
+      ],
+      "captures": [
+        {
+          "name": "DFSCON \u2014 free afternoon book market",
+          "startDate": "2026-11-07T13:00:00-06:00",
+          "endDate": "2026-11-07T16:00:00-06:00",
+          "location": {
+            "name": "Kansas City Convention Center"
+          },
+          "description": "Free afternoon access to the fantasy-book market. Earlier entry, panels and VIP access use different tickets; Saturday VIP is sold out. Reserve the appropriate ticket on the official event form."
+        },
+        {
+          "name": "DFSCON \u2014 free afternoon book market",
+          "startDate": "2026-11-08T13:00:00-06:00",
+          "endDate": "2026-11-08T16:00:00-06:00",
+          "location": {
+            "name": "Kansas City Convention Center"
+          },
+          "description": "Free afternoon book market, with paid early-access and VIP options sold separately. Follow the official form for ticket availability and admission conditions."
+        }
+      ],
+      "region": "Kansas City metro",
+      "kind": "organizer",
+      "reviewed_at": "2026-11-07",
+      "required_leaves": [
+        "official schedule and location",
+        "admission options and exceptions"
+      ],
+      "discovery_evidence": [
+        {
+          "url": "https://thingstodoinkc.com/15-things-to-do-in-kansas-city-this-weekend-november-6-8-2026/",
+          "relationship": "weekend listicle lead; official source inspected"
+        }
+      ]
+    },
+    {
+      "id": "kc-convention",
+      "name": "Kansas City Convention Center",
+      "url": "https://kcconvention.com/events/",
+      "city": "Kansas City",
+      "region": "Kansas City metro",
+      "kind": "organizer",
+      "format": "jsonld",
+      "pattern": "/event/[^/]+",
+      "max_details": 70,
+      "categories": [
+        "games_hobbies",
+        "community_social",
+        "sports_spectating",
+        "markets_shopping"
+      ],
+      "activity_kinds": [
+        "multi_day",
+        "one_off"
+      ],
+      "reviewed_at": "2026-11-07",
+      "discovery_evidence": [
+        {
+          "url": "https://thingstodoinkc.com/15-things-to-do-in-kansas-city-this-weekend-november-6-8-2026/",
+          "relationship": "roundup convention lead; official venue calendar located and inspected"
+        }
+      ],
+      "required_leaves": [
+        "event schedule and dates",
+        "organizer ticketing and session access"
+      ]
+    },
+    {
+      "id": "crossroads-flea",
+      "name": "Mildred\u2019s \u2014 Crossroads Flea",
+      "url": "https://www.mildredskc.com/crossroadsflea",
+      "city": "Kansas City",
+      "region": "Kansas City metro",
+      "kind": "organizer",
+      "format": "reviewed-capture",
+      "pattern": "/",
+      "max_details": 0,
+      "categories": [
+        "markets_shopping",
+        "community_social"
+      ],
+      "activity_kinds": [
+        "recurring_program"
+      ],
+      "reviewed_at": "2026-11-07",
+      "required_text": [
+        "Second Sundays 9am\u20132pm",
+        "Fall (September, October, November)",
+        "1901 Wyandotte St"
+      ],
+      "captures": [
+        {
+          "name": "Crossroads Flea at Mildred\u2019s",
+          "startDate": "2026-11-08T09:00:00-06:00",
+          "endDate": "2026-11-08T14:00:00-06:00",
+          "location": {
+            "name": "19th Street outside Mildred\u2019s, 1901 Wyandotte St"
+          },
+          "description": "Seasonal second-Sunday market with local makers, vintage goods, food and brunch drinks. November 8 is derived from the organizer\u2019s explicit second-Sunday November rule and corroborated by the current KC Daily roundup. Confirm any weather changes before going.",
+          "_schedule": {
+            "kind": "recurring_program",
+            "start_date": "2026-11-08",
+            "end_date": "2026-11-08",
+            "recurrence": {
+              "rrule": "FREQ=MONTHLY;BYDAY=2SU;BYMONTH=4,5,6,9,10,11;UNTIL=20261109T000000Z",
+              "timezone": "America/Chicago",
+              "exdates": []
+            },
+            "note": "Published seasonal second-Sunday schedule, 9am\u20132pm. Only the current corroborated 2026 fall occurrence is captured; no future season is assumed."
+          }
+        }
+      ],
+      "discovery_evidence": [
+        {
+          "url": "https://www.kcdaily.com/p/weekend-roundup",
+          "relationship": "current Sunday roundup confirms this occurrence"
+        }
+      ],
+      "required_leaves": [
+        "seasonal recurrence and hours",
+        "weather exceptions and current date confirmation"
+      ]
+    },
+    {
+      "id": "ls-mistletoe",
+      "name": "Explore Lee\u2019s Summit \u2014 Mistletoe Madness",
+      "url": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness",
+      "city": "Lee's Summit",
+      "region": "Kansas City metro",
+      "kind": "official-calendar",
+      "format": "reviewed-capture",
+      "pattern": "/",
+      "max_details": 0,
+      "categories": [
+        "markets_shopping",
+        "festivals_seasonal",
+        "community_social"
+      ],
+      "activity_kinds": [
+        "one_off"
+      ],
+      "reviewed_at": "2026-11-07",
+      "required_text": [
+        "Mistletoe Madness",
+        "Saturday, November 7 | 9 a.m. - 4 p.m.",
+        "Gamber Community Center",
+        "11/7/2026 4:00 PM"
+      ],
+      "captures": [
+        {
+          "name": "Mistletoe Madness",
+          "startDate": "2026-11-07T09:00:00-06:00",
+          "endDate": "2026-11-07T16:00:00-06:00",
+          "location": {
+            "name": "Gamber Community Center"
+          },
+          "description": "Holiday art and craft shopping event. Saturday hours are 9am\u20134pm; the source has conflicting Friday hours, so only the unambiguous Saturday session is captured."
+        }
+      ],
+      "required_leaves": [
+        "official date and session hours",
+        "admission policies"
+      ],
+      "discovery_evidence": [
+        {
+          "url": "https://thingstodoinkc.com/15-things-to-do-in-kansas-city-this-weekend-november-6-8-2026/",
+          "relationship": "listicle lead resolved to the local tourism calendar"
+        }
       ]
     }
   ]

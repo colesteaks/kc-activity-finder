@@ -9,13 +9,13 @@
     />
     <meta name="theme-color" content="#183f37" />
     <title>What to do, KC — Find your next good day</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=1.1.0" />
     <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
     <link
       rel="stylesheet"
       href="vendor/leaflet-markercluster/MarkerCluster.css"
     />
-    <script type="module" src="app.js"></script>
+    <script type="module" src="app.js?v=1.1.0"></script>
     <link
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23183f37'/%3E%3Ctext x='32' y='43' font-family='Georgia' font-size='34' text-anchor='middle' fill='%23f4ecdb'%3Ekc%3C/text%3E%3C/svg%3E"
@@ -152,6 +152,13 @@
               />
               Include canceled & postponed</label
             >
+            <label class="check"
+              ><input
+                id="include-offers"
+                name="include_offers"
+                type="checkbox"
+              />Include menu promotions & offers</label
+            >
           </form>
           <p class="filter-footnote">
             No account. No algorithmic feed.<br />Just a few ways to find your
@@ -178,6 +185,7 @@
               </select></label
             >
           </div>
+          <p id="coverage-note" class="coverage-note" hidden></p>
           <div class="view-toggle" role="group" aria-label="Activity view">
             <button id="view-list" type="button" aria-pressed="true">
               List
@@ -217,7 +225,7 @@
           <p id="message" role="status" class="message" hidden></p>
           <div id="results" class="cards" tabindex="-1"></div>
           <button id="more" class="more" type="button" hidden>
-            More good ideas ↓
+            More activities ↓
           </button>
           <noscript
             ><p>

@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "id": "kc-weekend-2026-11-07",
+  "region": "Kansas City metro",
+  "window": {
+    "start": "2026-11-07",
+    "end": "2026-11-08"
+  },
+  "reviewed_at": "2026-11-07T20:52:28.946738+00:00",
+  "policy": "A regression sample of date-relevant anchors from the current KC Daily weekend roundup and an independent roundup. Friday-only items are excluded. Match facts still need organizer/venue verification; no completeness claim.",
+  "sensors": [
+    {
+      "url": "https://www.kcdaily.com/p/weekend-roundup",
+      "edition": "15 things to do November 6-8, 2026; live article metadata inspected, not an older search cache"
+    },
+    {
+      "url": "https://thingstodoinkc.com/15-things-to-do-in-kansas-city-this-weekend-november-6-8-2026/",
+      "edition": "November 6-8, 2026"
+    }
+  ],
+  "anchors": [
+    {
+      "id": "garth",
+      "title": "Garth Brooks",
+      "title_pattern": "Garth\\s+Brooks",
+      "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+    },
+    {
+      "id": "petfest",
+      "title": "KC Pet Fest",
+      "title_pattern": "(?:KC|Kansas City)\\s+Pet\\s+Fest",
+      "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+    },
+    {
+      "id": "winter-magic",
+      "title": "Winter Magic",
+      "title_pattern": "Winter Magic",
+      "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+    },
+    {
+      "id": "free-fallin",
+      "title": "Free Fallin\u2019",
+      "title_pattern": "Free Fallin",
+      "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+    },
+    {
+      "id": "merry-bright",
+      "title": "Merry & Bright market",
+      "title_pattern": "Merry.*Bright",
+      "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+    },
+    {
+      "id": "kc-current",
+      "title": "KC Current playoff match",
+      "title_pattern": "(?:KC|Kansas City) Current.*Angel|Angel.*(?:KC|Kansas City) Current",
+      "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+    },
+    {
+      "id": "veterans-parade",
+      "title": "Veterans Day Parade",
+      "title_pattern": "Veterans?.?\\s+Day Parade",
+      "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+    },
+    {
+      "id": "troost",
+      "title": "Troost United Fest",
+      "title_pattern": "Troost United Fest",
+      "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+    },
+    {
+      "id": "yoga",
+      "title": "Yoga at the Kauffman Center",
+      "title_pattern": "Yoga.*Kauffman",
+      "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+    },
+    {
+      "id": "figaro",
+      "title": "The Marriage of Figaro",
+      "title_pattern": "Marriage of Figaro",
+      "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+    },
+    {
+      "id": "dia-muertos",
+      "title": "D\u00eda de Muertos on Central Avenue",
+      "title_pattern": "D[i\\u00ed]a.*Muertos.*Central",
+      "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+    },
+    {
+      "id": "crossroads-flea",
+      "title": "Crossroads Flea",
+      "title_pattern": "Crossroads Flea",
+      "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+    },
+    {
+      "id": "mavericks",
+      "title": "Mavericks vs Tahoe Knight Monsters",
+      "title_pattern": "Tahoe Knight Monsters.*Mavericks|Mavericks.*Tahoe Knight Monsters",
+      "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+    },
+    {
+      "id": "meeple",
+      "title": "Meeple-A-Thon",
+      "title_pattern": "Meeple.?A.?Thon",
+      "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+    },
+    {
+      "id": "matsuri",
+      "title": "Uptown Matsuri",
+      "title_pattern": "Uptown Matsuri",
+      "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+    },
+    {
+      "id": "dfscon",
+      "title": "DFSCON",
+      "title_pattern": "DFSCON",
+      "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+    },
+    {
+      "id": "mistletoe",
+      "title": "Mistletoe Madness",
+      "title_pattern": "Mistletoe Madness",
+      "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+    }
+  ]
+}

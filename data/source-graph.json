@@ -1,7 +1,7 @@
 {
   "$schema": "../schemas/source-graph.schema.json",
   "version": 1,
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-11-07",
   "seed_material": {
     "path": "data/primary-sources.txt",
     "preservation": "verbatim",
@@ -13,17 +13,22 @@
       "label": "KC Daily",
       "canonical_url": "https://www.kcdaily.com/",
       "source_class": "local-editorial",
-      "roles": ["discovery", "graph-expansion"],
+      "roles": [
+        "discovery",
+        "graph-expansion"
+      ],
       "status": "active",
-      "coverage": ["Kansas City metro"],
+      "coverage": [
+        "Kansas City metro"
+      ],
       "provenance": {
         "kind": "provided-seed",
         "raw_value": "KC daily",
         "seed_line": 1
       },
       "verification": {
-        "last_checked": "2026-08-29",
-        "evidence_url": "https://www.kcdaily.com/"
+        "last_checked": "2026-11-07",
+        "evidence_url": "https://www.kcdaily.com/archive"
       },
       "crawl": {
         "entrypoints": [
@@ -36,13 +41,769 @@
           "outbound organizer, venue, registration, and ticket links"
         ]
       }
+    },
+    {
+      "id": "kc-zoo",
+      "label": "Kansas City Zoo & Aquarium",
+      "canonical_url": "https://kansascityzoo.org/events/",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep",
+        "graph-expansion"
+      ],
+      "status": "active",
+      "coverage": [
+        "Kansas City metro"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://www.kcdaily.com/p/apples-pumpkins-hayrides-oh-my",
+        "observed_relation": "newsletter/listicle links to provider; actual calendar or event leaf reviewed on 2026-11-07"
+      },
+      "verification": {
+        "last_checked": "2026-11-07",
+        "evidence_url": "https://kansascityzoo.org/events/",
+        "collector_status": "partial",
+        "captured_records": 23
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://kansascityzoo.org/events/"
+        ],
+        "sweep_targets": [
+          "specific event or program",
+          "registration and deadlines",
+          "season schedule or exhibit run",
+          "hours and closures"
+        ]
+      }
+    },
+    {
+      "id": "kc-library",
+      "label": "Kansas City Public Library",
+      "canonical_url": "https://kclibrary.org/calendar",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep",
+        "graph-expansion"
+      ],
+      "status": "active",
+      "coverage": [
+        "Kansas City metro"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://www.kcdaily.com/p/keep-cool-pool",
+        "observed_relation": "newsletter/listicle links to provider; actual calendar or event leaf reviewed on 2026-11-07"
+      },
+      "verification": {
+        "last_checked": "2026-11-07",
+        "evidence_url": "https://kclibrary.org/calendar",
+        "collector_status": "checked",
+        "captured_records": 631
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://kclibrary.org/calendar"
+        ],
+        "sweep_targets": [
+          "specific event or program",
+          "registration and deadlines",
+          "season schedule or exhibit run",
+          "hours and closures"
+        ]
+      }
+    },
+    {
+      "id": "science-city",
+      "label": "Science City",
+      "canonical_url": "https://sciencecity.unionstation.org/plan-your-visit/",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep",
+        "graph-expansion"
+      ],
+      "status": "active",
+      "coverage": [
+        "Kansas City metro"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://www.kcdaily.com/p/coming-soon-mineral-lounge",
+        "observed_relation": "newsletter/listicle links to provider; actual calendar or event leaf reviewed on 2026-11-07"
+      },
+      "verification": {
+        "last_checked": "2026-11-07",
+        "evidence_url": "https://sciencecity.unionstation.org/plan-your-visit/",
+        "collector_status": "checked",
+        "captured_records": 1
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://sciencecity.unionstation.org/plan-your-visit/"
+        ],
+        "sweep_targets": [
+          "specific activity or trail",
+          "season schedule or exhibit run",
+          "opening hours closures and exceptions",
+          "registration deadline and participation commitment"
+        ]
+      }
+    },
+    {
+      "id": "visitkc",
+      "label": "Visit KC events",
+      "canonical_url": "https://www.visitkc.com/events/",
+      "source_class": "official-calendar",
+      "roles": [
+        "first-party-sweep",
+        "graph-expansion"
+      ],
+      "status": "active",
+      "coverage": [
+        "Kansas City metro"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://www.kcdaily.com/p/what-s-your-halloween-costume",
+        "observed_relation": "newsletter/listicle links to provider; actual calendar or event leaf reviewed on 2026-11-07"
+      },
+      "verification": {
+        "last_checked": "2026-11-07",
+        "evidence_url": "https://www.visitkc.com/events/",
+        "collector_status": "checked",
+        "captured_records": 2662
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://www.visitkc.com/events/"
+        ],
+        "sweep_targets": [
+          "all events and pagination",
+          "official schedule and booking",
+          "opening hours and exceptions"
+        ]
+      }
+    },
+    {
+      "id": "tmobile",
+      "label": "T-Mobile Center",
+      "canonical_url": "https://www.t-mobilecenter.com/events",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep",
+        "graph-expansion"
+      ],
+      "status": "active",
+      "coverage": [
+        "Kansas City metro"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://www.kcdaily.com/p/workin-for-the-weekend",
+        "observed_relation": "newsletter/listicle links to provider; actual calendar or event leaf reviewed on 2026-11-07"
+      },
+      "verification": {
+        "last_checked": "2026-11-07",
+        "evidence_url": "https://www.t-mobilecenter.com/events",
+        "collector_status": "checked",
+        "captured_records": 12
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://www.t-mobilecenter.com/events"
+        ],
+        "sweep_targets": [
+          "all events and pagination",
+          "official schedule and booking",
+          "opening hours and exceptions"
+        ]
+      }
+    },
+    {
+      "id": "midland",
+      "label": "The Midland",
+      "canonical_url": "https://www.midlandkc.com/events/all",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep",
+        "graph-expansion"
+      ],
+      "status": "active",
+      "coverage": [
+        "Kansas City metro"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://www.kcdaily.com/p/memorial-day-memories",
+        "observed_relation": "newsletter/listicle links to provider; actual calendar or event leaf reviewed on 2026-11-07"
+      },
+      "verification": {
+        "last_checked": "2026-11-07",
+        "evidence_url": "https://www.midlandkc.com/events/all",
+        "collector_status": "checked",
+        "captured_records": 29
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://www.midlandkc.com/events/all"
+        ],
+        "sweep_targets": [
+          "all events and pagination",
+          "official schedule and booking",
+          "opening hours and exceptions"
+        ]
+      }
+    },
+    {
+      "id": "truman",
+      "label": "The Truman",
+      "canonical_url": "https://www.thetrumankc.com/events",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep",
+        "graph-expansion"
+      ],
+      "status": "active",
+      "coverage": [
+        "Kansas City metro"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://www.kcdaily.com/p/august-rush-3c6616e6fe84a100",
+        "observed_relation": "newsletter/listicle links to provider; actual calendar or event leaf reviewed on 2026-11-07"
+      },
+      "verification": {
+        "last_checked": "2026-11-07",
+        "evidence_url": "https://www.thetrumankc.com/events",
+        "collector_status": "checked",
+        "captured_records": 20
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://www.thetrumankc.com/events"
+        ],
+        "sweep_targets": [
+          "all events and pagination",
+          "official schedule and booking",
+          "opening hours and exceptions"
+        ]
+      }
+    },
+    {
+      "id": "downtown-ls",
+      "label": "Downtown Lee\u2019s Summit",
+      "canonical_url": "https://downtownls.org/wp-json/tribe/events/v1/events",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep",
+        "graph-expansion"
+      ],
+      "status": "active",
+      "coverage": [
+        "Kansas City metro"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://www.kcdaily.com/p/brookside-burgers",
+        "observed_relation": "newsletter/listicle links to provider; actual calendar or event leaf reviewed on 2026-11-07"
+      },
+      "verification": {
+        "last_checked": "2026-11-07",
+        "evidence_url": "https://downtownls.org/wp-json/tribe/events/v1/events",
+        "collector_status": "checked",
+        "captured_records": 15
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://downtownls.org/wp-json/tribe/events/v1/events"
+        ],
+        "sweep_targets": [
+          "all events and pagination",
+          "official schedule and booking",
+          "opening hours and exceptions"
+        ]
+      }
+    },
+    {
+      "id": "kcopera",
+      "label": "Lyric Opera of Kansas City",
+      "canonical_url": "https://kcopera.org/event/the-marriage-of-figaro/",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep",
+        "graph-expansion"
+      ],
+      "status": "active",
+      "coverage": [
+        "Kansas City metro"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
+        "observed_relation": "newsletter/listicle links to provider; actual calendar or event leaf reviewed on 2026-11-07"
+      },
+      "verification": {
+        "last_checked": "2026-11-07",
+        "evidence_url": "https://kcopera.org/event/the-marriage-of-figaro/",
+        "collector_status": "checked",
+        "captured_records": 11
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://kcopera.org/event/the-marriage-of-figaro/"
+        ],
+        "sweep_targets": [
+          "all events and pagination",
+          "official schedule and booking",
+          "opening hours and exceptions"
+        ]
+      }
+    },
+    {
+      "id": "kc-pet-fest",
+      "label": "KC Pet Fest",
+      "canonical_url": "https://www.kcpetfest.com/",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep",
+        "graph-expansion"
+      ],
+      "status": "active",
+      "coverage": [
+        "Kansas City metro"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
+        "observed_relation": "newsletter/listicle links to provider; actual calendar or event leaf reviewed on 2026-11-07"
+      },
+      "verification": {
+        "last_checked": "2026-11-07",
+        "evidence_url": "https://www.kcpetfest.com/",
+        "collector_status": "checked",
+        "captured_records": 1
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://www.kcpetfest.com/"
+        ],
+        "sweep_targets": [
+          "official date and schedule",
+          "current registration and admission status"
+        ]
+      }
+    },
+    {
+      "id": "central-avenue-dia",
+      "label": "Central Avenue Betterment Association",
+      "canonical_url": "https://www.cabakck.org/dia-de-muertos",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep",
+        "graph-expansion"
+      ],
+      "status": "active",
+      "coverage": [
+        "Kansas City metro"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
+        "observed_relation": "newsletter/listicle links to provider; actual calendar or event leaf reviewed on 2026-11-07"
+      },
+      "verification": {
+        "last_checked": "2026-11-07",
+        "evidence_url": "https://www.cabakck.org/dia-de-muertos",
+        "collector_status": "checked",
+        "captured_records": 1
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://www.cabakck.org/dia-de-muertos"
+        ],
+        "sweep_targets": [
+          "official date and schedule",
+          "current registration and admission status"
+        ]
+      }
+    },
+    {
+      "id": "troost-united",
+      "label": "Reconciliation Services",
+      "canonical_url": "https://www.rs3101.org/troostunitedfest",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep",
+        "graph-expansion"
+      ],
+      "status": "active",
+      "coverage": [
+        "Kansas City metro"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
+        "observed_relation": "newsletter/listicle links to provider; actual calendar or event leaf reviewed on 2026-11-07"
+      },
+      "verification": {
+        "last_checked": "2026-11-07",
+        "evidence_url": "https://www.rs3101.org/troostunitedfest",
+        "collector_status": "checked",
+        "captured_records": 1
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://www.rs3101.org/troostunitedfest"
+        ],
+        "sweep_targets": [
+          "official date and schedule",
+          "current registration and admission status"
+        ]
+      }
+    },
+    {
+      "id": "mavericks",
+      "label": "Kansas City Mavericks home games",
+      "canonical_url": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep",
+        "graph-expansion"
+      ],
+      "status": "active",
+      "coverage": [
+        "Kansas City metro"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://www.kcdaily.com/p/quest-for-the-cup",
+        "observed_relation": "newsletter/listicle links to provider; actual calendar or event leaf reviewed on 2026-11-07"
+      },
+      "verification": {
+        "last_checked": "2026-11-07",
+        "evidence_url": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters",
+        "collector_status": "partial",
+        "captured_records": 3
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
+        ],
+        "sweep_targets": [
+          "official schedule and location",
+          "admission options and exceptions"
+        ]
+      }
+    },
+    {
+      "id": "independence-japan",
+      "label": "Independence Japanese Sister City Committee",
+      "canonical_url": "https://www.indepmojscc.com/events",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep",
+        "graph-expansion"
+      ],
+      "status": "active",
+      "coverage": [
+        "Kansas City metro"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://thingstodoinkc.com/15-things-to-do-in-kansas-city-this-weekend-november-6-8-2026/",
+        "observed_relation": "newsletter/listicle links to provider; actual calendar or event leaf reviewed on 2026-11-07"
+      },
+      "verification": {
+        "last_checked": "2026-11-07",
+        "evidence_url": "https://www.indepmojscc.com/events",
+        "collector_status": "checked",
+        "captured_records": 1
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://www.indepmojscc.com/events"
+        ],
+        "sweep_targets": [
+          "official schedule and location",
+          "admission options and exceptions"
+        ]
+      }
+    },
+    {
+      "id": "dfscon",
+      "label": "Dark Flame Society \u2014 DFSCON ticketing",
+      "canonical_url": "https://darkflamesociety.ticketspice.com/dfscon",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep",
+        "graph-expansion"
+      ],
+      "status": "active",
+      "coverage": [
+        "Kansas City metro"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://thingstodoinkc.com/15-things-to-do-in-kansas-city-this-weekend-november-6-8-2026/",
+        "observed_relation": "newsletter/listicle links to provider; actual calendar or event leaf reviewed on 2026-11-07"
+      },
+      "verification": {
+        "last_checked": "2026-11-07",
+        "evidence_url": "https://darkflamesociety.ticketspice.com/dfscon",
+        "collector_status": "checked",
+        "captured_records": 2
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://darkflamesociety.ticketspice.com/dfscon"
+        ],
+        "sweep_targets": [
+          "official schedule and location",
+          "admission options and exceptions"
+        ]
+      }
+    },
+    {
+      "id": "kc-convention",
+      "label": "Kansas City Convention Center",
+      "canonical_url": "https://kcconvention.com/events/",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep",
+        "graph-expansion"
+      ],
+      "status": "active",
+      "coverage": [
+        "Kansas City metro"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://www.kcdaily.com/p/new-uniforms-new-stadium",
+        "observed_relation": "newsletter/listicle links to provider; actual calendar or event leaf reviewed on 2026-11-07"
+      },
+      "verification": {
+        "last_checked": "2026-11-07",
+        "evidence_url": "https://kcconvention.com/events/",
+        "collector_status": "checked",
+        "captured_records": 18
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://kcconvention.com/events/"
+        ],
+        "sweep_targets": [
+          "event schedule and dates",
+          "organizer ticketing and session access"
+        ]
+      }
+    },
+    {
+      "id": "crossroads-flea",
+      "label": "Mildred\u2019s \u2014 Crossroads Flea",
+      "canonical_url": "https://www.mildredskc.com/crossroadsflea",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep",
+        "graph-expansion"
+      ],
+      "status": "active",
+      "coverage": [
+        "Kansas City metro"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
+        "observed_relation": "newsletter/listicle links to provider; actual calendar or event leaf reviewed on 2026-11-07"
+      },
+      "verification": {
+        "last_checked": "2026-11-07",
+        "evidence_url": "https://www.mildredskc.com/crossroadsflea",
+        "collector_status": "checked",
+        "captured_records": 1
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://www.mildredskc.com/crossroadsflea"
+        ],
+        "sweep_targets": [
+          "seasonal recurrence and hours",
+          "weather exceptions and current date confirmation"
+        ]
+      }
+    },
+    {
+      "id": "ls-mistletoe",
+      "label": "Explore Lee\u2019s Summit \u2014 Mistletoe Madness",
+      "canonical_url": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness",
+      "source_class": "official-calendar",
+      "roles": [
+        "first-party-sweep",
+        "graph-expansion"
+      ],
+      "status": "active",
+      "coverage": [
+        "Kansas City metro"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://www.kcdaily.com/p/prophet-over-profit",
+        "observed_relation": "newsletter/listicle links to provider; actual calendar or event leaf reviewed on 2026-11-07"
+      },
+      "verification": {
+        "last_checked": "2026-11-07",
+        "evidence_url": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness",
+        "collector_status": "checked",
+        "captured_records": 1
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
+        ],
+        "sweep_targets": [
+          "official date and session hours",
+          "admission policies"
+        ]
+      }
     }
   ],
-  "edges": [],
+  "edges": [
+    {
+      "from": "kc-daily",
+      "to": "kc-zoo",
+      "relationship": "mentions-first-party",
+      "evidence_url": "https://www.kcdaily.com/p/apples-pumpkins-hayrides-oh-my",
+      "target_url": "https://kansascityzoo.org/glowild",
+      "observed_on": "2026-11-07T14:19:38.885919-06:00"
+    },
+    {
+      "from": "kc-daily",
+      "to": "kc-library",
+      "relationship": "mentions-first-party",
+      "evidence_url": "https://www.kcdaily.com/p/keep-cool-pool",
+      "target_url": "https://kclibrary.org/150",
+      "observed_on": "2026-11-07T14:19:38.885919-06:00"
+    },
+    {
+      "from": "kc-daily",
+      "to": "science-city",
+      "relationship": "mentions-first-party",
+      "evidence_url": "https://www.kcdaily.com/p/coming-soon-mineral-lounge",
+      "target_url": "https://sciencecity.unionstation.org/",
+      "observed_on": "2026-11-07T14:19:38.885919-06:00"
+    },
+    {
+      "from": "kc-daily",
+      "to": "visitkc",
+      "relationship": "mentions-first-party",
+      "evidence_url": "https://www.kcdaily.com/p/what-s-your-halloween-costume",
+      "target_url": "https://www.visitkc.com/",
+      "observed_on": "2026-11-07T14:19:38.885919-06:00"
+    },
+    {
+      "from": "kc-daily",
+      "to": "tmobile",
+      "relationship": "mentions-first-party",
+      "evidence_url": "https://www.kcdaily.com/p/workin-for-the-weekend",
+      "target_url": "https://www.t-mobilecenter.com/events/detail/shane-gillis-2025",
+      "observed_on": "2026-11-07T14:19:38.885919-06:00"
+    },
+    {
+      "from": "kc-daily",
+      "to": "midland",
+      "relationship": "mentions-first-party",
+      "evidence_url": "https://www.kcdaily.com/p/memorial-day-memories",
+      "target_url": "https://www.midlandkc.com/events/detail/1360449",
+      "observed_on": "2026-11-07T14:19:38.885919-06:00"
+    },
+    {
+      "from": "kc-daily",
+      "to": "truman",
+      "relationship": "mentions-first-party",
+      "evidence_url": "https://www.kcdaily.com/p/august-rush-3c6616e6fe84a100",
+      "target_url": "https://www.thetrumankc.com/events/detail/1023317",
+      "observed_on": "2026-11-07T14:19:38.885919-06:00"
+    },
+    {
+      "from": "kc-daily",
+      "to": "downtown-ls",
+      "relationship": "mentions-first-party",
+      "evidence_url": "https://www.kcdaily.com/p/brookside-burgers",
+      "target_url": "https://downtownls.org/fourthfridays",
+      "observed_on": "2026-11-07T14:19:38.885919-06:00"
+    },
+    {
+      "from": "kc-daily",
+      "to": "kcopera",
+      "relationship": "mentions-first-party",
+      "evidence_url": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
+      "target_url": "https://kcopera.org/event/the-marriage-of-figaro",
+      "observed_on": "2026-11-07T14:19:38.885919-06:00"
+    },
+    {
+      "from": "kc-daily",
+      "to": "kc-pet-fest",
+      "relationship": "mentions-first-party",
+      "evidence_url": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
+      "target_url": "https://www.kcpetfest.com/",
+      "observed_on": "2026-11-07T14:19:38.885919-06:00"
+    },
+    {
+      "from": "kc-daily",
+      "to": "central-avenue-dia",
+      "relationship": "mentions-first-party",
+      "evidence_url": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
+      "target_url": "https://www.cabakck.org/dia-de-muertos",
+      "observed_on": "2026-11-07T14:19:38.885919-06:00"
+    },
+    {
+      "from": "kc-daily",
+      "to": "troost-united",
+      "relationship": "mentions-first-party",
+      "evidence_url": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
+      "target_url": "https://www.rs3101.org/troostunitedfest",
+      "observed_on": "2026-11-07T14:19:38.885919-06:00"
+    },
+    {
+      "from": "kc-daily",
+      "to": "mavericks",
+      "relationship": "mentions-first-party",
+      "evidence_url": "https://www.kcdaily.com/p/quest-for-the-cup",
+      "target_url": "https://kcmavericks.com/",
+      "observed_on": "2026-11-07T14:19:38.885919-06:00"
+    },
+    {
+      "from": "kc-daily",
+      "to": "kc-convention",
+      "relationship": "mentions-first-party",
+      "evidence_url": "https://www.kcdaily.com/p/new-uniforms-new-stadium",
+      "target_url": "https://kcconvention.com/event/2026-masquerade-dance-experience",
+      "observed_on": "2026-11-07T14:19:38.885919-06:00"
+    },
+    {
+      "from": "kc-daily",
+      "to": "crossroads-flea",
+      "relationship": "mentions-first-party",
+      "evidence_url": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
+      "target_url": "https://www.mildredskc.com/crossroadsflea",
+      "observed_on": "2026-11-07T14:19:38.885919-06:00"
+    },
+    {
+      "from": "kc-daily",
+      "to": "ls-mistletoe",
+      "relationship": "mentions-first-party",
+      "evidence_url": "https://www.kcdaily.com/p/prophet-over-profit",
+      "target_url": "https://explorels.com/things-to-do/shopping/farmers-market",
+      "observed_on": "2026-11-07T14:19:38.885919-06:00"
+    }
+  ],
   "frontier_rules": [
     {
       "relationship": "mentions-first-party",
-      "from_roles": ["discovery", "graph-expansion"],
+      "from_roles": [
+        "discovery",
+        "graph-expansion"
+      ],
       "allowed_target_classes": [
         "event-organizer",
         "venue",
