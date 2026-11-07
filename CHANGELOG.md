@@ -2,6 +2,15 @@
 
 Releases follow Semantic Versioning for the skill instructions, executable contracts and helpers. Daily activity observations are timestamped data, not new software releases.
 
+## [1.0.1] - 2026-11-07
+
+### Fixed
+
+- Use an explicit GitHub `/tree/v1.0.1` URL for version-pinned installation. The current public Skills CLI 1.7.6 interprets `owner/repo@v1.0.0` as a skill selector, installs the default branch and returns a missing-skill error. The explicit tag URL was tested and records the correct Git ref in the install lock.
+- Check recommended installation URLs in regression tests and perform a public tag-pinned installation in the release workflow before publishing assets.
+
+The v1.0.0 tag and assets remain unchanged. Existing v1.0.0 users can use its explicit `/tree/v1.0.0` URL, or install this patch. Skill research behavior is unchanged.
+
 ## [1.0.0] - 2026-11-07
 
 First public, versioned Agent Skills release of KC Activity Finder.

@@ -1,4 +1,5 @@
 import hashlib
+import re
 import sys
 import tempfile
 import unittest
@@ -79,6 +80,14 @@ class ReleaseTests(unittest.TestCase):
     def test_current_working_metadata_declares_released_version(self):
         files = {name: (ROOT / name).read_bytes() for name in ('VERSION', 'SKILL.md')}
         self.assertEqual(release_version(files), (ROOT / 'VERSION').read_text().strip())
+
+    def test_recommended_commands_pin_explicit_github_tag_urls(self):
+        version = (ROOT / 'VERSION').read_text().strip()
+        expected = 'https://github.com/colesteaks/kc-activity-finder/tree/v' + version
+        for name in ('README.md', 'references/installation.md'):
+            commands = re.findall(r'npx skills@latest add (\S+)', (ROOT / name).read_text())
+            self.assertTrue(commands, name)
+            self.assertTrue(all(source == expected for source in commands), name)
 
 
 if __name__ == '__main__': unittest.main()

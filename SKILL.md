@@ -5,7 +5,7 @@ license: MIT
 compatibility: Requires Python 3.11+ and jsonschema for executable helpers. Live research needs host-provided browsing; verified drive limits need routing evidence. Collector dependencies are optional. No API keys are required by the core skill.
 metadata:
   author: colesteaks
-  version: "1.0.0"
+  version: "1.0.1"
   repository: https://github.com/colesteaks/kc-activity-finder
 ---
 

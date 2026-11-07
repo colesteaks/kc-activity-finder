@@ -2,18 +2,18 @@
 
 KC Activity Finder is distributed in the open [Agent Skills format](https://agentskills.io/specification): a `kc-activity-finder/` folder with `SKILL.md`, executable helpers and supporting resources. The public GitHub repository is the source and distribution point. A separate plugin/MCP server or app-store submission is not required to distribute this skill.
 
-## Install the v1.0.0 release
+## Install the v1.0.1 release
 
 Recommended: install a pinned GitHub tag using the [Skills CLI](https://github.com/vercel-labs/skills). Node.js/npm is needed for this installer, not for the Python-only core helpers:
 
 ```sh
-npx skills@latest add colesteaks/kc-activity-finder@v1.0.0 --skill kc-activity-finder
+npx skills@latest add https://github.com/colesteaks/kc-activity-finder/tree/v1.0.1 --skill kc-activity-finder
 ```
 
 Choose the target agent and project/global scope in its prompts. For a project-local Codex installation without interactive prompts:
 
 ```sh
-npx skills@latest add colesteaks/kc-activity-finder@v1.0.0 \
+npx skills@latest add https://github.com/colesteaks/kc-activity-finder/tree/v1.0.1 \
   --skill kc-activity-finder --agent codex --copy --yes
 ```
 
@@ -22,17 +22,17 @@ This example installs into the current project's skill directory; it does not co
 For a development checkout or manual installation:
 
 ```sh
-git clone --branch v1.0.0 --depth 1 \
+git clone --branch v1.0.1 --depth 1 \
   https://github.com/colesteaks/kc-activity-finder.git
 ```
 
 The repository root itself is the skill folder; keep all its supporting files together. For project-local Codex usage, place the folder at `.agents/skills/kc-activity-finder/`. Other hosts may use a different folder. Do not install just `SKILL.md`: the graph, schemas, Python modules and references are runtime dependencies.
 
-Alternatively, [download the release ZIP](https://github.com/colesteaks/kc-activity-finder/releases/download/v1.0.0/kc-activity-finder-v1.0.0.zip) and [SHA256SUMS](https://github.com/colesteaks/kc-activity-finder/releases/download/v1.0.0/SHA256SUMS) from the same release. Verify, then extract the `kc-activity-finder/` directory into the location your host uses:
+Alternatively, [download the release ZIP](https://github.com/colesteaks/kc-activity-finder/releases/download/v1.0.1/kc-activity-finder-v1.0.1.zip) and [SHA256SUMS](https://github.com/colesteaks/kc-activity-finder/releases/download/v1.0.1/SHA256SUMS) from the same release. Verify, then extract the `kc-activity-finder/` directory into the location your host uses:
 
 ```sh
 sha256sum --check SHA256SUMS
-unzip kc-activity-finder-v1.0.0.zip
+unzip kc-activity-finder-v1.0.1.zip
 ```
 
 The ZIP is a complete, self-contained public project snapshot, without Git metadata, CI configuration, HTTP caches or local research. It includes the skill, source data, schemas, helpers, examples/tests and supporting static-site files so paths and validation still work after extraction. `RELEASE.json` identifies the exact source commit and hashes every payload file. It is not a bundled browser, model or dependency environment. A host accepting uploaded skill archives may use the ZIP; check its accepted format rather than assuming every chat UI supports archive installation.
@@ -66,7 +66,7 @@ Then invoke the installed skill naturally:
 
 [Latest release](https://github.com/colesteaks/kc-activity-finder/releases/latest) · [All releases](https://github.com/colesteaks/kc-activity-finder/releases) · [Changelog](../CHANGELOG.md)
 
-The `v1.0.0` tag pins skill behavior, code, schemas and a source-data snapshot. Event availability, opening hours and third-party pages remain live facts: a versioned skill must still refresh them. Daily collection updates `main` and the public Pages inventory without creating a software release. Existing installations remain pinned until the owner deliberately installs a newer tag; a pinned source does not mean automatic tracking of `main`.
+The `v1.0.1` tag pins skill behavior, code, schemas and a source-data snapshot. Event availability, opening hours and third-party pages remain live facts: a versioned skill must still refresh them. Daily collection updates `main` and the public Pages inventory without creating a software release. Existing installations remain pinned until the owner deliberately installs a newer tag; a pinned source does not mean automatic tracking of `main`.
 
 Use Semantic Versioning:
 
@@ -83,19 +83,19 @@ Do not move published tags or overwrite a published release's assets. Make a new
 3. Locally verify the committed version if desired:
 
    ```sh
-   python3 scripts/build_release.py --tag v1.0.0 --output /tmp/kc-release
+   python3 scripts/build_release.py --tag v1.0.1 --output /tmp/kc-release
    python3 scripts/verify_release.py \
-     /tmp/kc-release/kc-activity-finder-v1.0.0.zip --smoke-test
+     /tmp/kc-release/kc-activity-finder-v1.0.1.zip --smoke-test
    ```
 
 4. Create an annotated tag on the reviewed commit and push it:
 
    ```sh
-   git tag -a v1.0.0 -m 'KC Activity Finder v1.0.0'
-   git push origin v1.0.0
+   git tag -a v1.0.1 -m 'KC Activity Finder v1.0.1'
+   git push origin v1.0.1
    ```
 
-5. The **Publish versioned skill** workflow validates the tag/version/metadata, runs tests, builds a deterministic ZIP and checksums, and executes the unpacked helpers in a clean temporary directory. It uploads a draft release, downloads its assets to verify their checksums, then publishes it. No approval or model call is needed in that workflow; releases happen only on explicit version tags.
+5. The **Publish versioned skill** workflow validates the tag/version/metadata, runs tests, builds a deterministic ZIP and checksums, executes the unpacked helpers in a clean temporary directory, and verifies that a public installer records the requested Git tag and copies its runtime files. It uploads a draft release, downloads its assets to verify their checksums, then publishes it. No approval or model call is needed in that workflow; releases happen only on explicit version tags.
 6. Confirm the published release targets the intended tag, assets download anonymously and the pinned installation works. Source and asset verification are required before announcing a release.
 
 If a publish attempt leaves a draft release, inspect the failure before retrying. The workflow refuses to overwrite an existing release. Remove only the failed draft when appropriate and rerun the failed workflow; preserve the tag and all published releases. If a published release needs a fix, use a new patch version.

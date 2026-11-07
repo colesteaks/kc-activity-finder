@@ -40,6 +40,29 @@ jobs:
           python3 scripts/verify_release.py "dist/kc-activity-finder-$RELEASE_TAG.zip" --smoke-test
           cd dist
           sha256sum --check SHA256SUMS
+      - name: Test the public version-pinned installation
+        env:
+          DISABLE_TELEMETRY: '1'
+          DO_NOT_TRACK: '1'
+        run: |
+          install_dir="$RUNNER_TEMP/kc-skill-install"
+          mkdir -p "$install_dir"
+          cd "$install_dir"
+          git init -q
+          npx --yes skills@1.7.6 add "https://github.com/$GH_REPO/tree/$RELEASE_TAG" \
+            --skill kc-activity-finder --agent codex --copy --yes --json
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          lock = json.loads(Path('skills-lock.json').read_text())
+          assert lock['skills']['kc-activity-finder']['ref'] == os.environ['RELEASE_TAG']
+          installed = Path('.agents/skills/kc-activity-finder')
+          source = Path(os.environ['GITHUB_WORKSPACE'])
+          for name in ('SKILL.md', 'VERSION', 'data/source-graph.json', 'scripts/activity_pipeline.py', 'scripts/day_trip_planner.py'):
+              assert (installed / name).read_bytes() == (source / name).read_bytes(), name
+          print('Public installer pinned the expected tag and copied its runtime files')
+          PY
+          python3 .agents/skills/kc-activity-finder/scripts/validate_repo.py
       - name: Upload verified assets to a draft release
         run: |
           if gh release view "$RELEASE_TAG" > /dev/null 2>&1; then
