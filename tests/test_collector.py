@@ -50,7 +50,9 @@ class CollectorTests(unittest.TestCase):
         self.assertTrue(result[0]['stale']);self.assertTrue(result[0]['disappeared']);self.assertEqual(result[0]['checked_at'],row['checked_at'])
 
     def test_expired_events_removed(self):
-        row=self.row();row['end_date']='2026-11-01';self.assertEqual(reconcile([row],[],[],NOW),[])
+        row=self.row();row['schedule'].update(start_date='2026-11-01',end_date='2026-11-01')
+        row.update(start='2026-11-01T13:00:00-06:00',date='2026-11-01',end_date='2026-11-01')
+        self.assertEqual(reconcile([row],[],[],NOW),[])
 
     def test_cancelation_survives(self):
         row=self.row();fresh=dict(row,status='canceled');result=reconcile([row],[fresh],[],NOW)

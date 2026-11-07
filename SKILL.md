@@ -5,6 +5,8 @@ description: Build broad, first-party-verified activity inventories for Kansas C
 
 # KC Activity Finder
 
+Read [activity modeling and coverage](references/activity-model-and-coverage.md) for broad category discovery and the separate schedule, registration and commitment contracts. Explore every taxonomy category in every regional band; record gaps instead of claiming an exhaustive sweep. Inspect outdoor-place directories, sports-season registration and schedule portals, exhibit runs, term catalogs, recurring series and evergreen offerings in addition to event calendars. Preserve unknown dates and hours; never turn a signup window into an activity run or a run into invented daily sessions.
+
 The static site and daily deterministic collection workflow are documented in [hosting and collection](references/hosting-and-collection.md). Use them for broad discovery; use the workflow below for personalized, adversarially reviewed recommendations. The unattended collection does not claim to perform semantic web search or human review.
 
 Read [execution](references/execution.md), [research workflow](references/workflow.md), [ranking](references/ranking.md), and [adversarial review](references/adversarial-review.md). Run from the repository root with Python 3.11+ and `pip install -r requirements.txt`.

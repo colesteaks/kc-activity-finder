@@ -1,0 +1,281 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Public activity offering or occurrence",
+  "type": "object",
+  "required": [
+    "id",
+    "offering_id",
+    "parent_id",
+    "title",
+    "url",
+    "start",
+    "end",
+    "date",
+    "end_date",
+    "schedule",
+    "registration",
+    "commitment",
+    "categories",
+    "category_inferred",
+    "ages",
+    "evidence"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "offering_id": {
+      "type": "string"
+    },
+    "parent_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "start": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "end": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "end_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "schedule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "kind_inferred",
+        "start_date",
+        "end_date",
+        "timezone",
+        "sessions",
+        "recurrence",
+        "operating_hours",
+        "exceptions",
+        "note"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "one_off",
+            "multi_day",
+            "exhibit",
+            "sports_season",
+            "course",
+            "camp",
+            "recurring_program",
+            "evergreen",
+            "program_catalog",
+            "date_range_unknown"
+          ]
+        },
+        "kind_inferred": {
+          "type": "boolean"
+        },
+        "start_date": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "end_date": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "timezone": {
+          "const": "America/Chicago"
+        },
+        "sessions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "start",
+              "end"
+            ],
+            "properties": {
+              "start": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "end": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date-time"
+              },
+              "status": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "recurrence": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "rrule": {
+              "type": "string"
+            },
+            "timezone": {
+              "const": "America/Chicago"
+            },
+            "exdates": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "rrule",
+            "timezone",
+            "exdates"
+          ]
+        },
+        "operating_hours": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "exceptions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "note": {
+          "type": "string"
+        }
+      }
+    },
+    "registration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "opens_at",
+        "deadline",
+        "url",
+        "note"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "unknown",
+            "open",
+            "not_open",
+            "closed",
+            "waitlist",
+            "sold_out"
+          ]
+        },
+        "opens_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "deadline": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "url": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        },
+        "note": {
+          "type": "string"
+        }
+      }
+    },
+    "commitment": {
+      "type": "object",
+      "required": [
+        "attendance",
+        "duration",
+        "equipment",
+        "note"
+      ],
+      "properties": {
+        "attendance": {
+          "enum": [
+            "unknown",
+            "drop_in",
+            "single_session",
+            "full_series",
+            "team_season"
+          ]
+        },
+        "duration": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "equipment": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "note": {
+          "type": "string"
+        }
+      }
+    },
+    "categories": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "category_inferred": {
+      "type": "boolean"
+    }
+  }
+}

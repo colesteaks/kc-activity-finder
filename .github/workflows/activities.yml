@@ -15,11 +15,15 @@ on:
       - 'scripts/collect_activities.py'
       - 'scripts/refresh_sources.py'
       - 'scripts/validate_public_data.py'
+      - 'scripts/activity_model.py'
+      - 'data/activity-taxonomy.json'
+      - 'schemas/activity.schema.json'
       - 'data/collection-sources.json'
       - 'requirements-collector.txt'
       - '.github/workflows/activities.yml'
       - 'tests/test_collector.py'
       - 'tests/test_filters.mjs'
+      - 'tests/test_activity_model.py'
 permissions:
   contents: read
 concurrency:
@@ -58,6 +62,7 @@ jobs:
         run: |
           python3 scripts/refresh_sources.py
           python3 scripts/collect_activities.py
+          python3 scripts/refresh_sources.py --coverage-only
       - name: Validate public data
         run: python3 scripts/validate_public_data.py
       - name: Commit updated flat files

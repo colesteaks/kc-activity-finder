@@ -686,3 +686,125 @@ footer > a:last-child {
     scroll-behavior: auto;
   }
 }
+.detail-main {
+  padding-top: 24px;
+  padding-bottom: 70px;
+}
+.detail-back {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 40px;
+}
+.detail-hero {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 30px;
+}
+.detail-hero h1 {
+  font-family: "Libre Caslon Display", Georgia, serif;
+  font-size: 64px;
+  line-height: 1.06;
+  font-weight: 400;
+  max-width: 900px;
+  margin: 0 0 20px;
+}
+.detail-category {
+  color: var(--accent);
+  font-size: 13px;
+}
+.detail-kind {
+  font-size: 12px;
+  color: var(--muted);
+}
+.detail-alert {
+  border-left: 3px solid var(--accent);
+  padding: 12px 16px;
+  background: #fbecd9;
+  font-size: 13px;
+}
+.detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 290px;
+  gap: 60px;
+  margin-top: 35px;
+}
+.detail-section {
+  padding: 0 0 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--line);
+}
+.detail-section h2,
+.detail-key h2 {
+  font-size: 19px;
+}
+.detail-section p,
+.detail-key p {
+  font-size: 13px;
+  line-height: 1.9;
+}
+.detail-facts {
+  display: grid;
+  grid-template-columns: 145px minmax(0, 1fr);
+  gap: 10px;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+.detail-facts dt {
+  color: var(--muted);
+}
+.detail-facts dd {
+  margin: 0;
+}
+.detail-key {
+  align-self: start;
+  background: var(--light);
+  padding: 22px;
+  border-radius: 7px;
+}
+.detail-key .detail-facts {
+  display: block;
+}
+.detail-key dt {
+  margin-top: 14px;
+}
+.detail-key dd {
+  margin: 4px 0 15px;
+}
+.detail-button {
+  display: inline-block;
+  background: var(--green);
+  color: white;
+  border: 0;
+  padding: 12px 18px;
+  border-radius: 5px;
+  font-size: 12px;
+  text-decoration: none;
+  margin: 16px 0;
+}
+.detail-occurrences {
+  font-size: 12px;
+  padding-left: 20px;
+  max-height: 330px;
+  overflow: auto;
+}
+.detail-occurrences li {
+  padding: 7px 0;
+  border-bottom: 1px solid var(--line);
+}
+@media (max-width: 700px) {
+  .detail-hero h1 {
+    font-size: 43px;
+  }
+  .detail-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .detail-key {
+    grid-row: 1;
+  }
+  .detail-facts {
+    grid-template-columns: 120px minmax(0, 1fr);
+  }
+  .detail-main {
+    padding-top: 20px;
+  }
+}

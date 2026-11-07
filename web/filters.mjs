@@ -23,9 +23,26 @@ export function matches(a, f) {
   if (!f.unavailable && ["canceled", "postponed"].includes(a.status))
     return false;
   if (f.location && a.region !== f.location) return false;
-  if (f.type && a.type !== f.type) return false;
-  if (f.from && a.end_date < f.from) return false;
-  if (f.to && a.date > f.to) return false;
+  if (f.type && a.type !== f.type && !a.categories?.includes(f.type))
+    return false;
+  if (
+    f.kind === "programs" &&
+    ![
+      "sports_season",
+      "course",
+      "camp",
+      "recurring_program",
+      "program_catalog",
+    ].includes(a.schedule?.kind)
+  )
+    return false;
+  if (f.kind && f.kind !== "programs" && a.schedule?.kind !== f.kind)
+    return false;
+  const low = a.schedule ? a.schedule.start_date : a.date;
+  const high = a.schedule ? a.schedule.end_date : a.end_date;
+  if (!low && !high && f.undated === false) return false;
+  if (f.from && high && high < f.from) return false;
+  if (f.to && low && low > f.to) return false;
   if (
     f.q &&
     ![a.title, a.city, a.venue, a.type, a.description]
@@ -50,8 +67,9 @@ export function sortedActivities(rows, sort) {
       ? a.title.localeCompare(b.title)
       : sort === "new"
         ? b.first_seen.localeCompare(a.first_seen) ||
-          a.start.localeCompare(b.start)
-        : a.start.localeCompare(b.start) || a.title.localeCompare(b.title),
+          (a.start || "9999").localeCompare(b.start || "9999")
+        : (a.start || "9999").localeCompare(b.start || "9999") ||
+          a.title.localeCompare(b.title),
   );
 }
 export function safeLink(value) {

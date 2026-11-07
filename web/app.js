@@ -1,3 +1,4 @@
+import { KIND_LABELS, scheduleLabel, activityHref } from "./activity-view.mjs";
 import {
   chicagoToday,
   windowDates,
@@ -13,6 +14,8 @@ const form = $("filters"),
     q: $("search"),
     location: $("location"),
     type: $("type"),
+    kind: $("kind"),
+    undated: $("undated"),
     age_min: $("age-min"),
     age_max: $("age-max"),
     from: $("date-from"),
@@ -59,7 +62,12 @@ function card(a) {
   const c = el("article", "", "card"),
     top = el("div", "", "card-top");
   top.append(
-    el("span", a.type, "card-type"),
+    el(
+      "span",
+      data.taxonomy?.categories.find((c) => c.id === a.categories?.[0])
+        ?.label || a.type,
+      "card-type",
+    ),
     el(
       "span",
       a.region === "Bentonville" ? "Northwest Arkansas" : a.region,
@@ -68,11 +76,13 @@ function card(a) {
   );
   c.append(top);
   const h = el("h3");
-  h.append(link(a.url, a.title));
+  const detail = el("a", a.title);
+  detail.href = activityHref(a);
+  h.append(detail);
   c.append(h);
-  let when = day.format(new Date(a.start));
-  if (a.end_date !== a.date) when += " – " + day.format(new Date(a.end));
-  else if (!a.all_day) when += " · " + clock.format(new Date(a.start));
+  let when = scheduleLabel(a);
+  if (a.start && a.schedule?.kind === "one_off" && !a.all_day)
+    when += " · " + clock.format(new Date(a.start));
   c.append(
     el("p", when, "card-date"),
     el("p", a.venue + " · " + a.city, "card-venue"),
@@ -87,6 +97,7 @@ function card(a) {
     );
   const tags = el("div", "", "card-meta");
   tags.append(el("span", a.ages.label, "tag"));
+  if (a.schedule) tags.append(el("span", KIND_LABELS[a.schedule.kind], "tag"));
   if (a.status !== "scheduled")
     tags.append(el("span", a.status, "tag warning"));
   if (a.stale || Date.now() - new Date(a.checked_at) > 72 * 3600e3)
@@ -105,7 +116,11 @@ function card(a) {
   const bottom = el("div", "", "card-bottom");
   bottom.append(
     el("span", a.source_name),
-    link(a.url, "Details & registration ↗"),
+    (() => {
+      const aLink = el("a", "View activity →");
+      aLink.href = activityHref(a);
+      return aLink;
+    })(),
   );
   c.append(bottom);
   return c;
@@ -115,7 +130,7 @@ function render() {
   const f = filters(),
     params = new URLSearchParams();
   for (const [k, v] of Object.entries(f)) {
-    if (k === "unknown_ages") {
+    if (k === "unknown_ages" || k === "undated") {
       if (!v) params.set(k, "0");
     } else if (k === "unavailable") {
       if (v) params.set(k, "1");
@@ -231,10 +246,15 @@ async function start() {
     data = await response.json();
     if (!Array.isArray(data.activities) || !Array.isArray(data.sources))
       throw Error("Invalid data");
-    for (const t of [...new Set(data.activities.map((a) => a.type))].sort()) {
-      const o = el("option", t);
-      o.value = t;
+    for (const t of data.taxonomy?.categories || []) {
+      const o = el("option", t.label);
+      o.value = t.id;
       inputs.type.append(o);
+    }
+    for (const [value, label] of Object.entries(KIND_LABELS)) {
+      const o = el("option", label);
+      o.value = value;
+      inputs.kind.append(o);
     }
     const params = new URLSearchParams(location.search);
     inputs.from.value = chicagoToday();
@@ -248,6 +268,32 @@ async function start() {
     $("freshness").textContent =
       `${data.activities.length.toLocaleString()} activities · Updated ${day.format(new Date(data.updated_at))} · ${hours > 72 ? "Collection needs a fresh check" : "Scheduled daily"}`;
     coverage();
+    if (data.coverage_matrix) {
+      const matrix = data.coverage_matrix.category_by_region;
+      const gaps = matrix.filter((c) => c.status === "gap");
+      $("coverage-summary").textContent +=
+        ` · ${gaps.length} category/region gaps`;
+      for (const region of data.taxonomy.regions) {
+        const row = el("div", "", "source-row");
+        row.append(el("strong", region));
+        const missing = matrix
+          .filter((c) => c.region === region && c.status === "gap")
+          .map(
+            (c) =>
+              data.taxonomy.categories.find((t) => t.id === c.category)
+                ?.label || c.category,
+          );
+        row.append(
+          el(
+            "p",
+            "Source gaps: " +
+              (missing.join(", ") ||
+                "Every subject has at least one route; collection may still be incomplete."),
+          ),
+        );
+        $("source-health").append(row);
+      }
+    }
     render();
   } catch (error) {
     $("freshness").textContent = "The collection is temporarily unavailable";

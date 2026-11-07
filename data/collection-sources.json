@@ -11,7 +11,23 @@
       "format": "discovery",
       "url": "https://www.kcdaily.com/",
       "pattern": "/p/",
-      "max_details": 0
+      "max_details": 0,
+      "categories": [
+        "community_social",
+        "festivals_seasonal",
+        "food_drink",
+        "music_performance"
+      ],
+      "activity_kinds": [
+        "one_off",
+        "multi_day"
+      ],
+      "required_leaves": [
+        "specific event or program",
+        "registration and deadlines",
+        "season schedule or exhibit run",
+        "hours and closures"
+      ]
     },
     {
       "id": "watkins",
@@ -20,7 +36,23 @@
       "city": "Lawrence",
       "kind": "organizer",
       "format": "tribe",
-      "url": "https://www.watkinsmuseum.org/wp-json/tribe/events/v1/events"
+      "url": "https://www.watkinsmuseum.org/wp-json/tribe/events/v1/events",
+      "categories": [
+        "history_culture",
+        "arts_exhibits",
+        "classes_skills"
+      ],
+      "activity_kinds": [
+        "exhibit",
+        "one_off",
+        "course"
+      ],
+      "required_leaves": [
+        "specific event or program",
+        "registration and deadlines",
+        "season schedule or exhibit run",
+        "hours and closures"
+      ]
     },
     {
       "id": "lawrence-arts",
@@ -31,7 +63,25 @@
       "format": "jsonld",
       "url": "https://lawrenceartscenter.org/events-at-lawrence-arts-center/",
       "pattern": "/event/",
-      "max_details": 80
+      "max_details": 80,
+      "categories": [
+        "arts_exhibits",
+        "music_performance",
+        "classes_skills",
+        "camps"
+      ],
+      "activity_kinds": [
+        "exhibit",
+        "course",
+        "camp",
+        "one_off"
+      ],
+      "required_leaves": [
+        "specific event or program",
+        "registration and deadlines",
+        "season schedule or exhibit run",
+        "hours and closures"
+      ]
     },
     {
       "id": "momentary",
@@ -42,7 +92,24 @@
       "format": "jsonld",
       "url": "https://themomentary.org/calendar/",
       "pattern": "/calendar/[^/]+/",
-      "max_details": 70
+      "max_details": 70,
+      "categories": [
+        "arts_exhibits",
+        "music_performance",
+        "food_drink",
+        "markets_shopping"
+      ],
+      "activity_kinds": [
+        "exhibit",
+        "one_off",
+        "recurring_program"
+      ],
+      "required_leaves": [
+        "specific event or program",
+        "registration and deadlines",
+        "season schedule or exhibit run",
+        "hours and closures"
+      ]
     },
     {
       "id": "crystal-bridges",
@@ -54,7 +121,24 @@
       "url": "https://crystalbridges.org/calendar/2026-11/",
       "month_template": "https://crystalbridges.org/calendar/{month}/",
       "pattern": "/events/[^/]+",
-      "max_details": 70
+      "max_details": 70,
+      "categories": [
+        "arts_exhibits",
+        "nature_animals",
+        "classes_skills",
+        "travel_exploration"
+      ],
+      "activity_kinds": [
+        "exhibit",
+        "recurring_program",
+        "course"
+      ],
+      "required_leaves": [
+        "specific event or program",
+        "registration and deadlines",
+        "season schedule or exhibit run",
+        "hours and closures"
+      ]
     },
     {
       "id": "columbia-cvb",
@@ -65,7 +149,23 @@
       "format": "columbia",
       "url": "https://www.visitcolumbiamo.com/events/",
       "pattern": "/event/",
-      "max_details": 80
+      "max_details": 80,
+      "categories": [
+        "community_social",
+        "sports_spectating",
+        "music_performance",
+        "festivals_seasonal"
+      ],
+      "activity_kinds": [
+        "one_off",
+        "multi_day"
+      ],
+      "required_leaves": [
+        "specific event or program",
+        "registration and deadlines",
+        "season schedule or exhibit run",
+        "hours and closures"
+      ]
     },
     {
       "id": "kc-zoo",
@@ -76,7 +176,24 @@
       "format": "jsonld",
       "url": "https://kansascityzoo.org/events/",
       "pattern": "/event/",
-      "max_details": 0
+      "max_details": 0,
+      "categories": [
+        "nature_animals",
+        "science_technology",
+        "classes_skills",
+        "camps"
+      ],
+      "activity_kinds": [
+        "one_off",
+        "recurring_program",
+        "camp"
+      ],
+      "required_leaves": [
+        "specific event or program",
+        "registration and deadlines",
+        "season schedule or exhibit run",
+        "hours and closures"
+      ]
     },
     {
       "id": "nelson",
@@ -87,7 +204,24 @@
       "format": "jsonld",
       "url": "https://nelson-atkins.org/events/",
       "pattern": "/events/[^/]+",
-      "max_details": 60
+      "max_details": 60,
+      "categories": [
+        "arts_exhibits",
+        "history_culture",
+        "classes_skills",
+        "festivals_seasonal"
+      ],
+      "activity_kinds": [
+        "exhibit",
+        "course",
+        "one_off"
+      ],
+      "required_leaves": [
+        "specific event or program",
+        "registration and deadlines",
+        "season schedule or exhibit run",
+        "hours and closures"
+      ]
     },
     {
       "id": "kc-library",
@@ -98,7 +232,24 @@
       "format": "jsonld",
       "url": "https://kclibrary.org/events",
       "pattern": "/events/[^/?]+",
-      "max_details": 60
+      "max_details": 60,
+      "categories": [
+        "libraries_learning",
+        "film_literature",
+        "games_hobbies",
+        "community_social"
+      ],
+      "activity_kinds": [
+        "one_off",
+        "recurring_program",
+        "course"
+      ],
+      "required_leaves": [
+        "specific event or program",
+        "registration and deadlines",
+        "season schedule or exhibit run",
+        "hours and closures"
+      ]
     },
     {
       "id": "kc-parks",
@@ -107,7 +258,24 @@
       "city": "Kansas City",
       "kind": "organizer",
       "format": "tribe",
-      "url": "https://kcparks.org/wp-json/tribe/events/v1/events"
+      "url": "https://kcparks.org/wp-json/tribe/events/v1/events",
+      "categories": [
+        "outdoor_recreation",
+        "sports_participation",
+        "fitness_wellness",
+        "community_social"
+      ],
+      "activity_kinds": [
+        "one_off",
+        "sports_season",
+        "recurring_program"
+      ],
+      "required_leaves": [
+        "specific event or program",
+        "registration and deadlines",
+        "season schedule or exhibit run",
+        "hours and closures"
+      ]
     },
     {
       "id": "bentonville-downtown",
@@ -118,7 +286,653 @@
       "format": "jsonld",
       "url": "https://downtownbentonville.org/events/calendar",
       "pattern": "/events/[^/?]+",
-      "max_details": 25
+      "max_details": 25,
+      "categories": [
+        "markets_shopping",
+        "festivals_seasonal",
+        "community_social"
+      ],
+      "activity_kinds": [
+        "recurring_program",
+        "one_off",
+        "multi_day"
+      ],
+      "required_leaves": [
+        "specific event or program",
+        "registration and deadlines",
+        "season schedule or exhibit run",
+        "hours and closures"
+      ]
+    },
+    {
+      "id": "weston-bend",
+      "name": "Weston Bend State Park",
+      "region": "Kansas City metro",
+      "city": "Weston",
+      "kind": "organizer",
+      "format": "offering",
+      "url": "https://mostateparks.com/park/weston-bend-state-park",
+      "pattern": "/",
+      "max_details": 0,
+      "categories": [
+        "outdoor_recreation",
+        "nature_animals",
+        "travel_exploration"
+      ],
+      "activity_kinds": [
+        "evergreen"
+      ],
+      "reviewed_at": "2026-11-07",
+      "required_leaves": [
+        "program-specific details",
+        "season or exhibit dates",
+        "registration opens and deadline",
+        "sessions, exceptions, operating hours and conditions"
+      ],
+      "offering": {
+        "title": "Hiking, cycling and camping at Weston Bend",
+        "schedule": {
+          "kind": "evergreen",
+          "start_date": null,
+          "end_date": null,
+          "note": "Ongoing place or program offering. Specific season dates, current conditions and registration availability must be confirmed with the source."
+        }
+      }
+    },
+    {
+      "id": "jcprd-adult-sports",
+      "name": "JCPRD adult sports",
+      "region": "Kansas City metro",
+      "city": "Johnson County",
+      "kind": "organizer",
+      "format": "discovery",
+      "url": "https://jcprd.com/204/Adult-Sports",
+      "pattern": "/",
+      "max_details": 0,
+      "categories": [
+        "sports_participation",
+        "fitness_wellness"
+      ],
+      "activity_kinds": [
+        "sports_season",
+        "program_catalog"
+      ],
+      "reviewed_at": "2026-11-07",
+      "required_leaves": [
+        "program-specific details",
+        "season or exhibit dates",
+        "registration opens and deadline",
+        "sessions, exceptions, operating hours and conditions"
+      ]
+    },
+    {
+      "id": "jcprd-youth-sports",
+      "name": "JCPRD youth sports",
+      "region": "Kansas City metro",
+      "city": "Johnson County",
+      "kind": "organizer",
+      "format": "discovery",
+      "url": "https://www.jcprd.com/205/Youth-Sports",
+      "pattern": "/",
+      "max_details": 0,
+      "categories": [
+        "sports_participation",
+        "camps"
+      ],
+      "activity_kinds": [
+        "sports_season",
+        "camp",
+        "program_catalog"
+      ],
+      "reviewed_at": "2026-11-07",
+      "required_leaves": [
+        "program-specific details",
+        "season or exhibit dates",
+        "registration opens and deadline",
+        "sessions, exceptions, operating hours and conditions"
+      ]
+    },
+    {
+      "id": "lawrence-programs",
+      "name": "Lawrence Parks programs",
+      "region": "Lawrence",
+      "city": "Lawrence",
+      "kind": "organizer",
+      "format": "discovery",
+      "url": "https://www.lawrenceks.gov/City/PRC/Programs-Activities",
+      "pattern": "/",
+      "max_details": 0,
+      "categories": [
+        "sports_participation",
+        "outdoor_recreation",
+        "fitness_wellness",
+        "classes_skills",
+        "adaptive_inclusive",
+        "camps"
+      ],
+      "activity_kinds": [
+        "sports_season",
+        "course",
+        "camp",
+        "program_catalog"
+      ],
+      "reviewed_at": "2026-11-07",
+      "required_leaves": [
+        "program-specific details",
+        "season or exhibit dates",
+        "registration opens and deadline",
+        "sessions, exceptions, operating hours and conditions"
+      ]
+    },
+    {
+      "id": "lawrence-youth-soccer",
+      "name": "Lawrence youth soccer",
+      "region": "Lawrence",
+      "city": "Lawrence",
+      "kind": "organizer",
+      "format": "offering",
+      "url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer",
+      "pattern": "/",
+      "max_details": 0,
+      "categories": [
+        "sports_participation"
+      ],
+      "activity_kinds": [
+        "sports_season"
+      ],
+      "reviewed_at": "2026-11-07",
+      "required_leaves": [
+        "program-specific details",
+        "season or exhibit dates",
+        "registration opens and deadline",
+        "sessions, exceptions, operating hours and conditions"
+      ],
+      "offering": {
+        "title": "Lawrence youth indoor soccer program",
+        "schedule": {
+          "kind": "recurring_program",
+          "start_date": null,
+          "end_date": null,
+          "note": "Ongoing place or program offering. Specific season dates, current conditions and registration availability must be confirmed with the source."
+        }
+      }
+    },
+    {
+      "id": "columbia-programs",
+      "name": "Columbia Parks programs and registration",
+      "region": "Columbia",
+      "city": "Columbia",
+      "kind": "organizer",
+      "format": "discovery",
+      "url": "https://www.como.gov/parks-and-recreation/programs-registration/",
+      "pattern": "/",
+      "max_details": 0,
+      "categories": [
+        "sports_participation",
+        "fitness_wellness",
+        "adaptive_inclusive",
+        "camps",
+        "classes_skills"
+      ],
+      "activity_kinds": [
+        "sports_season",
+        "course",
+        "camp",
+        "program_catalog"
+      ],
+      "reviewed_at": "2026-11-07",
+      "required_leaves": [
+        "program-specific details",
+        "season or exhibit dates",
+        "registration opens and deadline",
+        "sessions, exceptions, operating hours and conditions"
+      ]
+    },
+    {
+      "id": "columbia-parks",
+      "name": "Columbia parks, trails and facilities",
+      "region": "Columbia",
+      "city": "Columbia",
+      "kind": "organizer",
+      "format": "discovery",
+      "url": "https://www.como.gov/parks-and-recreation/",
+      "pattern": "/",
+      "max_details": 0,
+      "categories": [
+        "outdoor_recreation",
+        "nature_animals",
+        "play_attractions"
+      ],
+      "activity_kinds": [
+        "evergreen",
+        "program_catalog"
+      ],
+      "reviewed_at": "2026-11-07",
+      "required_leaves": [
+        "program-specific details",
+        "season or exhibit dates",
+        "registration opens and deadline",
+        "sessions, exceptions, operating hours and conditions"
+      ]
+    },
+    {
+      "id": "bentonville-soccer",
+      "name": "Bentonville soccer program",
+      "region": "Bentonville",
+      "city": "Bentonville",
+      "kind": "organizer",
+      "format": "offering",
+      "url": "https://bentonville.ar.gov/478/Soccer-Program",
+      "pattern": "/",
+      "max_details": 0,
+      "categories": [
+        "sports_participation"
+      ],
+      "activity_kinds": [
+        "sports_season"
+      ],
+      "reviewed_at": "2026-11-07",
+      "required_leaves": [
+        "program-specific details",
+        "season or exhibit dates",
+        "registration opens and deadline",
+        "sessions, exceptions, operating hours and conditions"
+      ],
+      "offering": {
+        "title": "Bentonville adult soccer program",
+        "schedule": {
+          "kind": "recurring_program",
+          "start_date": null,
+          "end_date": null,
+          "note": "Ongoing place or program offering. Specific season dates, current conditions and registration availability must be confirmed with the source."
+        }
+      }
+    },
+    {
+      "id": "bentonville-outdoors",
+      "name": "Bentonville Outdoors",
+      "region": "Bentonville",
+      "city": "Bentonville",
+      "kind": "organizer",
+      "format": "discovery",
+      "url": "https://www.bentonville.ar.gov/1477/Bentonville-Outdoors",
+      "pattern": "/",
+      "max_details": 0,
+      "categories": [
+        "outdoor_recreation",
+        "nature_animals",
+        "camps"
+      ],
+      "activity_kinds": [
+        "one_off",
+        "course",
+        "camp",
+        "recurring_program"
+      ],
+      "reviewed_at": "2026-11-07",
+      "required_leaves": [
+        "program-specific details",
+        "season or exhibit dates",
+        "registration opens and deadline",
+        "sessions, exceptions, operating hours and conditions"
+      ]
+    },
+    {
+      "id": "bentonville-schedules",
+      "name": "Bentonville league schedules",
+      "region": "Bentonville",
+      "city": "Bentonville",
+      "kind": "organizer",
+      "format": "discovery",
+      "url": "https://bentonville.ar.gov/1249/Schedules",
+      "pattern": "/",
+      "max_details": 0,
+      "categories": [
+        "sports_participation"
+      ],
+      "activity_kinds": [
+        "sports_season",
+        "program_catalog"
+      ],
+      "reviewed_at": "2026-11-07",
+      "required_leaves": [
+        "program-specific details",
+        "season or exhibit dates",
+        "registration opens and deadline",
+        "sessions, exceptions, operating hours and conditions"
+      ]
+    },
+    {
+      "id": "kc-volunteer",
+      "name": "Kansas City volunteer opportunities",
+      "region": "Kansas City metro",
+      "city": "Kansas City",
+      "kind": "organizer",
+      "format": "discovery",
+      "url": "https://www.kcmo.gov/programs-initiatives/volunteer",
+      "pattern": "/",
+      "max_details": 0,
+      "categories": [
+        "volunteering",
+        "community_social"
+      ],
+      "activity_kinds": [
+        "recurring_program",
+        "program_catalog"
+      ],
+      "reviewed_at": "2026-11-07",
+      "required_leaves": [
+        "program-specific details",
+        "season or exhibit dates",
+        "registration opens and deadline",
+        "sessions, exceptions, operating hours and conditions"
+      ]
+    },
+    {
+      "id": "crystal-exhibits",
+      "name": "Crystal Bridges exhibitions",
+      "region": "Bentonville",
+      "city": "Bentonville",
+      "kind": "organizer",
+      "format": "discovery",
+      "url": "https://crystalbridges.org/art-exhibitions",
+      "pattern": "/",
+      "max_details": 0,
+      "categories": [
+        "arts_exhibits"
+      ],
+      "activity_kinds": [
+        "exhibit"
+      ],
+      "reviewed_at": "2026-11-07",
+      "required_leaves": [
+        "program-specific details",
+        "season or exhibit dates",
+        "registration opens and deadline",
+        "sessions, exceptions, operating hours and conditions"
+      ]
+    },
+    {
+      "id": "clinton-state-park",
+      "name": "Clinton State Park",
+      "region": "Lawrence",
+      "city": "Lawrence",
+      "url": "https://www.ksoutdoors.gov/about-kdwp/where-we-work/state-parks/clinton",
+      "kind": "organizer",
+      "format": "offering",
+      "pattern": "/",
+      "max_details": 0,
+      "categories": [
+        "outdoor_recreation",
+        "nature_animals",
+        "play_attractions"
+      ],
+      "activity_kinds": [
+        "evergreen"
+      ],
+      "reviewed_at": "2026-11-07",
+      "required_leaves": [
+        "specific activity or trail",
+        "season schedule or exhibit run",
+        "opening hours closures and exceptions",
+        "registration deadline and participation commitment"
+      ],
+      "offering": {
+        "title": "Explore Clinton State Park",
+        "schedule": {
+          "kind": "evergreen",
+          "start_date": null,
+          "end_date": null,
+          "note": "An ongoing place, not a dated event. Confirm current opening hours, conditions, admission and any seasonal restrictions on the official source."
+        }
+      }
+    },
+    {
+      "id": "rock-bridge-state-park",
+      "name": "Rock Bridge Memorial State Park",
+      "region": "Columbia",
+      "city": "Columbia",
+      "url": "https://mostateparks.com/park/rock-bridge-memorial-state-park",
+      "kind": "organizer",
+      "format": "offering",
+      "pattern": "/",
+      "max_details": 0,
+      "categories": [
+        "outdoor_recreation",
+        "nature_animals",
+        "travel_exploration"
+      ],
+      "activity_kinds": [
+        "evergreen"
+      ],
+      "reviewed_at": "2026-11-07",
+      "required_leaves": [
+        "specific activity or trail",
+        "season schedule or exhibit run",
+        "opening hours closures and exceptions",
+        "registration deadline and participation commitment"
+      ],
+      "offering": {
+        "title": "Hiking and nature at Rock Bridge Memorial State Park",
+        "schedule": {
+          "kind": "evergreen",
+          "start_date": null,
+          "end_date": null,
+          "note": "An ongoing place, not a dated event. Confirm current opening hours, conditions, admission and any seasonal restrictions on the official source."
+        }
+      }
+    },
+    {
+      "id": "crystal-trails",
+      "name": "Crystal Bridges nature and trails",
+      "region": "Bentonville",
+      "city": "Bentonville",
+      "url": "https://crystalbridges.org/visit/nature-trails",
+      "kind": "organizer",
+      "format": "offering",
+      "pattern": "/",
+      "max_details": 0,
+      "categories": [
+        "outdoor_recreation",
+        "nature_animals",
+        "arts_exhibits"
+      ],
+      "activity_kinds": [
+        "evergreen"
+      ],
+      "reviewed_at": "2026-11-07",
+      "required_leaves": [
+        "specific activity or trail",
+        "season schedule or exhibit run",
+        "opening hours closures and exceptions",
+        "registration deadline and participation commitment"
+      ],
+      "offering": {
+        "title": "Explore Crystal Bridges nature trails",
+        "schedule": {
+          "kind": "evergreen",
+          "start_date": null,
+          "end_date": null,
+          "note": "An ongoing place, not a dated event. Confirm current opening hours, conditions, admission and any seasonal restrictions on the official source."
+        }
+      }
+    },
+    {
+      "id": "science-city",
+      "name": "Science City",
+      "region": "Kansas City metro",
+      "city": "Kansas City",
+      "url": "https://sciencecity.unionstation.org/plan-your-visit/",
+      "kind": "organizer",
+      "format": "offering",
+      "pattern": "/",
+      "max_details": 0,
+      "categories": [
+        "science_technology",
+        "play_attractions",
+        "classes_skills",
+        "camps"
+      ],
+      "activity_kinds": [
+        "evergreen",
+        "camp",
+        "recurring_program"
+      ],
+      "reviewed_at": "2026-11-07",
+      "required_leaves": [
+        "specific activity or trail",
+        "season schedule or exhibit run",
+        "opening hours closures and exceptions",
+        "registration deadline and participation commitment"
+      ],
+      "offering": {
+        "title": "Visit Science City",
+        "schedule": {
+          "kind": "evergreen",
+          "start_date": null,
+          "end_date": null,
+          "note": "An ongoing place, not a dated event. Confirm current opening hours, conditions, admission and any seasonal restrictions on the official source."
+        },
+        "categories": [
+          "science_technology",
+          "play_attractions"
+        ]
+      }
+    },
+    {
+      "id": "prairie-park",
+      "name": "Prairie Park Nature Center",
+      "region": "Lawrence",
+      "city": "Lawrence",
+      "url": "https://www.lawrenceks.gov/City/PRC/Prairie-Park-Nature-Center",
+      "kind": "organizer",
+      "format": "discovery",
+      "pattern": "/",
+      "max_details": 0,
+      "categories": [
+        "nature_animals",
+        "outdoor_recreation",
+        "volunteering",
+        "camps"
+      ],
+      "activity_kinds": [
+        "evergreen",
+        "camp",
+        "course"
+      ],
+      "reviewed_at": "2026-11-07",
+      "required_leaves": [
+        "specific activity or trail",
+        "season schedule or exhibit run",
+        "opening hours closures and exceptions",
+        "registration deadline and participation commitment"
+      ]
+    },
+    {
+      "id": "lawrence-library",
+      "name": "Lawrence Public Library events",
+      "region": "Lawrence",
+      "city": "Lawrence",
+      "url": "https://lplks.org/events/",
+      "kind": "organizer",
+      "format": "discovery",
+      "pattern": "/",
+      "max_details": 0,
+      "categories": [
+        "libraries_learning",
+        "film_literature",
+        "classes_skills",
+        "community_social"
+      ],
+      "activity_kinds": [
+        "one_off",
+        "recurring_program",
+        "course"
+      ],
+      "reviewed_at": "2026-11-07",
+      "required_leaves": [
+        "specific activity or trail",
+        "season schedule or exhibit run",
+        "opening hours closures and exceptions",
+        "registration deadline and participation commitment"
+      ]
+    },
+    {
+      "id": "bentonville-trails",
+      "name": "Bentonville trails map",
+      "region": "Bentonville",
+      "city": "Bentonville",
+      "url": "https://www.bentonville.ar.gov/1260/Trail-Map",
+      "kind": "organizer",
+      "format": "discovery",
+      "pattern": "/",
+      "max_details": 0,
+      "categories": [
+        "outdoor_recreation",
+        "travel_exploration"
+      ],
+      "activity_kinds": [
+        "evergreen",
+        "program_catalog"
+      ],
+      "reviewed_at": "2026-11-07",
+      "required_leaves": [
+        "specific activity or trail",
+        "season schedule or exhibit run",
+        "opening hours closures and exceptions",
+        "registration deadline and participation commitment"
+      ]
+    },
+    {
+      "id": "naturals-schedule",
+      "name": "Northwest Arkansas Naturals schedule",
+      "region": "Bentonville",
+      "city": "Springdale",
+      "url": "https://www.milb.com/northwest-arkansas/schedule/downloadable-schedule",
+      "kind": "organizer",
+      "format": "discovery",
+      "pattern": "/",
+      "max_details": 0,
+      "categories": [
+        "sports_spectating"
+      ],
+      "activity_kinds": [
+        "sports_season",
+        "one_off"
+      ],
+      "reviewed_at": "2026-11-07",
+      "required_leaves": [
+        "specific activity or trail",
+        "season schedule or exhibit run",
+        "opening hours closures and exceptions",
+        "registration deadline and participation commitment"
+      ]
+    },
+    {
+      "id": "wonderscope-volunteer",
+      "name": "Wonderscope volunteering",
+      "region": "Kansas City metro",
+      "city": "Kansas City",
+      "url": "https://wonderscope.org/volunteers/",
+      "kind": "organizer",
+      "format": "discovery",
+      "pattern": "/",
+      "max_details": 0,
+      "categories": [
+        "volunteering",
+        "play_attractions",
+        "community_social"
+      ],
+      "activity_kinds": [
+        "recurring_program"
+      ],
+      "reviewed_at": "2026-11-07",
+      "required_leaves": [
+        "specific activity or trail",
+        "season schedule or exhibit run",
+        "opening hours closures and exceptions",
+        "registration deadline and participation commitment"
+      ]
     }
   ]
 }

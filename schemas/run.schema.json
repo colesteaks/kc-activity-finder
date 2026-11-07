@@ -916,6 +916,159 @@
                 }
               }
             }
+          },
+          "schedule": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "kind",
+              "kind_inferred",
+              "start_date",
+              "end_date",
+              "timezone",
+              "sessions",
+              "recurrence",
+              "operating_hours",
+              "exceptions",
+              "note"
+            ],
+            "properties": {
+              "kind": {
+                "enum": [
+                  "one_off",
+                  "multi_day",
+                  "exhibit",
+                  "sports_season",
+                  "course",
+                  "camp",
+                  "recurring_program",
+                  "evergreen",
+                  "program_catalog",
+                  "date_range_unknown"
+                ]
+              },
+              "kind_inferred": {
+                "type": "boolean"
+              },
+              "start_date": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date"
+              },
+              "end_date": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date"
+              },
+              "timezone": {
+                "const": "America/Chicago"
+              },
+              "sessions": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "start",
+                    "end"
+                  ],
+                  "properties": {
+                    "start": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "end": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "format": "date-time"
+                    },
+                    "status": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "recurrence": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "rrule": {
+                    "type": "string"
+                  },
+                  "timezone": {
+                    "const": "America/Chicago"
+                  },
+                  "exdates": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "rrule",
+                  "timezone",
+                  "exdates"
+                ]
+              },
+              "operating_hours": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "exceptions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "note": {
+                "type": "string"
+              }
+            }
+          },
+          "commitment": {
+            "type": "object",
+            "required": [
+              "attendance",
+              "duration",
+              "equipment",
+              "note"
+            ],
+            "properties": {
+              "attendance": {
+                "enum": [
+                  "unknown",
+                  "drop_in",
+                  "single_session",
+                  "full_series",
+                  "team_season"
+                ]
+              },
+              "duration": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "equipment": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "note": {
+                "type": "string"
+              }
+            }
           }
         }
       }

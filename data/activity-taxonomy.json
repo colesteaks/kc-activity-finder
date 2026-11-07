@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "regions": [
+    "Kansas City metro",
+    "Lawrence",
+    "Columbia",
+    "Bentonville",
+    "surrounding areas"
+  ],
+  "categories": [
+    {
+      "id": "outdoor_recreation",
+      "label": "Outdoor recreation",
+      "search_terms": "hiking cycling paddling camping fishing climbing trails"
+    },
+    {
+      "id": "sports_participation",
+      "label": "Sports participation",
+      "search_terms": "youth adult adaptive leagues seasons teams tournaments"
+    },
+    {
+      "id": "sports_spectating",
+      "label": "Sports spectating",
+      "search_terms": "professional college amateur sports season schedules"
+    },
+    {
+      "id": "fitness_wellness",
+      "label": "Fitness & wellness",
+      "search_terms": "fitness yoga swimming martial arts wellness"
+    },
+    {
+      "id": "arts_exhibits",
+      "label": "Art & exhibits",
+      "search_terms": "temporary exhibitions galleries public art"
+    },
+    {
+      "id": "history_culture",
+      "label": "History & culture",
+      "search_terms": "history museums heritage cultural celebrations"
+    },
+    {
+      "id": "science_technology",
+      "label": "Science & technology",
+      "search_terms": "science planetarium STEM makers robotics"
+    },
+    {
+      "id": "nature_animals",
+      "label": "Nature & animals",
+      "search_terms": "nature centers wildlife birding gardens zoo"
+    },
+    {
+      "id": "music_performance",
+      "label": "Music & performance",
+      "search_terms": "concerts theater dance opera comedy"
+    },
+    {
+      "id": "film_literature",
+      "label": "Film & literature",
+      "search_terms": "cinema film festivals author readings book clubs"
+    },
+    {
+      "id": "classes_skills",
+      "label": "Classes & skills",
+      "search_terms": "classes workshops cooking crafts language lessons"
+    },
+    {
+      "id": "camps",
+      "label": "Camps",
+      "search_terms": "day camps overnight camps summer school break"
+    },
+    {
+      "id": "play_attractions",
+      "label": "Play & attractions",
+      "search_terms": "playgrounds indoor play amusement escape rooms mini golf"
+    },
+    {
+      "id": "food_drink",
+      "label": "Food & drink",
+      "search_terms": "food festivals tastings dining cooking breweries"
+    },
+    {
+      "id": "markets_shopping",
+      "label": "Markets & shopping",
+      "search_terms": "farmers markets craft fairs vintage holiday markets"
+    },
+    {
+      "id": "festivals_seasonal",
+      "label": "Festivals & seasonal",
+      "search_terms": "festivals fairs holiday seasonal celebrations"
+    },
+    {
+      "id": "games_hobbies",
+      "label": "Games & hobbies",
+      "search_terms": "board games chess tabletop gaming hobby clubs"
+    },
+    {
+      "id": "community_social",
+      "label": "Community & social",
+      "search_terms": "meetups cultural community social clubs"
+    },
+    {
+      "id": "volunteering",
+      "label": "Volunteering",
+      "search_terms": "volunteer service conservation citizen science"
+    },
+    {
+      "id": "libraries_learning",
+      "label": "Libraries & learning",
+      "search_terms": "libraries storytime literacy lifelong learning"
+    },
+    {
+      "id": "adaptive_inclusive",
+      "label": "Adaptive & inclusive",
+      "search_terms": "adaptive sports inclusive recreation sensory friendly ASL"
+    },
+    {
+      "id": "travel_exploration",
+      "label": "Local exploration",
+      "search_terms": "walking tours architecture day trips agritourism"
+    }
+  ],
+  "policy": "Extensible subject taxonomy. Age, audience, cost, access needs and activity duration are separate dimensions; never prefilter discovery."
+}

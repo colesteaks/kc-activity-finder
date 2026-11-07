@@ -58,3 +58,50 @@ test("unsafe links rejected", () => {
   assert.equal(safeLink("https://user:pass@example.com"), null);
   assert.equal(safeLink("https://example.com"), "https://example.com/");
 });
+
+test("evergreen has no invented date and can be hidden", () => {
+  const trail = {
+    ...a,
+    start: null,
+    date: null,
+    end_date: null,
+    schedule: { kind: "evergreen", start_date: null, end_date: null },
+  };
+  assert.equal(matches(trail, { ...f, from: "2027-01-01" }), true);
+  assert.equal(matches(trail, { ...f, undated: false }), false);
+});
+test("exhibit overlaps mid-run date range", () => {
+  const exhibit = {
+    ...a,
+    schedule: {
+      kind: "exhibit",
+      start_date: "2026-10-01",
+      end_date: "2027-01-01",
+    },
+  };
+  assert.equal(
+    matches(exhibit, {
+      ...f,
+      from: "2026-12-01",
+      to: "2026-12-05",
+      kind: "exhibit",
+    }),
+    true,
+  );
+});
+test("unknown season end is not replaced by first session date", () => {
+  const season = {
+    ...a,
+    date: "2027-01-01",
+    end_date: "2027-01-01",
+    schedule: {
+      kind: "sports_season",
+      start_date: "2027-01-01",
+      end_date: null,
+    },
+  };
+  assert.equal(
+    matches(season, { ...f, from: "2027-02-01", kind: "programs" }),
+    true,
+  );
+});

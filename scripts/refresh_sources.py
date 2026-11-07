@@ -5,6 +5,7 @@ The supplied seed and curated source graph are read-only. Only reviewed registry
 sources are fetched; outbound links are proposals, never automatically crawled.
 """
 import hashlib
+import argparse
 import json
 from datetime import datetime
 from pathlib import Path
@@ -12,6 +13,7 @@ from urllib.parse import urljoin, urlsplit
 
 from bs4 import BeautifulSoup
 from collect_activities import ROOT, TZ, Fetcher, safe_url, canonical
+from activity_model import coverage_matrix
 
 
 def refresh(root=ROOT):
@@ -32,7 +34,9 @@ def refresh(root=ROOT):
         if source.get('month_template'):
             source = dict(source, url=source['month_template'].format(month=now[:7]))
         graph['nodes'].append({'id': source['id'], 'label': source['name'], 'url': source['url'],
-            'role': source['kind'], 'region': source['region'], 'provenance': 'provided-seed' if source['id'] == 'kc-daily' else 'reviewed-supplement'})
+            'role': source['kind'], 'region': source['region'], 'categories': source.get('categories', []),
+            'activity_kinds': source.get('activity_kinds', []), 'required_leaves': source.get('required_leaves', []),
+            'provenance': 'provided-seed' if source['id'] == 'kc-daily' else 'reviewed-supplement'})
         fetcher = Fetcher(root / '.collector-cache' / source['id'])
         try:
             # API sources are already approved routes. Discovery operates on HTML calendars.
@@ -61,9 +65,10 @@ def refresh(root=ROOT):
                     if not target: continue
                     host = urlsplit(target).hostname
                     label = a.get_text(' ', strip=True)[:160]
-                    if host in approved or not label: continue
+                    if not label: continue
+                    # Same-provider program, trail and registration leaves matter too.
                     if any(host.endswith(suffix) for suffix in ('facebook.com','instagram.com','youtube.com','twitter.com','x.com','linkedin.com','google.com','beehiiv.com')): continue
-                    if not any(k in (label + ' ' + target).lower() for k in ('event','calendar','ticket','register','workshop','festival','museum','race','class','camp','concert','park','family')): continue
+                    if not any(k in (label + ' ' + target).lower() for k in ('event','calendar','ticket','register','registration','workshop','festival','museum','race','class','camp','concert','park','family','trail','hiking','paddling','league','season','exhibit','program','volunteer','games','club','sport','lessons','aquatic','guide')): continue
                     target = canonical(target)
                     if target not in proposals:
                         proposals[target] = {'url': target, 'label': label, 'discovered_on': page_url,
@@ -72,9 +77,27 @@ def refresh(root=ROOT):
                     graph['edges'].append({'from': source['id'], 'to_url': target, 'relationship': 'unreviewed-outbound-link', 'observed_on': page_url})
             graph['discovery_health'].append({'id': source['id'], 'status': 'checked', 'pages': len(pages)})
         except Exception as e: graph['discovery_health'].append({'id': source['id'], 'status': 'failed', 'error': str(e)})
+    taxonomy = json.loads((root / 'data/activity-taxonomy.json').read_text())
+    public_path = root / 'web/activities.json'
+    health = json.loads(public_path.read_text()).get('sources', []) if public_path.exists() else []
+    graph['coverage_matrix'] = coverage_matrix(registry, taxonomy, health)
     (root / 'data/generated-source-graph.json').write_text(json.dumps(graph, indent=2) + '\n')
-    (root / 'data/source-proposals.json').write_text(json.dumps({'updated_at': now, 'proposals': sorted(proposals.values(), key=lambda x:x['url'])[:500]}, indent=2) + '\n')
+    (root / 'data/source-proposals.json').write_text(json.dumps({'updated_at': now, 'proposals': sorted(proposals.values(), key=lambda x:x['url'])}, indent=2) + '\n')
     print(f"Refreshed {len(graph['nodes'])} approved routes; {len(proposals)} unreviewed proposals")
 
 
-if __name__ == '__main__': refresh()
+def refresh_coverage(root=ROOT):
+    path = root / 'data/generated-source-graph.json'
+    graph = json.loads(path.read_text())
+    public = json.loads((root / 'web/activities.json').read_text())
+    registry = json.loads((root / 'data/collection-sources.json').read_text())['sources']
+    taxonomy = json.loads((root / 'data/activity-taxonomy.json').read_text())
+    graph['coverage_matrix'] = coverage_matrix(registry, taxonomy, public['sources'])
+    path.write_text(json.dumps(graph, indent=2) + '\n')
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--coverage-only', action='store_true')
+    args = parser.parse_args()
+    refresh_coverage() if args.coverage_only else refresh()

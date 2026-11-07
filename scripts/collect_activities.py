@@ -17,10 +17,12 @@ from datetime import date, datetime, time as dt_time, timezone
 from pathlib import Path
 from urllib.parse import urlencode, urljoin, urlsplit, urlunsplit
 from zoneinfo import ZoneInfo
+from collections import Counter
 
 from bs4 import BeautifulSoup
 from dateutil.parser import isoparse, parse
 from dateutil.relativedelta import relativedelta
+from activity_model import enrich, in_horizon, coverage_matrix
 
 ROOT = Path(__file__).resolve().parents[1]
 TZ = ZoneInfo('America/Chicago')
@@ -155,6 +157,7 @@ def structured_events(body, source):
             if len(dates) == 2:
                 end = parse(dates[-1]).replace(hour=23, minute=59, tzinfo=TZ).isoformat()
             result.append({'name': obj['title'], 'startDate': obj['startDateTime'], 'endDate': end,
+                '_is_exhibition': bool(obj.get('isExhibition')),
                 'url': urljoin(source['url'], obj.get('href') or '/events/' + obj.get('slug', obj.get('id', ''))),
                 'description': obj.get('description', ''), 'location': {'name': obj.get('location') or source['name']}})
     return result
@@ -204,7 +207,7 @@ def explicit_age_guidance(title, description):
 
 def normalize(raw, source, observed, page):
     title = clean(raw.get('name')); start_raw = raw.get('startDate')
-    if not title or not start_raw: return None
+    if not title or (not start_raw and not raw.get('_schedule')): return None
     start = local_datetime(start_raw); end = local_datetime(raw.get('endDate'))
     if end and isoparse(end) < isoparse(start): raise ValueError('Event end precedes start')
     link = safe_url(urljoin(page, raw.get('url') or page))
@@ -222,20 +225,20 @@ def normalize(raw, source, observed, page):
     if isinstance(offers, dict): offers = [offers]
     offer = next((x for x in offers if isinstance(x, dict)), {})
     all_day = len(str(start_raw)) == 10 or raw.get('_all_day', False)
-    signature = canonical(link) + '|' + start
-    return {'id': hashlib.sha256(signature.encode()).hexdigest()[:20], 'title': title,
-            'start': start, 'end': end, 'date': start[:10], 'end_date': end[:10] if end else start[:10],
+    signature = canonical(link) + '|' + (start or 'offering')
+    return enrich({'id': hashlib.sha256(signature.encode()).hexdigest()[:20], 'title': title,
+            'start': start, 'end': end, 'date': start[:10] if start else None, 'end_date': end[:10] if end else (start[:10] if start else None),
             'all_day': bool(all_day), 'region': source['region'], 'city': clean(address.get('addressLocality') or source['city']),
             'venue': clean(location.get('name') or source['name']), 'type': classify(title, str(raw.get('keywords', ''))),
             'type_inferred': True, 'ages': age_rules(raw['typicalAgeRange']) if raw.get('typicalAgeRange') else explicit_age_guidance(title, raw.get('description', '')),
-            'status': {'EventCancelled':'canceled','EventPostponed':'postponed','EventRescheduled':'rescheduled'}.get(status, 'scheduled'),
+            'status': {'EventCancelled':'canceled','EventPostponed':'postponed','EventRescheduled':'rescheduled'}.get(status, 'scheduled' if start else 'listed'),
             'ticket_status': clean(offer.get('availability')).split('/')[-1] or 'unknown',
             'price': clean(offer.get('price')) or None, 'currency': offer.get('priceCurrency') or None,
             'deadline': None, 'url': link, 'source_id': source['id'], 'source_name': source['name'],
             'source_kind': source['kind'], 'checked_at': observed, 'first_seen': observed,
             'description': clean(raw.get('description'))[:200],
-            'evidence': {'url': page, 'format': source['format'], 'start_as_published': str(start_raw)},
-            'stale': False, 'conflicts': [], 'disappeared': False}
+            'evidence': {'url': page, 'format': source['format'], 'start_as_published': str(start_raw) if start_raw else None},
+            'stale': False, 'conflicts': [], 'disappeared': False}, raw, source)
 
 
 def tribe_events(raw):
@@ -267,7 +270,15 @@ def collect_source(source, start, until, observed, cache):
         source = dict(source, url=source['month_template'].format(month=start.strftime('%Y-%m')))
     f = Fetcher(cache); records = []; errors = []; visited = []; leads = []; truncated = False
     try:
-        if source['format'] == 'tribe':
+        if source['format'] == 'offering':
+            body = f.fetch(source['url']); visited.append(source['url'])
+            soup = BeautifulSoup(body, 'html.parser')
+            if not soup.select_one('h1'): raise ValueError('Offering page lacks a recognizable heading; review required')
+            raw = {'name': source['offering']['title'], 'url': source['url'],
+                   '_schedule': source['offering']['schedule'], '_categories': source['offering'].get('categories', source['categories'])}
+            row = normalize(raw, source, observed, source['url'])
+            if row: records.append(row)
+        elif source['format'] == 'tribe':
             for page in range(1, MAX_PAGES + 1):
                 target = source['url'] + '?' + urlencode({'start_date': start.isoformat(), 'end_date': until.isoformat(), 'per_page': 50, 'page': page})
                 data = json.loads(f.fetch(target)); visited.append(target)
@@ -319,33 +330,38 @@ def collect_source(source, start, until, observed, cache):
                 except Exception as e: errors.append(link + ': ' + str(e))
     except Exception as e: errors.append(str(e))
     # Apply a seven-calendar-month horizon after capture; preserve ongoing ranges.
-    records = [r for r in records if r['date'] <= until.isoformat() and r['end_date'] >= start.isoformat()]
+    records = [r for r in records if in_horizon(r, start.isoformat(), until.isoformat())]
     unique = {r['id']: r for r in records}
     return list(unique.values()), {'id': source['id'], 'name': source['name'], 'url': source['url'], 'region': source['region'],
         'status': 'partial' if errors or leads or truncated else ('checked' if records else 'no-structured-events'),
         'checked_at': observed, 'events': len(unique), 'requests': f.requests, 'visited_count': len(visited),
         'errors': errors[:15], 'unparsed_count': len(leads), 'unparsed_leads': leads[:25], 'truncated': truncated,
-        'latest_published_date': max((r['date'] for r in records), default=None),
+        'latest_published_date': max((r['date'] for r in records if r['date']), default=None),
+        'categories': source.get('categories', []), 'activity_kinds': source.get('activity_kinds', []),
+        'category_counts': dict(Counter(c for r in unique.values() for c in r['categories'])),
+        'kind_counts': dict(Counter(r['schedule']['kind'] for r in unique.values())),
         'horizon_note': 'Requested through ' + until.isoformat() + '; sources may not yet publish that far ahead.'}
 
 
 def reconcile(old, fresh, health, now):
+    for row in old + fresh:
+        if 'schedule' not in row: enrich(row)
     new = {r['id']: r for r in fresh}; old_by_id = {r['id']: r for r in old}
     for key, row in new.items():
         if key in old_by_id: row['first_seen'] = old_by_id[key]['first_seen']
     for row in old:
-        if row['id'] in new or row['end_date'] < now.date().isoformat(): continue
+        if row['id'] in new or not in_horizon(row, now.date().isoformat(), '9999-12-31'): continue
         kept = dict(row); kept['stale'] = True; kept['disappeared'] = True
         new[row['id']] = kept
     # Exact title/venue/instant duplicates share evidence; differing statuses remain conflicts.
     result = {}; norm = lambda s: re.sub(r'\W+', '', s.casefold())
     for row in new.values():
-        key = (norm(row['title']), norm(row['venue']), row['city'].casefold(), row['start'])
+        key = (norm(row['title']), norm(row['venue']), row['city'].casefold(), row['start'], row['schedule']['kind'])
         if key not in result:
             row['sources'] = row.get('sources') or [row['evidence']]; result[key] = row; continue
         kept = result[key]; kept['sources'].append(row['evidence'])
         if kept['status'] != row['status']: kept['conflicts'].append('Source status disagreement')
-    return sorted(result.values(), key=lambda r: (r['start'], r['title']))
+    return sorted(result.values(), key=lambda r: (r['start'] or '9999', r['title']))
 
 
 def run(registry, output, cache, now=None):
@@ -362,6 +378,9 @@ def run(registry, output, cache, now=None):
     result = {'version': 1, 'updated_at': observed, 'horizon_start': start.isoformat(), 'horizon_end': until.isoformat(),
               'timezone': 'America/Chicago', 'collection_mode': 'deterministic-no-llm', 'sources': health,
               'activities': reconcile(old['activities'], fresh, health, now)}
+    taxonomy = json.loads((ROOT / 'data/activity-taxonomy.json').read_text())
+    result['taxonomy'] = taxonomy
+    result['coverage_matrix'] = coverage_matrix(sources, taxonomy, health)
     output.parent.mkdir(parents=True, exist_ok=True)
     temp = output.with_suffix('.tmp'); temp.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n'); temp.replace(output)
     return result

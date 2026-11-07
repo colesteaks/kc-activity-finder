@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#183f37" />
+    <title>Activity details — What to do, KC</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="activity.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#activity">Skip to activity</a>
+    <header class="masthead">
+      <a class="wordmark" href="./">what to do, <span>kc.</span></a
+      ><a href="./">Browse activities ←</a>
+    </header>
+    <main class="detail-main">
+      <nav class="detail-back" aria-label="Breadcrumb">
+        <a href="./">All activities</a> / Activity details
+      </nav>
+      <div id="activity" aria-live="polite"><p>Loading the activity…</p></div>
+      <noscript
+        ><p>
+          Enable JavaScript to view activity details, or
+          <a href="activities.json">download the activity file</a>.
+        </p></noscript
+      >
+    </main>
+    <footer>
+      <a class="wordmark" href="./">what to do, <span>kc.</span></a>
+      <p>Find your next good day.</p>
+      <a href="./#coverage">Source coverage ↗</a>
+    </footer>
+  </body>
+</html>
