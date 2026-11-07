@@ -40,8 +40,8 @@ def refresh(root=ROOT):
             page = fetcher.fetch(source['url']); pages = [(source['url'], page)]
             if source['id'] == 'kc-daily':
                 soup = BeautifulSoup(page, 'html.parser')
-                issues = sorted({urljoin(source['url'], a['href']) for a in soup.select('a[href]')
-                    if '/p/' in a['href'] and urlsplit(urljoin(source['url'], a['href'])).hostname == urlsplit(source['url']).hostname})[:4]
+                issues = list(dict.fromkeys(urljoin(source['url'], a['href']) for a in soup.select('a[href]')
+                    if '/p/' in a['href'] and urlsplit(urljoin(source['url'], a['href'])).hostname == urlsplit(source['url']).hostname))[:4]
                 for issue in issues:
                     try: pages.append((issue, fetcher.fetch(issue)))
                     except Exception as e: graph['discovery_health'].append({'url': issue, 'error': str(e)})

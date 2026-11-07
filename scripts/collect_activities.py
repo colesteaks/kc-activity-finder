@@ -186,6 +186,19 @@ def age_rules(raw):
     return result
 
 
+def explicit_age_guidance(title, description):
+    """Recognize explicit audience rules, not generic family/category labels."""
+    text = clean(title + ' ' + clean(description))
+    match = re.search(r'\b(?:ages?|aged)\s*:?\s*(\d{1,2})\s*(?:[-–]|to|through)\s*(\d{1,2})\b', text, re.I)
+    if match:
+        low, high = map(int, match.groups())
+        if low <= high: return age_rules(f'{low}–{high}')
+    match = re.search(r'\b(?:ages?\s*)?(\d{1,2})\s*(?:\+|(?:and|or) (?:up|older|over))', text, re.I)
+    if match: return age_rules(match[1] + '+')
+    if re.search(r'\b(?:for all ages|all ages (?:are )?welcome|open to all ages)\b', text, re.I): return age_rules('All ages')
+    return age_rules('')
+
+
 def normalize(raw, source, observed, page):
     title = clean(raw.get('name')); start_raw = raw.get('startDate')
     if not title or not start_raw: return None
@@ -211,7 +224,7 @@ def normalize(raw, source, observed, page):
             'start': start, 'end': end, 'date': start[:10], 'end_date': end[:10] if end else start[:10],
             'all_day': bool(all_day), 'region': source['region'], 'city': clean(address.get('addressLocality') or source['city']),
             'venue': clean(location.get('name') or source['name']), 'type': classify(title, str(raw.get('keywords', ''))),
-            'type_inferred': True, 'ages': age_rules(raw.get('typicalAgeRange', '')),
+            'type_inferred': True, 'ages': age_rules(raw['typicalAgeRange']) if raw.get('typicalAgeRange') else explicit_age_guidance(title, raw.get('description', '')),
             'status': {'EventCancelled':'canceled','EventPostponed':'postponed','EventRescheduled':'rescheduled'}.get(status, 'scheduled'),
             'ticket_status': clean(offer.get('availability')).split('/')[-1] or 'unknown',
             'price': clean(offer.get('price')) or None, 'currency': offer.get('priceCurrency') or None,
@@ -227,7 +240,7 @@ def tribe_events(raw):
     if not isinstance(venue, dict): venue = {}
     return {'name': raw.get('title'), 'startDate': raw.get('utc_start_date') + '+00:00' if raw.get('utc_start_date') else raw.get('start_date'),
             'endDate': raw.get('utc_end_date') + '+00:00' if raw.get('utc_end_date') else raw.get('end_date'),
-            'url': raw.get('url'), 'description': raw.get('excerpt') or '', '_all_day': raw.get('all_day', False),
+            'url': raw.get('url'), 'description': raw.get('excerpt') or raw.get('description') or '', '_all_day': raw.get('all_day', False),
             'location': {'name': venue.get('venue'), 'address': {'addressLocality': venue.get('city')}},
             'eventStatus': 'EventScheduled', 'keywords': ' '.join(c.get('name', '') for c in raw.get('categories', []))}
 

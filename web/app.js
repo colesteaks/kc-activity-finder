@@ -1,12 +1,261 @@
-import{chicagoToday,windowDates,matches,sortedActivities,safeLink}from'./filters.mjs';
-const $=id=>document.getElementById(id);let data,visible=30;
-const form=$('filters'),inputs={q:$('search'),location:$('location'),type:$('type'),age_min:$('age-min'),age_max:$('age-max'),from:$('date-from'),to:$('date-to'),unknown_ages:$('unknown-ages'),unavailable:$('include-unavailable')};
-const day=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',month:'short',day:'numeric',year:'numeric'}),clock=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',hour:'numeric',minute:'2-digit'});
-function el(tag,value='',cls=''){const e=document.createElement(tag);e.textContent=value;e.className=cls;return e;}
-function link(url,label){const a=el('a',label),safe=safeLink(url);if(safe){a.href=safe;a.target='_blank';a.rel='noopener noreferrer';}return a;}
-function filters(){return Object.fromEntries(Object.entries(inputs).map(([k,e])=>[k,e.type==='checkbox'?e.checked:e.value]));}
-function card(a){const c=el('article','','card'),top=el('div','','card-top');top.append(el('span',a.type,'card-type'),el('span',a.region==='Bentonville'?'Northwest Arkansas':a.region,'card-region'));c.append(top);const h=el('h3');h.append(link(a.url,a.title));c.append(h);let when=day.format(new Date(a.start));if(a.end_date!==a.date)when+=' – '+day.format(new Date(a.end));else if(!a.all_day)when+=' · '+clock.format(new Date(a.start));c.append(el('p',when,'card-date'),el('p',a.venue+' · '+a.city,'card-venue'));if(a.description)c.append(el('p',a.description+(a.description.length===200?'…':''),'card-description'));const tags=el('div','','card-meta');tags.append(el('span',a.ages.label,'tag'));if(a.status!=='scheduled')tags.append(el('span',a.status,'tag warning'));if(a.stale||Date.now()-new Date(a.checked_at)>72*3600e3)tags.append(el('span','Needs a fresh check','tag warning'));if(a.conflicts?.length)tags.append(el('span','Source conflict','tag warning'));if(a.end_date!==a.date)tags.append(el('span','Date range / series — confirm sessions','tag'));if(a.ticket_status!=='unknown')tags.append(el('span',a.ticket_status,'tag'));if(a.price!==null)tags.append(el('span',`${a.currency||'Price'} ${a.price} · check fees`,'tag'));c.append(tags);const bottom=el('div','','card-bottom');bottom.append(el('span',a.source_name),link(a.url,'Details & registration ↗'));c.append(bottom);return c;}
-function render(){if(!data)return;const f=filters(),params=new URLSearchParams();for(const[k,v]of Object.entries(f)){if(k==='unknown_ages'){if(!v)params.set(k,'0');}else if(k==='unavailable'){if(v)params.set(k,'1');}else if(v)params.set(k,v);}if($('sort').value!=='date')params.set('sort',$('sort').value);history.replaceState(null,'',location.pathname+(params.size?'?'+params:'')+location.hash);const invalid=(f.from&&f.to&&f.from>f.to)||(f.age_min!==''&&f.age_max!==''&&Number(f.age_min)>Number(f.age_max));const rows=invalid?[]:sortedActivities(data.activities.filter(a=>matches(a,f)),$('sort').value);$('result-count').textContent=`${rows.length.toLocaleString()} ${rows.length===1?'good idea':'good ideas'}`;$('results').replaceChildren(...rows.slice(0,visible).map(card));$('message').hidden=rows.length>0;$('message').textContent=invalid?'The start of a range needs to come before its end.':data.activities.length?'Nothing matches just yet. Try a wider date range, another location, or include unspecified ages.':'No dated activities have been collected yet. See source coverage below.';$('more').hidden=rows.length<=visible;}
-function coverage(){const gaps=data.sources.filter(s=>s.status!=='checked').length;$('coverage-summary').textContent=`${data.sources.length} sources checked · ${gaps} with gaps or collection notes`;$('horizon').textContent=`Collection window: ${data.horizon_start} through ${data.horizon_end} (seven calendar months). This is the search horizon, not a promise of events every month.`;for(const s of data.sources){const row=el('div','','source-row'),h=el('strong');h.append(link(s.url,s.name));row.append(h,el('p',`${s.region} · ${s.events} records · ${s.status} · ${s.visited_count} pages visited`),el('p',s.horizon_note));if(s.truncated)row.append(el('p','Page or detail limit reached; collection is incomplete.','source-errors'));if(s.unparsed_count)row.append(el('p',`${s.unparsed_count} pages need a parser or manual date review.`,'source-errors'));for(const error of s.errors.slice(0,3))row.append(el('p',error,'source-errors'));$('source-health').append(row);}}
-form.addEventListener('submit',e=>e.preventDefault());form.addEventListener('input',()=>{visible=30;document.querySelectorAll('[data-window]').forEach(e=>e.classList.remove('active'));render();});$('sort').addEventListener('change',render);$('more').addEventListener('click',()=>{visible+=30;render();});$('reset').addEventListener('click',()=>{form.reset();inputs.from.value=chicagoToday();inputs.to.value='';$('sort').value='date';visible=30;document.querySelectorAll('[data-window]').forEach(e=>e.classList.remove('active'));render();});document.querySelectorAll('[data-window]').forEach(b=>b.addEventListener('click',()=>{const w=windowDates(b.dataset.window);inputs.from.value=w.from;inputs.to.value=w.to;visible=30;document.querySelectorAll('[data-window]').forEach(e=>e.classList.toggle('active',e===b));render();}));
-async function start(){try{const response=await fetch('./activities.json',{cache:'no-cache'});if(!response.ok)throw Error('Data unavailable');data=await response.json();if(!Array.isArray(data.activities)||!Array.isArray(data.sources))throw Error('Invalid data');for(const t of[...new Set(data.activities.map(a=>a.type))].sort()){const o=el('option',t);o.value=t;inputs.type.append(o);}const params=new URLSearchParams(location.search);inputs.from.value=chicagoToday();for(const[k,e]of Object.entries(inputs))if(params.has(k)){if(e.type==='checkbox')e.checked=params.get(k)==='1';else e.value=params.get(k);}if(params.has('sort'))$('sort').value=params.get('sort');const hours=(Date.now()-new Date(data.updated_at))/36e5;$('freshness').textContent=`${data.activities.length.toLocaleString()} activities · Updated ${day.format(new Date(data.updated_at))} · ${hours>72?'Collection needs a fresh check':'Scheduled daily'}`;coverage();render();}catch(error){$('freshness').textContent='The collection is temporarily unavailable';$('result-count').textContent='Let’s try again soon';$('message').hidden=false;$('message').textContent='We couldn’t load the activity file. Refresh the page or use the source links in the project. Your filters stay in the URL.';console.error(error);}}start();
+import {
+  chicagoToday,
+  windowDates,
+  matches,
+  sortedActivities,
+  safeLink,
+} from "./filters.mjs";
+const $ = (id) => document.getElementById(id);
+let data,
+  visible = 30;
+const form = $("filters"),
+  inputs = {
+    q: $("search"),
+    location: $("location"),
+    type: $("type"),
+    age_min: $("age-min"),
+    age_max: $("age-max"),
+    from: $("date-from"),
+    to: $("date-to"),
+    unknown_ages: $("unknown-ages"),
+    unavailable: $("include-unavailable"),
+  };
+const day = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/Chicago",
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  }),
+  clock = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/Chicago",
+    hour: "numeric",
+    minute: "2-digit",
+  });
+function el(tag, value = "", cls = "") {
+  const e = document.createElement(tag);
+  e.textContent = value;
+  e.className = cls;
+  return e;
+}
+function link(url, label) {
+  const a = el("a", label),
+    safe = safeLink(url);
+  if (safe) {
+    a.href = safe;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+  }
+  return a;
+}
+function filters() {
+  return Object.fromEntries(
+    Object.entries(inputs).map(([k, e]) => [
+      k,
+      e.type === "checkbox" ? e.checked : e.value,
+    ]),
+  );
+}
+function card(a) {
+  const c = el("article", "", "card"),
+    top = el("div", "", "card-top");
+  top.append(
+    el("span", a.type, "card-type"),
+    el(
+      "span",
+      a.region === "Bentonville" ? "Northwest Arkansas" : a.region,
+      "card-region",
+    ),
+  );
+  c.append(top);
+  const h = el("h3");
+  h.append(link(a.url, a.title));
+  c.append(h);
+  let when = day.format(new Date(a.start));
+  if (a.end_date !== a.date) when += " – " + day.format(new Date(a.end));
+  else if (!a.all_day) when += " · " + clock.format(new Date(a.start));
+  c.append(
+    el("p", when, "card-date"),
+    el("p", a.venue + " · " + a.city, "card-venue"),
+  );
+  if (a.description)
+    c.append(
+      el(
+        "p",
+        a.description + (a.description.length === 200 ? "…" : ""),
+        "card-description",
+      ),
+    );
+  const tags = el("div", "", "card-meta");
+  tags.append(el("span", a.ages.label, "tag"));
+  if (a.status !== "scheduled")
+    tags.append(el("span", a.status, "tag warning"));
+  if (a.stale || Date.now() - new Date(a.checked_at) > 72 * 3600e3)
+    tags.append(el("span", "Needs a fresh check", "tag warning"));
+  if (a.conflicts?.length)
+    tags.append(el("span", "Source conflict", "tag warning"));
+  if (a.end_date !== a.date)
+    tags.append(el("span", "Date range / series — confirm sessions", "tag"));
+  if (a.ticket_status !== "unknown")
+    tags.append(el("span", a.ticket_status, "tag"));
+  if (a.price !== null)
+    tags.append(
+      el("span", `${a.currency || "Price"} ${a.price} · check fees`, "tag"),
+    );
+  c.append(tags);
+  const bottom = el("div", "", "card-bottom");
+  bottom.append(
+    el("span", a.source_name),
+    link(a.url, "Details & registration ↗"),
+  );
+  c.append(bottom);
+  return c;
+}
+function render() {
+  if (!data) return;
+  const f = filters(),
+    params = new URLSearchParams();
+  for (const [k, v] of Object.entries(f)) {
+    if (k === "unknown_ages") {
+      if (!v) params.set(k, "0");
+    } else if (k === "unavailable") {
+      if (v) params.set(k, "1");
+    } else if (v) params.set(k, v);
+  }
+  if ($("sort").value !== "date") params.set("sort", $("sort").value);
+  history.replaceState(
+    null,
+    "",
+    location.pathname + (params.size ? "?" + params : "") + location.hash,
+  );
+  const invalid =
+    (f.from && f.to && f.from > f.to) ||
+    (f.age_min !== "" &&
+      f.age_max !== "" &&
+      Number(f.age_min) > Number(f.age_max));
+  const rows = invalid
+    ? []
+    : sortedActivities(
+        data.activities.filter((a) => matches(a, f)),
+        $("sort").value,
+      );
+  $("result-count").textContent =
+    `${rows.length.toLocaleString()} ${rows.length === 1 ? "good idea" : "good ideas"}`;
+  $("results").replaceChildren(...rows.slice(0, visible).map(card));
+  $("message").hidden = rows.length > 0;
+  $("message").textContent = invalid
+    ? "The start of a range needs to come before its end."
+    : data.activities.length
+      ? "Nothing matches just yet. Try a wider date range, another location, or include unspecified ages."
+      : "No dated activities have been collected yet. See source coverage below.";
+  $("more").hidden = rows.length <= visible;
+}
+function coverage() {
+  const gaps = data.sources.filter((s) => s.status !== "checked").length;
+  $("coverage-summary").textContent =
+    `${data.sources.length} sources checked · ${gaps} with gaps or collection notes`;
+  $("horizon").textContent =
+    `Collection window: ${data.horizon_start} through ${data.horizon_end} (seven calendar months). This is the search horizon, not a promise of events every month.`;
+  for (const s of data.sources) {
+    const row = el("div", "", "source-row"),
+      h = el("strong");
+    h.append(link(s.url, s.name));
+    row.append(
+      h,
+      el(
+        "p",
+        `${s.region} · ${s.events} records · ${s.status} · ${s.visited_count} pages visited`,
+      ),
+      el("p", s.horizon_note),
+    );
+    if (s.truncated)
+      row.append(
+        el(
+          "p",
+          "Page or detail limit reached; collection is incomplete.",
+          "source-errors",
+        ),
+      );
+    if (s.unparsed_count)
+      row.append(
+        el(
+          "p",
+          `${s.unparsed_count} pages need a parser or manual date review.`,
+          "source-errors",
+        ),
+      );
+    for (const error of s.errors.slice(0, 3))
+      row.append(el("p", error, "source-errors"));
+    $("source-health").append(row);
+  }
+}
+form.addEventListener("submit", (e) => e.preventDefault());
+form.addEventListener("input", () => {
+  visible = 30;
+  document
+    .querySelectorAll("[data-window]")
+    .forEach((e) => e.classList.remove("active"));
+  render();
+});
+$("sort").addEventListener("change", render);
+$("more").addEventListener("click", () => {
+  visible += 30;
+  render();
+});
+$("reset").addEventListener("click", () => {
+  form.reset();
+  inputs.from.value = chicagoToday();
+  inputs.to.value = "";
+  $("sort").value = "date";
+  visible = 30;
+  document
+    .querySelectorAll("[data-window]")
+    .forEach((e) => e.classList.remove("active"));
+  render();
+});
+document.querySelectorAll("[data-window]").forEach((b) =>
+  b.addEventListener("click", () => {
+    const w = windowDates(b.dataset.window);
+    inputs.from.value = w.from;
+    inputs.to.value = w.to;
+    visible = 30;
+    document
+      .querySelectorAll("[data-window]")
+      .forEach((e) => e.classList.toggle("active", e === b));
+    render();
+  }),
+);
+async function start() {
+  try {
+    const response = await fetch("./activities.json", { cache: "no-cache" });
+    if (!response.ok) throw Error("Data unavailable");
+    data = await response.json();
+    if (!Array.isArray(data.activities) || !Array.isArray(data.sources))
+      throw Error("Invalid data");
+    for (const t of [...new Set(data.activities.map((a) => a.type))].sort()) {
+      const o = el("option", t);
+      o.value = t;
+      inputs.type.append(o);
+    }
+    const params = new URLSearchParams(location.search);
+    inputs.from.value = chicagoToday();
+    for (const [k, e] of Object.entries(inputs))
+      if (params.has(k)) {
+        if (e.type === "checkbox") e.checked = params.get(k) === "1";
+        else e.value = params.get(k);
+      }
+    if (params.has("sort")) $("sort").value = params.get("sort");
+    const hours = (Date.now() - new Date(data.updated_at)) / 36e5;
+    $("freshness").textContent =
+      `${data.activities.length.toLocaleString()} activities · Updated ${day.format(new Date(data.updated_at))} · ${hours > 72 ? "Collection needs a fresh check" : "Scheduled daily"}`;
+    coverage();
+    render();
+  } catch (error) {
+    $("freshness").textContent = "The collection is temporarily unavailable";
+    $("result-count").textContent = "Let’s try again soon";
+    $("message").hidden = false;
+    $("message").textContent =
+      "We couldn’t load the activity file. Refresh the page or use the source links in the project. Your filters stay in the URL.";
+    console.error(error);
+  }
+}
+start();

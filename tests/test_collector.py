@@ -9,7 +9,7 @@ from unittest.mock import patch
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
 from collect_activities import (TZ, age_rules, jsonld_events, normalize, reconcile,
-                                structured_events, run, safe_url, columbia_event)
+                                structured_events, run, safe_url, columbia_event, explicit_age_guidance)
 from validate_public_data import validate_public
 
 SOURCE = {'id':'test','name':'Test','region':'Lawrence','city':'Lawrence','kind':'organizer','format':'jsonld','url':'https://example.test/events/'}
@@ -25,6 +25,12 @@ class CollectorTests(unittest.TestCase):
         self.assertTrue(age_rules('All ages')['all_ages'])
         self.assertEqual(age_rules('21+')['min'],21)
         self.assertEqual(age_rules('3–7')['max'],7)
+
+    def test_explicit_audience_text_only(self):
+        self.assertEqual(explicit_age_guidance('Workshop','For ages 6 to 12.')['min'],6)
+        self.assertEqual(explicit_age_guidance('Concert 21+','')['min'],21)
+        self.assertTrue(explicit_age_guidance('Art','Open to all ages')['all_ages'])
+        self.assertIsNone(explicit_age_guidance('Exhibition','Artists of all ages contribute')['min'])
 
     def test_jsonld_graph_and_multiline_strings(self):
         body='<script type="application/ld+json">{"@graph":[{"@type":"MusicEvent","name":"Live\nMusic","startDate":"2026-11-08"}]}</script>'
