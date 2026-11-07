@@ -8,6 +8,8 @@ Activities now have a [show page](web/activity.html) reached from each card, and
 
 **Discover broadly. Filter later.** Collect adult-only events, kids’ activities, family outings, active experiences, arts, performances, classes, races, seasonal events and niche discoveries. Preserve closed, full, canceled and unresolved records. Build separate recommendations for different outings from that inventory.
 
+The [weekly Codex source-improvement loop](references/weekly-source-improvement.md) complements daily collection with bounded link exploration, gap searches, source probes and parser repair. Run `python3 scripts/weekly_discovery_brief.py` for a compact prioritized queue; decisions persist in `data/source-review-ledger.json`.
+
 Supports `weekend-current` and `signup-horizon` (events worth reserving ahead). The required order is source graph → deep first-party sweep → candidate capture → broader web search → merge → fit ranking → adversarial review → recommendations.
 
 ## What executes

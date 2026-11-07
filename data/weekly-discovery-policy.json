@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "repository": "colesteaks/kc-activity-finder",
+  "budgets": {
+    "candidate_links": 12,
+    "gap_searches": 6,
+    "page_visits": 24,
+    "link_depth": 2,
+    "links_per_host": 2,
+    "sources_to_promote": 5,
+    "adapter_pull_requests": 1,
+    "target_minutes": 30
+  },
+  "priority": "Coverage gaps and working extraction first; source and domain count alone are not success metrics.",
+  "publication": "Verified data-only source additions using existing adapters may be committed to main after tests and live probes. Parser/code changes go through a tested PR; do not auto-merge them.",
+  "cadence_note": "Daily collection stays deterministic. The scheduled Codex maintainer performs bounded judgment and discovery; instruction budgets are not a platform-enforced token ceiling."
+}
