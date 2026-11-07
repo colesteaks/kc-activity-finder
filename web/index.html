@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Find your next good day. Browse Kansas City and regional activities by age, location, type and date.">
+  <meta name="theme-color" content="#183f37"><title>What to do, KC — Find your next good day</title>
+  <link rel="stylesheet" href="styles.css"><script type="module" src="app.js"></script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23183f37'/%3E%3Ctext x='32' y='43' font-family='Georgia' font-size='34' text-anchor='middle' fill='%23f4ecdb'%3Ekc%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip" href="#results">Skip to activities</a>
+<header class="masthead"><a class="wordmark" href="./">what to do, <span>kc.</span></a><a href="#about">A little more local ↗</a></header>
+<main>
+  <section class="hero" aria-labelledby="hero-title">
+    <div><p class="eyebrow">KANSAS CITY & A LITTLE FURTHER</p><h1 id="hero-title">Your next<br><em>good day.</em></h1><p class="intro">Big nights. Little adventures. Something you hadn’t thought of.<br class="desktop"> Find a reason to get out there.</p></div>
+    <div class="hero-note"><span class="spark" aria-hidden="true">✳</span><p>For grown-ups.<br>For little ones.<br><strong>For the curious.</strong></p><span class="note-line">KC · Lawrence · Columbia · Northwest Arkansas</span></div>
+  </section>
+  <div class="collection-bar"><p id="freshness">Loading the latest collection…</p><a href="#coverage">See source coverage ↓</a></div>
+  <section class="browse" aria-label="Browse activities">
+    <aside class="filters"><div class="filter-heading"><h2>Make it your day</h2><button id="reset" class="text-button" type="button">Reset</button></div>
+      <form id="filters">
+        <label for="search">A little inspiration</label><input id="search" name="q" type="search" placeholder="Music, dinosaurs, a workshop…">
+        <label for="location">Where to?</label><select id="location" name="location"><option value="">Everywhere</option><option>Kansas City metro</option><option>Lawrence</option><option>Columbia</option><option>Bentonville</option><option>surrounding areas</option></select>
+        <label for="type">What kind of day?</label><select id="type" name="type"><option value="">All activity types</option></select>
+        <fieldset><legend>Age range</legend><div class="two-fields"><label>From<input id="age-min" name="age_min" type="number" min="0" max="120" placeholder="Any age"></label><label>To<input id="age-max" name="age_max" type="number" min="0" max="120" placeholder="Any age"></label></div><label class="check"><input id="unknown-ages" name="unknown_ages" type="checkbox" checked> Include unspecified ages</label><p class="hint">Matches overlapping age ranges. Always check the organizer’s rules.</p></fieldset>
+        <fieldset><legend>When?</legend><div class="two-fields"><label>From<input id="date-from" name="from" type="date"></label><label>To<input id="date-to" name="to" type="date"></label></div></fieldset>
+        <label class="check"><input id="include-unavailable" name="unavailable" type="checkbox"> Include canceled & postponed</label>
+      </form>
+      <p class="filter-footnote">No account. No algorithmic feed.<br>Just a few ways to find your thing.</p>
+    </aside>
+    <div class="activity-area">
+      <div class="quick-filters" aria-label="Quick date filters"><button type="button" data-window="weekend">This weekend</button><button type="button" data-window="month">Next 30 days</button><button type="button" data-window="ahead">Plan ahead ↗</button><button type="button" data-window="all">All dates</button></div>
+      <div class="results-bar"><h2 id="result-count" role="status" aria-live="polite">Finding your options…</h2><label for="sort">Sort <select id="sort"><option value="date">Soonest first</option><option value="new">Newly discovered</option><option value="title">A–Z</option></select></label></div>
+      <p id="message" role="status" class="message" hidden></p><div id="results" class="cards" tabindex="-1"></div>
+      <button id="more" class="more" type="button" hidden>More good ideas ↓</button>
+      <noscript><p>Enable JavaScript to use the filters, or <a href="activities.json">download the activities file</a>.</p></noscript>
+    </div>
+  </section>
+  <section id="about" class="about"><p class="eyebrow">LESS SCROLLING, MORE DOING</p><h2>A starting point<br>for getting out.</h2><div><p>We gather activities from organizer and official community calendars, then put them in one simple list. Adults-only outings, family days, a spontaneous Saturday—or something worth putting on the calendar months ahead.</p><p>Dates come from sources, categories are suggested automatically, and unknown age guidance stays unknown. A listing isn’t a guarantee of tickets or registration: check the organizer before you go.</p></div></section>
+  <section id="coverage" class="coverage"><div class="section-heading"><h2>Behind the list</h2><a href="activities.json">Download the data ↗</a></div><p id="horizon">Checking the collection window…</p><p>Coverage is growing. Some calendars publish only a few weeks ahead, block automated access, or need a new parser. Missing events are possible; we show those gaps below.</p><details><summary id="coverage-summary">Source health & collection notes</summary><div id="source-health"></div></details></section>
+</main>
+<footer><a class="wordmark" href="./">what to do, <span>kc.</span></a><p>A good day is out there.</p><a href="https://github.com/colesteaks/kc-activity-finder">Project ↗</a></footer>
+</body></html>

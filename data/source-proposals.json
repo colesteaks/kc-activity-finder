@@ -1,0 +1,514 @@
+{
+  "updated_at": "2026-11-07T08:25:10.766365-06:00",
+  "proposals": [
+    {
+      "url": "https://app.smartify.org/en-GB/map/iimg_ZhCcp8UDGo8dle7LlbS6",
+      "label": "Museum Map",
+      "discovered_on": "https://nelson-atkins.org/events/",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://archive.org/details/nelsonatkinsmuseumofart",
+      "label": "Digitized Archive",
+      "discovered_on": "https://nelson-atkins.org/events/",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://booking.nelson-atkins.org/schoolworkshops/en-us/home",
+      "label": "School Workshops",
+      "discovered_on": "https://nelson-atkins.org/events/",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://cart.nelson-atkins.org/50445/53356",
+      "label": "Get Tickets",
+      "discovered_on": "https://nelson-atkins.org/events/",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://cart.nelson-atkins.org/50445/53357",
+      "label": "Get Tickets",
+      "discovered_on": "https://nelson-atkins.org/events/",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://cart.nelson-atkins.org/50445/53358",
+      "label": "Get Tickets",
+      "discovered_on": "https://nelson-atkins.org/events/",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://cart.nelson-atkins.org/50605/50609",
+      "label": "Register",
+      "discovered_on": "https://nelson-atkins.org/events/",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://cart.nelson-atkins.org/50605/52864",
+      "label": "Register",
+      "discovered_on": "https://nelson-atkins.org/events/",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://cart.nelson-atkins.org/50705/52900",
+      "label": "Register",
+      "discovered_on": "https://nelson-atkins.org/events/",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://cart.nelson-atkins.org/51930/52903",
+      "label": "Register",
+      "discovered_on": "https://nelson-atkins.org/events/",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://cart.nelson-atkins.org/51930/53441",
+      "label": "Register",
+      "discovered_on": "https://nelson-atkins.org/events/",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://cart.nelson-atkins.org/account/login?ReturnUrl=%2Faccount%2Fupcomingevents",
+      "label": "logging in to your account",
+      "discovered_on": "https://nelson-atkins.org/events/",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://cart.nelson-atkins.org/events?view=calendar+view=list&kid=11,165,216",
+      "label": "Calendar",
+      "discovered_on": "https://nelson-atkins.org/events/",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://cart.nelson-atkins.org/events?view=calendar+view=list&kid=170,12,165,280,",
+      "label": "Calendar",
+      "discovered_on": "https://nelson-atkins.org/events/",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://crowncenterchristmas.com/events/mayors-christmas-tree-lighting-ceremony",
+      "label": "Mayor\u2019s Christmas Tree Lighting Event",
+      "discovered_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://crowncenterchristmas.com/ice-terrace-2025",
+      "label": "Crown Center Ice Terrace",
+      "discovered_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://crowncenterchristmas.com?utm_source=KC+Daily&utm_medium=Article+Sponsor&utm_campaign=Christmas+2026",
+      "label": "Crown Center",
+      "discovered_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://downtownls.org/event/annual-veterans-day-parade-america-250",
+      "label": "Veterans Day Parade: America 250",
+      "discovered_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://freestatefestival.org",
+      "label": "Festival",
+      "discovered_on": "https://lawrenceartscenter.org/events-at-lawrence-arts-center/",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://industry.visitmo.com",
+      "label": "Learn more about submitting your events to the Missouri Division of Tourism",
+      "discovered_on": "https://www.visitcolumbiamo.com/events/",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://kcopera.org/event/the-marriage-of-figaro",
+      "label": "The Marriage of Figaro",
+      "discovered_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://lawrenceartscenter.org/events-at-lawrence-arts-center/feed",
+      "label": "Lawrence Arts Center \u00bb Events Feed",
+      "discovered_on": "https://lawrenceartscenter.org/events-at-lawrence-arts-center/",
+      "first_seen": "2026-11-07T08:25:10.766365-06:00",
+      "status": "unreviewed",
+      "candidate_format": "rss",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://libertysbeacon.theworldwar.org/libertys-beacon-home?utm_source=www.kcdaily.com&utm_medium=newsletter&utm_campaign=sippin-in-the-spirit",
+      "label": "Liberty\u2019s Beacon",
+      "discovered_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://lord-of-life-church-59647.churchcenter.com/calendar/event/237021996",
+      "label": "Merry & Bright Holiday Market",
+      "discovered_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://messengercoffee.co",
+      "label": "Messenger Coffee Co. A spacious, multi-level caf\u00e9 offering artisan coffee, house-baked pastries from Ibis Bakery, and a rooftop terrace in the Crossroads Arts D",
+      "discovered_on": "https://www.kcdaily.com/p/best-coffee-shops-in-kansas-city",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://museumofbbq.co",
+      "label": "The Museum of BBQ A newcomer to the KC museum scene, the Museum of BBQ is the world\u2019s first museum dedicated to the cuisine, and explores the rich history of \u2018q",
+      "discovered_on": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://museumofkansascity.org/museum-of-kansas-city",
+      "label": "The Museum of Kansas City The Museum of Kansas City, housed in the historic Corinthian Hall, is a revitalized cultural institution dedicated to preserving and i",
+      "discovered_on": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://nelson-atkins.org/comments/feed",
+      "label": "Nelson Atkins \u00bb Comments Feed",
+      "discovered_on": "https://nelson-atkins.org/events/",
+      "first_seen": "2026-11-07T08:25:10.766365-06:00",
+      "status": "unreviewed",
+      "candidate_format": "rss",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://nelson-atkins.org/feed",
+      "label": "Nelson Atkins \u00bb Feed",
+      "discovered_on": "https://nelson-atkins.org/events/",
+      "first_seen": "2026-11-07T08:25:10.766365-06:00",
+      "status": "unreviewed",
+      "candidate_format": "rss",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://pilgrimcoffeecompany.com",
+      "label": "Pilgrim Coffee Company Few coffee shops in Overland Park are buzzing with as much energy as Pilgrim. Great drinks, great service, and great conversations happen",
+      "discovered_on": "https://www.kcdaily.com/p/best-coffee-shops-in-kansas-city",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://rainydaybooks.com/event/2026-11-13/jenna-bush-hager-lucy-tan-tigers-mouth?utm_source=www.kcdaily.com&utm_medium=newsletter&utm_campaign=starry-nights-ahead",
+      "label": "back in Kansas City on November 13th",
+      "discovered_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://tickets.crystalbridges-themomentary.org/99042/99043",
+      "label": "Get Tickets",
+      "discovered_on": "https://themomentary.org/calendar/",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://tickets.crystalbridges-themomentary.org/99325/99326",
+      "label": "Get Tickets",
+      "discovered_on": "https://themomentary.org/calendar/",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://tickets.crystalbridges-themomentary.org/99637/99638",
+      "label": "Get Tickets",
+      "discovered_on": "https://themomentary.org/calendar/",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://tickets.crystalbridges-themomentary.org/99639/99640",
+      "label": "Get Tickets",
+      "discovered_on": "https://themomentary.org/calendar/",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://tickets.crystalbridges-themomentary.org/99643/99644",
+      "label": "Limited Availability",
+      "discovered_on": "https://themomentary.org/calendar/",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://tickets.crystalbridges-themomentary.org/account/upcomingevents",
+      "label": "Your account",
+      "discovered_on": "https://themomentary.org/calendar/",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://tickets.crystalbridges-themomentary.org/cart/details",
+      "label": "Basket",
+      "discovered_on": "https://themomentary.org/calendar/",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://tickets.crystalbridges-themomentary.org/overview/99323",
+      "label": "Get Tickets",
+      "discovered_on": "https://themomentary.org/calendar/",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://tickets.kauffmancenter.org/overview/25927",
+      "label": "Yoga at the Kauffman Center",
+      "discovered_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://toyandminiaturemuseum.org",
+      "label": "The National Museum of Toys / Miniatures The National Museum of Toys and Miniatures houses the world's largest collection of fine-scale miniatures and one of th",
+      "discovered_on": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://www.1856.com",
+      "label": "The Arabia Steamboat Museum The Arabia Steamboat Museum showcases an extraordinary collection of pre-Civil War artifacts recovered from the 1856 sinking of the ",
+      "discovered_on": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://www.americanjazzmuseum.org",
+      "label": "American Jazz Museum The American Jazz Museum in Kansas City celebrates the legacy of jazz through interactive exhibits, historic artifacts, and live performanc",
+      "discovered_on": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://www.bing.com/maps/directions?ty=0&v=2&sV=1&rtp=%7Epos.36.381858825683594_-94.20264434814453__Crystal%2520Bridges%2520Museum%2520of%2520American%2520Art_&cp=36.381868%7E-94.202653&lvl=16&style=r",
+      "label": "600 Museum Way Bentonville, AR 72712",
+      "discovered_on": "https://crystalbridges.org/calendar/2026-11/",
+      "first_seen": "2026-11-07T08:25:10.766365-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://www.bliproasters.com",
+      "label": "Blip Roasters A motorcycle-themed caf\u00e9 in the West Bottoms that blends coffee culture with community events and a passion for riding.",
+      "discovered_on": "https://www.kcdaily.com/p/best-coffee-shops-in-kansas-city",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://www.cafecaphe.com",
+      "label": "Cafe C\u00e0 Ph\u00ea Kansas City\u2019s first Vietnamese coffee shop, Caf\u00e9 C\u00e0 Ph\u00ea offers \u201chella good\u201d drinks in it\u2019s Columbus Park space that\u2019s welcoming and bright.",
+      "discovered_on": "https://www.kcdaily.com/p/best-coffee-shops-in-kansas-city",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://www.crowncenter.com/events/2026-opening-day-ice-terrace-free-skate",
+      "label": "Crown Center Ice Terrace Opening Day",
+      "discovered_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://www.eventbrite.com/e/downtown-bentonville-incs-new-years-eve-ultimate-house-party-tickets-2001406313159",
+      "label": "Read More",
+      "discovered_on": "https://downtownbentonville.org/events/calendar",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://www.kemperart.org",
+      "label": "Kemper Museum of Contemporary Art Just around the corner from the Nelson-Atkins is the Kemper Museum of Contemporary Art, a free, architecturally striking museu",
+      "discovered_on": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://www.lenexa.com/Events-Activities/Farmers-Market",
+      "label": "Lenexa Farmers Market",
+      "discovered_on": "https://www.kcdaily.com/p/best-farmers-markets-kansas-city",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://www.locallimetaco.com/menu?utm_source=www.kcdaily.com&utm_medium=newsletter&utm_campaign=lime-time-live",
+      "label": "Local Lime Tacos & Margaritas",
+      "discovered_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://www.nelson-atkins.org/learn/classes",
+      "label": "All Classes",
+      "discovered_on": "https://nelson-atkins.org/events/",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://www.nlbm.com",
+      "label": "The Negro Leagues Baseball Museum The Negro Leagues Baseball Museum is the nation's only museum dedicated to preserving and celebrating the rich history of Afri",
+      "discovered_on": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://www.opkansas.org/recreation-fun/farmers-market",
+      "label": "Overland Park Farmers Market",
+      "discovered_on": "https://www.kcdaily.com/p/best-farmers-markets-kansas-city",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://www.rabbitholekc.org",
+      "label": "The Rabbit hOle The Rabbit hOle is the first museum of its kind int the U.S., offering three floors (and growing!) of children\u2019s literature brought to life thro",
+      "discovered_on": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://www.t-mobilecenter.com/events/detail/garth-brooks-2",
+      "label": "Garth Brooks",
+      "discovered_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://www.thegardenhouse.us",
+      "label": "Garden House Tucked into the Rosedale neighborhood of KCK is Garden House, a coffee shop, plant shop, home decor shop, and event space all-in-one.",
+      "discovered_on": "https://www.kcdaily.com/p/best-coffee-shops-in-kansas-city",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://www.theworldwar.org",
+      "label": "The National WWI Museum and Memorial The United States' official institution dedicated to preserving the history of World War I, featuring the world's most comp",
+      "discovered_on": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://www.ticketmaster.com/dad-rock-night-2000s-rock-tribute-kansas-city-missouri/event/06006449B0779766",
+      "label": "Dad Rock Night",
+      "discovered_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://www.trumanlibrary.gov",
+      "label": "Harry S. Truman Library & Museum An immersive exploration of the 33rd U.S. president's life and legacy through interactive exhibits, a replica Oval Office, and ",
+      "discovered_on": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://www.urbanlibraries.org/initiatives/statement-on-race-and-social-equity",
+      "label": "Statement on Race and Social Equity",
+      "discovered_on": "https://kclibrary.org/events",
+      "first_seen": "2026-11-07T08:20:39.240162-06:00",
+      "status": "unreviewed",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://www.visitcolumbiamo.com/comments/feed",
+      "label": "Columbia Convention and Visitors Bureau \u00bb Comments Feed",
+      "discovered_on": "https://www.visitcolumbiamo.com/events/",
+      "first_seen": "2026-11-07T08:25:10.766365-06:00",
+      "status": "unreviewed",
+      "candidate_format": "rss",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    },
+    {
+      "url": "https://www.visitcolumbiamo.com/feed",
+      "label": "Columbia Convention and Visitors Bureau \u00bb Feed",
+      "discovered_on": "https://www.visitcolumbiamo.com/events/",
+      "first_seen": "2026-11-07T08:25:10.766365-06:00",
+      "status": "unreviewed",
+      "candidate_format": "rss",
+      "last_seen": "2026-11-07T08:25:10.766365-06:00"
+    }
+  ]
+}

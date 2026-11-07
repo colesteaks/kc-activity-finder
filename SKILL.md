@@ -5,6 +5,8 @@ description: Build broad, first-party-verified activity inventories for Kansas C
 
 # KC Activity Finder
 
+The static site and daily deterministic collection workflow are documented in [hosting and collection](references/hosting-and-collection.md). Use them for broad discovery; use the workflow below for personalized, adversarially reviewed recommendations. The unattended collection does not claim to perform semantic web search or human review.
+
 Read [execution](references/execution.md), [research workflow](references/workflow.md), [ranking](references/ranking.md), and [adversarial review](references/adversarial-review.md). Run from the repository root with Python 3.11+ and `pip install -r requirements.txt`.
 
 ## Non-negotiable sequence

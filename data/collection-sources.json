@@ -1,0 +1,124 @@
+{
+  "version": 1,
+  "policy": "Original KC Daily seed is unchanged. These are reviewed official-calendar supplements for deterministic collection, not additional supplied seeds.",
+  "sources": [
+    {
+      "id": "kc-daily",
+      "name": "KC Daily",
+      "region": "Kansas City metro",
+      "city": "Kansas City",
+      "kind": "sensor",
+      "format": "discovery",
+      "url": "https://www.kcdaily.com/",
+      "pattern": "/p/",
+      "max_details": 0
+    },
+    {
+      "id": "watkins",
+      "name": "Watkins Museum",
+      "region": "Lawrence",
+      "city": "Lawrence",
+      "kind": "organizer",
+      "format": "tribe",
+      "url": "https://www.watkinsmuseum.org/wp-json/tribe/events/v1/events"
+    },
+    {
+      "id": "lawrence-arts",
+      "name": "Lawrence Arts Center",
+      "region": "Lawrence",
+      "city": "Lawrence",
+      "kind": "organizer",
+      "format": "jsonld",
+      "url": "https://lawrenceartscenter.org/events-at-lawrence-arts-center/",
+      "pattern": "/event/",
+      "max_details": 80
+    },
+    {
+      "id": "momentary",
+      "name": "The Momentary",
+      "region": "Bentonville",
+      "city": "Bentonville",
+      "kind": "organizer",
+      "format": "jsonld",
+      "url": "https://themomentary.org/calendar/",
+      "pattern": "/calendar/[^/]+/",
+      "max_details": 70
+    },
+    {
+      "id": "crystal-bridges",
+      "name": "Crystal Bridges",
+      "region": "Bentonville",
+      "city": "Bentonville",
+      "kind": "organizer",
+      "format": "jsonld",
+      "url": "https://crystalbridges.org/calendar/2026-11/",
+      "month_template": "https://crystalbridges.org/calendar/{month}/",
+      "pattern": "/events/[^/]+",
+      "max_details": 70
+    },
+    {
+      "id": "columbia-cvb",
+      "name": "Columbia Convention & Visitors Bureau",
+      "region": "Columbia",
+      "city": "Columbia",
+      "kind": "official-calendar",
+      "format": "columbia",
+      "url": "https://www.visitcolumbiamo.com/events/",
+      "pattern": "/event/",
+      "max_details": 80
+    },
+    {
+      "id": "kc-zoo",
+      "name": "Kansas City Zoo & Aquarium",
+      "region": "Kansas City metro",
+      "city": "Kansas City",
+      "kind": "organizer",
+      "format": "jsonld",
+      "url": "https://kansascityzoo.org/events/",
+      "pattern": "/event/",
+      "max_details": 0
+    },
+    {
+      "id": "nelson",
+      "name": "Nelson-Atkins Museum of Art",
+      "region": "Kansas City metro",
+      "city": "Kansas City",
+      "kind": "organizer",
+      "format": "jsonld",
+      "url": "https://nelson-atkins.org/events/",
+      "pattern": "/events/[^/]+",
+      "max_details": 60
+    },
+    {
+      "id": "kc-library",
+      "name": "Kansas City Public Library",
+      "region": "Kansas City metro",
+      "city": "Kansas City",
+      "kind": "organizer",
+      "format": "jsonld",
+      "url": "https://kclibrary.org/events",
+      "pattern": "/events/[^/?]+",
+      "max_details": 60
+    },
+    {
+      "id": "kc-parks",
+      "name": "KC Parks",
+      "region": "Kansas City metro",
+      "city": "Kansas City",
+      "kind": "organizer",
+      "format": "tribe",
+      "url": "https://kcparks.org/wp-json/tribe/events/v1/events"
+    },
+    {
+      "id": "bentonville-downtown",
+      "name": "Downtown Bentonville",
+      "region": "Bentonville",
+      "city": "Bentonville",
+      "kind": "organizer",
+      "format": "jsonld",
+      "url": "https://downtownbentonville.org/events/calendar",
+      "pattern": "/events/[^/?]+",
+      "max_details": 25
+    }
+  ]
+}

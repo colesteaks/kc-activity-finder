@@ -2,6 +2,8 @@
 
 An executable, evidence-first activity research skill for Kansas City metro, Lawrence, Columbia, Bentonville and surrounding areas, including Northwest Arkansas.
 
+**Hosted activity browser:** `web/` is a static GitHub Pages site with age, location, type and date filters. Daily GitHub Actions collect seven months ahead into `web/activities.json`, without any LLM calls. See [hosting and collection](references/hosting-and-collection.md) for scheduling, source expansion, costs and maintenance.
+
 **Discover broadly. Filter later.** Collect adult-only events, kids’ activities, family outings, active experiences, arts, performances, classes, races, seasonal events and niche discoveries. Preserve closed, full, canceled and unresolved records. Build separate recommendations for different outings from that inventory.
 
 Supports `weekend-current` and `signup-horizon` (events worth reserving ahead). The required order is source graph → deep first-party sweep → candidate capture → broader web search → merge → fit ranking → adversarial review → recommendations.

@@ -16,9 +16,13 @@ jobs:
         with:
           python-version: "3.12"
       - name: Validate repository invariants
-        run: python3 -m pip install -r requirements.txt
+        run: python3 -m pip install -r requirements.txt -r requirements-collector.txt
       - name: Validate repository data
         run: python3 scripts/validate_repo.py
       - name: Run tests
         run: python3 -m unittest discover -s tests -v
+      - name: Check browser filters and public data
+        run: |
+          node --test tests/test_filters.mjs
+          python3 scripts/validate_public_data.py
 

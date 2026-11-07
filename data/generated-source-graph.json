@@ -1,0 +1,530 @@
+{
+  "version": 1,
+  "generated_at": "2026-11-07T08:25:10.766365-06:00",
+  "seed_sha256": "0a268fbfd2c4098c22795598bd4b11fa81809878f0928e9469945e1d479627d3",
+  "authority": "data/source-graph.json",
+  "approved_registry": "data/collection-sources.json",
+  "nodes": [
+    {
+      "id": "kc-daily",
+      "label": "KC Daily",
+      "url": "https://www.kcdaily.com/",
+      "role": "sensor",
+      "region": "Kansas City metro",
+      "provenance": "provided-seed"
+    },
+    {
+      "id": "watkins",
+      "label": "Watkins Museum",
+      "url": "https://www.watkinsmuseum.org/wp-json/tribe/events/v1/events",
+      "role": "organizer",
+      "region": "Lawrence",
+      "provenance": "reviewed-supplement"
+    },
+    {
+      "id": "lawrence-arts",
+      "label": "Lawrence Arts Center",
+      "url": "https://lawrenceartscenter.org/events-at-lawrence-arts-center/",
+      "role": "organizer",
+      "region": "Lawrence",
+      "provenance": "reviewed-supplement"
+    },
+    {
+      "id": "momentary",
+      "label": "The Momentary",
+      "url": "https://themomentary.org/calendar/",
+      "role": "organizer",
+      "region": "Bentonville",
+      "provenance": "reviewed-supplement"
+    },
+    {
+      "id": "crystal-bridges",
+      "label": "Crystal Bridges",
+      "url": "https://crystalbridges.org/calendar/2026-11/",
+      "role": "organizer",
+      "region": "Bentonville",
+      "provenance": "reviewed-supplement"
+    },
+    {
+      "id": "columbia-cvb",
+      "label": "Columbia Convention & Visitors Bureau",
+      "url": "https://www.visitcolumbiamo.com/events/",
+      "role": "official-calendar",
+      "region": "Columbia",
+      "provenance": "reviewed-supplement"
+    },
+    {
+      "id": "kc-zoo",
+      "label": "Kansas City Zoo & Aquarium",
+      "url": "https://kansascityzoo.org/events/",
+      "role": "organizer",
+      "region": "Kansas City metro",
+      "provenance": "reviewed-supplement"
+    },
+    {
+      "id": "nelson",
+      "label": "Nelson-Atkins Museum of Art",
+      "url": "https://nelson-atkins.org/events/",
+      "role": "organizer",
+      "region": "Kansas City metro",
+      "provenance": "reviewed-supplement"
+    },
+    {
+      "id": "kc-library",
+      "label": "Kansas City Public Library",
+      "url": "https://kclibrary.org/events",
+      "role": "organizer",
+      "region": "Kansas City metro",
+      "provenance": "reviewed-supplement"
+    },
+    {
+      "id": "kc-parks",
+      "label": "KC Parks",
+      "url": "https://kcparks.org/wp-json/tribe/events/v1/events",
+      "role": "organizer",
+      "region": "Kansas City metro",
+      "provenance": "reviewed-supplement"
+    },
+    {
+      "id": "bentonville-downtown",
+      "label": "Downtown Bentonville",
+      "url": "https://downtownbentonville.org/events/calendar",
+      "role": "organizer",
+      "region": "Bentonville",
+      "provenance": "reviewed-supplement"
+    }
+  ],
+  "edges": [
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.rabbitholekc.org",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.nlbm.com",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.theworldwar.org",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://museumofkansascity.org/museum-of-kansas-city",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.kemperart.org",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.americanjazzmuseum.org",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://toyandminiaturemuseum.org",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://museumofbbq.co",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.trumanlibrary.gov",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.1856.com",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.t-mobilecenter.com/events/detail/garth-brooks-2",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://lord-of-life-church-59647.churchcenter.com/calendar/event/237021996",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.crowncenter.com/events/2026-opening-day-ice-terrace-free-skate",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.ticketmaster.com/dad-rock-night-2000s-rock-tribute-kansas-city-missouri/event/06006449B0779766",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://downtownls.org/event/annual-veterans-day-parade-america-250",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://tickets.kauffmancenter.org/overview/25927",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://kcopera.org/event/the-marriage-of-figaro",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://crowncenterchristmas.com?utm_source=KC+Daily&utm_medium=Article+Sponsor&utm_campaign=Christmas+2026",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://crowncenterchristmas.com/ice-terrace-2025",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://crowncenterchristmas.com/events/mayors-christmas-tree-lighting-ceremony",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://crowncenterchristmas.com?utm_source=KC+Daily&utm_medium=Article+Sponsor&utm_campaign=Christmas+2026",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.locallimetaco.com/menu?utm_source=www.kcdaily.com&utm_medium=newsletter&utm_campaign=lime-time-live",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://rainydaybooks.com/event/2026-11-13/jenna-bush-hager-lucy-tan-tigers-mouth?utm_source=www.kcdaily.com&utm_medium=newsletter&utm_campaign=starry-nights-ahead",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://libertysbeacon.theworldwar.org/libertys-beacon-home?utm_source=www.kcdaily.com&utm_medium=newsletter&utm_campaign=sippin-in-the-spirit",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://messengercoffee.co",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/best-coffee-shops-in-kansas-city"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.bliproasters.com",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/best-coffee-shops-in-kansas-city"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.cafecaphe.com",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/best-coffee-shops-in-kansas-city"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://pilgrimcoffeecompany.com",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/best-coffee-shops-in-kansas-city"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.thegardenhouse.us",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/best-coffee-shops-in-kansas-city"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.opkansas.org/recreation-fun/farmers-market",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/best-farmers-markets-kansas-city"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.lenexa.com/Events-Activities/Farmers-Market",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/best-farmers-markets-kansas-city"
+    },
+    {
+      "from": "lawrence-arts",
+      "to_url": "https://freestatefestival.org",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://lawrenceartscenter.org/events-at-lawrence-arts-center/"
+    },
+    {
+      "from": "momentary",
+      "to_url": "https://tickets.crystalbridges-themomentary.org/account/upcomingevents",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://themomentary.org/calendar/"
+    },
+    {
+      "from": "momentary",
+      "to_url": "https://tickets.crystalbridges-themomentary.org/cart/details",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://themomentary.org/calendar/"
+    },
+    {
+      "from": "momentary",
+      "to_url": "https://tickets.crystalbridges-themomentary.org/99643/99644",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://themomentary.org/calendar/"
+    },
+    {
+      "from": "momentary",
+      "to_url": "https://tickets.crystalbridges-themomentary.org/99643/99644",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://themomentary.org/calendar/"
+    },
+    {
+      "from": "momentary",
+      "to_url": "https://tickets.crystalbridges-themomentary.org/99637/99638",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://themomentary.org/calendar/"
+    },
+    {
+      "from": "momentary",
+      "to_url": "https://tickets.crystalbridges-themomentary.org/99639/99640",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://themomentary.org/calendar/"
+    },
+    {
+      "from": "momentary",
+      "to_url": "https://tickets.crystalbridges-themomentary.org/overview/99323",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://themomentary.org/calendar/"
+    },
+    {
+      "from": "momentary",
+      "to_url": "https://tickets.crystalbridges-themomentary.org/99325/99326",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://themomentary.org/calendar/"
+    },
+    {
+      "from": "momentary",
+      "to_url": "https://tickets.crystalbridges-themomentary.org/99042/99043",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://themomentary.org/calendar/"
+    },
+    {
+      "from": "crystal-bridges",
+      "to_url": "https://www.bing.com/maps/directions?ty=0&v=2&sV=1&rtp=%7Epos.36.381858825683594_-94.20264434814453__Crystal%2520Bridges%2520Museum%2520of%2520American%2520Art_&cp=36.381868%7E-94.202653&lvl=16&style=r",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://industry.visitmo.com",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "nelson",
+      "to_url": "https://app.smartify.org/en-GB/map/iimg_ZhCcp8UDGo8dle7LlbS6",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://nelson-atkins.org/events/"
+    },
+    {
+      "from": "nelson",
+      "to_url": "https://cart.nelson-atkins.org/events?view=calendar+view=list&kid=11,165,216",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://nelson-atkins.org/events/"
+    },
+    {
+      "from": "nelson",
+      "to_url": "https://archive.org/details/nelsonatkinsmuseumofart",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://nelson-atkins.org/events/"
+    },
+    {
+      "from": "nelson",
+      "to_url": "https://cart.nelson-atkins.org/events?view=calendar+view=list&kid=11,165,216",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://nelson-atkins.org/events/"
+    },
+    {
+      "from": "nelson",
+      "to_url": "https://booking.nelson-atkins.org/schoolworkshops/en-us/home",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://nelson-atkins.org/events/"
+    },
+    {
+      "from": "nelson",
+      "to_url": "https://www.nelson-atkins.org/learn/classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://nelson-atkins.org/events/"
+    },
+    {
+      "from": "nelson",
+      "to_url": "https://cart.nelson-atkins.org/events?view=calendar+view=list&kid=11,165,216",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://nelson-atkins.org/events/"
+    },
+    {
+      "from": "nelson",
+      "to_url": "https://cart.nelson-atkins.org/account/login?ReturnUrl=%2Faccount%2Fupcomingevents",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://nelson-atkins.org/events/"
+    },
+    {
+      "from": "nelson",
+      "to_url": "https://cart.nelson-atkins.org/50605/52864",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://nelson-atkins.org/events/"
+    },
+    {
+      "from": "nelson",
+      "to_url": "https://cart.nelson-atkins.org/51930/53441",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://nelson-atkins.org/events/"
+    },
+    {
+      "from": "nelson",
+      "to_url": "https://cart.nelson-atkins.org/50445/53356",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://nelson-atkins.org/events/"
+    },
+    {
+      "from": "nelson",
+      "to_url": "https://cart.nelson-atkins.org/50605/50609",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://nelson-atkins.org/events/"
+    },
+    {
+      "from": "nelson",
+      "to_url": "https://cart.nelson-atkins.org/50705/52900",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://nelson-atkins.org/events/"
+    },
+    {
+      "from": "nelson",
+      "to_url": "https://cart.nelson-atkins.org/50445/53357",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://nelson-atkins.org/events/"
+    },
+    {
+      "from": "nelson",
+      "to_url": "https://cart.nelson-atkins.org/51930/52903",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://nelson-atkins.org/events/"
+    },
+    {
+      "from": "nelson",
+      "to_url": "https://cart.nelson-atkins.org/50445/53358",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://nelson-atkins.org/events/"
+    },
+    {
+      "from": "nelson",
+      "to_url": "https://cart.nelson-atkins.org/events?view=calendar+view=list&kid=170,12,165,280,",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://nelson-atkins.org/events/"
+    },
+    {
+      "from": "nelson",
+      "to_url": "https://cart.nelson-atkins.org/events?view=calendar+view=list&kid=11,165,216",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://nelson-atkins.org/events/"
+    },
+    {
+      "from": "nelson",
+      "to_url": "https://cart.nelson-atkins.org/account/login?ReturnUrl=%2Faccount%2Fupcomingevents",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://nelson-atkins.org/events/"
+    },
+    {
+      "from": "kc-library",
+      "to_url": "https://www.urbanlibraries.org/initiatives/statement-on-race-and-social-equity",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kclibrary.org/events"
+    },
+    {
+      "from": "bentonville-downtown",
+      "to_url": "https://www.eventbrite.com/e/downtown-bentonville-incs-new-years-eve-ultimate-house-party-tickets-2001406313159",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://downtownbentonville.org/events/calendar"
+    }
+  ],
+  "discovery_health": [
+    {
+      "id": "kc-daily",
+      "status": "checked",
+      "pages": 5
+    },
+    {
+      "id": "lawrence-arts",
+      "status": "checked",
+      "pages": 1
+    },
+    {
+      "id": "momentary",
+      "status": "checked",
+      "pages": 1
+    },
+    {
+      "id": "crystal-bridges",
+      "status": "checked",
+      "pages": 1
+    },
+    {
+      "id": "columbia-cvb",
+      "status": "checked",
+      "pages": 1
+    },
+    {
+      "id": "kc-zoo",
+      "status": "checked",
+      "pages": 1
+    },
+    {
+      "id": "nelson",
+      "status": "checked",
+      "pages": 1
+    },
+    {
+      "id": "kc-library",
+      "status": "checked",
+      "pages": 1
+    },
+    {
+      "id": "bentonville-downtown",
+      "status": "checked",
+      "pages": 1
+    }
+  ]
+}
