@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-07T08:25:10.766365-06:00",
+  "generated_at": "2026-11-07T08:29:23.856696-06:00",
   "seed_sha256": "0a268fbfd2c4098c22795598bd4b11fa81809878f0928e9469945e1d479627d3",
   "authority": "data/source-graph.json",
   "approved_registry": "data/collection-sources.json",
@@ -97,63 +97,69 @@
   "edges": [
     {
       "from": "kc-daily",
-      "to_url": "https://www.rabbitholekc.org",
+      "to_url": "https://unionstation.org/event/tinsel-tinis",
       "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city"
+      "observed_on": "https://www.kcdaily.com/p/kansas-city-s-best-holiday-pop-up-bars-in-2026"
     },
     {
       "from": "kc-daily",
-      "to_url": "https://www.nlbm.com",
+      "to_url": "https://www.kcwineco.com/festivals/jingle-bar",
       "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city"
+      "observed_on": "https://www.kcdaily.com/p/kansas-city-s-best-holiday-pop-up-bars-in-2026"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://chickennpickle.com/holiday-hideaway-kansas-city",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/kansas-city-s-best-holiday-pop-up-bars-in-2026"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.hollyhouseonmain.com",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/kansas-city-s-best-holiday-pop-up-bars-in-2026"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://messengercoffee.co",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/best-coffee-shops-in-kansas-city"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.bliproasters.com",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/best-coffee-shops-in-kansas-city"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.cafecaphe.com",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/best-coffee-shops-in-kansas-city"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://pilgrimcoffeecompany.com",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/best-coffee-shops-in-kansas-city"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.thegardenhouse.us",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/best-coffee-shops-in-kansas-city"
     },
     {
       "from": "kc-daily",
       "to_url": "https://www.theworldwar.org",
       "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city"
+      "observed_on": "https://www.kcdaily.com/p/best-things-to-do-kansas-city"
     },
     {
       "from": "kc-daily",
-      "to_url": "https://museumofkansascity.org/museum-of-kansas-city",
+      "to_url": "https://www.visitkansascityks.com/things-to-do/shopping/legends-outlets",
       "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.kemperart.org",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.americanjazzmuseum.org",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://toyandminiaturemuseum.org",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://museumofbbq.co",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.trumanlibrary.gov",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.1856.com",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city"
+      "observed_on": "https://www.kcdaily.com/p/best-things-to-do-kansas-city"
     },
     {
       "from": "kc-daily",
@@ -238,48 +244,6 @@
       "to_url": "https://libertysbeacon.theworldwar.org/libertys-beacon-home?utm_source=www.kcdaily.com&utm_medium=newsletter&utm_campaign=sippin-in-the-spirit",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://messengercoffee.co",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/best-coffee-shops-in-kansas-city"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.bliproasters.com",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/best-coffee-shops-in-kansas-city"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.cafecaphe.com",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/best-coffee-shops-in-kansas-city"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://pilgrimcoffeecompany.com",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/best-coffee-shops-in-kansas-city"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.thegardenhouse.us",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/best-coffee-shops-in-kansas-city"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.opkansas.org/recreation-fun/farmers-market",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/best-farmers-markets-kansas-city"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.lenexa.com/Events-Activities/Farmers-Market",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/best-farmers-markets-kansas-city"
     },
     {
       "from": "lawrence-arts",
