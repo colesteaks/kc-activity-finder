@@ -1,9 +1,17 @@
 ---
 name: kc-activity-finder
 description: Build broad, first-party-verified activity inventories for Kansas City and surrounding regions; compare worthwhile day trips within a user-specified driving limit, plan realistic itineraries, and filter separately for adults, kids or families, weekends and advance registration.
+license: MIT
+compatibility: Requires Python 3.11+ and jsonschema for executable helpers. Live research needs host-provided browsing; verified drive limits need routing evidence. Collector dependencies are optional. No API keys are required by the core skill.
+metadata:
+  author: colesteaks
+  version: "1.0.0"
+  repository: https://github.com/colesteaks/kc-activity-finder
 ---
 
 # KC Activity Finder
+
+See [installation and versioning](references/installation.md) for a pinned public release. Resolve all bundled paths from this skill directory, regardless of the caller's working directory. Bundled activity data is a timestamped snapshot; recheck current official facts before recommendations.
 
 ## Choose the outing
 

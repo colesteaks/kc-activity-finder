@@ -25,4 +25,8 @@ jobs:
         run: |
           node --test tests/test_*.mjs
           python3 scripts/validate_public_data.py
+      - name: Check the distributable skill
+        run: |
+          python3 scripts/build_release.py --output /tmp/kc-skill-release
+          python3 scripts/verify_release.py /tmp/kc-skill-release/kc-activity-finder-v$(cat VERSION).zip --smoke-test
 

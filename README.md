@@ -2,6 +2,16 @@
 
 An executable, evidence-first activity research skill for Kansas City metro, Lawrence, Columbia, Bentonville and surrounding areas, including Northwest Arkansas.
 
+## Install the public skill
+
+The skill uses the portable [Agent Skills format](https://agentskills.io/specification) and is MIT licensed. Install the **v1.0.0** release in a compatible agent:
+
+```sh
+npx skills@latest add colesteaks/kc-activity-finder@v1.0.0 --skill kc-activity-finder
+```
+
+[Download v1.0.0](https://github.com/colesteaks/kc-activity-finder/releases/tag/v1.0.0) · [Installation and versioning](references/installation.md) · [Changelog](CHANGELOG.md) · [License](LICENSE). Releases include a self-contained ZIP, exact-commit/per-file manifest and SHA-256 checksums. Live activity facts still require current research; versioning pins the skill, not event availability.
+
 **Hosted activity browser:** `web/` is a static GitHub Pages site with age, location, type and date filters. Daily GitHub Actions collect seven months ahead into `web/activities.json`, without any LLM calls. See [hosting and collection](references/hosting-and-collection.md) for scheduling, source expansion, costs and maintenance.
 
 **Ongoing places and map:** parks and permanent attractions have separate hours, seasonal rules and amenities. The optional Leaflet map shares the list filters, groups co-located activities, supports searching the visible area, and links to activity details. [Place and map maintenance](references/places-and-map.md) explains provenance, missing coordinates and tile hosting.

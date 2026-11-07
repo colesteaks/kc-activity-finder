@@ -40,6 +40,13 @@ FIRST_PARTY_TYPES = {
 REQUIRED_FILES = [
     "README.md",
     "SKILL.md",
+    "VERSION",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md",
+    "CHANGELOG.md",
+    "references/installation.md",
+    "scripts/build_release.py",
+    "scripts/verify_release.py",
     "agents/openai.yaml",
     "data/primary-sources.txt",
     "data/source-graph.json",
