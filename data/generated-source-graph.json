@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-07T14:55:41.686515-06:00",
+  "generated_at": "2026-11-08T11:08:03.225971-06:00",
   "seed_sha256": "0a268fbfd2c4098c22795598bd4b11fa81809878f0928e9469945e1d479627d3",
   "authority": "data/source-graph.json",
   "approved_registry": "data/collection-sources.json",
@@ -4540,18 +4540,6 @@
     },
     {
       "from": "lawrence-arts",
-      "to_url": "https://lawrenceartscenter.org/event/napoleons-dynamite-musical-parody",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://lawrenceartscenter.org/events-at-lawrence-arts-center/"
-    },
-    {
-      "from": "lawrence-arts",
-      "to_url": "https://lawrenceartscenter.org/event/salad-days-hang12-exhibition-event",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://lawrenceartscenter.org/events-at-lawrence-arts-center/"
-    },
-    {
-      "from": "lawrence-arts",
       "to_url": "https://lawrenceartscenter.org/event/guest-film-play-free",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://lawrenceartscenter.org/events-at-lawrence-arts-center/"
@@ -4577,6 +4565,18 @@
     {
       "from": "lawrence-arts",
       "to_url": "https://lawrenceartscenter.org/event/guest-film-screening-mr-blandings-builds-his-dream-home-1948",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://lawrenceartscenter.org/events-at-lawrence-arts-center/"
+    },
+    {
+      "from": "lawrence-arts",
+      "to_url": "https://lawrenceartscenter.org/event/downtown-underground-welcome-winter-songwriter-showcase-musicians-market",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://lawrenceartscenter.org/events-at-lawrence-arts-center/"
+    },
+    {
+      "from": "lawrence-arts",
+      "to_url": "https://lawrenceartscenter.org/event/brazil",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://lawrenceartscenter.org/events-at-lawrence-arts-center/"
     },
@@ -4888,6 +4888,12 @@
     },
     {
       "from": "momentary",
+      "to_url": "https://tickets.crystalbridges-themomentary.org/99321/99322",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://themomentary.org/calendar/"
+    },
+    {
+      "from": "momentary",
       "to_url": "https://themomentary.org/calendar/pastry-week-cookbook-writing-workshop-with-stacey-mei-yan-fong",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://themomentary.org/calendar/"
@@ -5002,25 +5008,19 @@
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/creative-wellness-weekend-journal-workshop",
+      "to_url": "https://crystalbridges.org/events/creative-wellness-weekend",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/creative-wellness-weekend-making-meaning-with-kelly-corrigan-and-jennifer-breheny-wallace",
+      "to_url": "https://crystalbridges.org/events/creative-wellness-weekend-indigo-dyeing-workshop",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/creative-wellness-weekend-meditative-mandalas",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
-    },
-    {
-      "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/creative-wellness-weekend-natural-dyeing-workshop",
+      "to_url": "https://crystalbridges.org/events/creative-wellness-weekend-needle-felting-workshop",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
@@ -5039,12 +5039,6 @@
     {
       "from": "crystal-bridges",
       "to_url": "https://crystalbridges.org/events/2025-drop-in-tour-collection-highlights",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
-    },
-    {
-      "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/exhibition-tour-keith-haring-in-3d",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
@@ -5075,24 +5069,6 @@
     {
       "from": "crystal-bridges",
       "to_url": "https://crystalbridges.org/events/special-exhibition-tour-grandma-moses-a-good-days-work",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
-    },
-    {
-      "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/creative-wellness-weekend",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
-    },
-    {
-      "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/creative-wellness-weekend-indigo-dyeing-workshop",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
-    },
-    {
-      "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/creative-wellness-weekend-needle-felting-workshop",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
@@ -5134,6 +5110,24 @@
     },
     {
       "from": "crystal-bridges",
+      "to_url": "https://crystalbridges.org/events/exhibition-tour-keith-haring-in-3d",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
+    },
+    {
+      "from": "crystal-bridges",
+      "to_url": "https://crystalbridges.org/events/regional-artist-showcase-unityware-ceramics",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
+    },
+    {
+      "from": "crystal-bridges",
+      "to_url": "https://crystalbridges.org/events/birthday-p-art-y",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
+    },
+    {
+      "from": "crystal-bridges",
       "to_url": "https://crystalbridges.org/events/2025-drop-in-tour-architecture",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
@@ -5147,12 +5141,6 @@
     {
       "from": "crystal-bridges",
       "to_url": "https://crystalbridges.org/events/2025-drop-in-tour-collection-highlights",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
-    },
-    {
-      "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/exhibition-tour-keith-haring-in-3d",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
@@ -5182,19 +5170,7 @@
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/regional-artist-showcase-unityware-ceramics",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
-    },
-    {
-      "from": "crystal-bridges",
       "to_url": "https://crystalbridges.org/events/special-exhibition-tour-grandma-moses-a-good-days-work",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
-    },
-    {
-      "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/birthday-p-art-y",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
@@ -5237,6 +5213,12 @@
     {
       "from": "crystal-bridges",
       "to_url": "https://crystalbridges.org/events/drop-in-architecture-tour-heartland-whole-health-institute",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
+    },
+    {
+      "from": "crystal-bridges",
+      "to_url": "https://crystalbridges.org/events/exhibition-tour-keith-haring-in-3d",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
@@ -5350,79 +5332,67 @@
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/creative-wellness-weekend-journal-workshop?visitStart=2026-11-07&visitEnd=2026-11-13&selectedDate=2026-11-07",
+      "to_url": "https://crystalbridges.org/events/creative-wellness-weekend-needle-felting-workshop?visitStart=2026-11-08&visitEnd=2026-11-14&selectedDate=2026-11-08",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/frank-lloyd-wright-tours-self-guided?visitStart=2026-11-07&visitEnd=2026-11-13&selectedDate=2026-11-07",
+      "to_url": "https://crystalbridges.org/events/frank-lloyd-wright-tours-self-guided?visitStart=2026-11-08&visitEnd=2026-11-14&selectedDate=2026-11-08",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/frank-lloyd-wright-tours-guided?visitStart=2026-11-07&visitEnd=2026-11-13&selectedDate=2026-11-07",
+      "to_url": "https://crystalbridges.org/events/frank-lloyd-wright-tours-guided?visitStart=2026-11-08&visitEnd=2026-11-14&selectedDate=2026-11-08",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/creative-wellness-weekend-making-meaning-with-kelly-corrigan-and-jennifer-breheny-wallace?visitStart=2026-11-07&visitEnd=2026-11-13&selectedDate=2026-11-07",
+      "to_url": "https://crystalbridges.org/events/grandma-moses-a-good-days-work?visitStart=2026-11-08&visitEnd=2026-11-14&selectedDate=2026-11-08",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/grandma-moses-a-good-days-work?visitStart=2026-11-07&visitEnd=2026-11-13&selectedDate=2026-11-07",
+      "to_url": "https://crystalbridges.org/events/keith-haring-in-3d?visitStart=2026-11-08&visitEnd=2026-11-14&selectedDate=2026-11-08",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/keith-haring-in-3d?visitStart=2026-11-07&visitEnd=2026-11-13&selectedDate=2026-11-07",
+      "to_url": "https://crystalbridges.org/events/creative-wellness-weekend?visitStart=2026-11-08&visitEnd=2026-11-14&selectedDate=2026-11-08",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/creative-wellness-weekend-meditative-mandalas?visitStart=2026-11-07&visitEnd=2026-11-13&selectedDate=2026-11-07",
+      "to_url": "https://crystalbridges.org/events/2025-drop-in-tour-big-picture?visitStart=2026-11-08&visitEnd=2026-11-14&selectedDate=2026-11-08",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/2025-drop-in-tour-big-picture?visitStart=2026-11-07&visitEnd=2026-11-13&selectedDate=2026-11-07",
+      "to_url": "https://crystalbridges.org/events/2025-drop-in-tour-architecture?visitStart=2026-11-08&visitEnd=2026-11-14&selectedDate=2026-11-08",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/2025-drop-in-tour-architecture?visitStart=2026-11-07&visitEnd=2026-11-13&selectedDate=2026-11-07",
+      "to_url": "https://crystalbridges.org/events/special-exhibition-tour-grandma-moses-a-good-days-work?visitStart=2026-11-08&visitEnd=2026-11-14&selectedDate=2026-11-08",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/special-exhibition-tour-grandma-moses-a-good-days-work?visitStart=2026-11-07&visitEnd=2026-11-13&selectedDate=2026-11-07",
+      "to_url": "https://crystalbridges.org/events/creative-wellness-weekend-indigo-dyeing-workshop?visitStart=2026-11-08&visitEnd=2026-11-14&selectedDate=2026-11-08",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/creative-wellness-weekend-natural-dyeing-workshop?visitStart=2026-11-07&visitEnd=2026-11-13&selectedDate=2026-11-07",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
-    },
-    {
-      "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/2025-drop-in-tour-collection-highlights?visitStart=2026-11-07&visitEnd=2026-11-13&selectedDate=2026-11-07",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
-    },
-    {
-      "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/exhibition-tour-keith-haring-in-3d?visitStart=2026-11-07&visitEnd=2026-11-13&selectedDate=2026-11-07",
+      "to_url": "https://crystalbridges.org/events/2025-drop-in-tour-collection-highlights?visitStart=2026-11-08&visitEnd=2026-11-14&selectedDate=2026-11-08",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
@@ -5500,97 +5470,7 @@
     },
     {
       "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/event/evil-dead-the-musical-columbia-entertainment-co-2-2-2-2-2-2",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/event/mizzou-football-vs-texas",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/event/columbia-farmers-market-winter-season",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/event/certainly-so-rose-music-hall",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/event/artistry-on-the-runway-hair-fashion-show",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/event/its-a-2000s-party-halloween-edition-the-blue-note-3",
+      "to_url": "https://www.visitcolumbiamo.com/event/nurse-blake-but-did-you-die-comedy-tour",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitcolumbiamo.com/events/"
     },
@@ -5626,24 +5506,6 @@
     },
     {
       "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/event/mizzou-volleyball-vs-texas-am",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
       "to_url": "https://www.visitcolumbiamo.com/event/merry-maplewood-a-festive-holiday-celebration-at-historic-maplewood-house",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitcolumbiamo.com/events/"
@@ -5662,7 +5524,7 @@
     },
     {
       "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/event/nurse-blake-but-did-you-die-comedy-tour",
+      "to_url": "https://www.visitcolumbiamo.com/event/mizzou-volleyball-vs-texas-am",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitcolumbiamo.com/events/"
     },
@@ -5716,24 +5578,6 @@
     },
     {
       "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/event/rho-engine-room-free-community-workout-class-2-2-3",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
       "to_url": "https://www.visitcolumbiamo.com/event/redferrin-the-blue-note",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitcolumbiamo.com/events/"
@@ -5752,7 +5596,133 @@
     },
     {
       "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/event/rho-engine-room-free-community-workout-class-2-2-3",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
       "to_url": "https://www.visitcolumbiamo.com/event/heidi-gardner-university-concert-series-2",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/event/mid-missouri-mahjong-classic-meet-greet",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/event/holiday-exhibition-sale-columbia-weavers-and-spinners-guild",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/event/holiday-open-house-at-the-blufftop",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/event/nicole-atkins-rose-music-hall",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/event/redferrin-the-blue-note-2",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/event/mid-missouri-mahjong-classic-tournament",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitcolumbiamo.com/events/"
     },
@@ -6946,12 +6916,6 @@
     },
     {
       "from": "nelson",
-      "to_url": "https://cart.nelson-atkins.org/50605/52864",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://nelson-atkins.org/events/"
-    },
-    {
-      "from": "nelson",
       "to_url": "https://cart.nelson-atkins.org/51930/53441",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://nelson-atkins.org/events/"
@@ -6989,6 +6953,12 @@
     {
       "from": "nelson",
       "to_url": "https://cart.nelson-atkins.org/50445/53358",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://nelson-atkins.org/events/"
+    },
+    {
+      "from": "nelson",
+      "to_url": "https://cart.nelson-atkins.org/50605/52865",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://nelson-atkins.org/events/"
     },
@@ -7150,60 +7120,6 @@
     },
     {
       "from": "kc-library",
-      "to_url": "https://kclibrary.org/calendar/jigsaw-swap",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kclibrary.org/calendar"
-    },
-    {
-      "from": "kc-library",
-      "to_url": "https://kclibrary.org/calendar/game-day-stacks",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kclibrary.org/calendar"
-    },
-    {
-      "from": "kc-library",
-      "to_url": "https://kclibrary.org/calendar/journaling-journey-0",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kclibrary.org/calendar"
-    },
-    {
-      "from": "kc-library",
-      "to_url": "https://kclibrary.org/calendar/fafsa-101-5",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kclibrary.org/calendar"
-    },
-    {
-      "from": "kc-library",
-      "to_url": "https://kclibrary.org/locations/trails-west",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kclibrary.org/calendar"
-    },
-    {
-      "from": "kc-library",
-      "to_url": "https://kclibrary.org/calendar/mending-101",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kclibrary.org/calendar"
-    },
-    {
-      "from": "kc-library",
-      "to_url": "https://kclibrary.org/calendar/mending-101",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kclibrary.org/calendar"
-    },
-    {
-      "from": "kc-library",
-      "to_url": "https://kclibrary.org/calendar/movie-catching-fire",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kclibrary.org/calendar"
-    },
-    {
-      "from": "kc-library",
-      "to_url": "https://kclibrary.org/calendar/12-step-recovery-group-secular-91",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kclibrary.org/calendar"
-    },
-    {
-      "from": "kc-library",
       "to_url": "https://kclibrary.org/calendar/fall-tai-chi-series-0",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://kclibrary.org/calendar"
@@ -7223,6 +7139,48 @@
     {
       "from": "kc-library",
       "to_url": "https://kclibrary.org/calendar/learn-play-mah-jongg",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kclibrary.org/calendar"
+    },
+    {
+      "from": "kc-library",
+      "to_url": "https://kclibrary.org/calendar/movie-sleepy-hollow",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kclibrary.org/calendar"
+    },
+    {
+      "from": "kc-library",
+      "to_url": "https://kclibrary.org/calendar/sunday-game-spotlight-oregon-trail-0",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kclibrary.org/calendar"
+    },
+    {
+      "from": "kc-library",
+      "to_url": "https://kclibrary.org/calendar/job-seeker-drop-hours-74",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kclibrary.org/calendar"
+    },
+    {
+      "from": "kc-library",
+      "to_url": "https://kclibrary.org/calendar/bookmobile-center-developmentally-disabled",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kclibrary.org/calendar"
+    },
+    {
+      "from": "kc-library",
+      "to_url": "https://kclibrary.org/calendar/taste-autumn-0",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kclibrary.org/calendar"
+    },
+    {
+      "from": "kc-library",
+      "to_url": "https://kclibrary.org/calendar/bookmobile-truman-ridge-adult-day-center",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kclibrary.org/calendar"
+    },
+    {
+      "from": "kc-library",
+      "to_url": "https://kclibrary.org/calendar/monday-mid-day-meetup-7",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://kclibrary.org/calendar"
     },
@@ -7427,12 +7385,6 @@
     {
       "from": "bentonville-downtown",
       "to_url": "https://downtownbentonville.org/events/calendar",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://downtownbentonville.org/events/calendar"
-    },
-    {
-      "from": "bentonville-downtown",
-      "to_url": "https://downtownbentonville.org/do/bentonville-farmers-market-indoor-season-1",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://downtownbentonville.org/events/calendar"
     },
@@ -7786,7 +7738,7 @@
     },
     {
       "from": "weston-bend",
-      "to_url": "https://mostateparks.com/park/johnsons-shut-ins-state-park",
+      "to_url": "https://mostateparks.com/park/crowder-state-park",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://mostateparks.com/park/weston-bend-state-park"
     },
@@ -12262,13 +12214,13 @@
     },
     {
       "from": "rock-bridge-state-park",
-      "to_url": "https://mostateparks.com/park/katy-trail-state-park",
+      "to_url": "https://mostateparks.com/park/annie-and-abel-van-meter-state-park",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://mostateparks.com/park/rock-bridge-memorial-state-park"
     },
     {
       "from": "rock-bridge-state-park",
-      "to_url": "https://mostateparks.com/park/prairie-state-park",
+      "to_url": "https://mostateparks.com/historic-site/clarks-hillnorton-state-historic-site",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://mostateparks.com/park/rock-bridge-memorial-state-park"
     },
@@ -13420,31 +13372,31 @@
     },
     {
       "from": "lawrence-library",
-      "to_url": "https://lawrence.bibliocommons.com/events/6a9b3cce4995480655ed9e95",
+      "to_url": "https://lawrence.bibliocommons.com/events/6a9b3cce4995480655ed9e96",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://lplks.org/events/"
     },
     {
       "from": "lawrence-library",
-      "to_url": "https://lawrence.bibliocommons.com/events/6adb83f9035faf0033de8434",
+      "to_url": "https://lawrence.bibliocommons.com/events/6adb83f9035faf0033de8435",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://lplks.org/events/"
     },
     {
       "from": "lawrence-library",
-      "to_url": "https://lawrence.bibliocommons.com/events/6aaae617101eb7003f309e2a",
+      "to_url": "https://lawrence.bibliocommons.com/events/6aef4eda96ec3a003adffec0",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://lplks.org/events/"
     },
     {
       "from": "lawrence-library",
-      "to_url": "https://lawrence.bibliocommons.com/events/6a89cfbf69166f088b940697",
+      "to_url": "https://lawrence.bibliocommons.com/events/699cb1974dacf581ff7d56ca",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://lplks.org/events/"
     },
     {
       "from": "lawrence-library",
-      "to_url": "https://lawrence.bibliocommons.com/events/69a71515b0595799c0a09df6",
+      "to_url": "https://lawrence.bibliocommons.com/events/6a7cd0a81401fd00606c298b",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://lplks.org/events/"
     },
@@ -14332,13 +14284,13 @@
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/concerts",
+      "to_url": "https://www.visitkc.com/events/type/music-dance",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/artist-performing-live-rudy-love-the-encore-zhou-spirit-and-song",
+      "to_url": "https://www.visitkc.com/events/aubrey-vineyards-live-music",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
@@ -14374,49 +14326,25 @@
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/special-events",
+      "to_url": "https://www.visitkc.com/events/type/kid-centric",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/brews-with-moos",
+      "to_url": "https://www.visitkc.com/events/bingo-benefit-2",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/holiday-activities",
+      "to_url": "https://www.visitkc.com/events/type/kid-centric",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/brookside-history-and-horrors-walk",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/listings/wornall-majors-house-museums",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/ongoing",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/brookside-history-and-horrors-walk-2",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/listings/wornall-majors-house-museums",
+      "to_url": "https://www.visitkc.com/events/buckets-n-boards-with-the-kansas-city-symphony",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
@@ -14440,25 +14368,13 @@
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/health-wellness",
+      "to_url": "https://www.visitkc.com/events/type/free-events",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/couch-to-cabernet-1k",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/music-dance",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/dueling-pianos",
+      "to_url": "https://www.visitkc.com/events/chiefs-watch-party-at-casual-animal-brewing",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
@@ -14488,13 +14404,13 @@
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/concerts",
+      "to_url": "https://www.visitkc.com/events/type/free-events",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/free-open-jam-hosted-by-billy-ebeling",
+      "to_url": "https://www.visitkc.com/events/free-sunday-jam-hosted-by-levee-town",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
@@ -14506,7 +14422,7 @@
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/free-weekend-fun-bach-to-nature-2",
+      "to_url": "https://www.visitkc.com/events/free-weekend-fun-bach-to-nature",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
@@ -14518,13 +14434,13 @@
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/outdoors",
+      "to_url": "https://www.visitkc.com/events/type/sports",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/gangster-tour-kansas-city-walking-tour",
+      "to_url": "https://www.visitkc.com/events/game-day-watch-party-chiefs-vs-jets",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
@@ -14537,18 +14453,6 @@
     {
       "from": "visitkc",
       "to_url": "https://www.visitkc.com/events/glowild-hidden-treasure",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/kid-centric",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/inlet-dance-theatre-presents-what-do-you-do-with-a-problem",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
@@ -14572,18 +14476,6 @@
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/free-events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/leavenworth-main-street-downtown-holiday-open-house",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
       "to_url": "https://www.visitkc.com/events/type/special-events",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
@@ -14602,73 +14494,13 @@
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/free-events",
+      "to_url": "https://www.visitkc.com/events/type/live-jazz",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/live-music-at-rosehill-winery",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/free-events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/live-music-every-saturday",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/free-events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/live-music-saturdays",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/music-dance",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/live-polka-with-bram-wijnands",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/concerts",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/making-movies-una-vida-tour",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/free-events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/merry-bright-a-holiday-craft-vendor-market-at-lord-of-life",
+      "to_url": "https://www.visitkc.com/events/live-jazz-with-bram-wijnands",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
@@ -14710,30 +14542,6 @@
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/kc-2026",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/nwsl-playoffs-kc-current-vs-angel-city-fc",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/free-events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/overland-park-farmers-market-3",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
       "to_url": "https://www.visitkc.com/events/type/kid-centric",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
@@ -14746,37 +14554,109 @@
     },
     {
       "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/tours",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/rosedale-arch-volker-roanoke-bi-state-urban-hike",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/sport-and-spectator",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/listings/nerman-museum-of-contemporary-art-2",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
       "to_url": "https://www.visitkc.com/events/type/kid-centric",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/polar-bear-day-at-the-zoo",
+      "to_url": "https://www.visitkc.com/events/sunday-family-fun-pottery-experience-for-families",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/nightlife",
+      "to_url": "https://www.visitkc.com/events/type/theatre",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/pottery-pinot",
+      "to_url": "https://www.visitkc.com/events/sweeney-todd-spinning-tree-theatre",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/sports",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/saturday-matchdays",
+      "to_url": "https://www.visitkc.com/events/the-unseen",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/listings/nerman-museum-of-contemporary-art-2",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/theatre",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/where-the-wild-things-are-35mm",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/holiday-activities",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/kcs-fav-holiday-light-party-at-winter-magic",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/the-berlin-wall-a-world-divided-exhibition-at-union-station-may-29-dec-13-2026",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
@@ -14788,7 +14668,85 @@
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/saturday-matinee-julius-caesar-1953",
+      "to_url": "https://www.visitkc.com/events/2026-animal-crossing-new-horizon-aquarium-tour",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/all-hallows-eve-handmade-halloween-artifacts-from-the-1900s-1920s",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/american-prospects-and-landscape-photography-1839-to-today",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/listings/the-nelson-atkins-museum-of-art",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/theatre",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/footloose-presented-by-first-act-theatre-arts",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/glowild-hidden-treasure",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/music-dance",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/karaoke-monday-with-hannah",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/free-events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/monday-story-time",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
@@ -14897,18 +14855,6 @@
     {
       "from": "tmobile",
       "to_url": "https://www.t-mobilecenter.com/private-events/campaign",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.t-mobilecenter.com/events"
-    },
-    {
-      "from": "tmobile",
-      "to_url": "https://www.t-mobilecenter.com/events/detail/garth-brooks-2",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.t-mobilecenter.com/events"
-    },
-    {
-      "from": "tmobile",
-      "to_url": "https://urldefense.com/v3/__http://axs.com/garthbrooks__;!!P9g1NVG6!sMYZuEqJJzgUphtNemqNUfQ-TuPHXeH7SaWGpLm8dtss84XfhQE6H2zYmhIft1WO08mmJu6leU0d9WpnqB7OOpdyOSQ$&skin=tmobilecenter&tags=tmobilecenterweb",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.t-mobilecenter.com/events"
     },
@@ -15089,6 +15035,24 @@
     {
       "from": "tmobile",
       "to_url": "https://pa.exchange/marketplace/f8f785ec-7f59-11ef-9b01-2ba1d8d570c3/storefront/f8f787cc-7f59-11ef-aa47-5fc5010fc3da/event/4523a518-ac85-11f1-83bb-19c4531ad4a6/tickets",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.t-mobilecenter.com/events"
+    },
+    {
+      "from": "tmobile",
+      "to_url": "https://www.t-mobilecenter.com/events/detail/kingcountry26",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.t-mobilecenter.com/events"
+    },
+    {
+      "from": "tmobile",
+      "to_url": "https://www.axs.com/events/1527101/for-king-country-a-drummer-boy-christmas-tickets&skin=tmobilecenter&tags=tmobilecenterweb",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.t-mobilecenter.com/events"
+    },
+    {
+      "from": "tmobile",
+      "to_url": "https://pa.exchange/marketplace/f8f785ec-7f59-11ef-9b01-2ba1d8d570c3/storefront/f8f787cc-7f59-11ef-aa47-5fc5010fc3da/event/9717b4b2-8c29-11f1-a840-3f532046d003/tickets",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.t-mobilecenter.com/events"
     },
@@ -15667,276 +15631,6 @@
       "to_url": "https://www.midlandkc.com/ticketing-info/where-to-buy",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.midlandkc.com/events/all"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.thetrumankc.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.thetrumankc.com/special-events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.thetrumankc.com/events/all",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.thetrumankc.com/events/detail/1450876",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.axs.com/events/1450876/everclear-tickets?skin=trumankc",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.thetrumankc.com/events/detail/1566077",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.axs.com/events/1566077/clara-la-san-tickets?skin=trumankc",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.thetrumankc.com/events/detail/1493843",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.axs.com/events/1493843/almost-monday-tickets?skin=trumankc",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.thetrumankc.com/events/detail/1480614",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.axs.com/events/1480614/left-it-in-the-river-tour-with-jamie-macdonald-tickets?skin=trumankc",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.thetrumankc.com/events/detail/1646481",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.axs.com/events/1646481/nightlite-tickets?skin=trumankc",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.thetrumankc.com/events/detail/1678797",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.axs.com/events/1678797/reggaeton-rave-tickets?skin=trumankc",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.thetrumankc.com/events/detail/1598831",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.axs.com/events/1598831/matisyahu-tickets?skin=trumankc",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.thetrumankc.com/events/detail/1448782",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.axs.com/events/1448782/robby-hoffman-tickets?skin=trumankc",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.thetrumankc.com/events/detail/1559259",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.axs.com/events/1559259/ahee-tickets?skin=trumankc",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.thetrumankc.com/events/detail/1378805",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.axs.com/events/1378805/lupita-infante-tickets?skin=trumankc",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.thetrumankc.com/events/detail/1683909",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.axs.com/events/1683909/kings-x-tickets?skin=trumankc",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.thetrumankc.com/events/detail/1590242",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.axs.com/events/1590242/jackson-dean-tickets?skin=trumankc",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.thetrumankc.com/events/detail/1518067",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.axs.com/events/1518067/the-taylor-party-taylor-swift-night-18-tickets?skin=trumankc",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.thetrumankc.com/events/detail/1690434",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.axs.com/events/1690434/the-emo-night-tour-tickets?skin=trumankc",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.thetrumankc.com/events/detail/1599313",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.axs.com/events/1599313/marc-maron-tickets?skin=trumankc",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.thetrumankc.com/events/detail/1619544",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.axs.com/events/1619544/marc-maron-late-show-tickets?skin=trumankc",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.thetrumankc.com/events/detail/1625671",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.axs.com/events/1625671/public-image-ltd-tickets?skin=trumankc",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.thetrumankc.com/events/detail/1637965",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.axs.com/events/1637965/rumours-atl-a-fleetwood-mac-tribute-tickets?skin=trumankc",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.thetrumankc.com/events/detail/1642218",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.axs.com/events/1642218/history-that-doesnt-suck-tickets?skin=trumankc",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.thetrumankc.com/events/detail/1580768",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.axs.com/events/1580768/dinosaur-jr-tickets?skin=trumankc",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.thetrumankc.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
-    },
-    {
-      "from": "truman",
-      "to_url": "https://www.thetrumankc.com/special-events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.thetrumankc.com/events"
     },
     {
       "from": "kcopera",
@@ -16582,18 +16276,6 @@
     },
     {
       "from": "mavericks",
-      "to_url": "https://flosports.link/kansascitymavericks",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters.ics",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
       "to_url": "https://kcmavericks.com/tickets/single-game-tickets",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
@@ -16660,24 +16342,6 @@
     },
     {
       "from": "mavericks",
-      "to_url": "https://flosports.link/kansascitymavericks",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/tickets",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
       "to_url": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
@@ -16732,6 +16396,12 @@
     },
     {
       "from": "mavericks",
+      "to_url": "https://kcmavericks.com/games/2026/11/22/wichita-thunder",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
+    },
+    {
+      "from": "mavericks",
       "to_url": "https://echl.com/teams",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
@@ -16759,168 +16429,6 @@
       "to_url": "https://www.teamworkonline.com/hockey-jobs/echl/echl-league-office",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "independence-japan",
-      "to_url": "https://www.indepmojscc.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.indepmojscc.com/events"
-    },
-    {
-      "from": "independence-japan",
-      "to_url": "https://www.indepmojscc.com/become-a-host-family",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.indepmojscc.com/events"
-    },
-    {
-      "from": "independence-japan",
-      "to_url": "https://www.indepmojscc.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.indepmojscc.com/events"
-    },
-    {
-      "from": "independence-japan",
-      "to_url": "https://www.indepmojscc.com/become-a-host-family",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.indepmojscc.com/events"
-    },
-    {
-      "from": "independence-japan",
-      "to_url": "https://www.indepmojscc.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.indepmojscc.com/events"
-    },
-    {
-      "from": "independence-japan",
-      "to_url": "https://www.indepmojscc.com/our-programs",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.indepmojscc.com/events"
-    },
-    {
-      "from": "independence-japan",
-      "to_url": "https://www.indepmojscc.com/become-a-host-family",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.indepmojscc.com/events"
-    },
-    {
-      "from": "independence-japan",
-      "to_url": "https://www.indepmojscc.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.indepmojscc.com/events"
-    },
-    {
-      "from": "independence-japan",
-      "to_url": "https://www.indepmojscc.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.indepmojscc.com/events"
-    },
-    {
-      "from": "independence-japan",
-      "to_url": "https://www.indepmojscc.com/events/2026-uptown-matsuri-festival-e6p3d",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.indepmojscc.com/events"
-    },
-    {
-      "from": "independence-japan",
-      "to_url": "https://www.indepmojscc.com/events/2026-uptown-matsuri-festival-e6p3d?format=ical",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.indepmojscc.com/events"
-    },
-    {
-      "from": "independence-japan",
-      "to_url": "https://www.indepmojscc.com/events/2026-uptown-matsuri-festival-e6p3d",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.indepmojscc.com/events"
-    },
-    {
-      "from": "independence-japan",
-      "to_url": "https://www.indepmojscc.com/events/2025-uptown-matsuri-festival",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.indepmojscc.com/events"
-    },
-    {
-      "from": "independence-japan",
-      "to_url": "https://www.indepmojscc.com/events/2025-uptown-matsuri-festival?format=ical",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.indepmojscc.com/events"
-    },
-    {
-      "from": "independence-japan",
-      "to_url": "https://www.indepmojscc.com/events/2025-uptown-matsuri-festival",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.indepmojscc.com/events"
-    },
-    {
-      "from": "independence-japan",
-      "to_url": "https://www.indepmojscc.com/events/2024-uptown-matsuri-festival-pcalf-2yszy",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.indepmojscc.com/events"
-    },
-    {
-      "from": "independence-japan",
-      "to_url": "https://www.indepmojscc.com/events/2024-uptown-matsuri-festival-pcalf-2yszy?format=ical",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.indepmojscc.com/events"
-    },
-    {
-      "from": "independence-japan",
-      "to_url": "https://www.indepmojscc.com/events/2024-uptown-matsuri-festival-pcalf-2yszy",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.indepmojscc.com/events"
-    },
-    {
-      "from": "independence-japan",
-      "to_url": "https://www.indepmojscc.com/events/2023-uptown-matsuri-festival-pcalf",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.indepmojscc.com/events"
-    },
-    {
-      "from": "independence-japan",
-      "to_url": "https://www.indepmojscc.com/events/2023-uptown-matsuri-festival-pcalf?format=ical",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.indepmojscc.com/events"
-    },
-    {
-      "from": "independence-japan",
-      "to_url": "https://www.indepmojscc.com/events/2023-uptown-matsuri-festival-pcalf",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.indepmojscc.com/events"
-    },
-    {
-      "from": "independence-japan",
-      "to_url": "https://www.indepmojscc.com/events/2022-uptown-matsuri-festival",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.indepmojscc.com/events"
-    },
-    {
-      "from": "independence-japan",
-      "to_url": "https://www.indepmojscc.com/events/2022-uptown-matsuri-festival?format=ical",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.indepmojscc.com/events"
-    },
-    {
-      "from": "independence-japan",
-      "to_url": "https://www.indepmojscc.com/events/2022-uptown-matsuri-festival",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.indepmojscc.com/events"
-    },
-    {
-      "from": "independence-japan",
-      "to_url": "https://heartlandjetaa.org",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.indepmojscc.com/events"
-    },
-    {
-      "from": "independence-japan",
-      "to_url": "https://jetprogramusa.org",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.indepmojscc.com/events"
-    },
-    {
-      "from": "independence-japan",
-      "to_url": "http://www.threetrailstaiko.com",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.indepmojscc.com/events"
     },
     {
       "from": "dfscon",
@@ -17015,24 +16523,6 @@
     {
       "from": "kc-convention",
       "to_url": "https://kcconvention.com/event/meeple-a-thon-2026",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcconvention.com/events/"
-    },
-    {
-      "from": "kc-convention",
-      "to_url": "https://kcconvention.com/event/kansas-city-pet-fest",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcconvention.com/events/"
-    },
-    {
-      "from": "kc-convention",
-      "to_url": "https://kcconvention.com/event/kansas-city-pet-fest",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcconvention.com/events/"
-    },
-    {
-      "from": "kc-convention",
-      "to_url": "https://form.jotform.com/261006921816049",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://kcconvention.com/events/"
     },
@@ -17800,25 +17290,7 @@
     },
     {
       "from": "ls-mistletoe",
-      "to_url": "https://explorels.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
-    },
-    {
-      "from": "ls-mistletoe",
-      "to_url": "https://explorels.com/DesktopModules/EasyDNNnews/iCalendar.ashx?portalid=0&articleid=704&moduleid=1198",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
-    },
-    {
-      "from": "ls-mistletoe",
-      "to_url": "https://explorels.com/events/artmid/1198/articleid/679/quilt-show",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
-    },
-    {
-      "from": "ls-mistletoe",
-      "to_url": "https://explorels.com/events/artmid/1198/articleid/701/holiday-fine-art-craft-show",
+      "to_url": "https://explorels.com/login-page?returnurl=%2fevents%2fartmid%2f1198%2farticleid%2f704%2fmistletoe-madness",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
     },
@@ -18033,8 +17505,8 @@
     },
     {
       "id": "truman",
-      "status": "checked",
-      "pages": 1
+      "status": "failed",
+      "error": "Unsupported HTTP content encoding: br"
     },
     {
       "id": "kcopera",
@@ -18063,8 +17535,8 @@
     },
     {
       "id": "independence-japan",
-      "status": "checked",
-      "pages": 1
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
     },
     {
       "id": "dfscon",
@@ -18179,9 +17651,7 @@
           "independence-japan"
         ],
         "collecting_routes": [
-          "visitkc",
-          "central-avenue-dia",
-          "independence-japan"
+          "visitkc"
         ],
         "status": "collecting",
         "next_search": "Kansas City metro temporary exhibitions galleries public art official programs calendar registration"
@@ -18219,8 +17689,7 @@
         ],
         "collecting_routes": [
           "kc-zoo",
-          "weston-bend",
-          "kc-pet-fest"
+          "weston-bend"
         ],
         "status": "collecting",
         "next_search": "Kansas City metro nature centers wildlife birding gardens zoo official programs calendar registration"
@@ -18241,8 +17710,7 @@
           "visitkc",
           "midland",
           "truman",
-          "kcopera",
-          "troost-united"
+          "kcopera"
         ],
         "status": "collecting",
         "next_search": "Kansas City metro concerts theater dance opera comedy official programs calendar registration"
@@ -18293,8 +17761,7 @@
           "kc-pet-fest"
         ],
         "collecting_routes": [
-          "science-city",
-          "kc-pet-fest"
+          "science-city"
         ],
         "status": "collecting",
         "next_search": "Kansas City metro playgrounds indoor play amusement escape rooms mini golf official programs calendar registration"
@@ -18322,8 +17789,7 @@
         "collecting_routes": [
           "visitkc",
           "downtown-ls",
-          "crossroads-flea",
-          "ls-mistletoe"
+          "crossroads-flea"
         ],
         "status": "collecting",
         "next_search": "Kansas City metro farmers markets craft fairs vintage holiday markets official programs calendar registration"
@@ -18345,12 +17811,7 @@
         ],
         "collecting_routes": [
           "visitkc",
-          "downtown-ls",
-          "kc-pet-fest",
-          "central-avenue-dia",
-          "troost-united",
-          "independence-japan",
-          "ls-mistletoe"
+          "downtown-ls"
         ],
         "status": "collecting",
         "next_search": "Kansas City metro festivals fairs holiday seasonal celebrations official programs calendar registration"
@@ -18394,13 +17855,10 @@
           "kc-parks",
           "visitkc",
           "downtown-ls",
-          "central-avenue-dia",
-          "troost-united",
           "mavericks",
           "dfscon",
           "kc-convention",
-          "crossroads-flea",
-          "ls-mistletoe"
+          "crossroads-flea"
         ],
         "status": "collecting",
         "next_search": "Kansas City metro meetups cultural community social clubs official programs calendar registration"
@@ -18497,8 +17955,7 @@
           "lawrence-arts"
         ],
         "collecting_routes": [
-          "watkins",
-          "lawrence-arts"
+          "watkins"
         ],
         "status": "collecting",
         "next_search": "Lawrence temporary exhibitions galleries public art official programs calendar registration"
@@ -19337,14 +18794,9 @@
           "truman",
           "downtown-ls",
           "kcopera",
-          "kc-pet-fest",
-          "central-avenue-dia",
-          "troost-united",
           "mavericks",
-          "independence-japan",
           "dfscon",
-          "kc-convention",
-          "ls-mistletoe"
+          "kc-convention"
         ]
       },
       {
@@ -19375,8 +18827,8 @@
           "crystal-exhibits"
         ],
         "collecting_routes": [
-          "lawrence-arts",
           "crystal-bridges",
+          "columbia-cvb",
           "visitkc"
         ]
       },
