@@ -1,0 +1,216 @@
+{
+  "id": "2026-W46",
+  "iso_week": "2026-W46",
+  "started_at": "2026-11-09T14:26:46+00:00",
+  "updated_at": "2026-11-09T08:35:30.611651-06:00",
+  "status": "verification_pending",
+  "base_commit": "a8266e0",
+  "baseline": {
+    "routes": 47,
+    "records": 3613,
+    "unique_offerings": 1230,
+    "coverage_cells": {
+      "collecting": 30,
+      "route_only": 32,
+      "gap": 48
+    },
+    "activity_kinds": {
+      "date_range_unknown": 48,
+      "exhibit": 45,
+      "one_off": 3514,
+      "recurring_program": 2,
+      "evergreen": 4
+    },
+    "stale_records": 547,
+    "places": 9,
+    "unmapped_offerings": 779,
+    "unreviewed_proposals": 4374
+  },
+  "budgets": {
+    "candidate_links": 12,
+    "gap_searches": 6,
+    "page_visits": 24,
+    "link_depth": 2,
+    "links_per_host": 2,
+    "sources_to_promote": 5,
+    "adapter_pull_requests": 1,
+    "target_minutes": 30
+  },
+  "usage": {
+    "candidate_links": 12,
+    "gap_searches": 6,
+    "page_visits": 22,
+    "maximum_link_depth": 2,
+    "source_promotions": 3,
+    "adapter_pull_requests": 0
+  },
+  "searches": [
+    "Kansas City November 13 14 15 2026 weekend things to do KC Daily",
+    "Columbia Missouri Ragtag Cinema November 2026 calendar screenings official",
+    "Lawrence Kansas science planetarium STEM November 2026 programs official",
+    "Bentonville public library November 2026 book club events official calendar",
+    "Kansas City culinary cooking classes November December 2026 official",
+    "Lawrence Kansas Jayhawks 2026 2027 basketball schedule official"
+  ],
+  "review_counts": {
+    "accepted": 3,
+    "rejected": 3,
+    "deferred": 5,
+    "adapter_needed": 1
+  },
+  "accepted_source_ids": [
+    "ku-astronomy",
+    "kc-culinary-catalog",
+    "bpl-books-on-main"
+  ],
+  "probe_result": {
+    "new_unique_offerings": 3,
+    "normalized_records": 5,
+    "recurring_programs": 2,
+    "program_catalogs": 1,
+    "published_session_starts": 8,
+    "validation": "All normalized records validated; all offerings spot-checked against current fetched source. Individual live probes used existing adapters; final per-date separation revalidated using those same live response bodies."
+  },
+  "observed_gains": null,
+  "yield_status": "promoted; yield pending daily Actions",
+  "place_changes": [
+    {
+      "id": "science-city",
+      "change": "Verified exact winter/summer facility-hours text. No fixed annual holiday/season boundaries invented; machine rules remain empty.",
+      "source_url": "https://sciencecity.unionstation.org/plan-your-visit/"
+    }
+  ],
+  "recall": {
+    "previous": {
+      "benchmark": "kc-weekend-2026-11-07",
+      "region": "Kansas City metro",
+      "window": {
+        "start": "2026-11-07",
+        "end": "2026-11-08"
+      },
+      "applicable": true,
+      "captured_anchors": 5,
+      "expected_anchors": 17,
+      "weekend_records": 49,
+      "distinct_weekend_offerings": 48,
+      "results": [
+        {
+          "id": "garth",
+          "title": "Garth Brooks",
+          "status": "gap",
+          "record_ids": [],
+          "source_urls": [],
+          "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+        },
+        {
+          "id": "petfest",
+          "title": "KC Pet Fest",
+          "status": "gap",
+          "record_ids": [],
+          "source_urls": [],
+          "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+        },
+        {
+          "id": "merry-bright",
+          "title": "Merry & Bright market",
+          "status": "gap",
+          "record_ids": [],
+          "source_urls": [],
+          "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+        },
+        {
+          "id": "kc-current",
+          "title": "KC Current playoff match",
+          "status": "gap",
+          "record_ids": [],
+          "source_urls": [],
+          "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+        },
+        {
+          "id": "veterans-parade",
+          "title": "Veterans Day Parade",
+          "status": "gap",
+          "record_ids": [],
+          "source_urls": [],
+          "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+        },
+        {
+          "id": "troost",
+          "title": "Troost United Fest",
+          "status": "gap",
+          "record_ids": [],
+          "source_urls": [],
+          "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+        },
+        {
+          "id": "yoga",
+          "title": "Yoga at the Kauffman Center",
+          "status": "gap",
+          "record_ids": [],
+          "source_urls": [],
+          "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+        },
+        {
+          "id": "figaro",
+          "title": "The Marriage of Figaro",
+          "status": "gap",
+          "record_ids": [],
+          "source_urls": [],
+          "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+        },
+        {
+          "id": "dia-muertos",
+          "title": "D\u00eda de Muertos on Central Avenue",
+          "status": "gap",
+          "record_ids": [],
+          "source_urls": [],
+          "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+        },
+        {
+          "id": "mavericks",
+          "title": "Mavericks vs Tahoe Knight Monsters",
+          "status": "gap",
+          "record_ids": [],
+          "source_urls": [],
+          "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+        },
+        {
+          "id": "matsuri",
+          "title": "Uptown Matsuri",
+          "status": "gap",
+          "record_ids": [],
+          "source_urls": [],
+          "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+        },
+        {
+          "id": "mistletoe",
+          "title": "Mistletoe Madness",
+          "status": "gap",
+          "record_ids": [],
+          "source_urls": [],
+          "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+        }
+      ],
+      "note": "Named roundup-anchor recall only. A captured listing is not proof of live availability or a claim to include every possible activity.",
+      "needs_new_weekend_benchmark": true
+    },
+    "current_sensor": "https://www.explorekctogether.com/this-weekend",
+    "current_window": {
+      "start": "2026-11-14",
+      "end": "2026-11-15"
+    },
+    "status": "deferred",
+    "retry_after": "2026-11-12",
+    "reason": "KC Daily live weekend-roundup still explicitly November 6\u20138, published November 5. Independent sensor is November 13\u201315. A two-current-edition benchmark cannot be truthfully refreshed on Monday; historical missing anchors are expired, not new upcoming gaps. No cached year or future newsletter invented."
+  },
+  "coverage_limitations": [
+    "Columbia cinema challenge; no film collector promoted.",
+    "Lawrence registration portal robots denial; Bentonville attendance calendar 403.",
+    "KU home/away season parser and Powell calendar deferred under single-PR budget.",
+    "Surrounding-area camp search rotated in brief but not executed: sixth query reserved for required recall renewal check; no claim of complete regional/category sweep.",
+    "Actual repository visibility PUBLIC at start; unchanged. User private wording did not authorize changing access."
+  ],
+  "commit_urls": [],
+  "pull_request_urls": [],
+  "daily_actions": null
+}

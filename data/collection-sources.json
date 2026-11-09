@@ -1535,6 +1535,253 @@
           "relationship": "listicle lead resolved to the local tourism calendar"
         }
       ]
+    },
+    {
+      "id": "ku-astronomy",
+      "name": "KU Astronomy Public Nights",
+      "url": "https://physics.ku.edu/astronomy-public-telescope-nights",
+      "region": "Lawrence",
+      "city": "Lawrence",
+      "kind": "organizer",
+      "format": "reviewed-capture",
+      "pattern": "/",
+      "max_details": 0,
+      "categories": [
+        "science_technology",
+        "community_social"
+      ],
+      "reviewed_at": "2026-11-09T08:32:44.826851-06:00",
+      "activity_kinds": [
+        "recurring_program"
+      ],
+      "required_leaves": [
+        "actual participation dates and session exceptions",
+        "registration availability and deadlines",
+        "explicit age guidance",
+        "hours and seasonal closures"
+      ],
+      "discovery_evidence": [
+        {
+          "url": "https://physics.ku.edu/astronomy-public-telescope-nights",
+          "relationship": "Verified official provider page or directly linked booking provider; weekly gap review",
+          "observed_at": "2026-11-09T08:32:44.826851-06:00"
+        }
+      ],
+      "required_text": [
+        "Fall 2026 Schedule",
+        "Thursday, November 12th",
+        "Thursday, December 10th",
+        "Planetarium shows start at 7:30, 8:00, and 8:30 pm.",
+        "Anyone of all ages are welcome to attend and all parts of public nights are completely free."
+      ],
+      "captures": [
+        {
+          "name": "KU Astronomy Public Nights \u2014 fall 2026",
+          "startDate": "2026-11-12T19:30:00-06:00",
+          "url": "https://physics.ku.edu/astronomy-public-telescope-nights",
+          "typicalAgeRange": "All ages",
+          "description": "Free public planetarium shows for all ages on November 12 and December 10, 2026. Telescope observing depends on darkness and weather; planetarium shows still run in clouds or rain. No KU affiliation required.",
+          "location": {
+            "name": "Slawson Hall, G174 planetarium and south outdoor telescope area"
+          },
+          "offers": {
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "_schedule": {
+            "kind": "recurring_program",
+            "start_date": "2026-11-12",
+            "end_date": "2026-11-12",
+            "sessions": [
+              {
+                "start": "2026-11-12T19:30:00-06:00",
+                "end": null
+              },
+              {
+                "start": "2026-11-12T20:00:00-06:00",
+                "end": null
+              },
+              {
+                "start": "2026-11-12T20:30:00-06:00",
+                "end": null
+              }
+            ],
+            "note": "Only the two remaining published fall 2026 nights and three explicit show starts per night. End times are not published. Outdoor observing is weather/darkness dependent; indoor shows still run in clouds or rain. No future semester recurrence assumed. This record covers only this published date; it does not imply daily access between sessions."
+          }
+        },
+        {
+          "name": "KU Astronomy Public Nights \u2014 fall 2026",
+          "startDate": "2026-12-10T19:30:00-06:00",
+          "url": "https://physics.ku.edu/astronomy-public-telescope-nights",
+          "typicalAgeRange": "All ages",
+          "description": "Free public planetarium shows for all ages on November 12 and December 10, 2026. Telescope observing depends on darkness and weather; planetarium shows still run in clouds or rain. No KU affiliation required.",
+          "location": {
+            "name": "Slawson Hall, G174 planetarium and south outdoor telescope area"
+          },
+          "offers": {
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "_schedule": {
+            "kind": "recurring_program",
+            "start_date": "2026-12-10",
+            "end_date": "2026-12-10",
+            "sessions": [
+              {
+                "start": "2026-12-10T19:30:00-06:00",
+                "end": null
+              },
+              {
+                "start": "2026-12-10T20:00:00-06:00",
+                "end": null
+              },
+              {
+                "start": "2026-12-10T20:30:00-06:00",
+                "end": null
+              }
+            ],
+            "note": "Only the two remaining published fall 2026 nights and three explicit show starts per night. End times are not published. Outdoor observing is weather/darkness dependent; indoor shows still run in clouds or rain. No future semester recurrence assumed. This record covers only this published date; it does not imply daily access between sessions."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kc-culinary-catalog",
+      "name": "Culinary Center of Kansas City \u2014 classes and camps",
+      "url": "https://kcculinary.com/all-classes",
+      "region": "Kansas City metro",
+      "city": "Overland Park",
+      "kind": "organizer",
+      "format": "offering",
+      "pattern": "/",
+      "max_details": 0,
+      "categories": [
+        "food_drink",
+        "classes_skills",
+        "camps"
+      ],
+      "reviewed_at": "2026-11-09T08:32:44.826851-06:00",
+      "activity_kinds": [
+        "program_catalog"
+      ],
+      "required_leaves": [
+        "actual participation dates and session exceptions",
+        "registration availability and deadlines",
+        "explicit age guidance",
+        "hours and seasonal closures",
+        "https://app.kcculinary.com/"
+      ],
+      "discovery_evidence": [
+        {
+          "url": "https://kcculinary.com/all-classes",
+          "relationship": "Verified official provider page or directly linked booking provider; weekly gap review",
+          "observed_at": "2026-11-09T08:32:44.826851-06:00"
+        }
+      ],
+      "offering": {
+        "title": "Explore Culinary Center cooking classes, family sessions and camps",
+        "categories": [
+          "food_drink",
+          "classes_skills",
+          "camps"
+        ],
+        "schedule": {
+          "kind": "program_catalog",
+          "start_date": null,
+          "end_date": null,
+          "note": "Official catalog for adult cooking classes, kids/family classes, camps, Pro Series and Chef\u2019s Table at Overland Park and Briarcliff. Follow the official app.kcculinary.com booking link for individual dates, age rules, price and capacity. This catalog is not a confirmed dated class or an open registration window."
+        }
+      }
+    },
+    {
+      "id": "bpl-books-on-main",
+      "name": "Bentonville Public Library \u2014 Books on Main",
+      "url": "https://bentonvillelibrary.org/bplforreaders/book-clubs-2",
+      "region": "Bentonville",
+      "city": "Bentonville",
+      "kind": "organizer",
+      "format": "reviewed-capture",
+      "pattern": "/",
+      "max_details": 0,
+      "categories": [
+        "film_literature",
+        "libraries_learning",
+        "community_social"
+      ],
+      "reviewed_at": "2026-11-09T08:32:44.826851-06:00",
+      "activity_kinds": [
+        "recurring_program"
+      ],
+      "required_leaves": [
+        "actual participation dates and session exceptions",
+        "registration availability and deadlines",
+        "explicit age guidance",
+        "hours and seasonal closures"
+      ],
+      "discovery_evidence": [
+        {
+          "url": "https://bentonvillelibrary.org/bplforreaders/book-clubs-2",
+          "relationship": "Verified official provider page or directly linked booking provider; weekly gap review",
+          "observed_at": "2026-11-09T08:32:44.826851-06:00"
+        }
+      ],
+      "required_text": [
+        "Books on Main (Adults)",
+        "Meets 3rd Thursday of the month at 1 pm",
+        "2026 Books on Main list",
+        "November 19 We Were the Lucky Ones by Georgia Hunter",
+        "December 17 Beneath a Scarlet Sky by Mark T. Sullivan"
+      ],
+      "captures": [
+        {
+          "name": "Books on Main adult book club \u2014 Bentonville Public Library",
+          "startDate": "2026-11-19T13:00:00-06:00",
+          "url": "https://bentonvillelibrary.org/bplforreaders/book-clubs-2",
+          "description": "Adult book club. November 19: We Were the Lucky Ones; December 17: Beneath a Scarlet Sky. Both listed for 1 pm. The library\u2019s linked attendance calendar denied access, so registration and capacity remain unknown. No numerical age minimum is inferred from Adults.",
+          "location": {
+            "name": "Bentonville Public Library",
+            "address": {
+              "addressLocality": "Bentonville"
+            }
+          },
+          "_schedule": {
+            "kind": "recurring_program",
+            "start_date": "2026-11-19",
+            "end_date": "2026-11-19",
+            "sessions": [
+              {
+                "start": "2026-11-19T13:00:00-06:00",
+                "end": null
+              }
+            ],
+            "note": "Two explicit 2026 published adult book-club dates at 1 pm. End times, registration and availability unknown. Other programs and the inconsistent January entry are excluded. No unbounded recurrence inferred. This record covers only this published date; it does not imply daily access between sessions."
+          }
+        },
+        {
+          "name": "Books on Main adult book club \u2014 Bentonville Public Library",
+          "startDate": "2026-12-17T13:00:00-06:00",
+          "url": "https://bentonvillelibrary.org/bplforreaders/book-clubs-2",
+          "description": "Adult book club. November 19: We Were the Lucky Ones; December 17: Beneath a Scarlet Sky. Both listed for 1 pm. The library\u2019s linked attendance calendar denied access, so registration and capacity remain unknown. No numerical age minimum is inferred from Adults.",
+          "location": {
+            "name": "Bentonville Public Library",
+            "address": {
+              "addressLocality": "Bentonville"
+            }
+          },
+          "_schedule": {
+            "kind": "recurring_program",
+            "start_date": "2026-12-17",
+            "end_date": "2026-12-17",
+            "sessions": [
+              {
+                "start": "2026-12-17T13:00:00-06:00",
+                "end": null
+              }
+            ],
+            "note": "Two explicit 2026 published adult book-club dates at 1 pm. End times, registration and availability unknown. Other programs and the inconsistent January entry are excluded. No unbounded recurrence inferred. This record covers only this published date; it does not imply daily access between sessions."
+          }
+        }
+      ]
     }
   ]
 }

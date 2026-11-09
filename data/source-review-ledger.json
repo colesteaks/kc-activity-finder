@@ -1,5 +1,410 @@
 {
   "version": 1,
-  "reviews": [],
-  "runs": []
+  "reviews": [
+    {
+      "url": "https://physics.ku.edu/astronomy-public-telescope-nights",
+      "status": "accepted",
+      "reviewed_at": "2026-11-09T08:35:30.611651-06:00",
+      "next_review_after": null,
+      "reason": "Verified University of Kansas ownership and Lawrence location. Explicit Fall 2026 schedule, November 12/December 10 dates, three planetarium starts per night, free all-ages admission and weather distinction. Existing guarded adapter yields two dated records, one new offering, six starts. No semester recurrence or end times invented. Daily Actions yield pending.",
+      "discovered_on": "https://physics.ku.edu/astronomy-public-telescope-nights",
+      "evidence_urls": [
+        "https://physics.ku.edu/astronomy-public-telescope-nights"
+      ],
+      "registry_id": "ku-astronomy",
+      "unique_offerings_added": 0,
+      "probe_new_unique_offerings": 1,
+      "pull_request_url": null
+    },
+    {
+      "url": "https://kcculinary.com/all-classes",
+      "status": "accepted",
+      "reviewed_at": "2026-11-09T08:35:30.611651-06:00",
+      "next_review_after": null,
+      "reason": "Official Overland Park/Briarcliff provider links to its own booking app; adult, kids/family and camps verified. Existing offering adapter yields one new undated program_catalog, not individual classes, dates, numeric ages or confirmed registration. Daily Actions yield pending.",
+      "discovered_on": "https://kcculinary.com/all-classes",
+      "evidence_urls": [
+        "https://kcculinary.com/all-classes",
+        "https://app.kcculinary.com/"
+      ],
+      "registry_id": "kc-culinary-catalog",
+      "unique_offerings_added": 0,
+      "probe_new_unique_offerings": 1,
+      "pull_request_url": null
+    },
+    {
+      "url": "https://bentonvillelibrary.org/bplforreaders/book-clubs-2",
+      "status": "accepted",
+      "reviewed_at": "2026-11-09T08:35:30.611651-06:00",
+      "next_review_after": null,
+      "reason": "Official library publishes Books on Main adult dates November 19/December 17, 2026 at 1 pm. Existing guarded adapter yields two records, one offering; end times/capacity unknown. Linked attendance calendar returned 403 and was not bypassed. Other contradictory club/January entries excluded. Daily yield pending.",
+      "discovered_on": "https://bentonvillelibrary.org/bplforreaders/book-clubs-2",
+      "evidence_urls": [
+        "https://bentonvillelibrary.org/bplforreaders/book-clubs-2",
+        "https://attend.bentonvillelibrary.org/events?r=thismonth"
+      ],
+      "registry_id": "bpl-books-on-main",
+      "unique_offerings_added": 0,
+      "probe_new_unique_offerings": 1,
+      "pull_request_url": null
+    },
+    {
+      "url": "https://ragtagcinema.org/",
+      "status": "deferred",
+      "reviewed_at": "2026-11-09T08:35:30.611651-06:00",
+      "next_review_after": "2026-11-23",
+      "reason": "First-party Columbia cinema; repository fetcher detected an access challenge before extraction. No alternate identity or bypass attempted; no dates/empty-calendar assertion. Needs an organizer-offered permitted export or manual source review. Columbia film gap remains.",
+      "discovered_on": "https://ragtagcinema.org/",
+      "evidence_urls": [
+        "https://ragtagcinema.org/"
+      ],
+      "registry_id": null,
+      "unique_offerings_added": 0,
+      "probe_new_unique_offerings": 0,
+      "pull_request_url": null
+    },
+    {
+      "url": "https://honchopickleball.leagueapps.com/leagues/pickleball/4594057-parkville---char-bar-summer-2025",
+      "status": "deferred",
+      "reviewed_at": "2026-11-09T08:35:30.611651-06:00",
+      "next_review_after": "2026-11-23",
+      "reason": "Newsletter-linked league provider returned only a JavaScript member-portal shell; URL names summer 2025. No current participation season, signup window, age or schedule verified. Do not resurrect this historical league as upcoming.",
+      "discovered_on": "https://www.kcdaily.com/p/love-where-you-live",
+      "evidence_urls": [
+        "https://honchopickleball.leagueapps.com/leagues/pickleball/4594057-parkville---char-bar-summer-2025"
+      ],
+      "registry_id": null,
+      "unique_offerings_added": 0,
+      "probe_new_unique_offerings": 0,
+      "pull_request_url": null
+    },
+    {
+      "url": "https://kslawrenceweb.myvscloud.com/webtrac/web/splash.html?ccode=NCrelay",
+      "status": "deferred",
+      "reviewed_at": "2026-11-09T08:35:30.611651-06:00",
+      "next_review_after": "2026-11-30",
+      "reason": "Known Lawrence nature-center outbound class/camp portal. robots.txt disallows this route for collector; no fetch bypass, login or invented dates. Needs an offered permitted catalog/feed; existing parent route retained.",
+      "discovered_on": "https://www.lawrenceks.gov/City/PRC/Prairie-Park-Nature-Center",
+      "evidence_urls": [
+        "https://kslawrenceweb.myvscloud.com/webtrac/web/splash.html?ccode=NCrelay"
+      ],
+      "registry_id": null,
+      "unique_offerings_added": 0,
+      "probe_new_unique_offerings": 0,
+      "pull_request_url": null
+    },
+    {
+      "url": "https://powellgardens.org/homepage/events-programs-exhibitions/powell-gardens-festivals/festival-of-butterflies",
+      "status": "deferred",
+      "reviewed_at": "2026-11-09T08:35:30.611651-06:00",
+      "next_review_after": "2027-02-01",
+      "reason": "Official 2026 festival is over; page says 2027 dates coming soon. Followed current event/class calendar and family trail branch. Trail explicitly closed November\u2013January; not promoted as a winter outing. Calendar requires a separate adapter; one repair slot reserved for Nelson. Revisit seasonal program/calendar evidence.",
+      "discovered_on": "https://www.kcdaily.com/p/new-ice-cream-parlor-will-float-boat",
+      "evidence_urls": [
+        "https://powellgardens.org/homepage/events-programs-exhibitions/powell-gardens-festivals/festival-of-butterflies",
+        "https://powellgardens.org/events-and-classes/",
+        "https://powellgardens.org/the-byron-shutz-trail-system/"
+      ],
+      "registry_id": null,
+      "unique_offerings_added": 0,
+      "probe_new_unique_offerings": 0,
+      "pull_request_url": null
+    },
+    {
+      "url": "https://kuathletics.com/sports/mens-basketball/schedule",
+      "status": "deferred",
+      "reviewed_at": "2026-11-09T08:35:30.611651-06:00",
+      "next_review_after": "2026-11-16",
+      "reason": "Official KU 2026\u201327 season has real home/away/neutral venue distinctions and varied/TBA times. Existing Event JSON-LD adapter yields no records. A future schedule adapter must keep only appropriate local venues, respect explicit years and variable times, and never turn signup/ticket windows into games. No season promoted on domain count alone.",
+      "discovered_on": "https://kuathletics.com/sports/mens-basketball/schedule",
+      "evidence_urls": [
+        "https://kuathletics.com/sports/mens-basketball/schedule"
+      ],
+      "registry_id": null,
+      "unique_offerings_added": 0,
+      "probe_new_unique_offerings": 0,
+      "pull_request_url": null
+    },
+    {
+      "url": "https://nelson-atkins.org/events/",
+      "status": "adapter_needed",
+      "reviewed_at": "2026-11-09T08:35:30.611651-06:00",
+      "next_review_after": "2026-11-16",
+      "reason": "Existing accepted museum route has zero events and 27 unparsed links in daily snapshot. Followed official cart calendar and two linked performance pages. Current performance date includes explicit year; More Dates can refer to different films, so never clone the current title across its options. Memory-care tour explicitly sold out; Cinema Paradiso offers registration. Focused TNEW detail adapter and reviewed cross-host links will be proposed in one PR; no production parser change auto-merged.",
+      "discovered_on": "https://nelson-atkins.org/events/",
+      "evidence_urls": [
+        "https://nelson-atkins.org/events/",
+        "https://cart.nelson-atkins.org/events?view=calendar+view=list&kid=11,165,216",
+        "https://cart.nelson-atkins.org/51930/53441",
+        "https://cart.nelson-atkins.org/50445/53356"
+      ],
+      "registry_id": null,
+      "unique_offerings_added": 0,
+      "probe_new_unique_offerings": 0,
+      "pull_request_url": null
+    },
+    {
+      "url": "https://ca.news.yahoo.com/food-truck-owner-opens-mexican-161917461.html",
+      "status": "rejected",
+      "reviewed_at": "2026-11-09T08:35:30.611651-06:00",
+      "next_review_after": null,
+      "reason": "Queue triage only; not visited. Syndicated restaurant-opening news, not an official reusable activity calendar or registration source. Decision is based on proposal URL/label; no current page facts claimed.",
+      "discovered_on": "https://www.kcdaily.com/p/trading-in-vehicles",
+      "evidence_urls": [
+        "https://www.kcdaily.com/p/trading-in-vehicles"
+      ],
+      "registry_id": null,
+      "unique_offerings_added": 0,
+      "probe_new_unique_offerings": 0,
+      "pull_request_url": null
+    },
+    {
+      "url": "https://ca.sports.yahoo.com/news/chiefs-patrick-mahomes-shows-off-135437628.html",
+      "status": "rejected",
+      "reviewed_at": "2026-11-09T08:35:30.611651-06:00",
+      "next_review_after": null,
+      "reason": "Queue triage only; not visited. Athlete apparel advertising campaign, not a participation season or activity source. Decision is based on proposal URL/label; no current page facts claimed.",
+      "discovered_on": "https://www.kcdaily.com/p/n",
+      "evidence_urls": [
+        "https://www.kcdaily.com/p/n"
+      ],
+      "registry_id": null,
+      "unique_offerings_added": 0,
+      "probe_new_unique_offerings": 0,
+      "pull_request_url": null
+    },
+    {
+      "url": "https://sports.betmgm.com/en/blog/nfl/nfl-teams-with-most-dropped-passes-this-season-bm10",
+      "status": "rejected",
+      "reviewed_at": "2026-11-09T08:35:30.611651-06:00",
+      "next_review_after": null,
+      "reason": "Queue triage only; not visited. Sports-betting statistics editorial, not an organizer schedule or participation source. Decision is based on proposal URL/label; no current page facts claimed.",
+      "discovered_on": "https://www.kcdaily.com/p/five-things-to-watch-chiefs",
+      "evidence_urls": [
+        "https://www.kcdaily.com/p/five-things-to-watch-chiefs"
+      ],
+      "registry_id": null,
+      "unique_offerings_added": 0,
+      "probe_new_unique_offerings": 0,
+      "pull_request_url": null
+    }
+  ],
+  "runs": [
+    {
+      "id": "2026-W46",
+      "iso_week": "2026-W46",
+      "started_at": "2026-11-09T14:26:46+00:00",
+      "updated_at": "2026-11-09T08:35:30.611651-06:00",
+      "status": "verification_pending",
+      "base_commit": "a8266e0",
+      "baseline": {
+        "routes": 47,
+        "records": 3613,
+        "unique_offerings": 1230,
+        "coverage_cells": {
+          "collecting": 30,
+          "route_only": 32,
+          "gap": 48
+        },
+        "activity_kinds": {
+          "date_range_unknown": 48,
+          "exhibit": 45,
+          "one_off": 3514,
+          "recurring_program": 2,
+          "evergreen": 4
+        },
+        "stale_records": 547,
+        "places": 9,
+        "unmapped_offerings": 779,
+        "unreviewed_proposals": 4374
+      },
+      "budgets": {
+        "candidate_links": 12,
+        "gap_searches": 6,
+        "page_visits": 24,
+        "link_depth": 2,
+        "links_per_host": 2,
+        "sources_to_promote": 5,
+        "adapter_pull_requests": 1,
+        "target_minutes": 30
+      },
+      "usage": {
+        "candidate_links": 12,
+        "gap_searches": 6,
+        "page_visits": 22,
+        "maximum_link_depth": 2,
+        "source_promotions": 3,
+        "adapter_pull_requests": 0
+      },
+      "searches": [
+        "Kansas City November 13 14 15 2026 weekend things to do KC Daily",
+        "Columbia Missouri Ragtag Cinema November 2026 calendar screenings official",
+        "Lawrence Kansas science planetarium STEM November 2026 programs official",
+        "Bentonville public library November 2026 book club events official calendar",
+        "Kansas City culinary cooking classes November December 2026 official",
+        "Lawrence Kansas Jayhawks 2026 2027 basketball schedule official"
+      ],
+      "review_counts": {
+        "accepted": 3,
+        "rejected": 3,
+        "deferred": 5,
+        "adapter_needed": 1
+      },
+      "accepted_source_ids": [
+        "ku-astronomy",
+        "kc-culinary-catalog",
+        "bpl-books-on-main"
+      ],
+      "probe_result": {
+        "new_unique_offerings": 3,
+        "normalized_records": 5,
+        "recurring_programs": 2,
+        "program_catalogs": 1,
+        "published_session_starts": 8,
+        "validation": "All normalized records validated; all offerings spot-checked against current fetched source. Individual live probes used existing adapters; final per-date separation revalidated using those same live response bodies."
+      },
+      "observed_gains": null,
+      "yield_status": "promoted; yield pending daily Actions",
+      "place_changes": [
+        {
+          "id": "science-city",
+          "change": "Verified exact winter/summer facility-hours text. No fixed annual holiday/season boundaries invented; machine rules remain empty.",
+          "source_url": "https://sciencecity.unionstation.org/plan-your-visit/"
+        }
+      ],
+      "recall": {
+        "previous": {
+          "benchmark": "kc-weekend-2026-11-07",
+          "region": "Kansas City metro",
+          "window": {
+            "start": "2026-11-07",
+            "end": "2026-11-08"
+          },
+          "applicable": true,
+          "captured_anchors": 5,
+          "expected_anchors": 17,
+          "weekend_records": 49,
+          "distinct_weekend_offerings": 48,
+          "results": [
+            {
+              "id": "garth",
+              "title": "Garth Brooks",
+              "status": "gap",
+              "record_ids": [],
+              "source_urls": [],
+              "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+            },
+            {
+              "id": "petfest",
+              "title": "KC Pet Fest",
+              "status": "gap",
+              "record_ids": [],
+              "source_urls": [],
+              "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+            },
+            {
+              "id": "merry-bright",
+              "title": "Merry & Bright market",
+              "status": "gap",
+              "record_ids": [],
+              "source_urls": [],
+              "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+            },
+            {
+              "id": "kc-current",
+              "title": "KC Current playoff match",
+              "status": "gap",
+              "record_ids": [],
+              "source_urls": [],
+              "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+            },
+            {
+              "id": "veterans-parade",
+              "title": "Veterans Day Parade",
+              "status": "gap",
+              "record_ids": [],
+              "source_urls": [],
+              "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+            },
+            {
+              "id": "troost",
+              "title": "Troost United Fest",
+              "status": "gap",
+              "record_ids": [],
+              "source_urls": [],
+              "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+            },
+            {
+              "id": "yoga",
+              "title": "Yoga at the Kauffman Center",
+              "status": "gap",
+              "record_ids": [],
+              "source_urls": [],
+              "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+            },
+            {
+              "id": "figaro",
+              "title": "The Marriage of Figaro",
+              "status": "gap",
+              "record_ids": [],
+              "source_urls": [],
+              "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+            },
+            {
+              "id": "dia-muertos",
+              "title": "D\u00eda de Muertos on Central Avenue",
+              "status": "gap",
+              "record_ids": [],
+              "source_urls": [],
+              "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+            },
+            {
+              "id": "mavericks",
+              "title": "Mavericks vs Tahoe Knight Monsters",
+              "status": "gap",
+              "record_ids": [],
+              "source_urls": [],
+              "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+            },
+            {
+              "id": "matsuri",
+              "title": "Uptown Matsuri",
+              "status": "gap",
+              "record_ids": [],
+              "source_urls": [],
+              "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+            },
+            {
+              "id": "mistletoe",
+              "title": "Mistletoe Madness",
+              "status": "gap",
+              "record_ids": [],
+              "source_urls": [],
+              "followup": "Locate and verify the producer, venue or organizer-linked ticket provider; retain a gap if blocked."
+            }
+          ],
+          "note": "Named roundup-anchor recall only. A captured listing is not proof of live availability or a claim to include every possible activity.",
+          "needs_new_weekend_benchmark": true
+        },
+        "current_sensor": "https://www.explorekctogether.com/this-weekend",
+        "current_window": {
+          "start": "2026-11-14",
+          "end": "2026-11-15"
+        },
+        "status": "deferred",
+        "retry_after": "2026-11-12",
+        "reason": "KC Daily live weekend-roundup still explicitly November 6\u20138, published November 5. Independent sensor is November 13\u201315. A two-current-edition benchmark cannot be truthfully refreshed on Monday; historical missing anchors are expired, not new upcoming gaps. No cached year or future newsletter invented."
+      },
+      "coverage_limitations": [
+        "Columbia cinema challenge; no film collector promoted.",
+        "Lawrence registration portal robots denial; Bentonville attendance calendar 403.",
+        "KU home/away season parser and Powell calendar deferred under single-PR budget.",
+        "Surrounding-area camp search rotated in brief but not executed: sixth query reserved for required recall renewal check; no claim of complete regional/category sweep.",
+        "Actual repository visibility PUBLIC at start; unchanged. User private wording did not authorize changing access."
+      ],
+      "commit_urls": [],
+      "pull_request_urls": [],
+      "daily_actions": null
+    }
+  ]
 }

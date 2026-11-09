@@ -433,7 +433,16 @@
         "checked_at": "2026-11-07T09:17:40.572854-06:00",
         "note": "US Census street-address match; approximate venue location, not a verified entrance."
       },
-      "hours": null,
+      "hours": {
+        "text": "Winter: Tuesday–Saturday 10 AM–5 PM; Sunday noon–5 PM. Summer (Memorial Day–Labor Day): Monday–Saturday 10 AM–5 PM; Sunday noon–5 PM. Hours may vary on holidays.",
+        "timezone": "America/Chicago",
+        "rules": [],
+        "exceptions": [],
+        "complete_week": false,
+        "source_url": "https://sciencecity.unionstation.org/plan-your-visit/",
+        "checked_at": "2026-11-09T08:32:44.826851-06:00",
+        "notice": "Published seasonal hours retained as text. Memorial Day/Labor Day season boundaries and holiday closures are not encoded as fixed annual dates; consult the official source. No Monday winter opening is asserted."
+      },
       "activities": [
         {
           "id": "hands_on_science",
