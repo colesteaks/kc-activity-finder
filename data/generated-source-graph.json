@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-08T11:08:03.225971-06:00",
+  "generated_at": "2026-11-09T08:39:01.553501-06:00",
   "seed_sha256": "0a268fbfd2c4098c22795598bd4b11fa81809878f0928e9469945e1d479627d3",
   "authority": "data/source-graph.json",
   "approved_registry": "data/collection-sources.json",
@@ -1265,6 +1265,96 @@
       ],
       "provenance": "reviewed-supplement",
       "place_ids": []
+    },
+    {
+      "id": "ku-astronomy",
+      "label": "KU Astronomy Public Nights",
+      "url": "https://physics.ku.edu/astronomy-public-telescope-nights",
+      "role": "organizer",
+      "region": "Lawrence",
+      "categories": [
+        "science_technology",
+        "community_social"
+      ],
+      "activity_kinds": [
+        "recurring_program"
+      ],
+      "required_leaves": [
+        "actual participation dates and session exceptions",
+        "registration availability and deadlines",
+        "explicit age guidance",
+        "hours and seasonal closures"
+      ],
+      "discovery_evidence": [
+        {
+          "url": "https://physics.ku.edu/astronomy-public-telescope-nights",
+          "relationship": "Verified official provider page or directly linked booking provider; weekly gap review",
+          "observed_at": "2026-11-09T08:32:44.826851-06:00"
+        }
+      ],
+      "provenance": "reviewed-supplement",
+      "place_ids": []
+    },
+    {
+      "id": "kc-culinary-catalog",
+      "label": "Culinary Center of Kansas City \u2014 classes and camps",
+      "url": "https://kcculinary.com/all-classes",
+      "role": "organizer",
+      "region": "Kansas City metro",
+      "categories": [
+        "food_drink",
+        "classes_skills",
+        "camps"
+      ],
+      "activity_kinds": [
+        "program_catalog"
+      ],
+      "required_leaves": [
+        "actual participation dates and session exceptions",
+        "registration availability and deadlines",
+        "explicit age guidance",
+        "hours and seasonal closures",
+        "https://app.kcculinary.com/"
+      ],
+      "discovery_evidence": [
+        {
+          "url": "https://kcculinary.com/all-classes",
+          "relationship": "Verified official provider page or directly linked booking provider; weekly gap review",
+          "observed_at": "2026-11-09T08:32:44.826851-06:00"
+        }
+      ],
+      "provenance": "reviewed-supplement",
+      "place_ids": []
+    },
+    {
+      "id": "bpl-books-on-main",
+      "label": "Bentonville Public Library \u2014 Books on Main",
+      "url": "https://bentonvillelibrary.org/bplforreaders/book-clubs-2",
+      "role": "organizer",
+      "region": "Bentonville",
+      "categories": [
+        "film_literature",
+        "libraries_learning",
+        "community_social"
+      ],
+      "activity_kinds": [
+        "recurring_program"
+      ],
+      "required_leaves": [
+        "actual participation dates and session exceptions",
+        "registration availability and deadlines",
+        "explicit age guidance",
+        "hours and seasonal closures"
+      ],
+      "discovery_evidence": [
+        {
+          "url": "https://bentonvillelibrary.org/bplforreaders/book-clubs-2",
+          "relationship": "Verified official provider page or directly linked booking provider; weekly gap review",
+          "observed_at": "2026-11-09T08:32:44.826851-06:00"
+        }
+      ],
+      "provenance": "reviewed-supplement",
+      "place_ids": []
     }
   ],
   "edges": [
@@ -1378,9 +1468,147 @@
     },
     {
       "from": "kc-daily",
-      "to_url": "https://www.kcdaily.com/p/made-in-power-light",
+      "to_url": "https://countryclubplaza.com",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/follow-the-lights"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.google.com/maps/search/Nichols+Rd+and+Pennsylvania+Ave,+Kansas+City,+MO",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/follow-the-lights"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.facebook.com/share/r/1CLMYaiErM",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/follow-the-lights"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.zonarosa.com/events/events/holiday-lights",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/follow-the-lights"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.zonarosa.com/northpark",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/follow-the-lights"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.kcmo.gov/Home/Components/News/News/3294/16",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/follow-the-lights"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.kcmo.gov/Home/Components/News/News/3273/1746",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/follow-the-lights"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://kansascity.legistar.com/View.ashx?M=F&ID=16110637&GUID=344625EA-B8BB-452A-9D49-468B4B76F51C",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/follow-the-lights"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.facebook.com/story.php?story_fbid=1620353059892659&id=100057539405679&mibextid=wwXIfr&rdid=HuZNQ8Py2cTj6VQb",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/follow-the-lights"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.instagram.com/reels/DfVqpH8R0F2",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/follow-the-lights"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.facebook.com/story.php?story_fbid=1766436785486193&id=100063596649092&mibextid=wwXIfr&rdid=gpVdAduf9YQOanzF",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/follow-the-lights"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://fox4kc.com/news/big-brothers-big-sisters-opens-new-big-futures-headquarters",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/follow-the-lights"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://x.com/Royals/status/2118732261159764461",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/follow-the-lights"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.bizjournals.com/kansascity/news/2026/11/05/kansas-city-royals-2345-grand-ballpark-district.html",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/follow-the-lights"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.instagram.com/kansascitydaily",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/follow-the-lights"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.kcdaily.com/guides",
       "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/archive?page=2"
+      "observed_on": "https://www.kcdaily.com/p/follow-the-lights"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://kcdaily.dnnr.io",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/follow-the-lights"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://countryclubplaza.com",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/follow-the-lights"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.zonarosa.com/events/events/holiday-lights",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/follow-the-lights"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.zonarosa.com/northpark",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/follow-the-lights"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.zonarosa.com/events/events/holiday-lights",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/follow-the-lights"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.bizjournals.com/kansascity/news/2026/11/05/kansas-city-royals-2345-grand-ballpark-district.html",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/follow-the-lights"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://kcdaily.dnnr.io",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/follow-the-lights"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/follow-the-lights"
     },
     {
       "from": "kc-daily",
@@ -4233,138 +4461,6 @@
       "observed_on": "https://www.kcdaily.com/p/putting-the-cow-in-cowtown"
     },
     {
-      "from": "kc-daily",
-      "to_url": "https://madeinkc.co",
-      "relationship": "unreviewed-newsletter-link",
-      "observed_on": "https://www.kcdaily.com/p/made-in-power-light"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://rainydaybooks.com",
-      "relationship": "unreviewed-newsletter-link",
-      "observed_on": "https://www.kcdaily.com/p/made-in-power-light"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.instagram.com/p/Deh12Afj2Bf?hl=en&img_index=1",
-      "relationship": "unreviewed-newsletter-link",
-      "observed_on": "https://www.kcdaily.com/p/made-in-power-light"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://maps.app.goo.gl/WAp2XHNpofaeviPN9",
-      "relationship": "unreviewed-newsletter-link",
-      "observed_on": "https://www.kcdaily.com/p/made-in-power-light"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://populous.com/article/royals-name-populous-architect-of-record-reveal-renderings-for-new-downtown-ballpark",
-      "relationship": "unreviewed-newsletter-link",
-      "observed_on": "https://www.kcdaily.com/p/made-in-power-light"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.margaritavilleresorts.com/margaritaville-hotel-kansas-city/amenities/puppies-pilates-brunch",
-      "relationship": "unreviewed-newsletter-link",
-      "observed_on": "https://www.kcdaily.com/p/made-in-power-light"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.facebook.com/share/p/1DLjGhLCkj",
-      "relationship": "unreviewed-newsletter-link",
-      "observed_on": "https://www.kcdaily.com/p/made-in-power-light"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.mlb.com/royals/tickets/savannah-bananas",
-      "relationship": "unreviewed-newsletter-link",
-      "observed_on": "https://www.kcdaily.com/p/made-in-power-light"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://kcballet.org/events/sugar-plum-fairy-childrens-ball",
-      "relationship": "unreviewed-newsletter-link",
-      "observed_on": "https://www.kcdaily.com/p/made-in-power-light"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.kansascity.com/news/business/openings-closings/article317638294.html",
-      "relationship": "unreviewed-newsletter-link",
-      "observed_on": "https://www.kcdaily.com/p/made-in-power-light"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.crowncenter.com/iceterrace",
-      "relationship": "unreviewed-newsletter-link",
-      "observed_on": "https://www.kcdaily.com/p/made-in-power-light"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.instagram.com/kansascitydaily",
-      "relationship": "unreviewed-newsletter-link",
-      "observed_on": "https://www.kcdaily.com/p/made-in-power-light"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.kcdaily.com/guides",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/made-in-power-light"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://kcdaily.dnnr.io",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/made-in-power-light"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://populous.com/article/royals-name-populous-architect-of-record-reveal-renderings-for-new-downtown-ballpark",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/made-in-power-light"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://populous.com/article/royals-name-populous-architect-of-record-reveal-renderings-for-new-downtown-ballpark",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/made-in-power-light"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.margaritavilleresorts.com/margaritaville-hotel-kansas-city/amenities/puppies-pilates-brunch",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/made-in-power-light"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.mlb.com/royals/tickets/savannah-bananas",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/made-in-power-light"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://kcballet.org/events/sugar-plum-fairy-childrens-ball",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/made-in-power-light"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.crowncenter.com/iceterrace",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/made-in-power-light"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://kcdaily.dnnr.io",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/made-in-power-light"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/made-in-power-light"
-    },
-    {
       "from": "lawrence-arts",
       "to_url": "https://lawrenceartscenter.org/events-at-lawrence-arts-center",
       "relationship": "unreviewed-outbound-link",
@@ -5008,24 +5104,6 @@
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/creative-wellness-weekend",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
-    },
-    {
-      "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/creative-wellness-weekend-indigo-dyeing-workshop",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
-    },
-    {
-      "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/creative-wellness-weekend-needle-felting-workshop",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
-    },
-    {
-      "from": "crystal-bridges",
       "to_url": "https://crystalbridges.org/events/2025-drop-in-tour-architecture",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
@@ -5063,12 +5141,6 @@
     {
       "from": "crystal-bridges",
       "to_url": "https://crystalbridges.org/events/keith-haring-in-3d",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
-    },
-    {
-      "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/special-exhibition-tour-grandma-moses-a-good-days-work",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
@@ -5122,6 +5194,12 @@
     },
     {
       "from": "crystal-bridges",
+      "to_url": "https://crystalbridges.org/events/special-exhibition-tour-grandma-moses-a-good-days-work",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
+    },
+    {
+      "from": "crystal-bridges",
       "to_url": "https://crystalbridges.org/events/birthday-p-art-y",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
@@ -5165,12 +5243,6 @@
     {
       "from": "crystal-bridges",
       "to_url": "https://crystalbridges.org/events/keith-haring-in-3d",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
-    },
-    {
-      "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/special-exhibition-tour-grandma-moses-a-good-days-work",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
@@ -5231,6 +5303,12 @@
     {
       "from": "crystal-bridges",
       "to_url": "https://crystalbridges.org/events/pictures-with-santa-chris",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
+    },
+    {
+      "from": "crystal-bridges",
+      "to_url": "https://crystalbridges.org/events/special-exhibition-tour-grandma-moses-a-good-days-work",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
@@ -5332,67 +5410,55 @@
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/creative-wellness-weekend-needle-felting-workshop?visitStart=2026-11-08&visitEnd=2026-11-14&selectedDate=2026-11-08",
+      "to_url": "https://crystalbridges.org/events/frank-lloyd-wright-tours-self-guided?visitStart=2026-11-09&visitEnd=2026-11-15&selectedDate=2026-11-09",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/frank-lloyd-wright-tours-self-guided?visitStart=2026-11-08&visitEnd=2026-11-14&selectedDate=2026-11-08",
+      "to_url": "https://crystalbridges.org/events/frank-lloyd-wright-tours-guided?visitStart=2026-11-09&visitEnd=2026-11-15&selectedDate=2026-11-09",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/frank-lloyd-wright-tours-guided?visitStart=2026-11-08&visitEnd=2026-11-14&selectedDate=2026-11-08",
+      "to_url": "https://crystalbridges.org/events/grandma-moses-a-good-days-work?visitStart=2026-11-09&visitEnd=2026-11-15&selectedDate=2026-11-09",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/grandma-moses-a-good-days-work?visitStart=2026-11-08&visitEnd=2026-11-14&selectedDate=2026-11-08",
+      "to_url": "https://crystalbridges.org/events/keith-haring-in-3d?visitStart=2026-11-09&visitEnd=2026-11-15&selectedDate=2026-11-09",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/keith-haring-in-3d?visitStart=2026-11-08&visitEnd=2026-11-14&selectedDate=2026-11-08",
+      "to_url": "https://crystalbridges.org/events/many-ways-of-seeing-the-alfred-stieglitz-collection?visitStart=2026-11-09&visitEnd=2026-11-15&selectedDate=2026-11-09",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/creative-wellness-weekend?visitStart=2026-11-08&visitEnd=2026-11-14&selectedDate=2026-11-08",
+      "to_url": "https://crystalbridges.org/events/nature-adorned-the-artistry-of-tiffany-and-co-and-the-american-imagination?visitStart=2026-11-09&visitEnd=2026-11-15&selectedDate=2026-11-09",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/2025-drop-in-tour-big-picture?visitStart=2026-11-08&visitEnd=2026-11-14&selectedDate=2026-11-08",
+      "to_url": "https://crystalbridges.org/events/2025-drop-in-tour-big-picture?visitStart=2026-11-09&visitEnd=2026-11-15&selectedDate=2026-11-09",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/2025-drop-in-tour-architecture?visitStart=2026-11-08&visitEnd=2026-11-14&selectedDate=2026-11-08",
+      "to_url": "https://crystalbridges.org/events/2025-drop-in-tour-architecture?visitStart=2026-11-09&visitEnd=2026-11-15&selectedDate=2026-11-09",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/special-exhibition-tour-grandma-moses-a-good-days-work?visitStart=2026-11-08&visitEnd=2026-11-14&selectedDate=2026-11-08",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
-    },
-    {
-      "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/creative-wellness-weekend-indigo-dyeing-workshop?visitStart=2026-11-08&visitEnd=2026-11-14&selectedDate=2026-11-08",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
-    },
-    {
-      "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/2025-drop-in-tour-collection-highlights?visitStart=2026-11-08&visitEnd=2026-11-14&selectedDate=2026-11-08",
+      "to_url": "https://crystalbridges.org/events/2025-drop-in-tour-collection-highlights?visitStart=2026-11-09&visitEnd=2026-11-15&selectedDate=2026-11-09",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
@@ -5470,78 +5536,6 @@
     },
     {
       "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/event/nurse-blake-but-did-you-die-comedy-tour",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/event/evil-dead-the-musical-columbia-entertainment-co-2-2-2-2-2-2-2",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/event/merry-maplewood-a-festive-holiday-celebration-at-historic-maplewood-house",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/event/mizzou-volleyball-vs-texas-am",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
       "to_url": "https://www.visitcolumbiamo.com/event/mizzou-mens-basketball-vs-cleveland-state-2",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitcolumbiamo.com/events/"
@@ -5578,25 +5572,25 @@
     },
     {
       "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/event/redferrin-the-blue-note",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
       "to_url": "https://www.visitcolumbiamo.com/event/rho-engine-room-free-community-workout-class-2-2-3",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/event/redferrin-the-blue-note",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitcolumbiamo.com/events/"
     },
@@ -5722,7 +5716,79 @@
     },
     {
       "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/event/columbia-farmers-market-winter-season-2",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
       "to_url": "https://www.visitcolumbiamo.com/event/mid-missouri-mahjong-classic-tournament",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/event/unity-of-columbia-annual-art-craft-fair-day-1",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/event/holiday-exhibition-sale-columbia-weavers-and-spinners-guild-2",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/event/fall-into-art-2026-day-1",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitcolumbiamo.com/events/"
     },
@@ -7120,49 +7186,13 @@
     },
     {
       "from": "kc-library",
-      "to_url": "https://kclibrary.org/calendar/fall-tai-chi-series-0",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kclibrary.org/calendar"
-    },
-    {
-      "from": "kc-library",
-      "to_url": "https://kclibrary.org/calendar/chess-game-day-17",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kclibrary.org/calendar"
-    },
-    {
-      "from": "kc-library",
-      "to_url": "https://kclibrary.org/calendar/learn-play-mah-jongg",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kclibrary.org/calendar"
-    },
-    {
-      "from": "kc-library",
-      "to_url": "https://kclibrary.org/calendar/learn-play-mah-jongg",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kclibrary.org/calendar"
-    },
-    {
-      "from": "kc-library",
-      "to_url": "https://kclibrary.org/calendar/movie-sleepy-hollow",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kclibrary.org/calendar"
-    },
-    {
-      "from": "kc-library",
-      "to_url": "https://kclibrary.org/calendar/sunday-game-spotlight-oregon-trail-0",
+      "to_url": "https://kclibrary.org/calendar/bookmobile-center-developmentally-disabled",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://kclibrary.org/calendar"
     },
     {
       "from": "kc-library",
       "to_url": "https://kclibrary.org/calendar/job-seeker-drop-hours-74",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kclibrary.org/calendar"
-    },
-    {
-      "from": "kc-library",
-      "to_url": "https://kclibrary.org/calendar/bookmobile-center-developmentally-disabled",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://kclibrary.org/calendar"
     },
@@ -7180,7 +7210,49 @@
     },
     {
       "from": "kc-library",
+      "to_url": "https://kclibrary.org/calendar/youth-art-paint-without-brushes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kclibrary.org/calendar"
+    },
+    {
+      "from": "kc-library",
+      "to_url": "https://kclibrary.org/locations/trails-west",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kclibrary.org/calendar"
+    },
+    {
+      "from": "kc-library",
       "to_url": "https://kclibrary.org/calendar/monday-mid-day-meetup-7",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kclibrary.org/calendar"
+    },
+    {
+      "from": "kc-library",
+      "to_url": "https://kclibrary.org/calendar/movie-ben-hur",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kclibrary.org/calendar"
+    },
+    {
+      "from": "kc-library",
+      "to_url": "https://kclibrary.org/calendar/lets-get-you-covered-aca-marketplace-1",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kclibrary.org/calendar"
+    },
+    {
+      "from": "kc-library",
+      "to_url": "https://kclibrary.org/calendar/bookmobile-sam-rodgers-place",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kclibrary.org/calendar"
+    },
+    {
+      "from": "kc-library",
+      "to_url": "https://kclibrary.org/calendar/teen-dungeons-and-dragons",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kclibrary.org/calendar"
+    },
+    {
+      "from": "kc-library",
+      "to_url": "https://kclibrary.org/locations/trails-west",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://kclibrary.org/calendar"
     },
@@ -8895,756 +8967,6 @@
       "observed_on": "https://www.lawrenceks.gov/City/PRC/Programs-Activities"
     },
     {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/schedules\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/contact\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/communications18f7655c\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"https:/irp.cdn-website.com/baf77735/files/uploaded/198cbe.pdf\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"https:/kslawrenceweb.myvscloud.com/webtrac/web/search.html?Action=Start&SubAction=&_csrf_token=Gc0W0P6R1R082K491W4J2U4Y564U6R4Y665O3Y6O6F655N4Q5G651J4P4B6Q5F734V5X62581F4K4M5D5719713Q4X5C1K6X4Y5F5U0B6Z4U6K6E096W5X4A4P0A055U4G&keyword=&primarycode=124600&category=YSPTS&type=YHBA&type=YHBB&type=YHFF&type=YHKB&type=YHSC&type=YHVB&subtype=&display=Detail&module=AR&multiselectlist_value=&arwebsearch_buttonsearch=yes\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"https:/irp.cdn-website.com/baf77735/files/uploaded/2027+Winter+Youth+Soccer+Registration.pdf\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"https:/cityoflawrenceparksrecreationandculture.teamsidelinesite.com/schedule?divisionid=751547\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"https:/cityoflawrenceparksrecreationandculture.teamsidelinesite.com/schedule?divisionid=751548\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"https:/cityoflawrenceparksrecreationandculture.teamsidelinesite.com/schedule?divisionid=751536\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"https:/cityoflawrenceparksrecreationandculture.teamsidelinesite.com/schedule?divisionid=751545\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"https:/irp.cdn-website.com/baf77735/files/uploaded/198cbe.pdf\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"mailto:rschraeder@lawrenceks.gov\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"https:/teamsideline.com/common/_GetDownload.aspx?d=1SqkwsKo1PCQWNU0G7iMxFFd74ISHv7gb78KsuesBog%3D\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"https:/teamsideline.com/common/_GetDownload.aspx?d=1SqkwsKo1PCQWNU0G7iMxFFd74ISHv7g4tMccqptFtA%3D\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/volunteer-coach-application\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"https:/rainoutline.com/search/extension/7853714980/2\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/adult-basketball\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/adult-kickball\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/adult-pickleball\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/adult-softball\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/adult-ultimate-frisbee\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/adult-volleyball\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/free-agents\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/submit-roster65604bb3\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/adult-sports-free-agent-form\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/youth-baseball\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/youth-basketball\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/youth-football\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/youth-soccer\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/youth-volleyball\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/youth-sports-camps/clinics\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/team-tryout-information\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/youth-sports-camps/past-season-results\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/schedules\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/downloads\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/contact\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/about-us\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/locations\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/communications\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/adult-basketball\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/adult-kickball\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/adult-pickleball\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/adult-softball\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/adult-ultimate-frisbee\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/adult-volleyball\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/free-agents\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/submit-roster65604bb3\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/adult-sports-free-agent-form\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/youth-baseball\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/youth-basketball\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/youth-football\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/youth-soccer\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/youth-volleyball\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/youth-sports-camps/clinics\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/team-tryout-information\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/youth-sports-camps/past-season-results\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/schedules\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/downloads\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/contact\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/about-us\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/locations\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/communications\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/adult-basketball\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/adult-kickball\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/adult-pickleball\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/adult-softball\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/adult-ultimate-frisbee\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/adult-volleyball\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/free-agents\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/submit-roster65604bb3\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/adult-sports-free-agent-form\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/youth-baseball\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/youth-basketball\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/youth-football\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/youth-soccer\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/youth-volleyball\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/youth-sports-camps/clinics\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/team-tryout-information\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/youth-sports-camps/past-season-results\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/schedules\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/downloads\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/contact\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/about-us\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/locations\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/communications\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/adult-basketball\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/adult-kickball\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/adult-pickleball\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/adult-softball\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/adult-ultimate-frisbee\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/adult-volleyball\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/free-agents\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/submit-roster65604bb3\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/adult-sports-free-agent-form\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/youth-baseball\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/youth-basketball\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/youth-football\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/youth-soccer\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/youth-volleyball\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/youth-sports-camps/clinics\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/team-tryout-information\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/youth-sports-camps/past-season-results\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/schedules\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/downloads\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/contact\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/about-us\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/locations\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
-      "from": "lawrence-youth-soccer",
-      "to_url": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/\\\"/communications\\\"",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://cityoflawrenceparksrecreationandculture.teamsidelinesite.com/youth-soccer"
-    },
-    {
       "from": "columbia-programs",
       "to_url": "https://www.como.gov/parks-and-recreation/programs-registration",
       "relationship": "unreviewed-outbound-link",
@@ -10498,13 +9820,13 @@
     },
     {
       "from": "columbia-programs",
-      "to_url": "https://www.como.gov/public-works/parking",
+      "to_url": "https://www.como.gov/housing-programs-division",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.como.gov/parks-and-recreation/programs-registration/"
     },
     {
       "from": "columbia-programs",
-      "to_url": "https://www.como.gov/housing-programs-division",
+      "to_url": "https://www.como.gov/public-works/parking",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.como.gov/parks-and-recreation/programs-registration/"
     },
@@ -11506,13 +10828,13 @@
     },
     {
       "from": "columbia-parks",
-      "to_url": "https://www.como.gov/public-works/parking",
+      "to_url": "https://www.como.gov/housing-programs-division",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.como.gov/parks-and-recreation/"
     },
     {
       "from": "columbia-parks",
-      "to_url": "https://www.como.gov/housing-programs-division",
+      "to_url": "https://www.como.gov/public-works/parking",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.como.gov/parks-and-recreation/"
     },
@@ -13372,31 +12694,31 @@
     },
     {
       "from": "lawrence-library",
-      "to_url": "https://lawrence.bibliocommons.com/events/6a9b3cce4995480655ed9e96",
+      "to_url": "https://lawrence.bibliocommons.com/events/6a9b3cce4995480655ed9e97",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://lplks.org/events/"
     },
     {
       "from": "lawrence-library",
-      "to_url": "https://lawrence.bibliocommons.com/events/6adb83f9035faf0033de8435",
+      "to_url": "https://lawrence.bibliocommons.com/events/6adfaf366fc53b826f262e0a",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://lplks.org/events/"
     },
     {
       "from": "lawrence-library",
-      "to_url": "https://lawrence.bibliocommons.com/events/6aef4eda96ec3a003adffec0",
+      "to_url": "https://lawrence.bibliocommons.com/events/6a722f3ff213992f00c97c7a",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://lplks.org/events/"
     },
     {
       "from": "lawrence-library",
-      "to_url": "https://lawrence.bibliocommons.com/events/699cb1974dacf581ff7d56ca",
+      "to_url": "https://lawrence.bibliocommons.com/events/6aaadcc8129d8e0031f2bb00",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://lplks.org/events/"
     },
     {
       "from": "lawrence-library",
-      "to_url": "https://lawrence.bibliocommons.com/events/6a7cd0a81401fd00606c298b",
+      "to_url": "https://lawrence.bibliocommons.com/events/6adf85fdde685359098ba74a",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://lplks.org/events/"
     },
@@ -14266,120 +13588,6 @@
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/exhibits",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/amy-kligman-the-salon-for-possible-futures",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/listings/nerman-museum-of-contemporary-art-2",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/music-dance",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/aubrey-vineyards-live-music",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/free-events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/bank-of-america-museums-on-us-offers-free-admission-november-7-8",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/exhibits",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/betsabee-romero-a-field-with-roots-un-campo-con-raices",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/listings/nerman-museum-of-contemporary-art-2",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/kid-centric",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/bingo-benefit-2",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/kid-centric",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/buckets-n-boards-with-the-kansas-city-symphony",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/exhibits",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/carlos-rolon-all-we-have-is-right-now",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/listings/nerman-museum-of-contemporary-art-2",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/free-events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/chiefs-watch-party-at-casual-animal-brewing",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
       "to_url": "https://www.visitkc.com/events/type/theatre",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
@@ -14387,60 +13595,6 @@
     {
       "from": "visitkc",
       "to_url": "https://www.visitkc.com/events/footloose-presented-by-first-act-theatre-arts",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/music-dance",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/free-fallin-the-music-of-tom-petty-bob-dylan",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/free-events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/free-sunday-jam-hosted-by-levee-town",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/free-events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/free-weekend-fun-bach-to-nature",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/listings/the-nelson-atkins-museum-of-art",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/sports",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/game-day-watch-party-chiefs-vs-jets",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
@@ -14458,49 +13612,25 @@
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/exhibits",
+      "to_url": "https://www.visitkc.com/events/type/music-dance",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/judy-chicago-big-blue-pink",
+      "to_url": "https://www.visitkc.com/events/karaoke-monday-with-hannah",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/listings/nerman-museum-of-contemporary-art-2",
+      "to_url": "https://www.visitkc.com/events/type/free-events",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/special-events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/libertys-beacon-an-artistic-light-installation",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/listings/national-wwi-museum-and-memorial",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/live-jazz",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/live-jazz-with-bram-wijnands",
+      "to_url": "https://www.visitkc.com/events/monday-story-time",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
@@ -14519,120 +13649,6 @@
     {
       "from": "visitkc",
       "to_url": "https://www.visitkc.com/listings/the-national-museum-of-toys-and-miniatures",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/exhibits",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/norman-akers-navigates-the-space-between",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/listings/nerman-museum-of-contemporary-art-2",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/kid-centric",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/play-times-for-kids-at-bump-city",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/tours",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/rosedale-arch-volker-roanoke-bi-state-urban-hike",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/exhibits",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/sport-and-spectator",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/listings/nerman-museum-of-contemporary-art-2",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/kid-centric",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/sunday-family-fun-pottery-experience-for-families",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/theatre",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/sweeney-todd-spinning-tree-theatre",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/exhibits",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/the-unseen",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/listings/nerman-museum-of-contemporary-art-2",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/theatre",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/where-the-wild-things-are-35mm",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
@@ -14704,13 +13720,79 @@
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/theatre",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/footloose-presented-by-first-act-theatre-arts",
+      "to_url": "https://www.visitkc.com/events/amy-kligman-the-salon-for-possible-futures",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/listings/nerman-museum-of-contemporary-art-2",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/free-events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/beer-kitchen-music-bingo",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/betsabee-romero-a-field-with-roots-un-campo-con-raices",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/listings/nerman-museum-of-contemporary-art-2",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/health-wellness",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/butter-honey-live-music-tuesdays-at-sail-away-wine",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/carlos-rolon-all-we-have-is-right-now",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/listings/nerman-museum-of-contemporary-art-2",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
@@ -14728,13 +13810,31 @@
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/music-dance",
+      "to_url": "https://www.visitkc.com/events/type/special-events",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/karaoke-monday-with-hannah",
+      "to_url": "https://www.visitkc.com/events/half-off-tuesdays-at-atlas9",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/judy-chicago-big-blue-pink",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/listings/nerman-museum-of-contemporary-art-2",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
@@ -14746,7 +13846,235 @@
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/monday-story-time",
+      "to_url": "https://www.visitkc.com/events/neighbors-making-their-neighborhoods",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/music-dance",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/new-jazz-order",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/norman-akers-navigates-the-space-between",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/listings/nerman-museum-of-contemporary-art-2",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/outdoors",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/one-way-streetcar-tour-with-just-one-day-tours",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/live-jazz",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/second-tuesday-jam-session",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/sport-and-spectator",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/listings/nerman-museum-of-contemporary-art-2",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/nightlife",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/the-comedy-vault-stand-up-open-mic-at-hammers",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/the-unseen",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/listings/nerman-museum-of-contemporary-art-2",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/nightlife",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/tnt-trivia-at-hammers",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/holiday-activities",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/kcs-fav-holiday-light-party-at-winter-magic",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/the-berlin-wall-a-world-divided-exhibition-at-union-station-may-29-dec-13-2026",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/free-events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/107th-leavenworth-county-veterans-day-parade",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/free-events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/2026-animal-crossing-new-horizon-aquarium-tour",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/special-events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/2026-centennial-veterans-day-weekend",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/listings/national-wwi-museum-and-memorial",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/all-hallows-eve-handmade-halloween-artifacts-from-the-1900s-1920s",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/american-prospects-and-landscape-photography-1839-to-today",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/listings/the-nelson-atkins-museum-of-art",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/amy-kligman-the-salon-for-possible-futures",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/listings/nerman-museum-of-contemporary-art-2",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
@@ -15633,6 +14961,276 @@
       "observed_on": "https://www.midlandkc.com/events/all"
     },
     {
+      "from": "truman",
+      "to_url": "https://www.thetrumankc.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.thetrumankc.com/special-events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.thetrumankc.com/events/all",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.thetrumankc.com/events/detail/1566077",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.axs.com/events/1566077/clara-la-san-tickets?skin=trumankc",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.thetrumankc.com/events/detail/1493843",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.axs.com/events/1493843/almost-monday-tickets?skin=trumankc",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.thetrumankc.com/events/detail/1480614",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.axs.com/events/1480614/left-it-in-the-river-tour-with-jamie-macdonald-tickets?skin=trumankc",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.thetrumankc.com/events/detail/1646481",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.axs.com/events/1646481/nightlite-tickets?skin=trumankc",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.thetrumankc.com/events/detail/1678797",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.axs.com/events/1678797/reggaeton-rave-tickets?skin=trumankc",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.thetrumankc.com/events/detail/1598831",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.axs.com/events/1598831/matisyahu-tickets?skin=trumankc",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.thetrumankc.com/events/detail/1448782",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.axs.com/events/1448782/robby-hoffman-tickets?skin=trumankc",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.thetrumankc.com/events/detail/1559259",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.axs.com/events/1559259/ahee-tickets?skin=trumankc",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.thetrumankc.com/events/detail/1378805",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.axs.com/events/1378805/lupita-infante-tickets?skin=trumankc",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.thetrumankc.com/events/detail/1683909",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.axs.com/events/1683909/kings-x-tickets?skin=trumankc",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.thetrumankc.com/events/detail/1590242",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.axs.com/events/1590242/jackson-dean-tickets?skin=trumankc",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.thetrumankc.com/events/detail/1518067",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.axs.com/events/1518067/the-taylor-party-taylor-swift-night-18-tickets?skin=trumankc",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.thetrumankc.com/events/detail/1690434",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.axs.com/events/1690434/the-emo-night-tour-tickets?skin=trumankc",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.thetrumankc.com/events/detail/1599313",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.axs.com/events/1599313/marc-maron-tickets?skin=trumankc",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.thetrumankc.com/events/detail/1619544",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.axs.com/events/1619544/marc-maron-late-show-tickets?skin=trumankc",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.thetrumankc.com/events/detail/1625671",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.axs.com/events/1625671/public-image-ltd-tickets?skin=trumankc",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.thetrumankc.com/events/detail/1637965",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.axs.com/events/1637965/rumours-atl-a-fleetwood-mac-tribute-tickets?skin=trumankc",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.thetrumankc.com/events/detail/1642218",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.axs.com/events/1642218/history-that-doesnt-suck-tickets?skin=trumankc",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.thetrumankc.com/events/detail/1580768",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.axs.com/events/1580768/dinosaur-jr-tickets?skin=trumankc",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.thetrumankc.com/events/detail/1679105",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.axs.com/events/1679105/liquid-stranger-presents-electric-helix-tickets?skin=trumankc",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.thetrumankc.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
+      "from": "truman",
+      "to_url": "https://www.thetrumankc.com/special-events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.thetrumankc.com/events"
+    },
+    {
       "from": "kcopera",
       "to_url": "https://kcopera.org/event/the-marriage-of-figaro",
       "relationship": "unreviewed-outbound-link",
@@ -16101,356 +15699,8 @@
       "observed_on": "https://www.rs3101.org/troostunitedfest"
     },
     {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/tickets",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/tickets/single-game-tickets",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/tickets/season-tickets",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/tickets/groups",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/tickets/premium-group-tickets",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/tickets/premium-seating",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://am.ticketmaster.com/momavericks",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/gameday/game-day",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/tickets",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/tickets/single-game-tickets",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/tickets/season-tickets",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/tickets/groups",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/tickets/premium-group-tickets",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/tickets/premium-seating",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://am.ticketmaster.com/momavericks?_gl=1*1s5nh57*_ga*NDEzMzEzNTQuMTY5NTkxODA5Mw..*_ga_7C89328DNN*czE3NTE5MTUyNTIkbzc4OCRnMSR0MTc1MTkxODcxNCRqNjAkbDAkaDA.",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/tickets",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/tickets/single-game-tickets",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/tickets/season-tickets",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/tickets/groups",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/tickets/premium-group-tickets",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/tickets/premium-seating",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://am.ticketmaster.com/momavericks",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/gameday/game-day",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/tickets/single-game-tickets",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://www.ticketmaster.com/kansas-city-mavericks-tickets/artist/2389635",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/tickets/single-game-tickets",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/tickets/premium-seating",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/tickets/premium-seating",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/tickets/premium-group-tickets",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/tickets/groups",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/tickets/single-game-tickets",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/tickets",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/games/2026/11/12/tulsa-oilers",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/tickets",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/games/2026/11/13/allen-americans",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/tickets",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/games/2026/11/15/sensory-sunday",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/games/2026/11/20/allen-americans",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/games/2026/11/21/allen-americans",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://kcmavericks.com/games/2026/11/22/wichita-thunder",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://echl.com/teams",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://flosports.link/echl",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "http://www.echlallstarclassic.com",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://www.teamworkonline.com/hockey-jobs/echl/echl-league-office",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
-      "from": "mavericks",
-      "to_url": "https://www.teamworkonline.com/hockey-jobs/echl/echl-league-office",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
-    },
-    {
       "from": "dfscon",
       "to_url": "https://darkflamesociety.ticketspice.com/dfscon",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://darkflamesociety.ticketspice.com/dfscon"
-    },
-    {
-      "from": "dfscon",
-      "to_url": "https://darkflamesociety.ticketspice.com/dfscon",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://darkflamesociety.ticketspice.com/dfscon"
-    },
-    {
-      "from": "dfscon",
-      "to_url": "https://darkflamesociety.ticketspice.com/policy",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://darkflamesociety.ticketspice.com/dfscon"
-    },
-    {
-      "from": "dfscon",
-      "to_url": "https://www.ticketspice.com?utm_medium=Page+Footer&utm_content=DFSCON&utm_referrer=https://darkflamesociety.ticketspice.com/dfscon",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://darkflamesociety.ticketspice.com/dfscon"
     },
@@ -16511,36 +15761,6 @@
     {
       "from": "kc-convention",
       "to_url": "https://kcconvention.com/events/list?tribe_event_display=past&tribe_paged=1",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcconvention.com/events/"
-    },
-    {
-      "from": "kc-convention",
-      "to_url": "https://kcconvention.com/event/meeple-a-thon-2026",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcconvention.com/events/"
-    },
-    {
-      "from": "kc-convention",
-      "to_url": "https://kcconvention.com/event/meeple-a-thon-2026",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcconvention.com/events/"
-    },
-    {
-      "from": "kc-convention",
-      "to_url": "https://kcconvention.com/event/dfscon-2026",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcconvention.com/events/"
-    },
-    {
-      "from": "kc-convention",
-      "to_url": "https://kcconvention.com/event/dfscon-2026",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcconvention.com/events/"
-    },
-    {
-      "from": "kc-convention",
-      "to_url": "https://darkflamesociety.ticketspice.com/dfscon",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://kcconvention.com/events/"
     },
@@ -16912,84 +16132,6 @@
     },
     {
       "from": "ls-mistletoe",
-      "to_url": "https://explorels.com/events/pid/1198/mcat/1203/acat/2/ev/2/artdate/6-11-2026",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
-    },
-    {
-      "from": "ls-mistletoe",
-      "to_url": "https://explorels.com/events/pid/1198/mcat/1203/acat/2/ev/2/artdate/6-11-2026",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
-    },
-    {
-      "from": "ls-mistletoe",
-      "to_url": "https://explorels.com/events/artmid/1198/articleid/718/holiday-open-house",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
-    },
-    {
-      "from": "ls-mistletoe",
-      "to_url": "https://explorels.com/events/artmid/1198/articleid/679/quilt-show",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
-    },
-    {
-      "from": "ls-mistletoe",
-      "to_url": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
-    },
-    {
-      "from": "ls-mistletoe",
-      "to_url": "https://explorels.com/events/artmid/1198/articleid/701/holiday-fine-art-craft-show",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
-    },
-    {
-      "from": "ls-mistletoe",
-      "to_url": "https://explorels.com/events/pid/1198/mcat/1203/acat/2/ev/2/artdate/7-11-2026",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
-    },
-    {
-      "from": "ls-mistletoe",
-      "to_url": "https://explorels.com/events/pid/1198/mcat/1203/acat/2/ev/2/artdate/7-11-2026",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
-    },
-    {
-      "from": "ls-mistletoe",
-      "to_url": "https://explorels.com/events/artmid/1198/articleid/718/holiday-open-house",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
-    },
-    {
-      "from": "ls-mistletoe",
-      "to_url": "https://explorels.com/events/artmid/1198/articleid/679/quilt-show",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
-    },
-    {
-      "from": "ls-mistletoe",
-      "to_url": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
-    },
-    {
-      "from": "ls-mistletoe",
-      "to_url": "https://explorels.com/events/artmid/1198/articleid/701/holiday-fine-art-craft-show",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
-    },
-    {
-      "from": "ls-mistletoe",
-      "to_url": "https://explorels.com/events/artmid/1198/articleid/678/annual-veterans-day-parade-america-250",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
-    },
-    {
-      "from": "ls-mistletoe",
       "to_url": "https://explorels.com/events/pid/1198/mcat/1203/acat/2/ev/2/artdate/10-11-2026",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
@@ -17335,6 +16477,516 @@
       "to_url": "https://explorels.com/login-page?returnurl=%2fevents%2fartmid%2f1198%2farticleid%2f704%2fmistletoe-madness",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
+    },
+    {
+      "from": "ku-astronomy",
+      "to_url": "https://physics.ku.edu/undergraduate-program",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://physics.ku.edu/astronomy-public-telescope-nights"
+    },
+    {
+      "from": "ku-astronomy",
+      "to_url": "https://physics.ku.edu/graduate-program",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://physics.ku.edu/astronomy-public-telescope-nights"
+    },
+    {
+      "from": "ku-astronomy",
+      "to_url": "https://physics.ku.edu/astronomy-public-telescope-nights",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://physics.ku.edu/astronomy-public-telescope-nights"
+    },
+    {
+      "from": "ku-astronomy",
+      "to_url": "https://physics.ku.edu/colloquium-calendar",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://physics.ku.edu/astronomy-public-telescope-nights"
+    },
+    {
+      "from": "ku-astronomy",
+      "to_url": "https://admissions.ku.edu/alumni-volunteers",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://physics.ku.edu/astronomy-public-telescope-nights"
+    },
+    {
+      "from": "ku-astronomy",
+      "to_url": "https://deptsec.ku.edu/~admiss/forms/form/85",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://physics.ku.edu/astronomy-public-telescope-nights"
+    },
+    {
+      "from": "ku-astronomy",
+      "to_url": "https://physics.ku.edu/colloquium-calendar",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://physics.ku.edu/astronomy-public-telescope-nights"
+    },
+    {
+      "from": "ku-astronomy",
+      "to_url": "https://calendar.ku.edu",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://physics.ku.edu/astronomy-public-telescope-nights"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/all-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/all-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/featured-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/adult-cooking-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/adult-cooking-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/adult-cooking-classes/chefs-table",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/adult-cooking-classes/pro-series",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/kids-and-family-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/kids-and-family-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/kids-and-family-classes/kids-camps",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/all-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://app.kcculinary.com",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/all-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/featured-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/adult-cooking-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/adult-cooking-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/adult-cooking-classes/chefs-table",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/adult-cooking-classes/pro-series",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/kids-and-family-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/kids-and-family-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/kids-and-family-classes/kids-camps",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/all-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/all-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/featured-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/adult-cooking-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/adult-cooking-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/adult-cooking-classes/chefs-table",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/adult-cooking-classes/pro-series",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/kids-and-family-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/kids-and-family-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/kids-and-family-classes/kids-camps",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/all-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://app.kcculinary.com",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/all-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/featured-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/adult-cooking-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/adult-cooking-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/adult-cooking-classes/chefs-table",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/adult-cooking-classes/pro-series",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/kids-and-family-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/kids-and-family-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/kids-and-family-classes/kids-camps",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/all-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://app.kcculinary.com/adult-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://app.kcculinary.com/kids-family-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://app.kcculinary.com/camps",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/all-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://app.kcculinary.com",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/adult-cooking-classes/pro-series",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/adult-cooking-classes/chefs-table",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/kids-and-family-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/featured-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/all-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "kc-culinary-catalog",
+      "to_url": "https://kcculinary.com/all-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kcculinary.com/all-classes"
+    },
+    {
+      "from": "bpl-books-on-main",
+      "to_url": "https://bentonvillelibrary.org/browse/book-club-kits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://bentonvillelibrary.org/bplforreaders/book-clubs-2"
+    },
+    {
+      "from": "bpl-books-on-main",
+      "to_url": "https://attend.bentonvillelibrary.org/events?r=thismonth",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://bentonvillelibrary.org/bplforreaders/book-clubs-2"
+    },
+    {
+      "from": "bpl-books-on-main",
+      "to_url": "https://attend.bentonvillelibrary.org/events?r=thismonth",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://bentonvillelibrary.org/bplforreaders/book-clubs-2"
+    },
+    {
+      "from": "bpl-books-on-main",
+      "to_url": "https://bentonvillelibrary.org/services/meeting-spaces",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://bentonvillelibrary.org/bplforreaders/book-clubs-2"
+    },
+    {
+      "from": "bpl-books-on-main",
+      "to_url": "https://bentonvillelibrary.libnet.info/myevents",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://bentonvillelibrary.org/bplforreaders/book-clubs-2"
+    },
+    {
+      "from": "bpl-books-on-main",
+      "to_url": "https://bentonvillelibrary.org/about-us/volunteer",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://bentonvillelibrary.org/bplforreaders/book-clubs-2"
+    },
+    {
+      "from": "bpl-books-on-main",
+      "to_url": "https://bentonvillelibrary.org/about-us/parking",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://bentonvillelibrary.org/bplforreaders/book-clubs-2"
+    },
+    {
+      "from": "bpl-books-on-main",
+      "to_url": "https://bentonvillelibrary.org/browse/book-club-kits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://bentonvillelibrary.org/bplforreaders/book-clubs-2"
+    },
+    {
+      "from": "bpl-books-on-main",
+      "to_url": "https://attend.bentonvillelibrary.org/events?r=thismonth",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://bentonvillelibrary.org/bplforreaders/book-clubs-2"
+    },
+    {
+      "from": "bpl-books-on-main",
+      "to_url": "https://attend.bentonvillelibrary.org/events?r=thismonth",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://bentonvillelibrary.org/bplforreaders/book-clubs-2"
+    },
+    {
+      "from": "bpl-books-on-main",
+      "to_url": "https://bentonvillelibrary.org/services/meeting-spaces",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://bentonvillelibrary.org/bplforreaders/book-clubs-2"
+    },
+    {
+      "from": "bpl-books-on-main",
+      "to_url": "https://bentonvillelibrary.libnet.info/myevents",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://bentonvillelibrary.org/bplforreaders/book-clubs-2"
+    },
+    {
+      "from": "bpl-books-on-main",
+      "to_url": "https://bentonvillelibrary.org/about-us/volunteer",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://bentonvillelibrary.org/bplforreaders/book-clubs-2"
+    },
+    {
+      "from": "bpl-books-on-main",
+      "to_url": "https://bentonvillelibrary.org/about-us/parking",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://bentonvillelibrary.org/bplforreaders/book-clubs-2"
+    },
+    {
+      "from": "bpl-books-on-main",
+      "to_url": "https://attend.bentonvillelibrary.org/events?r=thismonth",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://bentonvillelibrary.org/bplforreaders/book-clubs-2"
+    },
+    {
+      "from": "bpl-books-on-main",
+      "to_url": "https://attend.bentonvillelibrary.org/events?r=thismonth",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://bentonvillelibrary.org/bplforreaders/book-clubs-2"
+    },
+    {
+      "from": "bpl-books-on-main",
+      "to_url": "https://bentonvillelibrary.org/about-us/volunteer",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://bentonvillelibrary.org/bplforreaders/book-clubs-2"
+    },
+    {
+      "from": "bpl-books-on-main",
+      "to_url": "https://www.bentonvillear.com/1691/Parks-Recreation",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://bentonvillelibrary.org/bplforreaders/book-clubs-2"
+    },
+    {
+      "from": "bpl-books-on-main",
+      "to_url": "https://bentonvillehistorymuseum.org",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://bentonvillelibrary.org/bplforreaders/book-clubs-2"
     }
   ],
   "discovery_health": [
@@ -17405,8 +17057,8 @@
     },
     {
       "id": "lawrence-youth-soccer",
-      "status": "checked",
-      "pages": 1
+      "status": "failed",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)>"
     },
     {
       "id": "columbia-programs",
@@ -17505,8 +17157,8 @@
     },
     {
       "id": "truman",
-      "status": "failed",
-      "error": "Unsupported HTTP content encoding: br"
+      "status": "checked",
+      "pages": 1
     },
     {
       "id": "kcopera",
@@ -17530,8 +17182,8 @@
     },
     {
       "id": "mavericks",
-      "status": "checked",
-      "pages": 1
+      "status": "failed",
+      "error": "HTTP Error 405: Not Allowed"
     },
     {
       "id": "independence-japan",
@@ -17555,6 +17207,21 @@
     },
     {
       "id": "ls-mistletoe",
+      "status": "checked",
+      "pages": 1
+    },
+    {
+      "id": "ku-astronomy",
+      "status": "checked",
+      "pages": 1
+    },
+    {
+      "id": "kc-culinary-catalog",
+      "status": "checked",
+      "pages": 1
+    },
+    {
+      "id": "bpl-books-on-main",
       "status": "checked",
       "pages": 1
     }
@@ -17722,10 +17389,8 @@
           "kc-library",
           "dfscon"
         ],
-        "collecting_routes": [
-          "dfscon"
-        ],
-        "status": "collecting",
+        "collecting_routes": [],
+        "status": "route_only",
         "next_search": "Kansas City metro cinema film festivals author readings book clubs official programs calendar registration"
       },
       {
@@ -17734,10 +17399,13 @@
         "routes": [
           "kc-zoo",
           "nelson",
-          "science-city"
+          "science-city",
+          "kc-culinary-catalog"
         ],
-        "collecting_routes": [],
-        "status": "route_only",
+        "collecting_routes": [
+          "kc-culinary-catalog"
+        ],
+        "status": "collecting",
         "next_search": "Kansas City metro classes workshops cooking crafts language lessons official programs calendar registration"
       },
       {
@@ -17746,10 +17414,13 @@
         "routes": [
           "kc-zoo",
           "jcprd-youth-sports",
-          "science-city"
+          "science-city",
+          "kc-culinary-catalog"
         ],
-        "collecting_routes": [],
-        "status": "route_only",
+        "collecting_routes": [
+          "kc-culinary-catalog"
+        ],
+        "status": "collecting",
         "next_search": "Kansas City metro day camps overnight camps summer school break official programs calendar registration"
       },
       {
@@ -17770,10 +17441,13 @@
         "region": "Kansas City metro",
         "category": "food_drink",
         "routes": [
-          "kc-daily"
+          "kc-daily",
+          "kc-culinary-catalog"
         ],
-        "collecting_routes": [],
-        "status": "route_only",
+        "collecting_routes": [
+          "kc-culinary-catalog"
+        ],
+        "status": "collecting",
         "next_search": "Kansas City metro food festivals tastings dining cooking breweries official programs calendar registration"
       },
       {
@@ -17788,8 +17462,7 @@
         ],
         "collecting_routes": [
           "visitkc",
-          "downtown-ls",
-          "crossroads-flea"
+          "downtown-ls"
         ],
         "status": "collecting",
         "next_search": "Kansas City metro farmers markets craft fairs vintage holiday markets official programs calendar registration"
@@ -17855,10 +17528,7 @@
           "kc-parks",
           "visitkc",
           "downtown-ls",
-          "mavericks",
-          "dfscon",
-          "kc-convention",
-          "crossroads-flea"
+          "kc-convention"
         ],
         "status": "collecting",
         "next_search": "Kansas City metro meetups cultural community social clubs official programs calendar registration"
@@ -17973,9 +17643,13 @@
       {
         "region": "Lawrence",
         "category": "science_technology",
-        "routes": [],
-        "collecting_routes": [],
-        "status": "gap",
+        "routes": [
+          "ku-astronomy"
+        ],
+        "collecting_routes": [
+          "ku-astronomy"
+        ],
+        "status": "collecting",
         "next_search": "Lawrence science planetarium STEM makers robotics official programs calendar registration"
       },
       {
@@ -18080,10 +17754,13 @@
         "region": "Lawrence",
         "category": "community_social",
         "routes": [
-          "lawrence-library"
+          "lawrence-library",
+          "ku-astronomy"
         ],
-        "collecting_routes": [],
-        "status": "route_only",
+        "collecting_routes": [
+          "ku-astronomy"
+        ],
+        "status": "collecting",
         "next_search": "Lawrence meetups cultural community social clubs official programs calendar registration"
       },
       {
@@ -18278,10 +17955,8 @@
         "routes": [
           "columbia-cvb"
         ],
-        "collecting_routes": [
-          "columbia-cvb"
-        ],
-        "status": "collecting",
+        "collecting_routes": [],
+        "status": "route_only",
         "next_search": "Columbia festivals fairs holiday seasonal celebrations official programs calendar registration"
       },
       {
@@ -18447,9 +18122,13 @@
       {
         "region": "Bentonville",
         "category": "film_literature",
-        "routes": [],
-        "collecting_routes": [],
-        "status": "gap",
+        "routes": [
+          "bpl-books-on-main"
+        ],
+        "collecting_routes": [
+          "bpl-books-on-main"
+        ],
+        "status": "collecting",
         "next_search": "Bentonville cinema film festivals author readings book clubs official programs calendar registration"
       },
       {
@@ -18458,10 +18137,8 @@
         "routes": [
           "crystal-bridges"
         ],
-        "collecting_routes": [
-          "crystal-bridges"
-        ],
-        "status": "collecting",
+        "collecting_routes": [],
+        "status": "route_only",
         "next_search": "Bentonville classes workshops cooking crafts language lessons official programs calendar registration"
       },
       {
@@ -18529,10 +18206,13 @@
         "region": "Bentonville",
         "category": "community_social",
         "routes": [
-          "bentonville-downtown"
+          "bentonville-downtown",
+          "bpl-books-on-main"
         ],
-        "collecting_routes": [],
-        "status": "route_only",
+        "collecting_routes": [
+          "bpl-books-on-main"
+        ],
+        "status": "collecting",
         "next_search": "Bentonville meetups cultural community social clubs official programs calendar registration"
       },
       {
@@ -18546,9 +18226,13 @@
       {
         "region": "Bentonville",
         "category": "libraries_learning",
-        "routes": [],
-        "collecting_routes": [],
-        "status": "gap",
+        "routes": [
+          "bpl-books-on-main"
+        ],
+        "collecting_routes": [
+          "bpl-books-on-main"
+        ],
+        "status": "collecting",
         "next_search": "Bentonville libraries storytime literacy lifelong learning official programs calendar registration"
       },
       {
@@ -18794,8 +18478,6 @@
           "truman",
           "downtown-ls",
           "kcopera",
-          "mavericks",
-          "dfscon",
           "kc-convention"
         ]
       },
@@ -18897,11 +18579,14 @@
           "truman",
           "downtown-ls",
           "kcopera",
-          "crossroads-flea"
+          "crossroads-flea",
+          "ku-astronomy",
+          "bpl-books-on-main"
         ],
         "collecting_routes": [
           "bentonville-soccer",
-          "crossroads-flea"
+          "ku-astronomy",
+          "bpl-books-on-main"
         ]
       },
       {
@@ -18933,9 +18618,12 @@
           "columbia-parks",
           "bentonville-schedules",
           "kc-volunteer",
-          "bentonville-trails"
+          "bentonville-trails",
+          "kc-culinary-catalog"
         ],
-        "collecting_routes": []
+        "collecting_routes": [
+          "kc-culinary-catalog"
+        ]
       }
     ],
     "note": "A route is a research lead, not proof that every program has been collected. Gaps are explicit; this matrix is not an exhaustiveness claim."
@@ -19046,7 +18734,7 @@
       "parent_route_ids": [
         "science-city"
       ],
-      "hours_source": null,
+      "hours_source": "https://sciencecity.unionstation.org/plan-your-visit/",
       "coordinate_source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=30+W+Pershing+Rd%2C+Kansas+City+MO+64108&benchmark=Public_AR_Current&format=json",
       "offering_sources": [
         "https://sciencecity.unionstation.org/plan-your-visit/"
