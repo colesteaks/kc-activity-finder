@@ -2,9 +2,9 @@
   "id": "2026-W46",
   "iso_week": "2026-W46",
   "started_at": "2026-11-09T14:26:46+00:00",
-  "updated_at": "2026-11-09T08:35:30.611651-06:00",
-  "status": "verification_pending",
-  "base_commit": "a8266e0",
+  "updated_at": "2026-11-09T08:53:26.759737-06:00",
+  "status": "completed",
+  "base_commit": "a8266e0999042b18d6fe8478ecb94f3989ec6372",
   "baseline": {
     "routes": 47,
     "records": 3613,
@@ -39,10 +39,10 @@
   "usage": {
     "candidate_links": 12,
     "gap_searches": 6,
-    "page_visits": 22,
+    "page_visits": 24,
     "maximum_link_depth": 2,
     "source_promotions": 3,
-    "adapter_pull_requests": 0
+    "adapter_pull_requests": 1
   },
   "searches": [
     "Kansas City November 13 14 15 2026 weekend things to do KC Daily",
@@ -71,8 +71,159 @@
     "published_session_starts": 8,
     "validation": "All normalized records validated; all offerings spot-checked against current fetched source. Individual live probes used existing adapters; final per-date separation revalidated using those same live response bodies."
   },
-  "observed_gains": null,
-  "yield_status": "promoted; yield pending daily Actions",
+  "observed_gains": {
+    "new_unique_offerings": 3,
+    "new_records": 5,
+    "published_session_starts": 8,
+    "source_health": [
+      {
+        "id": "ku-astronomy",
+        "status": "checked",
+        "events": 2,
+        "checked_at": "2026-11-09T08:40:48.964093-06:00",
+        "kind_counts": {
+          "recurring_program": 2
+        },
+        "category_counts": {
+          "science_technology": 2,
+          "community_social": 2
+        }
+      },
+      {
+        "id": "kc-culinary-catalog",
+        "status": "checked",
+        "events": 1,
+        "checked_at": "2026-11-09T08:40:48.964093-06:00",
+        "kind_counts": {
+          "program_catalog": 1
+        },
+        "category_counts": {
+          "food_drink": 1,
+          "classes_skills": 1,
+          "camps": 1
+        }
+      },
+      {
+        "id": "bpl-books-on-main",
+        "status": "checked",
+        "events": 2,
+        "checked_at": "2026-11-09T08:40:48.964093-06:00",
+        "kind_counts": {
+          "recurring_program": 2
+        },
+        "category_counts": {
+          "film_literature": 2,
+          "libraries_learning": 2,
+          "community_social": 2
+        }
+      }
+    ],
+    "coverage_cell_changes": [
+      {
+        "region": "Kansas City metro",
+        "category": "film_literature",
+        "before": "collecting",
+        "after": "route_only",
+        "promoted_collecting_routes": []
+      },
+      {
+        "region": "Kansas City metro",
+        "category": "classes_skills",
+        "before": "route_only",
+        "after": "collecting",
+        "promoted_collecting_routes": [
+          "kc-culinary-catalog"
+        ]
+      },
+      {
+        "region": "Kansas City metro",
+        "category": "camps",
+        "before": "route_only",
+        "after": "collecting",
+        "promoted_collecting_routes": [
+          "kc-culinary-catalog"
+        ]
+      },
+      {
+        "region": "Kansas City metro",
+        "category": "food_drink",
+        "before": "route_only",
+        "after": "collecting",
+        "promoted_collecting_routes": [
+          "kc-culinary-catalog"
+        ]
+      },
+      {
+        "region": "Lawrence",
+        "category": "science_technology",
+        "before": "gap",
+        "after": "collecting",
+        "promoted_collecting_routes": [
+          "ku-astronomy"
+        ]
+      },
+      {
+        "region": "Lawrence",
+        "category": "community_social",
+        "before": "route_only",
+        "after": "collecting",
+        "promoted_collecting_routes": [
+          "ku-astronomy"
+        ]
+      },
+      {
+        "region": "Columbia",
+        "category": "festivals_seasonal",
+        "before": "collecting",
+        "after": "route_only",
+        "promoted_collecting_routes": []
+      },
+      {
+        "region": "Bentonville",
+        "category": "film_literature",
+        "before": "gap",
+        "after": "collecting",
+        "promoted_collecting_routes": [
+          "bpl-books-on-main"
+        ]
+      },
+      {
+        "region": "Bentonville",
+        "category": "classes_skills",
+        "before": "collecting",
+        "after": "route_only",
+        "promoted_collecting_routes": []
+      },
+      {
+        "region": "Bentonville",
+        "category": "community_social",
+        "before": "route_only",
+        "after": "collecting",
+        "promoted_collecting_routes": [
+          "bpl-books-on-main"
+        ]
+      },
+      {
+        "region": "Bentonville",
+        "category": "libraries_learning",
+        "before": "gap",
+        "after": "collecting",
+        "promoted_collecting_routes": [
+          "bpl-books-on-main"
+        ]
+      }
+    ],
+    "new_collecting_formats": [
+      "program_catalog"
+    ],
+    "inventory_before_unique": 1230,
+    "inventory_after_unique": 1219,
+    "inventory_before_records": 3613,
+    "inventory_after_records": 3576,
+    "attribution_note": "New-source gains count unique offering URLs, not repeated dates. Overall inventory changes include expiry and other daily sources. A collected program_catalog is not a dated cooking class or an open registration window.",
+    "observation_target": "Successful Actions generated-data commit and the exact matching live Pages JSON, verified independently."
+  },
+  "yield_status": "observed in successful daily Actions; exact public Pages snapshot verified",
   "place_changes": [
     {
       "id": "science-city",
@@ -208,9 +359,181 @@
     "Lawrence registration portal robots denial; Bentonville attendance calendar 403.",
     "KU home/away season parser and Powell calendar deferred under single-PR budget.",
     "Surrounding-area camp search rotated in brief but not executed: sixth query reserved for required recall renewal check; no claim of complete regional/category sweep.",
-    "Actual repository visibility PUBLIC at start; unchanged. User private wording did not authorize changing access."
+    "Actual repository visibility PUBLIC at start; unchanged. User private wording did not authorize changing access.",
+    "Latest daily refresh moved KC film/literature, Columbia festivals and Bentonville classes from collecting to route_only. These unrelated losses are retained in before/after cells; the additions do not establish complete subject coverage.",
+    "Mavericks returned HTTP 405 in the production refresh; Lawrence soccer returned an SSL EOF. Reviewed DFSCON and Mistletoe text guards changed after their event dates. No access bypass, fabricated date renewal or automatic source deletion attempted."
   ],
-  "commit_urls": [],
-  "pull_request_urls": [],
-  "daily_actions": null
+  "commit_urls": [
+    "https://github.com/colesteaks/kc-activity-finder/commit/2a2dce9494fcb174aecc6ff739fed686cf005b9a",
+    "https://github.com/colesteaks/kc-activity-finder/commit/316f14e5da0edfd31c94829692a2b3f1c363f78d"
+  ],
+  "pull_request_urls": [
+    "https://github.com/colesteaks/kc-activity-finder/pull/1"
+  ],
+  "daily_actions": {
+    "id": 42636366803,
+    "url": "https://github.com/colesteaks/kc-activity-finder/actions/runs/42636366803",
+    "event": "workflow_dispatch",
+    "refresh": true,
+    "conclusion": "success",
+    "generated_data_commit": "316f14e5da0edfd31c94829692a2b3f1c363f78d",
+    "deployment_followup": "Full refresh was run once. Static refresh=false redeploy follows from generated-data commit because previous source SHA deployment served older bytes."
+  },
+  "verification": {
+    "main_python_tests": 100,
+    "adapter_python_tests": 106,
+    "new_adapter_regression_tests": 6,
+    "browser_filter_and_place_scripts": "pass",
+    "repo_validation": "pass",
+    "public_data_validation": "pass",
+    "diff_check": "pass",
+    "adapter_pr_ci": "success",
+    "adapter_pr_state": "open; auto-merge disabled",
+    "existing_comparable_identities": 3558,
+    "changed_existing_identities": 0,
+    "live_pages_data": {
+      "url": "https://colesteaks.github.io/kc-activity-finder/activities.json",
+      "checked_at": "2026-11-09T08:52:30.832917-06:00",
+      "sha256": "512e8d2552ca508e0219f8ac099dae2f6668605f2ef449638e24940c295653ea",
+      "matches_generated_commit": true,
+      "updated_at": "2026-11-09T08:40:48.964093-06:00",
+      "records": 3576,
+      "promoted_source_ids_present": [
+        "ku-astronomy",
+        "kc-culinary-catalog",
+        "bpl-books-on-main"
+      ]
+    },
+    "artifact_download": "Optional Actions artifact download blocked with HTTP 403 at Azure artifact storage; no bypass attempted. Exact public endpoint verification will be used instead.",
+    "occurrence_filter_check": "All four dated program records match their own dates and do not appear on the intervening November 14\u201315 weekend.",
+    "main_ci_url": "https://github.com/colesteaks/kc-activity-finder/actions/runs/42636336484",
+    "adapter_ci_url": "https://github.com/colesteaks/kc-activity-finder/actions/runs/42637019893",
+    "live_browser": "All three new offerings rendered under their correct region/date/program filters; no browser page errors."
+  },
+  "adapter_probe": {
+    "visited_pages": 2,
+    "normalized_records": 1,
+    "selected_performance": "Minds in Motion Public Tour: Portraits of Power",
+    "availability": "SoldOut",
+    "status": "partial; intentionally one detail only",
+    "production_yield": "pending review/merge; no adapter production gain claimed",
+    "fixtures_verified": 2
+  },
+  "research_visits": [
+    {
+      "url": "https://www.kcdaily.com/p/weekend-roundup"
+    },
+    {
+      "url": "https://www.explorekctogether.com/this-weekend"
+    },
+    {
+      "url": "https://ragtagcinema.org/",
+      "error": "Access challenge: source needs an offered feed or manual review, not an empty calendar"
+    },
+    {
+      "url": "https://powellgardens.org/homepage/events-programs-exhibitions/powell-gardens-festivals/festival-of-butterflies"
+    },
+    {
+      "url": "https://kuathletics.com/sports/mens-basketball/schedule"
+    },
+    {
+      "url": "https://kcculinary.com/all-classes"
+    },
+    {
+      "url": "https://nelson-atkins.org/events/"
+    },
+    {
+      "url": "https://app.kcculinary.com/"
+    },
+    {
+      "url": "https://honchopickleball.leagueapps.com/leagues/pickleball/4594057-parkville---char-bar-summer-2025"
+    },
+    {
+      "url": "https://kslawrenceweb.myvscloud.com/webtrac/web/splash.html?ccode=NCrelay",
+      "error": "robots.txt disallows this route"
+    },
+    {
+      "url": "https://sciencecity.unionstation.org/plan-your-visit/"
+    },
+    {
+      "url": "https://physics.ku.edu/astronomy-public-telescope-nights"
+    },
+    {
+      "url": "https://powellgardens.org/events-and-classes/"
+    },
+    {
+      "url": "https://cart.nelson-atkins.org/events?view=calendar+view=list&kid=11,165,216"
+    },
+    {
+      "url": "https://bentonvillelibrary.org/bplforreaders/book-clubs-2"
+    },
+    {
+      "url": "https://cart.nelson-atkins.org/51930/53441"
+    },
+    {
+      "url": "https://cart.nelson-atkins.org/50445/53356"
+    },
+    {
+      "url": "https://powellgardens.org/the-byron-shutz-trail-system/"
+    },
+    {
+      "url": "https://attend.bentonvillelibrary.org/events?r=thismonth",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://physics.ku.edu/astronomy-public-telescope-nights",
+      "purpose": "individual existing-adapter promotion probe"
+    },
+    {
+      "url": "https://kcculinary.com/all-classes",
+      "purpose": "individual existing-adapter promotion probe"
+    },
+    {
+      "url": "https://bentonvillelibrary.org/bplforreaders/book-clubs-2",
+      "purpose": "individual existing-adapter promotion probe"
+    },
+    {
+      "url": "https://nelson-atkins.org/events/",
+      "purpose": "bounded live adapter probe"
+    },
+    {
+      "url": "https://cart.nelson-atkins.org/51930/53441",
+      "purpose": "bounded live adapter probe"
+    }
+  ],
+  "budget_accounting": "24 candidate/source page visits including repeated live probes and denied routes; protocol robots checks, GitHub/CI inspection and publication verification are separate from discovery. One existing full Actions refresh was invoked for production yield, as policy requires.",
+  "completed_at": "2026-11-09T08:53:26.759737-06:00",
+  "publication_followup": {
+    "status": "resolved: exact live public data verified",
+    "full_refresh_run": "https://github.com/colesteaks/kc-activity-finder/actions/runs/42636366803",
+    "static_only_run": "https://github.com/colesteaks/kc-activity-finder/actions/runs/42638091252",
+    "static_only_first_attempt": "HTTP 400: in-progress Pages deployment for 2a2dce9, although its status API reported succeed",
+    "static_only_retry": "Deployment failed: multiple artifacts named github-pages (2) in the rerun; collector remained skipped",
+    "cancellation_attempt": "Connected integration returned HTTP 403 Resource not accessible by integration; no access changes or bypass attempted",
+    "final_observation": "Original successful full-refresh deployment subsequently served the exact generated commit bytes. Static retry errors do not block the now-verified public snapshot.",
+    "future_followup": "If repeated, investigate duplicate build-version/deployment state and artifact naming in a future focused maintenance change; no workflow/parser changes were merged in this run."
+  },
+  "existing_maintainer_pull_requests_at_start": [],
+  "after_brief_baseline": {
+    "routes": 50,
+    "records": 3576,
+    "unique_offerings": 1219,
+    "coverage_cells": {
+      "collecting": 35,
+      "route_only": 30,
+      "gap": 45
+    },
+    "activity_kinds": {
+      "date_range_unknown": 46,
+      "exhibit": 45,
+      "one_off": 3475,
+      "recurring_program": 5,
+      "evergreen": 4,
+      "program_catalog": 1
+    },
+    "stale_records": 8,
+    "places": 9,
+    "unmapped_offerings": 778,
+    "unreviewed_proposals": 4440
+  }
 }
