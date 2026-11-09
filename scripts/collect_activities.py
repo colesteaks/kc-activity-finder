@@ -360,7 +360,10 @@ def collect_source(source, start, until, observed, cache):
                         except (ValueError, TypeError) as e: errors.append(str(e))
                     for a in soup.select('a[href]'):
                         link = urljoin(next_page, a['href']); p = urlsplit(link)
-                        if p.hostname == urlsplit(source['url']).hostname and re.search(source['pattern'], p.path):
+                        # A reviewed provider can explicitly delegate detail pages to
+                        # its ticket host. Host equality is exact, never suffix-based.
+                        delegated = p.scheme == 'https' and p.hostname in source.get('detail_hosts', [])
+                        if (p.hostname == urlsplit(source['url']).hostname or delegated) and safe_url(link) and re.search(source['pattern'], p.path):
                             detail_links.setdefault(canonical(link), None)
                     nxt = soup.select_one('a[rel="next"], a.next.page-numbers, .pager__item--next a, a[data-drupal-views-infinite-scroll-pager]')
                     if not nxt: break
