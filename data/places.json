@@ -290,7 +290,55 @@
         "checked_at": "2026-11-07T09:17:40.572854-06:00",
         "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
       },
-      "hours": null,
+      "hours": {
+        "text": "Museum galleries: Monday/Wednesday 11 a.m.\u20136 p.m.; Thursday/Friday 11 a.m.\u20138 p.m.; Saturday/Sunday 10 a.m.\u20136 p.m.; Tuesday closed. Weekday lobby opens 10 a.m. Museum closed Thanksgiving and Christmas; trails/grounds sunrise\u2013sunset have separate access.",
+        "timezone": "America/Chicago",
+        "rules": [
+          {
+            "days": [
+              0,
+              2
+            ],
+            "opens": "11:00",
+            "closes": "18:00",
+            "scope": "visitor"
+          },
+          {
+            "days": [
+              3,
+              4
+            ],
+            "opens": "11:00",
+            "closes": "20:00",
+            "scope": "visitor"
+          },
+          {
+            "days": [
+              5,
+              6
+            ],
+            "opens": "10:00",
+            "closes": "18:00",
+            "scope": "visitor"
+          }
+        ],
+        "exceptions": [
+          {
+            "date": "2026-11-26",
+            "closed": true,
+            "note": "Museum closed Thanksgiving."
+          },
+          {
+            "date": "2026-12-25",
+            "closed": true,
+            "note": "Museum closed Christmas."
+          }
+        ],
+        "complete_week": true,
+        "source_url": "https://crystalbridges.org/visit",
+        "checked_at": "2026-11-16T08:55:59.127244-06:00",
+        "notice": "Published regular hours are not live closure, ticket or capacity confirmation."
+      },
       "activities": [],
       "source_url": "https://crystalbridges.org/",
       "match": {

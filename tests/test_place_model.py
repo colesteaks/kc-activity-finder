@@ -2,6 +2,7 @@ import copy
 import json
 import sys
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 from jsonschema import Draft202012Validator, FormatChecker
 
@@ -22,9 +23,19 @@ class PlaceTests(unittest.TestCase):
         self.assertIsNone(attach_place(self.row(source='unrelated'))['geo'])
 
     def test_museum_hours_do_not_inherit_trail_hours(self):
-        row=attach_place(self.row('crystal-bridges','Great Hall'))
-        self.assertEqual(row['place_id'],'crystal-museum')
-        self.assertIsNone(next(p for p in places() if p['id']==row['place_id'])['hours'])
+        fixture=json.loads((ROOT/'tests/fixtures/crystal-bridges-place-hours.json').read_text())['places']
+        museum=next(p for p in fixture if p['id']=='crystal-museum')
+        trail=next(p for p in fixture if p['id']=='crystal-trails')
+        for verified_hours in (None, copy.deepcopy(museum['hours'])):
+            with self.subTest(hours_known=verified_hours is not None):
+                definitions=copy.deepcopy(fixture)
+                next(p for p in definitions if p['id']=='crystal-museum')['hours']=verified_hours
+                with patch('place_model.places',return_value=definitions):
+                    row=attach_place(self.row('crystal-bridges','Great Hall'))
+                    self.assertEqual(row['place_id'],'crystal-museum')
+                    selected=next(p for p in public_places() if p['id']==row['place_id'])
+                    self.assertEqual(selected['hours'],verified_hours)
+                    self.assertNotEqual(selected['hours'],trail['hours'])
 
     def test_event_location_coordinate_precedence_and_provenance(self):
         raw={'location':{'geo':{'latitude':'39.4','longitude':'-94.8'}}}
