@@ -201,10 +201,10 @@
       "region": "Kansas City metro",
       "city": "Kansas City",
       "kind": "organizer",
-      "format": "jsonld",
+      "format": "tnew",
       "url": "https://nelson-atkins.org/events/",
-      "pattern": "/events/[^/]+",
-      "max_details": 60,
+      "pattern": "^/\\d+/\\d+/?$",
+      "max_details": 24,
       "categories": [
         "arts_exhibits",
         "history_culture",
@@ -220,8 +220,20 @@
         "specific event or program",
         "registration and deadlines",
         "season schedule or exhibit run",
-        "hours and closures"
-      ]
+        "hours and closures",
+        "Featured linked ticket performances only; full dynamic calendar remains a coverage gap"
+      ],
+      "detail_hosts": [
+        "cart.nelson-atkins.org"
+      ],
+      "discovery_evidence": [
+        {
+          "url": "https://nelson-atkins.org/events/",
+          "relationship": "Official museum directly links public cart.nelson-atkins.org performance pages; selected date/year and availability verified",
+          "observed_at": "2026-11-09T08:29:31-06:00"
+        }
+      ],
+      "reviewed_at": "2026-11-09T08:39:21-06:00"
     },
     {
       "id": "kc-library",

@@ -87,7 +87,43 @@ def visitkc_api_events(data,page):
     return records
 
 
+def tnew_events(body, page):
+    """Read only the selected TNEW performance, never its More Dates options."""
+    soup = BeautifulSoup(body, 'html.parser')
+    detail = soup.select_one('.tn-event-detail__performance-details-container')
+    if not detail:
+        return []
+    title = text(detail.select_one('.tn-event-detail__title'))
+    stamp = text(detail.select_one('.tn-event-detail__display-time'))
+    # Explicit year and clock are required; a missing year must not become today.
+    if not title or not re.fullmatch(FULL_DATE + r'\s+\d{1,2}:\d{2}\s*[AP]M', stamp, re.I):
+        return []
+    unavailable = text(detail.select_one('.tn-event-detail__unavailable-text'))
+    sold_out = bool(re.search(r'\bsold\s*out\b', unavailable, re.I))
+    buy = soup.select_one('#tn-add-to-cart-button')
+    open_registration = buy is not None and not buy.has_attr('disabled') and not unavailable
+    description = text(detail.select_one('.tn-event-detail__description'))
+    # Preserve this material audience restriction before the public excerpt limit.
+    if 'people with memory loss and their care partners' in description.lower():
+        description = 'For people with memory loss and their care partners. ' + description
+    row = {'name': title, 'startDate': parse(stamp).replace(tzinfo=TZ).isoformat(),
+           'url': page, 'description': description,
+           '_evidence_quote': stamp + (' | ' + unavailable if unavailable else ''),
+           'offers': {'availability': 'SoldOut' if sold_out else 'InStock' if open_registration else 'unknown'},
+           '_registration': {'status': 'sold_out' if sold_out else 'open' if open_registration else 'unknown',
+                             'opens_at': None, 'deadline': None, 'url': page,
+                             'note': 'Selected performance only. Availability observed on the public ticket page; recheck before booking. Other dates can have different titles and availability.'}}
+    if 'Tivoli Cinema' in text(soup.select_one('main')):
+        row['_categories'] = ['film_literature']
+    if 'Atkins Auditorium' in description:
+        row['location'] = {'name': 'Atkins Auditorium'}
+    elif 'Meet in Bloch Lobby' in description:
+        row['location'] = {'name': 'Bloch Lobby'}
+    return [row]
+
+
 def html_events(body,source,page):
+    if source['format']=='tnew':return tnew_events(body,page)
     if source['format']=='library':return library_events(body,page)
     if source['format']=='carbonhouse':return carbonhouse_events(body,page,source)
     if source['format']=='visitkc':return visitkc_events(body,page)
