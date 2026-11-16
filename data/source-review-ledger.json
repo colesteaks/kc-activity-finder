@@ -205,9 +205,11 @@
         "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/"
       ],
       "registry_id": "linda-hall-alchemy",
-      "unique_offerings_added": 0,
+      "unique_offerings_added": 1,
       "probe_new_unique_offerings": 1,
-      "pull_request_url": null
+      "pull_request_url": null,
+      "daily_verified_at": "2026-11-16T09:02:20.611460-06:00",
+      "observed_daily_records": 1
     },
     {
       "url": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/",
@@ -220,9 +222,11 @@
         "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
       ],
       "registry_id": "columbia-fall-winter-catalog",
-      "unique_offerings_added": 0,
+      "unique_offerings_added": 1,
       "probe_new_unique_offerings": 1,
-      "pull_request_url": null
+      "pull_request_url": null,
+      "daily_verified_at": "2026-11-16T09:02:20.611460-06:00",
+      "observed_daily_records": 1
     },
     {
       "url": "https://shsmo.org/exhibitions/tom-sawyer-150-thomas-hart-benton-illustrates-american-classic",
@@ -236,9 +240,11 @@
         "https://shsmo.org/visit/columbia"
       ],
       "registry_id": "shsmo-tom-sawyer",
-      "unique_offerings_added": 0,
+      "unique_offerings_added": 1,
       "probe_new_unique_offerings": 1,
-      "pull_request_url": null
+      "pull_request_url": null,
+      "daily_verified_at": "2026-11-16T09:02:20.611460-06:00",
+      "observed_daily_records": 1
     },
     {
       "url": "https://shsmo.org/exhibitions/indigenous-identities-state-sanctioned-portraiture-native-self-representation",
@@ -252,9 +258,11 @@
         "https://shsmo.org/visit/columbia"
       ],
       "registry_id": "shsmo-indigenous-identities",
-      "unique_offerings_added": 0,
+      "unique_offerings_added": 1,
       "probe_new_unique_offerings": 1,
-      "pull_request_url": null
+      "pull_request_url": null,
+      "daily_verified_at": "2026-11-16T09:02:20.611460-06:00",
+      "observed_daily_records": 1
     },
     {
       "url": "https://app.giveffect.com/campaigns/45568-troost-united-fest-volunteer",
@@ -345,7 +353,7 @@
       "status": "adapter_needed",
       "reviewed_at": "2026-11-16T08:55:59.127244-06:00",
       "next_review_after": "2026-11-23",
-      "reason": "Verified provider schedule and adult, youth/family, aquatics and adaptive-related categories. Large embedded schedule includes virtual/offsite entries and relative dates: needs explicit-date/location/access parser fixtures. No sessions promoted, no new PR duplicates existing Nelson work.",
+      "reason": "Verified provider schedule and adult, youth/family and aquatics categories. Large embedded schedule includes virtual/offsite entries and relative dates: needs explicit-date/location/access parser fixtures. No sessions promoted, no new PR duplicates existing Nelson work.",
       "discovered_on": "https://kansascityymca.org/schedules/",
       "evidence_urls": [
         "https://kansascityymca.org/schedules/"
@@ -913,8 +921,8 @@
       "id": "2026-W47",
       "iso_week": "2026-W47",
       "started_at": "2026-11-16T14:49:23+00:00",
-      "updated_at": "2026-11-16T08:55:59.127244-06:00",
-      "status": "promoted_yield_pending",
+      "updated_at": "2026-11-16T09:08:29.614012-06:00",
+      "status": "completed",
       "base_commit": "7edb1bf",
       "baseline": {
         "routes": 50,
@@ -963,12 +971,273 @@
         "shsmo-tom-sawyer",
         "shsmo-indigenous-identities"
       ],
-      "yield_status": "Individual probes passed; promoted production yield pending",
+      "yield_status": "observed in successful daily Actions; exact live Pages JSON verified",
       "observed_gains": {
-        "new_unique_offerings": 0
+        "new_unique_offerings": 4,
+        "new_records": 4,
+        "exhibits": 3,
+        "program_catalogs": 1,
+        "dated_exhibit_runs": 2,
+        "unknown_exhibit_runs": 1,
+        "sports_seasons": 0,
+        "individual_classes": 0,
+        "new_evergreen_offerings": 0,
+        "source_health": [
+          {
+            "id": "linda-hall-alchemy",
+            "name": "Linda Hall science exhibition",
+            "url": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/",
+            "region": "Kansas City metro",
+            "status": "checked",
+            "format": "reviewed-capture",
+            "captured_count": 1,
+            "checked_at": "2026-11-16T09:02:20.611460-06:00",
+            "events": 1,
+            "requests": 2,
+            "visited_count": 1,
+            "errors": [],
+            "unparsed_count": 0,
+            "unparsed_leads": [],
+            "truncated": false,
+            "latest_published_date": null,
+            "categories": [
+              "arts_exhibits",
+              "science_technology",
+              "history_culture"
+            ],
+            "activity_kinds": [
+              "exhibit"
+            ],
+            "category_counts": {
+              "arts_exhibits": 1,
+              "science_technology": 1,
+              "history_culture": 1
+            },
+            "kind_counts": {
+              "exhibit": 1
+            },
+            "horizon_note": "Requested through 2027-06-16; sources may not yet publish that far ahead."
+          },
+          {
+            "id": "columbia-fall-winter-catalog",
+            "name": "Columbia Parks Fall-Winter 2026 catalog",
+            "url": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/",
+            "region": "Columbia",
+            "status": "checked",
+            "format": "reviewed-capture",
+            "captured_count": 1,
+            "checked_at": "2026-11-16T09:02:20.611460-06:00",
+            "events": 1,
+            "requests": 2,
+            "visited_count": 1,
+            "errors": [],
+            "unparsed_count": 0,
+            "unparsed_leads": [],
+            "truncated": false,
+            "latest_published_date": null,
+            "categories": [
+              "sports_participation",
+              "classes_skills",
+              "fitness_wellness",
+              "adaptive_inclusive",
+              "libraries_learning"
+            ],
+            "activity_kinds": [
+              "program_catalog"
+            ],
+            "category_counts": {
+              "sports_participation": 1,
+              "classes_skills": 1,
+              "fitness_wellness": 1,
+              "adaptive_inclusive": 1,
+              "libraries_learning": 1
+            },
+            "kind_counts": {
+              "program_catalog": 1
+            },
+            "horizon_note": "Requested through 2027-06-16; sources may not yet publish that far ahead."
+          },
+          {
+            "id": "shsmo-tom-sawyer",
+            "name": "State Historical Society of Missouri: Tom Sawyer 150: Thomas Hart Benton Illustrates an American Classic",
+            "url": "https://shsmo.org/exhibitions/tom-sawyer-150-thomas-hart-benton-illustrates-american-classic",
+            "region": "Columbia",
+            "status": "checked",
+            "format": "reviewed-capture",
+            "captured_count": 1,
+            "checked_at": "2026-11-16T09:02:20.611460-06:00",
+            "events": 1,
+            "requests": 2,
+            "visited_count": 1,
+            "errors": [],
+            "unparsed_count": 0,
+            "unparsed_leads": [],
+            "truncated": false,
+            "latest_published_date": null,
+            "categories": [
+              "arts_exhibits",
+              "history_culture",
+              "film_literature"
+            ],
+            "activity_kinds": [
+              "exhibit"
+            ],
+            "category_counts": {
+              "arts_exhibits": 1,
+              "history_culture": 1,
+              "film_literature": 1
+            },
+            "kind_counts": {
+              "exhibit": 1
+            },
+            "horizon_note": "Requested through 2027-06-16; sources may not yet publish that far ahead."
+          },
+          {
+            "id": "shsmo-indigenous-identities",
+            "name": "State Historical Society of Missouri: Indigenous Identities: From State Sanctioned Portraiture to Native Self Representation",
+            "url": "https://shsmo.org/exhibitions/indigenous-identities-state-sanctioned-portraiture-native-self-representation",
+            "region": "Columbia",
+            "status": "checked",
+            "format": "reviewed-capture",
+            "captured_count": 1,
+            "checked_at": "2026-11-16T09:02:20.611460-06:00",
+            "events": 1,
+            "requests": 2,
+            "visited_count": 1,
+            "errors": [],
+            "unparsed_count": 0,
+            "unparsed_leads": [],
+            "truncated": false,
+            "latest_published_date": null,
+            "categories": [
+              "arts_exhibits",
+              "history_culture"
+            ],
+            "activity_kinds": [
+              "exhibit"
+            ],
+            "category_counts": {
+              "arts_exhibits": 1,
+              "history_culture": 1
+            },
+            "kind_counts": {
+              "exhibit": 1
+            },
+            "horizon_note": "Requested through 2027-06-16; sources may not yet publish that far ahead."
+          }
+        ],
+        "coverage_cell_changes": [
+          {
+            "region": "Kansas City metro",
+            "category": "history_culture",
+            "before": "route_only",
+            "after": "collecting",
+            "promoted_collecting_routes": [
+              "linda-hall-alchemy"
+            ],
+            "evidence_level": "normalized activity records"
+          },
+          {
+            "region": "Columbia",
+            "category": "sports_participation",
+            "before": "route_only",
+            "after": "collecting",
+            "promoted_collecting_routes": [
+              "columbia-fall-winter-catalog"
+            ],
+            "evidence_level": "program directory only; no dated activity gain"
+          },
+          {
+            "region": "Columbia",
+            "category": "fitness_wellness",
+            "before": "route_only",
+            "after": "collecting",
+            "promoted_collecting_routes": [
+              "columbia-fall-winter-catalog"
+            ],
+            "evidence_level": "program directory only; no dated activity gain"
+          },
+          {
+            "region": "Columbia",
+            "category": "arts_exhibits",
+            "before": "gap",
+            "after": "collecting",
+            "promoted_collecting_routes": [
+              "shsmo-tom-sawyer",
+              "shsmo-indigenous-identities"
+            ],
+            "evidence_level": "normalized activity records"
+          },
+          {
+            "region": "Columbia",
+            "category": "history_culture",
+            "before": "gap",
+            "after": "collecting",
+            "promoted_collecting_routes": [
+              "shsmo-tom-sawyer",
+              "shsmo-indigenous-identities"
+            ],
+            "evidence_level": "normalized activity records"
+          },
+          {
+            "region": "Columbia",
+            "category": "film_literature",
+            "before": "gap",
+            "after": "collecting",
+            "promoted_collecting_routes": [
+              "shsmo-tom-sawyer"
+            ],
+            "evidence_level": "normalized activity records"
+          },
+          {
+            "region": "Columbia",
+            "category": "classes_skills",
+            "before": "route_only",
+            "after": "collecting",
+            "promoted_collecting_routes": [
+              "columbia-fall-winter-catalog"
+            ],
+            "evidence_level": "program directory only; no dated activity gain"
+          },
+          {
+            "region": "Columbia",
+            "category": "libraries_learning",
+            "before": "gap",
+            "after": "collecting",
+            "promoted_collecting_routes": [
+              "columbia-fall-winter-catalog"
+            ],
+            "evidence_level": "program directory only; no dated activity gain"
+          },
+          {
+            "region": "Columbia",
+            "category": "adaptive_inclusive",
+            "before": "route_only",
+            "after": "collecting",
+            "promoted_collecting_routes": [
+              "columbia-fall-winter-catalog"
+            ],
+            "evidence_level": "program directory only; no dated activity gain"
+          }
+        ],
+        "inventory_before_unique": 1192,
+        "inventory_after_unique": 1176,
+        "inventory_before_records": 3683,
+        "inventory_after_records": 3638,
+        "attribution_note": "Only four promoted canonical offering URLs are credited. Overall inventory changes include other sources and expired records. Program-directory category gains do not prove individual classes or seasons are captured.",
+        "horizon_start_before": "2026-11-15",
+        "horizon_start_after": "2026-11-16",
+        "removed_record_ids": 57,
+        "removed_outside_new_horizon": 56,
+        "added_record_ids": 12
       },
-      "commit_urls": [],
-      "pull_request_urls": [],
+      "commit_urls": [
+        "https://github.com/colesteaks/kc-activity-finder/commit/ddd793ea5fd52aa5853db157c9873e0804de33a1",
+        "https://github.com/colesteaks/kc-activity-finder/commit/b0ea2852c9e8be5e0784d605a7aa06e1520d29d1"
+      ],
+      "pull_request_urls": [
+        "https://github.com/colesteaks/kc-activity-finder/pull/2"
+      ],
       "existing_maintainer_pull_requests_at_start": [
         "https://github.com/colesteaks/kc-activity-finder/pull/1"
       ],
@@ -993,7 +1262,8 @@
         "Linda Hall exhibition has no published run dates. Exhibition-specific second-Saturday hours take precedence over generic footer.",
         "No source age bounds inferred from child/adult/family labels.",
         "Original seed, existing activity identities, public visibility and GitHub Pages hosting preserved.",
-        "Existing Nelson PR #1 left open and unmerged. No parser or workflow changes."
+        "Existing Nelson PR #1 left open and unmerged. No parser or workflow changes.",
+        "Zero new outdoor routes, verified sports seasons or individual classes: Columbia sports/class/adaptive cells gain a program directory only. No domain-count or repeated-date gains claimed."
       ],
       "daily_actions_at_start": {
         "id": 43743384608,
@@ -1133,7 +1403,8 @@
           "id": "crystal-museum",
           "reason": "Hours verified live. Existing regression test requires unknown museum hours; publish verified data together with a fixture-based isolation test in a focused PR, rather than bypassing required checks.",
           "hours_source": "https://crystalbridges.org/visit",
-          "next_review_after": "2026-11-23"
+          "next_review_after": "2026-11-23",
+          "pull_request_url": "https://github.com/colesteaks/kc-activity-finder/pull/2"
         }
       ],
       "verification": {
@@ -1141,12 +1412,103 @@
         "main_python_tests": 100,
         "browser_filter_and_place_scripts": "pass",
         "repo_validation": "pass",
-        "public_data_validation": "pass",
+        "public_data_validation": "pass for both generated commit and exact matching live Pages JSON",
         "diff_check": "pass",
         "source_probes": "four sources, one record each; all validated against public activity schema",
         "existing_registry_entries_changed": 0,
-        "original_seed_sha256": "0a268fbfd2c4098c22795598bd4b11fa81809878f0928e9469945e1d479627d3"
-      }
+        "original_seed_sha256": "0a268fbfd2c4098c22795598bd4b11fa81809878f0928e9469945e1d479627d3",
+        "main_ci_url": "https://github.com/colesteaks/kc-activity-finder/actions/runs/43891500625",
+        "hours_pr_python_tests": 100,
+        "hours_pr_state": "open; no auto-merge",
+        "hours_pr_ci": "success",
+        "hours_pr_ci_urls": [
+          "https://github.com/colesteaks/kc-activity-finder/actions/runs/43891741412",
+          "https://github.com/colesteaks/kc-activity-finder/actions/runs/43891806346"
+        ],
+        "columbia_gallery_hours": "Regular Tuesday access, Monday closure and November 25 partial-day/November 26 full-day holiday closures verified using browser hours engine.",
+        "existing_comparable_identities": 3626,
+        "changed_existing_identities": 0,
+        "generated_data_commit": "b0ea2852c9e8be5e0784d605a7aa06e1520d29d1",
+        "live_pages_data": {
+          "url": "https://colesteaks.github.io/kc-activity-finder/activities.json",
+          "checked_at": "2026-11-16T09:06:28.533963-06:00",
+          "sha256": "cfc5fbcd66a736d4b6a16503f5ec819d0a641010cff9b7b2826ba8154fa3c5b5",
+          "matches_generated_commit": true,
+          "updated_at": "2026-11-16T09:02:20.611460-06:00",
+          "records": 3638,
+          "promoted_source_ids_present": [
+            "columbia-fall-winter-catalog",
+            "linda-hall-alchemy",
+            "shsmo-indigenous-identities",
+            "shsmo-tom-sawyer"
+          ]
+        },
+        "published_filters": "Published exhibit date overlap/end boundaries, unknown-age exclusion, offering detail IDs, and undated program-catalog controls passed using actual live Pages records.",
+        "remote_repository_visibility": "public at start, preserved; no access/hosting changes",
+        "existing_nelson_pr_ci": "success; left open and unmerged"
+      },
+      "daily_actions": {
+        "id": 43891542500,
+        "url": "https://github.com/colesteaks/kc-activity-finder/actions/runs/43891542500",
+        "event": "workflow_dispatch",
+        "refresh": true,
+        "conclusion": "success",
+        "generated_data_commit": "b0ea2852c9e8be5e0784d605a7aa06e1520d29d1",
+        "collection_validation_commit_deploy_steps": "success"
+      },
+      "completed_at": "2026-11-16T09:08:29.614012-06:00",
+      "after_brief_baseline": {
+        "routes": 54,
+        "records": 3638,
+        "unique_offerings": 1176,
+        "coverage_cells": {
+          "collecting": 44,
+          "route_only": 25,
+          "gap": 41
+        },
+        "activity_kinds": {
+          "date_range_unknown": 48,
+          "exhibit": 52,
+          "one_off": 3528,
+          "recurring_program": 4,
+          "program_catalog": 2,
+          "evergreen": 4
+        },
+        "stale_records": 50,
+        "places": 10,
+        "unmapped_offerings": 746,
+        "unreviewed_proposals": 4859
+      },
+      "health_changes": [
+        {
+          "id": "truman",
+          "before": "checked",
+          "after": "partial",
+          "events": 0,
+          "errors": [
+            "Unsupported HTTP content encoding: br"
+          ]
+        }
+      ],
+      "followup_priorities": [
+        {
+          "source_id": "truman",
+          "next_review_after": "2026-11-23",
+          "reason": "Production refresh changed checked\u2192partial: unsupported HTTP content encoding br. Existing records retained as stale. Needs a tested decoder/negotiation repair in a future focused PR; no access bypass or automatic source deletion."
+        },
+        {
+          "source_id": "nelson",
+          "next_review_after": "2026-11-23",
+          "pull_request_url": "https://github.com/colesteaks/kc-activity-finder/pull/1",
+          "reason": "Existing adapter PR remains unmerged; do not open a duplicate."
+        },
+        {
+          "source_id": "crystal-museum",
+          "next_review_after": "2026-11-23",
+          "pull_request_url": "https://github.com/colesteaks/kc-activity-finder/pull/2",
+          "reason": "Verified hours and fixture correction await review; no auto-merge."
+        }
+      ]
     }
   ]
 }
