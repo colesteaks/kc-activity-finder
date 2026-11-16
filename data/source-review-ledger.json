@@ -193,6 +193,180 @@
       "unique_offerings_added": 0,
       "probe_new_unique_offerings": 0,
       "pull_request_url": null
+    },
+    {
+      "url": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/",
+      "status": "accepted",
+      "reviewed_at": "2026-11-16T08:55:59.127244-06:00",
+      "next_review_after": null,
+      "reason": "Verified first-party geography/content. Existing guarded reviewed-capture adapter; unknown clock times/age limits/signup remain unknown. No individual activity dates invented; see run report for coverage limits.",
+      "discovered_on": "https://www.kcdaily.com/p/turning-the-town-teal",
+      "evidence_urls": [
+        "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/"
+      ],
+      "registry_id": "linda-hall-alchemy",
+      "unique_offerings_added": 0,
+      "probe_new_unique_offerings": 1,
+      "pull_request_url": null
+    },
+    {
+      "url": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/",
+      "status": "accepted",
+      "reviewed_at": "2026-11-16T08:55:59.127244-06:00",
+      "next_review_after": null,
+      "reason": "Verified first-party geography/content. Existing guarded reviewed-capture adapter; unknown clock times/age limits/signup remain unknown. No individual activity dates invented; see run report for coverage limits.",
+      "discovered_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/",
+      "evidence_urls": [
+        "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+      ],
+      "registry_id": "columbia-fall-winter-catalog",
+      "unique_offerings_added": 0,
+      "probe_new_unique_offerings": 1,
+      "pull_request_url": null
+    },
+    {
+      "url": "https://shsmo.org/exhibitions/tom-sawyer-150-thomas-hart-benton-illustrates-american-classic",
+      "status": "accepted",
+      "reviewed_at": "2026-11-16T08:55:59.127244-06:00",
+      "next_review_after": null,
+      "reason": "Verified first-party geography/content. Existing guarded reviewed-capture adapter; unknown clock times/age limits/signup remain unknown. Explicit exhibit run dates confirmed on individual detail; hours/holiday exceptions verified independently.",
+      "discovered_on": "https://shsmo.org/exhibitions",
+      "evidence_urls": [
+        "https://shsmo.org/exhibitions/tom-sawyer-150-thomas-hart-benton-illustrates-american-classic",
+        "https://shsmo.org/visit/columbia"
+      ],
+      "registry_id": "shsmo-tom-sawyer",
+      "unique_offerings_added": 0,
+      "probe_new_unique_offerings": 1,
+      "pull_request_url": null
+    },
+    {
+      "url": "https://shsmo.org/exhibitions/indigenous-identities-state-sanctioned-portraiture-native-self-representation",
+      "status": "accepted",
+      "reviewed_at": "2026-11-16T08:55:59.127244-06:00",
+      "next_review_after": null,
+      "reason": "Verified first-party geography/content. Existing guarded reviewed-capture adapter; unknown clock times/age limits/signup remain unknown. Explicit exhibit run dates confirmed on individual detail; hours/holiday exceptions verified independently.",
+      "discovered_on": "https://shsmo.org/exhibitions",
+      "evidence_urls": [
+        "https://shsmo.org/exhibitions/indigenous-identities-state-sanctioned-portraiture-native-self-representation",
+        "https://shsmo.org/visit/columbia"
+      ],
+      "registry_id": "shsmo-indigenous-identities",
+      "unique_offerings_added": 0,
+      "probe_new_unique_offerings": 1,
+      "pull_request_url": null
+    },
+    {
+      "url": "https://app.giveffect.com/campaigns/45568-troost-united-fest-volunteer",
+      "status": "rejected",
+      "reviewed_at": "2026-11-16T08:55:59.127244-06:00",
+      "next_review_after": null,
+      "reason": "Organizer-linked provider verified Reconciliation Services, Kansas City, November 7, 2026 7 a.m.\u20135 p.m. Event has ended; no future volunteer opportunity or next edition verified. Do not republish expired shifts.",
+      "discovered_on": "https://www.rs3101.org/troostunitedfest",
+      "evidence_urls": [
+        "https://app.giveffect.com/campaigns/45568-troost-united-fest-volunteer"
+      ],
+      "registry_id": null,
+      "unique_offerings_added": 0,
+      "pull_request_url": null
+    },
+    {
+      "url": "https://ca.sports.yahoo.com/news/mahomes-chiefs-starters-play-preseason-181641827.html",
+      "status": "rejected",
+      "reviewed_at": "2026-11-16T08:55:59.127244-06:00",
+      "next_review_after": null,
+      "reason": "Queue triage only, not visited. Historical preseason news, not an official reusable activity or participation schedule. No page facts claimed.",
+      "discovered_on": "https://www.kcdaily.com/p/red-thursday",
+      "evidence_urls": [
+        "https://ca.sports.yahoo.com/news/mahomes-chiefs-starters-play-preseason-181641827.html"
+      ],
+      "registry_id": null,
+      "unique_offerings_added": 0,
+      "pull_request_url": null
+    },
+    {
+      "url": "https://img.mlbstatic.com/milb-images/image/upload/milb/gqcjalxbul3eht532ofa.pdf",
+      "status": "deferred",
+      "reviewed_at": "2026-11-16T08:55:59.127244-06:00",
+      "next_review_after": "2026-11-23",
+      "reason": "Queue triage only, not visited: organizer-linked 2027 schedule PDF is promising. PDF extraction, home/away geography and actual run dates need a dedicated bounded review; no yield claimed.",
+      "discovered_on": "https://www.milb.com/northwest-arkansas/schedule/downloadable-schedule",
+      "evidence_urls": [
+        "https://img.mlbstatic.com/milb-images/image/upload/milb/gqcjalxbul3eht532ofa.pdf"
+      ],
+      "registry_id": null,
+      "unique_offerings_added": 0,
+      "pull_request_url": null
+    },
+    {
+      "url": "https://www.lenexa.com/government/departments___divisions/parks___recreation/outdoor_recreation/parks/sar-_ko-_par_trails_park",
+      "status": "deferred",
+      "reviewed_at": "2026-11-16T08:55:59.127244-06:00",
+      "next_review_after": "2026-11-23",
+      "reason": "Direct robots-aware fetch returned HTTP 404; search connector served a 2.6-year-old copy. Need current official canonical park page, hours and seasonal amenity restrictions; no stale promotion.",
+      "discovered_on": "https://www.kcdaily.com/p/kansas-citys-top-small-businesses",
+      "evidence_urls": [
+        "https://www.lenexa.com/government/departments___divisions/parks___recreation/outdoor_recreation/parks/sar-_ko-_par_trails_park"
+      ],
+      "registry_id": null,
+      "unique_offerings_added": 0,
+      "pull_request_url": null
+    },
+    {
+      "url": "https://bentonvillelibrary.libnet.info/event/15665697",
+      "status": "deferred",
+      "reviewed_at": "2026-11-16T08:55:59.127244-06:00",
+      "next_review_after": "2026-11-23",
+      "reason": "Search suggested November 18 adult makerspace workshop; direct provider fetch returned HTTP 403. No bypass and no publication from cached search text.",
+      "discovered_on": "https://bentonvillelibrary.libnet.info/event/15665697",
+      "evidence_urls": [
+        "https://bentonvillelibrary.libnet.info/event/15665697"
+      ],
+      "registry_id": null,
+      "unique_offerings_added": 0,
+      "pull_request_url": null
+    },
+    {
+      "url": "https://www.ravenbookstore.com/events",
+      "status": "deferred",
+      "reviewed_at": "2026-11-16T08:55:59.127244-06:00",
+      "next_review_after": "2026-11-23",
+      "reason": "Targeted Lawrence film/literature lead; repository fetcher rejected cross-host redirect requiring review. Redirect was not treated as an empty calendar. Verify current official host and organizer relationship before extraction.",
+      "discovered_on": "https://www.ravenbookstore.com/events",
+      "evidence_urls": [
+        "https://www.ravenbookstore.com/events"
+      ],
+      "registry_id": null,
+      "unique_offerings_added": 0,
+      "pull_request_url": null
+    },
+    {
+      "url": "https://kansascityymca.org/schedules/",
+      "status": "adapter_needed",
+      "reviewed_at": "2026-11-16T08:55:59.127244-06:00",
+      "next_review_after": "2026-11-23",
+      "reason": "Verified provider schedule and adult, youth/family, aquatics and adaptive-related categories. Large embedded schedule includes virtual/offsite entries and relative dates: needs explicit-date/location/access parser fixtures. No sessions promoted, no new PR duplicates existing Nelson work.",
+      "discovered_on": "https://kansascityymca.org/schedules/",
+      "evidence_urls": [
+        "https://kansascityymca.org/schedules/"
+      ],
+      "registry_id": null,
+      "unique_offerings_added": 0,
+      "pull_request_url": null
+    },
+    {
+      "url": "https://www.kcwineco.com/plan-a-visit/classes",
+      "status": "adapter_needed",
+      "reviewed_at": "2026-11-16T08:55:59.127244-06:00",
+      "next_review_after": "2026-11-23",
+      "reason": "Official creative workshop index includes November 2026\u2013February 2027 offerings and some explicit 21+ restrictions. Existing Squarespace extraction against observed HTML returned zero. Detail times, host geography and linked ticket status need a focused tested adapter; no unverified adult/family claims or promotion.",
+      "discovered_on": "https://www.kcwineco.com/plan-a-visit/classes",
+      "evidence_urls": [
+        "https://www.kcwineco.com/plan-a-visit/classes"
+      ],
+      "registry_id": null,
+      "unique_offerings_added": 0,
+      "pull_request_url": null
     }
   ],
   "runs": [
@@ -733,6 +907,245 @@
         "places": 9,
         "unmapped_offerings": 778,
         "unreviewed_proposals": 4440
+      }
+    },
+    {
+      "id": "2026-W47",
+      "iso_week": "2026-W47",
+      "started_at": "2026-11-16T14:49:23+00:00",
+      "updated_at": "2026-11-16T08:55:59.127244-06:00",
+      "status": "promoted_yield_pending",
+      "base_commit": "7edb1bf",
+      "baseline": {
+        "routes": 50,
+        "records": 3683,
+        "unique_offerings": 1192,
+        "coverage_cells": {
+          "collecting": 35,
+          "route_only": 30,
+          "gap": 45
+        },
+        "activity_kinds": {
+          "date_range_unknown": 48,
+          "exhibit": 49,
+          "one_off": 3577,
+          "recurring_program": 4,
+          "evergreen": 4,
+          "program_catalog": 1
+        },
+        "stale_records": 31,
+        "places": 9,
+        "unmapped_offerings": 750,
+        "unreviewed_proposals": 4783
+      },
+      "budgets": {
+        "candidate_links": 12,
+        "gap_searches": 6,
+        "page_visits": 24,
+        "link_depth": 2,
+        "links_per_host": 2,
+        "sources_to_promote": 5,
+        "adapter_pull_requests": 1,
+        "target_minutes": 30
+      },
+      "usage": {
+        "candidate_links": 12,
+        "gap_searches": 6,
+        "page_visits": 24,
+        "maximum_link_depth": 2,
+        "source_promotions": 4,
+        "adapter_pull_requests": 0,
+        "maintenance_pull_requests": 1
+      },
+      "accepted_source_ids": [
+        "linda-hall-alchemy",
+        "columbia-fall-winter-catalog",
+        "shsmo-tom-sawyer",
+        "shsmo-indigenous-identities"
+      ],
+      "yield_status": "Individual probes passed; promoted production yield pending",
+      "observed_gains": {
+        "new_unique_offerings": 0
+      },
+      "commit_urls": [],
+      "pull_request_urls": [],
+      "existing_maintainer_pull_requests_at_start": [
+        "https://github.com/colesteaks/kc-activity-finder/pull/1"
+      ],
+      "recall": {
+        "status": "deferred",
+        "next_review_after": "2026-11-19",
+        "reason": "Direct live fetch resolves KC Daily to November 13\u201315, published November 12; independent roundup already November 20\u201322. Current Monday inventory starts November 16. No matching two-current-edition benchmark can be truthfully built; web-search connector returned stale copies of both pages. Historical benchmark remains expired, not evidence of improved recall.",
+        "sensors": [
+          "https://www.kcdaily.com/p/weekend-roundup",
+          "https://www.explorekctogether.com/this-weekend"
+        ]
+      },
+      "place_changes": [
+        {
+          "id": "shsmo-columbia-gallery",
+          "change": "Added art-gallery hours and exact holiday/partial-day closures, separate from research center/bookstore; coordinates unknown."
+        }
+      ],
+      "coverage_limitations": [
+        "No claim of complete category or regional coverage.",
+        "Columbia catalog is one undated offering, not captured leagues, classes or open registrations. Its inconsistent holiday entries were not copied into activity dates.",
+        "Linda Hall exhibition has no published run dates. Exhibition-specific second-Saturday hours take precedence over generic footer.",
+        "No source age bounds inferred from child/adult/family labels.",
+        "Original seed, existing activity identities, public visibility and GitHub Pages hosting preserved.",
+        "Existing Nelson PR #1 left open and unmerged. No parser or workflow changes."
+      ],
+      "daily_actions_at_start": {
+        "id": 43743384608,
+        "conclusion": "success",
+        "url": "https://github.com/colesteaks/kc-activity-finder/actions/runs/43743384608"
+      },
+      "review_counts": {
+        "accepted": 4,
+        "rejected": 2,
+        "deferred": 4,
+        "adapter_needed": 2
+      },
+      "searches": [
+        "Columbia Missouri youth adult adaptive leagues seasons teams tournaments official programs calendar registration",
+        "Bentonville classes workshops cooking crafts language lessons official programs calendar registration",
+        "Kansas City surrounding areas classes workshops cooking crafts official programs calendar registration",
+        "Kansas City metro fitness yoga swimming martial arts wellness official programs calendar registration",
+        "Lawrence cinema film festivals author readings book clubs official programs calendar registration",
+        "Columbia Missouri temporary exhibitions galleries public art official programs calendar registration"
+      ],
+      "research_visits": [
+        {
+          "url": "https://www.kcdaily.com/p/weekend-roundup",
+          "purpose": "web connector source inspection; cached content rechecked with direct fetch when relevant"
+        },
+        {
+          "url": "https://www.explorekctogether.com/this-weekend",
+          "purpose": "web connector source inspection; cached content rechecked with direct fetch when relevant"
+        },
+        {
+          "url": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition",
+          "purpose": "web connector source inspection; cached content rechecked with direct fetch when relevant"
+        },
+        {
+          "url": "https://www.lenexa.com/government/departments___divisions/parks___recreation/outdoor_recreation/parks/sar-_ko-_par_trails_park",
+          "purpose": "web connector source inspection; cached content rechecked with direct fetch when relevant"
+        },
+        {
+          "key": "alchemy",
+          "url": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/"
+        },
+        {
+          "key": "lenexa",
+          "url": "https://www.lenexa.com/government/departments___divisions/parks___recreation/outdoor_recreation/parks/sar-_ko-_par_trails_park",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "key": "columbia",
+          "url": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+        },
+        {
+          "key": "exhibitions",
+          "url": "https://shsmo.org/exhibitions"
+        },
+        {
+          "key": "newsletter",
+          "url": "https://www.kcdaily.com/archive"
+        },
+        {
+          "key": "crystal-hours",
+          "url": "https://crystalbridges.org/visit"
+        },
+        {
+          "key": "roundup",
+          "url": "https://www.kcdaily.com/p/weekend-roundup"
+        },
+        {
+          "key": "independent",
+          "url": "https://www.explorekctogether.com/this-weekend"
+        },
+        {
+          "key": "tom-sawyer",
+          "url": "https://shsmo.org/exhibitions/tom-sawyer-150-thomas-hart-benton-illustrates-american-classic"
+        },
+        {
+          "key": "indigenous",
+          "url": "https://shsmo.org/exhibitions/indigenous-identities-state-sanctioned-portraiture-native-self-representation"
+        },
+        {
+          "key": "bpl-class",
+          "url": "https://bentonvillelibrary.libnet.info/event/15665697",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "key": "raven",
+          "url": "https://www.ravenbookstore.com/events",
+          "error": "Cross-host redirect requires source registry review"
+        },
+        {
+          "key": "ymca",
+          "url": "https://kansascityymca.org/schedules/"
+        },
+        {
+          "key": "wine-classes",
+          "url": "https://www.kcwineco.com/plan-a-visit/classes"
+        },
+        {
+          "key": "shsmo-hours",
+          "url": "https://shsmo.org/visit/columbia"
+        },
+        {
+          "key": "giveffect",
+          "url": "https://app.giveffect.com/campaigns/45568-troost-united-fest-volunteer"
+        },
+        {
+          "url": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/",
+          "purpose": "individual existing-adapter live probe",
+          "visited_count": 1
+        },
+        {
+          "url": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/",
+          "purpose": "individual existing-adapter live probe",
+          "visited_count": 1
+        },
+        {
+          "url": "https://shsmo.org/exhibitions/tom-sawyer-150-thomas-hart-benton-illustrates-american-classic",
+          "purpose": "individual existing-adapter live probe",
+          "visited_count": 1
+        },
+        {
+          "url": "https://shsmo.org/exhibitions/indigenous-identities-state-sanctioned-portraiture-native-self-representation",
+          "purpose": "individual existing-adapter live probe",
+          "visited_count": 1
+        }
+      ],
+      "budget_accounting": "20 discovery visits, including stale connector reads, denied routes and direct rechecks, plus four individual live source probes = 24. Robots checks, GitHub/CI, verification and one full production Actions refresh are separate. Six targeted queries, twelve reviewed candidates, depth at most two.",
+      "probe_result": {
+        "new_unique_offerings": 4,
+        "normalized_records": 4,
+        "exhibits": 3,
+        "program_catalogs": 1,
+        "validated": true,
+        "note": "Explicit run dates for two exhibits; no invented daily occurrences or clock timestamps. Linda Hall run dates unknown. Catalog is one undated directory, not individual classes or an open season."
+      },
+      "place_maintenance_deferred": [
+        {
+          "id": "crystal-museum",
+          "reason": "Hours verified live. Existing regression test requires unknown museum hours; publish verified data together with a fixture-based isolation test in a focused PR, rather than bypassing required checks.",
+          "hours_source": "https://crystalbridges.org/visit",
+          "next_review_after": "2026-11-23"
+        }
+      ],
+      "verification": {
+        "initial_test_run": "99 passed, 1 failed: hardcoded unknown-hours assertion; museum-hours change separated into focused PR.",
+        "main_python_tests": 100,
+        "browser_filter_and_place_scripts": "pass",
+        "repo_validation": "pass",
+        "public_data_validation": "pass",
+        "diff_check": "pass",
+        "source_probes": "four sources, one record each; all validated against public activity schema",
+        "existing_registry_entries_changed": 0,
+        "original_seed_sha256": "0a268fbfd2c4098c22795598bd4b11fa81809878f0928e9469945e1d479627d3"
       }
     }
   ]

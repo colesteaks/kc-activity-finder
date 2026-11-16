@@ -1782,6 +1782,219 @@
           }
         }
       ]
+    },
+    {
+      "id": "linda-hall-alchemy",
+      "name": "Linda Hall science exhibition",
+      "url": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/",
+      "region": "Kansas City metro",
+      "city": "Kansas City",
+      "kind": "organizer",
+      "format": "reviewed-capture",
+      "pattern": "/",
+      "max_details": 0,
+      "categories": [
+        "arts_exhibits",
+        "science_technology",
+        "history_culture"
+      ],
+      "activity_kinds": [
+        "exhibit"
+      ],
+      "reviewed_at": "2026-11-16",
+      "required_leaves": [
+        "actual participation or exhibit run dates",
+        "registration separate from participation",
+        "facility hours and seasonal closures",
+        "explicit age evidence"
+      ],
+      "required_text": [
+        "NOW OPEN",
+        "Galleries are open Monday-Friday, 10 AM-5 PM and second Saturdays 10 AM-2 PM.",
+        "Alchemy of Knowledge"
+      ],
+      "captures": [
+        {
+          "name": "Alchemy of Knowledge: Renaissance science exhibition",
+          "description": "Rare science books, interactive elements and a suspended dragon sculpture. Run dates, numerical ages and admission price are not published on this page.",
+          "_schedule": {
+            "kind": "exhibit",
+            "start_date": null,
+            "end_date": null,
+            "operating_hours": "Exhibition-specific hours: Monday\u2013Friday 10 a.m.\u20135 p.m.; second Saturdays 10 a.m.\u20132 p.m. General footer says Saturdays without qualification; use the exhibition-specific statement.",
+            "note": "Exhibit run dates are not daily sessions. Confirm facility hours and closure exceptions."
+          }
+        }
+      ],
+      "discovery_evidence": [
+        {
+          "url": "https://www.kcdaily.com/p/turning-the-town-teal",
+          "relationship": "Targeted gap search or preserved newsletter proposal; official page individually verified"
+        }
+      ]
+    },
+    {
+      "id": "columbia-fall-winter-catalog",
+      "name": "Columbia Parks Fall-Winter 2026 catalog",
+      "url": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/",
+      "region": "Columbia",
+      "city": "Columbia",
+      "kind": "organizer",
+      "format": "reviewed-capture",
+      "pattern": "/",
+      "max_details": 0,
+      "categories": [
+        "sports_participation",
+        "classes_skills",
+        "fitness_wellness",
+        "adaptive_inclusive",
+        "libraries_learning"
+      ],
+      "activity_kinds": [
+        "program_catalog"
+      ],
+      "reviewed_at": "2026-11-16",
+      "required_leaves": [
+        "actual participation or exhibit run dates",
+        "registration separate from participation",
+        "facility hours and seasonal closures",
+        "explicit age evidence"
+      ],
+      "required_text": [
+        "Leisure Times: Fall-Winter 2026",
+        "Registration Opens Aug. 12, 2026",
+        "Activities for Preschoolers",
+        "Adult Volleyball",
+        "Armory Sports and Recreation Center will be closed from mid-October through December"
+      ],
+      "captures": [
+        {
+          "name": "Columbia Parks fall/winter programs: sports, classes and adaptive recreation",
+          "description": "Official catalog for preschool, youth, adult and adaptive recreation. Armory closed mid-October\u2013December. Some holiday date/day entries conflict; verify individual activity dates and registration directly.",
+          "_schedule": {
+            "kind": "program_catalog",
+            "start_date": null,
+            "end_date": null,
+            "operating_hours": null,
+            "note": "Catalog of opportunities; no individual participation dates, signup availability or commitment is implied."
+          }
+        }
+      ],
+      "discovery_evidence": [
+        {
+          "url": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/",
+          "relationship": "Targeted gap search or preserved newsletter proposal; official page individually verified"
+        }
+      ]
+    },
+    {
+      "id": "shsmo-tom-sawyer",
+      "name": "State Historical Society of Missouri: Tom Sawyer 150: Thomas Hart Benton Illustrates an American Classic",
+      "url": "https://shsmo.org/exhibitions/tom-sawyer-150-thomas-hart-benton-illustrates-american-classic",
+      "region": "Columbia",
+      "city": "Columbia",
+      "kind": "organizer",
+      "format": "reviewed-capture",
+      "pattern": "/",
+      "max_details": 0,
+      "categories": [
+        "arts_exhibits",
+        "history_culture",
+        "film_literature"
+      ],
+      "activity_kinds": [
+        "exhibit"
+      ],
+      "reviewed_at": "2026-11-16",
+      "required_leaves": [
+        "actual participation or exhibit run dates",
+        "registration separate from participation",
+        "facility hours and seasonal closures",
+        "explicit age evidence"
+      ],
+      "required_text": [
+        "Tom Sawyer 150: Thomas Hart Benton Illustrates an American Classic",
+        "Oct 6, 2026 \u2013 Apr 10, 2027",
+        "605 Elm St."
+      ],
+      "captures": [
+        {
+          "name": "Tom Sawyer 150: Thomas Hart Benton Illustrates an American Classic",
+          "description": "Exhibition at 605 Elm Street, Columbia. Gallery visiting hours and holiday closures differ from research-center hours; see the attached place information. No numerical age guidance supplied.",
+          "_schedule": {
+            "kind": "exhibit",
+            "start_date": "2026-10-06",
+            "end_date": "2027-04-10",
+            "operating_hours": null,
+            "note": "Exhibit run dates are not daily sessions. Confirm facility hours and closure exceptions."
+          },
+          "location": {
+            "name": "William Guitar Little Missouri Gallery of Art"
+          },
+          "offers": {
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        }
+      ],
+      "discovery_evidence": [
+        {
+          "url": "https://shsmo.org/exhibitions",
+          "relationship": "Reviewed first-party detail linked from exhibition index"
+        }
+      ]
+    },
+    {
+      "id": "shsmo-indigenous-identities",
+      "name": "State Historical Society of Missouri: Indigenous Identities: From State Sanctioned Portraiture to Native Self Representation",
+      "url": "https://shsmo.org/exhibitions/indigenous-identities-state-sanctioned-portraiture-native-self-representation",
+      "region": "Columbia",
+      "city": "Columbia",
+      "kind": "organizer",
+      "format": "reviewed-capture",
+      "pattern": "/",
+      "max_details": 0,
+      "categories": [
+        "arts_exhibits",
+        "history_culture"
+      ],
+      "activity_kinds": [
+        "exhibit"
+      ],
+      "reviewed_at": "2026-11-16",
+      "required_leaves": [
+        "actual participation or exhibit run dates",
+        "registration separate from participation",
+        "facility hours and seasonal closures",
+        "explicit age evidence"
+      ],
+      "required_text": [
+        "Indigenous Identities: From State Sanctioned Portraiture to Native Self Representation",
+        "Sep 12, 2026 \u2013 Feb 20, 2027",
+        "605 Elm St."
+      ],
+      "captures": [
+        {
+          "name": "Indigenous Identities: From State Sanctioned Portraiture to Native Self Representation",
+          "description": "Exhibition at 605 Elm Street, Columbia. Gallery visiting hours and holiday closures differ from research-center hours; see the attached place information. No numerical age guidance supplied.",
+          "_schedule": {
+            "kind": "exhibit",
+            "start_date": "2026-09-12",
+            "end_date": "2027-02-20",
+            "operating_hours": null,
+            "note": "Exhibit run dates are not daily sessions. Confirm facility hours and closure exceptions."
+          },
+          "location": {
+            "name": "William Guitar Little Missouri Gallery of Art"
+          }
+        }
+      ],
+      "discovery_evidence": [
+        {
+          "url": "https://shsmo.org/exhibitions",
+          "relationship": "Reviewed first-party detail linked from exhibition index"
+        }
+      ]
     }
   ]
 }
