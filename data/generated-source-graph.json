@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-15T11:51:21.981935-06:00",
+  "generated_at": "2026-11-16T09:00:28.945240-06:00",
   "seed_sha256": "0a268fbfd2c4098c22795598bd4b11fa81809878f0928e9469945e1d479627d3",
   "authority": "data/source-graph.json",
   "approved_registry": "data/collection-sources.json",
@@ -1355,6 +1355,127 @@
       ],
       "provenance": "reviewed-supplement",
       "place_ids": []
+    },
+    {
+      "id": "linda-hall-alchemy",
+      "label": "Linda Hall science exhibition",
+      "url": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/",
+      "role": "organizer",
+      "region": "Kansas City metro",
+      "categories": [
+        "arts_exhibits",
+        "science_technology",
+        "history_culture"
+      ],
+      "activity_kinds": [
+        "exhibit"
+      ],
+      "required_leaves": [
+        "actual participation or exhibit run dates",
+        "registration separate from participation",
+        "facility hours and seasonal closures",
+        "explicit age evidence"
+      ],
+      "discovery_evidence": [
+        {
+          "url": "https://www.kcdaily.com/p/turning-the-town-teal",
+          "relationship": "Targeted gap search or preserved newsletter proposal; official page individually verified"
+        }
+      ],
+      "provenance": "reviewed-supplement",
+      "place_ids": []
+    },
+    {
+      "id": "columbia-fall-winter-catalog",
+      "label": "Columbia Parks Fall-Winter 2026 catalog",
+      "url": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/",
+      "role": "organizer",
+      "region": "Columbia",
+      "categories": [
+        "sports_participation",
+        "classes_skills",
+        "fitness_wellness",
+        "adaptive_inclusive",
+        "libraries_learning"
+      ],
+      "activity_kinds": [
+        "program_catalog"
+      ],
+      "required_leaves": [
+        "actual participation or exhibit run dates",
+        "registration separate from participation",
+        "facility hours and seasonal closures",
+        "explicit age evidence"
+      ],
+      "discovery_evidence": [
+        {
+          "url": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/",
+          "relationship": "Targeted gap search or preserved newsletter proposal; official page individually verified"
+        }
+      ],
+      "provenance": "reviewed-supplement",
+      "place_ids": []
+    },
+    {
+      "id": "shsmo-tom-sawyer",
+      "label": "State Historical Society of Missouri: Tom Sawyer 150: Thomas Hart Benton Illustrates an American Classic",
+      "url": "https://shsmo.org/exhibitions/tom-sawyer-150-thomas-hart-benton-illustrates-american-classic",
+      "role": "organizer",
+      "region": "Columbia",
+      "categories": [
+        "arts_exhibits",
+        "history_culture",
+        "film_literature"
+      ],
+      "activity_kinds": [
+        "exhibit"
+      ],
+      "required_leaves": [
+        "actual participation or exhibit run dates",
+        "registration separate from participation",
+        "facility hours and seasonal closures",
+        "explicit age evidence"
+      ],
+      "discovery_evidence": [
+        {
+          "url": "https://shsmo.org/exhibitions",
+          "relationship": "Reviewed first-party detail linked from exhibition index"
+        }
+      ],
+      "provenance": "reviewed-supplement",
+      "place_ids": [
+        "shsmo-columbia-gallery"
+      ]
+    },
+    {
+      "id": "shsmo-indigenous-identities",
+      "label": "State Historical Society of Missouri: Indigenous Identities: From State Sanctioned Portraiture to Native Self Representation",
+      "url": "https://shsmo.org/exhibitions/indigenous-identities-state-sanctioned-portraiture-native-self-representation",
+      "role": "organizer",
+      "region": "Columbia",
+      "categories": [
+        "arts_exhibits",
+        "history_culture"
+      ],
+      "activity_kinds": [
+        "exhibit"
+      ],
+      "required_leaves": [
+        "actual participation or exhibit run dates",
+        "registration separate from participation",
+        "facility hours and seasonal closures",
+        "explicit age evidence"
+      ],
+      "discovery_evidence": [
+        {
+          "url": "https://shsmo.org/exhibitions",
+          "relationship": "Reviewed first-party detail linked from exhibition index"
+        }
+      ],
+      "provenance": "reviewed-supplement",
+      "place_ids": [
+        "shsmo-columbia-gallery"
+      ]
     }
   ],
   "edges": [
@@ -1373,12 +1494,6 @@
     {
       "from": "kc-daily",
       "to_url": "https://www.kcdaily.com/p/in-flight-coffee",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.kcdaily.com/p/thank-a-veteran-b611",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.kcdaily.com/"
     },
@@ -1456,9 +1571,171 @@
     },
     {
       "from": "kc-daily",
-      "to_url": "https://www.kcdaily.com/p/kc-s-best-sandwich",
+      "to_url": "https://www.instagram.com/hydrangeahousekc",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/hydrangea-house-finds-a-home"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.google.com/maps/search/22+W+63rd+St,+Kansas+City,+MO+64113",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/hydrangea-house-finds-a-home"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://startlandnews.com/2026/11/hydrangea-house-brookside",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/hydrangea-house-finds-a-home"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.restoathletic.com",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/hydrangea-house-finds-a-home"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.restoathletic.com/about",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/hydrangea-house-finds-a-home"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.restoathletic.com/blog/resto-athletic-headquarters-rs-impact-exchange",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/hydrangea-house-finds-a-home"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://kansascitymag.com/akoya-omakase-named-one-of-americas-best-new-restaurants-by-eater",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/hydrangea-house-finds-a-home"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.google.com/maps/search/106+W+12th+St,+Kansas+City,+MO+64105",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/hydrangea-house-finds-a-home"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.eater.com/dining-out/993544/best-new-restaurants-america-2026",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/hydrangea-house-finds-a-home"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.exploretock.com/akoya-omakse-kansas-city",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/hydrangea-house-finds-a-home"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.instagram.com/p/Dfs1OM3yKp6",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/hydrangea-house-finds-a-home"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.locallimetaco.com/leawood-ks",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/hydrangea-house-finds-a-home"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.espn.com/video/clip/_/id/50494687/haley-hopkins-late-winner-sends-kc-current-nwsl-championship",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/hydrangea-house-finds-a-home"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://dailycoffeenews.com/2026/11/12/fairwave-opens-modular-coffee-lab-in-kansas-city",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/hydrangea-house-finds-a-home"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://fox4kc.com/news/country-club-plaza-redevelopment-plan",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/hydrangea-house-finds-a-home"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.instagram.com/qamarialeawood",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/hydrangea-house-finds-a-home"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.facebook.com/PTs.Coffee",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/hydrangea-house-finds-a-home"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.instagram.com/kansascitydaily",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/hydrangea-house-finds-a-home"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.kcdaily.com/guides",
       "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/archive?page=2"
+      "observed_on": "https://www.kcdaily.com/p/hydrangea-house-finds-a-home"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://kcdaily.dnnr.io",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/hydrangea-house-finds-a-home"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.restoathletic.com?utm_source=kcdaily&utm_medium=paid_newsletter&utm_campaign=kcdaily_sponsored_nov11162026&utm_content=home",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/hydrangea-house-finds-a-home"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.restoathletic.com/about?utm_source=kcdaily&utm_medium=paid_newsletter&utm_campaign=kcdaily_sponsored_nov11162026&utm_content=about",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/hydrangea-house-finds-a-home"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.restoathletic.com/blog/resto-athletic-headquarters-rs-impact-exchange?utm_source=kcdaily&utm_medium=paid_newsletter&utm_campaign=kcdaily_sponsored_nov11162026&utm_content=hqblog",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/hydrangea-house-finds-a-home"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.restoathletic.com?utm_source=kcdaily&utm_medium=paid_newsletter&utm_campaign=kcdaily_sponsored_nov11162026&utm_content=studiohome",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/hydrangea-house-finds-a-home"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.restoathletic.com?utm_source=kcdaily&utm_medium=paid_newsletter&utm_campaign=kcdaily_sponsored_nov11162026&utm_content=studiohome",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/hydrangea-house-finds-a-home"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://fox4kc.com/news/country-club-plaza-redevelopment-plan",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/hydrangea-house-finds-a-home"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://kcdaily.dnnr.io",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/hydrangea-house-finds-a-home"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/hydrangea-house-finds-a-home"
     },
     {
       "from": "kc-daily",
@@ -4317,90 +4594,6 @@
       "observed_on": "https://www.kcdaily.com/p/ghouls-just-wanna-have-fudge"
     },
     {
-      "from": "kc-daily",
-      "to_url": "https://www.lafettadeli.com",
-      "relationship": "unreviewed-newsletter-link",
-      "observed_on": "https://www.kcdaily.com/p/kc-s-best-sandwich"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://maps.app.goo.gl/EdA7VBsDUaQ2n78X7",
-      "relationship": "unreviewed-newsletter-link",
-      "observed_on": "https://www.kcdaily.com/p/kc-s-best-sandwich"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.farmtomarketbread.com",
-      "relationship": "unreviewed-newsletter-link",
-      "observed_on": "https://www.kcdaily.com/p/kc-s-best-sandwich"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.jriegerco.com/our-spirits/monogram-whiskey",
-      "relationship": "unreviewed-newsletter-link",
-      "observed_on": "https://www.kcdaily.com/p/kc-s-best-sandwich"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.jriegerco.com/our-spirits/rieger-whiskeys/kansas-city-whiskey",
-      "relationship": "unreviewed-newsletter-link",
-      "observed_on": "https://www.kcdaily.com/p/kc-s-best-sandwich"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.facebook.com/profile.php?id=61588310670624",
-      "relationship": "unreviewed-newsletter-link",
-      "observed_on": "https://www.kcdaily.com/p/kc-s-best-sandwich"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.instagram.com/p/DezP6GFICXY?cplk=YjZycnZrb2k1bmdp",
-      "relationship": "unreviewed-newsletter-link",
-      "observed_on": "https://www.kcdaily.com/p/kc-s-best-sandwich"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://hmcole.com/kansas-city-ks-schedule",
-      "relationship": "unreviewed-newsletter-link",
-      "observed_on": "https://www.kcdaily.com/p/kc-s-best-sandwich"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.kansascity.com/news/business/openings-closings/article317736101.html",
-      "relationship": "unreviewed-newsletter-link",
-      "observed_on": "https://www.kcdaily.com/p/kc-s-best-sandwich"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.instagram.com/kansascitydaily",
-      "relationship": "unreviewed-newsletter-link",
-      "observed_on": "https://www.kcdaily.com/p/kc-s-best-sandwich"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.kcdaily.com/guides",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/kc-s-best-sandwich"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://kcdaily.dnnr.io",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/kc-s-best-sandwich"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://kcdaily.dnnr.io",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/kc-s-best-sandwich"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/kc-s-best-sandwich"
-    },
-    {
       "from": "lawrence-arts",
       "to_url": "https://lawrenceartscenter.org/events-at-lawrence-arts-center",
       "relationship": "unreviewed-outbound-link",
@@ -5038,12 +5231,6 @@
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/birthday-p-art-y",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
-    },
-    {
-      "from": "crystal-bridges",
       "to_url": "https://crystalbridges.org/events/2025-drop-in-tour-architecture",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
@@ -5081,12 +5268,6 @@
     {
       "from": "crystal-bridges",
       "to_url": "https://crystalbridges.org/events/keith-haring-in-3d",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
-    },
-    {
-      "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/special-exhibition-tour-grandma-moses-a-good-days-work",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
@@ -5152,6 +5333,12 @@
     },
     {
       "from": "crystal-bridges",
+      "to_url": "https://crystalbridges.org/events/special-exhibition-tour-grandma-moses-a-good-days-work",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
+    },
+    {
+      "from": "crystal-bridges",
       "to_url": "https://crystalbridges.org/events/2025-drop-in-tour-architecture",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
@@ -5200,12 +5387,6 @@
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/special-exhibition-tour-grandma-moses-a-good-days-work",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
-    },
-    {
-      "from": "crystal-bridges",
       "to_url": "https://crystalbridges.org/events/many-ways-of-seeing-the-alfred-stieglitz-collection",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
@@ -5243,6 +5424,12 @@
     {
       "from": "crystal-bridges",
       "to_url": "https://crystalbridges.org/events/sound-bath-experience-the-quiet-root",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
+    },
+    {
+      "from": "crystal-bridges",
+      "to_url": "https://crystalbridges.org/events/special-exhibition-tour-grandma-moses-a-good-days-work",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
@@ -5362,55 +5549,55 @@
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/frank-lloyd-wright-tours-self-guided?visitStart=2026-11-15&visitEnd=2026-11-21&selectedDate=2026-11-15",
+      "to_url": "https://crystalbridges.org/events/frank-lloyd-wright-tours-self-guided?visitStart=2026-11-16&visitEnd=2026-11-22&selectedDate=2026-11-16",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/frank-lloyd-wright-tours-guided?visitStart=2026-11-15&visitEnd=2026-11-21&selectedDate=2026-11-15",
+      "to_url": "https://crystalbridges.org/events/frank-lloyd-wright-tours-guided?visitStart=2026-11-16&visitEnd=2026-11-22&selectedDate=2026-11-16",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/grandma-moses-a-good-days-work?visitStart=2026-11-15&visitEnd=2026-11-21&selectedDate=2026-11-15",
+      "to_url": "https://crystalbridges.org/events/grandma-moses-a-good-days-work?visitStart=2026-11-16&visitEnd=2026-11-22&selectedDate=2026-11-16",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/keith-haring-in-3d?visitStart=2026-11-15&visitEnd=2026-11-21&selectedDate=2026-11-15",
+      "to_url": "https://crystalbridges.org/events/keith-haring-in-3d?visitStart=2026-11-16&visitEnd=2026-11-22&selectedDate=2026-11-16",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/birthday-p-art-y?visitStart=2026-11-15&visitEnd=2026-11-21&selectedDate=2026-11-15",
+      "to_url": "https://crystalbridges.org/events/many-ways-of-seeing-the-alfred-stieglitz-collection?visitStart=2026-11-16&visitEnd=2026-11-22&selectedDate=2026-11-16",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/2025-drop-in-tour-big-picture?visitStart=2026-11-15&visitEnd=2026-11-21&selectedDate=2026-11-15",
+      "to_url": "https://crystalbridges.org/events/nature-adorned-the-artistry-of-tiffany-and-co-and-the-american-imagination?visitStart=2026-11-16&visitEnd=2026-11-22&selectedDate=2026-11-16",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/2025-drop-in-tour-architecture?visitStart=2026-11-15&visitEnd=2026-11-21&selectedDate=2026-11-15",
+      "to_url": "https://crystalbridges.org/events/2025-drop-in-tour-big-picture?visitStart=2026-11-16&visitEnd=2026-11-22&selectedDate=2026-11-16",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/special-exhibition-tour-grandma-moses-a-good-days-work?visitStart=2026-11-15&visitEnd=2026-11-21&selectedDate=2026-11-15",
+      "to_url": "https://crystalbridges.org/events/2025-drop-in-tour-architecture?visitStart=2026-11-16&visitEnd=2026-11-22&selectedDate=2026-11-16",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/2025-drop-in-tour-collection-highlights?visitStart=2026-11-15&visitEnd=2026-11-21&selectedDate=2026-11-15",
+      "to_url": "https://crystalbridges.org/events/2025-drop-in-tour-collection-highlights?visitStart=2026-11-16&visitEnd=2026-11-22&selectedDate=2026-11-16",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
@@ -5471,78 +5658,6 @@
     {
       "from": "columbia-cvb",
       "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/event/unity-of-columbia-annual-art-craft-fair-day-2",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/event/holiday-open-house-at-the-tasting-room-2",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/event/thanksgiving-brunch-buffet-at-the-bistro",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/event/fall-into-art-2026-day-2",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitcolumbiamo.com/events/"
     },
@@ -5686,6 +5801,24 @@
     },
     {
       "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/event/the-spooklights-rose-music-hall",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
       "to_url": "https://www.visitcolumbiamo.com/event/mizzou-mens-basketball-vs-cleveland-state-3-2",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitcolumbiamo.com/events/"
@@ -5722,7 +5855,7 @@
     },
     {
       "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/event/the-spooklights-rose-music-hall",
+      "to_url": "https://www.visitcolumbiamo.com/event/hayden-coffman-rose-music-hall",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitcolumbiamo.com/events/"
     },
@@ -5741,6 +5874,60 @@
     {
       "from": "columbia-cvb",
       "to_url": "https://www.visitcolumbiamo.com/event/mizzou-football-vs-kentucky",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/event/columbia-farmers-market-winter-season-3",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/event/the-little-mermaid-jr-tryps-childrens-theater-show-1",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/event/the-little-mermaid-jr-tryps-childrens-theater-show-2",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitcolumbiamo.com/events/"
     },
@@ -6419,12 +6606,6 @@
     {
       "from": "kc-zoo",
       "to_url": "https://kansascityzoo.org/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kansascityzoo.org/events/"
-    },
-    {
-      "from": "kc-zoo",
-      "to_url": "https://kansascityzoo.org/event/pokemon-go-to-the-zoo",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://kansascityzoo.org/events/"
     },
@@ -7150,36 +7331,6 @@
     },
     {
       "from": "kc-library",
-      "to_url": "https://kclibrary.org/calendar/fall-tai-chi-series-1",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kclibrary.org/calendar"
-    },
-    {
-      "from": "kc-library",
-      "to_url": "https://kclibrary.org/calendar/chess-game-day-18",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kclibrary.org/calendar"
-    },
-    {
-      "from": "kc-library",
-      "to_url": "https://kclibrary.org/calendar/sunday-game-spotlight-oregon-trail-1",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kclibrary.org/calendar"
-    },
-    {
-      "from": "kc-library",
-      "to_url": "https://kclibrary.org/events/lyda-conley-and-fight-preserve-huron-indian-cemetery",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kclibrary.org/calendar"
-    },
-    {
-      "from": "kc-library",
-      "to_url": "https://kclibrary.org/calendar/shockcentral-film-group-obsession",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kclibrary.org/calendar"
-    },
-    {
-      "from": "kc-library",
       "to_url": "https://kclibrary.org/calendar/bookmobile-paseo-baptist-learning-center-0",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://kclibrary.org/calendar"
@@ -7205,6 +7356,48 @@
     {
       "from": "kc-library",
       "to_url": "https://kclibrary.org/calendar/structure-story-0",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kclibrary.org/calendar"
+    },
+    {
+      "from": "kc-library",
+      "to_url": "https://kclibrary.org/calendar/monday-mid-day-meetup-8",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kclibrary.org/calendar"
+    },
+    {
+      "from": "kc-library",
+      "to_url": "https://kclibrary.org/calendar/youth-steam-bridge-somewhere",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kclibrary.org/calendar"
+    },
+    {
+      "from": "kc-library",
+      "to_url": "https://kclibrary.org/locations/trails-west",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kclibrary.org/calendar"
+    },
+    {
+      "from": "kc-library",
+      "to_url": "https://kclibrary.org/calendar/movie-windtalkers",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kclibrary.org/calendar"
+    },
+    {
+      "from": "kc-library",
+      "to_url": "https://kclibrary.org/calendar/bookmobile-riverview-gardens-0",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kclibrary.org/calendar"
+    },
+    {
+      "from": "kc-library",
+      "to_url": "https://kclibrary.org/calendar/teen-dungeons-and-dragons-0",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kclibrary.org/calendar"
+    },
+    {
+      "from": "kc-library",
+      "to_url": "https://kclibrary.org/locations/trails-west",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://kclibrary.org/calendar"
     },
@@ -7558,25 +7751,25 @@
     },
     {
       "from": "weston-bend",
-      "to_url": "https://mostateparks.com/event/basket-weaving-classes-spice-cabinet-pullout",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://mostateparks.com/park/weston-bend-state-park"
-    },
-    {
-      "from": "weston-bend",
-      "to_url": "https://mostateparks.com/event/christmas-crafts/wmsp",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://mostateparks.com/park/weston-bend-state-park"
-    },
-    {
-      "from": "weston-bend",
-      "to_url": "https://mostateparks.com/event/christmas-crafts/wwmshs",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://mostateparks.com/park/weston-bend-state-park"
-    },
-    {
-      "from": "weston-bend",
       "to_url": "https://mostateparks.com/event/4was-cdp-meeting",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://mostateparks.com/park/weston-bend-state-park"
+    },
+    {
+      "from": "weston-bend",
+      "to_url": "https://mostateparks.com/event/toddler-thursday/11-19-26",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://mostateparks.com/park/weston-bend-state-park"
+    },
+    {
+      "from": "weston-bend",
+      "to_url": "https://mostateparks.com/event/sherwood-tour",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://mostateparks.com/park/weston-bend-state-park"
+    },
+    {
+      "from": "weston-bend",
+      "to_url": "https://mostateparks.com/event/win-prairie-2026",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://mostateparks.com/park/weston-bend-state-park"
     },
@@ -7756,13 +7949,13 @@
     },
     {
       "from": "weston-bend",
-      "to_url": "https://mostateparks.com/park/wallace-state-park",
+      "to_url": "https://mostateparks.com/park/watkins-mill-state-park",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://mostateparks.com/park/weston-bend-state-park"
     },
     {
       "from": "weston-bend",
-      "to_url": "https://mostateparks.com/park/bennett-spring-state-park",
+      "to_url": "https://mostateparks.com/park/lake-wappapello-state-park",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://mostateparks.com/park/weston-bend-state-park"
     },
@@ -10522,13 +10715,13 @@
     },
     {
       "from": "columbia-programs",
-      "to_url": "https://www.como.gov/public-works/parking",
+      "to_url": "https://www.como.gov/housing-programs-division",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.como.gov/parks-and-recreation/programs-registration/"
     },
     {
       "from": "columbia-programs",
-      "to_url": "https://www.como.gov/housing-programs-division",
+      "to_url": "https://www.como.gov/public-works/parking",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.como.gov/parks-and-recreation/programs-registration/"
     },
@@ -11530,13 +11723,13 @@
     },
     {
       "from": "columbia-parks",
-      "to_url": "https://www.como.gov/public-works/parking",
+      "to_url": "https://www.como.gov/housing-programs-division",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.como.gov/parks-and-recreation/"
     },
     {
       "from": "columbia-parks",
-      "to_url": "https://www.como.gov/housing-programs-division",
+      "to_url": "https://www.como.gov/public-works/parking",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.como.gov/parks-and-recreation/"
     },
@@ -13402,24 +13595,6 @@
     },
     {
       "from": "lawrence-library",
-      "to_url": "https://lawrence.bibliocommons.com/events/6adb83f9035faf0033de8438",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://lplks.org/events/"
-    },
-    {
-      "from": "lawrence-library",
-      "to_url": "https://lawrence.bibliocommons.com/events/687ad7bca46bbe757b1f5b7c",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://lplks.org/events/"
-    },
-    {
-      "from": "lawrence-library",
-      "to_url": "https://lawrence.bibliocommons.com/events/6a72107cb44674e2601c5374",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://lplks.org/events/"
-    },
-    {
-      "from": "lawrence-library",
       "to_url": "https://lawrence.bibliocommons.com/events/698b65c8491b809c6f18db86",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://lplks.org/events/"
@@ -13427,6 +13602,24 @@
     {
       "from": "lawrence-library",
       "to_url": "https://lawrence.bibliocommons.com/events/6adfaf366fc53b826f262e0b",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://lplks.org/events/"
+    },
+    {
+      "from": "lawrence-library",
+      "to_url": "https://lawrence.bibliocommons.com/events/6a7ccebd2c859e0086ae6c44",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://lplks.org/events/"
+    },
+    {
+      "from": "lawrence-library",
+      "to_url": "https://lawrence.bibliocommons.com/events/6504b24501da5e29003f2520",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://lplks.org/events/"
+    },
+    {
+      "from": "lawrence-library",
+      "to_url": "https://lawrence.bibliocommons.com/events/6aaadcc8129d8e0031f2bb02",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://lplks.org/events/"
     },
@@ -14338,144 +14531,6 @@
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/amy-kligman-the-salon-for-possible-futures",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/listings/nerman-museum-of-contemporary-art-2",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/music-dance",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/aubrey-vineyards-live-music",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/exhibits",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/betsabee-romero-a-field-with-roots-un-campo-con-raices",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/listings/nerman-museum-of-contemporary-art-2",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/kid-centric",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/bingo-benefit-2",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/exhibits",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/carlos-rolon-all-we-have-is-right-now",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/listings/nerman-museum-of-contemporary-art-2",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/free-events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/chiefs-watch-party-at-casual-animal-brewing",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/theatre",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/double-indemnity-elmwood-cemetery-screening",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/health-wellness",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/down-dog-taproom-yoga",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/special-events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/fgikc-bubbles-baubles-with-maggie-jones-fine-jewelry",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/theatre",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/finding-nemo-jr-presented-by-first-act-theatre-arts",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/exhibits",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
       "to_url": "https://www.visitkc.com/events/form-and-flow-contemporary-shanshui-landscapes",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
@@ -14488,73 +14543,25 @@
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/free-events",
+      "to_url": "https://www.visitkc.com/events/type/tours",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/free-sunday-jam-hosted-by-levee-town",
+      "to_url": "https://www.visitkc.com/events/kansas-city-buildings-stories-behind-the-skyline",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/free-events",
+      "to_url": "https://www.visitkc.com/events/type/music-dance",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/free-weekend-fun-bach-to-nature",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/listings/the-nelson-atkins-museum-of-art",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/sports",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/game-day-watch-party-chiefs-vs-falcons",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/exhibits",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/judy-chicago-big-blue-pink",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/listings/nerman-museum-of-contemporary-art-2",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/live-jazz",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/live-jazz-with-bram-wijnands",
+      "to_url": "https://www.visitkc.com/events/karaoke-monday-with-hannah",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
@@ -14566,7 +14573,7 @@
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/lyda-conley-and-the-fight-to-preserve-huron-indian-cemetery",
+      "to_url": "https://www.visitkc.com/events/monday-story-time",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
@@ -14590,109 +14597,13 @@
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/outdoors",
+      "to_url": "https://www.visitkc.com/events/type/theatre",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/new-westport-urban-hike",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/exhibits",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/norman-akers-navigates-the-space-between",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/listings/nerman-museum-of-contemporary-art-2",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/kid-centric",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/play-times-for-kids-at-bump-city",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/free-events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/semifinal-watch-party-kc-current-vs-gotham-fc",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/kid-centric",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/sensory-sunday-in-science-city",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/exhibits",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/sport-and-spectator",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/listings/nerman-museum-of-contemporary-art-2",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/concerts",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/suffrage-cantata",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/free-events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/sunday-funday-at-the-wade-chiefs-vs-falcons-watch-party",
+      "to_url": "https://www.visitkc.com/events/paul-thomas-andersons-boogie-nights-70mm-2",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
@@ -14710,43 +14621,13 @@
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/public-shows",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/the-syndicate-trade-show-trading-cards-collectibles-comics",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
       "to_url": "https://www.visitkc.com/events/type/exhibits",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/the-unseen",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/listings/nerman-museum-of-contemporary-art-2",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/special-events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/twin-peaks-conversation-with-the-stars",
+      "to_url": "https://www.visitkc.com/events/third-friday-artwalk",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
@@ -14795,6 +14676,324 @@
     {
       "from": "visitkc",
       "to_url": "https://www.visitkc.com/events/2026-animal-crossing-new-horizon-aquarium-tour",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/all-hallows-eve-handmade-halloween-artifacts-from-the-1900s-1920s",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/american-prospects-and-landscape-photography-1839-to-today",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/listings/the-nelson-atkins-museum-of-art",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/amy-kligman-the-salon-for-possible-futures",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/listings/nerman-museum-of-contemporary-art-2",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/free-events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/beer-kitchen-music-bingo",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/betsabee-romero-a-field-with-roots-un-campo-con-raices",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/listings/nerman-museum-of-contemporary-art-2",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/carlos-rolon-all-we-have-is-right-now",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/listings/nerman-museum-of-contemporary-art-2",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/special-events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/half-off-tuesdays-at-atlas9",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/judy-chicago-big-blue-pink",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/listings/nerman-museum-of-contemporary-art-2",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/music-dance",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/kurt-caldwell-live-music-tuesdays-at-sail-away-wine",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/music-dance",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/new-jazz-order",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/norman-akers-navigates-the-space-between",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/listings/nerman-museum-of-contemporary-art-2",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/sport-and-spectator",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/listings/nerman-museum-of-contemporary-art-2",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/nightlife",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/the-comedy-vault-stand-up-open-mic-at-hammers",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/theatre",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/the-pigeon-gets-a-big-time-holiday-extravaganza",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/the-unseen",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/listings/nerman-museum-of-contemporary-art-2",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/nightlife",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/tnt-trivia-at-hammers",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/holiday-activities",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/kcs-fav-holiday-light-party-at-winter-magic",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/glowild-hidden-treasure",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/the-berlin-wall-a-world-divided-exhibition-at-union-station-may-29-dec-13-2026",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/free-events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/2026-animal-crossing-new-horizon-aquarium-tour",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/all-hallows-eve-handmade-halloween-artifacts-from-the-1900s-1920s",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/american-prospects-and-landscape-photography-1839-to-today",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/listings/the-nelson-atkins-museum-of-art",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
@@ -16054,18 +16253,6 @@
     },
     {
       "from": "kcopera",
-      "to_url": "https://tickets.kcopera.org/24760/24771",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcopera.org/event/the-marriage-of-figaro/"
-    },
-    {
-      "from": "kcopera",
-      "to_url": "https://tickets.kcopera.org/24760/24772",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcopera.org/event/the-marriage-of-figaro/"
-    },
-    {
-      "from": "kcopera",
       "to_url": "https://kcstudio.org/mozarts-marriage-of-figaro-and-the-lyric-are-a-match-made-in-heaven",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://kcopera.org/event/the-marriage-of-figaro/"
@@ -16409,24 +16596,6 @@
     {
       "from": "kc-convention",
       "to_url": "https://kcconvention.com/events/list?tribe_event_display=past&tribe_paged=1",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcconvention.com/events/"
-    },
-    {
-      "from": "kc-convention",
-      "to_url": "https://kcconvention.com/event/kansas-city-bridal-wedding-expo",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcconvention.com/events/"
-    },
-    {
-      "from": "kc-convention",
-      "to_url": "https://kcconvention.com/event/kansas-city-bridal-wedding-expo",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcconvention.com/events/"
-    },
-    {
-      "from": "kc-convention",
-      "to_url": "https://bridalshowsmo-kc.com/free-passes",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://kcconvention.com/events/"
     },
@@ -17545,6 +17714,1410 @@
       "to_url": "https://bentonvillehistorymuseum.org",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://bentonvillelibrary.org/bplforreaders/book-clubs-2"
+    },
+    {
+      "from": "linda-hall-alchemy",
+      "to_url": "https://www.lindahall.org/research/research-guides",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/"
+    },
+    {
+      "from": "linda-hall-alchemy",
+      "to_url": "https://libguides.lindahall.org/patents_trademarks",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/"
+    },
+    {
+      "from": "linda-hall-alchemy",
+      "to_url": "https://www.lindahall.org/experience/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/"
+    },
+    {
+      "from": "linda-hall-alchemy",
+      "to_url": "https://www.lindahall.org/experience/events/summer-reading-challenge",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/"
+    },
+    {
+      "from": "linda-hall-alchemy",
+      "to_url": "https://www.lindahall.org/experience/events/bartlett-lecture-series",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/"
+    },
+    {
+      "from": "linda-hall-alchemy",
+      "to_url": "https://www.lindahall.org/experience/events/exhibitions-home",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/"
+    },
+    {
+      "from": "linda-hall-alchemy",
+      "to_url": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/"
+    },
+    {
+      "from": "linda-hall-alchemy",
+      "to_url": "https://www.lindahall.org/experience/digital-exhibitions",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/"
+    },
+    {
+      "from": "linda-hall-alchemy",
+      "to_url": "https://www.lindahall.org/experience/event-venue-rental",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/"
+    },
+    {
+      "from": "linda-hall-alchemy",
+      "to_url": "https://www.lindahall.org/experience/digital-exhibitions",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/"
+    },
+    {
+      "from": "linda-hall-alchemy",
+      "to_url": "https://www.lindahall.org/support/volunteer-at-linda-hall-library",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/"
+    },
+    {
+      "from": "linda-hall-alchemy",
+      "to_url": "https://www.lindahall.org/research/research-guides",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/"
+    },
+    {
+      "from": "linda-hall-alchemy",
+      "to_url": "https://libguides.lindahall.org/patents_trademarks",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/"
+    },
+    {
+      "from": "linda-hall-alchemy",
+      "to_url": "https://www.lindahall.org/experience/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/"
+    },
+    {
+      "from": "linda-hall-alchemy",
+      "to_url": "https://www.lindahall.org/experience/events/summer-reading-challenge",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/"
+    },
+    {
+      "from": "linda-hall-alchemy",
+      "to_url": "https://www.lindahall.org/experience/events/bartlett-lecture-series",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/"
+    },
+    {
+      "from": "linda-hall-alchemy",
+      "to_url": "https://www.lindahall.org/experience/events/exhibitions-home",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/"
+    },
+    {
+      "from": "linda-hall-alchemy",
+      "to_url": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/"
+    },
+    {
+      "from": "linda-hall-alchemy",
+      "to_url": "https://www.lindahall.org/experience/digital-exhibitions",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/"
+    },
+    {
+      "from": "linda-hall-alchemy",
+      "to_url": "https://www.lindahall.org/experience/event-venue-rental",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/"
+    },
+    {
+      "from": "linda-hall-alchemy",
+      "to_url": "https://www.lindahall.org/experience/digital-exhibitions",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/"
+    },
+    {
+      "from": "linda-hall-alchemy",
+      "to_url": "https://www.lindahall.org/support/volunteer-at-linda-hall-library",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/"
+    },
+    {
+      "from": "linda-hall-alchemy",
+      "to_url": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/"
+    },
+    {
+      "from": "linda-hall-alchemy",
+      "to_url": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/plan-your-visit",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/"
+    },
+    {
+      "from": "linda-hall-alchemy",
+      "to_url": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/exhibitions-at-the-linda-hall",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/"
+    },
+    {
+      "from": "linda-hall-alchemy",
+      "to_url": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/exhibition-team",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/"
+    },
+    {
+      "from": "linda-hall-alchemy",
+      "to_url": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/image-gallery",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/"
+    },
+    {
+      "from": "linda-hall-alchemy",
+      "to_url": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/faq",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lindahall.org/experience/events/the-alchemy-of-knowledge-exhibition/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/utilities/columbias-solid-waste-utility/single-family-home-trash-and-recycling",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/law/parking-tickets",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/volunteer",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/law/parking-tickets",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/CMS/WebForms/form.php?formid=245",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/public-works/parking",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/housing-programs-division",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/programs-registration/register-online-activities-adult-sports-leagues",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/facility-rentals-reservations",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://experience.arcgis.com/experience/6a6904d0ccbd49729f526da1ee28c678",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://experience.arcgis.com/experience/6a6904d0ccbd49729f526da1ee28c678/page/Trails",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/sports",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/trails",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/finance/vendors/bid-solicitations",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/convention-and-visitors-bureau/city-special-events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/CMS/webcal",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/city-council/residents-guide",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/city-managers-office/office-of-violence-prevention",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/service/apply-and-register",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/service/parking-transportation",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/service/parks-recreation",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/service/volunteering",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/programs-registration/register-online-activities-adult-sports-leagues",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/contacts/armory-sports-recreation-center",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/contacts/armory-sports-recreation-center",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/contacts/columbia-sports-fieldhouse",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/contacts/tapp-elbert-amphitheater",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/contacts/mkt-trailside-building",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/contacts/northeast-event-center",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks/stephens-lake-park",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/contacts/rock-quarry-house-2",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/programs-registration/register-online-activities-adult-sports-leagues",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks/waters-moss-memorial-wildlife-area",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/contacts/albert-oakland-family-aquatic-center",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/programs-registration/c-r-e-career-awareness-related-experience",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://linktr.ee/columbia_pr_esports",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "http://www.bluethundertrackclub.com",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks/nifong-park",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://boonehistory.org/visit-the-boone-county-history-and-culture-center",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/park-feature/playgrounds/page/4",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/contacts/riechmann-indoor-pavilion-2",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/contacts/dr-charles-leech-shelter",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/contacts/riechmann-indoor-pavilion-2",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/contacts/armory-sports-recreation-center",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/contacts/armory-sports-recreation-center",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/contacts/armory-sports-recreation-center",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/contacts/armory-sports-recreation-center",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/about-us/us-contact-us-organization-charts",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/about-us/benefits-parks-recreation",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/about-us/parks-recreation-citizen-surveys",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/about-us/columbia-parks-and-recreation-fund",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/about-us/council-agenda-items",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/about-us/donation-policy-request-form",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/about-us/frequently-asked-questions",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/about-us/friends-columbia-parks-recreation",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/about-us/parks-recreation-internships",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/about-us/2013-parks-recreation-open-space-master-plan",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/about-us/our-natural-legacy",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/parks-trails-facilities/park-facility-inventory-2",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/boards/parks-and-recreation-commission",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/about-us/related-links",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/about-us/parks-recreation-reports",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/volunteer",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/contacts/activity-recreation-center-arc/fitness-programs-and-equipment",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/contacts/activity-recreation-center-arc/fitness-programs-and-equipment",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/contacts/activity-recreation-center-arc/fitness-programs",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/aquatics/admission-fees-season-passes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/contacts-feature/aquatic-facilities?department=parks-and-recreation",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/aquatics/aquatic-policies",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/facility-rentals-reservations",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/facility-rentals-reservations",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/aquatics/columbia-swimming-summit",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/aquatics/aquatic-jobs-lifeguards-instructors",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/aquatics/pool-hours-schedules-programs-events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/aquatics/swim-lessons-aquatic-classes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/leisure-times-program-guide",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/programs-registration/register-online-activities-adult-sports-leagues",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/trails",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/contacts-type/facility?department=parks-and-recreation",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/cip",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/parks-trails-facilities/dog-parks-leash-free-areas",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/parks-trails-facilities/hunting-fishing",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/parks-trails-facilities/park-facility-inventory-2",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/programs-registration/memorials",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/parks-trails-facilities/other-trail-information",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/parks-trails-facilities/parks-facilities",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/parks-trails-facilities/park-trail-safety-tips",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://library.municode.com/mo/columbia/codes/code_of_ordinances?nodeId=PTIICOOR_CH17PARE",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/programs-registration/park-ranger-program",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/parks-trails-facilities/park-sales-tax",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/parks-trails-facilities/park-special-use-park-permits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/parks-trails-facilities/picnic-shelter-reservations",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/contacts/columbia-skate-park",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/contacts-type/facility?department=parks-and-recreation",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/programs-registration/adapted-community-recreation",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/programs-registration/adapted-sports-special-olympics",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/programs-registration/camp-como-kidz",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/CMS/webcal?cat=2",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/programs-registration/c-r-e-career-awareness-related-experience",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/sports/youth-sports/community-recreation",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/programs-registration/financial-assistance-program",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/public-works/street-division/traffic-management/nonmotorized-transportation",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/programs-registration/register-online-activities-adult-sports-leagues",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/programs-registration/theme-park-tickets",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/programs-registration/50-program",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/special-events/visit-park-playgrounds-challenge",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/facility-rentals-reservations",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/CMS/webcal?cat=2",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/special-events/special-events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/special-events/4th-july-fire-sky",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/special-events/bear-creek-run",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/special-events/family-fun-fest",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/special-events/annual-heritage-festival-craft-show",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/special-events/grit-7k-trail-run",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/special-events/kaleidospoke",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/special-events/movies-in-the-park",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/parks-trails-facilities/park-special-use-park-permits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/special-events/roc-7k-trail-run",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/special-events/splat",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/special-events/stephens-lake-amphitheater-concert-series",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/special-events/stonegrinder-7k-trail-run-2",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/special-events/tons-of-trucks",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/special-events/yappy-hour",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/sports",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/sports/adult-sports",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/sports/available-players",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/sports/cancellations",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/sports/esports-leagues",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/contacts-type/facility?department=parks-and-recreation",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/sports/faq",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/sports/sport-facility-reservations",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/sports/tournament-information",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks/stephens-lake-park",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/sports/youth-sports",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/news?department=parks-and-recreation",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/contacts/parks-and-recreation",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/utilities/columbias-solid-waste-utility/single-family-home-trash-and-recycling",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks/twin-lakes-recreation-area",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/finance/vendors/bid-solicitations",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/housing-programs-division",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/public-works/parking",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/trails/mkt-nature-and-fitness-trail",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/service/parks-recreation",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/service/parking-transportation",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/service/volunteering",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/utilities/columbias-solid-waste-utility/single-family-home-trash-and-recycling",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/law/parking-tickets",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/public-works/parking",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/law/parking-tickets",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/link/parks-directory",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/link/trails-directory",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/programs-registration/register-online-activities-adult-sports-leagues",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation/sports",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/finance/vendors/bid-solicitations",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/convention-and-visitors-bureau/city-special-events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/CMS/webcal",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "columbia-fall-winter-catalog",
+      "to_url": "https://www.como.gov/parks-and-recreation",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
+    },
+    {
+      "from": "shsmo-tom-sawyer",
+      "to_url": "https://shsmo.org/exhibitions/tom-sawyer-150-thomas-hart-benton-illustrates-american-classic",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://shsmo.org/exhibitions/tom-sawyer-150-thomas-hart-benton-illustrates-american-classic"
+    },
+    {
+      "from": "shsmo-tom-sawyer",
+      "to_url": "https://shsmo.org/support/volunteer",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://shsmo.org/exhibitions/tom-sawyer-150-thomas-hart-benton-illustrates-american-classic"
+    },
+    {
+      "from": "shsmo-tom-sawyer",
+      "to_url": "https://shsmo.org/research/guides",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://shsmo.org/exhibitions/tom-sawyer-150-thomas-hart-benton-illustrates-american-classic"
+    },
+    {
+      "from": "shsmo-tom-sawyer",
+      "to_url": "https://shsmo.org/exhibitions",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://shsmo.org/exhibitions/tom-sawyer-150-thomas-hart-benton-illustrates-american-classic"
+    },
+    {
+      "from": "shsmo-tom-sawyer",
+      "to_url": "https://shsmo.org/exhibitions",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://shsmo.org/exhibitions/tom-sawyer-150-thomas-hart-benton-illustrates-american-classic"
+    },
+    {
+      "from": "shsmo-tom-sawyer",
+      "to_url": "https://shsmo.org/exhibitions/online-exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://shsmo.org/exhibitions/tom-sawyer-150-thomas-hart-benton-illustrates-american-classic"
+    },
+    {
+      "from": "shsmo-tom-sawyer",
+      "to_url": "https://shsmo.org/exhibitions/travelingexhibit",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://shsmo.org/exhibitions/tom-sawyer-150-thomas-hart-benton-illustrates-american-classic"
+    },
+    {
+      "from": "shsmo-tom-sawyer",
+      "to_url": "https://shsmo.org/calendar",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://shsmo.org/exhibitions/tom-sawyer-150-thomas-hart-benton-illustrates-american-classic"
+    },
+    {
+      "from": "shsmo-tom-sawyer",
+      "to_url": "https://shsmo.org/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://shsmo.org/exhibitions/tom-sawyer-150-thomas-hart-benton-illustrates-american-classic"
+    },
+    {
+      "from": "shsmo-tom-sawyer",
+      "to_url": "https://shsmo.org/about/host-an-event",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://shsmo.org/exhibitions/tom-sawyer-150-thomas-hart-benton-illustrates-american-classic"
+    },
+    {
+      "from": "shsmo-tom-sawyer",
+      "to_url": "https://shsmo.org/exhibitions",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://shsmo.org/exhibitions/tom-sawyer-150-thomas-hart-benton-illustrates-american-classic"
+    },
+    {
+      "from": "shsmo-tom-sawyer",
+      "to_url": "https://shsmo.org/exhibitions/tom-sawyer-150-thomas-hart-benton-illustrates-american-classic",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://shsmo.org/exhibitions/tom-sawyer-150-thomas-hart-benton-illustrates-american-classic"
+    },
+    {
+      "from": "shsmo-tom-sawyer",
+      "to_url": "https://shsmo.org/exhibitions/tom-sawyer-150-thomas-hart-benton-illustrates-american-classic",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://shsmo.org/exhibitions/tom-sawyer-150-thomas-hart-benton-illustrates-american-classic"
+    },
+    {
+      "from": "shsmo-indigenous-identities",
+      "to_url": "https://shsmo.org/exhibitions/indigenous-identities-state-sanctioned-portraiture-native-self-representation",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://shsmo.org/exhibitions/indigenous-identities-state-sanctioned-portraiture-native-self-representation"
+    },
+    {
+      "from": "shsmo-indigenous-identities",
+      "to_url": "https://shsmo.org/support/volunteer",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://shsmo.org/exhibitions/indigenous-identities-state-sanctioned-portraiture-native-self-representation"
+    },
+    {
+      "from": "shsmo-indigenous-identities",
+      "to_url": "https://shsmo.org/research/guides",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://shsmo.org/exhibitions/indigenous-identities-state-sanctioned-portraiture-native-self-representation"
+    },
+    {
+      "from": "shsmo-indigenous-identities",
+      "to_url": "https://shsmo.org/exhibitions",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://shsmo.org/exhibitions/indigenous-identities-state-sanctioned-portraiture-native-self-representation"
+    },
+    {
+      "from": "shsmo-indigenous-identities",
+      "to_url": "https://shsmo.org/exhibitions",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://shsmo.org/exhibitions/indigenous-identities-state-sanctioned-portraiture-native-self-representation"
+    },
+    {
+      "from": "shsmo-indigenous-identities",
+      "to_url": "https://shsmo.org/exhibitions/online-exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://shsmo.org/exhibitions/indigenous-identities-state-sanctioned-portraiture-native-self-representation"
+    },
+    {
+      "from": "shsmo-indigenous-identities",
+      "to_url": "https://shsmo.org/exhibitions/travelingexhibit",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://shsmo.org/exhibitions/indigenous-identities-state-sanctioned-portraiture-native-self-representation"
+    },
+    {
+      "from": "shsmo-indigenous-identities",
+      "to_url": "https://shsmo.org/calendar",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://shsmo.org/exhibitions/indigenous-identities-state-sanctioned-portraiture-native-self-representation"
+    },
+    {
+      "from": "shsmo-indigenous-identities",
+      "to_url": "https://shsmo.org/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://shsmo.org/exhibitions/indigenous-identities-state-sanctioned-portraiture-native-self-representation"
+    },
+    {
+      "from": "shsmo-indigenous-identities",
+      "to_url": "https://shsmo.org/about/host-an-event",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://shsmo.org/exhibitions/indigenous-identities-state-sanctioned-portraiture-native-self-representation"
+    },
+    {
+      "from": "shsmo-indigenous-identities",
+      "to_url": "https://shsmo.org/exhibitions",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://shsmo.org/exhibitions/indigenous-identities-state-sanctioned-portraiture-native-self-representation"
+    },
+    {
+      "from": "shsmo-indigenous-identities",
+      "to_url": "https://shsmo.org/exhibitions/indigenous-identities-state-sanctioned-portraiture-native-self-representation",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://shsmo.org/exhibitions/indigenous-identities-state-sanctioned-portraiture-native-self-representation"
+    },
+    {
+      "from": "shsmo-indigenous-identities",
+      "to_url": "https://shsmo.org/exhibitions/indigenous-identities-state-sanctioned-portraiture-native-self-representation",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://shsmo.org/exhibitions/indigenous-identities-state-sanctioned-portraiture-native-self-representation"
     }
   ],
   "discovery_health": [
@@ -17782,6 +19355,26 @@
       "id": "bpl-books-on-main",
       "status": "checked",
       "pages": 1
+    },
+    {
+      "id": "linda-hall-alchemy",
+      "status": "checked",
+      "pages": 1
+    },
+    {
+      "id": "columbia-fall-winter-catalog",
+      "status": "checked",
+      "pages": 1
+    },
+    {
+      "id": "shsmo-tom-sawyer",
+      "status": "checked",
+      "pages": 1
+    },
+    {
+      "id": "shsmo-indigenous-identities",
+      "status": "checked",
+      "pages": 1
     }
   ],
   "newsletter_source_map": {
@@ -17873,10 +19466,12 @@
           "visitkc",
           "kcopera",
           "central-avenue-dia",
-          "independence-japan"
+          "independence-japan",
+          "linda-hall-alchemy"
         ],
         "collecting_routes": [
-          "visitkc"
+          "visitkc",
+          "linda-hall-alchemy"
         ],
         "status": "collecting",
         "next_search": "Kansas City metro temporary exhibitions galleries public art official programs calendar registration"
@@ -17885,10 +19480,13 @@
         "region": "Kansas City metro",
         "category": "history_culture",
         "routes": [
-          "nelson"
+          "nelson",
+          "linda-hall-alchemy"
         ],
-        "collecting_routes": [],
-        "status": "route_only",
+        "collecting_routes": [
+          "linda-hall-alchemy"
+        ],
+        "status": "collecting",
         "next_search": "Kansas City metro history museums heritage cultural celebrations official programs calendar registration"
       },
       {
@@ -17896,10 +19494,12 @@
         "category": "science_technology",
         "routes": [
           "kc-zoo",
-          "science-city"
+          "science-city",
+          "linda-hall-alchemy"
         ],
         "collecting_routes": [
-          "science-city"
+          "science-city",
+          "linda-hall-alchemy"
         ],
         "status": "collecting",
         "next_search": "Kansas City metro science planetarium STEM makers robotics official programs calendar registration"
@@ -17934,7 +19534,6 @@
         "collecting_routes": [
           "visitkc",
           "midland",
-          "truman",
           "kcopera"
         ],
         "status": "collecting",
@@ -18377,10 +19976,13 @@
         "region": "Columbia",
         "category": "sports_participation",
         "routes": [
-          "columbia-programs"
+          "columbia-programs",
+          "columbia-fall-winter-catalog"
         ],
-        "collecting_routes": [],
-        "status": "route_only",
+        "collecting_routes": [
+          "columbia-fall-winter-catalog"
+        ],
+        "status": "collecting",
         "next_search": "Columbia youth adult adaptive leagues seasons teams tournaments official programs calendar registration"
       },
       {
@@ -18399,26 +20001,41 @@
         "region": "Columbia",
         "category": "fitness_wellness",
         "routes": [
-          "columbia-programs"
+          "columbia-programs",
+          "columbia-fall-winter-catalog"
         ],
-        "collecting_routes": [],
-        "status": "route_only",
+        "collecting_routes": [
+          "columbia-fall-winter-catalog"
+        ],
+        "status": "collecting",
         "next_search": "Columbia fitness yoga swimming martial arts wellness official programs calendar registration"
       },
       {
         "region": "Columbia",
         "category": "arts_exhibits",
-        "routes": [],
-        "collecting_routes": [],
-        "status": "gap",
+        "routes": [
+          "shsmo-tom-sawyer",
+          "shsmo-indigenous-identities"
+        ],
+        "collecting_routes": [
+          "shsmo-tom-sawyer",
+          "shsmo-indigenous-identities"
+        ],
+        "status": "collecting",
         "next_search": "Columbia temporary exhibitions galleries public art official programs calendar registration"
       },
       {
         "region": "Columbia",
         "category": "history_culture",
-        "routes": [],
-        "collecting_routes": [],
-        "status": "gap",
+        "routes": [
+          "shsmo-tom-sawyer",
+          "shsmo-indigenous-identities"
+        ],
+        "collecting_routes": [
+          "shsmo-tom-sawyer",
+          "shsmo-indigenous-identities"
+        ],
+        "status": "collecting",
         "next_search": "Columbia history museums heritage cultural celebrations official programs calendar registration"
       },
       {
@@ -18457,19 +20074,26 @@
       {
         "region": "Columbia",
         "category": "film_literature",
-        "routes": [],
-        "collecting_routes": [],
-        "status": "gap",
+        "routes": [
+          "shsmo-tom-sawyer"
+        ],
+        "collecting_routes": [
+          "shsmo-tom-sawyer"
+        ],
+        "status": "collecting",
         "next_search": "Columbia cinema film festivals author readings book clubs official programs calendar registration"
       },
       {
         "region": "Columbia",
         "category": "classes_skills",
         "routes": [
-          "columbia-programs"
+          "columbia-programs",
+          "columbia-fall-winter-catalog"
         ],
-        "collecting_routes": [],
-        "status": "route_only",
+        "collecting_routes": [
+          "columbia-fall-winter-catalog"
+        ],
+        "status": "collecting",
         "next_search": "Columbia classes workshops cooking crafts language lessons official programs calendar registration"
       },
       {
@@ -18549,19 +20173,26 @@
       {
         "region": "Columbia",
         "category": "libraries_learning",
-        "routes": [],
-        "collecting_routes": [],
-        "status": "gap",
+        "routes": [
+          "columbia-fall-winter-catalog"
+        ],
+        "collecting_routes": [
+          "columbia-fall-winter-catalog"
+        ],
+        "status": "collecting",
         "next_search": "Columbia libraries storytime literacy lifelong learning official programs calendar registration"
       },
       {
         "region": "Columbia",
         "category": "adaptive_inclusive",
         "routes": [
-          "columbia-programs"
+          "columbia-programs",
+          "columbia-fall-winter-catalog"
         ],
-        "collecting_routes": [],
-        "status": "route_only",
+        "collecting_routes": [
+          "columbia-fall-winter-catalog"
+        ],
+        "status": "collecting",
         "next_search": "Columbia adaptive sports inclusive recreation sensory friendly ASL official programs calendar registration"
       },
       {
@@ -19034,7 +20665,6 @@
           "visitkc",
           "tmobile",
           "midland",
-          "truman",
           "downtown-ls",
           "kcopera",
           "kc-convention"
@@ -19065,11 +20695,17 @@
           "momentary",
           "crystal-bridges",
           "nelson",
-          "crystal-exhibits"
+          "crystal-exhibits",
+          "linda-hall-alchemy",
+          "shsmo-tom-sawyer",
+          "shsmo-indigenous-identities"
         ],
         "collecting_routes": [
           "crystal-bridges",
-          "visitkc"
+          "visitkc",
+          "linda-hall-alchemy",
+          "shsmo-tom-sawyer",
+          "shsmo-indigenous-identities"
         ]
       },
       {
@@ -19177,10 +20813,12 @@
           "bentonville-schedules",
           "kc-volunteer",
           "bentonville-trails",
-          "kc-culinary-catalog"
+          "kc-culinary-catalog",
+          "columbia-fall-winter-catalog"
         ],
         "collecting_routes": [
-          "kc-culinary-catalog"
+          "kc-culinary-catalog",
+          "columbia-fall-winter-catalog"
         ]
       }
     ],
@@ -19308,6 +20946,19 @@
       ],
       "hours_source": null,
       "coordinate_source": "https://kansascityzoo.org/visit/hours-location-parking",
+      "offering_sources": [],
+      "provenance": "reviewed-place-registry"
+    },
+    {
+      "id": "shsmo-columbia-gallery",
+      "label": "SHSMO Center for Missouri Studies art gallery",
+      "url": "https://shsmo.org/visit/columbia",
+      "parent_route_ids": [
+        "shsmo-tom-sawyer",
+        "shsmo-indigenous-identities"
+      ],
+      "hours_source": "https://shsmo.org/visit/columbia",
+      "coordinate_source": null,
       "offering_sources": [],
       "provenance": "reviewed-place-registry"
     }
