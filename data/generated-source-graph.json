@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-16T09:00:28.945240-06:00",
+  "generated_at": "2026-11-16T15:06:50.007613-06:00",
   "seed_sha256": "0a268fbfd2c4098c22795598bd4b11fa81809878f0928e9469945e1d479627d3",
   "authority": "data/source-graph.json",
   "approved_registry": "data/collection-sources.json",
@@ -5693,6 +5693,42 @@
     },
     {
       "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/event/the-wooten-brothers-the-blue-note",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/event/wine-dine-dinner-experience-at-park-restaurant",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
       "to_url": "https://www.visitcolumbiamo.com/event/mizzou-mens-basketball-vs-cleveland-state-3",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitcolumbiamo.com/events/"
@@ -5730,42 +5766,6 @@
     {
       "from": "columbia-cvb",
       "to_url": "https://www.visitcolumbiamo.com/event/rho-engine-room-free-community-workout-class-3",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/event/the-wooten-brothers-the-blue-note",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/event/wine-dine-dinner-experience-at-park-restaurant",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitcolumbiamo.com/events/"
     },
@@ -5855,43 +5855,7 @@
     },
     {
       "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/event/hayden-coffman-rose-music-hall",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/event/mizzou-football-vs-kentucky",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/event/columbia-farmers-market-winter-season-3",
+      "to_url": "https://www.visitcolumbiamo.com/event/wilder-coffeehouse-grown-up-book-fair",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitcolumbiamo.com/events/"
     },
@@ -5928,6 +5892,42 @@
     {
       "from": "columbia-cvb",
       "to_url": "https://www.visitcolumbiamo.com/event/the-little-mermaid-jr-tryps-childrens-theater-show-2",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/event/hayden-coffman-rose-music-hall",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/event/mizzou-football-vs-kentucky",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitcolumbiamo.com/events/"
     },
@@ -7331,54 +7331,6 @@
     },
     {
       "from": "kc-library",
-      "to_url": "https://kclibrary.org/calendar/bookmobile-paseo-baptist-learning-center-0",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kclibrary.org/calendar"
-    },
-    {
-      "from": "kc-library",
-      "to_url": "https://kclibrary.org/calendar/job-seeker-drop-hours-75",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kclibrary.org/calendar"
-    },
-    {
-      "from": "kc-library",
-      "to_url": "https://kclibrary.org/calendar/taste-autumn-1",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kclibrary.org/calendar"
-    },
-    {
-      "from": "kc-library",
-      "to_url": "https://kclibrary.org/calendar/bookmobile-margarets-place-0",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kclibrary.org/calendar"
-    },
-    {
-      "from": "kc-library",
-      "to_url": "https://kclibrary.org/calendar/structure-story-0",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kclibrary.org/calendar"
-    },
-    {
-      "from": "kc-library",
-      "to_url": "https://kclibrary.org/calendar/monday-mid-day-meetup-8",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kclibrary.org/calendar"
-    },
-    {
-      "from": "kc-library",
-      "to_url": "https://kclibrary.org/calendar/youth-steam-bridge-somewhere",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kclibrary.org/calendar"
-    },
-    {
-      "from": "kc-library",
-      "to_url": "https://kclibrary.org/locations/trails-west",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kclibrary.org/calendar"
-    },
-    {
-      "from": "kc-library",
       "to_url": "https://kclibrary.org/calendar/movie-windtalkers",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://kclibrary.org/calendar"
@@ -7398,6 +7350,48 @@
     {
       "from": "kc-library",
       "to_url": "https://kclibrary.org/locations/trails-west",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kclibrary.org/calendar"
+    },
+    {
+      "from": "kc-library",
+      "to_url": "https://kclibrary.org/calendar/mixxedfit-34",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kclibrary.org/calendar"
+    },
+    {
+      "from": "kc-library",
+      "to_url": "https://kclibrary.org/calendar/family-storytime-88",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kclibrary.org/calendar"
+    },
+    {
+      "from": "kc-library",
+      "to_url": "https://kclibrary.org/calendar/baby-storytime-125",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kclibrary.org/calendar"
+    },
+    {
+      "from": "kc-library",
+      "to_url": "https://kclibrary.org/calendar/family-storytime-25",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kclibrary.org/calendar"
+    },
+    {
+      "from": "kc-library",
+      "to_url": "https://kclibrary.org/calendar/community-health-fair-32",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kclibrary.org/calendar"
+    },
+    {
+      "from": "kc-library",
+      "to_url": "https://kclibrary.org/calendar/job-seeker-drop-hours-89",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kclibrary.org/calendar"
+    },
+    {
+      "from": "kc-library",
+      "to_url": "https://kclibrary.org/calendar/online-appointment-prep-lab-1",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://kclibrary.org/calendar"
     },
@@ -7949,13 +7943,13 @@
     },
     {
       "from": "weston-bend",
-      "to_url": "https://mostateparks.com/park/watkins-mill-state-park",
+      "to_url": "https://mostateparks.com/park/knob-noster-state-park",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://mostateparks.com/park/weston-bend-state-park"
     },
     {
       "from": "weston-bend",
-      "to_url": "https://mostateparks.com/park/lake-wappapello-state-park",
+      "to_url": "https://mostateparks.com/park/taum-sauk-mountain-state-park",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://mostateparks.com/park/weston-bend-state-park"
     },
@@ -10715,13 +10709,13 @@
     },
     {
       "from": "columbia-programs",
-      "to_url": "https://www.como.gov/housing-programs-division",
+      "to_url": "https://www.como.gov/public-works/parking",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.como.gov/parks-and-recreation/programs-registration/"
     },
     {
       "from": "columbia-programs",
-      "to_url": "https://www.como.gov/public-works/parking",
+      "to_url": "https://www.como.gov/housing-programs-division",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.como.gov/parks-and-recreation/programs-registration/"
     },
@@ -12257,25 +12251,25 @@
     },
     {
       "from": "rock-bridge-state-park",
-      "to_url": "https://mostateparks.com/event/basket-weaving-classes-spice-cabinet-pullout",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://mostateparks.com/park/rock-bridge-memorial-state-park"
-    },
-    {
-      "from": "rock-bridge-state-park",
-      "to_url": "https://mostateparks.com/event/christmas-crafts/wmsp",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://mostateparks.com/park/rock-bridge-memorial-state-park"
-    },
-    {
-      "from": "rock-bridge-state-park",
-      "to_url": "https://mostateparks.com/event/christmas-crafts/wwmshs",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://mostateparks.com/park/rock-bridge-memorial-state-park"
-    },
-    {
-      "from": "rock-bridge-state-park",
       "to_url": "https://mostateparks.com/event/4was-cdp-meeting",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://mostateparks.com/park/rock-bridge-memorial-state-park"
+    },
+    {
+      "from": "rock-bridge-state-park",
+      "to_url": "https://mostateparks.com/event/toddler-thursday/11-19-26",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://mostateparks.com/park/rock-bridge-memorial-state-park"
+    },
+    {
+      "from": "rock-bridge-state-park",
+      "to_url": "https://mostateparks.com/event/sherwood-tour",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://mostateparks.com/park/rock-bridge-memorial-state-park"
+    },
+    {
+      "from": "rock-bridge-state-park",
+      "to_url": "https://mostateparks.com/event/win-prairie-2026",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://mostateparks.com/park/rock-bridge-memorial-state-park"
     },
@@ -12443,13 +12437,13 @@
     },
     {
       "from": "rock-bridge-state-park",
-      "to_url": "https://mostateparks.com/park/finger-lakes",
+      "to_url": "https://mostateparks.com/park/annie-and-abel-van-meter-state-park",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://mostateparks.com/park/rock-bridge-memorial-state-park"
     },
     {
       "from": "rock-bridge-state-park",
-      "to_url": "https://mostateparks.com/historic-site/osage-village-state-historic-site",
+      "to_url": "https://mostateparks.com/park/big-sugar-creek-state-park",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://mostateparks.com/park/rock-bridge-memorial-state-park"
     },
@@ -16913,30 +16907,6 @@
     },
     {
       "from": "ls-mistletoe",
-      "to_url": "https://explorels.com/events/pid/1198/mcat/1203/acat/2/ev/2/artdate/15-11-2026",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
-    },
-    {
-      "from": "ls-mistletoe",
-      "to_url": "https://explorels.com/events/pid/1198/mcat/1203/acat/2/ev/2/artdate/22-10-2026",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
-    },
-    {
-      "from": "ls-mistletoe",
-      "to_url": "https://explorels.com/events/artmid/1198/articleid/721/kc-football-watch-party",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
-    },
-    {
-      "from": "ls-mistletoe",
-      "to_url": "https://explorels.com/events/artmid/1198/articleid/721/kc-football-watch-party",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
-    },
-    {
-      "from": "ls-mistletoe",
       "to_url": "https://explorels.com/events/pid/1198/mcat/1203/acat/2/ev/2/artdate/19-11-2026",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
@@ -17022,6 +16992,12 @@
     {
       "from": "ls-mistletoe",
       "to_url": "https://explorels.com/events/artmid/1198/articleid/694/art-talk-with-summit-art",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
+    },
+    {
+      "from": "ls-mistletoe",
+      "to_url": "https://explorels.com/events/artmid/1198/articleid/731/magic-tree-holiday-pop-up-bar-opening-day",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
     },
@@ -17123,6 +17099,30 @@
     },
     {
       "from": "ls-mistletoe",
+      "to_url": "https://explorels.com/events/pid/1198/mcat/1203/acat/2/ev/2/artdate/4-12-2026",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
+    },
+    {
+      "from": "ls-mistletoe",
+      "to_url": "https://explorels.com/events/pid/1198/mcat/1203/acat/2/ev/2/artdate/16-11-2026",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
+    },
+    {
+      "from": "ls-mistletoe",
+      "to_url": "https://explorels.com/events/artmid/1198/articleid/730/tis-the-season-art-craft-show",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
+    },
+    {
+      "from": "ls-mistletoe",
+      "to_url": "https://explorels.com/events/artmid/1198/articleid/730/tis-the-season-art-craft-show",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
+    },
+    {
+      "from": "ls-mistletoe",
       "to_url": "https://explorels.com/events/pid/1198/mcat/1203/acat/2/ev/2/artdate/5-12-2026",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
@@ -17130,6 +17130,12 @@
     {
       "from": "ls-mistletoe",
       "to_url": "https://explorels.com/events/pid/1198/mcat/1203/acat/2/ev/2/artdate/5-12-2026",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
+    },
+    {
+      "from": "ls-mistletoe",
+      "to_url": "https://explorels.com/events/artmid/1198/articleid/730/tis-the-season-art-craft-show",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
     },
@@ -19534,6 +19540,7 @@
         "collecting_routes": [
           "visitkc",
           "midland",
+          "truman",
           "kcopera"
         ],
         "status": "collecting",
@@ -20665,6 +20672,7 @@
           "visitkc",
           "tmobile",
           "midland",
+          "truman",
           "downtown-ls",
           "kcopera",
           "kc-convention"
