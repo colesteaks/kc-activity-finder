@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "id": "kc-weekend-2026-11-28",
+  "region": "Kansas City metro",
+  "window": {
+    "start": "2026-11-28",
+    "end": "2026-11-29"
+  },
+  "reviewed_at": "2026-11-23T08:46:57.118676-06:00",
+  "policy": "Small ongoing-anchor regression sample only, not full-weekend recall. The latest KC Daily edition is November 20-22; its long-running leads are included only after official pages verify November 28 participation. Independent roundup is November 27-29. Do not present these as matching newsletter editions or a complete benchmark.",
+  "sensors": [
+    {
+      "url": "https://www.kcdaily.com/p/weekend-roundup",
+      "edition": "November 20-22, published November 19, 2026; actual live body read"
+    },
+    {
+      "url": "https://www.explorekctogether.com/this-weekend",
+      "edition": "November 27-29, 2026; actual live body read"
+    }
+  ],
+  "anchors": [
+    {
+      "id": "powell-lights",
+      "title": "Evergy Festival of Lights",
+      "title_pattern": "Evergy Festival of Lights",
+      "official_url": "https://powellgardens.org/festival-of-lights/",
+      "evidence": "Official 2026-2027 festival expressly lists November 27-29 opening dates. Both current sensors link to this producer."
+    },
+    {
+      "id": "holiday-reflections",
+      "title": "Holiday Reflections",
+      "title_pattern": "Holiday Reflections",
+      "official_url": "https://unionstation.org/event/holiday-reflections/",
+      "evidence": "Official November 20, 2026-January 4, 2027 run and daily 10 a.m.-8 p.m. hours; November 26 closed, November 28-29 not among exceptions."
+    },
+    {
+      "id": "christmas-carol",
+      "title": "A Christmas Carol",
+      "title_pattern": "^A Christmas Carol$",
+      "official_url": "https://kcrep.org/event/a-christmas-carol/",
+      "evidence": "Official November 21-December 24, 2026 run; explicitly refers to November 28 2 p.m. performance. No daily performance schedule invented."
+    }
+  ]
+}

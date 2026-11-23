@@ -1995,6 +1995,114 @@
           "relationship": "Reviewed first-party detail linked from exhibition index"
         }
       ]
+    },
+    {
+      "id": "lawrence-indoor-aquatic",
+      "name": "Lawrence Indoor Aquatic Center",
+      "url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center",
+      "region": "Lawrence",
+      "city": "Lawrence",
+      "kind": "organizer",
+      "format": "reviewed-capture",
+      "pattern": "/",
+      "max_details": 0,
+      "categories": [
+        "sports_participation",
+        "fitness_wellness",
+        "play_attractions",
+        "adaptive_inclusive"
+      ],
+      "activity_kinds": [
+        "evergreen"
+      ],
+      "reviewed_at": "2026-11-23",
+      "required_text": [
+        "Indoor Aquatic Center",
+        "year-round swimming",
+        "4706 Overland Drive",
+        "a separate family pool with zero-depth entry"
+      ],
+      "captures": [
+        {
+          "name": "Year-round swimming at Lawrence Indoor Aquatic Center",
+          "location": {
+            "name": "Lawrence Indoor Aquatic Center"
+          },
+          "description": "Year-round lap swimming and a separate family pool. Family-area hours differ from lap swimming and registration-office hours; see the place/amenity schedules. Admission and program availability need confirmation.",
+          "_schedule": {
+            "kind": "evergreen",
+            "start_date": null,
+            "end_date": null,
+            "note": "Permanent offering, not guaranteed access on a selected date. Place and amenity hours, closures, admission and any participation restrictions remain separate."
+          }
+        }
+      ],
+      "required_leaves": [
+        "amenity-specific access and hours",
+        "seasonal and holiday exceptions",
+        "admission and registration",
+        "explicit age and accessibility evidence"
+      ],
+      "discovery_evidence": [
+        {
+          "url": "https://www.lawrenceks.gov/City/PRC/Programs-Activities",
+          "relationship": "Targeted municipal fitness search"
+        }
+      ]
+    },
+    {
+      "id": "midway-mini-golf",
+      "name": "Midway Golf & Games miniature golf",
+      "url": "https://midwaygolfgames.com/golf/miniature-golf/",
+      "region": "Columbia",
+      "city": "Columbia",
+      "kind": "organizer",
+      "format": "reviewed-capture",
+      "pattern": "/",
+      "max_details": 0,
+      "categories": [
+        "outdoor_recreation",
+        "play_attractions",
+        "games_hobbies",
+        "adaptive_inclusive"
+      ],
+      "activity_kinds": [
+        "evergreen"
+      ],
+      "reviewed_at": "2026-11-23",
+      "required_text": [
+        "18-hole miniature golf course",
+        "The entire course is ADA accessible",
+        "Children 4 and under free with paid adult",
+        "5500 W Van Horn Tavern Rd"
+      ],
+      "captures": [
+        {
+          "name": "Accessible outdoor miniature golf at Midway",
+          "location": {
+            "name": "Midway Golf & Games"
+          },
+          "description": "Outdoor, ADA-accessible 18-hole miniature golf. Clubs and balls provided; typical round 45-60 minutes. Children 4 and under free with paid adult. Confirm current conditions, admission and seasonal hours.",
+          "_schedule": {
+            "kind": "evergreen",
+            "start_date": null,
+            "end_date": null,
+            "note": "Permanent offering, not guaranteed access on a selected date. Place and amenity hours, closures, admission and any participation restrictions remain separate."
+          }
+        }
+      ],
+      "required_leaves": [
+        "amenity-specific access and hours",
+        "seasonal and holiday exceptions",
+        "admission and registration",
+        "explicit age and accessibility evidence"
+      ],
+      "discovery_evidence": [
+        {
+          "url": "https://midwaygolfgames.com/play-here/",
+          "relationship": "Organizer recreation directory links to this specific mini-golf offering"
+        }
+      ]
     }
   ]
 }

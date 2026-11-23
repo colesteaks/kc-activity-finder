@@ -1,0 +1,311 @@
+{
+  "id": "2026-W48",
+  "iso_week": "2026-W48",
+  "started_at": "2026-11-23T14:36:20+00:00",
+  "updated_at": "2026-11-23T08:46:57.118676-06:00",
+  "status": "promoted_yield_pending",
+  "base_commit": "f0d6c14",
+  "baseline": {
+    "routes": 54,
+    "records": 3522,
+    "unique_offerings": 1101,
+    "coverage_cells": {
+      "collecting": 45,
+      "route_only": 24,
+      "gap": 41
+    },
+    "activity_kinds": {
+      "date_range_unknown": 49,
+      "exhibit": 55,
+      "one_off": 3409,
+      "recurring_program": 3,
+      "program_catalog": 2,
+      "evergreen": 4
+    },
+    "stale_records": 344,
+    "places": 10,
+    "unmapped_offerings": 668,
+    "unreviewed_proposals": 5159
+  },
+  "budgets": {
+    "candidate_links": 12,
+    "gap_searches": 6,
+    "page_visits": 24,
+    "link_depth": 2,
+    "links_per_host": 2,
+    "sources_to_promote": 5,
+    "adapter_pull_requests": 1,
+    "target_minutes": 30
+  },
+  "usage": {
+    "candidate_links": 12,
+    "gap_searches": 6,
+    "page_visits": 22,
+    "maximum_link_depth": 2,
+    "source_promotions": 2,
+    "adapter_pull_requests": 1
+  },
+  "accepted_source_ids": [
+    "lawrence-indoor-aquatic",
+    "midway-mini-golf"
+  ],
+  "commit_urls": [],
+  "pull_request_urls": [],
+  "existing_maintainer_pull_requests_at_start": [
+    "https://github.com/colesteaks/kc-activity-finder/pull/1",
+    "https://github.com/colesteaks/kc-activity-finder/pull/2"
+  ],
+  "yield_status": "Individual source probes pending; no observed production gain yet",
+  "observed_gains": {
+    "new_unique_offerings": 0
+  },
+  "place_changes": [
+    {
+      "id": "lawrence-indoor-aquatic",
+      "change": "Separate lap/family/workout hours and holiday closures; no general building hours inferred. Warm-water age 16 applies to that amenity only. Thanksgiving dates resolved against current 2026 calendar; page supplies November dates/weekday and upcoming 2027 maintenance reference."
+    },
+    {
+      "id": "midway-mini-golf",
+      "change": "Verified ADA-accessible course, conditional child pricing, outdoor-attraction hours, equipment and duration; restaurant hours separate."
+    },
+    {
+      "id": "momentary",
+      "change": "Verified lobby/gallery hours and holiday closures; Green, concerts and food/drink schedules kept distinct. Coordinates and their timestamp unchanged."
+    }
+  ],
+  "recall": {
+    "benchmark": "data/recall-benchmarks/kc-weekend-2026-11-28.json",
+    "status": "3/3 existing ongoing anchors captured; full future-edition comparison pending",
+    "limitation": "Small ongoing-anchor regression sample only, not full-weekend recall. The latest KC Daily edition is November 20-22; its long-running leads are included only after official pages verify November 28 participation. Independent roundup is November 27-29. Do not present these as matching newsletter editions or a complete benchmark.",
+    "result": {
+      "benchmark": "kc-weekend-2026-11-28",
+      "region": "Kansas City metro",
+      "window": {
+        "start": "2026-11-28",
+        "end": "2026-11-29"
+      },
+      "applicable": true,
+      "captured_anchors": 3,
+      "expected_anchors": 3,
+      "weekend_records": 139,
+      "distinct_weekend_offerings": 97,
+      "results": [
+        {
+          "id": "powell-lights",
+          "title": "Evergy Festival of Lights",
+          "status": "captured",
+          "record_ids": [
+            "b7e06299a7f1bbb46e24",
+            "160e423f7becb48ca425"
+          ],
+          "source_urls": [
+            "https://www.visitkc.com/events/evergy-festival-of-lights/"
+          ],
+          "followup": null
+        },
+        {
+          "id": "holiday-reflections",
+          "title": "Holiday Reflections",
+          "status": "captured",
+          "record_ids": [
+            "aea142b4c7d1e5fc0f2d",
+            "904dda72d4e9d87cb597"
+          ],
+          "source_urls": [
+            "https://www.visitkc.com/events/holiday-reflections/"
+          ],
+          "followup": null
+        },
+        {
+          "id": "christmas-carol",
+          "title": "A Christmas Carol",
+          "status": "captured",
+          "record_ids": [
+            "d0d32849213f079b8329",
+            "6ca1c7fdf495afd26716"
+          ],
+          "source_urls": [
+            "https://www.visitkc.com/events/a-christmas-carol/"
+          ],
+          "followup": null
+        }
+      ],
+      "note": "Named roundup-anchor recall only. A captured listing is not proof of live availability or a claim to include every possible activity."
+    },
+    "next_review_after": "2026-11-26"
+  },
+  "daily_actions_at_start": [
+    {
+      "id": 45055832244,
+      "conclusion": "failure",
+      "collection_and_validation": "success",
+      "publication": "Deploy failed: no github-pages artifact found"
+    },
+    {
+      "id": 44933456308,
+      "conclusion": "failure",
+      "collection_and_validation": "success",
+      "publication": "Deploy failed: no github-pages artifact found"
+    }
+  ],
+  "coverage_limitations": [
+    "Two evergreen offerings, not new sports seasons or individual classes.",
+    "Pool overall hours unknown; only individual amenities get machine-readable water schedules.",
+    "No numeric participant ages inferred from family/adult descriptions or child pricing.",
+    "New places have verified addresses but unknown coordinates; do not invent map points.",
+    "Latest KC Daily edition and independent roundup cover different weekends. The new benchmark tests three officially verified ongoing anchors, not complete weekend recall.",
+    "Downtown adapter remains in a focused PR; no production gains claimed for unmerged code.",
+    "Original seed, current PUBLIC visibility, existing activity identities and GitHub Pages hosting preserved.",
+    "No access challenges or 521 errors bypassed."
+  ],
+  "verification": {
+    "main_python_tests": 100,
+    "browser_filter_and_place_scripts": "pass",
+    "repo_validation": "pass",
+    "public_data_validation": "pass",
+    "diff_check": "pass",
+    "original_seed_sha256": "0a268fbfd2c4098c22795598bd4b11fa81809878f0928e9469945e1d479627d3"
+  },
+  "research_visits": [
+    {
+      "key": "roundup",
+      "url": "https://www.kcdaily.com/p/weekend-roundup",
+      "observed_at": "2026-11-23T08:38:13.606553-06:00"
+    },
+    {
+      "key": "independent",
+      "url": "https://www.explorekctogether.com/this-weekend",
+      "observed_at": "2026-11-23T08:38:15.248658-06:00"
+    },
+    {
+      "key": "downtown",
+      "url": "https://downtownbentonville.org/events/calendar",
+      "observed_at": "2026-11-23T08:38:16.318293-06:00"
+    },
+    {
+      "key": "op-park",
+      "url": "https://www.opkansas.org/recreation-fun/parks-trails/parks/bb-park",
+      "observed_at": "2026-11-23T08:38:17.538290-06:00",
+      "error": "Cross-host redirect requires source registry review"
+    },
+    {
+      "key": "naturals",
+      "url": "https://www.milb.com/northwest-arkansas/schedule/downloadable-schedule",
+      "observed_at": "2026-11-23T08:38:18.339299-06:00"
+    },
+    {
+      "key": "momentary-hours",
+      "url": "https://themomentary.org/plan-your-visit/",
+      "observed_at": "2026-11-23T08:38:20.227083-06:00"
+    },
+    {
+      "key": "farmers-detail",
+      "url": "https://downtownbentonville.org/do/bentonville-farmers-market-indoor-season-1",
+      "observed_at": "2026-11-23T08:39:28.862157-06:00"
+    },
+    {
+      "key": "nye-detail",
+      "url": "https://downtownbentonville.org/do/new-years-eve-2026",
+      "observed_at": "2026-11-23T08:39:30.119515-06:00"
+    },
+    {
+      "key": "pool",
+      "url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center",
+      "observed_at": "2026-11-23T08:39:30.543167-06:00"
+    },
+    {
+      "key": "midway",
+      "url": "https://midwaygolfgames.com/play-here/",
+      "observed_at": "2026-11-23T08:39:33.421971-06:00"
+    },
+    {
+      "key": "adaptive",
+      "url": "https://www.as-gkc.net/",
+      "observed_at": "2026-11-23T08:39:44.016886-06:00",
+      "error": "HTTP Error 521: Unknown"
+    },
+    {
+      "key": "guild",
+      "url": "https://rpgkc.org/resources/regular-meetups",
+      "observed_at": "2026-11-23T08:39:45.322647-06:00",
+      "error": "Access challenge: source needs an offered feed or manual review, not an empty calendar"
+    },
+    {
+      "key": "powell",
+      "url": "https://powellgardens.org/festival-of-lights/",
+      "observed_at": "2026-11-23T08:39:45.823030-06:00"
+    },
+    {
+      "key": "reflections",
+      "url": "https://unionstation.org/event/holiday-reflections/",
+      "observed_at": "2026-11-23T08:39:46.945688-06:00"
+    },
+    {
+      "key": "carol",
+      "url": "https://kcrep.org/event/a-christmas-carol/",
+      "observed_at": "2026-11-23T08:39:48.689399-06:00"
+    },
+    {
+      "key": "op-canonical",
+      "url": "https://www.opkansas.gov/recreation-fun/parks-trails/parks/bb-park",
+      "observed_at": "2026-11-23T08:40:53.570920-06:00"
+    },
+    {
+      "key": "midway-mini",
+      "url": "https://midwaygolfgames.com/golf/miniature-golf/",
+      "observed_at": "2026-11-23T08:40:56.055821-06:00"
+    },
+    {
+      "url": "https://www.opkansas.org/recreation-fun/parks-trails/parks/bb-park",
+      "error": "Web connector reported redirect to canonical .gov host inaccessible through that tool; actual destination independently reviewed."
+    },
+    {
+      "url": "https://img.mlbstatic.com/milb-images/image/upload/milb/gqcjalxbul3eht532ofa.pdf",
+      "error": "PDF inaccessible through web connector; no PDF dates/home-away facts claimed."
+    },
+    {
+      "url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center",
+      "purpose": "individual existing-adapter promotion probe",
+      "visited_count": 1
+    },
+    {
+      "url": "https://midwaygolfgames.com/golf/miniature-golf/",
+      "purpose": "individual existing-adapter promotion probe",
+      "visited_count": 1
+    },
+    {
+      "url": "https://downtownbentonville.org/events/calendar",
+      "purpose": "bounded live proposed-adapter probe",
+      "visited_count": 1
+    }
+  ],
+  "review_counts": {
+    "accepted": 2,
+    "adapter_needed": 1,
+    "deferred": 5,
+    "rejected": 4
+  },
+  "searches": [
+    "Bentonville festivals fairs holiday seasonal celebrations official programs calendar registration",
+    "Kansas City surrounding areas meetups cultural community social clubs official programs calendar registration",
+    "Kansas City metro adaptive sports inclusive recreation sensory friendly ASL official programs calendar registration",
+    "Lawrence fitness yoga swimming martial arts wellness official programs calendar registration",
+    "Columbia Missouri playgrounds indoor play amusement escape rooms mini golf official programs calendar registration",
+    "Bentonville concerts theater dance opera comedy official programs calendar registration"
+  ],
+  "budget_accounting": "19 inspected source pages including denied/redirect/PDF attempts, plus two individual promotion probes and one adapter probe = 22. Robots checks, GitHub/CI, live publication verification and the single production workflow are separate.",
+  "probe_result": {
+    "new_unique_offerings": 2,
+    "normalized_records": 2,
+    "evergreen_offerings": 2,
+    "validation": "Both individually probed using existing guarded adapter; all records validated against public schema. No existing canonical URL or named offering duplicated."
+  },
+  "adapter_probe": {
+    "normalized_records": 10,
+    "unique_offerings": 4,
+    "status": "partial; visible calendar cards only",
+    "production_yield": "pending PR review/merge; zero adapter production gain claimed",
+    "unknown_age_records": 10
+  },
+  "publication_blocker_at_start": "Actions logs confirm github-pages.zip artifact 14767254101 uploaded/finalized successfully, then deploy-pages immediately found zero artifacts. No hosting/access changes made; fresh production run will be measured."
+}

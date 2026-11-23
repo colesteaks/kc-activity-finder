@@ -326,7 +326,48 @@
         "checked_at": "2026-11-07T09:17:40.572854-06:00",
         "note": "Coordinates from the Apple Maps directions link published by the venue."
       },
-      "hours": null,
+      "hours": {
+        "text": "Lobby and galleries: Tuesday-Thursday/Sunday 10 a.m.-6 p.m.; Friday/Saturday 10 a.m.-8 p.m.; Monday, Thanksgiving and Christmas closed. These are lobby/gallery hours only: concerts, Tower Bar, food/drink and the Green have separate schedules. The Green is open daily; clock hours not published.",
+        "timezone": "America/Chicago",
+        "rules": [
+          {
+            "days": [
+              1,
+              2,
+              3,
+              6
+            ],
+            "opens": "10:00",
+            "closes": "18:00",
+            "scope": "visitor"
+          },
+          {
+            "days": [
+              4,
+              5
+            ],
+            "opens": "10:00",
+            "closes": "20:00",
+            "scope": "visitor"
+          }
+        ],
+        "exceptions": [
+          {
+            "date": "2026-11-26",
+            "closed": true,
+            "note": "Thanksgiving: lobby and galleries closed."
+          },
+          {
+            "date": "2026-12-25",
+            "closed": true,
+            "note": "Christmas: lobby and galleries closed."
+          }
+        ],
+        "complete_week": true,
+        "source_url": "https://themomentary.org/plan-your-visit/",
+        "checked_at": "2026-11-23T08:46:57.118676-06:00",
+        "notice": "Published schedules are not live access, closure, capacity or admission confirmation."
+      },
       "activities": [],
       "source_url": "https://themomentary.org/plan-your-visit/",
       "match": {
@@ -621,6 +662,291 @@
         ],
         "venue_aliases": [
           "William Guitar Little Missouri Gallery of Art"
+        ]
+      }
+    },
+    {
+      "id": "lawrence-indoor-aquatic",
+      "name": "Lawrence Indoor Aquatic Center",
+      "address": "4706 Overland Drive, Lawrence, KS",
+      "geo": null,
+      "source_url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center",
+      "hours": {
+        "text": "No general building schedule published here. Registration office Monday-Friday 8 a.m.-5 p.m. is not public swimming access. Lap, family, diving and workout schedules differ; use each amenity. Closed November 26-27, 2026.",
+        "timezone": "America/Chicago",
+        "rules": [],
+        "exceptions": [],
+        "complete_week": false,
+        "source_url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center",
+        "checked_at": "2026-11-23T08:46:57.118676-06:00",
+        "notice": "Published schedules are not live access, closure, capacity or admission confirmation."
+      },
+      "activities": [
+        {
+          "id": "lap-swimming",
+          "name": "Lap swimming",
+          "availability": "admission_required",
+          "hours": {
+            "text": "Monday-Friday 6:30 a.m.-12:45 p.m. and 4-7:30 p.m.; Saturday 9 a.m.-5 p.m.; Sunday 1-5 p.m. Competition events can alter access.",
+            "timezone": "America/Chicago",
+            "rules": [
+              {
+                "days": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "opens": "06:30",
+                "closes": "12:45",
+                "scope": "visitor"
+              },
+              {
+                "days": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "opens": "16:00",
+                "closes": "19:30",
+                "scope": "visitor"
+              },
+              {
+                "days": [
+                  5
+                ],
+                "opens": "09:00",
+                "closes": "17:00",
+                "scope": "visitor"
+              },
+              {
+                "days": [
+                  6
+                ],
+                "opens": "13:00",
+                "closes": "17:00",
+                "scope": "visitor"
+              }
+            ],
+            "exceptions": [
+              {
+                "date": "2026-11-25",
+                "closed": false,
+                "rules": [
+                  {
+                    "days": [
+                      2
+                    ],
+                    "opens": "06:30",
+                    "closes": "12:45",
+                    "scope": "visitor"
+                  }
+                ],
+                "note": "Thanksgiving-week Wednesday schedule. Year resolved from current November calendar and page reference to upcoming 2027 maintenance."
+              },
+              {
+                "date": "2026-11-26",
+                "closed": true,
+                "note": "Thanksgiving-week closure."
+              },
+              {
+                "date": "2026-11-27",
+                "closed": true,
+                "note": "Thanksgiving-week closure."
+              }
+            ],
+            "complete_week": true,
+            "source_url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center",
+            "checked_at": "2026-11-23T08:46:57.118676-06:00",
+            "notice": "Published schedules are not live access, closure, capacity or admission confirmation."
+          },
+          "note": "Water areas close 15 minutes before the building closes; published area schedule does not establish building hours. Verify admission and competition reservations.",
+          "source_url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+        },
+        {
+          "id": "family-pool",
+          "name": "Zero-depth family pool, waterslide and children\u2019s area",
+          "availability": "admission_required",
+          "hours": {
+            "text": "Monday-Thursday closed; Friday 4-7:30 p.m.; Saturday/Sunday 1-5 p.m. Waterslide/diving areas close 30 minutes before building closure.",
+            "timezone": "America/Chicago",
+            "rules": [
+              {
+                "days": [
+                  4
+                ],
+                "opens": "16:00",
+                "closes": "19:30",
+                "scope": "visitor"
+              },
+              {
+                "days": [
+                  5,
+                  6
+                ],
+                "opens": "13:00",
+                "closes": "17:00",
+                "scope": "visitor"
+              }
+            ],
+            "exceptions": [
+              {
+                "date": "2026-11-25",
+                "closed": false,
+                "rules": [
+                  {
+                    "days": [
+                      2
+                    ],
+                    "opens": "10:00",
+                    "closes": "12:45",
+                    "scope": "visitor"
+                  }
+                ],
+                "note": "Thanksgiving-week Wednesday schedule. Year resolved from current November calendar and page reference to upcoming 2027 maintenance."
+              },
+              {
+                "date": "2026-11-26",
+                "closed": true,
+                "note": "Thanksgiving-week closure."
+              },
+              {
+                "date": "2026-11-27",
+                "closed": true,
+                "note": "Thanksgiving-week closure."
+              }
+            ],
+            "complete_week": true,
+            "source_url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center",
+            "checked_at": "2026-11-23T08:46:57.118676-06:00",
+            "notice": "Published schedules are not live access, closure, capacity or admission confirmation."
+          },
+          "note": "Separate from lap swimming. Waterslide and diving hours have closing buffers; current maintenance, supervision and admission rules require confirmation.",
+          "source_url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+        },
+        {
+          "id": "warm-water-workouts",
+          "name": "Warm Water Workouts (ages 16 and older)",
+          "availability": "admission_required",
+          "hours": {
+            "text": "Monday-Friday 10:45 a.m.-12:45 p.m.; Thanksgiving-week Wednesday 8-10 a.m.",
+            "timezone": "America/Chicago",
+            "rules": [
+              {
+                "days": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "opens": "10:45",
+                "closes": "12:45",
+                "scope": "visitor"
+              }
+            ],
+            "exceptions": [
+              {
+                "date": "2026-11-25",
+                "closed": false,
+                "rules": [
+                  {
+                    "days": [
+                      2
+                    ],
+                    "opens": "08:00",
+                    "closes": "10:00",
+                    "scope": "visitor"
+                  }
+                ],
+                "note": "Thanksgiving-week Wednesday schedule. Year resolved from current November calendar and page reference to upcoming 2027 maintenance."
+              },
+              {
+                "date": "2026-11-26",
+                "closed": true,
+                "note": "Thanksgiving-week closure."
+              },
+              {
+                "date": "2026-11-27",
+                "closed": true,
+                "note": "Thanksgiving-week closure."
+              }
+            ],
+            "complete_week": true,
+            "source_url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center",
+            "checked_at": "2026-11-23T08:46:57.118676-06:00",
+            "notice": "Published schedules are not live access, closure, capacity or admission confirmation."
+          },
+          "note": "Source explicitly states ages 16 and older for this workout only; do not apply that limit to other pool areas.",
+          "source_url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+        }
+      ],
+      "match": {
+        "source_ids": [
+          "lawrence-indoor-aquatic"
+        ],
+        "venue_aliases": [
+          "Lawrence Indoor Aquatic Center"
+        ]
+      }
+    },
+    {
+      "id": "midway-mini-golf",
+      "name": "Midway Golf & Games miniature golf",
+      "address": "5500 W Van Horn Tavern Rd, Columbia, MO 65203",
+      "geo": null,
+      "source_url": "https://midwaygolfgames.com/golf/miniature-golf/",
+      "hours": {
+        "text": "Clubhouse/outdoor attractions: Sunday-Thursday 10 a.m.-9 p.m.; Friday/Saturday 10 a.m.-10 p.m. Published hours can change throughout the year; restaurant hours are separate.",
+        "timezone": "America/Chicago",
+        "rules": [
+          {
+            "days": [
+              0,
+              1,
+              2,
+              3,
+              6
+            ],
+            "opens": "10:00",
+            "closes": "21:00",
+            "scope": "visitor"
+          },
+          {
+            "days": [
+              4,
+              5
+            ],
+            "opens": "10:00",
+            "closes": "22:00",
+            "scope": "visitor"
+          }
+        ],
+        "exceptions": [],
+        "complete_week": true,
+        "source_url": "https://midwaygolfgames.com/golf/miniature-golf/",
+        "checked_at": "2026-11-23T08:46:57.118676-06:00",
+        "notice": "Published schedules are not live access, closure, capacity or admission confirmation."
+      },
+      "activities": [
+        {
+          "id": "mini-golf",
+          "name": "ADA-accessible 18-hole outdoor miniature golf",
+          "availability": "admission_required",
+          "hours": null,
+          "note": "Clubs/balls provided; round approximately 45-60 minutes. Standard listed price $12.50/person; children 4 and under free with paid adult. ADA-accessible course does not establish access to every other attraction. Outdoor conditions and seasonal hours require confirmation.",
+          "source_url": "https://midwaygolfgames.com/golf/miniature-golf/"
+        }
+      ],
+      "match": {
+        "source_ids": [
+          "midway-mini-golf"
+        ],
+        "venue_aliases": [
+          "Midway Golf & Games"
         ]
       }
     }
