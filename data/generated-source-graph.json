@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-22T12:34:52.645007-06:00",
+  "generated_at": "2026-11-23T08:50:22.755648-06:00",
   "seed_sha256": "0a268fbfd2c4098c22795598bd4b11fa81809878f0928e9469945e1d479627d3",
   "authority": "data/source-graph.json",
   "approved_registry": "data/collection-sources.json",
@@ -1476,6 +1476,70 @@
       "place_ids": [
         "shsmo-columbia-gallery"
       ]
+    },
+    {
+      "id": "lawrence-indoor-aquatic",
+      "label": "Lawrence Indoor Aquatic Center",
+      "url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center",
+      "role": "organizer",
+      "region": "Lawrence",
+      "categories": [
+        "sports_participation",
+        "fitness_wellness",
+        "play_attractions",
+        "adaptive_inclusive"
+      ],
+      "activity_kinds": [
+        "evergreen"
+      ],
+      "required_leaves": [
+        "amenity-specific access and hours",
+        "seasonal and holiday exceptions",
+        "admission and registration",
+        "explicit age and accessibility evidence"
+      ],
+      "discovery_evidence": [
+        {
+          "url": "https://www.lawrenceks.gov/City/PRC/Programs-Activities",
+          "relationship": "Targeted municipal fitness search"
+        }
+      ],
+      "provenance": "reviewed-supplement",
+      "place_ids": [
+        "lawrence-indoor-aquatic"
+      ]
+    },
+    {
+      "id": "midway-mini-golf",
+      "label": "Midway Golf & Games miniature golf",
+      "url": "https://midwaygolfgames.com/golf/miniature-golf/",
+      "role": "organizer",
+      "region": "Columbia",
+      "categories": [
+        "outdoor_recreation",
+        "play_attractions",
+        "games_hobbies",
+        "adaptive_inclusive"
+      ],
+      "activity_kinds": [
+        "evergreen"
+      ],
+      "required_leaves": [
+        "amenity-specific access and hours",
+        "seasonal and holiday exceptions",
+        "admission and registration",
+        "explicit age and accessibility evidence"
+      ],
+      "discovery_evidence": [
+        {
+          "url": "https://midwaygolfgames.com/play-here/",
+          "relationship": "Organizer recreation directory links to this specific mini-golf offering"
+        }
+      ],
+      "provenance": "reviewed-supplement",
+      "place_ids": [
+        "midway-mini-golf"
+      ]
     }
   ],
   "edges": [
@@ -1523,12 +1587,6 @@
     },
     {
       "from": "kc-daily",
-      "to_url": "https://www.kcdaily.com/p/thank-a-veteran-b611",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/archive"
-    },
-    {
-      "from": "kc-daily",
       "to_url": "https://www.kcdaily.com/guides",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.kcdaily.com/archive?page=2"
@@ -1536,6 +1594,12 @@
     {
       "from": "kc-daily",
       "to_url": "https://kcdaily.dnnr.io",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/archive?page=2"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.kcdaily.com/p/thank-a-veteran-b611",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.kcdaily.com/archive?page=2"
     },
@@ -1559,9 +1623,153 @@
     },
     {
       "from": "kc-daily",
-      "to_url": "https://www.kcdaily.com/p/kc-daily-live-on-stage",
+      "to_url": "https://www.youtube.com/watch?v=AinuJGdv3j4",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/march-of-the-champions"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.kansascitycurrent.com/2026-champions-march",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/march-of-the-champions"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://seatgeek.com/kansas-city-current-tickets/national-womens-soccer/2026-11-24-11-am/18778333",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/march-of-the-champions"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://theparkhotelkc.com",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/march-of-the-champions"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.google.com/maps/search/4600+Mill+Creek+Pkwy,+Kansas+City,+MO+64112",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/march-of-the-champions"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.instagram.com/p/Df5SzgBj3jx",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/march-of-the-champions"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.hilton.com/en/hotels/mkccbup-the-park-hotel-on-the-plaza-kansas-city",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/march-of-the-champions"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.teaconnect.org/recipients/33rd-annual-thea-award-recipients",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/march-of-the-champions"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://maps.app.goo.gl/LbW2YZhrx8djUnAm9",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/march-of-the-champions"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.rabbitholekc.org",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/march-of-the-champions"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.restoathletic.com",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/march-of-the-champions"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.instagram.com/p/Df95EyqICLe?hl=en&img_index=1",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/march-of-the-champions"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.facebook.com/ALIBI.KC",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/march-of-the-champions"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.google.com/maps/place/7908+State+Ave,+Kansas+City,+KS+66112/@39.1168517,-94.7645282,306m/data=!3m1!1e3!4m6!3m5!1s0x87c08cf47c34433f:0x450a3121497ba9d9!8m2!3d39.1168876!4d-94.7643807!16s%2Fg%2F11bw3z_8ww?entry=ttu&g_ep=EgoyMDI2MTExNy4wIKXMDSoASAFQAw%3D%3D",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/march-of-the-champions"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.kctv5.com/2026/11/20/frontier-launches-nonstop-flights-kansas-city-orlando",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/march-of-the-champions"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.instagram.com/kansascitydaily",
+      "relationship": "unreviewed-newsletter-link",
+      "observed_on": "https://www.kcdaily.com/p/march-of-the-champions"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.kcdaily.com/guides",
       "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/archive?page=2"
+      "observed_on": "https://www.kcdaily.com/p/march-of-the-champions"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://kcdaily.dnnr.io",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/march-of-the-champions"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://seatgeek.com/kansas-city-current-tickets/national-womens-soccer/2026-11-24-11-am/18778333",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/march-of-the-champions"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://theparkhotelkc.com",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/march-of-the-champions"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.hilton.com/en/hotels/mkccbup-the-park-hotel-on-the-plaza-kansas-city",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/march-of-the-champions"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.restoathletic.com?utm_source=kcdaily&utm_medium=paid_newsletter&utm_campaign=kcdaily_sponsored_nov11232026&utm_content=dailypick2",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/march-of-the-champions"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://tally.so/r/7RKjYa",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/march-of-the-champions"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://kcdaily.dnnr.io",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/march-of-the-champions"
+    },
+    {
+      "from": "kc-daily",
+      "to_url": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.kcdaily.com/p/march-of-the-champions"
     },
     {
       "from": "kc-daily",
@@ -4612,114 +4820,6 @@
       "observed_on": "https://www.kcdaily.com/p/kansas-city-s-best-holiday-pop-up-bars-in-2026"
     },
     {
-      "from": "kc-daily",
-      "to_url": "https://www.theaterleague.org",
-      "relationship": "unreviewed-newsletter-link",
-      "observed_on": "https://www.kcdaily.com/p/kc-daily-live-on-stage"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.newtheatre.com",
-      "relationship": "unreviewed-newsletter-link",
-      "observed_on": "https://www.kcdaily.com/p/kc-daily-live-on-stage"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://musictheaterheritage.com",
-      "relationship": "unreviewed-newsletter-link",
-      "observed_on": "https://www.kcdaily.com/p/kc-daily-live-on-stage"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://kcrep.org",
-      "relationship": "unreviewed-newsletter-link",
-      "observed_on": "https://www.kcdaily.com/p/kc-daily-live-on-stage"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://tya.org",
-      "relationship": "unreviewed-newsletter-link",
-      "observed_on": "https://www.kcdaily.com/p/kc-daily-live-on-stage"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://thecoterie.org",
-      "relationship": "unreviewed-newsletter-link",
-      "observed_on": "https://www.kcdaily.com/p/kc-daily-live-on-stage"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://unicorntheatre.org",
-      "relationship": "unreviewed-newsletter-link",
-      "observed_on": "https://www.kcdaily.com/p/kc-daily-live-on-stage"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.kcdaily.com/guides",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/kc-daily-live-on-stage"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://kcdaily.dnnr.io",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/kc-daily-live-on-stage"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.theaterleague.org",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/kc-daily-live-on-stage"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.newtheatre.com",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/kc-daily-live-on-stage"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://musictheaterheritage.com",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/kc-daily-live-on-stage"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://kcrep.org",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/kc-daily-live-on-stage"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.newtheatre.com",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/kc-daily-live-on-stage"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://tya.org",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/kc-daily-live-on-stage"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://thecoterie.org",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/kc-daily-live-on-stage"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://unicorntheatre.org",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/kc-daily-live-on-stage"
-    },
-    {
-      "from": "kc-daily",
-      "to_url": "https://www.kcdaily.com/p/12-must-visit-museums-in-kansas-city",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.kcdaily.com/p/kc-daily-live-on-stage"
-    },
-    {
       "from": "lawrence-arts",
       "to_url": "https://lawrenceartscenter.org/events-at-lawrence-arts-center",
       "relationship": "unreviewed-outbound-link",
@@ -5399,12 +5499,6 @@
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/special-exhibition-tour-grandma-moses-a-good-days-work",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
-    },
-    {
-      "from": "crystal-bridges",
       "to_url": "https://crystalbridges.org/events/many-ways-of-seeing-the-alfred-stieglitz-collection",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
@@ -5447,6 +5541,18 @@
     },
     {
       "from": "crystal-bridges",
+      "to_url": "https://crystalbridges.org/events/special-exhibition-tour-grandma-moses-a-good-days-work",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
+    },
+    {
+      "from": "crystal-bridges",
+      "to_url": "https://crystalbridges.org/events/museum-store-sunday",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
+    },
+    {
+      "from": "crystal-bridges",
       "to_url": "https://crystalbridges.org/events/2025-drop-in-tour-architecture",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
@@ -5460,12 +5566,6 @@
     {
       "from": "crystal-bridges",
       "to_url": "https://crystalbridges.org/events/2025-drop-in-tour-collection-highlights",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
-    },
-    {
-      "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/fall-break-fun",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
@@ -5490,18 +5590,6 @@
     {
       "from": "crystal-bridges",
       "to_url": "https://crystalbridges.org/events/keith-haring-in-3d",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
-    },
-    {
-      "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/museum-store-sunday",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
-    },
-    {
-      "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/special-exhibition-tour-grandma-moses-a-good-days-work",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
@@ -5544,6 +5632,12 @@
     {
       "from": "crystal-bridges",
       "to_url": "https://crystalbridges.org/events/exhibition-tour-keith-haring-in-3d",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
+    },
+    {
+      "from": "crystal-bridges",
+      "to_url": "https://crystalbridges.org/events/special-exhibition-tour-grandma-moses-a-good-days-work",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
@@ -5651,55 +5745,61 @@
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/frank-lloyd-wright-tours-self-guided?visitStart=2026-11-22&visitEnd=2026-11-28&selectedDate=2026-11-22",
+      "to_url": "https://crystalbridges.org/events/frank-lloyd-wright-tours-self-guided?visitStart=2026-11-23&visitEnd=2026-11-29&selectedDate=2026-11-23",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/frank-lloyd-wright-tours-guided?visitStart=2026-11-22&visitEnd=2026-11-28&selectedDate=2026-11-22",
+      "to_url": "https://crystalbridges.org/events/frank-lloyd-wright-tours-guided?visitStart=2026-11-23&visitEnd=2026-11-29&selectedDate=2026-11-23",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/grandma-moses-a-good-days-work?visitStart=2026-11-22&visitEnd=2026-11-28&selectedDate=2026-11-22",
+      "to_url": "https://crystalbridges.org/events/grandma-moses-a-good-days-work?visitStart=2026-11-23&visitEnd=2026-11-29&selectedDate=2026-11-23",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/keith-haring-in-3d?visitStart=2026-11-22&visitEnd=2026-11-28&selectedDate=2026-11-22",
+      "to_url": "https://crystalbridges.org/events/keith-haring-in-3d?visitStart=2026-11-23&visitEnd=2026-11-29&selectedDate=2026-11-23",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/fall-break-fun?visitStart=2026-11-22&visitEnd=2026-11-28&selectedDate=2026-11-22",
+      "to_url": "https://crystalbridges.org/events/many-ways-of-seeing-the-alfred-stieglitz-collection?visitStart=2026-11-23&visitEnd=2026-11-29&selectedDate=2026-11-23",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/2025-drop-in-tour-big-picture?visitStart=2026-11-22&visitEnd=2026-11-28&selectedDate=2026-11-22",
+      "to_url": "https://crystalbridges.org/events/nature-adorned-the-artistry-of-tiffany-and-co-and-the-american-imagination?visitStart=2026-11-23&visitEnd=2026-11-29&selectedDate=2026-11-23",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/2025-drop-in-tour-architecture?visitStart=2026-11-22&visitEnd=2026-11-28&selectedDate=2026-11-22",
+      "to_url": "https://crystalbridges.org/events/fall-break-fun?visitStart=2026-11-23&visitEnd=2026-11-29&selectedDate=2026-11-23",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/special-exhibition-tour-grandma-moses-a-good-days-work?visitStart=2026-11-22&visitEnd=2026-11-28&selectedDate=2026-11-22",
+      "to_url": "https://crystalbridges.org/events/2025-drop-in-tour-big-picture?visitStart=2026-11-23&visitEnd=2026-11-29&selectedDate=2026-11-23",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
     {
       "from": "crystal-bridges",
-      "to_url": "https://crystalbridges.org/events/2025-drop-in-tour-collection-highlights?visitStart=2026-11-22&visitEnd=2026-11-28&selectedDate=2026-11-22",
+      "to_url": "https://crystalbridges.org/events/2025-drop-in-tour-architecture?visitStart=2026-11-23&visitEnd=2026-11-29&selectedDate=2026-11-23",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://crystalbridges.org/calendar/2026-11/"
+    },
+    {
+      "from": "crystal-bridges",
+      "to_url": "https://crystalbridges.org/events/2025-drop-in-tour-collection-highlights?visitStart=2026-11-23&visitEnd=2026-11-29&selectedDate=2026-11-23",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://crystalbridges.org/calendar/2026-11/"
     },
@@ -5777,42 +5877,6 @@
     },
     {
       "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/event/nutcracker-tea-party",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/event/the-little-mermaid-jr-tryps-childrens-theater-show-3",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
       "to_url": "https://www.visitcolumbiamo.com/event/mizzou-mens-basketball-vs-cleveland-state-3-3",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitcolumbiamo.com/events/"
@@ -5849,24 +5913,6 @@
     },
     {
       "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/event/mizzou-mens-basketball-vs-arkansas-pine-bluff",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
       "to_url": "https://www.visitcolumbiamo.com/event/dope-ass-sneakers-the-blue-note",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitcolumbiamo.com/events/"
@@ -5885,7 +5931,7 @@
     },
     {
       "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/event/shattered-a-dance-party",
+      "to_url": "https://www.visitcolumbiamo.com/event/mizzou-mens-basketball-vs-arkansas-pine-bluff",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitcolumbiamo.com/events/"
     },
@@ -5904,6 +5950,24 @@
     {
       "from": "columbia-cvb",
       "to_url": "https://www.visitcolumbiamo.com/event/mizzou-football-vs-oklahoma",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/event/shattered-a-dance-party",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitcolumbiamo.com/events/"
     },
@@ -5993,43 +6057,79 @@
     },
     {
       "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/event/christmas-at-pierpont",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/event/the-nutcracker-tea-party",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
-      "to_url": "https://www.visitcolumbiamo.com/events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitcolumbiamo.com/events/"
-    },
-    {
-      "from": "columbia-cvb",
       "to_url": "https://www.visitcolumbiamo.com/event/state-historical-society-of-missouri-holiday-open-house",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/event/saturday-morning-science-because-chat-said-so",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/event/holiday-open-house-presented-by-state-historical-society-of-missouri",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/event/como-fire-flow",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitcolumbiamo.com/events/"
+    },
+    {
+      "from": "columbia-cvb",
+      "to_url": "https://www.visitcolumbiamo.com/event/columbia-farmers-market-winter-season-3-2",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitcolumbiamo.com/events/"
     },
@@ -7439,24 +7539,6 @@
     },
     {
       "from": "kc-library",
-      "to_url": "https://kclibrary.org/calendar/chess-game-day-19",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kclibrary.org/calendar"
-    },
-    {
-      "from": "kc-library",
-      "to_url": "https://kclibrary.org/calendar/sunday-game-spotlight-oregon-trail-2",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kclibrary.org/calendar"
-    },
-    {
-      "from": "kc-library",
-      "to_url": "https://kclibrary.org/calendar/movie-secret-garden",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kclibrary.org/calendar"
-    },
-    {
-      "from": "kc-library",
       "to_url": "https://kclibrary.org/calendar/bookmobile-center-developmentally-disabled-1",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://kclibrary.org/calendar"
@@ -7481,6 +7563,18 @@
     },
     {
       "from": "kc-library",
+      "to_url": "https://kclibrary.org/calendar/youth-art-parade-float-party",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kclibrary.org/calendar"
+    },
+    {
+      "from": "kc-library",
+      "to_url": "https://kclibrary.org/locations/trails-west",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kclibrary.org/calendar"
+    },
+    {
+      "from": "kc-library",
       "to_url": "https://kclibrary.org/calendar/monday-mid-day-meetup-9",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://kclibrary.org/calendar"
@@ -7493,13 +7587,25 @@
     },
     {
       "from": "kc-library",
-      "to_url": "https://kclibrary.org/calendar/youth-art-parade-float-party",
+      "to_url": "https://kclibrary.org/calendar/bookmobile-sam-rodgers-place-1",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kclibrary.org/calendar"
+    },
+    {
+      "from": "kc-library",
+      "to_url": "https://kclibrary.org/calendar/teen-dungeons-and-dragons-1",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://kclibrary.org/calendar"
     },
     {
       "from": "kc-library",
       "to_url": "https://kclibrary.org/locations/trails-west",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://kclibrary.org/calendar"
+    },
+    {
+      "from": "kc-library",
+      "to_url": "https://kclibrary.org/calendar/mixxedfit-35",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://kclibrary.org/calendar"
     },
@@ -10787,13 +10893,13 @@
     },
     {
       "from": "columbia-programs",
-      "to_url": "https://www.como.gov/trails/mkt-nature-and-fitness-trail",
+      "to_url": "https://www.como.gov/utilities/columbias-solid-waste-utility/single-family-home-trash-and-recycling",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.como.gov/parks-and-recreation/programs-registration/"
     },
     {
       "from": "columbia-programs",
-      "to_url": "https://www.como.gov/utilities/columbias-solid-waste-utility/single-family-home-trash-and-recycling",
+      "to_url": "https://www.como.gov/trails/mkt-nature-and-fitness-trail",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.como.gov/parks-and-recreation/programs-registration/"
     },
@@ -11789,13 +11895,13 @@
     },
     {
       "from": "columbia-parks",
-      "to_url": "https://www.como.gov/trails/mkt-nature-and-fitness-trail",
+      "to_url": "https://www.como.gov/utilities/columbias-solid-waste-utility/single-family-home-trash-and-recycling",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.como.gov/parks-and-recreation/"
     },
     {
       "from": "columbia-parks",
-      "to_url": "https://www.como.gov/utilities/columbias-solid-waste-utility/single-family-home-trash-and-recycling",
+      "to_url": "https://www.como.gov/trails/mkt-nature-and-fitness-trail",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.como.gov/parks-and-recreation/"
     },
@@ -13667,18 +13773,6 @@
     },
     {
       "from": "lawrence-library",
-      "to_url": "https://lawrence.bibliocommons.com/events/6adb83f9035faf0033de843b",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://lplks.org/events/"
-    },
-    {
-      "from": "lawrence-library",
-      "to_url": "https://lawrence.bibliocommons.com/events/6a72328cf213992f00c980a8",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://lplks.org/events/"
-    },
-    {
-      "from": "lawrence-library",
       "to_url": "https://lawrence.bibliocommons.com/events/6adfaf366fc53b826f262e0c",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://lplks.org/events/"
@@ -13692,6 +13786,18 @@
     {
       "from": "lawrence-library",
       "to_url": "https://lawrence.bibliocommons.com/events/6aaadcc8129d8e0031f2bb04",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://lplks.org/events/"
+    },
+    {
+      "from": "lawrence-library",
+      "to_url": "https://lawrence.bibliocommons.com/events/6a7203b033ca713c89d503e4",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://lplks.org/events/"
+    },
+    {
+      "from": "lawrence-library",
+      "to_url": "https://lawrence.bibliocommons.com/events/6a72047ba0b1bdf860d95a28",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://lplks.org/events/"
     },
@@ -14459,6 +14565,42 @@
     },
     {
       "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/glowild-hidden-treasure",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/holiday-reflections",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/the-berlin-wall-a-world-divided-exhibition-at-union-station-may-29-dec-13-2026",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
       "to_url": "https://www.visitkc.com/events/type/theatre",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
@@ -14466,6 +14608,18 @@
     {
       "from": "visitkc",
       "to_url": "https://www.visitkc.com/events/a-christmas-carol",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/holiday-activities",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/kcs-fav-holiday-light-party-at-winter-magic",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
@@ -14502,6 +14656,156 @@
     {
       "from": "visitkc",
       "to_url": "https://www.visitkc.com/events/the-berlin-wall-a-world-divided-exhibition-at-union-station-may-29-dec-13-2026",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/free-events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/2026-animal-crossing-new-horizon-aquarium-tour",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/american-prospects-and-landscape-photography-1839-to-today",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/listings/the-nelson-atkins-museum-of-art",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/form-and-flow-contemporary-shanshui-landscapes",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/listings/the-nelson-atkins-museum-of-art",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/music-dance",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/karaoke-monday-with-hannah",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/free-events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/monday-story-time",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/exhibits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/native-arts-in-miniature-2",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/listings/the-national-museum-of-toys-and-miniatures",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/theatre",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/planes-trains-automobiles",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/holiday-activities",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/snowday-hideaway-rooftop-igloos",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/free-events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/the-6th-annual-iron-christmas-at-iron-horse-bar-grill",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/theatre",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/the-pigeon-gets-a-big-time-holiday-extravaganza",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/type/kid-centric",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.visitkc.com/events/"
+    },
+    {
+      "from": "visitkc",
+      "to_url": "https://www.visitkc.com/events/venardos-circus-presents-far-beyond",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
@@ -14579,18 +14883,6 @@
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/sports",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/28-5-womens-college-hoops-presented-by-gateway-academy",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
       "to_url": "https://www.visitkc.com/events/type/exhibits",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
@@ -14627,13 +14919,13 @@
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/music-dance",
+      "to_url": "https://www.visitkc.com/events/type/free-events",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/aubrey-vineyards-live-music",
+      "to_url": "https://www.visitkc.com/events/beer-kitchen-music-bingo",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
@@ -14657,18 +14949,6 @@
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/kid-centric",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/bingo-benefit-2",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
       "to_url": "https://www.visitkc.com/events/type/exhibits",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
@@ -14687,97 +14967,13 @@
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/free-events",
+      "to_url": "https://www.visitkc.com/events/type/special-events",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/chiefs-watch-party-at-casual-animal-brewing",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/festivals",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/evergy-festival-of-lights",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/outdoors",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/family-murals-street-art-urban-hike-in-crossroads-the-river-market",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/exhibits",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/form-and-flow-contemporary-shanshui-landscapes",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/listings/the-nelson-atkins-museum-of-art",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/free-events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/free-sunday-jam-hosted-by-levee-town",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/free-events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/free-weekend-fun-bach-to-nature",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/listings/the-nelson-atkins-museum-of-art",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/sports",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/game-day-watch-party-chiefs-vs-cardinals",
+      "to_url": "https://www.visitkc.com/events/half-off-tuesdays-at-atlas9",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
@@ -14801,13 +14997,13 @@
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/outdoors",
+      "to_url": "https://www.visitkc.com/events/type/free-events",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/kansas-city-chiefs-vs-arizona-cardinals",
+      "to_url": "https://www.visitkc.com/events/lees-summit-magic-tree-lighting-ceremony",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
@@ -14819,49 +15015,19 @@
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/kansas-city-holiday-boutique-2026",
+      "to_url": "https://www.visitkc.com/events/magic-tree-holiday-pop-up-bar-at-paragon-star",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/outdoors",
+      "to_url": "https://www.visitkc.com/events/type/music-dance",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/kansas-city-sculpture-garden-contemporary-art-tour",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/live-jazz",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/live-jazz-with-bram-wijnands",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/exhibits",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/native-arts-in-miniature-2",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/listings/the-national-museum-of-toys-and-miniatures",
+      "to_url": "https://www.visitkc.com/events/new-jazz-order",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
@@ -14885,37 +15051,25 @@
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/kid-centric",
+      "to_url": "https://www.visitkc.com/events/type/free-events",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/play-times-for-kids-at-bump-city",
+      "to_url": "https://www.visitkc.com/events/patrick-woolam-live-music-tuesdays-at-sail-away-wine",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/theatre",
+      "to_url": "https://www.visitkc.com/events/type/holiday-activities",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/pride-and-prejudice",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/outdoors",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/quindaro-ruins-urban-hike",
+      "to_url": "https://www.visitkc.com/events/snowday-hideaway-rooftop-igloos",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
@@ -14945,31 +15099,19 @@
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/the-16th-annual-holiday-swing-at-union-station",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/free-events",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
       "to_url": "https://www.visitkc.com/events/the-6th-annual-iron-christmas-at-iron-horse-bar-grill",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/concerts",
+      "to_url": "https://www.visitkc.com/events/type/nightlife",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/the-kansas-city-symphony-presents-brahms-german-requiem",
+      "to_url": "https://www.visitkc.com/events/the-comedy-vault-stand-up-open-mic-at-hammers",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
@@ -15005,49 +15147,13 @@
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/kid-centric",
+      "to_url": "https://www.visitkc.com/events/type/nightlife",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
     {
       "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/venardos-circus-presents-far-beyond",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/holiday-activities",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/kcs-fav-holiday-light-party-at-winter-magic",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/exhibits",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/glowild-hidden-treasure",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/type/exhibits",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.visitkc.com/events/"
-    },
-    {
-      "from": "visitkc",
-      "to_url": "https://www.visitkc.com/events/holiday-reflections",
+      "to_url": "https://www.visitkc.com/events/tnt-trivia-at-hammers",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.visitkc.com/events/"
     },
@@ -15156,24 +15262,6 @@
     {
       "from": "tmobile",
       "to_url": "https://www.t-mobilecenter.com/private-events/campaign",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.t-mobilecenter.com/events"
-    },
-    {
-      "from": "tmobile",
-      "to_url": "https://www.t-mobilecenter.com/events/detail/285-hoops-womens-basketball",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.t-mobilecenter.com/events"
-    },
-    {
-      "from": "tmobile",
-      "to_url": "https://www.axs.com/events/1607395/285-hoops-womens-basketball-tickets&skin=tmobilecenter&tags=tmobilecenterweb",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.t-mobilecenter.com/events"
-    },
-    {
-      "from": "tmobile",
-      "to_url": "https://pa.exchange/marketplace/f8f785ec-7f59-11ef-9b01-2ba1d8d570c3/storefront/f8f787cc-7f59-11ef-aa47-5fc5010fc3da/event/47044fdc-b201-11f1-afe1-859d519b2649/tickets",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.t-mobilecenter.com/events"
     },
@@ -15342,6 +15430,18 @@
     {
       "from": "tmobile",
       "to_url": "https://www.axs.com/series/34288/disney-on-ice-magic-in-the-stars-tickets?skin=tmobilecenter&skin=tmobilecenter&tags=tmobilecenterweb",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.t-mobilecenter.com/events"
+    },
+    {
+      "from": "tmobile",
+      "to_url": "https://www.t-mobilecenter.com/events/detail/winkc2027",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.t-mobilecenter.com/events"
+    },
+    {
+      "from": "tmobile",
+      "to_url": "https://www.axs.com/events/1642025/win-for-kc-womens-sports-awards-presented-by-burns-mcdonnell-tickets&skin=tmobilecenter&tags=tmobilecenterweb",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.t-mobilecenter.com/events"
     },
@@ -15528,18 +15628,6 @@
     {
       "from": "midland",
       "to_url": "https://www.axs.com/venues/124780/arvest-bank-theatre-at-the-midland-kansas-city-tickets",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.midlandkc.com/events/all"
-    },
-    {
-      "from": "midland",
-      "to_url": "https://www.midlandkc.com/events/detail/1608378",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://www.midlandkc.com/events/all"
-    },
-    {
-      "from": "midland",
-      "to_url": "https://www.axs.com/events/1608378/legacy-tour-2026-tickets?skin=midland&src=AEGLIVE_EMIDTMCI030115VEN001",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.midlandkc.com/events/all"
     },
@@ -16494,18 +16582,6 @@
     {
       "from": "kc-convention",
       "to_url": "https://kcconvention.com/events/list?tribe_event_display=past&tribe_paged=1",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcconvention.com/events/"
-    },
-    {
-      "from": "kc-convention",
-      "to_url": "https://kcconvention.com/event/the-cheerexpo-kansas-city",
-      "relationship": "unreviewed-outbound-link",
-      "observed_on": "https://kcconvention.com/events/"
-    },
-    {
-      "from": "kc-convention",
-      "to_url": "https://kcconvention.com/event/the-cheerexpo-kansas-city",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://kcconvention.com/events/"
     },
@@ -18689,13 +18765,13 @@
     },
     {
       "from": "columbia-fall-winter-catalog",
-      "to_url": "https://www.como.gov/trails/mkt-nature-and-fitness-trail",
+      "to_url": "https://www.como.gov/utilities/columbias-solid-waste-utility/single-family-home-trash-and-recycling",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
     },
     {
       "from": "columbia-fall-winter-catalog",
-      "to_url": "https://www.como.gov/utilities/columbias-solid-waste-utility/single-family-home-trash-and-recycling",
+      "to_url": "https://www.como.gov/trails/mkt-nature-and-fitness-trail",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://www.como.gov/parks-and-recreation/leisure-times-fall-2026/"
     },
@@ -18980,6 +19056,1116 @@
       "to_url": "https://shsmo.org/exhibitions/indigenous-identities-state-sanctioned-portraiture-native-self-representation",
       "relationship": "unreviewed-outbound-link",
       "observed_on": "https://shsmo.org/exhibitions/indigenous-identities-state-sanctioned-portraiture-native-self-representation"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center?oc_lang=en-US",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center?oc_lang=ar",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center?oc_lang=zh-CN",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center?oc_lang=nl",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center?oc_lang=fr",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center?oc_lang=de",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center?oc_lang=it",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center?oc_lang=pt",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center?oc_lang=ru",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center?oc_lang=es",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center?oc_lang=en-US",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center?oc_lang=ar",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center?oc_lang=zh-CN",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center?oc_lang=nl",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center?oc_lang=fr",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center?oc_lang=de",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center?oc_lang=it",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center?oc_lang=pt",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center?oc_lang=ru",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center?oc_lang=es",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/Community/Report/Campsite-Notifications",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/Community/Report/Graffiti",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/Community/Sign-Up/PRC-Classes-Events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/Industry/Starting-Operating-a-Business/Lawrence-Venture-Park",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/Industry/Building-Construction/Commercial-Building-Permits",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/Industry/Parking-Transportation",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/Industry/Parking-Transportation/Parking",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/Industry/Parking-Transportation/Transit",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/Industry/Parking-Transportation/Lawrence-Regional-Airport",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/Industry/Parking-Transportation/Metropolitan-Planning-Organization",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/Industry/Parking-Transportation/Traffic-Transportation",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/CC/Animal-Limit-Registration",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/ED/Catalyst-Incentive-Program-for-Industrial-Development",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/ED/Lawrence-VenturePark",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/LDCFM/Services-Programs-Requests",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/MPO/Transportation-2050",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/MPO/Vision-Zero-Transportation-Safety-Action-Plan",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/MPO/Active-Transportation",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/MPO/Transportation-Maps-Handouts",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/MPO/Title-VI-Program",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/MPO/Unified-Planning-Work-Program",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/MPO/TIP",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/PARK",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/PARK/Downtown-Ambassadors",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/PARK/EZPark",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/PRC",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/PRC/Register",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/PRC/Programs-Activities",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/PRC/Parks-Outdoors",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/PRC/Prairie-Park-Nature-Center",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/PRC/Aquatics",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/SWM/Compost-Facility-Commercial-Drop-Off-Program",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/SUST/Sustainable-Transportation",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/UB/Donate-to-the-Utility-Assistance-Program",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/PRC",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/PRC/Aquatics",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/PRC/Rentals-Reservations/Indoor-Aquatic-Center-Rentals",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "lawrence-indoor-aquatic",
+      "to_url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/miniature-golf",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/hours-rates",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/gift-cards",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/jobs",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/advertise-here",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/contact",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/miniature-golf",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/toptracer-range",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/driving-range",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/par-3-course",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/lessons",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/custom-club-fitting",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/miniature-golf",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/foot-golf",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/miniature-golf",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/miniature-golf",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/games/go-karts",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/games/batting-cages",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/foot-golf",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/games/axe-throwing",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/games/archery-tag",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/games/blitzball-field",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/games/yard-games",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/miniature-golf",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/44-tavern",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/games/concessions",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/miniature-golf",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/events/private-gatherings",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/events/birthday-parties",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/events/group-events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/events/promotions",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/miniature-golf",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/toptracer-range",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/driving-range",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/par-3-course",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/lessons",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/custom-club-fitting",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/miniature-golf",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/foot-golf",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/miniature-golf",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/miniature-golf",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/games/go-karts",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/games/batting-cages",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/foot-golf",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/games/axe-throwing",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/games/archery-tag",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/games/blitzball-field",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/games/yard-games",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/miniature-golf",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/44-tavern",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/games/concessions",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/miniature-golf",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/events/private-gatherings",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/events/birthday-parties",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/events/group-events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/events/promotions",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/events/birthday-parties",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/events/birthday-parties",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/hours-rates",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/jobs",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/gift-cards",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/advertise-here",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/contact",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/miniature-golf",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/toptracer-range",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/driving-range",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/par-3-course",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/lessons",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/custom-club-fitting",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/miniature-golf",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/foot-golf",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/miniature-golf",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/miniature-golf",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/games/go-karts",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/games/batting-cages",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/foot-golf",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/games/axe-throwing",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/games/archery-tag",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/games/blitzball-field",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/games/yard-games",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/miniature-golf",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/44-tavern",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/games/concessions",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/miniature-golf",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/events/private-gatherings",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/events/birthday-parties",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/events/group-events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/events/promotions",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/toptracer-range",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/driving-range",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/par-3-course",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/lessons",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/custom-club-fitting",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/miniature-golf",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/foot-golf",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/toptracer-range",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/driving-range",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/par-3-course",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/lessons",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/custom-club-fitting",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/miniature-golf",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/foot-golf",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/miniature-golf",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/games/go-karts",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/games/batting-cages",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/foot-golf",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/games/axe-throwing",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/games/archery-tag",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/games/yard-games",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/miniature-golf",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/games/go-karts",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/games/batting-cages",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/golf/foot-golf",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/games/axe-throwing",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/games/archery-tag",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/games/yard-games",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/44-tavern",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/games/concessions",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/44-tavern",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/games/concessions",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/events-2",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/events/birthday-parties",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/events/group-events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/events-2",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/events/birthday-parties",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
+    },
+    {
+      "from": "midway-mini-golf",
+      "to_url": "https://midwaygolfgames.com/events/group-events",
+      "relationship": "unreviewed-outbound-link",
+      "observed_on": "https://midwaygolfgames.com/golf/miniature-golf/"
     }
   ],
   "discovery_health": [
@@ -19235,6 +20421,16 @@
     },
     {
       "id": "shsmo-indigenous-identities",
+      "status": "checked",
+      "pages": 1
+    },
+    {
+      "id": "lawrence-indoor-aquatic",
+      "status": "checked",
+      "pages": 1
+    },
+    {
+      "id": "midway-mini-golf",
       "status": "checked",
       "pages": 1
     }
@@ -19613,10 +20809,13 @@
         "category": "sports_participation",
         "routes": [
           "lawrence-programs",
-          "lawrence-youth-soccer"
+          "lawrence-youth-soccer",
+          "lawrence-indoor-aquatic"
         ],
-        "collecting_routes": [],
-        "status": "route_only",
+        "collecting_routes": [
+          "lawrence-indoor-aquatic"
+        ],
+        "status": "collecting",
         "next_search": "Lawrence youth adult adaptive leagues seasons teams tournaments official programs calendar registration"
       },
       {
@@ -19631,10 +20830,13 @@
         "region": "Lawrence",
         "category": "fitness_wellness",
         "routes": [
-          "lawrence-programs"
+          "lawrence-programs",
+          "lawrence-indoor-aquatic"
         ],
-        "collecting_routes": [],
-        "status": "route_only",
+        "collecting_routes": [
+          "lawrence-indoor-aquatic"
+        ],
+        "status": "collecting",
         "next_search": "Lawrence fitness yoga swimming martial arts wellness official programs calendar registration"
       },
       {
@@ -19732,10 +20934,13 @@
         "region": "Lawrence",
         "category": "play_attractions",
         "routes": [
-          "clinton-state-park"
+          "clinton-state-park",
+          "lawrence-indoor-aquatic"
         ],
-        "collecting_routes": [],
-        "status": "route_only",
+        "collecting_routes": [
+          "lawrence-indoor-aquatic"
+        ],
+        "status": "collecting",
         "next_search": "Lawrence playgrounds indoor play amusement escape rooms mini golf official programs calendar registration"
       },
       {
@@ -19807,10 +21012,13 @@
         "region": "Lawrence",
         "category": "adaptive_inclusive",
         "routes": [
-          "lawrence-programs"
+          "lawrence-programs",
+          "lawrence-indoor-aquatic"
         ],
-        "collecting_routes": [],
-        "status": "route_only",
+        "collecting_routes": [
+          "lawrence-indoor-aquatic"
+        ],
+        "status": "collecting",
         "next_search": "Lawrence adaptive sports inclusive recreation sensory friendly ASL official programs calendar registration"
       },
       {
@@ -19826,10 +21034,12 @@
         "category": "outdoor_recreation",
         "routes": [
           "columbia-parks",
-          "rock-bridge-state-park"
+          "rock-bridge-state-park",
+          "midway-mini-golf"
         ],
         "collecting_routes": [
-          "rock-bridge-state-park"
+          "rock-bridge-state-park",
+          "midway-mini-golf"
         ],
         "status": "collecting",
         "next_search": "Columbia hiking cycling paddling camping fishing climbing trails official programs calendar registration"
@@ -19972,10 +21182,13 @@
         "region": "Columbia",
         "category": "play_attractions",
         "routes": [
-          "columbia-parks"
+          "columbia-parks",
+          "midway-mini-golf"
         ],
-        "collecting_routes": [],
-        "status": "route_only",
+        "collecting_routes": [
+          "midway-mini-golf"
+        ],
+        "status": "collecting",
         "next_search": "Columbia playgrounds indoor play amusement escape rooms mini golf official programs calendar registration"
       },
       {
@@ -20009,9 +21222,13 @@
       {
         "region": "Columbia",
         "category": "games_hobbies",
-        "routes": [],
-        "collecting_routes": [],
-        "status": "gap",
+        "routes": [
+          "midway-mini-golf"
+        ],
+        "collecting_routes": [
+          "midway-mini-golf"
+        ],
+        "status": "collecting",
         "next_search": "Columbia board games chess tabletop gaming hobby clubs official programs calendar registration"
       },
       {
@@ -20051,10 +21268,12 @@
         "category": "adaptive_inclusive",
         "routes": [
           "columbia-programs",
-          "columbia-fall-winter-catalog"
+          "columbia-fall-winter-catalog",
+          "midway-mini-golf"
         ],
         "collecting_routes": [
-          "columbia-fall-winter-catalog"
+          "columbia-fall-winter-catalog",
+          "midway-mini-golf"
         ],
         "status": "collecting",
         "next_search": "Columbia adaptive sports inclusive recreation sensory friendly ASL official programs calendar registration"
@@ -20658,13 +21877,17 @@
           "crystal-trails",
           "science-city",
           "prairie-park",
-          "bentonville-trails"
+          "bentonville-trails",
+          "lawrence-indoor-aquatic",
+          "midway-mini-golf"
         ],
         "collecting_routes": [
           "weston-bend",
           "rock-bridge-state-park",
           "crystal-trails",
-          "science-city"
+          "science-city",
+          "lawrence-indoor-aquatic",
+          "midway-mini-golf"
         ]
       },
       {
@@ -20756,7 +21979,7 @@
       "parent_route_ids": [
         "momentary"
       ],
-      "hours_source": null,
+      "hours_source": "https://themomentary.org/plan-your-visit/",
       "coordinate_source": "https://themomentary.org/plan-your-visit/",
       "offering_sources": [],
       "provenance": "reviewed-place-registry"
@@ -20825,6 +22048,34 @@
       "hours_source": "https://shsmo.org/visit/columbia",
       "coordinate_source": null,
       "offering_sources": [],
+      "provenance": "reviewed-place-registry"
+    },
+    {
+      "id": "lawrence-indoor-aquatic",
+      "label": "Lawrence Indoor Aquatic Center",
+      "url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center",
+      "parent_route_ids": [
+        "lawrence-indoor-aquatic"
+      ],
+      "hours_source": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center",
+      "coordinate_source": null,
+      "offering_sources": [
+        "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+      ],
+      "provenance": "reviewed-place-registry"
+    },
+    {
+      "id": "midway-mini-golf",
+      "label": "Midway Golf & Games miniature golf",
+      "url": "https://midwaygolfgames.com/golf/miniature-golf/",
+      "parent_route_ids": [
+        "midway-mini-golf"
+      ],
+      "hours_source": "https://midwaygolfgames.com/golf/miniature-golf/",
+      "coordinate_source": null,
+      "offering_sources": [
+        "https://midwaygolfgames.com/golf/miniature-golf/"
+      ],
       "provenance": "reviewed-place-registry"
     }
   ]
