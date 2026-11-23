@@ -2,9 +2,9 @@
   "id": "2026-W48",
   "iso_week": "2026-W48",
   "started_at": "2026-11-23T14:36:20+00:00",
-  "updated_at": "2026-11-23T08:46:57.118676-06:00",
-  "status": "promoted_yield_pending",
-  "base_commit": "f0d6c14",
+  "updated_at": "2026-11-23T08:58:38.312326-06:00",
+  "status": "completed",
+  "base_commit": "f0d6c14c063c7eaf5389b3a60c05f8fe41a22218",
   "baseline": {
     "routes": 54,
     "records": 3522,
@@ -49,15 +49,167 @@
     "lawrence-indoor-aquatic",
     "midway-mini-golf"
   ],
-  "commit_urls": [],
-  "pull_request_urls": [],
+  "commit_urls": [
+    "https://github.com/colesteaks/kc-activity-finder/commit/e55f162379db68d3ecea2ef524a177d3e2f78bfa",
+    "https://github.com/colesteaks/kc-activity-finder/commit/4996505e62e4230deffded0188444f0d5f25860e",
+    "https://github.com/colesteaks/kc-activity-finder/commit/679a94da3787406f0f33a66823cdbd068f093fb5"
+  ],
+  "pull_request_urls": [
+    "https://github.com/colesteaks/kc-activity-finder/pull/3"
+  ],
   "existing_maintainer_pull_requests_at_start": [
     "https://github.com/colesteaks/kc-activity-finder/pull/1",
     "https://github.com/colesteaks/kc-activity-finder/pull/2"
   ],
-  "yield_status": "Individual source probes pending; no observed production gain yet",
+  "yield_status": "Two offerings observed in successful daily collection/validation; exact corrected live Pages snapshot verified after successful static-only recovery",
   "observed_gains": {
-    "new_unique_offerings": 0
+    "new_unique_offerings": 2,
+    "new_records": 2,
+    "evergreen_offerings": 2,
+    "sports_seasons": 0,
+    "individual_classes": 0,
+    "adapter_production_offerings": 0,
+    "source_health": [
+      {
+        "id": "lawrence-indoor-aquatic",
+        "name": "Lawrence Indoor Aquatic Center",
+        "url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center",
+        "region": "Lawrence",
+        "status": "checked",
+        "format": "reviewed-capture",
+        "captured_count": 1,
+        "checked_at": "2026-11-23T08:52:11.010916-06:00",
+        "events": 1,
+        "requests": 2,
+        "visited_count": 1,
+        "errors": [],
+        "unparsed_count": 0,
+        "unparsed_leads": [],
+        "truncated": false,
+        "latest_published_date": null,
+        "categories": [
+          "sports_participation",
+          "fitness_wellness",
+          "play_attractions",
+          "adaptive_inclusive"
+        ],
+        "activity_kinds": [
+          "evergreen"
+        ],
+        "category_counts": {
+          "sports_participation": 1,
+          "fitness_wellness": 1,
+          "play_attractions": 1,
+          "adaptive_inclusive": 1
+        },
+        "kind_counts": {
+          "evergreen": 1
+        },
+        "horizon_note": "Requested through 2027-06-23; sources may not yet publish that far ahead."
+      },
+      {
+        "id": "midway-mini-golf",
+        "name": "Midway Golf & Games miniature golf",
+        "url": "https://midwaygolfgames.com/golf/miniature-golf/",
+        "region": "Columbia",
+        "status": "checked",
+        "format": "reviewed-capture",
+        "captured_count": 1,
+        "checked_at": "2026-11-23T08:52:11.010916-06:00",
+        "events": 1,
+        "requests": 2,
+        "visited_count": 1,
+        "errors": [],
+        "unparsed_count": 0,
+        "unparsed_leads": [],
+        "truncated": false,
+        "latest_published_date": null,
+        "categories": [
+          "outdoor_recreation",
+          "play_attractions",
+          "games_hobbies",
+          "adaptive_inclusive"
+        ],
+        "activity_kinds": [
+          "evergreen"
+        ],
+        "category_counts": {
+          "outdoor_recreation": 1,
+          "play_attractions": 1,
+          "games_hobbies": 1,
+          "adaptive_inclusive": 1
+        },
+        "kind_counts": {
+          "evergreen": 1
+        },
+        "horizon_note": "Requested through 2027-06-23; sources may not yet publish that far ahead."
+      }
+    ],
+    "coverage_cell_changes": [
+      {
+        "region": "Lawrence",
+        "category": "sports_participation",
+        "before": "route_only",
+        "after": "collecting",
+        "promoted_collecting_routes": [
+          "lawrence-indoor-aquatic"
+        ]
+      },
+      {
+        "region": "Lawrence",
+        "category": "fitness_wellness",
+        "before": "route_only",
+        "after": "collecting",
+        "promoted_collecting_routes": [
+          "lawrence-indoor-aquatic"
+        ]
+      },
+      {
+        "region": "Lawrence",
+        "category": "play_attractions",
+        "before": "route_only",
+        "after": "collecting",
+        "promoted_collecting_routes": [
+          "lawrence-indoor-aquatic"
+        ]
+      },
+      {
+        "region": "Lawrence",
+        "category": "adaptive_inclusive",
+        "before": "route_only",
+        "after": "collecting",
+        "promoted_collecting_routes": [
+          "lawrence-indoor-aquatic"
+        ]
+      },
+      {
+        "region": "Columbia",
+        "category": "play_attractions",
+        "before": "route_only",
+        "after": "collecting",
+        "promoted_collecting_routes": [
+          "midway-mini-golf"
+        ]
+      },
+      {
+        "region": "Columbia",
+        "category": "games_hobbies",
+        "before": "gap",
+        "after": "collecting",
+        "promoted_collecting_routes": [
+          "midway-mini-golf"
+        ]
+      }
+    ],
+    "inventory_before_unique": 1101,
+    "inventory_after_unique": 1086,
+    "inventory_before_records": 3522,
+    "inventory_after_records": 3476,
+    "note": "Credit only two genuinely new permanent offerings. Other changes reflect the normal daily sources and horizon. Downtown adapter is unmerged; its ten probed occurrences/four offerings are not production gains.",
+    "horizon_start_before": "2026-11-22",
+    "horizon_start_after": "2026-11-23",
+    "removed_record_ids": 56,
+    "removed_outside_new_horizon": 54
   },
   "place_changes": [
     {
@@ -76,7 +228,7 @@
   "recall": {
     "benchmark": "data/recall-benchmarks/kc-weekend-2026-11-28.json",
     "status": "3/3 existing ongoing anchors captured; full future-edition comparison pending",
-    "limitation": "Small ongoing-anchor regression sample only, not full-weekend recall. The latest KC Daily edition is November 20-22; its long-running leads are included only after official pages verify November 28 participation. Independent roundup is November 27-29. Do not present these as matching newsletter editions or a complete benchmark.",
+    "limitation": "Three existing ongoing anchors, verified on official pages for November 28, are captured. This is not a full weekend-recall score; latest KC Daily edition is November 20-22 while independent roundup is November 27-29.",
     "result": {
       "benchmark": "kc-weekend-2026-11-28",
       "region": "Kansas City metro",
@@ -132,7 +284,63 @@
       ],
       "note": "Named roundup-anchor recall only. A captured listing is not proof of live availability or a claim to include every possible activity."
     },
-    "next_review_after": "2026-11-26"
+    "next_review_after": "2026-11-26",
+    "after_result": {
+      "benchmark": "kc-weekend-2026-11-28",
+      "region": "Kansas City metro",
+      "window": {
+        "start": "2026-11-28",
+        "end": "2026-11-29"
+      },
+      "applicable": true,
+      "captured_anchors": 3,
+      "expected_anchors": 3,
+      "weekend_records": 139,
+      "distinct_weekend_offerings": 97,
+      "results": [
+        {
+          "id": "powell-lights",
+          "title": "Evergy Festival of Lights",
+          "status": "captured",
+          "record_ids": [
+            "b7e06299a7f1bbb46e24",
+            "160e423f7becb48ca425"
+          ],
+          "source_urls": [
+            "https://www.visitkc.com/events/evergy-festival-of-lights/"
+          ],
+          "followup": null
+        },
+        {
+          "id": "holiday-reflections",
+          "title": "Holiday Reflections",
+          "status": "captured",
+          "record_ids": [
+            "aea142b4c7d1e5fc0f2d",
+            "904dda72d4e9d87cb597"
+          ],
+          "source_urls": [
+            "https://www.visitkc.com/events/holiday-reflections/"
+          ],
+          "followup": null
+        },
+        {
+          "id": "christmas-carol",
+          "title": "A Christmas Carol",
+          "status": "captured",
+          "record_ids": [
+            "d0d32849213f079b8329",
+            "6ca1c7fdf495afd26716"
+          ],
+          "source_urls": [
+            "https://www.visitkc.com/events/a-christmas-carol/"
+          ],
+          "followup": null
+        }
+      ],
+      "note": "Named roundup-anchor recall only. A captured listing is not proof of live availability or a claim to include every possible activity."
+    },
+    "gain_attributed_to_this_run": 0
   },
   "daily_actions_at_start": [
     {
@@ -156,7 +364,8 @@
     "Latest KC Daily edition and independent roundup cover different weekends. The new benchmark tests three officially verified ongoing anchors, not complete weekend recall.",
     "Downtown adapter remains in a focused PR; no production gains claimed for unmerged code.",
     "Original seed, current PUBLIC visibility, existing activity identities and GitHub Pages hosting preserved.",
-    "No access challenges or 521 errors bypassed."
+    "No access challenges or 521 errors bypassed.",
+    "Lawrence pool admission/payment and program-registration requirements are unknown; no fee or booking policy inferred from the facility type."
   ],
   "verification": {
     "main_python_tests": 100,
@@ -164,7 +373,44 @@
     "repo_validation": "pass",
     "public_data_validation": "pass",
     "diff_check": "pass",
-    "original_seed_sha256": "0a268fbfd2c4098c22795598bd4b11fa81809878f0928e9469945e1d479627d3"
+    "original_seed_sha256": "0a268fbfd2c4098c22795598bd4b11fa81809878f0928e9469945e1d479627d3",
+    "main_ci_url": "https://github.com/colesteaks/kc-activity-finder/actions/runs/45198235827",
+    "main_ci": "success",
+    "static_publish_after_source_commit": {
+      "id": 45198235765,
+      "conclusion": "success",
+      "collector": "skipped; data yield not measured by static-only publish"
+    },
+    "adapter_python_tests": 107,
+    "adapter_new_regression_tests": 7,
+    "published_amenity_logic": "Regular lap versus family access, special November 25 hours, November 27 closure, unknown parent building hours, age controls and undated/unmapped filters verified using probe records.",
+    "admission_evidence": "Pool amenity admission/payment requirements left unknown: reviewed facility page does not publish them. Mini-golf paid admission and conditional child pricing are explicitly published.",
+    "existing_comparable_identities": 3466,
+    "changed_existing_identities": 0,
+    "data_commit": "679a94da3787406f0f33a66823cdbd068f093fb5",
+    "live_pages_data": {
+      "url": "https://colesteaks.github.io/kc-activity-finder/activities.json",
+      "checked_at": "2026-11-23T08:57:02.257488-06:00",
+      "sha256": "5885698d2a8fda224d1275dbe863506b8acf23eb1604834b9800488296b399aa",
+      "matches_commit": true,
+      "updated_at": "2026-11-23T08:52:11.010916-06:00",
+      "records": 3476,
+      "promoted_source_ids_present": [
+        "lawrence-indoor-aquatic",
+        "midway-mini-golf"
+      ]
+    },
+    "recovery_ci": "success",
+    "recovery_ci_url": "https://github.com/colesteaks/kc-activity-finder/actions/runs/45199445590",
+    "adapter_ci": "success",
+    "adapter_ci_urls": [
+      "https://github.com/colesteaks/kc-activity-finder/actions/runs/45198581195",
+      "https://github.com/colesteaks/kc-activity-finder/actions/runs/45198596195"
+    ],
+    "adapter_pr_state": "open; no auto-merge",
+    "visibility": "PUBLIC at start and end; unchanged",
+    "hosting": "GitHub Pages; unchanged",
+    "static_recovery_preserved_activity_records_and_timestamps": true
   },
   "research_visits": [
     {
@@ -307,5 +553,87 @@
     "production_yield": "pending PR review/merge; zero adapter production gain claimed",
     "unknown_age_records": 10
   },
-  "publication_blocker_at_start": "Actions logs confirm github-pages.zip artifact 14767254101 uploaded/finalized successfully, then deploy-pages immediately found zero artifacts. No hosting/access changes made; fresh production run will be measured."
+  "publication_blocker_at_start": "Actions logs confirm github-pages.zip artifact 14767254101 uploaded/finalized successfully, then deploy-pages immediately found zero artifacts. No hosting/access changes made; fresh production run will be measured.",
+  "daily_actions": {
+    "id": 45198298446,
+    "url": "https://github.com/colesteaks/kc-activity-finder/actions/runs/45198298446",
+    "event": "workflow_dispatch",
+    "refresh": true,
+    "conclusion": "failure",
+    "collection": "success",
+    "public_data_validation": "success",
+    "generated_data_commit": "4996505e62e4230deffded0188444f0d5f25860e",
+    "publication_failure": "Deploy could not discover just-uploaded github-pages artifact; no collector failure."
+  },
+  "completed_at": "2026-11-23T08:58:38.312326-06:00",
+  "publication_followup": {
+    "status": "resolved for this run; recurring artifact-handoff defect remains",
+    "static_only_run": "https://github.com/colesteaks/kc-activity-finder/actions/runs/45199445732",
+    "static_only_conclusion": "success",
+    "collector": "skipped; no second full collection",
+    "published_data_commit": "679a94da3787406f0f33a66823cdbd068f093fb5",
+    "data_adjustment": "Only unsupported pool admission/payment requirements changed to unknown in reviewed definitions and public place metadata. Collection/verification timestamps and activity records preserved."
+  },
+  "after_brief_baseline": {
+    "routes": 56,
+    "records": 3476,
+    "unique_offerings": 1086,
+    "coverage_cells": {
+      "collecting": 51,
+      "route_only": 19,
+      "gap": 40
+    },
+    "activity_kinds": {
+      "date_range_unknown": 48,
+      "exhibit": 55,
+      "one_off": 3362,
+      "recurring_program": 3,
+      "evergreen": 6,
+      "program_catalog": 2
+    },
+    "stale_records": 379,
+    "places": 12,
+    "unmapped_offerings": 664,
+    "unreviewed_proposals": 5229
+  },
+  "health_changes": [
+    {
+      "id": "momentary",
+      "before": "partial",
+      "after": "checked",
+      "events": 254,
+      "errors": []
+    }
+  ],
+  "previous_followup_recheck": {
+    "truman": "Latest baseline and new daily refresh both checked, 20 records, no errors. Prior br-encoding failure not reproduced; no speculative decoder change."
+  },
+  "remaining_blockers": [
+    {
+      "item": "Pages deployment artifact discovery",
+      "next_review_after": "2026-11-30",
+      "evidence_run": "https://github.com/colesteaks/kc-activity-finder/actions/runs/45198298446",
+      "reason": "Intermittent recurring publication failure despite successful artifact upload. Static-only recovery worked; needs a focused workflow investigation. Do not solve by repeatedly recollecting sources."
+    },
+    {
+      "item": "Full current-edition weekend benchmark",
+      "next_review_after": "2026-11-26",
+      "reason": "Wait for the actual upcoming KC Daily weekend edition; retain narrowly scoped ongoing-anchor test and coverage limits."
+    },
+    {
+      "item": "Downtown calendar parser",
+      "next_review_after": "2026-11-30",
+      "pull_request_url": "https://github.com/colesteaks/kc-activity-finder/pull/3",
+      "reason": "107 tests and live 10-occurrence/four-offering probe passed; visible-only coverage remains partial. Await review; no auto-merge or production gain claimed."
+    },
+    {
+      "item": "Existing maintainer PRs",
+      "next_review_after": "2026-11-30",
+      "pull_request_urls": [
+        "https://github.com/colesteaks/kc-activity-finder/pull/1",
+        "https://github.com/colesteaks/kc-activity-finder/pull/2"
+      ],
+      "reason": "Left open and unmerged; no duplicate work."
+    }
+  ]
 }
