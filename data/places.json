@@ -685,7 +685,7 @@
         {
           "id": "lap-swimming",
           "name": "Lap swimming",
-          "availability": "admission_required",
+          "availability": "unknown",
           "hours": {
             "text": "Monday-Friday 6:30 a.m.-12:45 p.m. and 4-7:30 p.m.; Saturday 9 a.m.-5 p.m.; Sunday 1-5 p.m. Competition events can alter access.",
             "timezone": "America/Chicago",
@@ -763,13 +763,13 @@
             "checked_at": "2026-11-23T08:46:57.118676-06:00",
             "notice": "Published schedules are not live access, closure, capacity or admission confirmation."
           },
-          "note": "Water areas close 15 minutes before the building closes; published area schedule does not establish building hours. Verify admission and competition reservations.",
+          "note": "Water areas close 15 minutes before the building closes; published area schedule does not establish building hours. Verify admission and competition reservations. Admission/payment or program-registration requirements are not stated on the reviewed page.",
           "source_url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
         },
         {
           "id": "family-pool",
           "name": "Zero-depth family pool, waterslide and children\u2019s area",
-          "availability": "admission_required",
+          "availability": "unknown",
           "hours": {
             "text": "Monday-Thursday closed; Friday 4-7:30 p.m.; Saturday/Sunday 1-5 p.m. Waterslide/diving areas close 30 minutes before building closure.",
             "timezone": "America/Chicago",
@@ -824,13 +824,13 @@
             "checked_at": "2026-11-23T08:46:57.118676-06:00",
             "notice": "Published schedules are not live access, closure, capacity or admission confirmation."
           },
-          "note": "Separate from lap swimming. Waterslide and diving hours have closing buffers; current maintenance, supervision and admission rules require confirmation.",
+          "note": "Separate from lap swimming. Waterslide and diving hours have closing buffers; current maintenance, supervision and admission rules require confirmation. Admission/payment or program-registration requirements are not stated on the reviewed page.",
           "source_url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
         },
         {
           "id": "warm-water-workouts",
           "name": "Warm Water Workouts (ages 16 and older)",
-          "availability": "admission_required",
+          "availability": "unknown",
           "hours": {
             "text": "Monday-Friday 10:45 a.m.-12:45 p.m.; Thanksgiving-week Wednesday 8-10 a.m.",
             "timezone": "America/Chicago",
@@ -880,7 +880,7 @@
             "checked_at": "2026-11-23T08:46:57.118676-06:00",
             "notice": "Published schedules are not live access, closure, capacity or admission confirmation."
           },
-          "note": "Source explicitly states ages 16 and older for this workout only; do not apply that limit to other pool areas.",
+          "note": "Source explicitly states ages 16 and older for this workout only; do not apply that limit to other pool areas. Admission/payment or program-registration requirements are not stated on the reviewed page.",
           "source_url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
         }
       ],
