@@ -284,10 +284,10 @@
       "region": "Bentonville",
       "city": "Bentonville",
       "kind": "organizer",
-      "format": "jsonld",
+      "format": "downtown",
       "url": "https://downtownbentonville.org/events/calendar",
-      "pattern": "/events/[^/?]+",
-      "max_details": 25,
+      "pattern": "/do/[^/?]+",
+      "max_details": 0,
       "categories": [
         "markets_shopping",
         "festivals_seasonal",
@@ -303,7 +303,10 @@
         "registration and deadlines",
         "season schedule or exhibit run",
         "hours and closures"
-      ]
+      ],
+      "max_pages": 1,
+      "reviewed_at": "2026-11-23",
+      "collection_note": "Visible dated calendar cards only. Later detail-page dates and date-filter controls are not enumerated; health remains partial."
     },
     {
       "id": "weston-bend",

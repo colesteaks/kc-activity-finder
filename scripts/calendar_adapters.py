@@ -1,7 +1,7 @@
 """Explicit visible calendar formats that do not expose Event JSON-LD."""
 import re
-from datetime import datetime
-from urllib.parse import urljoin
+from datetime import datetime, timedelta
+from urllib.parse import urljoin, urlsplit
 from zoneinfo import ZoneInfo
 
 from bs4 import BeautifulSoup
@@ -13,6 +13,39 @@ FULL_DATE=r'(?:January|February|March|April|May|June|July|August|September|Octob
 
 
 def text(node):return node.get_text(' ',strip=True) if node else ''
+
+
+def downtown_events(body, page):
+    """Read explicit dated cards; never infer years, age limits or ticket stock."""
+    soup=BeautifulSoup(body,'html.parser');rows=[]
+    clock=r'\d{1,2}(?::\d{2})?\s*(?:am|pm)'
+    for card in soup.select('a.evcard[href]'):
+        title=text(card.select_one('.evcard-content-headline'))
+        stamp=text(card.select_one('.evcard-content-date'))
+        times=text(card.select_one('.evcard-content-time'))
+        link=urljoin(page,card['href']);target=urlsplit(link)
+        if (not title or not re.fullmatch(r'(?:[A-Za-z]+,\s*)?[A-Za-z]+\s+\d{1,2},\s+20\d\d',stamp)
+                or target.scheme!='https' or target.netloc.lower()!=urlsplit(page).netloc.lower()
+                or target.username or target.password or not target.path.startswith('/do/')):continue
+        try:
+            day=parse(stamp,fuzzy=False)
+            if stamp.split(',')[0] in ('Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday') and not stamp.startswith(day.strftime('%A')+','):continue
+            start=day.date().isoformat();finish=None;all_day=True
+            match=re.fullmatch(r'('+clock+r')(?:\s*[-–—]\s*('+clock+r'))?',times,re.I)
+            if times and not match:continue
+            if match:
+                start=parse(match[1],default=day).replace(tzinfo=TZ);all_day=False
+                if match[2]:
+                    finish=parse(match[2],default=day).replace(tzinfo=TZ)
+                    if finish<start:finish+=timedelta(days=1)
+                start=start.isoformat();finish=finish.isoformat() if finish else None
+        except (ValueError,OverflowError):continue
+        rows.append({'name':title,'startDate':start,'endDate':finish,'url':link,
+            'location':{'name':text(card.select_one('.evcard-content-venue'))},
+            '_all_day':all_day,'_evidence_quote':stamp+(' '+times if times else ''),
+            '_schedule':{'kind':'one_off','note':'Explicit visible calendar occurrence; additional series dates may exist on the detail page.'},
+            'description':'Visible organizer calendar card. Confirm admission, age rules and registration on the linked detail page.'})
+    return rows
 
 
 def visitkc_categories(classes):
@@ -88,6 +121,7 @@ def visitkc_api_events(data,page):
 
 
 def html_events(body,source,page):
+    if source['format']=='downtown':return downtown_events(body,page)
     if source['format']=='library':return library_events(body,page)
     if source['format']=='carbonhouse':return carbonhouse_events(body,page,source)
     if source['format']=='visitkc':return visitkc_events(body,page)

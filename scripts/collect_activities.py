@@ -371,7 +371,7 @@ def collect_source(source, start, until, observed, cache):
             parsed_urls={canonical(r['url']) for r in records}
             detail_links={u:v for u,v in detail_links.items() if u not in parsed_urls and u not in {canonical(x) for x in seen_pages}}
             limit = source.get('max_details', 60)
-            if source['format'] in ('library','carbonhouse','squarespace') and limit==0:detail_links={}
+            if source['format'] in ('library','carbonhouse','squarespace','downtown') and limit==0:detail_links={}
             truncated |= len(detail_links) > limit
             for link in list(detail_links)[:limit]:
                 try:
@@ -385,6 +385,10 @@ def collect_source(source, start, until, observed, cache):
                     if not found: leads.append({'url': link, 'reason': 'No supported explicit event date; needs adapter or review'})
                 except Exception as e: errors.append(link + ': ' + str(e))
     except Exception as e: errors.append(str(e))
+    if source['format']=='downtown':
+        # The visible index omits later dates listed on detail pages. Its
+        # date-filter controls and hidden dates have not been enumerated.
+        truncated=True
     # Apply a seven-calendar-month horizon after capture; preserve ongoing ranges.
     records = [r for r in records if in_horizon(r, start.isoformat(), until.isoformat())]
     unique = {r['id']: r for r in records}
@@ -397,7 +401,8 @@ def collect_source(source, start, until, observed, cache):
         'categories': source.get('categories', []), 'activity_kinds': source.get('activity_kinds', []),
         'category_counts': dict(Counter(c for r in unique.values() for c in r['categories'])),
         'kind_counts': dict(Counter(r['schedule']['kind'] for r in unique.values())),
-        'horizon_note': 'Requested through ' + until.isoformat() + '; sources may not yet publish that far ahead.'}
+        'horizon_note': 'Requested through ' + until.isoformat() + '; sources may not yet publish that far ahead.'
+            + (' Visible calendar cards only; detail-only dates and date-filter results are not enumerated.' if source['format']=='downtown' else '')}
 
 
 def reconcile(old, fresh, health, now):
