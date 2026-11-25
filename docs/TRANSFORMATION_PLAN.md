@@ -14,7 +14,7 @@
 
 1. `data/primary-sources.txt` (`KC daily`, SHA-256 `0a268fbfd2c4098c22795598bd4b11fa81809878f0928e9469945e1d479627d3`) and the `provided-seed` node in `data/source-graph.json` remain verbatim and untouched.
 2. All 33 `REQUIRED_FILES`, 8 `EXPECTED_STAGES` in `data/workflow.json`, and 5 `REQUIRED_COVERAGE` regions (`Kansas City metro`, `Lawrence`, `Columbia`, `Bentonville`, `surrounding areas`) remain intact (`scripts/validate_repo.py`).
-3. `VERSION` (`1.1.0`), `SKILL.md` frontmatter `metadata.version`, and `CHANGELOG.md` remain synchronized (`scripts/build_release.py` + `scripts/verify_release.py`).
+3. `VERSION` (`1.2.0`), `SKILL.md` frontmatter `metadata.version`, and `CHANGELOG.md` remain synchronized (`scripts/build_release.py` + `scripts/verify_release.py`).
 4. All Python scripts stay Python 3.9+ compatible (`from __future__ import annotations`, no `match/case` or PEP 604 `|` union runtime syntax), verified on both macOS Python 3.9.6 `.venv` and CI Python 3.12 target.
 5. Zero fabricated URLs, ages, prices, hours, or event dates; `robots.txt` and 403/429 access blocks are respected strictly.
 

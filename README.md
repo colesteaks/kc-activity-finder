@@ -4,13 +4,13 @@ An executable, evidence-first activity research skill for Kansas City metro, Law
 
 ## Install the public skill
 
-The skill uses the portable [Agent Skills format](https://agentskills.io/specification) and is MIT licensed. Install the **v1.1.0** release in a compatible agent:
+The skill uses the portable [Agent Skills format](https://agentskills.io/specification) and is MIT licensed. Install the **v1.2.0** release in a compatible agent:
 
 ```sh
-npx skills@latest add https://github.com/colesteaks/kc-activity-finder/tree/v1.1.0 --skill kc-activity-finder
+npx skills@latest add https://github.com/colesteaks/kc-activity-finder/tree/v1.2.0 --skill kc-activity-finder
 ```
 
-[Download v1.1.0](https://github.com/colesteaks/kc-activity-finder/releases/tag/v1.1.0) · [Installation and versioning](references/installation.md) · [Changelog](CHANGELOG.md) · [License](LICENSE). Releases include a self-contained ZIP, exact-commit/per-file manifest and SHA-256 checksums. Live activity facts still require current research; versioning pins the skill, not event availability.
+[Download v1.2.0](https://github.com/colesteaks/kc-activity-finder/releases/tag/v1.2.0) · [Installation and versioning](references/installation.md) · [Changelog](CHANGELOG.md) · [License](LICENSE). Releases include a self-contained ZIP, exact-commit/per-file manifest and SHA-256 checksums. Live activity facts still require current research; versioning pins the skill, not event availability.
 
 **Hosted activity browser:** `web/` is a static site with age, location, hint, drive-band, and date filters. The browse index is `web/bundle.min.json`; `web/activities.json` remains the full explicit-date snapshot, and `web/feeds/` publishes RSS for regions that already have collected dates. Daily collection commits that snapshot to the `data` branch. Pages deployment is a separate manual workflow input. See [hosting and collection](references/hosting-and-collection.md).
 

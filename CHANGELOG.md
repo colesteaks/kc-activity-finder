@@ -2,11 +2,15 @@
 
 Releases follow Semantic Versioning for the skill instructions, executable contracts and helpers. Daily activity observations are timestamped data, not new software releases.
 
+## [1.2.0] - 2026-11-25
+
+- Add an index-first `scripts/query_inventory.py` lookup (supporting both v2 relational `web/bundle.min.json` and `web/activities.json`), discovery `hints`, two-tier geo metadata (`corridor`, `subregion`, `drive_band`, `amtrak_accessible`), depth-tiered coverage metrics, reusable platform adapters (`ics`, `rss`, `localist`, `bibliocommons`, `libnet`, `livewhale`, `tribe`, `mlb_schedule`, `mdc`, HTTP 308 redirects, `tnew`, `downtown`), fuzzy cross-source corroboration, a compact `< 1 MB` v2 `web/bundle.min.json`, and 13 static RSS feeds. Audience and price hints stay labeled and do not overwrite verified ages or prices.
+- Expand verified official calendars across all 11 Tier 1–3 corridors (Kansas City metro, Lawrence, Columbia, Bentonville/NWA, surrounding areas, Topeka & Flint Hills, St. Joseph & Pony Express, Omaha, Des Moines, Springfield & Ozarks, Wichita & Hutchinson) and US Census-geocode 43 places while leaving 403/429 and robots denials blocked.
+- Add consumer presets (`Standouts`, `Kids & family`, `Likely free`, `Outdoors`, `Day trip`, `Weekend trip`, `Amtrak day trip`, `Saved`), browser shortlist, and `.ics` export in `web/`.
+- Split daily collection onto the `data` branch and overlay collected snapshots onto GitHub Pages deployments; exclude maintenance archives from skill release packages to keep uncompressed bundles well under 25 MiB.
+
 ## [1.1.0] - 2026-11-07
 
-- Add an index-first `scripts/query_inventory.py` lookup (supporting both relational `web/bundle.min.json` and `web/activities.json`), discovery hints, two-tier geo metadata, reusable platform adapters (`ics`, `rss`, `localist`, `bibliocommons`, `libnet`, `livewhale`, `tribe`, `mlb_schedule`, `mdc`, HTTP 308 redirects), a compact v2 `web/bundle.min.json`, and 13 static RSS feeds. Audience and price hints stay labeled and do not overwrite verified ages or prices.
-- Expand verified official calendars across all 11 Tier 1–3 corridors (Kansas City metro, Lawrence, Columbia, Bentonville/NWA, surrounding areas, Topeka & Flint Hills, St. Joseph, Omaha, Des Moines, Springfield & Ozarks, Wichita & Hutchinson) and Census-geocode 43 places while leaving 403/429 and robots denials blocked.
-- Split daily collection onto the `data` branch and overlay collected snapshots onto GitHub Pages deployments; exclude maintenance archives from skill release packages to keep bundles well under 25 MiB.
 - Repair KC weekend recall through full public KC Daily archive/source-link extraction, current-issue discovery, independent roundup benchmarks and a weekly recall check.
 - Add Visit KC's dated public API and map markers, library Load More pagination, venue/opera/Squarespace adapters and guarded first-party event captures. Preserve untouched sources during selected refreshes.
 - Decode compressed HTTP correctly, report access challenges, group repeated dates, make menu promotions optional and show actual coverage gaps beside results.
