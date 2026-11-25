@@ -20545,6 +20545,10 @@
           "visitkc"
         ],
         "status": "collecting",
+        "depth_tier": "strong",
+        "distinct_offerings": 26,
+        "live_calendar_offerings": 25,
+        "first_party_offerings": 5,
         "next_search": "Kansas City metro hiking cycling paddling camping fishing climbing trails official programs calendar registration"
       },
       {
@@ -20559,6 +20563,10 @@
           "kc-parks"
         ],
         "status": "collecting",
+        "depth_tier": "strong",
+        "distinct_offerings": 30,
+        "live_calendar_offerings": 30,
+        "first_party_offerings": 6,
         "next_search": "Kansas City metro youth adult adaptive leagues seasons teams tournaments official programs calendar registration"
       },
       {
@@ -20575,6 +20583,10 @@
           "tmobile"
         ],
         "status": "collecting",
+        "depth_tier": "strong",
+        "distinct_offerings": 43,
+        "live_calendar_offerings": 43,
+        "first_party_offerings": 8,
         "next_search": "Kansas City metro professional college amateur sports season schedules official programs calendar registration"
       },
       {
@@ -20586,6 +20598,10 @@
         ],
         "collecting_routes": [],
         "status": "route_only",
+        "depth_tier": "route_only",
+        "distinct_offerings": 6,
+        "live_calendar_offerings": 6,
+        "first_party_offerings": 5,
         "next_search": "Kansas City metro fitness yoga swimming martial arts wellness official programs calendar registration"
       },
       {
@@ -20595,15 +20611,19 @@
           "nelson",
           "visitkc",
           "kcopera",
-          "central-avenue-dia",
           "independence-japan",
           "linda-hall-alchemy"
         ],
         "collecting_routes": [
+          "nelson",
           "visitkc",
           "linda-hall-alchemy"
         ],
         "status": "collecting",
+        "depth_tier": "strong",
+        "distinct_offerings": 47,
+        "live_calendar_offerings": 46,
+        "first_party_offerings": 17,
         "next_search": "Kansas City metro temporary exhibitions galleries public art official programs calendar registration"
       },
       {
@@ -20617,6 +20637,10 @@
           "linda-hall-alchemy"
         ],
         "status": "collecting",
+        "depth_tier": "thin",
+        "distinct_offerings": 2,
+        "live_calendar_offerings": 1,
+        "first_party_offerings": 2,
         "next_search": "Kansas City metro history museums heritage cultural celebrations official programs calendar registration"
       },
       {
@@ -20632,6 +20656,10 @@
           "linda-hall-alchemy"
         ],
         "status": "collecting",
+        "depth_tier": "active",
+        "distinct_offerings": 4,
+        "live_calendar_offerings": 2,
+        "first_party_offerings": 3,
         "next_search": "Kansas City metro science planetarium STEM makers robotics official programs calendar registration"
       },
       {
@@ -20639,14 +20667,16 @@
         "category": "nature_animals",
         "routes": [
           "kc-zoo",
-          "weston-bend",
-          "kc-pet-fest"
+          "weston-bend"
         ],
         "collecting_routes": [
-          "kc-zoo",
           "weston-bend"
         ],
         "status": "collecting",
+        "depth_tier": "active",
+        "distinct_offerings": 14,
+        "live_calendar_offerings": 13,
+        "first_party_offerings": 11,
         "next_search": "Kansas City metro nature centers wildlife birding gardens zoo official programs calendar registration"
       },
       {
@@ -20658,26 +20688,32 @@
           "tmobile",
           "midland",
           "truman",
-          "kcopera",
-          "troost-united"
+          "kcopera"
         ],
         "collecting_routes": [
           "visitkc",
           "midland",
-          "kcopera"
+          "truman"
         ],
         "status": "collecting",
+        "depth_tier": "strong",
+        "distinct_offerings": 207,
+        "live_calendar_offerings": 207,
+        "first_party_offerings": 62,
         "next_search": "Kansas City metro concerts theater dance opera comedy official programs calendar registration"
       },
       {
         "region": "Kansas City metro",
         "category": "film_literature",
         "routes": [
-          "kc-library",
-          "dfscon"
+          "kc-library"
         ],
         "collecting_routes": [],
         "status": "route_only",
+        "depth_tier": "route_only",
+        "distinct_offerings": 5,
+        "live_calendar_offerings": 5,
+        "first_party_offerings": 5,
         "next_search": "Kansas City metro cinema film festivals author readings book clubs official programs calendar registration"
       },
       {
@@ -20693,6 +20729,10 @@
           "kc-culinary-catalog"
         ],
         "status": "collecting",
+        "depth_tier": "active",
+        "distinct_offerings": 3,
+        "live_calendar_offerings": 2,
+        "first_party_offerings": 3,
         "next_search": "Kansas City metro classes workshops cooking crafts language lessons official programs calendar registration"
       },
       {
@@ -20708,6 +20748,10 @@
           "kc-culinary-catalog"
         ],
         "status": "collecting",
+        "depth_tier": "active",
+        "distinct_offerings": 6,
+        "live_calendar_offerings": 5,
+        "first_party_offerings": 3,
         "next_search": "Kansas City metro day camps overnight camps summer school break official programs calendar registration"
       },
       {
@@ -20715,13 +20759,16 @@
         "category": "play_attractions",
         "routes": [
           "science-city",
-          "wonderscope-volunteer",
-          "kc-pet-fest"
+          "wonderscope-volunteer"
         ],
         "collecting_routes": [
           "science-city"
         ],
         "status": "collecting",
+        "depth_tier": "thin",
+        "distinct_offerings": 1,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 1,
         "next_search": "Kansas City metro playgrounds indoor play amusement escape rooms mini golf official programs calendar registration"
       },
       {
@@ -20735,6 +20782,10 @@
           "kc-culinary-catalog"
         ],
         "status": "collecting",
+        "depth_tier": "active",
+        "distinct_offerings": 38,
+        "live_calendar_offerings": 37,
+        "first_party_offerings": 2,
         "next_search": "Kansas City metro food festivals tastings dining cooking breweries official programs calendar registration"
       },
       {
@@ -20743,15 +20794,17 @@
         "routes": [
           "visitkc",
           "downtown-ls",
-          "kc-convention",
-          "crossroads-flea",
-          "ls-mistletoe"
+          "kc-convention"
         ],
         "collecting_routes": [
           "visitkc",
           "downtown-ls"
         ],
         "status": "collecting",
+        "depth_tier": "active",
+        "distinct_offerings": 11,
+        "live_calendar_offerings": 11,
+        "first_party_offerings": 3,
         "next_search": "Kansas City metro farmers markets craft fairs vintage holiday markets official programs calendar registration"
       },
       {
@@ -20763,17 +20816,17 @@
           "visitkc",
           "tmobile",
           "downtown-ls",
-          "kc-pet-fest",
-          "central-avenue-dia",
-          "troost-united",
-          "independence-japan",
-          "ls-mistletoe"
+          "independence-japan"
         ],
         "collecting_routes": [
           "visitkc",
           "downtown-ls"
         ],
         "status": "collecting",
+        "depth_tier": "strong",
+        "distinct_offerings": 114,
+        "live_calendar_offerings": 114,
+        "first_party_offerings": 17,
         "next_search": "Kansas City metro festivals fairs holiday seasonal celebrations official programs calendar registration"
       },
       {
@@ -20787,6 +20840,10 @@
           "kc-library"
         ],
         "status": "collecting",
+        "depth_tier": "active",
+        "distinct_offerings": 4,
+        "live_calendar_offerings": 4,
+        "first_party_offerings": 4,
         "next_search": "Kansas City metro board games chess tabletop gaming hobby clubs official programs calendar registration"
       },
       {
@@ -20802,22 +20859,29 @@
           "midland",
           "truman",
           "downtown-ls",
-          "central-avenue-dia",
-          "troost-united",
           "mavericks",
           "independence-japan",
-          "dfscon",
           "kc-convention",
-          "crossroads-flea",
-          "ls-mistletoe"
+          "kcconvention-events-feed",
+          "kcconvention-events",
+          "kcconvention-feed",
+          "kcopera-feed",
+          "nelson-atkins-feed",
+          "wonderscope-feed",
+          "midlandkc-events-rss"
         ],
         "collecting_routes": [
           "kc-parks",
           "visitkc",
           "downtown-ls",
+          "mavericks",
           "kc-convention"
         ],
         "status": "collecting",
+        "depth_tier": "strong",
+        "distinct_offerings": 47,
+        "live_calendar_offerings": 47,
+        "first_party_offerings": 19,
         "next_search": "Kansas City metro meetups cultural community social clubs official programs calendar registration"
       },
       {
@@ -20829,6 +20893,10 @@
         ],
         "collecting_routes": [],
         "status": "route_only",
+        "depth_tier": "route_only",
+        "distinct_offerings": 3,
+        "live_calendar_offerings": 3,
+        "first_party_offerings": 3,
         "next_search": "Kansas City metro volunteer service conservation citizen science official programs calendar registration"
       },
       {
@@ -20841,6 +20909,10 @@
           "kc-library"
         ],
         "status": "collecting",
+        "depth_tier": "strong",
+        "distinct_offerings": 101,
+        "live_calendar_offerings": 101,
+        "first_party_offerings": 101,
         "next_search": "Kansas City metro libraries storytime literacy lifelong learning official programs calendar registration"
       },
       {
@@ -20849,6 +20921,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "Kansas City metro adaptive sports inclusive recreation sensory friendly ASL official programs calendar registration"
       },
       {
@@ -20861,6 +20937,10 @@
           "weston-bend"
         ],
         "status": "collecting",
+        "depth_tier": "active",
+        "distinct_offerings": 15,
+        "live_calendar_offerings": 14,
+        "first_party_offerings": 2,
         "next_search": "Kansas City metro walking tours architecture day trips agritourism official programs calendar registration"
       },
       {
@@ -20873,6 +20953,10 @@
         ],
         "collecting_routes": [],
         "status": "route_only",
+        "depth_tier": "route_only",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "Lawrence hiking cycling paddling camping fishing climbing trails official programs calendar registration"
       },
       {
@@ -20887,6 +20971,10 @@
           "lawrence-indoor-aquatic"
         ],
         "status": "collecting",
+        "depth_tier": "thin",
+        "distinct_offerings": 1,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 1,
         "next_search": "Lawrence youth adult adaptive leagues seasons teams tournaments official programs calendar registration"
       },
       {
@@ -20895,6 +20983,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "Lawrence professional college amateur sports season schedules official programs calendar registration"
       },
       {
@@ -20908,6 +21000,10 @@
           "lawrence-indoor-aquatic"
         ],
         "status": "collecting",
+        "depth_tier": "thin",
+        "distinct_offerings": 1,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 1,
         "next_search": "Lawrence fitness yoga swimming martial arts wellness official programs calendar registration"
       },
       {
@@ -20921,6 +21017,10 @@
           "lawrence-arts"
         ],
         "status": "collecting",
+        "depth_tier": "thin",
+        "distinct_offerings": 1,
+        "live_calendar_offerings": 1,
+        "first_party_offerings": 1,
         "next_search": "Lawrence temporary exhibitions galleries public art official programs calendar registration"
       },
       {
@@ -20931,6 +21031,10 @@
         ],
         "collecting_routes": [],
         "status": "route_only",
+        "depth_tier": "route_only",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "Lawrence history museums heritage cultural celebrations official programs calendar registration"
       },
       {
@@ -20943,6 +21047,10 @@
           "ku-astronomy"
         ],
         "status": "collecting",
+        "depth_tier": "thin",
+        "distinct_offerings": 1,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 1,
         "next_search": "Lawrence science planetarium STEM makers robotics official programs calendar registration"
       },
       {
@@ -20954,6 +21062,10 @@
         ],
         "collecting_routes": [],
         "status": "route_only",
+        "depth_tier": "route_only",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "Lawrence nature centers wildlife birding gardens zoo official programs calendar registration"
       },
       {
@@ -20964,6 +21076,10 @@
         ],
         "collecting_routes": [],
         "status": "route_only",
+        "depth_tier": "route_only",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "Lawrence concerts theater dance opera comedy official programs calendar registration"
       },
       {
@@ -20974,6 +21090,10 @@
         ],
         "collecting_routes": [],
         "status": "route_only",
+        "depth_tier": "route_only",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "Lawrence cinema film festivals author readings book clubs official programs calendar registration"
       },
       {
@@ -20987,6 +21107,10 @@
         ],
         "collecting_routes": [],
         "status": "route_only",
+        "depth_tier": "route_only",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "Lawrence classes workshops cooking crafts language lessons official programs calendar registration"
       },
       {
@@ -20999,6 +21123,10 @@
         ],
         "collecting_routes": [],
         "status": "route_only",
+        "depth_tier": "route_only",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "Lawrence day camps overnight camps summer school break official programs calendar registration"
       },
       {
@@ -21012,6 +21140,10 @@
           "lawrence-indoor-aquatic"
         ],
         "status": "collecting",
+        "depth_tier": "thin",
+        "distinct_offerings": 1,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 1,
         "next_search": "Lawrence playgrounds indoor play amusement escape rooms mini golf official programs calendar registration"
       },
       {
@@ -21020,6 +21152,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "Lawrence food festivals tastings dining cooking breweries official programs calendar registration"
       },
       {
@@ -21028,6 +21164,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "Lawrence farmers markets craft fairs vintage holiday markets official programs calendar registration"
       },
       {
@@ -21036,6 +21176,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 1,
+        "live_calendar_offerings": 1,
+        "first_party_offerings": 1,
         "next_search": "Lawrence festivals fairs holiday seasonal celebrations official programs calendar registration"
       },
       {
@@ -21044,6 +21188,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "Lawrence board games chess tabletop gaming hobby clubs official programs calendar registration"
       },
       {
@@ -21051,12 +21199,17 @@
         "category": "community_social",
         "routes": [
           "lawrence-library",
-          "ku-astronomy"
+          "ku-astronomy",
+          "lawrenceartscenter-events-at-lawrence-ar"
         ],
         "collecting_routes": [
           "ku-astronomy"
         ],
         "status": "collecting",
+        "depth_tier": "active",
+        "distinct_offerings": 3,
+        "live_calendar_offerings": 2,
+        "first_party_offerings": 3,
         "next_search": "Lawrence meetups cultural community social clubs official programs calendar registration"
       },
       {
@@ -21067,6 +21220,10 @@
         ],
         "collecting_routes": [],
         "status": "route_only",
+        "depth_tier": "route_only",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "Lawrence volunteer service conservation citizen science official programs calendar registration"
       },
       {
@@ -21077,6 +21234,10 @@
         ],
         "collecting_routes": [],
         "status": "route_only",
+        "depth_tier": "route_only",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "Lawrence libraries storytime literacy lifelong learning official programs calendar registration"
       },
       {
@@ -21090,6 +21251,10 @@
           "lawrence-indoor-aquatic"
         ],
         "status": "collecting",
+        "depth_tier": "thin",
+        "distinct_offerings": 1,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 1,
         "next_search": "Lawrence adaptive sports inclusive recreation sensory friendly ASL official programs calendar registration"
       },
       {
@@ -21098,6 +21263,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "Lawrence walking tours architecture day trips agritourism official programs calendar registration"
       },
       {
@@ -21113,6 +21282,10 @@
           "midway-mini-golf"
         ],
         "status": "collecting",
+        "depth_tier": "thin",
+        "distinct_offerings": 2,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 2,
         "next_search": "Columbia hiking cycling paddling camping fishing climbing trails official programs calendar registration"
       },
       {
@@ -21126,6 +21299,10 @@
           "columbia-fall-winter-catalog"
         ],
         "status": "collecting",
+        "depth_tier": "thin",
+        "distinct_offerings": 2,
+        "live_calendar_offerings": 1,
+        "first_party_offerings": 1,
         "next_search": "Columbia youth adult adaptive leagues seasons teams tournaments official programs calendar registration"
       },
       {
@@ -21138,6 +21315,10 @@
           "columbia-cvb"
         ],
         "status": "collecting",
+        "depth_tier": "active",
+        "distinct_offerings": 3,
+        "live_calendar_offerings": 3,
+        "first_party_offerings": 0,
         "next_search": "Columbia professional college amateur sports season schedules official programs calendar registration"
       },
       {
@@ -21151,6 +21332,10 @@
           "columbia-fall-winter-catalog"
         ],
         "status": "collecting",
+        "depth_tier": "thin",
+        "distinct_offerings": 1,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 1,
         "next_search": "Columbia fitness yoga swimming martial arts wellness official programs calendar registration"
       },
       {
@@ -21165,6 +21350,10 @@
           "shsmo-indigenous-identities"
         ],
         "status": "collecting",
+        "depth_tier": "thin",
+        "distinct_offerings": 2,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 2,
         "next_search": "Columbia temporary exhibitions galleries public art official programs calendar registration"
       },
       {
@@ -21179,6 +21368,10 @@
           "shsmo-indigenous-identities"
         ],
         "status": "collecting",
+        "depth_tier": "thin",
+        "distinct_offerings": 2,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 2,
         "next_search": "Columbia history museums heritage cultural celebrations official programs calendar registration"
       },
       {
@@ -21187,6 +21380,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 1,
+        "live_calendar_offerings": 1,
+        "first_party_offerings": 0,
         "next_search": "Columbia science planetarium STEM makers robotics official programs calendar registration"
       },
       {
@@ -21200,6 +21397,10 @@
           "rock-bridge-state-park"
         ],
         "status": "collecting",
+        "depth_tier": "thin",
+        "distinct_offerings": 1,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 1,
         "next_search": "Columbia nature centers wildlife birding gardens zoo official programs calendar registration"
       },
       {
@@ -21212,6 +21413,10 @@
           "columbia-cvb"
         ],
         "status": "collecting",
+        "depth_tier": "thin",
+        "distinct_offerings": 1,
+        "live_calendar_offerings": 1,
+        "first_party_offerings": 0,
         "next_search": "Columbia concerts theater dance opera comedy official programs calendar registration"
       },
       {
@@ -21224,6 +21429,10 @@
           "shsmo-tom-sawyer"
         ],
         "status": "collecting",
+        "depth_tier": "thin",
+        "distinct_offerings": 1,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 1,
         "next_search": "Columbia cinema film festivals author readings book clubs official programs calendar registration"
       },
       {
@@ -21237,6 +21446,10 @@
           "columbia-fall-winter-catalog"
         ],
         "status": "collecting",
+        "depth_tier": "thin",
+        "distinct_offerings": 1,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 1,
         "next_search": "Columbia classes workshops cooking crafts language lessons official programs calendar registration"
       },
       {
@@ -21247,6 +21460,10 @@
         ],
         "collecting_routes": [],
         "status": "route_only",
+        "depth_tier": "route_only",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "Columbia day camps overnight camps summer school break official programs calendar registration"
       },
       {
@@ -21260,6 +21477,10 @@
           "midway-mini-golf"
         ],
         "status": "collecting",
+        "depth_tier": "thin",
+        "distinct_offerings": 1,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 1,
         "next_search": "Columbia playgrounds indoor play amusement escape rooms mini golf official programs calendar registration"
       },
       {
@@ -21268,6 +21489,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "Columbia food festivals tastings dining cooking breweries official programs calendar registration"
       },
       {
@@ -21276,6 +21501,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 1,
+        "live_calendar_offerings": 1,
+        "first_party_offerings": 0,
         "next_search": "Columbia farmers markets craft fairs vintage holiday markets official programs calendar registration"
       },
       {
@@ -21288,6 +21517,10 @@
           "columbia-cvb"
         ],
         "status": "collecting",
+        "depth_tier": "active",
+        "distinct_offerings": 4,
+        "live_calendar_offerings": 4,
+        "first_party_offerings": 0,
         "next_search": "Columbia festivals fairs holiday seasonal celebrations official programs calendar registration"
       },
       {
@@ -21300,18 +21533,27 @@
           "midway-mini-golf"
         ],
         "status": "collecting",
+        "depth_tier": "thin",
+        "distinct_offerings": 1,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 1,
         "next_search": "Columbia board games chess tabletop gaming hobby clubs official programs calendar registration"
       },
       {
         "region": "Columbia",
         "category": "community_social",
         "routes": [
-          "columbia-cvb"
+          "columbia-cvb",
+          "midwaygolfgames-feed"
         ],
         "collecting_routes": [
           "columbia-cvb"
         ],
         "status": "collecting",
+        "depth_tier": "active",
+        "distinct_offerings": 4,
+        "live_calendar_offerings": 4,
+        "first_party_offerings": 0,
         "next_search": "Columbia meetups cultural community social clubs official programs calendar registration"
       },
       {
@@ -21320,6 +21562,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "Columbia volunteer service conservation citizen science official programs calendar registration"
       },
       {
@@ -21332,6 +21578,10 @@
           "columbia-fall-winter-catalog"
         ],
         "status": "collecting",
+        "depth_tier": "thin",
+        "distinct_offerings": 1,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 1,
         "next_search": "Columbia libraries storytime literacy lifelong learning official programs calendar registration"
       },
       {
@@ -21347,6 +21597,10 @@
           "midway-mini-golf"
         ],
         "status": "collecting",
+        "depth_tier": "thin",
+        "distinct_offerings": 2,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 2,
         "next_search": "Columbia adaptive sports inclusive recreation sensory friendly ASL official programs calendar registration"
       },
       {
@@ -21359,6 +21613,10 @@
           "rock-bridge-state-park"
         ],
         "status": "collecting",
+        "depth_tier": "thin",
+        "distinct_offerings": 1,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 1,
         "next_search": "Columbia walking tours architecture day trips agritourism official programs calendar registration"
       },
       {
@@ -21373,6 +21631,10 @@
           "crystal-trails"
         ],
         "status": "collecting",
+        "depth_tier": "thin",
+        "distinct_offerings": 1,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 1,
         "next_search": "Bentonville hiking cycling paddling camping fishing climbing trails official programs calendar registration"
       },
       {
@@ -21386,6 +21648,10 @@
           "bentonville-soccer"
         ],
         "status": "collecting",
+        "depth_tier": "thin",
+        "distinct_offerings": 1,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 1,
         "next_search": "Bentonville youth adult adaptive leagues seasons teams tournaments official programs calendar registration"
       },
       {
@@ -21396,6 +21662,10 @@
         ],
         "collecting_routes": [],
         "status": "route_only",
+        "depth_tier": "route_only",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "Bentonville professional college amateur sports season schedules official programs calendar registration"
       },
       {
@@ -21404,6 +21674,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "Bentonville fitness yoga swimming martial arts wellness official programs calendar registration"
       },
       {
@@ -21421,6 +21695,10 @@
           "crystal-trails"
         ],
         "status": "collecting",
+        "depth_tier": "strong",
+        "distinct_offerings": 25,
+        "live_calendar_offerings": 24,
+        "first_party_offerings": 25,
         "next_search": "Bentonville temporary exhibitions galleries public art official programs calendar registration"
       },
       {
@@ -21429,6 +21707,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "Bentonville history museums heritage cultural celebrations official programs calendar registration"
       },
       {
@@ -21437,6 +21719,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "Bentonville science planetarium STEM makers robotics official programs calendar registration"
       },
       {
@@ -21451,6 +21737,10 @@
           "crystal-trails"
         ],
         "status": "collecting",
+        "depth_tier": "thin",
+        "distinct_offerings": 1,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 1,
         "next_search": "Bentonville nature centers wildlife birding gardens zoo official programs calendar registration"
       },
       {
@@ -21461,6 +21751,10 @@
         ],
         "collecting_routes": [],
         "status": "route_only",
+        "depth_tier": "route_only",
+        "distinct_offerings": 2,
+        "live_calendar_offerings": 2,
+        "first_party_offerings": 2,
         "next_search": "Bentonville concerts theater dance opera comedy official programs calendar registration"
       },
       {
@@ -21473,6 +21767,10 @@
           "bpl-books-on-main"
         ],
         "status": "collecting",
+        "depth_tier": "thin",
+        "distinct_offerings": 1,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 1,
         "next_search": "Bentonville cinema film festivals author readings book clubs official programs calendar registration"
       },
       {
@@ -21483,6 +21781,10 @@
         ],
         "collecting_routes": [],
         "status": "route_only",
+        "depth_tier": "route_only",
+        "distinct_offerings": 5,
+        "live_calendar_offerings": 5,
+        "first_party_offerings": 5,
         "next_search": "Bentonville classes workshops cooking crafts language lessons official programs calendar registration"
       },
       {
@@ -21493,6 +21795,10 @@
         ],
         "collecting_routes": [],
         "status": "route_only",
+        "depth_tier": "route_only",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "Bentonville day camps overnight camps summer school break official programs calendar registration"
       },
       {
@@ -21501,6 +21807,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "Bentonville playgrounds indoor play amusement escape rooms mini golf official programs calendar registration"
       },
       {
@@ -21513,6 +21823,10 @@
           "momentary"
         ],
         "status": "collecting",
+        "depth_tier": "active",
+        "distinct_offerings": 5,
+        "live_calendar_offerings": 5,
+        "first_party_offerings": 5,
         "next_search": "Bentonville food festivals tastings dining cooking breweries official programs calendar registration"
       },
       {
@@ -21523,9 +21837,14 @@
           "bentonville-downtown"
         ],
         "collecting_routes": [
-          "momentary"
+          "momentary",
+          "bentonville-downtown"
         ],
         "status": "collecting",
+        "depth_tier": "active",
+        "distinct_offerings": 5,
+        "live_calendar_offerings": 5,
+        "first_party_offerings": 5,
         "next_search": "Bentonville farmers markets craft fairs vintage holiday markets official programs calendar registration"
       },
       {
@@ -21534,8 +21853,14 @@
         "routes": [
           "bentonville-downtown"
         ],
-        "collecting_routes": [],
-        "status": "route_only",
+        "collecting_routes": [
+          "bentonville-downtown"
+        ],
+        "status": "collecting",
+        "depth_tier": "thin",
+        "distinct_offerings": 1,
+        "live_calendar_offerings": 1,
+        "first_party_offerings": 1,
         "next_search": "Bentonville festivals fairs holiday seasonal celebrations official programs calendar registration"
       },
       {
@@ -21544,6 +21869,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 1,
+        "live_calendar_offerings": 1,
+        "first_party_offerings": 1,
         "next_search": "Bentonville board games chess tabletop gaming hobby clubs official programs calendar registration"
       },
       {
@@ -21554,9 +21883,14 @@
           "bpl-books-on-main"
         ],
         "collecting_routes": [
+          "bentonville-downtown",
           "bpl-books-on-main"
         ],
         "status": "collecting",
+        "depth_tier": "strong",
+        "distinct_offerings": 23,
+        "live_calendar_offerings": 22,
+        "first_party_offerings": 23,
         "next_search": "Bentonville meetups cultural community social clubs official programs calendar registration"
       },
       {
@@ -21565,6 +21899,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "Bentonville volunteer service conservation citizen science official programs calendar registration"
       },
       {
@@ -21577,6 +21915,10 @@
           "bpl-books-on-main"
         ],
         "status": "collecting",
+        "depth_tier": "thin",
+        "distinct_offerings": 1,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 1,
         "next_search": "Bentonville libraries storytime literacy lifelong learning official programs calendar registration"
       },
       {
@@ -21585,6 +21927,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "Bentonville adaptive sports inclusive recreation sensory friendly ASL official programs calendar registration"
       },
       {
@@ -21596,6 +21942,10 @@
         ],
         "collecting_routes": [],
         "status": "route_only",
+        "depth_tier": "route_only",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "Bentonville walking tours architecture day trips agritourism official programs calendar registration"
       },
       {
@@ -21604,6 +21954,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "surrounding areas hiking cycling paddling camping fishing climbing trails official programs calendar registration"
       },
       {
@@ -21612,6 +21966,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "surrounding areas youth adult adaptive leagues seasons teams tournaments official programs calendar registration"
       },
       {
@@ -21620,6 +21978,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "surrounding areas professional college amateur sports season schedules official programs calendar registration"
       },
       {
@@ -21628,6 +21990,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "surrounding areas fitness yoga swimming martial arts wellness official programs calendar registration"
       },
       {
@@ -21636,6 +22002,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "surrounding areas temporary exhibitions galleries public art official programs calendar registration"
       },
       {
@@ -21644,6 +22014,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "surrounding areas history museums heritage cultural celebrations official programs calendar registration"
       },
       {
@@ -21652,6 +22026,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "surrounding areas science planetarium STEM makers robotics official programs calendar registration"
       },
       {
@@ -21660,6 +22038,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "surrounding areas nature centers wildlife birding gardens zoo official programs calendar registration"
       },
       {
@@ -21668,6 +22050,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "surrounding areas concerts theater dance opera comedy official programs calendar registration"
       },
       {
@@ -21676,6 +22062,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "surrounding areas cinema film festivals author readings book clubs official programs calendar registration"
       },
       {
@@ -21684,6 +22074,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "surrounding areas classes workshops cooking crafts language lessons official programs calendar registration"
       },
       {
@@ -21692,6 +22086,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "surrounding areas day camps overnight camps summer school break official programs calendar registration"
       },
       {
@@ -21700,6 +22098,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "surrounding areas playgrounds indoor play amusement escape rooms mini golf official programs calendar registration"
       },
       {
@@ -21708,6 +22110,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "surrounding areas food festivals tastings dining cooking breweries official programs calendar registration"
       },
       {
@@ -21716,6 +22122,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "surrounding areas farmers markets craft fairs vintage holiday markets official programs calendar registration"
       },
       {
@@ -21724,6 +22134,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "surrounding areas festivals fairs holiday seasonal celebrations official programs calendar registration"
       },
       {
@@ -21732,6 +22146,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "surrounding areas board games chess tabletop gaming hobby clubs official programs calendar registration"
       },
       {
@@ -21740,6 +22158,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "surrounding areas meetups cultural community social clubs official programs calendar registration"
       },
       {
@@ -21748,6 +22170,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "surrounding areas volunteer service conservation citizen science official programs calendar registration"
       },
       {
@@ -21756,6 +22182,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "surrounding areas libraries storytime literacy lifelong learning official programs calendar registration"
       },
       {
@@ -21764,6 +22194,10 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "surrounding areas adaptive sports inclusive recreation sensory friendly ASL official programs calendar registration"
       },
       {
@@ -21772,7 +22206,1595 @@
         "routes": [],
         "collecting_routes": [],
         "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
         "next_search": "surrounding areas walking tours architecture day trips agritourism official programs calendar registration"
+      },
+      {
+        "region": "Topeka & Flint Hills",
+        "category": "outdoor_recreation",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Topeka & Flint Hills hiking cycling paddling camping fishing climbing trails official programs calendar registration"
+      },
+      {
+        "region": "Topeka & Flint Hills",
+        "category": "sports_participation",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Topeka & Flint Hills youth adult adaptive leagues seasons teams tournaments official programs calendar registration"
+      },
+      {
+        "region": "Topeka & Flint Hills",
+        "category": "sports_spectating",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Topeka & Flint Hills professional college amateur sports season schedules official programs calendar registration"
+      },
+      {
+        "region": "Topeka & Flint Hills",
+        "category": "fitness_wellness",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Topeka & Flint Hills fitness yoga swimming martial arts wellness official programs calendar registration"
+      },
+      {
+        "region": "Topeka & Flint Hills",
+        "category": "arts_exhibits",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Topeka & Flint Hills temporary exhibitions galleries public art official programs calendar registration"
+      },
+      {
+        "region": "Topeka & Flint Hills",
+        "category": "history_culture",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Topeka & Flint Hills history museums heritage cultural celebrations official programs calendar registration"
+      },
+      {
+        "region": "Topeka & Flint Hills",
+        "category": "science_technology",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Topeka & Flint Hills science planetarium STEM makers robotics official programs calendar registration"
+      },
+      {
+        "region": "Topeka & Flint Hills",
+        "category": "nature_animals",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Topeka & Flint Hills nature centers wildlife birding gardens zoo official programs calendar registration"
+      },
+      {
+        "region": "Topeka & Flint Hills",
+        "category": "music_performance",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Topeka & Flint Hills concerts theater dance opera comedy official programs calendar registration"
+      },
+      {
+        "region": "Topeka & Flint Hills",
+        "category": "film_literature",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Topeka & Flint Hills cinema film festivals author readings book clubs official programs calendar registration"
+      },
+      {
+        "region": "Topeka & Flint Hills",
+        "category": "classes_skills",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Topeka & Flint Hills classes workshops cooking crafts language lessons official programs calendar registration"
+      },
+      {
+        "region": "Topeka & Flint Hills",
+        "category": "camps",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Topeka & Flint Hills day camps overnight camps summer school break official programs calendar registration"
+      },
+      {
+        "region": "Topeka & Flint Hills",
+        "category": "play_attractions",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Topeka & Flint Hills playgrounds indoor play amusement escape rooms mini golf official programs calendar registration"
+      },
+      {
+        "region": "Topeka & Flint Hills",
+        "category": "food_drink",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Topeka & Flint Hills food festivals tastings dining cooking breweries official programs calendar registration"
+      },
+      {
+        "region": "Topeka & Flint Hills",
+        "category": "markets_shopping",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Topeka & Flint Hills farmers markets craft fairs vintage holiday markets official programs calendar registration"
+      },
+      {
+        "region": "Topeka & Flint Hills",
+        "category": "festivals_seasonal",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Topeka & Flint Hills festivals fairs holiday seasonal celebrations official programs calendar registration"
+      },
+      {
+        "region": "Topeka & Flint Hills",
+        "category": "games_hobbies",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Topeka & Flint Hills board games chess tabletop gaming hobby clubs official programs calendar registration"
+      },
+      {
+        "region": "Topeka & Flint Hills",
+        "category": "community_social",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Topeka & Flint Hills meetups cultural community social clubs official programs calendar registration"
+      },
+      {
+        "region": "Topeka & Flint Hills",
+        "category": "volunteering",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Topeka & Flint Hills volunteer service conservation citizen science official programs calendar registration"
+      },
+      {
+        "region": "Topeka & Flint Hills",
+        "category": "libraries_learning",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Topeka & Flint Hills libraries storytime literacy lifelong learning official programs calendar registration"
+      },
+      {
+        "region": "Topeka & Flint Hills",
+        "category": "adaptive_inclusive",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Topeka & Flint Hills adaptive sports inclusive recreation sensory friendly ASL official programs calendar registration"
+      },
+      {
+        "region": "Topeka & Flint Hills",
+        "category": "travel_exploration",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Topeka & Flint Hills walking tours architecture day trips agritourism official programs calendar registration"
+      },
+      {
+        "region": "St. Joseph & Pony Express",
+        "category": "outdoor_recreation",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "St. Joseph & Pony Express hiking cycling paddling camping fishing climbing trails official programs calendar registration"
+      },
+      {
+        "region": "St. Joseph & Pony Express",
+        "category": "sports_participation",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "St. Joseph & Pony Express youth adult adaptive leagues seasons teams tournaments official programs calendar registration"
+      },
+      {
+        "region": "St. Joseph & Pony Express",
+        "category": "sports_spectating",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "St. Joseph & Pony Express professional college amateur sports season schedules official programs calendar registration"
+      },
+      {
+        "region": "St. Joseph & Pony Express",
+        "category": "fitness_wellness",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "St. Joseph & Pony Express fitness yoga swimming martial arts wellness official programs calendar registration"
+      },
+      {
+        "region": "St. Joseph & Pony Express",
+        "category": "arts_exhibits",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "St. Joseph & Pony Express temporary exhibitions galleries public art official programs calendar registration"
+      },
+      {
+        "region": "St. Joseph & Pony Express",
+        "category": "history_culture",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "St. Joseph & Pony Express history museums heritage cultural celebrations official programs calendar registration"
+      },
+      {
+        "region": "St. Joseph & Pony Express",
+        "category": "science_technology",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "St. Joseph & Pony Express science planetarium STEM makers robotics official programs calendar registration"
+      },
+      {
+        "region": "St. Joseph & Pony Express",
+        "category": "nature_animals",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "St. Joseph & Pony Express nature centers wildlife birding gardens zoo official programs calendar registration"
+      },
+      {
+        "region": "St. Joseph & Pony Express",
+        "category": "music_performance",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "St. Joseph & Pony Express concerts theater dance opera comedy official programs calendar registration"
+      },
+      {
+        "region": "St. Joseph & Pony Express",
+        "category": "film_literature",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "St. Joseph & Pony Express cinema film festivals author readings book clubs official programs calendar registration"
+      },
+      {
+        "region": "St. Joseph & Pony Express",
+        "category": "classes_skills",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "St. Joseph & Pony Express classes workshops cooking crafts language lessons official programs calendar registration"
+      },
+      {
+        "region": "St. Joseph & Pony Express",
+        "category": "camps",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "St. Joseph & Pony Express day camps overnight camps summer school break official programs calendar registration"
+      },
+      {
+        "region": "St. Joseph & Pony Express",
+        "category": "play_attractions",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "St. Joseph & Pony Express playgrounds indoor play amusement escape rooms mini golf official programs calendar registration"
+      },
+      {
+        "region": "St. Joseph & Pony Express",
+        "category": "food_drink",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "St. Joseph & Pony Express food festivals tastings dining cooking breweries official programs calendar registration"
+      },
+      {
+        "region": "St. Joseph & Pony Express",
+        "category": "markets_shopping",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "St. Joseph & Pony Express farmers markets craft fairs vintage holiday markets official programs calendar registration"
+      },
+      {
+        "region": "St. Joseph & Pony Express",
+        "category": "festivals_seasonal",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "St. Joseph & Pony Express festivals fairs holiday seasonal celebrations official programs calendar registration"
+      },
+      {
+        "region": "St. Joseph & Pony Express",
+        "category": "games_hobbies",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "St. Joseph & Pony Express board games chess tabletop gaming hobby clubs official programs calendar registration"
+      },
+      {
+        "region": "St. Joseph & Pony Express",
+        "category": "community_social",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "St. Joseph & Pony Express meetups cultural community social clubs official programs calendar registration"
+      },
+      {
+        "region": "St. Joseph & Pony Express",
+        "category": "volunteering",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "St. Joseph & Pony Express volunteer service conservation citizen science official programs calendar registration"
+      },
+      {
+        "region": "St. Joseph & Pony Express",
+        "category": "libraries_learning",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "St. Joseph & Pony Express libraries storytime literacy lifelong learning official programs calendar registration"
+      },
+      {
+        "region": "St. Joseph & Pony Express",
+        "category": "adaptive_inclusive",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "St. Joseph & Pony Express adaptive sports inclusive recreation sensory friendly ASL official programs calendar registration"
+      },
+      {
+        "region": "St. Joseph & Pony Express",
+        "category": "travel_exploration",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "St. Joseph & Pony Express walking tours architecture day trips agritourism official programs calendar registration"
+      },
+      {
+        "region": "Omaha",
+        "category": "outdoor_recreation",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Omaha hiking cycling paddling camping fishing climbing trails official programs calendar registration"
+      },
+      {
+        "region": "Omaha",
+        "category": "sports_participation",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Omaha youth adult adaptive leagues seasons teams tournaments official programs calendar registration"
+      },
+      {
+        "region": "Omaha",
+        "category": "sports_spectating",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Omaha professional college amateur sports season schedules official programs calendar registration"
+      },
+      {
+        "region": "Omaha",
+        "category": "fitness_wellness",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Omaha fitness yoga swimming martial arts wellness official programs calendar registration"
+      },
+      {
+        "region": "Omaha",
+        "category": "arts_exhibits",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Omaha temporary exhibitions galleries public art official programs calendar registration"
+      },
+      {
+        "region": "Omaha",
+        "category": "history_culture",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Omaha history museums heritage cultural celebrations official programs calendar registration"
+      },
+      {
+        "region": "Omaha",
+        "category": "science_technology",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Omaha science planetarium STEM makers robotics official programs calendar registration"
+      },
+      {
+        "region": "Omaha",
+        "category": "nature_animals",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Omaha nature centers wildlife birding gardens zoo official programs calendar registration"
+      },
+      {
+        "region": "Omaha",
+        "category": "music_performance",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Omaha concerts theater dance opera comedy official programs calendar registration"
+      },
+      {
+        "region": "Omaha",
+        "category": "film_literature",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Omaha cinema film festivals author readings book clubs official programs calendar registration"
+      },
+      {
+        "region": "Omaha",
+        "category": "classes_skills",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Omaha classes workshops cooking crafts language lessons official programs calendar registration"
+      },
+      {
+        "region": "Omaha",
+        "category": "camps",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Omaha day camps overnight camps summer school break official programs calendar registration"
+      },
+      {
+        "region": "Omaha",
+        "category": "play_attractions",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Omaha playgrounds indoor play amusement escape rooms mini golf official programs calendar registration"
+      },
+      {
+        "region": "Omaha",
+        "category": "food_drink",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Omaha food festivals tastings dining cooking breweries official programs calendar registration"
+      },
+      {
+        "region": "Omaha",
+        "category": "markets_shopping",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Omaha farmers markets craft fairs vintage holiday markets official programs calendar registration"
+      },
+      {
+        "region": "Omaha",
+        "category": "festivals_seasonal",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Omaha festivals fairs holiday seasonal celebrations official programs calendar registration"
+      },
+      {
+        "region": "Omaha",
+        "category": "games_hobbies",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Omaha board games chess tabletop gaming hobby clubs official programs calendar registration"
+      },
+      {
+        "region": "Omaha",
+        "category": "community_social",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Omaha meetups cultural community social clubs official programs calendar registration"
+      },
+      {
+        "region": "Omaha",
+        "category": "volunteering",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Omaha volunteer service conservation citizen science official programs calendar registration"
+      },
+      {
+        "region": "Omaha",
+        "category": "libraries_learning",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Omaha libraries storytime literacy lifelong learning official programs calendar registration"
+      },
+      {
+        "region": "Omaha",
+        "category": "adaptive_inclusive",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Omaha adaptive sports inclusive recreation sensory friendly ASL official programs calendar registration"
+      },
+      {
+        "region": "Omaha",
+        "category": "travel_exploration",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Omaha walking tours architecture day trips agritourism official programs calendar registration"
+      },
+      {
+        "region": "Des Moines",
+        "category": "outdoor_recreation",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Des Moines hiking cycling paddling camping fishing climbing trails official programs calendar registration"
+      },
+      {
+        "region": "Des Moines",
+        "category": "sports_participation",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Des Moines youth adult adaptive leagues seasons teams tournaments official programs calendar registration"
+      },
+      {
+        "region": "Des Moines",
+        "category": "sports_spectating",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Des Moines professional college amateur sports season schedules official programs calendar registration"
+      },
+      {
+        "region": "Des Moines",
+        "category": "fitness_wellness",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Des Moines fitness yoga swimming martial arts wellness official programs calendar registration"
+      },
+      {
+        "region": "Des Moines",
+        "category": "arts_exhibits",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Des Moines temporary exhibitions galleries public art official programs calendar registration"
+      },
+      {
+        "region": "Des Moines",
+        "category": "history_culture",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Des Moines history museums heritage cultural celebrations official programs calendar registration"
+      },
+      {
+        "region": "Des Moines",
+        "category": "science_technology",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Des Moines science planetarium STEM makers robotics official programs calendar registration"
+      },
+      {
+        "region": "Des Moines",
+        "category": "nature_animals",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Des Moines nature centers wildlife birding gardens zoo official programs calendar registration"
+      },
+      {
+        "region": "Des Moines",
+        "category": "music_performance",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Des Moines concerts theater dance opera comedy official programs calendar registration"
+      },
+      {
+        "region": "Des Moines",
+        "category": "film_literature",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Des Moines cinema film festivals author readings book clubs official programs calendar registration"
+      },
+      {
+        "region": "Des Moines",
+        "category": "classes_skills",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Des Moines classes workshops cooking crafts language lessons official programs calendar registration"
+      },
+      {
+        "region": "Des Moines",
+        "category": "camps",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Des Moines day camps overnight camps summer school break official programs calendar registration"
+      },
+      {
+        "region": "Des Moines",
+        "category": "play_attractions",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Des Moines playgrounds indoor play amusement escape rooms mini golf official programs calendar registration"
+      },
+      {
+        "region": "Des Moines",
+        "category": "food_drink",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Des Moines food festivals tastings dining cooking breweries official programs calendar registration"
+      },
+      {
+        "region": "Des Moines",
+        "category": "markets_shopping",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Des Moines farmers markets craft fairs vintage holiday markets official programs calendar registration"
+      },
+      {
+        "region": "Des Moines",
+        "category": "festivals_seasonal",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Des Moines festivals fairs holiday seasonal celebrations official programs calendar registration"
+      },
+      {
+        "region": "Des Moines",
+        "category": "games_hobbies",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Des Moines board games chess tabletop gaming hobby clubs official programs calendar registration"
+      },
+      {
+        "region": "Des Moines",
+        "category": "community_social",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Des Moines meetups cultural community social clubs official programs calendar registration"
+      },
+      {
+        "region": "Des Moines",
+        "category": "volunteering",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Des Moines volunteer service conservation citizen science official programs calendar registration"
+      },
+      {
+        "region": "Des Moines",
+        "category": "libraries_learning",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Des Moines libraries storytime literacy lifelong learning official programs calendar registration"
+      },
+      {
+        "region": "Des Moines",
+        "category": "adaptive_inclusive",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Des Moines adaptive sports inclusive recreation sensory friendly ASL official programs calendar registration"
+      },
+      {
+        "region": "Des Moines",
+        "category": "travel_exploration",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Des Moines walking tours architecture day trips agritourism official programs calendar registration"
+      },
+      {
+        "region": "Springfield & Ozarks",
+        "category": "outdoor_recreation",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Springfield & Ozarks hiking cycling paddling camping fishing climbing trails official programs calendar registration"
+      },
+      {
+        "region": "Springfield & Ozarks",
+        "category": "sports_participation",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Springfield & Ozarks youth adult adaptive leagues seasons teams tournaments official programs calendar registration"
+      },
+      {
+        "region": "Springfield & Ozarks",
+        "category": "sports_spectating",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Springfield & Ozarks professional college amateur sports season schedules official programs calendar registration"
+      },
+      {
+        "region": "Springfield & Ozarks",
+        "category": "fitness_wellness",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Springfield & Ozarks fitness yoga swimming martial arts wellness official programs calendar registration"
+      },
+      {
+        "region": "Springfield & Ozarks",
+        "category": "arts_exhibits",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Springfield & Ozarks temporary exhibitions galleries public art official programs calendar registration"
+      },
+      {
+        "region": "Springfield & Ozarks",
+        "category": "history_culture",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Springfield & Ozarks history museums heritage cultural celebrations official programs calendar registration"
+      },
+      {
+        "region": "Springfield & Ozarks",
+        "category": "science_technology",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Springfield & Ozarks science planetarium STEM makers robotics official programs calendar registration"
+      },
+      {
+        "region": "Springfield & Ozarks",
+        "category": "nature_animals",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Springfield & Ozarks nature centers wildlife birding gardens zoo official programs calendar registration"
+      },
+      {
+        "region": "Springfield & Ozarks",
+        "category": "music_performance",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Springfield & Ozarks concerts theater dance opera comedy official programs calendar registration"
+      },
+      {
+        "region": "Springfield & Ozarks",
+        "category": "film_literature",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Springfield & Ozarks cinema film festivals author readings book clubs official programs calendar registration"
+      },
+      {
+        "region": "Springfield & Ozarks",
+        "category": "classes_skills",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Springfield & Ozarks classes workshops cooking crafts language lessons official programs calendar registration"
+      },
+      {
+        "region": "Springfield & Ozarks",
+        "category": "camps",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Springfield & Ozarks day camps overnight camps summer school break official programs calendar registration"
+      },
+      {
+        "region": "Springfield & Ozarks",
+        "category": "play_attractions",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Springfield & Ozarks playgrounds indoor play amusement escape rooms mini golf official programs calendar registration"
+      },
+      {
+        "region": "Springfield & Ozarks",
+        "category": "food_drink",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Springfield & Ozarks food festivals tastings dining cooking breweries official programs calendar registration"
+      },
+      {
+        "region": "Springfield & Ozarks",
+        "category": "markets_shopping",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Springfield & Ozarks farmers markets craft fairs vintage holiday markets official programs calendar registration"
+      },
+      {
+        "region": "Springfield & Ozarks",
+        "category": "festivals_seasonal",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Springfield & Ozarks festivals fairs holiday seasonal celebrations official programs calendar registration"
+      },
+      {
+        "region": "Springfield & Ozarks",
+        "category": "games_hobbies",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Springfield & Ozarks board games chess tabletop gaming hobby clubs official programs calendar registration"
+      },
+      {
+        "region": "Springfield & Ozarks",
+        "category": "community_social",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Springfield & Ozarks meetups cultural community social clubs official programs calendar registration"
+      },
+      {
+        "region": "Springfield & Ozarks",
+        "category": "volunteering",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Springfield & Ozarks volunteer service conservation citizen science official programs calendar registration"
+      },
+      {
+        "region": "Springfield & Ozarks",
+        "category": "libraries_learning",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Springfield & Ozarks libraries storytime literacy lifelong learning official programs calendar registration"
+      },
+      {
+        "region": "Springfield & Ozarks",
+        "category": "adaptive_inclusive",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Springfield & Ozarks adaptive sports inclusive recreation sensory friendly ASL official programs calendar registration"
+      },
+      {
+        "region": "Springfield & Ozarks",
+        "category": "travel_exploration",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Springfield & Ozarks walking tours architecture day trips agritourism official programs calendar registration"
+      },
+      {
+        "region": "Wichita & Hutchinson",
+        "category": "outdoor_recreation",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Wichita & Hutchinson hiking cycling paddling camping fishing climbing trails official programs calendar registration"
+      },
+      {
+        "region": "Wichita & Hutchinson",
+        "category": "sports_participation",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Wichita & Hutchinson youth adult adaptive leagues seasons teams tournaments official programs calendar registration"
+      },
+      {
+        "region": "Wichita & Hutchinson",
+        "category": "sports_spectating",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Wichita & Hutchinson professional college amateur sports season schedules official programs calendar registration"
+      },
+      {
+        "region": "Wichita & Hutchinson",
+        "category": "fitness_wellness",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Wichita & Hutchinson fitness yoga swimming martial arts wellness official programs calendar registration"
+      },
+      {
+        "region": "Wichita & Hutchinson",
+        "category": "arts_exhibits",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Wichita & Hutchinson temporary exhibitions galleries public art official programs calendar registration"
+      },
+      {
+        "region": "Wichita & Hutchinson",
+        "category": "history_culture",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Wichita & Hutchinson history museums heritage cultural celebrations official programs calendar registration"
+      },
+      {
+        "region": "Wichita & Hutchinson",
+        "category": "science_technology",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Wichita & Hutchinson science planetarium STEM makers robotics official programs calendar registration"
+      },
+      {
+        "region": "Wichita & Hutchinson",
+        "category": "nature_animals",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Wichita & Hutchinson nature centers wildlife birding gardens zoo official programs calendar registration"
+      },
+      {
+        "region": "Wichita & Hutchinson",
+        "category": "music_performance",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Wichita & Hutchinson concerts theater dance opera comedy official programs calendar registration"
+      },
+      {
+        "region": "Wichita & Hutchinson",
+        "category": "film_literature",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Wichita & Hutchinson cinema film festivals author readings book clubs official programs calendar registration"
+      },
+      {
+        "region": "Wichita & Hutchinson",
+        "category": "classes_skills",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Wichita & Hutchinson classes workshops cooking crafts language lessons official programs calendar registration"
+      },
+      {
+        "region": "Wichita & Hutchinson",
+        "category": "camps",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Wichita & Hutchinson day camps overnight camps summer school break official programs calendar registration"
+      },
+      {
+        "region": "Wichita & Hutchinson",
+        "category": "play_attractions",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Wichita & Hutchinson playgrounds indoor play amusement escape rooms mini golf official programs calendar registration"
+      },
+      {
+        "region": "Wichita & Hutchinson",
+        "category": "food_drink",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Wichita & Hutchinson food festivals tastings dining cooking breweries official programs calendar registration"
+      },
+      {
+        "region": "Wichita & Hutchinson",
+        "category": "markets_shopping",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Wichita & Hutchinson farmers markets craft fairs vintage holiday markets official programs calendar registration"
+      },
+      {
+        "region": "Wichita & Hutchinson",
+        "category": "festivals_seasonal",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Wichita & Hutchinson festivals fairs holiday seasonal celebrations official programs calendar registration"
+      },
+      {
+        "region": "Wichita & Hutchinson",
+        "category": "games_hobbies",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Wichita & Hutchinson board games chess tabletop gaming hobby clubs official programs calendar registration"
+      },
+      {
+        "region": "Wichita & Hutchinson",
+        "category": "community_social",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Wichita & Hutchinson meetups cultural community social clubs official programs calendar registration"
+      },
+      {
+        "region": "Wichita & Hutchinson",
+        "category": "volunteering",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Wichita & Hutchinson volunteer service conservation citizen science official programs calendar registration"
+      },
+      {
+        "region": "Wichita & Hutchinson",
+        "category": "libraries_learning",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Wichita & Hutchinson libraries storytime literacy lifelong learning official programs calendar registration"
+      },
+      {
+        "region": "Wichita & Hutchinson",
+        "category": "adaptive_inclusive",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Wichita & Hutchinson adaptive sports inclusive recreation sensory friendly ASL official programs calendar registration"
+      },
+      {
+        "region": "Wichita & Hutchinson",
+        "category": "travel_exploration",
+        "routes": [],
+        "collecting_routes": [],
+        "status": "gap",
+        "depth_tier": "gap",
+        "distinct_offerings": 0,
+        "live_calendar_offerings": 0,
+        "first_party_offerings": 0,
+        "next_search": "Wichita & Hutchinson walking tours architecture day trips agritourism official programs calendar registration"
       }
     ],
     "activity_kinds": [
@@ -21798,30 +23820,34 @@
           "truman",
           "downtown-ls",
           "kcopera",
-          "kc-pet-fest",
-          "central-avenue-dia",
-          "troost-united",
           "mavericks",
           "independence-japan",
-          "dfscon",
           "kc-convention",
-          "ls-mistletoe"
+          "kcconvention-events-feed",
+          "kcconvention-events",
+          "kcconvention-feed",
+          "kcopera-feed",
+          "lawrenceartscenter-events-at-lawrence-ar",
+          "midwaygolfgames-feed",
+          "nelson-atkins-feed",
+          "wonderscope-feed",
+          "midlandkc-events-rss"
         ],
         "collecting_routes": [
           "watkins",
-          "lawrence-arts",
           "momentary",
           "crystal-bridges",
           "columbia-cvb",
-          "kc-zoo",
+          "nelson",
           "kc-library",
           "kc-parks",
+          "bentonville-downtown",
           "visitkc",
           "tmobile",
           "midland",
+          "truman",
           "downtown-ls",
-          "kcopera",
-          "kc-convention"
+          "mavericks"
         ]
       },
       {
@@ -21836,7 +23862,6 @@
           "truman",
           "downtown-ls",
           "kcopera",
-          "dfscon",
           "kc-convention"
         ],
         "collecting_routes": []
@@ -21859,7 +23884,8 @@
           "visitkc",
           "linda-hall-alchemy",
           "shsmo-tom-sawyer",
-          "shsmo-indigenous-identities"
+          "shsmo-indigenous-identities",
+          "nelson-atkins-feed"
         ]
       },
       {
@@ -21927,7 +23953,6 @@
           "truman",
           "downtown-ls",
           "kcopera",
-          "crossroads-flea",
           "ku-astronomy",
           "bpl-books-on-main"
         ],
@@ -21980,7 +24005,23 @@
         ]
       }
     ],
-    "note": "A route is a research lead, not proof that every program has been collected. Gaps are explicit; this matrix is not an exhaustiveness claim."
+    "summary_metrics": {
+      "depth_tier_counts": {
+        "strong": 10,
+        "route_only": 18,
+        "thin": 28,
+        "active": 14,
+        "gap": 172
+      },
+      "total_records": 3618,
+      "distinct_offerings": 1128,
+      "concentration_top3_share": 0.9306,
+      "pct_with_verified_age": 0.0077,
+      "pct_with_audience_hint": 1.0,
+      "pct_with_geo": 0.8071,
+      "pct_stale": 0.1371
+    },
+    "note": "A route is a research lead, not proof that every program has been collected. Depth tiers distinguish single-stub thin cells from active/strong live calendars."
   },
   "place_leaves": [
     {
@@ -22037,7 +24078,7 @@
       "parent_route_ids": [
         "crystal-bridges"
       ],
-      "hours_source": null,
+      "hours_source": "https://crystalbridges.org/visit",
       "coordinate_source": "https://crystalbridges.org/visit/nature-trails",
       "offering_sources": [],
       "provenance": "reviewed-place-registry"
@@ -22116,7 +24157,7 @@
         "shsmo-indigenous-identities"
       ],
       "hours_source": "https://shsmo.org/visit/columbia",
-      "coordinate_source": null,
+      "coordinate_source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=605+Elm+Street%2C+Columbia%2C+MO+65201&benchmark=Public_AR_Current&format=json",
       "offering_sources": [],
       "provenance": "reviewed-place-registry"
     },
@@ -22128,7 +24169,7 @@
         "lawrence-indoor-aquatic"
       ],
       "hours_source": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center",
-      "coordinate_source": null,
+      "coordinate_source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=4706+Overland+Drive%2C+Lawrence%2C+KS&benchmark=Public_AR_Current&format=json",
       "offering_sources": [
         "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
       ],
@@ -22142,10 +24183,40 @@
         "midway-mini-golf"
       ],
       "hours_source": "https://midwaygolfgames.com/golf/miniature-golf/",
-      "coordinate_source": null,
+      "coordinate_source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=5500+W+Van+Horn+Tavern+Rd%2C+Columbia%2C+MO+65203&benchmark=Public_AR_Current&format=json",
       "offering_sources": [
         "https://midwaygolfgames.com/golf/miniature-golf/"
       ],
+      "provenance": "reviewed-place-registry"
+    },
+    {
+      "id": "gieringer-s-family-farm",
+      "label": "Gieringer\u2019s Family Farm",
+      "url": "https://goberryfarm.com",
+      "parent_route_ids": [],
+      "hours_source": null,
+      "coordinate_source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=39345+W+183rd+St%2C+Edgerton%2C+KS+66021&benchmark=Public_AR_Current&format=json",
+      "offering_sources": [],
+      "provenance": "reviewed-place-registry"
+    },
+    {
+      "id": "cider-hill-family-orchard",
+      "label": "Cider Hill Family Orchard",
+      "url": "https://www.ciderhillfamilyorchard.com",
+      "parent_route_ids": [],
+      "hours_source": null,
+      "coordinate_source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=3341+N+139th+St%2C+Kansas+City%2C+KS+66109&benchmark=Public_AR_Current&format=json",
+      "offering_sources": [],
+      "provenance": "reviewed-place-registry"
+    },
+    {
+      "id": "deanna-rose-children-s-farmstead",
+      "label": "Deanna Rose Children\u2019s Farmstead",
+      "url": "https://www.opkansas.org/recreation-fun/deanna-rose-childrens-farmstead",
+      "parent_route_ids": [],
+      "hours_source": null,
+      "coordinate_source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=13800+Switzer+Rd%2C+Overland+Park%2C+KS+66221&benchmark=Public_AR_Current&format=json",
+      "offering_sources": [],
       "provenance": "reviewed-place-registry"
     }
   ]
