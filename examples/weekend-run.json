@@ -27,7 +27,7 @@
     "regional_wildcards": true,
     "filters": {}
   },
-  "graph_digest": "801e72bc606317f122c46ef287887a47ad012ea71c2707fb8de2d1d10a9c0eb6",
+  "graph_digest": "e64ee2f97229efac1c4a1be55ce5953770f73b6d955bb2094368452e25fc322e",
   "completed": [
     "source-graph",
     "deep-first-party-sweep",
@@ -129,33 +129,6 @@
       "notes": "Synthetic sweep only; not a claim of live visits"
     },
     {
-      "node_id": "kc-pet-fest",
-      "status": "checked",
-      "observed_at": "2030-09-05T12:00:00-05:00",
-      "visited_urls": [
-        "https://example.test/synthetic-route"
-      ],
-      "notes": "Synthetic sweep only; not a claim of live visits"
-    },
-    {
-      "node_id": "central-avenue-dia",
-      "status": "checked",
-      "observed_at": "2030-09-05T12:00:00-05:00",
-      "visited_urls": [
-        "https://example.test/synthetic-route"
-      ],
-      "notes": "Synthetic sweep only; not a claim of live visits"
-    },
-    {
-      "node_id": "troost-united",
-      "status": "checked",
-      "observed_at": "2030-09-05T12:00:00-05:00",
-      "visited_urls": [
-        "https://example.test/synthetic-route"
-      ],
-      "notes": "Synthetic sweep only; not a claim of live visits"
-    },
-    {
       "node_id": "mavericks",
       "status": "checked",
       "observed_at": "2030-09-05T12:00:00-05:00",
@@ -174,34 +147,7 @@
       "notes": "Synthetic sweep only; not a claim of live visits"
     },
     {
-      "node_id": "dfscon",
-      "status": "checked",
-      "observed_at": "2030-09-05T12:00:00-05:00",
-      "visited_urls": [
-        "https://example.test/synthetic-route"
-      ],
-      "notes": "Synthetic sweep only; not a claim of live visits"
-    },
-    {
       "node_id": "kc-convention",
-      "status": "checked",
-      "observed_at": "2030-09-05T12:00:00-05:00",
-      "visited_urls": [
-        "https://example.test/synthetic-route"
-      ],
-      "notes": "Synthetic sweep only; not a claim of live visits"
-    },
-    {
-      "node_id": "crossroads-flea",
-      "status": "checked",
-      "observed_at": "2030-09-05T12:00:00-05:00",
-      "visited_urls": [
-        "https://example.test/synthetic-route"
-      ],
-      "notes": "Synthetic sweep only; not a claim of live visits"
-    },
-    {
-      "node_id": "ls-mistletoe",
       "status": "checked",
       "observed_at": "2030-09-05T12:00:00-05:00",
       "visited_urls": [
@@ -639,6 +585,6 @@
         }
       ]
     },
-    "digest": "ed5913f6b4fe2d23390d515e23f9a1d627d5c898f73419bc29b142ae059b3dcf"
+    "digest": "dced30996ab56d76f2c736c2a8e9cd142f88e53c93e642a55fed49cd75bfde26"
   }
 }

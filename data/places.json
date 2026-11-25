@@ -14,7 +14,7 @@
         "note": "Official park map: park office location. Consult the park map for trail and day-use entrances."
       },
       "hours": {
-        "text": "Day-use areas: 7 a.m. to sunset daily. Gates: 7 a.m.\u20139 p.m. April 15\u2013October 31; 7 a.m.\u20136 p.m. November 1\u2013April 14.",
+        "text": "Day-use areas: 7 a.m. to sunset daily. Gates: 7 a.m.–9 p.m. April 15–October 31; 7 a.m.–6 p.m. November 1–April 14.",
         "timezone": "America/Chicago",
         "rules": [
           {
@@ -124,7 +124,7 @@
         "precision": "access_point",
         "source_url": "https://mostateparks.com/park/rock-bridge-memorial-state-park/map",
         "checked_at": "2026-11-07T09:17:40.572854-06:00",
-        "note": "Official park map: Devil\u2019s Icebox entrance; other trailheads have separate access points."
+        "note": "Official park map: Devil’s Icebox entrance; other trailheads have separate access points."
       },
       "hours": {
         "text": "Park grounds: sunrise to sunset year-round. Park office hours are separate.",
@@ -290,7 +290,55 @@
         "checked_at": "2026-11-07T09:17:40.572854-06:00",
         "note": "Official museum directions pin. Trailheads are distributed across the campus; use the trail map for access."
       },
-      "hours": null,
+      "hours": {
+        "text": "Museum galleries: Monday/Wednesday 11 a.m.–6 p.m.; Thursday/Friday 11 a.m.–8 p.m.; Saturday/Sunday 10 a.m.–6 p.m.; Tuesday closed. Weekday lobby opens 10 a.m. Museum closed Thanksgiving and Christmas; trails/grounds sunrise–sunset have separate access.",
+        "timezone": "America/Chicago",
+        "rules": [
+          {
+            "days": [
+              0,
+              2
+            ],
+            "opens": "11:00",
+            "closes": "18:00",
+            "scope": "visitor"
+          },
+          {
+            "days": [
+              3,
+              4
+            ],
+            "opens": "11:00",
+            "closes": "20:00",
+            "scope": "visitor"
+          },
+          {
+            "days": [
+              5,
+              6
+            ],
+            "opens": "10:00",
+            "closes": "18:00",
+            "scope": "visitor"
+          }
+        ],
+        "exceptions": [
+          {
+            "date": "2026-11-26",
+            "closed": true,
+            "note": "Museum closed Thanksgiving."
+          },
+          {
+            "date": "2026-12-25",
+            "closed": true,
+            "note": "Museum closed Christmas."
+          }
+        ],
+        "complete_week": true,
+        "source_url": "https://crystalbridges.org/visit",
+        "checked_at": "2026-11-16T08:55:59.127244-06:00",
+        "notice": "Published regular hours are not live closure, ticket or capacity confirmation."
+      },
       "activities": [],
       "source_url": "https://crystalbridges.org/",
       "match": {
@@ -376,7 +424,7 @@
         ],
         "venue_aliases": [
           "The Momentary",
-          "R\u00d8DE House",
+          "RØDE House",
           "Fermentation Hall",
           "Tower Bar"
         ]
@@ -419,7 +467,7 @@
         "note": "US Census street-address match; approximate venue location, not a verified entrance."
       },
       "hours": {
-        "text": "Tuesday\u2013Saturday, 10 a.m.\u20134 p.m.; closed Sunday and Monday.",
+        "text": "Tuesday–Saturday, 10 a.m.–4 p.m.; closed Sunday and Monday.",
         "timezone": "America/Chicago",
         "rules": [
           {
@@ -475,7 +523,7 @@
         "note": "US Census street-address match; approximate venue location, not a verified entrance."
       },
       "hours": {
-        "text": "Winter: Tuesday\u2013Saturday 10 AM\u20135 PM; Sunday noon\u20135 PM. Summer (Memorial Day\u2013Labor Day): Monday\u2013Saturday 10 AM\u20135 PM; Sunday noon\u20135 PM. Hours may vary on holidays.",
+        "text": "Winter: Tuesday–Saturday 10 AM–5 PM; Sunday noon–5 PM. Summer (Memorial Day–Labor Day): Monday–Saturday 10 AM–5 PM; Sunday noon–5 PM. Hours may vary on holidays.",
         "timezone": "America/Chicago",
         "rules": [],
         "exceptions": [],
@@ -538,7 +586,7 @@
       "address": "605 Elm Street, Columbia, MO 65201",
       "geo": null,
       "hours": {
-        "text": "Art gallery: Tuesday\u2013Friday 10 a.m.\u20134:30 p.m.; Saturday 10 a.m.\u20132 p.m.; Sunday/Monday closed. Thanksgiving closure noon November 25\u201328, 2026; winter break noon December 24, 2026\u2013January 1, 2027. Research-center and bookstore hours differ.",
+        "text": "Art gallery: Tuesday–Friday 10 a.m.–4:30 p.m.; Saturday 10 a.m.–2 p.m.; Sunday/Monday closed. Thanksgiving closure noon November 25–28, 2026; winter break noon December 24, 2026–January 1, 2027. Research-center and bookstore hours differ.",
         "timezone": "America/Chicago",
         "rules": [
           {
@@ -768,7 +816,7 @@
         },
         {
           "id": "family-pool",
-          "name": "Zero-depth family pool, waterslide and children\u2019s area",
+          "name": "Zero-depth family pool, waterslide and children’s area",
           "availability": "unknown",
           "hours": {
             "text": "Monday-Thursday closed; Friday 4-7:30 p.m.; Saturday/Sunday 1-5 p.m. Waterslide/diving areas close 30 minutes before building closure.",

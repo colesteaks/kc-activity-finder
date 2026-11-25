@@ -292,7 +292,7 @@
     },
     {
       "id": "downtown-ls",
-      "label": "Downtown Lee\u2019s Summit",
+      "label": "Downtown Lee’s Summit",
       "canonical_url": "https://downtownls.org/wp-json/tribe/events/v1/events",
       "source_class": "event-organizer",
       "roles": [
@@ -328,7 +328,7 @@
     {
       "id": "kcopera",
       "label": "Lyric Opera of Kansas City",
-      "canonical_url": "https://kcopera.org/event/the-marriage-of-figaro/",
+      "canonical_url": "https://kcopera.org/events/",
       "source_class": "event-organizer",
       "roles": [
         "first-party-sweep",
@@ -345,13 +345,13 @@
       },
       "verification": {
         "last_checked": "2026-11-07",
-        "evidence_url": "https://kcopera.org/event/the-marriage-of-figaro/",
+        "evidence_url": "https://kcopera.org/events/",
         "collector_status": "checked",
         "captured_records": 11
       },
       "crawl": {
         "entrypoints": [
-          "https://kcopera.org/event/the-marriage-of-figaro/"
+          "https://kcopera.org/events/"
         ],
         "sweep_targets": [
           "all events and pagination",
@@ -361,111 +361,9 @@
       }
     },
     {
-      "id": "kc-pet-fest",
-      "label": "KC Pet Fest",
-      "canonical_url": "https://www.kcpetfest.com/",
-      "source_class": "event-organizer",
-      "roles": [
-        "first-party-sweep",
-        "graph-expansion"
-      ],
-      "status": "active",
-      "coverage": [
-        "Kansas City metro"
-      ],
-      "provenance": {
-        "kind": "reviewed-supplement",
-        "discovered_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
-        "observed_relation": "newsletter/listicle links to provider; actual calendar or event leaf reviewed on 2026-11-07"
-      },
-      "verification": {
-        "last_checked": "2026-11-07",
-        "evidence_url": "https://www.kcpetfest.com/",
-        "collector_status": "checked",
-        "captured_records": 1
-      },
-      "crawl": {
-        "entrypoints": [
-          "https://www.kcpetfest.com/"
-        ],
-        "sweep_targets": [
-          "official date and schedule",
-          "current registration and admission status"
-        ]
-      }
-    },
-    {
-      "id": "central-avenue-dia",
-      "label": "Central Avenue Betterment Association",
-      "canonical_url": "https://www.cabakck.org/dia-de-muertos",
-      "source_class": "event-organizer",
-      "roles": [
-        "first-party-sweep",
-        "graph-expansion"
-      ],
-      "status": "active",
-      "coverage": [
-        "Kansas City metro"
-      ],
-      "provenance": {
-        "kind": "reviewed-supplement",
-        "discovered_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
-        "observed_relation": "newsletter/listicle links to provider; actual calendar or event leaf reviewed on 2026-11-07"
-      },
-      "verification": {
-        "last_checked": "2026-11-07",
-        "evidence_url": "https://www.cabakck.org/dia-de-muertos",
-        "collector_status": "checked",
-        "captured_records": 1
-      },
-      "crawl": {
-        "entrypoints": [
-          "https://www.cabakck.org/dia-de-muertos"
-        ],
-        "sweep_targets": [
-          "official date and schedule",
-          "current registration and admission status"
-        ]
-      }
-    },
-    {
-      "id": "troost-united",
-      "label": "Reconciliation Services",
-      "canonical_url": "https://www.rs3101.org/troostunitedfest",
-      "source_class": "event-organizer",
-      "roles": [
-        "first-party-sweep",
-        "graph-expansion"
-      ],
-      "status": "active",
-      "coverage": [
-        "Kansas City metro"
-      ],
-      "provenance": {
-        "kind": "reviewed-supplement",
-        "discovered_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
-        "observed_relation": "newsletter/listicle links to provider; actual calendar or event leaf reviewed on 2026-11-07"
-      },
-      "verification": {
-        "last_checked": "2026-11-07",
-        "evidence_url": "https://www.rs3101.org/troostunitedfest",
-        "collector_status": "checked",
-        "captured_records": 1
-      },
-      "crawl": {
-        "entrypoints": [
-          "https://www.rs3101.org/troostunitedfest"
-        ],
-        "sweep_targets": [
-          "official date and schedule",
-          "current registration and admission status"
-        ]
-      }
-    },
-    {
       "id": "mavericks",
       "label": "Kansas City Mavericks home games",
-      "canonical_url": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters",
+      "canonical_url": "https://kcmavericks.com/schedule",
       "source_class": "event-organizer",
       "roles": [
         "first-party-sweep",
@@ -482,13 +380,13 @@
       },
       "verification": {
         "last_checked": "2026-11-07",
-        "evidence_url": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters",
+        "evidence_url": "https://kcmavericks.com/schedule",
         "collector_status": "partial",
         "captured_records": 3
       },
       "crawl": {
         "entrypoints": [
-          "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
+          "https://kcmavericks.com/schedule"
         ],
         "sweep_targets": [
           "official schedule and location",
@@ -531,40 +429,6 @@
       }
     },
     {
-      "id": "dfscon",
-      "label": "Dark Flame Society \u2014 DFSCON ticketing",
-      "canonical_url": "https://darkflamesociety.ticketspice.com/dfscon",
-      "source_class": "event-organizer",
-      "roles": [
-        "first-party-sweep",
-        "graph-expansion"
-      ],
-      "status": "active",
-      "coverage": [
-        "Kansas City metro"
-      ],
-      "provenance": {
-        "kind": "reviewed-supplement",
-        "discovered_on": "https://thingstodoinkc.com/15-things-to-do-in-kansas-city-this-weekend-november-6-8-2026/",
-        "observed_relation": "newsletter/listicle links to provider; actual calendar or event leaf reviewed on 2026-11-07"
-      },
-      "verification": {
-        "last_checked": "2026-11-07",
-        "evidence_url": "https://darkflamesociety.ticketspice.com/dfscon",
-        "collector_status": "checked",
-        "captured_records": 2
-      },
-      "crawl": {
-        "entrypoints": [
-          "https://darkflamesociety.ticketspice.com/dfscon"
-        ],
-        "sweep_targets": [
-          "official schedule and location",
-          "admission options and exceptions"
-        ]
-      }
-    },
-    {
       "id": "kc-convention",
       "label": "Kansas City Convention Center",
       "canonical_url": "https://kcconvention.com/events/",
@@ -595,74 +459,6 @@
         "sweep_targets": [
           "event schedule and dates",
           "organizer ticketing and session access"
-        ]
-      }
-    },
-    {
-      "id": "crossroads-flea",
-      "label": "Mildred\u2019s \u2014 Crossroads Flea",
-      "canonical_url": "https://www.mildredskc.com/crossroadsflea",
-      "source_class": "event-organizer",
-      "roles": [
-        "first-party-sweep",
-        "graph-expansion"
-      ],
-      "status": "active",
-      "coverage": [
-        "Kansas City metro"
-      ],
-      "provenance": {
-        "kind": "reviewed-supplement",
-        "discovered_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
-        "observed_relation": "newsletter/listicle links to provider; actual calendar or event leaf reviewed on 2026-11-07"
-      },
-      "verification": {
-        "last_checked": "2026-11-07",
-        "evidence_url": "https://www.mildredskc.com/crossroadsflea",
-        "collector_status": "checked",
-        "captured_records": 1
-      },
-      "crawl": {
-        "entrypoints": [
-          "https://www.mildredskc.com/crossroadsflea"
-        ],
-        "sweep_targets": [
-          "seasonal recurrence and hours",
-          "weather exceptions and current date confirmation"
-        ]
-      }
-    },
-    {
-      "id": "ls-mistletoe",
-      "label": "Explore Lee\u2019s Summit \u2014 Mistletoe Madness",
-      "canonical_url": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness",
-      "source_class": "official-calendar",
-      "roles": [
-        "first-party-sweep",
-        "graph-expansion"
-      ],
-      "status": "active",
-      "coverage": [
-        "Kansas City metro"
-      ],
-      "provenance": {
-        "kind": "reviewed-supplement",
-        "discovered_on": "https://www.kcdaily.com/p/prophet-over-profit",
-        "observed_relation": "newsletter/listicle links to provider; actual calendar or event leaf reviewed on 2026-11-07"
-      },
-      "verification": {
-        "last_checked": "2026-11-07",
-        "evidence_url": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness",
-        "collector_status": "checked",
-        "captured_records": 1
-      },
-      "crawl": {
-        "entrypoints": [
-          "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
-        ],
-        "sweep_targets": [
-          "official date and session hours",
-          "admission policies"
         ]
       }
     }
@@ -737,31 +533,7 @@
       "to": "kcopera",
       "relationship": "mentions-first-party",
       "evidence_url": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
-      "target_url": "https://kcopera.org/event/the-marriage-of-figaro",
-      "observed_on": "2026-11-07T14:19:38.885919-06:00"
-    },
-    {
-      "from": "kc-daily",
-      "to": "kc-pet-fest",
-      "relationship": "mentions-first-party",
-      "evidence_url": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
-      "target_url": "https://www.kcpetfest.com/",
-      "observed_on": "2026-11-07T14:19:38.885919-06:00"
-    },
-    {
-      "from": "kc-daily",
-      "to": "central-avenue-dia",
-      "relationship": "mentions-first-party",
-      "evidence_url": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
-      "target_url": "https://www.cabakck.org/dia-de-muertos",
-      "observed_on": "2026-11-07T14:19:38.885919-06:00"
-    },
-    {
-      "from": "kc-daily",
-      "to": "troost-united",
-      "relationship": "mentions-first-party",
-      "evidence_url": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
-      "target_url": "https://www.rs3101.org/troostunitedfest",
+      "target_url": "https://kcopera.org/events/",
       "observed_on": "2026-11-07T14:19:38.885919-06:00"
     },
     {
@@ -778,22 +550,6 @@
       "relationship": "mentions-first-party",
       "evidence_url": "https://www.kcdaily.com/p/new-uniforms-new-stadium",
       "target_url": "https://kcconvention.com/event/2026-masquerade-dance-experience",
-      "observed_on": "2026-11-07T14:19:38.885919-06:00"
-    },
-    {
-      "from": "kc-daily",
-      "to": "crossroads-flea",
-      "relationship": "mentions-first-party",
-      "evidence_url": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
-      "target_url": "https://www.mildredskc.com/crossroadsflea",
-      "observed_on": "2026-11-07T14:19:38.885919-06:00"
-    },
-    {
-      "from": "kc-daily",
-      "to": "ls-mistletoe",
-      "relationship": "mentions-first-party",
-      "evidence_url": "https://www.kcdaily.com/p/prophet-over-profit",
-      "target_url": "https://explorels.com/things-to-do/shopping/farmers-market",
       "observed_on": "2026-11-07T14:19:38.885919-06:00"
     }
   ],

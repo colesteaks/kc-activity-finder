@@ -1,115 +1,349 @@
 """Explicit visible calendar formats that do not expose Event JSON-LD."""
+from __future__ import annotations
+
 import re
-from datetime import datetime
-from urllib.parse import urljoin
+from datetime import datetime, timedelta
+from html import escape
+from urllib.parse import urljoin, urlsplit
 from zoneinfo import ZoneInfo
 
 from bs4 import BeautifulSoup
-from html import escape
 from dateutil.parser import parse
 
-TZ=ZoneInfo('America/Chicago')
-FULL_DATE=r'(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},\s+20\d\d'
+TZ = ZoneInfo('America/Chicago')
+FULL_DATE = r'(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},\s+20\d\d'
+
+_METRO_CITY_ALIASES = (
+    (r'\bOverland Park\b|\bNerman Museum\b|\bDeanna Rose\b|\bPrairiefire\b|\bMuseum at Prairiefire\b|\bScheels Overland Park\b', 'Overland Park'),
+    (r'\bLee[’\']s Summit\b|\bDowntown Lee[’\']s Summit\b|\bLongview Lake\b', "Lee's Summit"),
+    (r'\bLeawood\b|\bIron Horse Bar\s*&\s*Grill\s*[-–—]\s*Leawood\b|\bTown Center Plaza\b', 'Leawood'),
+    (r'\bLenexa\b|\bCity of Lenexa\b|\bSar-Ko-Par\b|\bBlack Hoof Park\b', 'Lenexa'),
+    (r'\bOlathe\b|\bMahaffie\b|\bErnie Miller\b', 'Olathe'),
+    (r'\bShawnee\b|\bShawnee Town\b', 'Shawnee'),
+    (r'\bMission\b(?!\s+Hills)', 'Mission'),
+    (r'\bMerriam\b', 'Merriam'),
+    (r'\bPrairie Village\b|\bCorinth Square\b', 'Prairie Village'),
+    (r'\bIndependence\b|\bTruman Library\b|\bCable Dahmer\b|\bVaile Mansion\b|\bBingham-Waggoner\b', 'Independence'),
+    (r'\bBlue Springs\b|\bBurr Oak Woods\b|\bFleming Park\b', 'Blue Springs'),
+    (r'\bNorth Kansas City\b|\bRabbit hOle\b|\bScreenland Armour\b', 'North Kansas City'),
+    (r'\bParkville\b|\bEnglish Landing\b', 'Parkville'),
+    (r'\bLiberty\b|\bMartha Lafite\b|\bBelvoir\b', 'Liberty'),
+    (r'\bGladstone\b|\bLinden Square\b', 'Gladstone'),
+    (r'\bKansas City,\s*KS\b|\bKCK\b|\bLegends\b|\bKansas Speedway\b|\bWyandotte County\b|\bStrawberry Hill\b', 'Kansas City, KS'),
+    (r'\bBonner Springs\b|\bAzura Amphitheater\b|\bProvidence Medical Center Amphitheater\b|\bRenaissance Festival\b', 'Bonner Springs'),
+    (r'\bKingsville\b|\bPowell Gardens\b', 'Kingsville'),
+    (r'\bWeston\b|\bWeston Bend\b', 'Weston'),
+    (r'\bExcelsior Springs\b', 'Excelsior Springs'),
+    (r'\bBelton\b', 'Belton'),
+    (r'\bRaytown\b', 'Raytown'),
+    (r'\bGrandview\b', 'Grandview'),
+    (r'\bGardner\b', 'Gardner'),
+    (r'\bDe Soto\b', 'De Soto'),
+    (r'\bRoeland Park\b', 'Roeland Park'),
+    (r'\bRiverside\b', 'Riverside'),
+    (r'\bSmithville\b', 'Smithville'),
+)
 
 
-def text(node):return node.get_text(' ',strip=True) if node else ''
+def infer_metro_city(venue: str, default_city: str = 'Kansas City') -> str:
+    """Infer KC metro municipality from explicit venue name or suburban landmark."""
+    raw = str(venue or '').strip()
+    if not raw:
+        return default_city
+    for pattern, city in _METRO_CITY_ALIASES:
+        if re.search(pattern, raw, re.I):
+            return city
+    return default_city
+
+
+def text(node):
+    return node.get_text(' ', strip=True) if node else ''
+
+
+def downtown_events(body, page):
+    """Read explicit dated cards; never infer years, age limits or ticket stock."""
+    soup = BeautifulSoup(body, 'html.parser')
+    rows = []
+    clock = r'\d{1,2}(?::\d{2})?\s*(?:am|pm)'
+    for card in soup.select('a.evcard[href]'):
+        title = text(card.select_one('.evcard-content-headline'))
+        stamp = text(card.select_one('.evcard-content-date'))
+        times = text(card.select_one('.evcard-content-time'))
+        link = urljoin(page, card['href'])
+        target = urlsplit(link)
+        if (
+            not title
+            or not re.fullmatch(r'(?:[A-Za-z]+,\s*)?[A-Za-z]+\s+\d{1,2},\s+20\d\d', stamp)
+            or target.scheme != 'https'
+            or target.netloc.lower() != urlsplit(page).netloc.lower()
+            or target.username
+            or target.password
+            or not target.path.startswith('/do/')
+        ):
+            continue
+        try:
+            day = parse(stamp, fuzzy=False)
+            if (
+                stamp.split(',')[0] in ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')
+                and not stamp.startswith(day.strftime('%A') + ',')
+            ):
+                continue
+            start = day.date().isoformat()
+            finish = None
+            all_day = True
+            match = re.fullmatch(r'(' + clock + r')(?:\s*[-–—]\s*(' + clock + r'))?', times, re.I)
+            if times and not match:
+                continue
+            if match:
+                start = parse(match[1], default=day).replace(tzinfo=TZ)
+                all_day = False
+                if match[2]:
+                    finish = parse(match[2], default=day).replace(tzinfo=TZ)
+                    if finish < start:
+                        finish += timedelta(days=1)
+                start = start.isoformat()
+                finish = finish.isoformat() if finish else None
+        except (ValueError, OverflowError):
+            continue
+        rows.append({
+            'name': title,
+            'startDate': start,
+            'endDate': finish,
+            'url': link,
+            'location': {'name': text(card.select_one('.evcard-content-venue'))},
+            '_all_day': all_day,
+            '_evidence_quote': stamp + (' ' + times if times else ''),
+            '_schedule': {
+                'kind': 'one_off',
+                'note': 'Explicit visible calendar occurrence; additional series dates may exist on the detail page.',
+            },
+            'description': 'Visible organizer calendar card. Confirm admission, age rules and registration on the linked detail page.',
+        })
+    return rows
 
 
 def visitkc_categories(classes):
-    mapping={'exhibits':'arts_exhibits','concerts':'music_performance','theatre':'music_performance',
-             'festivals':'festivals_seasonal','holiday-activities':'festivals_seasonal','sports':'sports_spectating',
-             'outdoors':'outdoor_recreation','markets':'markets_shopping','food-drink':'food_drink',
-             'tours':'travel_exploration','classes':'classes_skills','workshops':'classes_skills'}
-    return list(dict.fromkeys(mapping[c.removeprefix('event_category-')] for c in classes
-                             if c.startswith('event_category-') and c.removeprefix('event_category-') in mapping))
+    mapping = {
+        'exhibits': 'arts_exhibits',
+        'concerts': 'music_performance',
+        'theatre': 'music_performance',
+        'festivals': 'festivals_seasonal',
+        'holiday-activities': 'festivals_seasonal',
+        'sports': 'sports_spectating',
+        'outdoors': 'outdoor_recreation',
+        'markets': 'markets_shopping',
+        'food-drink': 'food_drink',
+        'tours': 'travel_exploration',
+        'classes': 'classes_skills',
+        'workshops': 'classes_skills',
+    }
+    return list(dict.fromkeys(
+        mapping[c.removeprefix('event_category-')]
+        for c in classes
+        if c.startswith('event_category-') and c.removeprefix('event_category-') in mapping
+    ))
 
 
-def library_events(body,page):
-    soup=BeautifulSoup(body,'html.parser');result=[]
+def library_events(body, page):
+    soup = BeautifulSoup(body, 'html.parser')
+    result = []
     for card in soup.select('.views-row'):
-        link=card.select_one('h3 a[href]');dates=card.select_one('.search-result__details__date')
-        if not link or not dates:continue
-        stamp=re.search(FULL_DATE,text(dates))
-        if not stamp:continue
-        time=card.select_one('.search-result__details__date .time')
-        day=parse(stamp[0]);start=parse(text(time),default=day).replace(tzinfo=TZ).isoformat() if time else day.date().isoformat()
-        result.append({'name':text(link),'startDate':start,'url':urljoin(page,link['href']),
-            'location':{'name':text(card.select_one('.search-result__details__location'))},
-            'description':text(card.select_one('.search-result__body__text')),
-            '_all_day':time is None,'_evidence_quote':text(dates),'_categories':['libraries_learning']})
-    return result
-
-
-def carbonhouse_events(body,page,source):
-    soup=BeautifulSoup(body,'html.parser');result=[]
-    for card in soup.select('.entry'):
-        title=card.select_one('h3 a[href]');day=card.select_one('.date-time-container .date');clock=card.select_one('.date-time-container .time')
-        if not title or not day or not re.search(r'\b20\d\d\b',text(day)):continue
-        date=parse(text(day));match=re.search(r'\d{1,2}(?::\d{2})?\s*[AP]M',text(clock),re.I)
-        if not match:continue
-        start=parse(match[0],default=date).replace(tzinfo=TZ)
-        result.append({'name':text(title),'startDate':start.isoformat(),'url':urljoin(page,title['href']),
-            'location':{'name':source['name']},'description':text(card.select_one('.tour,.supporting')),
-            '_evidence_quote':text(day)+' '+text(clock),'_categories':['music_performance']})
-    return result
-
-
-def visitkc_events(body,page):
-    soup=BeautifulSoup(body,'html.parser');result=[];day=None
-    for node in soup.select('h2,.js-post.type-event'):
-        if node.name=='h2':
-            stamp=re.search(FULL_DATE,text(node));day=parse(stamp[0]).date().isoformat() if stamp else None
+        link = card.select_one('h3 a[href]')
+        dates = card.select_one('.search-result__details__date')
+        if not link or not dates:
             continue
-        if not day:continue  # Featured cards have no full dated grouping: never guess their year.
-        link=node.select_one('.entry-title a[href]');venue=node.select_one('.card-text')
-        if not link:continue
-        result.append({'name':text(link),'startDate':day,'url':urljoin(page,link['href']),
-            'location':{'name':text(venue)},'keywords':' '.join(node.get('class',[])),
-            'description':'Listed on Visit KC for this date. Confirm event times, admission and availability with the organizer.',
-            '_all_day':True,'_evidence_quote':day+' · '+text(link)})
-        result[-1]['_source_post_id']=str(node.get('data-map-ids') or node.get('id','').removeprefix('post-')).split(',')[0]
-        subjects=visitkc_categories(node.get('class',[]))
-        if subjects:result[-1]['_categories']=subjects
+        stamp = re.search(FULL_DATE, text(dates))
+        if not stamp:
+            continue
+        time = card.select_one('.search-result__details__date .time')
+        day = parse(stamp[0])
+        start = parse(text(time), default=day).replace(tzinfo=TZ).isoformat() if time else day.date().isoformat()
+        result.append({
+            'name': text(link),
+            'startDate': start,
+            'url': urljoin(page, link['href']),
+            'location': {'name': text(card.select_one('.search-result__details__location'))},
+            'description': text(card.select_one('.search-result__body__text')),
+            '_all_day': time is None,
+            '_evidence_quote': text(dates),
+            '_categories': ['libraries_learning'],
+        })
     return result
 
 
-def visitkc_api_events(data,page):
-    if data.get('success') is not True:raise ValueError('Visit KC API did not return a successful result')
-    fragments=[]
-    for post in data.get('posts',[]):
-        if post.get('type')=='header':fragments.append('<h2>'+escape(post.get('date',''))+'</h2>')
-        elif post.get('type')=='event':fragments.append(post.get('content',''))
-    records=visitkc_events(''.join(fragments),page)
-    markers={str(m.get('postId')):m for m in data.get('markers',[])}
+def carbonhouse_events(body, page, source):
+    soup = BeautifulSoup(body, 'html.parser')
+    result = []
+    for card in soup.select('.entry'):
+        title = card.select_one('h3 a[href]')
+        day = card.select_one('.date-time-container .date')
+        clock = card.select_one('.date-time-container .time')
+        if not title or not day or not re.search(r'\b20\d\d\b', text(day)):
+            continue
+        date = parse(text(day))
+        match = re.search(r'\d{1,2}(?::\d{2})?\s*[AP]M', text(clock), re.I)
+        if not match:
+            continue
+        start = parse(match[0], default=date).replace(tzinfo=TZ)
+        result.append({
+            'name': text(title),
+            'startDate': start.isoformat(),
+            'url': urljoin(page, title['href']),
+            'location': {'name': source['name']},
+            'description': text(card.select_one('.tour,.supporting')),
+            '_evidence_quote': text(day) + ' ' + text(clock),
+            '_categories': ['music_performance'],
+        })
+    return result
+
+
+def visitkc_events(body, page):
+    soup = BeautifulSoup(body, 'html.parser')
+    result = []
+    day = None
+    for node in soup.select('h2,.js-post.type-event'):
+        if node.name == 'h2':
+            stamp = re.search(FULL_DATE, text(node))
+            day = parse(stamp[0]).date().isoformat() if stamp else None
+            continue
+        if not day:
+            continue  # Featured cards have no full dated grouping: never guess their year.
+        link = node.select_one('.entry-title a[href]')
+        venue = node.select_one('.card-text')
+        if not link:
+            continue
+        venue_name = text(venue)
+        loc = {'name': venue_name}
+        inferred_city = infer_metro_city(venue_name, '')
+        if inferred_city:
+            loc['address'] = {'addressLocality': inferred_city}
+        result.append({
+            'name': text(link),
+            'startDate': day,
+            'url': urljoin(page, link['href']),
+            'location': loc,
+            'keywords': ' '.join(node.get('class', [])),
+            'description': 'Listed on Visit KC for this date. Confirm event times, admission and availability with the organizer.',
+            '_all_day': True,
+            '_evidence_quote': day + ' · ' + text(link),
+        })
+        result[-1]['_source_post_id'] = str(node.get('data-map-ids') or node.get('id', '').removeprefix('post-')).split(',')[0]
+        subjects = visitkc_categories(node.get('class', []))
+        if subjects:
+            result[-1]['_categories'] = subjects
+    return result
+
+
+def visitkc_api_events(data, page):
+    if data.get('success') is not True:
+        raise ValueError('Visit KC API did not return a successful result')
+    fragments = []
+    for post in data.get('posts', []):
+        if post.get('type') == 'header':
+            fragments.append('<h2>' + escape(post.get('date', '')) + '</h2>')
+        elif post.get('type') == 'event':
+            fragments.append(post.get('content', ''))
+    records = visitkc_events(''.join(fragments), page)
+    markers = {str(m.get('postId')): m for m in data.get('markers', [])}
     for row in records:
-        marker=markers.get(row.get('_source_post_id'))
-        if marker:row['location']['geo']={'latitude':marker.get('lat'),'longitude':marker.get('lng')}
+        marker = markers.get(row.get('_source_post_id'))
+        if marker:
+            row['location']['geo'] = {'latitude': marker.get('lat'), 'longitude': marker.get('lng')}
     return records
 
 
-def html_events(body,source,page):
-    if source['format']=='library':return library_events(body,page)
-    if source['format']=='carbonhouse':return carbonhouse_events(body,page,source)
-    if source['format']=='visitkc':return visitkc_events(body,page)
-    if source['format']=='squarespace':
-        soup=BeautifulSoup(body,'html.parser');rows=[]
+def tnew_events(body, page):
+    """Read only the selected TNEW performance, never its More Dates options."""
+    soup = BeautifulSoup(body, 'html.parser')
+    detail = soup.select_one('.tn-event-detail__performance-details-container')
+    if not detail:
+        return []
+    title = text(detail.select_one('.tn-event-detail__title'))
+    stamp = text(detail.select_one('.tn-event-detail__display-time'))
+    # Explicit year and clock are required; a missing year must not become today.
+    if not title or not re.fullmatch(FULL_DATE + r'\s+\d{1,2}:\d{2}\s*[AP]M', stamp, re.I):
+        return []
+    unavailable = text(detail.select_one('.tn-event-detail__unavailable-text'))
+    sold_out = bool(re.search(r'\bsold\s*out\b', unavailable, re.I))
+    buy = soup.select_one('#tn-add-to-cart-button')
+    open_registration = buy is not None and not buy.has_attr('disabled') and not unavailable
+    description = text(detail.select_one('.tn-event-detail__description'))
+    # Preserve this material audience restriction before the public excerpt limit.
+    if 'people with memory loss and their care partners' in description.lower():
+        description = 'For people with memory loss and their care partners. ' + description
+    row = {
+        'name': title,
+        'startDate': parse(stamp).replace(tzinfo=TZ).isoformat(),
+        'url': page,
+        'description': description,
+        '_evidence_quote': stamp + (' | ' + unavailable if unavailable else ''),
+        'offers': {'availability': 'SoldOut' if sold_out else 'InStock' if open_registration else 'unknown'},
+        '_registration': {
+            'status': 'sold_out' if sold_out else 'open' if open_registration else 'unknown',
+            'opens_at': None,
+            'deadline': None,
+            'url': page,
+            'note': 'Selected performance only. Availability observed on the public ticket page; recheck before booking. Other dates can have different titles and availability.',
+        },
+    }
+    if 'Tivoli Cinema' in text(soup.select_one('main')):
+        row['_categories'] = ['film_literature']
+    if 'Atkins Auditorium' in description:
+        row['location'] = {'name': 'Atkins Auditorium'}
+    elif 'Meet in Bloch Lobby' in description:
+        row['location'] = {'name': 'Bloch Lobby'}
+    return [row]
+
+
+def html_events(body, source, page):
+    if source['format'] == 'tnew':
+        return tnew_events(body, page)
+    if source['format'] == 'downtown':
+        return downtown_events(body, page)
+    if source['format'] == 'library':
+        return library_events(body, page)
+    if source['format'] == 'carbonhouse':
+        return carbonhouse_events(body, page, source)
+    if source['format'] == 'visitkc':
+        return visitkc_events(body, page)
+    if source['format'] == 'squarespace':
+        soup = BeautifulSoup(body, 'html.parser')
+        rows = []
         for card in soup.select('article.eventlist-event'):
-            day=card.select_one('time.event-date[datetime]');clock=card.select_one('time.event-time-localized-start');end=card.select_one('time.event-time-localized-end');link=card.select_one('.eventlist-title-link')
-            if not day or not clock or not link:continue
-            start=parse(text(clock),default=parse(day['datetime'])).replace(tzinfo=TZ)
-            finish=parse(text(end),default=parse(end['datetime'])).replace(tzinfo=TZ) if end and end.get('datetime') else None
-            rows.append({'name':text(link),'startDate':start.isoformat(),'endDate':finish.isoformat() if finish else None,'url':urljoin(page,link['href']),'location':{'name':text(card.select_one('.eventlist-meta-address'))},'description':text(card.select_one('.eventlist-description'))})
+            day = card.select_one('time.event-date[datetime]')
+            clock = card.select_one('time.event-time-localized-start')
+            end = card.select_one('time.event-time-localized-end')
+            link = card.select_one('.eventlist-title-link')
+            if not day or not clock or not link:
+                continue
+            start = parse(text(clock), default=parse(day['datetime'])).replace(tzinfo=TZ)
+            finish = parse(text(end), default=parse(end['datetime'])).replace(tzinfo=TZ) if end and end.get('datetime') else None
+            rows.append({
+                'name': text(link),
+                'startDate': start.isoformat(),
+                'endDate': finish.isoformat() if finish else None,
+                'url': urljoin(page, link['href']),
+                'location': {'name': text(card.select_one('.eventlist-meta-address'))},
+                'description': text(card.select_one('.eventlist-description')),
+            })
         return rows
-    if source['format']=='opera':
-        if '/event/' not in page:return []
-        soup=BeautifulSoup(body,'html.parser')
-        title=text(soup.select_one('h1')) or text(soup.title).split(' – ')[0]
-        rows=[]
+    if source['format'] == 'opera':
+        if '/event/' not in page:
+            return []
+        soup = BeautifulSoup(body, 'html.parser')
+        title = text(soup.select_one('h1')) or text(soup.title).split(' – ')[0]
+        rows = []
         for node in soup.select('.vem-one-occurrence .vem-single-event-date-start'):
-            stamp=text(node)
-            if not re.search(FULL_DATE,stamp):continue
-            rows.append({'name':title,'startDate':parse(stamp).replace(tzinfo=TZ).isoformat(),'url':page,
-                         'description':text(soup.select_one('.vem-single-event-description')),
-                         '_evidence_quote':stamp,'_categories':['music_performance']})
+            stamp = text(node)
+            if not re.search(FULL_DATE, stamp):
+                continue
+            rows.append({
+                'name': title,
+                'startDate': parse(stamp).replace(tzinfo=TZ).isoformat(),
+                'url': page,
+                'description': text(soup.select_one('.vem-single-event-description')),
+                '_evidence_quote': stamp,
+                '_categories': ['music_performance'],
+            })
         return rows
     return []

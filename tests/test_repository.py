@@ -45,6 +45,15 @@ class RepositoryInvariantTests(unittest.TestCase):
                 self.assertTrue(evidence_types & FIRST_PARTY_TYPES)
                 self.assertEqual(candidate["adversarial_review"]["overall"], "pass")
 
+    def test_source_graph_has_no_expired_single_event_nov7_zombies(self) -> None:
+        graph = json.loads((ROOT / "data/source-graph.json").read_text(encoding="utf-8"))
+        dead_ids = {"kc-pet-fest", "central-avenue-dia", "troost-united", "dfscon", "crossroads-flea", "ls-mistletoe"}
+        node_ids = {n["id"] for n in graph["nodes"]}
+        self.assertFalse(dead_ids & node_ids)
+        for n in graph["nodes"]:
+            self.assertNotIn("/2026/11/07/", n["canonical_url"])
+            self.assertNotIn("the-marriage-of-figaro", n["canonical_url"])
+
 
 if __name__ == "__main__":
     unittest.main()

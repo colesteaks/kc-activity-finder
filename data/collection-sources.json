@@ -201,10 +201,10 @@
       "region": "Kansas City metro",
       "city": "Kansas City",
       "kind": "organizer",
-      "format": "jsonld",
+      "format": "tnew",
       "url": "https://nelson-atkins.org/events/",
-      "pattern": "/events/[^/]+",
-      "max_details": 60,
+      "pattern": "^/\\d+/\\d+/?$",
+      "max_details": 24,
       "categories": [
         "arts_exhibits",
         "history_culture",
@@ -220,7 +220,19 @@
         "specific event or program",
         "registration and deadlines",
         "season schedule or exhibit run",
-        "hours and closures"
+        "hours and closures",
+        "Featured linked ticket performances only; full dynamic calendar remains a coverage gap"
+      ],
+      "detail_hosts": [
+        "cart.nelson-atkins.org"
+      ],
+      "reviewed_at": "2026-11-09T08:39:21-06:00",
+      "discovery_evidence": [
+        {
+          "url": "https://nelson-atkins.org/events/",
+          "relationship": "Official museum directly links public cart.nelson-atkins.org performance pages; selected date/year and availability verified",
+          "observed_at": "2026-11-09T08:29:31-06:00"
+        }
       ]
     },
     {
@@ -284,10 +296,10 @@
       "region": "Bentonville",
       "city": "Bentonville",
       "kind": "organizer",
-      "format": "jsonld",
+      "format": "downtown",
       "url": "https://downtownbentonville.org/events/calendar",
-      "pattern": "/events/[^/?]+",
-      "max_details": 25,
+      "pattern": "/do/[^/?]+",
+      "max_details": 0,
       "categories": [
         "markets_shopping",
         "festivals_seasonal",
@@ -303,7 +315,10 @@
         "registration and deadlines",
         "season schedule or exhibit run",
         "hours and closures"
-      ]
+      ],
+      "max_pages": 1,
+      "reviewed_at": "2026-11-23",
+      "collection_note": "Visible dated calendar cards only. Later detail-page dates and date-filter controls are not enumerated; health remains partial."
     },
     {
       "id": "weston-bend",
@@ -1077,7 +1092,7 @@
     },
     {
       "id": "downtown-ls",
-      "name": "Downtown Lee\u2019s Summit",
+      "name": "Downtown Lee’s Summit",
       "url": "https://downtownls.org/wp-json/tribe/events/v1/events",
       "region": "Kansas City metro",
       "city": "Lee's Summit",
@@ -1111,7 +1126,7 @@
     {
       "id": "kcopera",
       "name": "Lyric Opera of Kansas City",
-      "url": "https://kcopera.org/event/the-marriage-of-figaro/",
+      "url": "https://kcopera.org/events/",
       "region": "Kansas City metro",
       "city": "Kansas City",
       "format": "opera",
@@ -1141,153 +1156,9 @@
       ]
     },
     {
-      "id": "kc-pet-fest",
-      "name": "KC Pet Fest",
-      "url": "https://www.kcpetfest.com/",
-      "city": "Kansas City",
-      "categories": [
-        "nature_animals",
-        "festivals_seasonal",
-        "play_attractions"
-      ],
-      "required_text": [
-        "November 6th (4 pm- 8 pm) & 7th (9 am - 8 pm)",
-        "2026 KC Pet Fest Activities"
-      ],
-      "captures": [
-        {
-          "name": "KC Pet Fest",
-          "startDate": "2026-11-07T09:00:00-06:00",
-          "endDate": "2026-11-07T20:00:00-06:00",
-          "location": {
-            "name": "American Royal, Hale Arena"
-          },
-          "description": "Pet festival with rescue organizations, demonstrations, interactive activities and vendors. Ticket/admission policies are on the organizer page."
-        }
-      ],
-      "region": "Kansas City metro",
-      "kind": "organizer",
-      "format": "reviewed-capture",
-      "pattern": "/",
-      "max_details": 0,
-      "activity_kinds": [
-        "one_off"
-      ],
-      "reviewed_at": "2026-11-07",
-      "required_leaves": [
-        "official date and schedule",
-        "current registration and admission status"
-      ],
-      "discovery_evidence": [
-        {
-          "url": "https://www.kcdaily.com/p/weekend-roundup",
-          "relationship": "current weekend roundup links directly to this organizer"
-        }
-      ]
-    },
-    {
-      "id": "central-avenue-dia",
-      "name": "Central Avenue Betterment Association",
-      "url": "https://www.cabakck.org/dia-de-muertos",
-      "city": "Kansas City, KS",
-      "categories": [
-        "festivals_seasonal",
-        "arts_exhibits",
-        "community_social"
-      ],
-      "required_text": [
-        "November 7th, 2026",
-        "Face Painting - 11:00am - 5:00pm",
-        "All fun ends at 9:00pm"
-      ],
-      "captures": [
-        {
-          "name": "D\u00eda de Muertos on Central Avenue",
-          "startDate": "2026-11-07T11:00:00-06:00",
-          "endDate": "2026-11-07T21:00:00-06:00",
-          "location": {
-            "name": "1120 Central Avenue, Kansas City, KS"
-          },
-          "description": "Day of the Dead celebration: face painting, food, art, ofrendas, live entertainment, Catrinas and an evening parade. Individual activities have different hours."
-        }
-      ],
-      "region": "Kansas City metro",
-      "kind": "organizer",
-      "format": "reviewed-capture",
-      "pattern": "/",
-      "max_details": 0,
-      "activity_kinds": [
-        "one_off"
-      ],
-      "reviewed_at": "2026-11-07",
-      "required_leaves": [
-        "official date and schedule",
-        "current registration and admission status"
-      ],
-      "discovery_evidence": [
-        {
-          "url": "https://www.kcdaily.com/p/weekend-roundup",
-          "relationship": "current weekend roundup links directly to this organizer"
-        }
-      ]
-    },
-    {
-      "id": "troost-united",
-      "name": "Reconciliation Services",
-      "url": "https://www.rs3101.org/troostunitedfest",
-      "city": "Kansas City",
-      "categories": [
-        "festivals_seasonal",
-        "music_performance",
-        "community_social"
-      ],
-      "required_text": [
-        "November 7, 2026",
-        "11 a.m. to 3 p.m.",
-        "walk-up registrations are still welcome"
-      ],
-      "captures": [
-        {
-          "name": "Troost United Fest",
-          "startDate": "2026-11-07T11:00:00-06:00",
-          "endDate": "2026-11-07T15:00:00-06:00",
-          "location": {
-            "name": "Reconciliation Services"
-          },
-          "description": "Community festival with live music, food, games and historical displays. Advance free registrations are sold out; the organizer says walk-up registrations remain welcome, with lunch/tote bags subject to availability.",
-          "_registration": {
-            "status": "unknown",
-            "opens_at": null,
-            "deadline": null,
-            "url": "https://www.rs3101.org/troostunitedfest",
-            "note": "Advance free registrations are sold out. Walk-up registrations are welcome; lunch and tote bags are not guaranteed."
-          }
-        }
-      ],
-      "region": "Kansas City metro",
-      "kind": "organizer",
-      "format": "reviewed-capture",
-      "pattern": "/",
-      "max_details": 0,
-      "activity_kinds": [
-        "one_off"
-      ],
-      "reviewed_at": "2026-11-07",
-      "required_leaves": [
-        "official date and schedule",
-        "current registration and admission status"
-      ],
-      "discovery_evidence": [
-        {
-          "url": "https://www.kcdaily.com/p/weekend-roundup",
-          "relationship": "current weekend roundup links directly to this organizer"
-        }
-      ]
-    },
-    {
       "id": "mavericks",
       "name": "Kansas City Mavericks home games",
-      "url": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters",
+      "url": "https://kcmavericks.com/schedule",
       "city": "Independence",
       "format": "jsonld",
       "pattern": "/games/20\\d\\d/",
@@ -1345,63 +1216,6 @@
       ]
     },
     {
-      "id": "dfscon",
-      "name": "Dark Flame Society \u2014 DFSCON ticketing",
-      "url": "https://darkflamesociety.ticketspice.com/dfscon",
-      "city": "Kansas City",
-      "format": "reviewed-capture",
-      "pattern": "/",
-      "max_details": 0,
-      "categories": [
-        "film_literature",
-        "community_social"
-      ],
-      "activity_kinds": [
-        "multi_day",
-        "one_off"
-      ],
-      "required_text": [
-        "November 7 & 8, 2026",
-        "Free DFSCON Saturday November 7, 2026",
-        "Free DFSCON Sunday November 8, 2026",
-        "Access to book market 1pm - 4pm",
-        "Event Host: Dark Flame Society"
-      ],
-      "captures": [
-        {
-          "name": "DFSCON \u2014 free afternoon book market",
-          "startDate": "2026-11-07T13:00:00-06:00",
-          "endDate": "2026-11-07T16:00:00-06:00",
-          "location": {
-            "name": "Kansas City Convention Center"
-          },
-          "description": "Free afternoon access to the fantasy-book market. Earlier entry, panels and VIP access use different tickets; Saturday VIP is sold out. Reserve the appropriate ticket on the official event form."
-        },
-        {
-          "name": "DFSCON \u2014 free afternoon book market",
-          "startDate": "2026-11-08T13:00:00-06:00",
-          "endDate": "2026-11-08T16:00:00-06:00",
-          "location": {
-            "name": "Kansas City Convention Center"
-          },
-          "description": "Free afternoon book market, with paid early-access and VIP options sold separately. Follow the official form for ticket availability and admission conditions."
-        }
-      ],
-      "region": "Kansas City metro",
-      "kind": "organizer",
-      "reviewed_at": "2026-11-07",
-      "required_leaves": [
-        "official schedule and location",
-        "admission options and exceptions"
-      ],
-      "discovery_evidence": [
-        {
-          "url": "https://thingstodoinkc.com/15-things-to-do-in-kansas-city-this-weekend-november-6-8-2026/",
-          "relationship": "weekend listicle lead; official source inspected"
-        }
-      ]
-    },
-    {
       "id": "kc-convention",
       "name": "Kansas City Convention Center",
       "url": "https://kcconvention.com/events/",
@@ -1431,109 +1245,6 @@
       "required_leaves": [
         "event schedule and dates",
         "organizer ticketing and session access"
-      ]
-    },
-    {
-      "id": "crossroads-flea",
-      "name": "Mildred\u2019s \u2014 Crossroads Flea",
-      "url": "https://www.mildredskc.com/crossroadsflea",
-      "city": "Kansas City",
-      "region": "Kansas City metro",
-      "kind": "organizer",
-      "format": "reviewed-capture",
-      "pattern": "/",
-      "max_details": 0,
-      "categories": [
-        "markets_shopping",
-        "community_social"
-      ],
-      "activity_kinds": [
-        "recurring_program"
-      ],
-      "reviewed_at": "2026-11-07",
-      "required_text": [
-        "Second Sundays 9am\u20132pm",
-        "Fall (September, October, November)",
-        "1901 Wyandotte St"
-      ],
-      "captures": [
-        {
-          "name": "Crossroads Flea at Mildred\u2019s",
-          "startDate": "2026-11-08T09:00:00-06:00",
-          "endDate": "2026-11-08T14:00:00-06:00",
-          "location": {
-            "name": "19th Street outside Mildred\u2019s, 1901 Wyandotte St"
-          },
-          "description": "Seasonal second-Sunday market with local makers, vintage goods, food and brunch drinks. November 8 is derived from the organizer\u2019s explicit second-Sunday November rule and corroborated by the current KC Daily roundup. Confirm any weather changes before going.",
-          "_schedule": {
-            "kind": "recurring_program",
-            "start_date": "2026-11-08",
-            "end_date": "2026-11-08",
-            "recurrence": {
-              "rrule": "FREQ=MONTHLY;BYDAY=2SU;BYMONTH=4,5,6,9,10,11;UNTIL=20261109T000000Z",
-              "timezone": "America/Chicago",
-              "exdates": []
-            },
-            "note": "Published seasonal second-Sunday schedule, 9am\u20132pm. Only the current corroborated 2026 fall occurrence is captured; no future season is assumed."
-          }
-        }
-      ],
-      "discovery_evidence": [
-        {
-          "url": "https://www.kcdaily.com/p/weekend-roundup",
-          "relationship": "current Sunday roundup confirms this occurrence"
-        }
-      ],
-      "required_leaves": [
-        "seasonal recurrence and hours",
-        "weather exceptions and current date confirmation"
-      ]
-    },
-    {
-      "id": "ls-mistletoe",
-      "name": "Explore Lee\u2019s Summit \u2014 Mistletoe Madness",
-      "url": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness",
-      "city": "Lee's Summit",
-      "region": "Kansas City metro",
-      "kind": "official-calendar",
-      "format": "reviewed-capture",
-      "pattern": "/",
-      "max_details": 0,
-      "categories": [
-        "markets_shopping",
-        "festivals_seasonal",
-        "community_social"
-      ],
-      "activity_kinds": [
-        "one_off"
-      ],
-      "reviewed_at": "2026-11-07",
-      "required_text": [
-        "Mistletoe Madness",
-        "Saturday, November 7 | 9 a.m. - 4 p.m.",
-        "Gamber Community Center",
-        "11/7/2026 4:00 PM"
-      ],
-      "captures": [
-        {
-          "name": "Mistletoe Madness",
-          "startDate": "2026-11-07T09:00:00-06:00",
-          "endDate": "2026-11-07T16:00:00-06:00",
-          "location": {
-            "name": "Gamber Community Center"
-          },
-          "description": "Holiday art and craft shopping event. Saturday hours are 9am\u20134pm; the source has conflicting Friday hours, so only the unambiguous Saturday session is captured."
-        }
-      ],
-      "required_leaves": [
-        "official date and session hours",
-        "admission policies"
-      ],
-      "discovery_evidence": [
-        {
-          "url": "https://thingstodoinkc.com/15-things-to-do-in-kansas-city-this-weekend-november-6-8-2026/",
-          "relationship": "listicle lead resolved to the local tourism calendar"
-        }
       ]
     },
     {
@@ -1576,7 +1287,7 @@
       ],
       "captures": [
         {
-          "name": "KU Astronomy Public Nights \u2014 fall 2026",
+          "name": "KU Astronomy Public Nights — fall 2026",
           "startDate": "2026-11-12T19:30:00-06:00",
           "url": "https://physics.ku.edu/astronomy-public-telescope-nights",
           "typicalAgeRange": "All ages",
@@ -1610,7 +1321,7 @@
           }
         },
         {
-          "name": "KU Astronomy Public Nights \u2014 fall 2026",
+          "name": "KU Astronomy Public Nights — fall 2026",
           "startDate": "2026-12-10T19:30:00-06:00",
           "url": "https://physics.ku.edu/astronomy-public-telescope-nights",
           "typicalAgeRange": "All ages",
@@ -1647,7 +1358,7 @@
     },
     {
       "id": "kc-culinary-catalog",
-      "name": "Culinary Center of Kansas City \u2014 classes and camps",
+      "name": "Culinary Center of Kansas City — classes and camps",
       "url": "https://kcculinary.com/all-classes",
       "region": "Kansas City metro",
       "city": "Overland Park",
@@ -1689,13 +1400,13 @@
           "kind": "program_catalog",
           "start_date": null,
           "end_date": null,
-          "note": "Official catalog for adult cooking classes, kids/family classes, camps, Pro Series and Chef\u2019s Table at Overland Park and Briarcliff. Follow the official app.kcculinary.com booking link for individual dates, age rules, price and capacity. This catalog is not a confirmed dated class or an open registration window."
+          "note": "Official catalog for adult cooking classes, kids/family classes, camps, Pro Series and Chef’s Table at Overland Park and Briarcliff. Follow the official app.kcculinary.com booking link for individual dates, age rules, price and capacity. This catalog is not a confirmed dated class or an open registration window."
         }
       }
     },
     {
       "id": "bpl-books-on-main",
-      "name": "Bentonville Public Library \u2014 Books on Main",
+      "name": "Bentonville Public Library — Books on Main",
       "url": "https://bentonvillelibrary.org/bplforreaders/book-clubs-2",
       "region": "Bentonville",
       "city": "Bentonville",
@@ -1734,10 +1445,10 @@
       ],
       "captures": [
         {
-          "name": "Books on Main adult book club \u2014 Bentonville Public Library",
+          "name": "Books on Main adult book club — Bentonville Public Library",
           "startDate": "2026-11-19T13:00:00-06:00",
           "url": "https://bentonvillelibrary.org/bplforreaders/book-clubs-2",
-          "description": "Adult book club. November 19: We Were the Lucky Ones; December 17: Beneath a Scarlet Sky. Both listed for 1 pm. The library\u2019s linked attendance calendar denied access, so registration and capacity remain unknown. No numerical age minimum is inferred from Adults.",
+          "description": "Adult book club. November 19: We Were the Lucky Ones; December 17: Beneath a Scarlet Sky. Both listed for 1 pm. The library’s linked attendance calendar denied access, so registration and capacity remain unknown. No numerical age minimum is inferred from Adults.",
           "location": {
             "name": "Bentonville Public Library",
             "address": {
@@ -1758,10 +1469,10 @@
           }
         },
         {
-          "name": "Books on Main adult book club \u2014 Bentonville Public Library",
+          "name": "Books on Main adult book club — Bentonville Public Library",
           "startDate": "2026-12-17T13:00:00-06:00",
           "url": "https://bentonvillelibrary.org/bplforreaders/book-clubs-2",
-          "description": "Adult book club. November 19: We Were the Lucky Ones; December 17: Beneath a Scarlet Sky. Both listed for 1 pm. The library\u2019s linked attendance calendar denied access, so registration and capacity remain unknown. No numerical age minimum is inferred from Adults.",
+          "description": "Adult book club. November 19: We Were the Lucky Ones; December 17: Beneath a Scarlet Sky. Both listed for 1 pm. The library’s linked attendance calendar denied access, so registration and capacity remain unknown. No numerical age minimum is inferred from Adults.",
           "location": {
             "name": "Bentonville Public Library",
             "address": {
@@ -1821,7 +1532,7 @@
             "kind": "exhibit",
             "start_date": null,
             "end_date": null,
-            "operating_hours": "Exhibition-specific hours: Monday\u2013Friday 10 a.m.\u20135 p.m.; second Saturdays 10 a.m.\u20132 p.m. General footer says Saturdays without qualification; use the exhibition-specific statement.",
+            "operating_hours": "Exhibition-specific hours: Monday–Friday 10 a.m.–5 p.m.; second Saturdays 10 a.m.–2 p.m. General footer says Saturdays without qualification; use the exhibition-specific statement.",
             "note": "Exhibit run dates are not daily sessions. Confirm facility hours and closure exceptions."
           }
         }
@@ -1870,7 +1581,7 @@
       "captures": [
         {
           "name": "Columbia Parks fall/winter programs: sports, classes and adaptive recreation",
-          "description": "Official catalog for preschool, youth, adult and adaptive recreation. Armory closed mid-October\u2013December. Some holiday date/day entries conflict; verify individual activity dates and registration directly.",
+          "description": "Official catalog for preschool, youth, adult and adaptive recreation. Armory closed mid-October–December. Some holiday date/day entries conflict; verify individual activity dates and registration directly.",
           "_schedule": {
             "kind": "program_catalog",
             "start_date": null,
@@ -1914,7 +1625,7 @@
       ],
       "required_text": [
         "Tom Sawyer 150: Thomas Hart Benton Illustrates an American Classic",
-        "Oct 6, 2026 \u2013 Apr 10, 2027",
+        "Oct 6, 2026 – Apr 10, 2027",
         "605 Elm St."
       ],
       "captures": [
@@ -1970,7 +1681,7 @@
       ],
       "required_text": [
         "Indigenous Identities: From State Sanctioned Portraiture to Native Self Representation",
-        "Sep 12, 2026 \u2013 Feb 20, 2027",
+        "Sep 12, 2026 – Feb 20, 2027",
         "605 Elm St."
       ],
       "captures": [
