@@ -25,4 +25,4 @@ Challenge every likely selection. The goal is to find the reason a seemingly att
 - `hold`: A resolvable uncertainty remains. Recheck or present only as a clearly labeled backup if the user can resolve it safely.
 - `fail`: A hard gate, contradiction, or likely disappointment remains. Do not recommend it.
 
-All final selections must be `pass`. If live conditions can change after the check, include the observation time and a concise recheck note.
+All final selections must be `pass`. If live conditions can change after the check, include the observation time and a concise recheck note. Inventory hints and the static RSS feeds are not adversarial evidence.

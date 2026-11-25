@@ -43,4 +43,4 @@ For web links, use `rel="sponsored noopener noreferrer"` where appropriate. Plai
 
 [GitHub Pages limits](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits) prohibit using Pages as free hosting for an online business/e-commerce site or a site primarily directed at facilitating commercial transactions. The documentation does not establish an explicit affiliate-link exception for this project. Before monetization, confirm the intended editorial use with GitHub or move the static site to an appropriate host. Do not assume current hosting is approved for a monetized product, and do not migrate hosting or grant another provider repository access without authorization.
 
-Keep this below coverage quality, reliable collection and the versioned agent skill in the backlog. Recheck program availability, rates and hosting terms when the pilot is actually undertaken.
+Keep this below coverage quality, reliable collection and the versioned agent skill in the backlog. Recheck program availability, rates and hosting terms when the pilot is actually undertaken. Affiliate ideas do not change `scripts/query_inventory.py` or the public snapshot.

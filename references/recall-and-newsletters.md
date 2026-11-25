@@ -53,4 +53,4 @@ Tests cover real public markup structures, missing years, repeated pagination, g
 
 The site groups repeated dates by offering and shows their details together. Menu/offer advertising is retained but optional in the default browser. Area-calendar records disclose their source and need for time/availability confirmation. Counts use distinct offerings rather than daily occurrences. Partial coverage is visible next to the results; discovery-only, failed and parser-limited routes are never described as checked event coverage.
 
-The website remains a browsable inventory. Personalized skill recommendations still require the full first-party sweep, party-fit ranking and adversarial review; a big flat file cannot replace those steps.
+The website remains a browsable inventory. Personalized skill recommendations still require the full first-party sweep, party-fit ranking and adversarial review; a big flat file or `scripts/query_inventory.py` cannot replace those steps.

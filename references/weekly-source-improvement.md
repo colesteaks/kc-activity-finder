@@ -86,4 +86,4 @@ Return a short weekly report: useful changes, actual coverage/unique-offering ga
 
 ## Runtime failures
 
-The task runs in Codex through the cloud scheduler, not as an LLM call inside GitHub Actions. Use the connected GitHub account and an authorized execution environment. Never assume an old local checkout persists; fetch current source. If GitHub, browsing, code execution or test capability is unavailable, report the exact blocker and preserve the existing site. Do not claim a reminder, chat-only summary or untested registry write performed the maintenance job.
+The task runs in Codex through the cloud scheduler, not as an LLM call inside GitHub Actions. Use the connected GitHub account and an authorized execution environment. Never assume an old local checkout persists; fetch current source. If GitHub, browsing, code execution or test capability is unavailable, report the exact blocker and preserve the existing site. Do not claim a reminder, chat-only summary or untested registry write performed the maintenance job. Source probes for this loop go through `scripts/probe_sources.py`, which only classifies URLs already stored in the repository.

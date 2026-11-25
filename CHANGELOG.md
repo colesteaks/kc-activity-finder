@@ -4,6 +4,9 @@ Releases follow Semantic Versioning for the skill instructions, executable contr
 
 ## [1.1.0] - 2026-11-07
 
+- Add an index-first `scripts/query_inventory.py` lookup, discovery hints, two-tier geo metadata, reusable platform adapters, a compact `web/bundle.min.json`, and static RSS feeds. Audience and price hints stay labeled and do not overwrite verified ages or prices.
+- Probe only repository-known feed URLs. Promote a parser after an explicit-date parse; leave 403, 429, and robots denials blocked. Census geocoding fills missing place coordinates and adds a place only after a street-address match.
+- Split collection from Pages deployment. Scheduled refreshes commit the public snapshot to the `data` branch. Deploying the site is a separate workflow input.
 - Repair KC weekend recall through full public KC Daily archive/source-link extraction, current-issue discovery, independent roundup benchmarks and a weekly recall check.
 - Add Visit KC's dated public API and map markers, library Load More pagination, venue/opera/Squarespace adapters and guarded first-party event captures. Preserve untouched sources during selected refreshes.
 - Decode compressed HTTP correctly, report access challenges, group repeated dates, make menu promotions optional and show actual coverage gaps beside results.

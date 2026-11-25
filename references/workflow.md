@@ -94,5 +94,5 @@ Stop when:
 - every selected candidate has first-party evidence and passes adversarial review; and
 - another search pass is unlikely to change the selected set materially.
 
-If evidence is insufficient, return fewer recommendations and say what could not be verified.
+If evidence is insufficient, return fewer recommendations and say what could not be verified. A `query_inventory.py` hit is a snapshot row, not a completed stage of this workflow.
 

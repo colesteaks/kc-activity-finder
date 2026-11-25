@@ -34,4 +34,4 @@ Do not overwhelm the answer with raw scores or every rejected candidate. Share s
 
 ## Structured output
 
-When the caller requests JSON, follow `schemas/recommendation.schema.json`. Each selected `candidate_id` must point to a candidate that passed adversarial review, and `source_graph_swept` must be true.
+When the caller requests JSON, follow `schemas/recommendation.schema.json`. Each selected `candidate_id` must point to a candidate that passed adversarial review, and `source_graph_swept` must be true. Rows from `scripts/query_inventory.py` are snapshot matches and do not satisfy this contract by themselves.

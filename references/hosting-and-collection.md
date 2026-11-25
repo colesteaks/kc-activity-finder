@@ -2,7 +2,7 @@
 
 ## Architecture and cost
 
-GitHub Actions → reviewed sources → flat `web/activities.json` → GitHub Pages.
+GitHub Actions → reviewed sources → `web/activities.json`, `web/bundle.min.json`, and `web/feeds/*.xml` on the `data` branch. GitHub Pages deploys only when the workflow is run manually with deploy enabled.
 
 The site is plain HTML, CSS and JavaScript. It fetches one JSON file and filters entirely in the browser. There is no database, server API, paid search API, LLM call or secret needed for normal operation. Collection uses Python, Beautiful Soup, dateutil and standard HTTP. Daily LLM token usage is zero. GitHub Actions minutes, cache storage and private-repository Pages eligibility still follow the account's plan. Public visitors receive only `web/`, never the private repository or research files.
 
@@ -32,8 +32,8 @@ The hosted list is a **discovery inventory**, not an automatically verified reco
 2. Fetch structured event feeds and pages, including pagination and bounded detail leaves. Month calendars are queried across the seven-month horizon where supported.
 3. Normalize dates to America/Chicago, retain explicit age guidance, classify category heuristically, preserve source links, deduplicate exact occurrences and quarantine malformed dates.
 4. Preserve missing future records as stale rather than deleting them; retain canceled status and source conflicts. Never assume a disappeared listing was canceled.
-5. Validate data and commit the small generated JSON files to main.
-6. Upload only `web/` and deploy using the official GitHub Pages actions.
+5. Validate data, minify `web/activities.json`, and write `web/bundle.min.json` plus `web/feeds/*.xml`.
+6. Commit that snapshot to the `data` branch. A push to `main` runs tests only. Pages deployment is the workflow's separate deploy input and checks out `data`.
 
 Normal source responses are capped at 6 MB and requests time out after 20 seconds. Workers are limited to three, pagination to twelve pages and detail crawling to per-source limits. Requests pause between pages. HTTP ETags/Last-Modified support conditional requests; no API/model token is involved. Blocked sources become visible health gaps. A wholly failed fetch run does not replace the previous file. A partially successful run preserves old records with their original observation times and stale labels.
 
@@ -49,7 +49,7 @@ Use the least expensive supported public interface:
 
 Do not bypass logins, CAPTCHA, robots disallows, rate limits, or denied access using identity/IP rotation. A 403, 429 or robots denial needs an offered alternative, permission or a different source. Request access if a valuable feed has no public option. A changed parser is an ordinary maintenance task; retries cannot fix a missing date or a wrong-year page.
 
-Currently supported adapters: Tribe REST events, nested JSON-LD, selected explicit Columbia CVB HTML dates, and Next.js serialized zoo/museum event data. Feed discovery detects RSS/iCal proposals; **RSS/iCal importers are not yet implemented**. The generated graph includes proposal provenance, not a claim those feeds were collected. Some current routes remain partial and are exposed in the website's source-health section.
+Currently supported adapters include Tribe REST events, nested JSON-LD, selected explicit Columbia CVB HTML dates, Next.js serialized zoo/museum event data, and the reusable ICS, RSS, Localist, Simpleview, BiblioCommons, LibCal, CivicPlus, MLB, and MDC parsers in `scripts/platform_adapters.py`. A discovered feed is collected only after `scripts/probe_sources.py` parses explicit dates from a fetch that was allowed by robots.txt. HTTP 403 and 429 stay blocked. The public RSS files under `web/feeds/` are generated from the collected snapshot; they are not a second claim of live completeness.
 
 ## Filters and source facts
 
