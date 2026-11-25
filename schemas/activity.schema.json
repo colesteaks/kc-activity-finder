@@ -329,6 +329,32 @@
           "type": "string"
         }
       }
+    },
+    "geo_meta": {
+      "type": ["object", "null"],
+      "properties": {
+        "corridor": {"type": "string"},
+        "subregion": {"type": "string"},
+        "municipality": {"type": "string"},
+        "drive_band": {"enum": ["0-30m", "30-60m", "1-2h", "2-3.5h"]},
+        "amtrak_accessible": {"type": "boolean"}
+      }
+    },
+    "hints": {
+      "type": ["object", "null"],
+      "properties": {
+        "labeled_estimate": {"const": true},
+        "audience": {
+          "type": "array",
+          "items": {"enum": ["kids", "family", "teens", "adults", "all_ages"]}
+        },
+        "free_likely": {"type": ["boolean", "null"]},
+        "indoor_outdoor": {"enum": ["indoor", "outdoor", "mixed", "unknown"]},
+        "time_of_day": {"enum": ["morning", "afternoon", "evening", "night", "all_day", "flexible"]},
+        "is_promo": {"type": "boolean"},
+        "novelty": {"enum": ["signature_event", "special_event", "exhibit_run", "recurring_program", "ongoing_place", "promo_or_routine"]},
+        "standout_score": {"type": "integer", "minimum": 0, "maximum": 100}
+      }
     }
   }
 }

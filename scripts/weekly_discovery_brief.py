@@ -13,6 +13,7 @@ from collections import Counter
 from datetime import date, timedelta
 from pathlib import Path
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
+from activity_model import coverage_matrix
 from check_recall import compare
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -55,8 +56,22 @@ def build(root=ROOT, today=None):
     reviewed = {public_url(r['url']):r for r in ledger['reviews']}
     known = {public_url(s['url']) for s in registry}
     hosts = {urlsplit(s['url']).hostname for s in registry}
-    cells = public['coverage_matrix']['category_by_region']
-    gaps = {(c['region'],c['category']):c for c in cells if c['status']!='collecting'}
+    source_map_domains = {}
+    source_map_path = root / 'data/kc-daily-source-map.json'
+    if source_map_path.exists():
+        for domain in load(source_map_path).get('domains', []):
+            host = str(domain.get('host') or '').lower()
+            mentions = int(domain.get('mentions') or 0)
+            if host and mentions:
+                source_map_domains[host] = max(source_map_domains.get(host, 0), mentions)
+                bare = host[4:] if host.startswith('www.') else host
+                source_map_domains[bare] = max(source_map_domains.get(bare, 0), mentions)
+    cached_cells = (public.get('coverage_matrix') or {}).get('category_by_region', [])
+    if {c['region'] for c in cached_cells} >= set(taxonomy['regions']) and cached_cells and 'depth_tier' in cached_cells[0]:
+        cells = cached_cells
+    else:
+        cells = coverage_matrix(registry, taxonomy, public.get('sources'), public.get('activities'))['category_by_region']
+    gaps = {(c['region'],c['category']):c for c in cells if c.get('depth_tier', c['status']) in ('gap', 'route_only', 'thin')}
     categories = taxonomy['categories']
     scored = {}; week = today.isocalendar().week
     for proposal in proposals:
@@ -77,6 +92,11 @@ def build(root=ROOT, today=None):
         if p.hostname not in hosts: score+=15;reasons.append('New provider host')
         if proposal.get('candidate_format') in ('ical','rss') or re.search(r'\.ics|/feed|/wp-json/',target): score+=15;reasons.append('Potential reusable structured feed; verify adapter support')
         if target not in reviewed: score+=10;reasons.append('Not previously reviewed')
+        host_key = (p.hostname or '').lower()
+        mentions = source_map_domains.get(host_key) or source_map_domains.get(host_key[4:] if host_key.startswith('www.') else host_key)
+        if mentions:
+            score += min(18, 6 + mentions // 5)
+            reasons.append(f'Cited {mentions}x in KC Daily archive ({p.hostname})')
         entry = {'id':hashlib.sha256(target.encode()).hexdigest()[:20], 'url':target,
                  'label':proposal.get('label',''), 'discovered_on':proposal.get('discovered_on'),
                  'score':score, 'reasons':reasons, 'region_hints':regions, 'category_hints':topics,
@@ -91,7 +111,11 @@ def build(root=ROOT, today=None):
         if len(selected)>=policy['budgets']['candidate_links']:break
     # Rotate by week while prioritizing cells with no source at all. Round-robin
     # regions so one museum-heavy metro does not consume the search budget.
-    gap_rows=sorted(gaps.values(),key=lambda c:(c['status']!='gap',c['category']))
+    depth_rank = {'gap': 0, 'route_only': 1, 'thin': 2, 'active': 3, 'strong': 4}
+    gap_rows = sorted(
+        gaps.values(),
+        key=lambda c: (depth_rank.get(c.get('depth_tier', c['status']), 9), c['category'], c['region']),
+    )
     region_queues={region:[c for c in gap_rows if c['region']==region] for region in taxonomy['regions']}
     for region,queue in region_queues.items():
         if queue: offset=week%len(queue);region_queues[region]=queue[offset:]+queue[:offset]
@@ -101,9 +125,22 @@ def build(root=ROOT, today=None):
         for region in regions:
             if region_queues[region]: searches.append(region_queues[region].pop(0))
             if len(searches)>=policy['budgets']['gap_searches']:break
-    repairs=sorted([{'id':h['id'],'name':h['name'],'events':h['events'],'unparsed_count':h.get('unparsed_count',0),
-                    'errors':h.get('errors',[])[:2],'url':h['url']} for h in public['sources'] if h['events']==0],
-                   key=lambda h:(-h['unparsed_count'],h['id']))[:3]
+    repairs = sorted(
+        [
+            {
+                'id': h['id'],
+                'name': h['name'],
+                'status': h.get('status'),
+                'events': h['events'],
+                'unparsed_count': h.get('unparsed_count', 0),
+                'errors': h.get('errors', [])[:2],
+                'url': h['url'],
+            }
+            for h in public['sources']
+            if h['events'] == 0 or h.get('status') == 'degraded'
+        ],
+        key=lambda h: (h.get('status') != 'degraded', -h['unparsed_count'], h['id']),
+    )[:5]
     place_health = []
     for place in public.get('places', []):
         hours = place.get('hours')
@@ -128,7 +165,14 @@ def build(root=ROOT, today=None):
             'unreviewed_proposals':len(scored)},
         'candidates':selected,'gap_searches':searches,'repair_candidates':repairs,'place_maintenance':place_health[:6],
         'weekend_recall':recall,
-        'publication_policy':policy['publication']}
+        'publication_policy':policy['publication'],
+        'reviewed_capture_policy': policy.get(
+            'reviewed_capture_policy',
+            {
+                'structured_feed': 'Promote verified adapter entry into data/collection-sources.json and data/source-graph.json.',
+                'blocked_or_js_only': 'Record honestly in discovery/offering registry with collection_note; never mark unverified.',
+            },
+        )}
 
 
 if __name__=='__main__':

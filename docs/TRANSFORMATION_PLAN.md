@@ -34,7 +34,7 @@
 | Stale / disappeared records | 454 (13.1%) | 454 (13.1%) | < 5% (with 14-day TTL + yield-drop guard) |
 | Active live structured parsers vs total routes | 19 / 56 | 21 / 50 (10 new platform adapter engines built & wired) | 7 reusable platform adapters + multi-region live sources |
 | `data/places.json` entries (with coordinates) | 12 (9 with coords) | 12 (9 with coords; `crystal-museum` verified hours ported) | 30+ places with US Census verified coordinates |
-| Python unit tests / Node tests | 100 / 24 | 127 / 24 | All green + full coverage of new features |
+| Python unit tests / Node tests | 100 / 24 | 133 / 24 | All green + full coverage of new features |
 
 ---
 
@@ -49,9 +49,9 @@
 - [x] **M2: 7 Reusable Platform Adapters + Fuzzy Cross-Source Deduplication**
   - Implemented `scripts/platform_adapters.py`: `ics` (RFC 5545 unfolding + `RRULE` + `EXDATE`), `rss` (RSS 2.0/Atom explicit-date only), `localist`, `simpleview`, `bibliocommons`, `libcal`, `civicplus`, `mlb_schedule` (`home_only`), `mdc`, and env-gated `ticketmaster`.
   - Wired all 10 platform formats into `scripts/collect_activities.py` and upgraded `reconcile()` with canonical venue normalization + token-set Jaccard (`>= 0.72`) cross-source corroboration while preserving multi-session showtimes. Added fixtures & 9 tests in `tests/test_platform_adapters.py`.
-- [ ] **M3: Two-Layer Transparent Enrichment, 2-Tier Geo Hierarchy, Depth Matrix & Census Geocoder**
-  - Implement `scripts/geo_model.py` (`corridor`, `subregion`, `municipality`, `drive_band`, `amtrak_accessible`), `scripts/enrichment.py` (`hints`: `audience`, `free_likely`, `indoor_outdoor`, `time_of_day`, `is_promo`, `novelty`, `standout_score`), and `scripts/geocode_places.py` (US Census Geocoder).
-  - Update `activity_model.py`, `schemas/activity.schema.json`, `data/activity-taxonomy.json`, `data/workflow.json`, and `weekly_discovery_brief.py` (depth tiers + `kc-daily-source-map` frequency × platform scoring).
+- [x] **M3: Two-Layer Transparent Enrichment, 2-Tier Geo Hierarchy, Depth Matrix & Census Geocoder**
+  - Implemented `scripts/geo_model.py` (`corridor`, `subregion`, `municipality`, `drive_band`, `amtrak_accessible`), `scripts/enrichment.py` (`hints`: `audience`, `free_likely`, `indoor_outdoor`, `time_of_day`, `is_promo`, `novelty`, `standout_score`), and `scripts/geocode_places.py` (US Census Geocoder; tested with a stub fetch, not applied to `data/places.json`).
+  - Updated `activity_model.py`, `schemas/activity.schema.json`, `data/activity-taxonomy.json`, `data/workflow.json`, and `weekly_discovery_brief.py` (depth tiers + `kc-daily-source-map` frequency × platform scoring). Published inventory metrics are unchanged until a collection run.
 - [ ] **M4: Verified Live Source Expansion, Place Geocoding & Graph Sync**
   - Create `scripts/probe_sources.py`, probe official feeds across Tier 1 backyard/metro/Lawrence/Columbia/NWA + Tier 2 day trips + Tier 3 weekend powerhouses, promote verified parsers + honest discovery/evergreen entries, geocode & expand `data/places.json`, sync `data/source-graph.json`, run collection.
 - [ ] **M5: Compact Relational Bundle, Static RSS Feeds & CI/Pages Decoupling**
@@ -71,7 +71,8 @@
 | --- | --- | --- |
 | M0 | `77d1d1b` | Baseline verified: 100 Python tests, 24 Node tests, 3,478 public records valid |
 | M1 | `65d7634` | 118 Python tests, 24 Node tests, `validate_repo` + `validate_public_data` passing |
-| M2 | *(in this commit)* | 127 Python tests, 24 Node tests; 10 platform adapters + fuzzy dedup |
+| M2 | `7c2448a` | 127 Python tests, 24 Node tests; 10 platform adapters + fuzzy dedup |
+| M3 | *(in this commit)* | 133 Python tests, 24 Node tests; hints, geo metadata, depth tiers, Census geocoder helper |
 
 ---
 

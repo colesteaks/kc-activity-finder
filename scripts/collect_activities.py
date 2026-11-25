@@ -30,8 +30,10 @@ try:
 except ImportError:
     brotli = None
 from activity_model import enrich, in_horizon, coverage_matrix
+from enrichment import build_hints
+from geo_model import geo_metadata
 from place_model import public_places, attach_place
-from calendar_adapters import html_events, visitkc_events, visitkc_api_events
+from calendar_adapters import html_events, visitkc_events, visitkc_api_events, infer_metro_city
 from platform_adapters import (
     ics_events,
     rss_events,
@@ -556,8 +558,18 @@ def collect_source(source, start, until, observed, cache):
 def reconcile(old, fresh, health, now, disappeared_ttl_days=14):
     now_aware = now if now.tzinfo else now.replace(tzinfo=TZ)
     for row in old + fresh:
+        if row.get('source_id') == 'visitkc' and row.get('city') == 'Kansas City':
+            inferred_city = infer_metro_city(
+                ' '.join([str(row.get('venue') or ''), str(row.get('description') or ''), str(row.get('title') or '')])
+            )
+            if inferred_city != 'Kansas City':
+                row['city'] = inferred_city
+                attach_place(row)
+                row['geo_meta'] = geo_metadata(row)
         if 'schedule' not in row: enrich(row)
         if not row.get('geo') or row['geo'].get('precision') != 'source_point': attach_place(row)
+        if 'geo_meta' not in row: row['geo_meta'] = geo_metadata(row)
+        if 'hints' not in row: row['hints'] = build_hints(row)
     new = {r['id']: r for r in fresh}; old_by_id = {r['id']: r for r in old}
     for key, row in new.items():
         if key in old_by_id: row['first_seen'] = old_by_id[key]['first_seen']
@@ -669,7 +681,7 @@ def run(registry, output, cache, now=None, only=None):
     taxonomy = json.loads((ROOT / 'data/activity-taxonomy.json').read_text())
     result['taxonomy'] = taxonomy
     result['places'] = public_places()
-    result['coverage_matrix'] = coverage_matrix(all_sources, taxonomy, health)
+    result['coverage_matrix'] = coverage_matrix(all_sources, taxonomy, health, result['activities'])
     output.parent.mkdir(parents=True, exist_ok=True)
     temp = output.with_suffix('.tmp'); temp.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n'); temp.replace(output)
     return result
