@@ -26,15 +26,15 @@
 
 | Metric | Baseline (`66530ca`) | Current (`review/adversarial-audit`) | Target |
 | --- | --- | --- | --- |
-| Total records / distinct `offering_id`s | 3,478 / 1,105 | 3,478 / 1,105 | Higher diversity, lower repeat bloat |
-| Top-3 source share (`visitkc` + `kc-library` + `momentary`) | 93.5% (3,254 / 3,478) | 93.5% | < 70% |
-| Regional distribution (`KC` / `Bentonville` / `Columbia` / `Lawrence` / `Surrounding`) | 3,162 / 285 / 24 / 7 / 0 | 3,162 / 285 / 24 / 7 / 0 | Meaningful multi-region + day/weekend corridors |
-| `web/activities.json` payload (and relational `bundle.min.json`) | 11 MB (`activities.json` only) | 11 MB | Minified `activities.json` + < 1 MB `bundle.min.json` |
-| Age guidance present (`ages.min`/`all_ages`) vs discovery `hints` | 28 (0.8%) / none | 28 (0.8%) / none | Strict `ages` preserved + >85% `hints.audience` |
-| Stale / disappeared records | 454 (13.1%) | 454 (13.1%) | < 5% (with 14-day TTL + yield-drop guard) |
-| Active live structured parsers vs total routes | 19 / 56 | 21 / 50 (10 new platform adapter engines built & wired) | 7 reusable platform adapters + multi-region live sources |
-| `data/places.json` entries (with coordinates) | 12 (9 with coords) | 12 (9 with coords; `crystal-museum` verified hours ported) | 30+ places with US Census verified coordinates |
-| Python unit tests / Node tests | 100 / 24 | 133 / 24 | All green + full coverage of new features |
+| Total records / distinct `offering_id`s | 3,478 / 1,105 | 3,618 / 1,128 | Higher diversity, lower repeat bloat |
+| Top-3 source share (`visitkc` + `kc-library` + `momentary`) | 93.5% (3,254 / 3,478) | 93.1% (3,367 / 3,618) | < 70% |
+| Regional distribution (`KC` / `Bentonville` / `Columbia` / `Lawrence` / `Surrounding`) | 3,162 / 285 / 24 / 7 / 0 | 3,291 / 295 / 24 / 8 / 0 | Meaningful multi-region + day/weekend corridors |
+| `web/activities.json` payload (and relational `bundle.min.json`) | 11 MB (`activities.json` only) | 10,062,801 bytes minified + 988,605 byte bundle | Minified `activities.json` + < 1 MB `bundle.min.json` |
+| Age guidance present (`ages.min`/`all_ages`) vs discovery `hints` | 28 (0.8%) / none | 28 (0.8%) / 3,618 audience hints (100%) | Strict `ages` preserved + >85% `hints.audience` |
+| Stale / disappeared records | 454 (13.1%) | 496 (13.7%) | < 5% (with 14-day TTL + yield-drop guard) |
+| Active live structured parsers vs total routes | 19 / 56 | 18 structured routes with events / 59 registry routes (32 routes contributed any record) | 7 reusable platform adapters + multi-region live sources |
+| `data/places.json` entries (with coordinates) | 12 (9 with coords) | 15 (15 with coords; 3 prior gaps Census-matched, 3 new Census matches) | 30+ places with US Census verified coordinates |
+| Python unit tests / Node tests | 100 / 24 | 140 / 28 | All green + full coverage of new features |
 
 ---
 
@@ -52,16 +52,26 @@
 - [x] **M3: Two-Layer Transparent Enrichment, 2-Tier Geo Hierarchy, Depth Matrix & Census Geocoder**
   - Implemented `scripts/geo_model.py` (`corridor`, `subregion`, `municipality`, `drive_band`, `amtrak_accessible`), `scripts/enrichment.py` (`hints`: `audience`, `free_likely`, `indoor_outdoor`, `time_of_day`, `is_promo`, `novelty`, `standout_score`), and `scripts/geocode_places.py` (US Census Geocoder; tested with a stub fetch, not applied to `data/places.json`).
   - Updated `activity_model.py`, `schemas/activity.schema.json`, `data/activity-taxonomy.json`, `data/workflow.json`, and `weekly_discovery_brief.py` (depth tiers + `kc-daily-source-map` frequency × platform scoring). Published inventory metrics are unchanged until a collection run.
-- [ ] **M4: Verified Live Source Expansion, Place Geocoding & Graph Sync**
-  - Create `scripts/probe_sources.py`, probe official feeds across Tier 1 backyard/metro/Lawrence/Columbia/NWA + Tier 2 day trips + Tier 3 weekend powerhouses, promote verified parsers + honest discovery/evergreen entries, geocode & expand `data/places.json`, sync `data/source-graph.json`, run collection.
-- [ ] **M5: Compact Relational Bundle, Static RSS Feeds & CI/Pages Decoupling**
-  - Create `scripts/build_web_bundle.py` (`web/bundle.min.json` + `web/feeds/*.xml`), minify `web/activities.json`, decouple daily data commits from `main` onto a `data` branch and split `build`/`deploy` jobs in `.github/workflows/activities.yml`.
-- [ ] **M6: Consumer Web App Transformation (`web/`)**
-  - Add `web/data-loader.mjs` (bundle hydration + `sessionStorage`), `web/ics.mjs` (RFC 5545 export), upgrade `web/filters.mjs` (`PRESETS`, `standoutScore`, generalized `isPromotion`, hint filters), and update `index.html`/`app.js`/`activity.html`/`activity.js`/`styles.css` (presets, standouts default, clean cards, LocalStorage Saved List, Depth coverage + RSS links).
-- [ ] **M7: Unify the Agent Skill (`scripts/query_inventory.py`, `SKILL.md` & Docs)**
-  - Create `scripts/query_inventory.py`, update `SKILL.md` (index-first fast path + 8-stage ledger compatibility), `README.md`, `references/*.md`, `CHANGELOG.md`, and tests.
-- [ ] **M8: Full CI Verification Matrix & PR-Ready Final Handoff**
-  - Run `validate_repo.py`, `unittest -v`, `node --test`, `validate_public_data.py`, `build_release.py`, `verify_release.py --smoke-test`, `git diff --check`; finalize metrics & PR summary.
+- [x] **M4: Verified Live Source Expansion, Place Geocoding & Graph Sync**
+  - Added `scripts/probe_sources.py`. Probed 18 repository-known https feeds: 17 tier 1, 1 unassigned, 0 tier 2, 0 tier 3. Promoted Kansas City Convention Center ICS (9 events) and Nelson-Atkins RSS, plus discovery-only rows for fetched feeds with no explicit dates. Comment feeds and one-off `.ics` exports were withheld. 403/robots/redirect failures were not recorded as empty calendars.
+  - Census-geocoded the 3 places that already had addresses and no coordinates, and added Gieringer’s Family Farm, Cider Hill Family Orchard, and Deanna Rose Children’s Farmstead from addresses already written in source proposals. `data/places.json` is 15/15 with coordinates. Official pages did not yield enough schema.org street addresses to reach 30.
+  - Appended reviewed-supplement graph nodes without changing the `provided-seed` node. Local collection (not the GitHub workflow) wrote 3,618 activities.
+- [x] **M5: Compact Relational Bundle, Static RSS Feeds & CI/Pages Decoupling**
+  - `scripts/build_web_bundle.py` writes minified `web/activities.json`, relational `web/bundle.min.json` (988,605 bytes), and 13 explicit-date feeds in `web/feeds/`.
+  - `.github/workflows/activities.yml` tests on the existing path filters, commits scheduled refreshes to the `data` branch, and deploys Pages only for a manual run with deploy enabled. This branch was not dispatched.
+- [x] **M6: Consumer Web App Transformation (`web/`)**
+  - Added `web/data-loader.mjs`, `web/ics.mjs`, and `web/saved.mjs`. `web/filters.mjs` has presets, standout ordering, generalized promotion detection, and hint filters. The list defaults to standout hints, cards omit long descriptions, and coverage shows depth counts plus RSS links. Saved items stay in `localStorage`.
+- [x] **M7: Unify the Agent Skill (`scripts/query_inventory.py`, `SKILL.md` & Docs)**
+  - Added `scripts/query_inventory.py` and tests. `SKILL.md` documents the index-first lookup and keeps the eight-stage ledger for recommendations. README, changelog, and the reference docs point at hints, feeds, probes, and the data branch.
+- [x] **M8: Full CI Verification Matrix & PR-Ready Final Handoff**
+  - Local matrix passed: `validate_repo.py`, 140 Python tests, 28 Node tests, `validate_public_data.py` (3,618 activities), release smoke test, and `git diff --check`.
+
+### Still short of the numeric targets
+
+- Top-3 source share is 93.1%, not under 70%.
+- Stale/disappeared records are 496 (13.7%), not under 5%.
+- Place coordinates are 15, not 30+. Tier 2 and tier 3 have no reviewed feed URLs in the repo, and the new corridor regions have no collected events.
+- Verified age guidance is still 28 records (0.8%). Audience hints are labels on every row and do not change those ages.
 
 ---
 
@@ -73,6 +83,11 @@
 | M1 | `65d7634` | 118 Python tests, 24 Node tests, `validate_repo` + `validate_public_data` passing |
 | M2 | `7c2448a` | 127 Python tests, 24 Node tests; 10 platform adapters + fuzzy dedup |
 | M3 | `5828003` | 133 Python tests, 24 Node tests; hints, geo metadata, depth tiers, Census geocoder helper |
+| M4 | `61f3526` | Probe report, 9 promoted routes, 15 geocoded places, local collection to 3,618 activities |
+| M5 | `6c86299` | 988,605 byte bundle, 13 RSS feeds, collection commits to `data` |
+| M6 | `ecff262` | Bundle loader, hint presets, calendar export, saved list |
+| M7 | `1057d55` | `query_inventory.py` and skill docs |
+| M8 | *(in this commit)* | 140 Python tests, 28 Node tests, validators and release smoke test |
 
 ---
 
