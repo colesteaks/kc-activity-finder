@@ -122,7 +122,7 @@ def refresh(root=ROOT):
     taxonomy = json.loads((root / 'data/activity-taxonomy.json').read_text())
     public_path = root / 'web/activities.json'
     health = json.loads(public_path.read_text()).get('sources', []) if public_path.exists() else []
-    graph['coverage_matrix'] = coverage_matrix(registry, taxonomy, health)
+    graph['coverage_matrix'] = coverage_matrix(registry, taxonomy, health, json.loads(public_path.read_text()).get('activities', []) if public_path.exists() else None)
     add_place_leaves(graph, root)
     (root / 'data/generated-source-graph.json').write_text(json.dumps(graph, indent=2) + '\n')
     (root / 'data/source-proposals.json').write_text(json.dumps({'updated_at': now, 'proposals': sorted(proposals.values(), key=lambda x:x['url'])}, indent=2) + '\n')
@@ -135,7 +135,7 @@ def refresh_coverage(root=ROOT):
     public = json.loads((root / 'web/activities.json').read_text())
     registry = json.loads((root / 'data/collection-sources.json').read_text())['sources']
     taxonomy = json.loads((root / 'data/activity-taxonomy.json').read_text())
-    graph['coverage_matrix'] = coverage_matrix(registry, taxonomy, public['sources'])
+    graph['coverage_matrix'] = coverage_matrix(registry, taxonomy, public['sources'], public.get('activities'))
     add_place_leaves(graph, root)
     path.write_text(json.dumps(graph, indent=2) + '\n')
 

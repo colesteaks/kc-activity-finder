@@ -86,4 +86,4 @@ It does not call a routing API, infer ages/accessibility, total unknown costs, v
 
 ## Future website integration
 
-Keep this agent-first. Reuse existing activity/place IDs when known and propose new first-party place leaves through maintenance. Do not expand daily crawling to every possible destination or introduce a paid routing dependency just to support an occasional trip request. If this becomes a site feature later, add user-controlled origin/radius and a selected-day itinerary on top of the shared place/activity model; do not create a second unsourced activity database.
+Keep this agent-first. Reuse existing activity/place IDs when known and propose new first-party place leaves through maintenance. Do not expand daily crawling to every possible destination or introduce a paid routing dependency just to support an occasional trip request. Drive-band labels in the inventory are corridor hints from `scripts/geo_model.py`, not a measured route. If this becomes a site feature later, add user-controlled origin/radius and a selected-day itinerary on top of the shared place/activity model; do not create a second unsourced activity database.

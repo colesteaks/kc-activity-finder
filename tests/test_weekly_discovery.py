@@ -26,7 +26,12 @@ class WeeklyDiscoveryTests(unittest.TestCase):
         b=build(today=date(2026,11,7))
         self.assertLessEqual(len(b['candidates']),b['budgets']['candidate_links'])
         self.assertEqual(len(b['gap_searches']),b['budgets']['gap_searches'])
-        self.assertEqual(len({c['region'] for c in b['gap_searches']}),5)
+        import json
+        from pathlib import Path
+        root = Path(__file__).resolve().parents[1]
+        taxonomy = json.loads((root / 'data' / 'activity-taxonomy.json').read_text())
+        expected_regions = min(len(taxonomy['regions']), b['budgets']['gap_searches'])
+        self.assertEqual(len({c['region'] for c in b['gap_searches']}), expected_regions)
         self.assertIn('unique_offerings',b['baseline'])
     def test_deterministic_same_week_and_rotating_searches(self):
         a=build(today=date(2026,11,7));b=build(today=date(2026,11,7));c=build(today=date(2026,11,14))

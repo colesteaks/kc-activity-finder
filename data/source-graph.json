@@ -1,7 +1,7 @@
 {
   "$schema": "../schemas/source-graph.schema.json",
   "version": 1,
-  "last_reviewed": "2026-11-07",
+  "last_reviewed": "2026-11-25",
   "seed_material": {
     "path": "data/primary-sources.txt",
     "preservation": "verbatim",
@@ -9,27 +9,10 @@
   },
   "nodes": [
     {
-      "id": "kc-daily",
-      "label": "KC Daily",
       "canonical_url": "https://www.kcdaily.com/",
-      "source_class": "local-editorial",
-      "roles": [
-        "discovery",
-        "graph-expansion"
-      ],
-      "status": "active",
       "coverage": [
         "Kansas City metro"
       ],
-      "provenance": {
-        "kind": "provided-seed",
-        "raw_value": "KC daily",
-        "seed_line": 1
-      },
-      "verification": {
-        "last_checked": "2026-11-07",
-        "evidence_url": "https://www.kcdaily.com/archive"
-      },
       "crawl": {
         "entrypoints": [
           "https://www.kcdaily.com/",
@@ -40,12 +23,29 @@
           "relevant archives containing future announcements",
           "outbound organizer, venue, registration, and ticket links"
         ]
+      },
+      "id": "kc-daily",
+      "label": "KC Daily",
+      "provenance": {
+        "kind": "provided-seed",
+        "raw_value": "KC daily",
+        "seed_line": 1
+      },
+      "roles": [
+        "discovery",
+        "graph-expansion"
+      ],
+      "source_class": "local-editorial",
+      "status": "active",
+      "verification": {
+        "evidence_url": "https://www.kcdaily.com/archive",
+        "last_checked": "2026-11-07"
       }
     },
     {
       "id": "kc-zoo",
       "label": "Kansas City Zoo & Aquarium",
-      "canonical_url": "https://kansascityzoo.org/events/",
+      "canonical_url": "https://kansascityzoo.org/events",
       "source_class": "event-organizer",
       "roles": [
         "first-party-sweep",
@@ -62,13 +62,13 @@
       },
       "verification": {
         "last_checked": "2026-11-07",
-        "evidence_url": "https://kansascityzoo.org/events/",
+        "evidence_url": "https://kansascityzoo.org/events",
         "collector_status": "partial",
         "captured_records": 23
       },
       "crawl": {
         "entrypoints": [
-          "https://kansascityzoo.org/events/"
+          "https://kansascityzoo.org/events"
         ],
         "sweep_targets": [
           "specific event or program",
@@ -292,7 +292,7 @@
     },
     {
       "id": "downtown-ls",
-      "label": "Downtown Lee\u2019s Summit",
+      "label": "Downtown Lee’s Summit",
       "canonical_url": "https://downtownls.org/wp-json/tribe/events/v1/events",
       "source_class": "event-organizer",
       "roles": [
@@ -328,7 +328,7 @@
     {
       "id": "kcopera",
       "label": "Lyric Opera of Kansas City",
-      "canonical_url": "https://kcopera.org/event/the-marriage-of-figaro/",
+      "canonical_url": "https://kcopera.org/events/",
       "source_class": "event-organizer",
       "roles": [
         "first-party-sweep",
@@ -344,14 +344,14 @@
         "observed_relation": "newsletter/listicle links to provider; actual calendar or event leaf reviewed on 2026-11-07"
       },
       "verification": {
-        "last_checked": "2026-11-07",
-        "evidence_url": "https://kcopera.org/event/the-marriage-of-figaro/",
-        "collector_status": "checked",
+        "last_checked": "2026-11-25",
+        "evidence_url": "https://kcopera.org/events/",
+        "collector_status": "discovery-only",
         "captured_records": 11
       },
       "crawl": {
         "entrypoints": [
-          "https://kcopera.org/event/the-marriage-of-figaro/"
+          "https://kcopera.org/events/"
         ],
         "sweep_targets": [
           "all events and pagination",
@@ -361,111 +361,9 @@
       }
     },
     {
-      "id": "kc-pet-fest",
-      "label": "KC Pet Fest",
-      "canonical_url": "https://www.kcpetfest.com/",
-      "source_class": "event-organizer",
-      "roles": [
-        "first-party-sweep",
-        "graph-expansion"
-      ],
-      "status": "active",
-      "coverage": [
-        "Kansas City metro"
-      ],
-      "provenance": {
-        "kind": "reviewed-supplement",
-        "discovered_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
-        "observed_relation": "newsletter/listicle links to provider; actual calendar or event leaf reviewed on 2026-11-07"
-      },
-      "verification": {
-        "last_checked": "2026-11-07",
-        "evidence_url": "https://www.kcpetfest.com/",
-        "collector_status": "checked",
-        "captured_records": 1
-      },
-      "crawl": {
-        "entrypoints": [
-          "https://www.kcpetfest.com/"
-        ],
-        "sweep_targets": [
-          "official date and schedule",
-          "current registration and admission status"
-        ]
-      }
-    },
-    {
-      "id": "central-avenue-dia",
-      "label": "Central Avenue Betterment Association",
-      "canonical_url": "https://www.cabakck.org/dia-de-muertos",
-      "source_class": "event-organizer",
-      "roles": [
-        "first-party-sweep",
-        "graph-expansion"
-      ],
-      "status": "active",
-      "coverage": [
-        "Kansas City metro"
-      ],
-      "provenance": {
-        "kind": "reviewed-supplement",
-        "discovered_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
-        "observed_relation": "newsletter/listicle links to provider; actual calendar or event leaf reviewed on 2026-11-07"
-      },
-      "verification": {
-        "last_checked": "2026-11-07",
-        "evidence_url": "https://www.cabakck.org/dia-de-muertos",
-        "collector_status": "checked",
-        "captured_records": 1
-      },
-      "crawl": {
-        "entrypoints": [
-          "https://www.cabakck.org/dia-de-muertos"
-        ],
-        "sweep_targets": [
-          "official date and schedule",
-          "current registration and admission status"
-        ]
-      }
-    },
-    {
-      "id": "troost-united",
-      "label": "Reconciliation Services",
-      "canonical_url": "https://www.rs3101.org/troostunitedfest",
-      "source_class": "event-organizer",
-      "roles": [
-        "first-party-sweep",
-        "graph-expansion"
-      ],
-      "status": "active",
-      "coverage": [
-        "Kansas City metro"
-      ],
-      "provenance": {
-        "kind": "reviewed-supplement",
-        "discovered_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
-        "observed_relation": "newsletter/listicle links to provider; actual calendar or event leaf reviewed on 2026-11-07"
-      },
-      "verification": {
-        "last_checked": "2026-11-07",
-        "evidence_url": "https://www.rs3101.org/troostunitedfest",
-        "collector_status": "checked",
-        "captured_records": 1
-      },
-      "crawl": {
-        "entrypoints": [
-          "https://www.rs3101.org/troostunitedfest"
-        ],
-        "sweep_targets": [
-          "official date and schedule",
-          "current registration and admission status"
-        ]
-      }
-    },
-    {
       "id": "mavericks",
       "label": "Kansas City Mavericks home games",
-      "canonical_url": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters",
+      "canonical_url": "https://kcmavericks.com/schedule",
       "source_class": "event-organizer",
       "roles": [
         "first-party-sweep",
@@ -482,13 +380,13 @@
       },
       "verification": {
         "last_checked": "2026-11-07",
-        "evidence_url": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters",
+        "evidence_url": "https://kcmavericks.com/schedule",
         "collector_status": "partial",
         "captured_records": 3
       },
       "crawl": {
         "entrypoints": [
-          "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters"
+          "https://kcmavericks.com/schedule"
         ],
         "sweep_targets": [
           "official schedule and location",
@@ -531,40 +429,6 @@
       }
     },
     {
-      "id": "dfscon",
-      "label": "Dark Flame Society \u2014 DFSCON ticketing",
-      "canonical_url": "https://darkflamesociety.ticketspice.com/dfscon",
-      "source_class": "event-organizer",
-      "roles": [
-        "first-party-sweep",
-        "graph-expansion"
-      ],
-      "status": "active",
-      "coverage": [
-        "Kansas City metro"
-      ],
-      "provenance": {
-        "kind": "reviewed-supplement",
-        "discovered_on": "https://thingstodoinkc.com/15-things-to-do-in-kansas-city-this-weekend-november-6-8-2026/",
-        "observed_relation": "newsletter/listicle links to provider; actual calendar or event leaf reviewed on 2026-11-07"
-      },
-      "verification": {
-        "last_checked": "2026-11-07",
-        "evidence_url": "https://darkflamesociety.ticketspice.com/dfscon",
-        "collector_status": "checked",
-        "captured_records": 2
-      },
-      "crawl": {
-        "entrypoints": [
-          "https://darkflamesociety.ticketspice.com/dfscon"
-        ],
-        "sweep_targets": [
-          "official schedule and location",
-          "admission options and exceptions"
-        ]
-      }
-    },
-    {
       "id": "kc-convention",
       "label": "Kansas City Convention Center",
       "canonical_url": "https://kcconvention.com/events/",
@@ -599,13 +463,12 @@
       }
     },
     {
-      "id": "crossroads-flea",
-      "label": "Mildred\u2019s \u2014 Crossroads Flea",
-      "canonical_url": "https://www.mildredskc.com/crossroadsflea",
+      "id": "jocolibrary",
+      "label": "Johnson County Library",
+      "canonical_url": "https://gateway.bibliocommons.com/v2/libraries/jocolibrary/events?limit=100",
       "source_class": "event-organizer",
       "roles": [
-        "first-party-sweep",
-        "graph-expansion"
+        "first-party-sweep"
       ],
       "status": "active",
       "coverage": [
@@ -613,33 +476,32 @@
       ],
       "provenance": {
         "kind": "reviewed-supplement",
-        "discovered_on": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
-        "observed_relation": "newsletter/listicle links to provider; actual calendar or event leaf reviewed on 2026-11-07"
+        "discovered_on": "https://gateway.bibliocommons.com/v2/libraries/jocolibrary/events?limit=100",
+        "observed_relation": "Official organizer/institutional feed verified against robots.txt on 2026-11-25"
       },
       "verification": {
-        "last_checked": "2026-11-07",
-        "evidence_url": "https://www.mildredskc.com/crossroadsflea",
-        "collector_status": "checked",
-        "captured_records": 1
+        "last_checked": "2026-11-25",
+        "evidence_url": "https://gateway.bibliocommons.com/v2/libraries/jocolibrary/events?limit=100",
+        "collector_status": "checked"
       },
       "crawl": {
         "entrypoints": [
-          "https://www.mildredskc.com/crossroadsflea"
+          "https://gateway.bibliocommons.com/v2/libraries/jocolibrary/events?limit=100"
         ],
         "sweep_targets": [
-          "seasonal recurrence and hours",
-          "weather exceptions and current date confirmation"
+          "branch location",
+          "explicit start/end time",
+          "registration availability"
         ]
       }
     },
     {
-      "id": "ls-mistletoe",
-      "label": "Explore Lee\u2019s Summit \u2014 Mistletoe Madness",
-      "canonical_url": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness",
-      "source_class": "official-calendar",
+      "id": "kc-royals",
+      "label": "Kansas City Royals Home Schedule",
+      "canonical_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=118",
+      "source_class": "event-organizer",
       "roles": [
-        "first-party-sweep",
-        "graph-expansion"
+        "first-party-sweep"
       ],
       "status": "active",
       "coverage": [
@@ -647,22 +509,759 @@
       ],
       "provenance": {
         "kind": "reviewed-supplement",
-        "discovered_on": "https://www.kcdaily.com/p/prophet-over-profit",
-        "observed_relation": "newsletter/listicle links to provider; actual calendar or event leaf reviewed on 2026-11-07"
+        "discovered_on": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=118",
+        "observed_relation": "Official organizer/institutional feed verified against robots.txt on 2026-11-25"
       },
       "verification": {
-        "last_checked": "2026-11-07",
-        "evidence_url": "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness",
-        "collector_status": "checked",
-        "captured_records": 1
+        "last_checked": "2026-11-25",
+        "evidence_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=118",
+        "collector_status": "checked"
       },
       "crawl": {
         "entrypoints": [
-          "https://explorels.com/events/artmid/1198/articleid/704/mistletoe-madness"
+          "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=118"
         ],
         "sweep_targets": [
-          "official date and session hours",
-          "admission policies"
+          "official home schedule",
+          "venue and first-pitch time"
+        ]
+      }
+    },
+    {
+      "id": "jcprd-parks",
+      "label": "Johnson County Park & Recreation District",
+      "canonical_url": "https://www.jcprd.com/RSSFeed.aspx?ModID=58&CID=All-calendar.xml",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep"
+      ],
+      "status": "active",
+      "coverage": [
+        "Kansas City metro"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://www.jcprd.com/RSSFeed.aspx?ModID=58&CID=All-calendar.xml",
+        "observed_relation": "Official organizer/institutional feed verified against robots.txt on 2026-11-25"
+      },
+      "verification": {
+        "last_checked": "2026-11-25",
+        "evidence_url": "https://www.jcprd.com/RSSFeed.aspx?ModID=58&CID=All-calendar.xml",
+        "collector_status": "checked"
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://www.jcprd.com/RSSFeed.aspx?ModID=58&CID=All-calendar.xml"
+        ],
+        "sweep_targets": [
+          "explicit calendar event dates",
+          "park or recreation center location"
+        ]
+      }
+    },
+    {
+      "id": "liberty-mo",
+      "label": "City of Liberty Community Calendar",
+      "canonical_url": "https://www.libertymissouri.gov/RSSFeed.aspx?ModID=58&CID=All-calendar.xml",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep"
+      ],
+      "status": "active",
+      "coverage": [
+        "Kansas City metro"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://www.libertymissouri.gov/RSSFeed.aspx?ModID=58&CID=All-calendar.xml",
+        "observed_relation": "Official organizer/institutional feed verified against robots.txt on 2026-11-25"
+      },
+      "verification": {
+        "last_checked": "2026-11-25",
+        "evidence_url": "https://www.libertymissouri.gov/RSSFeed.aspx?ModID=58&CID=All-calendar.xml",
+        "collector_status": "checked"
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://www.libertymissouri.gov/RSSFeed.aspx?ModID=58&CID=All-calendar.xml"
+        ],
+        "sweep_targets": [
+          "explicit civic calendar date",
+          "venue or municipal location"
+        ]
+      }
+    },
+    {
+      "id": "mdc-events",
+      "label": "Missouri Department of Conservation Events",
+      "canonical_url": "https://mdc.mo.gov/events",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep"
+      ],
+      "status": "active",
+      "coverage": [
+        "Kansas City metro",
+        "Columbia",
+        "St. Joseph & Pony Express",
+        "Springfield & Ozarks",
+        "surrounding areas"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://mdc.mo.gov/events",
+        "observed_relation": "Official organizer/institutional feed verified against robots.txt on 2026-11-25"
+      },
+      "verification": {
+        "last_checked": "2026-11-25",
+        "evidence_url": "https://mdc.mo.gov/events",
+        "collector_status": "checked"
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://mdc.mo.gov/events"
+        ],
+        "sweep_targets": [
+          "nature center location",
+          "explicit start/end date",
+          "registration portal"
+        ]
+      }
+    },
+    {
+      "id": "ku-events",
+      "label": "University of Kansas Events Calendar",
+      "canonical_url": "https://calendar.ku.edu/api/2/events",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep"
+      ],
+      "status": "active",
+      "coverage": [
+        "Lawrence"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://calendar.ku.edu/api/2/events",
+        "observed_relation": "Official organizer/institutional feed verified against robots.txt on 2026-11-25"
+      },
+      "verification": {
+        "last_checked": "2026-11-25",
+        "evidence_url": "https://calendar.ku.edu/api/2/events",
+        "collector_status": "checked"
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://calendar.ku.edu/api/2/events"
+        ],
+        "sweep_targets": [
+          "official Localist API listing",
+          "venue and admission metadata"
+        ]
+      }
+    },
+    {
+      "id": "mizzou-events",
+      "label": "University of Missouri Events Calendar",
+      "canonical_url": "https://calendar.missouri.edu/live/json/events/max/100",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep"
+      ],
+      "status": "active",
+      "coverage": [
+        "Columbia"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://calendar.missouri.edu/live/json/events/max/100",
+        "observed_relation": "Official organizer/institutional feed verified against robots.txt on 2026-11-25"
+      },
+      "verification": {
+        "last_checked": "2026-11-25",
+        "evidence_url": "https://calendar.missouri.edu/live/json/events/max/100",
+        "collector_status": "checked"
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://calendar.missouri.edu/live/json/events/max/100"
+        ],
+        "sweep_targets": [
+          "LiveWhale JSON feed",
+          "campus venue and timestamp"
+        ]
+      }
+    },
+    {
+      "id": "dbrl-events",
+      "label": "Daniel Boone Regional Library",
+      "canonical_url": "https://events.dbrl.org/eeventcaldata",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep"
+      ],
+      "status": "active",
+      "coverage": [
+        "Columbia"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://events.dbrl.org/eeventcaldata",
+        "observed_relation": "Official organizer/institutional feed verified against robots.txt on 2026-11-25"
+      },
+      "verification": {
+        "last_checked": "2026-11-25",
+        "evidence_url": "https://events.dbrl.org/eeventcaldata",
+        "collector_status": "checked"
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://events.dbrl.org/eeventcaldata"
+        ],
+        "sweep_targets": [
+          "branch library location",
+          "registration and audience metadata"
+        ]
+      }
+    },
+    {
+      "id": "uark-events",
+      "label": "University of Arkansas Events Calendar",
+      "canonical_url": "https://calendars.uark.edu/api/2/events",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep"
+      ],
+      "status": "active",
+      "coverage": [
+        "Bentonville"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://calendars.uark.edu/api/2/events",
+        "observed_relation": "Official organizer/institutional feed verified against robots.txt on 2026-11-25"
+      },
+      "verification": {
+        "last_checked": "2026-11-25",
+        "evidence_url": "https://calendars.uark.edu/api/2/events",
+        "collector_status": "checked"
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://calendars.uark.edu/api/2/events"
+        ],
+        "sweep_targets": [
+          "official Localist API v2 listing",
+          "Fayetteville venue"
+        ]
+      }
+    },
+    {
+      "id": "warrensburg-mo",
+      "label": "City of Warrensburg Calendar",
+      "canonical_url": "https://www.warrensburg-mo.com/RSSFeed.aspx?ModID=58&CID=All-calendar.xml",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep"
+      ],
+      "status": "active",
+      "coverage": [
+        "surrounding areas"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://www.warrensburg-mo.com/RSSFeed.aspx?ModID=58&CID=All-calendar.xml",
+        "observed_relation": "Official organizer/institutional feed verified against robots.txt on 2026-11-25"
+      },
+      "verification": {
+        "last_checked": "2026-11-25",
+        "evidence_url": "https://www.warrensburg-mo.com/RSSFeed.aspx?ModID=58&CID=All-calendar.xml",
+        "collector_status": "checked"
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://www.warrensburg-mo.com/RSSFeed.aspx?ModID=58&CID=All-calendar.xml"
+        ],
+        "sweep_targets": [
+          "official municipal calendar event"
+        ]
+      }
+    },
+    {
+      "id": "kstate-events",
+      "label": "Kansas State University Events Calendar",
+      "canonical_url": "https://events.k-state.edu/api/2/events",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep"
+      ],
+      "status": "active",
+      "coverage": [
+        "Topeka & Flint Hills"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://events.k-state.edu/api/2/events",
+        "observed_relation": "Official organizer/institutional feed verified against robots.txt on 2026-11-25"
+      },
+      "verification": {
+        "last_checked": "2026-11-25",
+        "evidence_url": "https://events.k-state.edu/api/2/events",
+        "collector_status": "checked"
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://events.k-state.edu/api/2/events"
+        ],
+        "sweep_targets": [
+          "official Localist API v2 listing",
+          "Manhattan / Flint Hills venue"
+        ]
+      }
+    },
+    {
+      "id": "tscpl-events",
+      "label": "Topeka & Shawnee County Public Library",
+      "canonical_url": "https://events.tscpl.org/eeventcaldata",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep"
+      ],
+      "status": "active",
+      "coverage": [
+        "Topeka & Flint Hills"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://events.tscpl.org/eeventcaldata",
+        "observed_relation": "Official organizer/institutional feed verified against robots.txt on 2026-11-25"
+      },
+      "verification": {
+        "last_checked": "2026-11-25",
+        "evidence_url": "https://events.tscpl.org/eeventcaldata",
+        "collector_status": "checked"
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://events.tscpl.org/eeventcaldata"
+        ],
+        "sweep_targets": [
+          "library room/location",
+          "explicit schedule window"
+        ]
+      }
+    },
+    {
+      "id": "stjoe-mo",
+      "label": "City of St. Joseph Calendar",
+      "canonical_url": "https://www.stjosephmo.gov/RSSFeed.aspx?ModID=58&CID=All-calendar.xml",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep"
+      ],
+      "status": "active",
+      "coverage": [
+        "St. Joseph & Pony Express"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://www.stjosephmo.gov/RSSFeed.aspx?ModID=58&CID=All-calendar.xml",
+        "observed_relation": "Official organizer/institutional feed verified against robots.txt on 2026-11-25"
+      },
+      "verification": {
+        "last_checked": "2026-11-25",
+        "evidence_url": "https://www.stjosephmo.gov/RSSFeed.aspx?ModID=58&CID=All-calendar.xml",
+        "collector_status": "checked"
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://www.stjosephmo.gov/RSSFeed.aspx?ModID=58&CID=All-calendar.xml"
+        ],
+        "sweep_targets": [
+          "official St. Joseph CivicPlus calendar event"
+        ]
+      }
+    },
+    {
+      "id": "uno-events",
+      "label": "University of Nebraska Omaha Events",
+      "canonical_url": "https://events.unomaha.edu/api/2/events",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep"
+      ],
+      "status": "active",
+      "coverage": [
+        "Omaha"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://events.unomaha.edu/api/2/events",
+        "observed_relation": "Official organizer/institutional feed verified against robots.txt on 2026-11-25"
+      },
+      "verification": {
+        "last_checked": "2026-11-25",
+        "evidence_url": "https://events.unomaha.edu/api/2/events",
+        "collector_status": "checked"
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://events.unomaha.edu/api/2/events"
+        ],
+        "sweep_targets": [
+          "official Localist API v2 listing",
+          "Omaha campus venue"
+        ]
+      }
+    },
+    {
+      "id": "omaha-library",
+      "label": "Omaha Public Library",
+      "canonical_url": "https://gateway.bibliocommons.com/v2/libraries/omaha/events?limit=100",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep"
+      ],
+      "status": "active",
+      "coverage": [
+        "Omaha"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://gateway.bibliocommons.com/v2/libraries/omaha/events?limit=100",
+        "observed_relation": "Official organizer/institutional feed verified against robots.txt on 2026-11-25"
+      },
+      "verification": {
+        "last_checked": "2026-11-25",
+        "evidence_url": "https://gateway.bibliocommons.com/v2/libraries/omaha/events?limit=100",
+        "collector_status": "checked"
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://gateway.bibliocommons.com/v2/libraries/omaha/events?limit=100"
+        ],
+        "sweep_targets": [
+          "branch library location",
+          "registration and audience metadata"
+        ]
+      }
+    },
+    {
+      "id": "omaha-storm-chasers",
+      "label": "Omaha Storm Chasers Home Schedule",
+      "canonical_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=11&teamId=541",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep"
+      ],
+      "status": "active",
+      "coverage": [
+        "Omaha"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://statsapi.mlb.com/api/v1/schedule?sportId=11&teamId=541",
+        "observed_relation": "Official organizer/institutional feed verified against robots.txt on 2026-11-25"
+      },
+      "verification": {
+        "last_checked": "2026-11-25",
+        "evidence_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=11&teamId=541",
+        "collector_status": "checked"
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://statsapi.mlb.com/api/v1/schedule?sportId=11&teamId=541"
+        ],
+        "sweep_targets": [
+          "official Triple-A home schedule at Werner Park"
+        ]
+      }
+    },
+    {
+      "id": "drake-events",
+      "label": "Drake University Events Calendar",
+      "canonical_url": "https://calendar.drake.edu/api/2/events",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep"
+      ],
+      "status": "active",
+      "coverage": [
+        "Des Moines"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://calendar.drake.edu/api/2/events",
+        "observed_relation": "Official organizer/institutional feed verified against robots.txt on 2026-11-25"
+      },
+      "verification": {
+        "last_checked": "2026-11-25",
+        "evidence_url": "https://calendar.drake.edu/api/2/events",
+        "collector_status": "checked"
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://calendar.drake.edu/api/2/events"
+        ],
+        "sweep_targets": [
+          "official Localist API v2 listing",
+          "Des Moines venue"
+        ]
+      }
+    },
+    {
+      "id": "dsm-art-center",
+      "label": "Des Moines Art Center",
+      "canonical_url": "https://desmoinesartcenter.org/wp-json/tribe/events/v1/events",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep"
+      ],
+      "status": "active",
+      "coverage": [
+        "Des Moines"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://desmoinesartcenter.org/wp-json/tribe/events/v1/events",
+        "observed_relation": "Official organizer/institutional feed verified against robots.txt on 2026-11-25"
+      },
+      "verification": {
+        "last_checked": "2026-11-25",
+        "evidence_url": "https://desmoinesartcenter.org/wp-json/tribe/events/v1/events",
+        "collector_status": "checked"
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://desmoinesartcenter.org/wp-json/tribe/events/v1/events"
+        ],
+        "sweep_targets": [
+          "official Tribe Events REST API"
+        ]
+      }
+    },
+    {
+      "id": "iowa-cubs",
+      "label": "Iowa Cubs Home Schedule",
+      "canonical_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=11&teamId=451",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep"
+      ],
+      "status": "active",
+      "coverage": [
+        "Des Moines"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://statsapi.mlb.com/api/v1/schedule?sportId=11&teamId=451",
+        "observed_relation": "Official organizer/institutional feed verified against robots.txt on 2026-11-25"
+      },
+      "verification": {
+        "last_checked": "2026-11-25",
+        "evidence_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=11&teamId=451",
+        "collector_status": "checked"
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://statsapi.mlb.com/api/v1/schedule?sportId=11&teamId=451"
+        ],
+        "sweep_targets": [
+          "official Triple-A home schedule at Principal Park"
+        ]
+      }
+    },
+    {
+      "id": "sgcl-events",
+      "label": "Springfield-Greene County Library",
+      "canonical_url": "https://thelibrary.libnet.info/eeventcaldata",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep"
+      ],
+      "status": "active",
+      "coverage": [
+        "Springfield & Ozarks"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://thelibrary.libnet.info/eeventcaldata",
+        "observed_relation": "Official organizer/institutional feed verified against robots.txt on 2026-11-25"
+      },
+      "verification": {
+        "last_checked": "2026-11-25",
+        "evidence_url": "https://thelibrary.libnet.info/eeventcaldata",
+        "collector_status": "checked"
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://thelibrary.libnet.info/eeventcaldata"
+        ],
+        "sweep_targets": [
+          "branch library location",
+          "registration and audience metadata"
+        ]
+      }
+    },
+    {
+      "id": "springfield-cardinals",
+      "label": "Springfield Cardinals Home Schedule",
+      "canonical_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=12&teamId=440",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep"
+      ],
+      "status": "active",
+      "coverage": [
+        "Springfield & Ozarks"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://statsapi.mlb.com/api/v1/schedule?sportId=12&teamId=440",
+        "observed_relation": "Official organizer/institutional feed verified against robots.txt on 2026-11-25"
+      },
+      "verification": {
+        "last_checked": "2026-11-25",
+        "evidence_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=12&teamId=440",
+        "collector_status": "checked"
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://statsapi.mlb.com/api/v1/schedule?sportId=12&teamId=440"
+        ],
+        "sweep_targets": [
+          "official Double-A home schedule at Hammons Field"
+        ]
+      }
+    },
+    {
+      "id": "wichita-library",
+      "label": "Wichita Public Library",
+      "canonical_url": "https://wichitalibrary.libnet.info/eeventcaldata",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep"
+      ],
+      "status": "active",
+      "coverage": [
+        "Wichita & Hutchinson"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://wichitalibrary.libnet.info/eeventcaldata",
+        "observed_relation": "Official organizer/institutional feed verified against robots.txt on 2026-11-25"
+      },
+      "verification": {
+        "last_checked": "2026-11-25",
+        "evidence_url": "https://wichitalibrary.libnet.info/eeventcaldata",
+        "collector_status": "checked"
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://wichitalibrary.libnet.info/eeventcaldata"
+        ],
+        "sweep_targets": [
+          "branch library location",
+          "registration and audience metadata"
+        ]
+      }
+    },
+    {
+      "id": "wichita-wind-surge",
+      "label": "Wichita Wind Surge Home Schedule",
+      "canonical_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=12&teamId=3898",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep"
+      ],
+      "status": "active",
+      "coverage": [
+        "Wichita & Hutchinson"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://statsapi.mlb.com/api/v1/schedule?sportId=12&teamId=3898",
+        "observed_relation": "Official organizer/institutional feed verified against robots.txt on 2026-11-25"
+      },
+      "verification": {
+        "last_checked": "2026-11-25",
+        "evidence_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=12&teamId=3898",
+        "collector_status": "checked"
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://statsapi.mlb.com/api/v1/schedule?sportId=12&teamId=3898"
+        ],
+        "sweep_targets": [
+          "official Double-A home schedule at Riverfront Stadium"
+        ]
+      }
+    },
+    {
+      "id": "lawrence-library",
+      "label": "Lawrence Public Library",
+      "canonical_url": "https://gateway.bibliocommons.com/v2/libraries/lawrence/events?limit=100",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep"
+      ],
+      "status": "active",
+      "coverage": [
+        "Lawrence"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://gateway.bibliocommons.com/v2/libraries/lawrence/events?limit=100",
+        "observed_relation": "Official organizer/institutional feed verified against robots.txt on 2026-11-25"
+      },
+      "verification": {
+        "last_checked": "2026-11-25",
+        "evidence_url": "https://gateway.bibliocommons.com/v2/libraries/lawrence/events?limit=100",
+        "collector_status": "checked"
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://gateway.bibliocommons.com/v2/libraries/lawrence/events?limit=100"
+        ],
+        "sweep_targets": [
+          "specific activity or trail",
+          "season schedule or exhibit run",
+          "opening hours closures and exceptions",
+          "registration deadline and participation commitment"
+        ]
+      }
+    },
+    {
+      "id": "naturals-schedule",
+      "label": "Northwest Arkansas Naturals Home Schedule",
+      "canonical_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=12&teamId=1350",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep"
+      ],
+      "status": "active",
+      "coverage": [
+        "Bentonville"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://statsapi.mlb.com/api/v1/schedule?sportId=12&teamId=1350",
+        "observed_relation": "Official organizer/institutional feed verified against robots.txt on 2026-11-25"
+      },
+      "verification": {
+        "last_checked": "2026-11-25",
+        "evidence_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=12&teamId=1350",
+        "collector_status": "checked"
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://statsapi.mlb.com/api/v1/schedule?sportId=12&teamId=1350"
+        ],
+        "sweep_targets": [
+          "specific activity or trail",
+          "season schedule or exhibit run",
+          "opening hours closures and exceptions",
+          "registration deadline and participation commitment"
         ]
       }
     }
@@ -737,31 +1336,7 @@
       "to": "kcopera",
       "relationship": "mentions-first-party",
       "evidence_url": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
-      "target_url": "https://kcopera.org/event/the-marriage-of-figaro",
-      "observed_on": "2026-11-07T14:19:38.885919-06:00"
-    },
-    {
-      "from": "kc-daily",
-      "to": "kc-pet-fest",
-      "relationship": "mentions-first-party",
-      "evidence_url": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
-      "target_url": "https://www.kcpetfest.com/",
-      "observed_on": "2026-11-07T14:19:38.885919-06:00"
-    },
-    {
-      "from": "kc-daily",
-      "to": "central-avenue-dia",
-      "relationship": "mentions-first-party",
-      "evidence_url": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
-      "target_url": "https://www.cabakck.org/dia-de-muertos",
-      "observed_on": "2026-11-07T14:19:38.885919-06:00"
-    },
-    {
-      "from": "kc-daily",
-      "to": "troost-united",
-      "relationship": "mentions-first-party",
-      "evidence_url": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
-      "target_url": "https://www.rs3101.org/troostunitedfest",
+      "target_url": "https://kcopera.org/events/",
       "observed_on": "2026-11-07T14:19:38.885919-06:00"
     },
     {
@@ -778,22 +1353,6 @@
       "relationship": "mentions-first-party",
       "evidence_url": "https://www.kcdaily.com/p/new-uniforms-new-stadium",
       "target_url": "https://kcconvention.com/event/2026-masquerade-dance-experience",
-      "observed_on": "2026-11-07T14:19:38.885919-06:00"
-    },
-    {
-      "from": "kc-daily",
-      "to": "crossroads-flea",
-      "relationship": "mentions-first-party",
-      "evidence_url": "https://www.kcdaily.com/p/all-good-foliage-comes-to-an-end",
-      "target_url": "https://www.mildredskc.com/crossroadsflea",
-      "observed_on": "2026-11-07T14:19:38.885919-06:00"
-    },
-    {
-      "from": "kc-daily",
-      "to": "ls-mistletoe",
-      "relationship": "mentions-first-party",
-      "evidence_url": "https://www.kcdaily.com/p/prophet-over-profit",
-      "target_url": "https://explorels.com/things-to-do/shopping/farmers-market",
       "observed_on": "2026-11-07T14:19:38.885919-06:00"
     }
   ],

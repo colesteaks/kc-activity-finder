@@ -2,6 +2,8 @@
 
 The graph is a maintained research asset. Extend it from observed relationships; do not replace the supplied seed with a freshly invented directory list.
 
+`python3 scripts/probe_sources.py` classifies feed URLs that are already in `data/source-proposals.json`. It promotes an ICS or RSS parser only after a fetch returns explicit-date events, and it can record a discovery row when the page was fetched but had no such events. Blocked and robots-denied URLs are reported and not turned into empty calendars. The provided-seed node is not rewritten.
+
 ## Add a descendant source
 
 1. Start from an active graph node during a normal sweep.

@@ -51,4 +51,4 @@ python3 scripts/collect_activities.py --only kc-library --only visitkc
 python3 scripts/weekly_discovery_brief.py
 ```
 
-The strict benchmark is relevant only while its dates remain in the inventory horizon. Create a new sample from the next actual weekend editions; do not preserve expired events just to keep a test green. Existing blocks, unimplemented widgets and unreviewed sources remain visible work. The website is a broad inventory; personally ranked recommendations require the skill's source sweep, fit ranking and adversarial review.
+The strict benchmark is relevant only while its dates remain in the inventory horizon. Create a new sample from the next actual weekend editions; do not preserve expired events just to keep a test green. Existing blocks, unimplemented widgets and unreviewed sources remain visible work. The website is a broad inventory; personally ranked recommendations require the skill's source sweep, fit ranking and adversarial review. This audit is a dated record; current snapshot lookup is `scripts/query_inventory.py`.

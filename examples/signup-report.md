@@ -40,15 +40,34 @@ Evidence: https://example.test/arts-campus/trail-photo-workshop (observed 2030-0
 - {"node_id": "truman", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
 - {"node_id": "downtown-ls", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
 - {"node_id": "kcopera", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
-- {"node_id": "kc-pet-fest", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
-- {"node_id": "central-avenue-dia", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
-- {"node_id": "troost-united", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
 - {"node_id": "mavericks", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
 - {"node_id": "independence-japan", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
-- {"node_id": "dfscon", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
 - {"node_id": "kc-convention", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
-- {"node_id": "crossroads-flea", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
-- {"node_id": "ls-mistletoe", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "jocolibrary", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "kc-royals", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "jcprd-parks", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "liberty-mo", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "mdc-events", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "ku-events", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "mizzou-events", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "dbrl-events", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "uark-events", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "warrensburg-mo", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "kstate-events", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "tscpl-events", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "stjoe-mo", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "uno-events", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "omaha-library", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "omaha-storm-chasers", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "drake-events", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "dsm-art-center", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "iowa-cubs", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "sgcl-events", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "springfield-cardinals", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "wichita-library", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "wichita-wind-surge", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "lawrence-library", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
+- {"node_id": "naturals-schedule", "status": "checked", "observed_at": "2030-09-05T12:00:00-05:00", "visited_urls": ["https://example.test/synthetic-route"], "notes": "Synthetic sweep only; not a claim of live visits"}
 
 ## Broader search coverage
 

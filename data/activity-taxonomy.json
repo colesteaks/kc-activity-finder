@@ -5,8 +5,20 @@
     "Lawrence",
     "Columbia",
     "Bentonville",
-    "surrounding areas"
+    "surrounding areas",
+    "Topeka & Flint Hills",
+    "St. Joseph & Pony Express",
+    "Omaha",
+    "Des Moines",
+    "Springfield & Ozarks",
+    "Wichita & Hutchinson"
   ],
+  "corridors": {
+    "core": ["Kansas City metro"],
+    "regional_weekend": ["Lawrence", "Columbia", "Bentonville", "surrounding areas"],
+    "day_trip": ["Topeka & Flint Hills", "St. Joseph & Pony Express"],
+    "weekend_trip": ["Omaha", "Des Moines", "Springfield & Ozarks", "Wichita & Hutchinson"]
+  },
   "categories": [
     {
       "id": "outdoor_recreation",

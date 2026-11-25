@@ -9,24 +9,52 @@ import hashlib
 import html
 import io
 import json
+import os
 import re
 import time
 import urllib.error
 import urllib.request
 import urllib.robotparser
 import zlib
-from datetime import date, datetime, time as dt_time, timezone
+from datetime import date, datetime, time as dt_time, timedelta, timezone
 from pathlib import Path
-from urllib.parse import urlencode, urljoin, urlsplit, urlunsplit
+from urllib.parse import parse_qsl, urlencode, urljoin, urlsplit, urlunsplit
 from zoneinfo import ZoneInfo
 from collections import Counter
 
 from bs4 import BeautifulSoup
 from dateutil.parser import isoparse, parse
 from dateutil.relativedelta import relativedelta
+try:
+    import brotli
+except ImportError:
+    brotli = None
 from activity_model import enrich, in_horizon, coverage_matrix
+from enrichment import build_hints
+from geo_model import geo_metadata
 from place_model import public_places, attach_place
-from calendar_adapters import html_events, visitkc_events, visitkc_api_events
+from calendar_adapters import html_events, visitkc_events, visitkc_api_events, infer_metro_city
+from platform_adapters import (
+    ics_events,
+    rss_events,
+    localist_events,
+    simpleview_events,
+    bibliocommons_events,
+    libcal_events,
+    civicplus_events,
+    mlb_schedule_events,
+    mdc_events,
+    ticketmaster_events,
+    libnet_events,
+    livewhale_events,
+)
+
+class Redirect308Handler(urllib.request.HTTPRedirectHandler):
+    def http_error_308(self, req, fp, code, msg, headers):
+        return self.http_error_301(req, fp, 301, msg, headers)
+
+
+OPENER = urllib.request.build_opener(Redirect308Handler)
 
 ROOT = Path(__file__).resolve().parents[1]
 TZ = ZoneInfo('America/Chicago')
@@ -37,14 +65,23 @@ MAX_BYTES = 6_000_000
 
 def response_body(body, encoding=''):
     """Decode supported HTTP compression before UTF-8, with a decoded size cap."""
-    if encoding.lower() == 'gzip' or body.startswith(b'\x1f\x8b'):
+    enc = (encoding or '').strip().lower()
+    if enc == 'gzip' or body.startswith(b'\x1f\x8b'):
         body = gzip.GzipFile(fileobj=io.BytesIO(body)).read(MAX_BYTES + 1)
-    elif encoding.lower() == 'deflate':
+    elif enc == 'deflate':
         decoder = zlib.decompressobj()
         body = decoder.decompress(body, MAX_BYTES + 1)
-    elif encoding.lower() not in ('', 'identity'):
+    elif enc == 'br':
+        if brotli is None:
+            raise ValueError('Unsupported HTTP content encoding: ' + encoding)
+        decoder = brotli.Decompressor()
+        body = decoder.process(body, output_buffer_limit=MAX_BYTES + 1)
+        if not decoder.is_finished():
+            raise ValueError('Decoded source response exceeded size limit')
+    elif enc not in ('', 'identity'):
         raise ValueError('Unsupported HTTP content encoding: ' + encoding)
-    if len(body) > MAX_BYTES: raise ValueError('Decoded source response exceeded size limit')
+    if len(body) > MAX_BYTES:
+        raise ValueError('Decoded source response exceeded size limit')
     return body
 
 
@@ -65,9 +102,15 @@ def canonical(value):
 
 
 def local_datetime(value):
-    if not value: return None
-    d = isoparse(str(value))
-    if d.tzinfo is None: d = d.replace(tzinfo=TZ)
+    if not value:
+        return None
+    raw = re.sub(r'([+-]\d{2})(\d{2})$', r'\1:\2', str(value).strip())
+    try:
+        d = isoparse(raw)
+    except ValueError:
+        d = parse(raw)
+    if d.tzinfo is None:
+        d = d.replace(tzinfo=TZ)
     return d.astimezone(TZ).isoformat()
 
 
@@ -94,7 +137,7 @@ class Fetcher:
         key = hashlib.sha256(url.encode()).hexdigest()
         meta_path = self.cache / (key + '.json'); body_path = self.cache / (key + '.gz')
         meta = json.loads(meta_path.read_text()) if meta_path.exists() else {}
-        headers = {'User-Agent': AGENT, 'Accept': 'text/html,application/json;q=0.9,*/*;q=0.5'}
+        headers = {'User-Agent': AGENT, 'Accept-Encoding': 'gzip, deflate', 'Accept': 'text/html,application/json;q=0.9,*/*;q=0.5'}
         if body_path.exists():
             if meta.get('etag'): headers['If-None-Match'] = meta['etag']
             if meta.get('modified'): headers['If-Modified-Since'] = meta['modified']
@@ -102,7 +145,7 @@ class Fetcher:
         time.sleep(.25)
         self.requests += 1
         try:
-            with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=20) as response:
+            with OPENER.open(urllib.request.Request(url, headers=headers), timeout=20) as response:
                 if urlsplit(response.url).hostname != p.hostname:
                     raise ValueError('Cross-host redirect requires source registry review')
                 body = response.read(MAX_BYTES + 1)
@@ -165,10 +208,19 @@ def structured_events(body, source, page=None):
             data = obj.get('data', {})
             title = ' '.join(x.get('text', '') for x in data.get('title', []) if isinstance(x, dict))
             for occurrence in data.get('activity_time', []):
-                if occurrence.get('start_time'):
-                    result.append({'name': title, 'startDate': occurrence['start_time'], 'endDate': occurrence.get('end_time'),
-                        'url': urljoin(source['url'], '/event/' + obj['uid']),
-                        'description': data.get('description1') or '', 'location': {'name': occurrence.get('other_location') or occurrence.get('timelocation') or source['name']}})
+                start_val = occurrence.get('start_time')
+                if not start_val:
+                    continue
+                end_val = occurrence.get('end_time')
+                if end_val:
+                    try:
+                        if isoparse(local_datetime(end_val)) < isoparse(local_datetime(start_val)):
+                            end_val = None
+                    except (ValueError, TypeError):
+                        end_val = None
+                result.append({'name': title, 'startDate': start_val, 'endDate': end_val,
+                    'url': urljoin(source['url'], '/event/' + obj['uid']),
+                    'description': data.get('description1') or '', 'location': {'name': occurrence.get('other_location') or occurrence.get('timelocation') or source['name']}})
         elif source['id'] == 'crystal-bridges' and obj.get('title') and obj.get('startDateTime'):
             end = None
             # Explicit year on both dates is required. This represents a series range,
@@ -250,7 +302,7 @@ def normalize(raw, source, observed, page):
     signature = canonical(link) + '|' + (start or 'offering')
     return enrich({'id': hashlib.sha256(signature.encode()).hexdigest()[:20], 'title': title,
             'start': start, 'end': end, 'date': start[:10] if start else None, 'end_date': end[:10] if end else (start[:10] if start else None),
-            'all_day': bool(all_day), 'region': source['region'], 'city': clean(address.get('addressLocality') or source['city']),
+            'all_day': bool(all_day), 'region': raw.get('_region') or source['region'], 'city': clean(address.get('addressLocality') or source['city']),
             'venue': clean(location.get('name') or source['name']), 'type': classify(title, str(raw.get('keywords', ''))),
             'type_inferred': True, 'ages': age_rules(raw['typicalAgeRange']) if raw.get('typicalAgeRange') else explicit_age_guidance(title, raw.get('description', '')),
             'status': {'EventCancelled':'canceled','EventPostponed':'postponed','EventRescheduled':'rescheduled'}.get(status, 'scheduled' if start else 'listed'),
@@ -342,6 +394,147 @@ def collect_source(source, start, until, observed, cache):
                     except (ValueError, TypeError) as e: errors.append(str(e))
                 if page >= data.get('total_pages', 1): break
                 if page == MAX_PAGES: truncated = True
+        elif source['format'] == 'ics':
+            body = f.fetch(source['url']); visited.append(source['url'])
+            for item in ics_events(body, source, source['url'], start, until):
+                try:
+                    row = normalize(item, source, observed, source['url'])
+                    if row: records.append(row)
+                except (ValueError, TypeError) as e: errors.append(str(e))
+        elif source['format'] == 'rss':
+            body = f.fetch(source['url']); visited.append(source['url'])
+            for item in rss_events(body, source, source['url']):
+                try:
+                    row = normalize(item, source, observed, source['url'])
+                    if row: records.append(row)
+                except (ValueError, TypeError) as e: errors.append(str(e))
+        elif source['format'] == 'localist':
+            limit = source.get('max_pages', MAX_PAGES)
+            base_p = urlsplit(source['url'])
+            base_q = dict(parse_qsl(base_p.query))
+            days = max(1, (until - start).days)
+            for page in range(1, limit + 1):
+                q = dict(base_q, pp=50, days=days, page=page)
+                target = urlunsplit((base_p.scheme, base_p.netloc, base_p.path, urlencode(q), ''))
+                data = json.loads(f.fetch(target)); visited.append(target)
+                for item in localist_events(data, source, target):
+                    try:
+                        row = normalize(item, source, observed, target)
+                        if row: records.append(row)
+                    except (ValueError, TypeError) as e: errors.append(str(e))
+                total_pages = (data.get('page') or {}).get('total', 1)
+                if page >= total_pages or not data.get('events'): break
+                if page == limit: truncated = True
+        elif source['format'] == 'simpleview':
+            body = f.fetch(source['url']); visited.append(source['url'])
+            for item in simpleview_events(body, source, source['url']):
+                try:
+                    row = normalize(item, source, observed, source['url'])
+                    if row: records.append(row)
+                except (ValueError, TypeError) as e: errors.append(str(e))
+        elif source['format'] == 'bibliocommons':
+            limit = source.get('max_pages', 3)
+            base_p = urlsplit(source['url'])
+            base_q = dict(parse_qsl(base_p.query))
+            for page_num in range(1, limit + 1):
+                q = dict(base_q, page=page_num)
+                target = urlunsplit((base_p.scheme, base_p.netloc, base_p.path, urlencode(q), ''))
+                data = json.loads(f.fetch(target)); visited.append(target)
+                for item in bibliocommons_events(data, source, target):
+                    try:
+                        row = normalize(item, source, observed, target)
+                        if row: records.append(row)
+                    except (ValueError, TypeError) as e: errors.append(str(e))
+                pages = (((data.get('events') or {}).get('pagination') or {}).get('pages') or 1)
+                if page_num >= pages: break
+                if page_num == limit: truncated = True
+        elif source['format'] == 'libnet':
+            req_payload = json.dumps({
+                'private': False,
+                'date': start.isoformat(),
+                'days': int(source.get('window_days', 45)),
+                'locations': [],
+                'ages': [],
+                'types': [],
+            }, separators=(',', ':'))
+            base_p = urlsplit(source['url'])
+            q = dict(parse_qsl(base_p.query))
+            q['event_type'] = q.get('event_type', '0')
+            q['req'] = req_payload
+            target = urlunsplit((base_p.scheme, base_p.netloc, base_p.path, urlencode(q), ''))
+            data = json.loads(f.fetch(target)); visited.append(target)
+            for item in libnet_events(data, source, target):
+                try:
+                    row = normalize(item, source, observed, target)
+                    if row: records.append(row)
+                except (ValueError, TypeError) as e: errors.append(str(e))
+        elif source['format'] == 'livewhale':
+            data = json.loads(f.fetch(source['url'])); visited.append(source['url'])
+            for item in livewhale_events(data, source, source['url']):
+                try:
+                    row = normalize(item, source, observed, source['url'])
+                    if row: records.append(row)
+                except (ValueError, TypeError) as e: errors.append(str(e))
+        elif source['format'] == 'libcal':
+            body = f.fetch(source['url']); visited.append(source['url'])
+            for item in libcal_events(body, source, source['url']):
+                try:
+                    row = normalize(item, source, observed, source['url'])
+                    if row: records.append(row)
+                except (ValueError, TypeError) as e: errors.append(str(e))
+        elif source['format'] == 'civicplus':
+            body = f.fetch(source['url']); visited.append(source['url'])
+            for item in civicplus_events(body, source, source['url']):
+                try:
+                    row = normalize(item, source, observed, source['url'])
+                    if row: records.append(row)
+                except (ValueError, TypeError) as e: errors.append(str(e))
+        elif source['format'] == 'mlb_schedule':
+            base_p = urlsplit(source['url'])
+            q = dict(parse_qsl(base_p.query))
+            q.setdefault('sportId', '1')
+            q['startDate'] = start.isoformat()
+            q['endDate'] = until.isoformat()
+            target = urlunsplit((base_p.scheme, base_p.netloc, base_p.path, urlencode(q), ''))
+            data = json.loads(f.fetch(target)); visited.append(target)
+            for item in mlb_schedule_events(data, source, target):
+                try:
+                    row = normalize(item, source, observed, target)
+                    if row: records.append(row)
+                except (ValueError, TypeError) as e: errors.append(str(e))
+        elif source['format'] == 'mdc':
+            limit = source.get('max_pages', MAX_PAGES)
+            next_page = source['url']
+            seen_pages = set()
+            for _ in range(limit):
+                if next_page in seen_pages: break
+                body = f.fetch(next_page); seen_pages.add(next_page); visited.append(next_page)
+                for item in mdc_events(body, source, next_page):
+                    try:
+                        row = normalize(item, source, observed, next_page)
+                        if row: records.append(row)
+                    except (ValueError, TypeError) as e: errors.append(str(e))
+                soup = BeautifulSoup(body, 'html.parser')
+                nxt = soup.select_one('a[rel="next"], .pager__item--next a')
+                if not nxt: break
+                cand = urljoin(next_page, nxt['href'])
+                if urlsplit(cand).hostname != urlsplit(source['url']).hostname: break
+                next_page = cand
+            else:
+                truncated = True
+        elif source['format'] == 'ticketmaster':
+            api_key = os.environ.get('TICKETMASTER_API_KEY', '').strip()
+            if api_key:
+                base_p = urlsplit(source['url'])
+                q = dict(parse_qsl(base_p.query))
+                public_target = urlunsplit((base_p.scheme, base_p.netloc, base_p.path, urlencode(q), ''))
+                authed_target = urlunsplit((base_p.scheme, base_p.netloc, base_p.path, urlencode(dict(q, apikey=api_key)), ''))
+                data = json.loads(f.fetch(authed_target)); visited.append(public_target)
+                for item in ticketmaster_events(data, source, public_target):
+                    try:
+                        row = normalize(item, source, observed, public_target)
+                        if row: records.append(row)
+                    except (ValueError, TypeError) as e: errors.append(str(e))
         else:
             entries = [source['url']]
             if source.get('month_template'):
@@ -360,9 +553,12 @@ def collect_source(source, start, until, observed, cache):
                         except (ValueError, TypeError) as e: errors.append(str(e))
                     for a in soup.select('a[href]'):
                         link = urljoin(next_page, a['href']); p = urlsplit(link)
-                        if p.hostname == urlsplit(source['url']).hostname and re.search(source['pattern'], p.path):
+                        # A reviewed provider can explicitly delegate detail pages to
+                        # its ticket host. Host equality is exact, never suffix-based.
+                        delegated = p.scheme == 'https' and p.hostname in source.get('detail_hosts', [])
+                        if (p.hostname == urlsplit(source['url']).hostname or delegated) and safe_url(link) and re.search(source['pattern'], p.path):
                             detail_links.setdefault(canonical(link), None)
-                    nxt = soup.select_one('a[rel="next"], a.next.page-numbers, .pager__item--next a, a[data-drupal-views-infinite-scroll-pager]')
+                    nxt = soup.select_one('a[rel="next"], a.next.page-numbers, .pager__item--next a, a[data-drupal-views-infinite-scroll-pager], .pager__item--load-more a')
                     if not nxt: break
                     candidate = urljoin(next_page, nxt['href'])
                     if urlsplit(candidate).hostname != urlsplit(source['url']).hostname: break
@@ -371,7 +567,7 @@ def collect_source(source, start, until, observed, cache):
             parsed_urls={canonical(r['url']) for r in records}
             detail_links={u:v for u,v in detail_links.items() if u not in parsed_urls and u not in {canonical(x) for x in seen_pages}}
             limit = source.get('max_details', 60)
-            if source['format'] in ('library','carbonhouse','squarespace') and limit==0:detail_links={}
+            if source['format'] in ('library','carbonhouse','squarespace','downtown') and limit==0:detail_links={}
             truncated |= len(detail_links) > limit
             for link in list(detail_links)[:limit]:
                 try:
@@ -385,11 +581,14 @@ def collect_source(source, start, until, observed, cache):
                     if not found: leads.append({'url': link, 'reason': 'No supported explicit event date; needs adapter or review'})
                 except Exception as e: errors.append(link + ': ' + str(e))
     except Exception as e: errors.append(str(e))
+    if source['format'] == 'downtown':
+        # The visible index omits later dates listed on detail pages.
+        truncated = True
     # Apply a seven-calendar-month horizon after capture; preserve ongoing ranges.
     records = [r for r in records if in_horizon(r, start.isoformat(), until.isoformat())]
     unique = {r['id']: r for r in records}
     return list(unique.values()), {'id': source['id'], 'name': source['name'], 'url': source['url'], 'region': source['region'],
-        'status': ('discovery-only' if source['format']=='discovery' and not errors else 'partial' if errors or leads or truncated else 'checked' if records else 'no-structured-events'),
+        'status': ('discovery-only' if (source['format']=='discovery' or (source['format']=='ticketmaster' and not visited)) and not errors else 'partial' if errors or leads or truncated else 'checked' if records else 'no-structured-events'),
         'format': source['format'], 'captured_count': len(records),
         'checked_at': observed, 'events': len(unique), 'requests': f.requests, 'visited_count': len(visited),
         'errors': errors[:15], 'unparsed_count': len(leads), 'unparsed_leads': leads[:25], 'truncated': truncated,
@@ -397,19 +596,37 @@ def collect_source(source, start, until, observed, cache):
         'categories': source.get('categories', []), 'activity_kinds': source.get('activity_kinds', []),
         'category_counts': dict(Counter(c for r in unique.values() for c in r['categories'])),
         'kind_counts': dict(Counter(r['schedule']['kind'] for r in unique.values())),
-        'horizon_note': 'Requested through ' + until.isoformat() + '; sources may not yet publish that far ahead.'}
+        'horizon_note': 'Requested through ' + until.isoformat() + '; sources may not yet publish that far ahead.'
+            + (' Visible calendar cards only; detail-only dates and date-filter results are not enumerated.' if source['format']=='downtown' else '')}
 
 
-def reconcile(old, fresh, health, now):
+def reconcile(old, fresh, health, now, disappeared_ttl_days=14):
+    now_aware = now if now.tzinfo else now.replace(tzinfo=TZ)
     for row in old + fresh:
+        if row.get('source_id') == 'visitkc' and row.get('city') == 'Kansas City':
+            inferred_city = infer_metro_city(
+                ' '.join([str(row.get('venue') or ''), str(row.get('description') or ''), str(row.get('title') or '')])
+            )
+            if inferred_city != 'Kansas City':
+                row['city'] = inferred_city
+                attach_place(row)
+                row['geo_meta'] = geo_metadata(row)
         if 'schedule' not in row: enrich(row)
         if not row.get('geo') or row['geo'].get('precision') != 'source_point': attach_place(row)
+        if 'geo_meta' not in row: row['geo_meta'] = geo_metadata(row)
+        if 'hints' not in row: row['hints'] = build_hints(row)
     new = {r['id']: r for r in fresh}; old_by_id = {r['id']: r for r in old}
     for key, row in new.items():
         if key in old_by_id: row['first_seen'] = old_by_id[key]['first_seen']
     for row in old:
-        if row['id'] in new or not in_horizon(row, now.date().isoformat(), '9999-12-31'): continue
-        kept = dict(row); kept['stale'] = True; kept['disappeared'] = True
+        if row['id'] in new or not in_horizon(row, now_aware.date().isoformat(), '9999-12-31'): continue
+        disappeared_since = row.get('disappeared_at') or (row.get('checked_at') if row.get('disappeared') else None) or now_aware.isoformat()
+        disappeared_dt = isoparse(disappeared_since)
+        if disappeared_dt.tzinfo is None:
+            disappeared_dt = disappeared_dt.replace(tzinfo=TZ)
+        if (now_aware - disappeared_dt) > timedelta(days=disappeared_ttl_days):
+            continue
+        kept = dict(row); kept['stale'] = True; kept['disappeared'] = True; kept['disappeared_at'] = disappeared_since
         new[row['id']] = kept
     # Exact title/venue/instant duplicates share evidence; differing statuses remain conflicts.
     result = {}; norm = lambda s: re.sub(r'\W+', '', s.casefold())
@@ -419,21 +636,54 @@ def reconcile(old, fresh, health, now):
             row['sources'] = row.get('sources') or [row['evidence']]; result[key] = row; continue
         kept = result[key]; kept['sources'].append(row['evidence'])
         if kept['status'] != row['status']: kept['conflicts'].append('Source status disagreement')
-    # Date-only area-calendar rows can corroborate one exactly named/located
-    # organizer occurrence; a multi-session day remains ambiguous and separate.
-    rows=list(result.values());removed=set();organizers={}
+    # Area-calendar rows can corroborate one matching organizer occurrence
+    # via place_id / canonical venue + token-set title similarity; multi-session days stay separate.
+    _stop = {'the', 'a', 'an', 'at', 'in', 'on', 'of', 'and'}
+    def _venue_norm(s):
+        cleaned = re.sub(r'\W+', ' ', (s or '').casefold()).strip()
+        return re.sub(r'^the\s+', '', cleaned)
+    def _tokens(s):
+        return {w for w in re.sub(r'\W+', ' ', (s or '').casefold()).split() if w and w not in _stop}
+    def _venues_match(a, b):
+        if a.get('place_id') and b.get('place_id') and a['place_id'] == b['place_id']:
+            return True
+        va, vb = _venue_norm(a.get('venue')), _venue_norm(b.get('venue'))
+        if not va or not vb:
+            return False
+        return va == vb or (min(len(va), len(vb)) >= 6 and (va in vb or vb in va))
+    def _titles_similar(a_title, b_title):
+        if norm(a_title) == norm(b_title):
+            return True
+        ta, tb = _tokens(a_title), _tokens(b_title)
+        if not ta or not tb:
+            return False
+        jaccard = len(ta & tb) / len(ta | tb)
+        if jaccard >= 0.72:
+            return True
+        return min(len(ta), len(tb)) >= 2 and (ta <= tb or tb <= ta)
+
+    rows = list(result.values()); removed = set(); org_rows = [r for r in rows if r['source_kind'] == 'organizer']
     for row in rows:
-        if row['source_kind']=='organizer':organizers.setdefault((norm(row['title']),norm(row['venue'])),[]).append(row)
-    for row in rows:
-        if row['source_kind']!='official-calendar' or row['evidence']['format']!='visitkc' or not row['all_day']:continue
-        matches=[other for other in organizers.get((norm(row['title']),norm(row['venue'])),[])
-                 if other.get('date') and other['date']<=row['date']<=(other.get('end_date') or other['date'])]
-        if len(matches)!=1:continue
-        kept=matches[0]
-        for proof in row.get('sources',[row['evidence']]):
-            if proof not in kept['sources']:kept['sources'].append(proof)
-        if not kept.get('geo') and row.get('geo'):kept['geo']=row['geo']
-        if kept['status']!=row['status']:kept['conflicts'].append('Organizer and area-calendar status disagreement')
+        if row['source_kind'] != 'official-calendar' or not row.get('all_day') or not row.get('date'):
+            continue
+        r_start = row['date']; r_end = row.get('end_date') or r_start
+        matches = [
+            other for other in org_rows
+            if other.get('date')
+            and other['date'] <= r_end and (other.get('end_date') or other['date']) >= r_start
+            and _venues_match(row, other)
+            and _titles_similar(row['title'], other['title'])
+        ]
+        if len(matches) != 1:
+            continue
+        kept = matches[0]
+        for proof in row.get('sources', [row['evidence']]):
+            if proof not in kept['sources']:
+                kept['sources'].append(proof)
+        if not kept.get('geo') and row.get('geo'):
+            kept['geo'] = row['geo']
+        if kept['status'] != row['status']:
+            kept['conflicts'].append('Organizer and area-calendar status disagreement')
         removed.add(row['id'])
     return sorted((r for r in rows if r['id'] not in removed), key=lambda r: (r['start'] or '9999', r['title']))
 
@@ -452,21 +702,36 @@ def run(registry, output, cache, now=None, only=None):
             rows, status = job.result(); fresh.extend(rows); health.append(status)
             print(status['id'], status['status'], status['events'], flush=True)
     if not any(h['visited_count'] for h in health): raise RuntimeError('All sources failed; preserving previous dataset')
+    old_health_by_id = {h['id']: h for h in old.get('sources', []) if isinstance(h, dict) and 'id' in h}
+    for h in health:
+        prev = old_health_by_id.get(h['id'])
+        if not prev or h.get('format') in ('discovery', 'offering', 'reviewed-capture'):
+            continue
+        prev_events = prev.get('events', 0) or 0
+        if prev_events >= 20 and h['events'] < int(prev_events * 0.6):
+            h['status'] = 'degraded'
+            h['yield_drop'] = {'previous': prev_events, 'current': h['events']}
+            h.setdefault('errors', []).append(
+                f"Yield dropped >40% ({prev_events} -> {h['events']}); circuit breaker flagged degraded"
+            )
     if only:
         # A repair probe must not mark untouched providers stale or erase their health.
-        fresh.extend(r for r in old['activities'] if r['source_id'] not in selected)
+        active_ids = {s['id'] for s in all_sources}
+        fresh.extend(r for r in old['activities'] if r['source_id'] not in selected and r['source_id'] in active_ids)
         health_by_id={h['id']:h for h in old.get('sources',[])}
         health_by_id.update({h['id']:h for h in health})
         health=[health_by_id[s['id']] for s in all_sources if s['id'] in health_by_id]
+    active_ids = {s['id'] for s in all_sources}
+    kept_old = [r for r in old['activities'] if r.get('source_id') in active_ids]
     result = {'version': 1, 'updated_at': observed, 'horizon_start': start.isoformat(), 'horizon_end': until.isoformat(),
               'timezone': 'America/Chicago', 'collection_mode': 'deterministic-no-llm', 'sources': health,
-              'activities': reconcile(old['activities'], fresh, health, now)}
+              'activities': reconcile(kept_old, fresh, health, now)}
     taxonomy = json.loads((ROOT / 'data/activity-taxonomy.json').read_text())
     result['taxonomy'] = taxonomy
     result['places'] = public_places()
-    result['coverage_matrix'] = coverage_matrix(all_sources, taxonomy, health)
+    result['coverage_matrix'] = coverage_matrix(all_sources, taxonomy, health, result['activities'])
     output.parent.mkdir(parents=True, exist_ok=True)
-    temp = output.with_suffix('.tmp'); temp.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n'); temp.replace(output)
+    temp = output.with_suffix('.tmp'); temp.write_text(json.dumps(result, ensure_ascii=False, separators=(',', ':')) + '\n'); temp.replace(output)
     return result
 
 

@@ -43,10 +43,12 @@ class RecallTests(unittest.TestCase):
         self.assertEqual(len(reconcile([],[first,second,area],[],NOW)),3)
 
     def test_http_gzip_is_decoded_and_old_cached_payloads_remain_readable(self):
+        import brotli
         body=b'<h1>Official event</h1>'
         self.assertEqual(response_body(gzip.compress(body),'gzip'),body)
         self.assertEqual(response_body(gzip.compress(body)),body)
-        with self.assertRaises(ValueError):response_body(body,'br')
+        self.assertEqual(response_body(brotli.compress(body),'br'),body)
+        with self.assertRaises(ValueError):response_body(body,'zstd')
 
     def test_library_reads_visible_all_events_dates_without_inventing_a_year(self):
         rows=library_events(card(),'https://example.test/calendar')

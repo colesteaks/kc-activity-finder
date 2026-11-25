@@ -63,7 +63,13 @@
       "Lawrence",
       "Columbia",
       "Bentonville",
-      "surrounding areas"
+      "surrounding areas",
+      "Topeka & Flint Hills",
+      "St. Joseph & Pony Express",
+      "Omaha",
+      "Des Moines",
+      "Springfield & Ozarks",
+      "Wichita & Hutchinson"
     ],
     "priority_bands": [
       {
@@ -82,6 +88,18 @@
           "surrounding areas"
         ],
         "guidance": "Include when fit or distinctiveness earns the extra travel."
+      },
+      {
+        "id": "day_and_weekend",
+        "areas": [
+          "Topeka & Flint Hills",
+          "St. Joseph & Pony Express",
+          "Omaha",
+          "Des Moines",
+          "Springfield & Ozarks",
+          "Wichita & Hutchinson"
+        ],
+        "guidance": "Day-trip corridors (1-2 hr) and weekend anchors (2.5-3.5 hr) surfaced by dedicated filters and planners without crowding daily local picks."
       }
     ]
   },

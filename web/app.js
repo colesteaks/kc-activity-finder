@@ -2,6 +2,9 @@ import { KIND_LABELS, scheduleLabel, activityHref } from "./activity-view.mjs";
 import { hoursState, placeFor, persistentActivities } from "./place-hours.mjs";
 import { hasCoordinates, withinBounds, mapGroups } from "./map-data.mjs";
 import { ActivityMap } from "./map.mjs";
+import { loadInventory } from "./data-loader.mjs";
+import { downloadIcs } from "./ics.mjs";
+import { isSaved, savedIds, toggleSaved } from "./saved.mjs";
 import {
   chicagoToday,
   windowDates,
@@ -10,7 +13,9 @@ import {
   safeLink,
   distinctOfferings,
   coverageStatus,
-} from "./filters.mjs?v=1.1.0";
+  PRESETS,
+  standoutScore,
+} from "./filters.mjs";
 const $ = (id) => document.getElementById(id);
 let data,
   visible = 30;
@@ -34,6 +39,12 @@ const form = $("filters"),
     unknown_ages: $("unknown-ages"),
     unavailable: $("include-unavailable"),
     include_offers: $("include-offers"),
+    audience: $("audience"),
+    free_likely: $("free-likely"),
+    indoor_outdoor: $("indoor-outdoor"),
+    drive_band: $("drive-band"),
+    amtrak: $("amtrak-only"),
+    saved_only: $("saved-only"),
   };
 const day = new Intl.DateTimeFormat("en-US", {
     timeZone: "America/Chicago",
@@ -63,12 +74,20 @@ function link(url, label) {
   return a;
 }
 function filters() {
-  return Object.fromEntries(
-    Object.entries(inputs).map(([k, e]) => [
-      k,
-      e.type === "checkbox" ? e.checked : e.value,
-    ]),
+  const values = Object.fromEntries(
+    Object.entries(inputs)
+      .filter(([, e]) => e)
+      .map(([k, e]) => [k, e.type === "checkbox" ? e.checked : e.value]),
   );
+  values.saved_ids = new Set(savedIds());
+  return values;
+}
+function refreshSavedPreset() {
+  const btn = document.querySelector('[data-preset="saved"]');
+  if (btn) {
+    const count = savedIds().length;
+    btn.textContent = count ? `Saved (${count})` : "Saved";
+  }
 }
 function card(a) {
   const c = el("article", "", "card"),
@@ -99,14 +118,6 @@ function card(a) {
     el("p", when, "card-date"),
     el("p", a.venue + " · " + a.city, "card-venue"),
   );
-  if (a.description)
-    c.append(
-      el(
-        "p",
-        a.description + (a.description.length === 200 ? "…" : ""),
-        "card-description",
-      ),
-    );
   const tags = el("div", "", "card-meta");
   tags.append(el("span", a.ages.label, "tag"));
   if (a.schedule) tags.append(el("span", KIND_LABELS[a.schedule.kind], "tag"));
@@ -122,13 +133,16 @@ function card(a) {
     tags.append(el("span", a.status, "tag warning"));
   if (a.stale || Date.now() - new Date(a.checked_at) > 72 * 3600e3)
     tags.append(el("span", "Needs a fresh check", "tag warning"));
-  if (a.conflicts?.length)
+  if (standoutScore(a) >= 70) tags.append(el("span", "Standout hint", "tag"));
+  if (a.hints?.audience?.length)
+    tags.append(el("span", `Hint: ${a.hints.audience.join(" · ")}`, "tag"));
+  if (a.conflicts?.length || a.conflict_count)
     tags.append(el("span", "Source conflict", "tag warning"));
   if (a.end_date !== a.date)
     tags.append(el("span", "Date range / series — confirm sessions", "tag"));
   if (a.ticket_status !== "unknown")
     tags.append(el("span", a.ticket_status, "tag"));
-  if (a.price !== null)
+  if (a.price !== null && a.price !== undefined)
     tags.append(
       el("span", `${a.currency || "Price"} ${a.price} · check fees`, "tag"),
     );
@@ -142,6 +156,26 @@ function card(a) {
         el("p", amenities.map((x) => x.name).join(" · "), "place-amenities"),
       );
   }
+  const save = el(
+    "button",
+    isSaved(a.offering_id || a.id) ? "Saved" : "Save",
+    "text-button",
+  );
+  save.type = "button";
+  save.addEventListener("click", () => {
+    save.textContent = toggleSaved(a.offering_id || a.id) ? "Saved" : "Save";
+    refreshSavedPreset();
+    if (inputs.saved_only?.checked) render();
+  });
+  const actions = el("div", "", "card-actions");
+  actions.append(save);
+  if (a.start || a.date) {
+    const calendar = el("button", "Calendar file", "text-button");
+    calendar.type = "button";
+    calendar.addEventListener("click", () => downloadIcs(a));
+    actions.append(calendar);
+  }
+  c.append(actions);
   const bottom = el("div", "", "card-bottom");
   bottom.append(
     el("span", a.source_name),
@@ -170,9 +204,10 @@ function render() {
   const f = filters(),
     params = new URLSearchParams();
   for (const [k, v] of Object.entries(f)) {
+    if (k === "saved_ids") continue;
     if (k === "unknown_ages" || k === "undated") {
       if (!v) params.set(k, "0");
-    } else if (k === "unavailable" || k === "include_offers") {
+    } else if (k === "unavailable" || k === "include_offers" || k === "amtrak" || k === "saved_only") {
       if (v) params.set(k, "1");
     } else if (v) params.set(k, v);
   }
@@ -248,10 +283,55 @@ function render() {
       });
   }
 }
+function feedSlug(region) {
+  return region
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+function applyPreset(preset) {
+  for (const key of ["audience", "free_likely", "indoor_outdoor", "drive_band"])
+    if (inputs[key]) inputs[key].value = "";
+  for (const key of ["include_offers", "amtrak", "saved_only"])
+    if (inputs[key]) inputs[key].checked = false;
+  for (const [key, value] of Object.entries(preset.filters || {})) {
+    const input = inputs[key];
+    if (!input) continue;
+    if (input.type === "checkbox") input.checked = Boolean(value);
+    else input.value = value;
+  }
+  $("sort").value = preset.sort || "standout";
+  visible = 30;
+  render();
+}
 function coverage() {
   const gaps = data.sources.filter((s) => s.status !== "checked").length;
+  const depth = data.coverage_matrix?.summary_metrics?.depth_tier_counts;
   $("coverage-summary").textContent =
-    `${data.sources.length} source routes · ${gaps} with gaps or collection notes`;
+    `${data.sources.length} source routes · ${gaps} with gaps or collection notes` +
+    (depth
+      ? ` · Depth ${Object.entries(depth)
+          .map(([name, count]) => `${count} ${name}`)
+          .join(", ")}`
+      : "");
+  const feeds = $("feed-links");
+  if (feeds) {
+    const links = [
+      ["feeds/all.xml", "All dated listings"],
+      ["feeds/standouts.xml", "Standout hints"],
+      ...(data.taxonomy?.regions || []).map((region) => [
+        `feeds/${feedSlug(region)}.xml`,
+        region,
+      ]),
+    ];
+    feeds.replaceChildren(
+      ...links.map(([href, label]) => {
+        const anchor = el("a", label);
+        anchor.href = href;
+        return anchor;
+      }),
+    );
+  }
   $("horizon").textContent =
     `Collection window: ${data.horizon_start} through ${data.horizon_end} (seven calendar months). This is the search horizon, not a promise of events every month.`;
   for (const s of data.sources) {
@@ -363,11 +443,25 @@ document.querySelectorAll("[data-window]").forEach((b) =>
 );
 async function start() {
   try {
-    const response = await fetch("./activities.json", { cache: "no-cache" });
-    if (!response.ok) throw Error("Data unavailable");
-    data = await response.json();
+    data = await loadInventory();
     if (!Array.isArray(data.activities) || !Array.isArray(data.sources))
       throw Error("Invalid data");
+    while (inputs.location.options.length > 1) inputs.location.remove(1);
+    for (const region of data.taxonomy?.regions || []) {
+      const option = el("option", region);
+      inputs.location.append(option);
+    }
+    const presets = $("presets");
+    if (presets && !presets.childElementCount) {
+      for (const preset of PRESETS) {
+        const button = el("button", preset.label);
+        button.type = "button";
+        button.dataset.preset = preset.id;
+        button.addEventListener("click", () => applyPreset(preset));
+        presets.append(button);
+      }
+      refreshSavedPreset();
+    }
     for (const t of data.taxonomy?.categories || []) {
       const o = el("option", t.label);
       o.value = t.id;
@@ -430,19 +524,26 @@ async function start() {
     coverage();
     if (data.coverage_matrix) {
       const matrix = data.coverage_matrix.category_by_region;
-      const gaps = matrix.filter((c) => c.status === "gap");
+      const regionGaps = data.coverage_matrix.region_gaps;
+      const gapCount = Array.isArray(matrix)
+        ? matrix.filter((c) => c.status === "gap").length
+        : regionGaps
+          ? Object.values(regionGaps).reduce((n, list) => n + list.length, 0)
+          : data.coverage_matrix.summary_metrics?.depth_tier_counts?.gap ?? 0;
       $("coverage-summary").textContent +=
-        ` · ${gaps.length} category/region gaps`;
+        ` · ${gapCount} category/region gaps`;
       for (const region of data.taxonomy.regions) {
         const row = el("div", "", "source-row");
         row.append(el("strong", region));
-        const missing = matrix
-          .filter((c) => c.region === region && c.status === "gap")
-          .map(
-            (c) =>
-              data.taxonomy.categories.find((t) => t.id === c.category)
-                ?.label || c.category,
-          );
+        const missingIds = Array.isArray(matrix)
+          ? matrix
+              .filter((c) => c.region === region && c.status === "gap")
+              .map((c) => c.category)
+          : regionGaps?.[region] || [];
+        const missing = missingIds.map(
+          (id) =>
+            data.taxonomy.categories.find((t) => t.id === id)?.label || id,
+        );
         row.append(
           el(
             "p",

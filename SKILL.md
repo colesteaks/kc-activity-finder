@@ -13,6 +13,16 @@ metadata:
 
 See [installation and versioning](references/installation.md) for a pinned public release. Resolve all bundled paths from this skill directory, regardless of the caller's working directory. Bundled activity data is a timestamped snapshot; recheck current official facts before recommendations.
 
+## Index-first snapshot
+
+For “what is already collected?”, run `python3 scripts/query_inventory.py` before opening the eight-stage ledger. It reads `web/bundle.min.json` when that file is present, otherwise `web/activities.json`, and can filter by region, city, text, audience hint, likely-free hint, drive band, standout score, and explicit dates. Hints are labels, not organizer rules. The command does not browse, rank a personal outing, or replace adversarial review.
+
+```sh
+python3 scripts/query_inventory.py --region Lawrence --audience kids --limit 15
+```
+
+Use the eight-stage sequence below when the task is a recommendation, a day trip, or a claim about current availability. The snapshot is a starting index, not evidence that a listing is still open.
+
 ## Choose the outing
 
 - For a day trip, “within X hours of driving,” destination comparisons or a same-day itinerary, read [day-trip planning](references/day-trips.md) and use its destination-first workflow. Start with origin and drive limit, compare compelling anchors, then plan the selected destination/date. Include qualifying places beyond the default regional graph. Use the [entry prompts](prompts/day-trip.md) and [deterministic feasibility checker](scripts/day_trip_planner.py); no website or paid routing integration is needed.

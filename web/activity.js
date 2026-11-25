@@ -1,4 +1,7 @@
 import { safeLink, chicagoToday } from "./filters.mjs";
+import { loadInventory } from "./data-loader.mjs";
+import { downloadIcs } from "./ics.mjs";
+import { isSaved, toggleSaved } from "./saved.mjs";
 import { hoursState, placeFor, persistentActivities } from "./place-hours.mjs";
 import { hasCoordinates } from "./map-data.mjs";
 import {
@@ -181,19 +184,20 @@ function render(rows, all, taxonomy, places) {
   }
   const schedule = section("When & how it works");
   paragraph(schedule, scheduleLabel(a));
-  paragraph(schedule, a.schedule.note);
+  if (a.schedule.note) paragraph(schedule, a.schedule.note);
   const details = el("dl", "", "detail-facts");
   fact(details, "Activity format", KIND_LABELS[a.schedule.kind]);
   fact(details, "Operating hours", a.schedule.operating_hours);
+  const commitment = a.commitment || {};
   fact(
     details,
     "Attendance commitment",
-    a.commitment.attendance === "unknown"
+    !commitment.attendance || commitment.attendance === "unknown"
       ? null
-      : a.commitment.attendance.replaceAll("_", " "),
+      : commitment.attendance.replaceAll("_", " "),
   );
-  fact(details, "Duration", a.commitment.duration);
-  fact(details, "Equipment / prerequisites", a.commitment.equipment);
+  fact(details, "Duration", commitment.duration);
+  fact(details, "Equipment / prerequisites", commitment.equipment);
   schedule.append(details);
   if (a.schedule.recurrence) {
     paragraph(
@@ -204,12 +208,12 @@ function render(rows, all, taxonomy, places) {
         a.schedule.recurrence.timezone +
         ")",
     );
-    for (const d of a.schedule.recurrence.exdates)
+    for (const d of a.schedule.recurrence.exdates || [])
       paragraph(schedule, "Excluded date: " + d);
   }
-  for (const exception of a.schedule.exceptions)
+  for (const exception of a.schedule.exceptions || [])
     paragraph(schedule, "Exception / closure: " + exception);
-  if (a.schedule.sessions.length) {
+  if (a.schedule.sessions?.length) {
     const list = el("ul");
     for (const s of a.schedule.sessions) {
       list.append(
@@ -252,31 +256,32 @@ function render(rows, all, taxonomy, places) {
   }
   body.append(schedule);
   const signup = section("Registration & cost");
+  const registration = a.registration || {};
   const rd = el("dl", "", "detail-facts");
   fact(
     rd,
     "Registration status",
-    a.registration.status === "unknown"
+    !registration.status || registration.status === "unknown"
       ? null
-      : a.registration.status.replaceAll("_", " "),
+      : registration.status.replaceAll("_", " "),
   );
-  fact(rd, "Registration opens", a.registration.opens_at);
-  fact(rd, "Signup deadline", a.registration.deadline);
+  fact(rd, "Registration opens", registration.opens_at);
+  fact(rd, "Signup deadline", registration.deadline);
   fact(
     rd,
     "Source-listed price",
-    a.price !== null
+    a.price !== null && a.price !== undefined
       ? `${a.currency || "Currency not supplied"} ${a.price}`
       : null,
   );
   signup.append(rd);
-  paragraph(signup, a.registration.note);
+  paragraph(signup, registration.note);
   paragraph(
     signup,
     "A listed event, season or exhibit does not establish ticket stock, total admission cost or open registration. Confirm fees, prerequisites and the correct season before booking.",
   );
-  if (a.registration.url)
-    signup.append(external(a.registration.url, "Official registration ↗"));
+  if (registration.url)
+    signup.append(external(registration.url, "Official registration ↗"));
   body.append(signup);
   const source = section("Sources & freshness");
   const evidence = [
@@ -343,7 +348,23 @@ function render(rows, all, taxonomy, places) {
       share.textContent = "Copy the address from your browser";
     }
   });
-  aside.append(share);
+  const save = el(
+    "button",
+    isSaved(a.offering_id || a.id) ? "Saved on this browser" : "Save on this browser",
+    "detail-button",
+  );
+  save.type = "button";
+  save.addEventListener("click", () => {
+    const on = toggleSaved(a.offering_id || a.id);
+    save.textContent = on ? "Saved on this browser" : "Save on this browser";
+  });
+  const calendar = el("button", "Download calendar file", "detail-button");
+  calendar.type = "button";
+  calendar.addEventListener("click", () => {
+    if (!downloadIcs(a))
+      calendar.textContent = "This listing has no explicit date to export";
+  });
+  aside.append(save, calendar, share);
   grid.append(body, aside);
   root.append(grid);
 }
@@ -351,9 +372,7 @@ async function start() {
   try {
     const id = new URLSearchParams(location.search).get("id");
     if (!id) throw Error("missing-id");
-    const response = await fetch("./activities.json", { cache: "no-cache" });
-    if (!response.ok) throw Error("unavailable");
-    const data = await response.json();
+    const data = await loadInventory();
     const rows = findOffering(data.activities, id);
     if (!rows.length) {
       root.replaceChildren(

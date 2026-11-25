@@ -1,0 +1,307 @@
+{
+  "probes": [
+    {
+      "url": "https://explorels.com/DesktopModules/EasyDNNnews/iCalendar.ashx?portalid=0&articleid=704&moduleid=1198",
+      "status": null,
+      "classification": "blocked",
+      "format": null,
+      "event_count": 0,
+      "error": "robots.txt disallows this route",
+      "tier": "unassigned",
+      "region": null
+    },
+    {
+      "url": "https://kcconvention.com/comments/feed",
+      "status": 200,
+      "content_type": "",
+      "classification": "discovery",
+      "format": "rss",
+      "event_count": 0,
+      "error": "Feed parsed with no explicit-date events",
+      "tier": "tier1_backyard",
+      "region": "Kansas City metro"
+    },
+    {
+      "url": "https://kcconvention.com/events/feed",
+      "status": 200,
+      "content_type": "",
+      "classification": "discovery",
+      "format": "rss",
+      "event_count": 0,
+      "error": "Feed parsed with no explicit-date events",
+      "tier": "tier1_backyard",
+      "region": "Kansas City metro"
+    },
+    {
+      "url": "https://kcconvention.com/events?ical=1",
+      "status": 200,
+      "content_type": "",
+      "classification": "verified_parser",
+      "format": "ics",
+      "event_count": 9,
+      "error": null,
+      "tier": "tier1_backyard",
+      "region": "Kansas City metro"
+    },
+    {
+      "url": "https://kcconvention.com/feed",
+      "status": 200,
+      "content_type": "",
+      "classification": "discovery",
+      "format": "rss",
+      "event_count": 0,
+      "error": "Feed parsed with no explicit-date events",
+      "tier": "tier1_backyard",
+      "region": "Kansas City metro"
+    },
+    {
+      "url": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters.ics",
+      "status": 200,
+      "content_type": "",
+      "classification": "verified_parser",
+      "format": "ics",
+      "event_count": 1,
+      "error": null,
+      "tier": "tier1_backyard",
+      "region": "Kansas City metro"
+    },
+    {
+      "url": "https://kcopera.org/feed",
+      "status": 200,
+      "content_type": "",
+      "classification": "discovery",
+      "format": "rss",
+      "event_count": 0,
+      "error": "Feed parsed with no explicit-date events",
+      "tier": "tier1_backyard",
+      "region": "Kansas City metro"
+    },
+    {
+      "url": "https://lawrenceartscenter.org/events-at-lawrence-arts-center/feed",
+      "status": 200,
+      "content_type": "",
+      "classification": "discovery",
+      "format": "rss",
+      "event_count": 0,
+      "error": "Feed parsed with no explicit-date events",
+      "tier": "tier1_backyard",
+      "region": "Lawrence"
+    },
+    {
+      "url": "https://midwaygolfgames.com/comments/feed",
+      "status": 200,
+      "content_type": "",
+      "classification": "discovery",
+      "format": "rss",
+      "event_count": 0,
+      "error": "Feed parsed with no explicit-date events",
+      "tier": "tier1_backyard",
+      "region": "Columbia"
+    },
+    {
+      "url": "https://midwaygolfgames.com/feed",
+      "status": 200,
+      "content_type": "",
+      "classification": "discovery",
+      "format": "rss",
+      "event_count": 0,
+      "error": "Feed parsed with no explicit-date events",
+      "tier": "tier1_backyard",
+      "region": "Columbia"
+    },
+    {
+      "url": "https://nelson-atkins.org/comments/feed",
+      "status": 200,
+      "content_type": "",
+      "classification": "discovery",
+      "format": "rss",
+      "event_count": 0,
+      "error": "Feed parsed with no explicit-date events",
+      "tier": "tier1_backyard",
+      "region": "Kansas City metro"
+    },
+    {
+      "url": "https://nelson-atkins.org/feed",
+      "status": 200,
+      "content_type": "",
+      "classification": "verified_parser",
+      "format": "rss",
+      "event_count": 2,
+      "error": null,
+      "tier": "tier1_backyard",
+      "region": "Kansas City metro"
+    },
+    {
+      "url": "https://wonderscope.org/comments/feed",
+      "status": 200,
+      "content_type": "",
+      "classification": "discovery",
+      "format": "rss",
+      "event_count": 0,
+      "error": "Feed parsed with no explicit-date events",
+      "tier": "tier1_backyard",
+      "region": "Kansas City metro"
+    },
+    {
+      "url": "https://wonderscope.org/feed",
+      "status": 200,
+      "content_type": "",
+      "classification": "verified_parser",
+      "format": "rss",
+      "event_count": 1,
+      "error": null,
+      "tier": "tier1_backyard",
+      "region": "Kansas City metro"
+    },
+    {
+      "url": "https://www.midlandkc.com/events/rss",
+      "status": 200,
+      "content_type": "",
+      "classification": "discovery",
+      "format": "rss",
+      "event_count": 0,
+      "error": "Feed parsed with no explicit-date events",
+      "tier": "tier1_backyard",
+      "region": "Kansas City metro"
+    },
+    {
+      "url": "https://www.thetrumankc.com/events/rss",
+      "status": 200,
+      "content_type": "",
+      "classification": "discovery",
+      "format": "rss",
+      "event_count": 0,
+      "error": "Feed parsed with no explicit-date events",
+      "tier": "tier1_backyard",
+      "region": "Kansas City metro"
+    },
+    {
+      "url": "https://www.visitcolumbiamo.com/comments/feed",
+      "status": 200,
+      "content_type": "",
+      "classification": "discovery",
+      "format": "rss",
+      "event_count": 0,
+      "error": "Feed parsed with no explicit-date events",
+      "tier": "tier1_backyard",
+      "region": "Columbia"
+    },
+    {
+      "url": "https://www.visitcolumbiamo.com/feed",
+      "status": 200,
+      "content_type": "",
+      "classification": "discovery",
+      "format": "rss",
+      "event_count": 0,
+      "error": "Feed parsed with no explicit-date events",
+      "tier": "tier1_backyard",
+      "region": "Columbia"
+    }
+  ],
+  "candidate_count": 18,
+  "by_tier": {
+    "tier1_backyard": 17,
+    "tier2_day_trip": 0,
+    "tier3_weekend": 0,
+    "unassigned": 1
+  },
+  "promoted": [
+    {
+      "id": "kcconvention-events-feed",
+      "url": "https://kcconvention.com/events/feed",
+      "format": "discovery"
+    },
+    {
+      "id": "kcconvention-events",
+      "url": "https://kcconvention.com/events?ical=1",
+      "format": "ics"
+    },
+    {
+      "id": "kcconvention-feed",
+      "url": "https://kcconvention.com/feed",
+      "format": "discovery"
+    },
+    {
+      "id": "kcopera-feed",
+      "url": "https://kcopera.org/feed",
+      "format": "discovery"
+    },
+    {
+      "id": "lawrenceartscenter-events-at-lawrence-ar",
+      "url": "https://lawrenceartscenter.org/events-at-lawrence-arts-center/feed",
+      "format": "discovery"
+    },
+    {
+      "id": "midwaygolfgames-feed",
+      "url": "https://midwaygolfgames.com/feed",
+      "format": "discovery"
+    },
+    {
+      "id": "nelson-atkins-feed",
+      "url": "https://nelson-atkins.org/feed",
+      "format": "rss"
+    },
+    {
+      "id": "wonderscope-feed",
+      "url": "https://wonderscope.org/feed",
+      "format": "rss"
+    },
+    {
+      "id": "midlandkc-events-rss",
+      "url": "https://www.midlandkc.com/events/rss",
+      "format": "discovery"
+    }
+  ],
+  "withheld": [
+    {
+      "url": "https://explorels.com/DesktopModules/EasyDNNnews/iCalendar.ashx?portalid=0&articleid=704&moduleid=1198",
+      "reason": "single-event or comment feed"
+    },
+    {
+      "url": "https://kcconvention.com/comments/feed",
+      "reason": "single-event or comment feed"
+    },
+    {
+      "url": "https://kcmavericks.com/games/2026/11/07/tahoe-knight-monsters.ics",
+      "reason": "single-event or comment feed"
+    },
+    {
+      "url": "https://midwaygolfgames.com/comments/feed",
+      "reason": "single-event or comment feed"
+    },
+    {
+      "url": "https://nelson-atkins.org/comments/feed",
+      "reason": "single-event or comment feed"
+    },
+    {
+      "url": "https://wonderscope.org/comments/feed",
+      "reason": "single-event or comment feed"
+    },
+    {
+      "url": "https://www.thetrumankc.com/events/rss",
+      "reason": "discovery limit reached"
+    },
+    {
+      "url": "https://www.visitcolumbiamo.com/comments/feed",
+      "reason": "single-event or comment feed"
+    },
+    {
+      "url": "https://www.visitcolumbiamo.com/feed",
+      "reason": "discovery limit reached"
+    }
+  ],
+  "note": "Tier 2 and tier 3 counts are zero when the repository has no reviewed host in that corridor. Missing corridors are gaps, not invented sources.",
+  "places": {
+    "existing_geocoded": 3,
+    "existing_attempted": 3,
+    "added": [
+      "gieringer-s-family-farm",
+      "cider-hill-family-orchard",
+      "deanna-rose-children-s-farmstead"
+    ],
+    "unmatched": [],
+    "total_places": 15,
+    "with_coordinates": 15,
+    "checked_at": "2026-11-24"
+  }
+}

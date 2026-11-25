@@ -12,7 +12,9 @@ npx skills@latest add https://github.com/colesteaks/kc-activity-finder/tree/v1.1
 
 [Download v1.1.0](https://github.com/colesteaks/kc-activity-finder/releases/tag/v1.1.0) · [Installation and versioning](references/installation.md) · [Changelog](CHANGELOG.md) · [License](LICENSE). Releases include a self-contained ZIP, exact-commit/per-file manifest and SHA-256 checksums. Live activity facts still require current research; versioning pins the skill, not event availability.
 
-**Hosted activity browser:** `web/` is a static GitHub Pages site with age, location, type and date filters. Daily GitHub Actions collect seven months ahead into `web/activities.json`, without any LLM calls. See [hosting and collection](references/hosting-and-collection.md) for scheduling, source expansion, costs and maintenance.
+**Hosted activity browser:** `web/` is a static site with age, location, hint, drive-band, and date filters. The browse index is `web/bundle.min.json`; `web/activities.json` remains the full explicit-date snapshot, and `web/feeds/` publishes RSS for regions that already have collected dates. Daily collection commits that snapshot to the `data` branch. Pages deployment is a separate manual workflow input. See [hosting and collection](references/hosting-and-collection.md).
+
+**Inventory lookup:** `python3 scripts/query_inventory.py` answers what the snapshot already contains. It does not replace the eight-stage recommendation workflow.
 
 **Ongoing places and map:** parks and permanent attractions have separate hours, seasonal rules and amenities. The optional Leaflet map shares the list filters, groups co-located activities, supports searching the visible area, and links to activity details. [Place and map maintenance](references/places-and-map.md) explains provenance, missing coordinates and tile hosting.
 

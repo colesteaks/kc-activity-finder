@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ev="http://purl.org/rss/1.0/modules/event/">
+  <channel>
+    <title>Venue Events</title>
+    <item>
+      <title>Winter Jazz Night</title>
+      <link>https://example.test/jazz</link>
+      <description>Live quartet in the main hall.</description>
+      <ev:startdate>2026-12-18T20:00:00-06:00</ev:startdate>
+      <ev:enddate>2026-12-18T22:30:00-06:00</ev:enddate>
+      <ev:location>The Midland</ev:location>
+      <category>Music</category>
+    </item>
+    <item>
+      <title>Undated Post Missing Year</title>
+      <link>https://example.test/bad</link>
+      <pubDate>Tue, 24 Nov 2026 12:00:00 GMT</pubDate>
+      <description>Come see us on December 4 for fun.</description>
+    </item>
+  </channel>
+</rss>

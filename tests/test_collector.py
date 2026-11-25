@@ -2,12 +2,13 @@ import json
 import sys
 import tempfile
 import unittest
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
+from calendar_adapters import infer_metro_city, visitkc_events
 from collect_activities import (TZ, age_rules, jsonld_events, normalize, reconcile,
                                 structured_events, run, safe_url, columbia_event, explicit_age_guidance)
 from validate_public_data import validate_public
@@ -71,6 +72,44 @@ class CollectorTests(unittest.TestCase):
         body='<script>self.__next_f.push('+json.dumps([1,payload])+')</script>'
         rows=structured_events(body,dict(SOURCE,id='kc-zoo'))
         self.assertEqual(rows[0]['name'],'Penguin walk')
+        row=normalize(rows[0],dict(SOURCE,id='kc-zoo'),NOW.isoformat(),'https://example.test/zoo')
+        self.assertEqual(row['start'],'2026-11-08T11:00:00-06:00')
+
+    def test_kczoo_bad_end_time_is_dropped_not_fatal(self):
+        obj={'type':'special_event','uid':'walk2','data':{'title':[{'text':'Zoo Walk'}],'activity_time':[{'start_time':'2026-11-08T17:00:00+0000','end_time':'2026-11-08T16:00:00+0000'}]}}
+        body='<script>self.__next_f.push('+json.dumps([1,'1:'+json.dumps(obj)])+')</script>'
+        rows=structured_events(body,dict(SOURCE,id='kc-zoo'))
+        self.assertEqual(len(rows),1)
+        self.assertIsNone(rows[0]['endDate'])
+
+    def test_disappeared_ttl_evicts_expired_ghosts(self):
+        row=self.row()
+        row['start']='2026-12-01T13:00:00-06:00';row['date']='2026-12-01';row['end_date']='2026-12-01'
+        row['schedule'].update(start_date='2026-12-01',end_date='2026-12-01')
+        row['disappeared']=True;row['stale']=True;row['disappeared_at']=(NOW-timedelta(days=15)).isoformat()
+        self.assertEqual(reconcile([row],[],[],NOW),[])
+        row['disappeared_at']=(NOW-timedelta(days=5)).isoformat()
+        self.assertEqual(len(reconcile([row],[],[],NOW)),1)
+
+    def test_yield_drop_circuit_breaker_flags_degraded(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            r=Path(tmp);reg=r/'sources.json';out=r/'activities.json'
+            reg.write_text(json.dumps({'sources':[SOURCE]}))
+            out.write_text(json.dumps({'activities':[],'sources':[{'id':'test','events':100,'status':'checked'}]}))
+            health={'id':'test','name':'Test','url':SOURCE['url'],'region':'Lawrence','status':'checked','format':'jsonld','events':10,'visited_count':5,'errors':[]}
+            with patch('collect_activities.collect_source',return_value=([],health)):
+                res=run(reg,out,r/'cache',NOW)
+            self.assertEqual(res['sources'][0]['status'],'degraded')
+            self.assertEqual(res['sources'][0]['yield_drop'],{'previous':100,'current':10})
+
+    def test_visitkc_suburban_city_inference(self):
+        self.assertEqual(infer_metro_city('Nerman Museum of Contemporary Art'),'Overland Park')
+        self.assertEqual(infer_metro_city('Iron Horse Bar & Grill - Leawood'),'Leawood')
+        self.assertEqual(infer_metro_city('City of Lenexa, Kansas'),'Lenexa')
+        self.assertEqual(infer_metro_city('Generic Downtown Venue'),'Kansas City')
+        html='<h2>Saturday, November 7, 2026</h2><div class="js-post type-event"><h3 class="entry-title"><a href="https://example.test/e">Exhibit</a></h3><p class="card-text">Nerman Museum of Contemporary Art</p></div>'
+        ev=visitkc_events(html,'https://www.visitkc.com/events/')[0]
+        self.assertEqual(ev['location']['address']['addressLocality'],'Overland Park')
 
     def test_cross_scheme_links_rejected(self):
         self.assertIsNone(safe_url('javascript:alert(1)'));self.assertIsNone(safe_url('https://user:pass@example.test'))
@@ -81,6 +120,43 @@ class CollectorTests(unittest.TestCase):
             with patch('collect_activities.collect_source',return_value=([],{'visited_count':0,'events':0,'id':'test','status':'failed'})):
                 with self.assertRaises(RuntimeError):run(registry,out,r/'cache',NOW)
             self.assertEqual(out.read_text(),'{"activities":[]}')
+
+    def test_fetcher_handles_same_host_308_and_blocks_cross_host_308(self):
+        import urllib.error
+        from email.message import Message
+        from http.server import BaseHTTPRequestHandler, HTTPServer
+        import threading
+        from collect_activities import Fetcher
+
+        class Handler(BaseHTTPRequestHandler):
+            def do_GET(self):
+                if self.path == '/robots.txt':
+                    self.send_response(404); self.end_headers(); return
+                if self.path == '/events/':
+                    self.send_response(308); self.send_header('Location', '/events'); self.end_headers(); return
+                if self.path == '/events':
+                    self.send_response(200); self.send_header('Content-Type', 'text/html'); self.end_headers()
+                    self.wfile.write(b'<html>ok-308</html>'); return
+                if self.path == '/cross':
+                    self.send_response(308); self.send_header('Location', 'https://other.example.test/events'); self.end_headers(); return
+            def log_message(self, *args): pass
+
+        srv = HTTPServer(('127.0.0.1', 0), Handler)
+        t = threading.Thread(target=srv.serve_forever, daemon=True); t.start()
+        try:
+            with tempfile.TemporaryDirectory() as tmp:
+                f = Fetcher(Path(tmp))
+                body = f.fetch(f'http://127.0.0.1:{srv.server_port}/events/')
+                self.assertEqual(body, '<html>ok-308</html>')
+                fake_resp = unittest.mock.MagicMock()
+                fake_resp.url = 'https://other.example.test/events'
+                fake_resp.headers = Message()
+                fake_resp.__enter__.return_value = fake_resp
+                with patch('collect_activities.OPENER.open', return_value=fake_resp):
+                    with self.assertRaises(ValueError):
+                        f.fetch(f'http://127.0.0.1:{srv.server_port}/cross', robots=False)
+        finally:
+            srv.shutdown(); srv.server_close()
 
     def test_public_dataset(self):
         if (ROOT/'web/activities.json').exists():validate_public(json.loads((ROOT/'web/activities.json').read_text()))

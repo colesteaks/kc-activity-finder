@@ -1,0 +1,1 @@
+Sanitized public markup observed November 9, 2026. Sources: https://cart.nelson-atkins.org/51930/53441 and https://cart.nelson-atkins.org/50445/53356. Only event detail, selected-date controls and public purchase-button structure are retained. Other dates represent other offerings and must not inherit the selected title. No session/account fields or scripts are included.

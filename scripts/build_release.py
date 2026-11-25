@@ -17,6 +17,13 @@ ROOT = Path(__file__).resolve().parents[1]
 NAME = 'kc-activity-finder'
 REPOSITORY = 'https://github.com/colesteaks/kc-activity-finder'
 SEMVER = r'(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)'
+# Crawler-backlog maintenance archives live in the repository for weekly CI curation
+# and are omitted from distributed Agent Skill archives to keep the bundle compact (<25 MiB).
+RELEASE_EXCLUDED = {
+    'data/kc-daily-source-map.json',
+    'data/source-proposals.json',
+    'data/generated-source-graph.json',
+}
 REQUIRED = {
     'VERSION', 'SKILL.md', 'README.md', 'LICENSE', 'THIRD_PARTY_NOTICES.md', 'CHANGELOG.md',
     'requirements.txt', 'requirements-collector.txt', 'agents/openai.yaml',
@@ -64,7 +71,7 @@ def committed_files(root, ref):
             if path.is_absolute() or '..' in path.parts or '\\' in member.name:
                 raise ValueError('Unsafe source path')
             # Do not distribute CI configuration as an agent's runtime instructions.
-            if path.parts[0].startswith('.'):
+            if path.parts[0].startswith('.') or member.name in RELEASE_EXCLUDED:
                 continue
             if not member.isfile():
                 raise ValueError('Release payload must contain regular files only: ' + member.name)
