@@ -57,6 +57,18 @@ export const PRESETS = [
     sort: "standout",
     filters: { drive_band: "2-3.5h" },
   },
+  {
+    id: "amtrak",
+    label: "Amtrak day trip",
+    sort: "standout",
+    filters: { amtrak: true, include_offers: false },
+  },
+  {
+    id: "saved",
+    label: "Saved",
+    sort: "date",
+    filters: { saved_only: true, include_offers: true },
+  },
 ];
 
 export function standoutScore(activity) {
@@ -79,6 +91,11 @@ export function matches(a, f, places = []) {
   if (f.indoor_outdoor && a.hints?.indoor_outdoor !== f.indoor_outdoor)
     return false;
   if (f.drive_band && a.geo_meta?.drive_band !== f.drive_band) return false;
+  if (f.amtrak && !a.geo_meta?.amtrak_accessible) return false;
+  if (f.saved_only) {
+    const oid = a.offering_id || a.id;
+    if (!(f.saved_ids instanceof Set) || !f.saved_ids.has(oid)) return false;
+  }
   if (f.min_standout && standoutScore(a) < Number(f.min_standout)) return false;
   if (
     f.amenity &&
@@ -184,7 +201,7 @@ export function sortedActivities(rows, sort) {
     sort === "title"
       ? a.title.localeCompare(b.title)
       : sort === "new"
-        ? b.first_seen.localeCompare(a.first_seen) ||
+        ? (b.first_seen || "").localeCompare(a.first_seen || "") ||
           (a.start || "9999").localeCompare(b.start || "9999")
         : sort === "standout"
           ? standoutScore(b) - standoutScore(a) ||

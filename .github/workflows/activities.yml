@@ -83,6 +83,11 @@ jobs:
           path: .collector-cache
           key: activity-http-${{ runner.os }}-${{ github.run_id }}
           restore-keys: activity-http-${{ runner.os }}-
+      - name: Seed prior snapshot from data branch if present
+        run: |
+          if git fetch origin data; then
+            git show origin/data:web/activities.json > web/activities.json || true
+          fi
       - name: Collect onto the data branch
         run: |
           python3 scripts/refresh_sources.py
@@ -101,8 +106,8 @@ jobs:
             git push origin HEAD:data
           fi
   deploy:
-    needs: test
-    if: github.event_name == 'workflow_dispatch' && inputs.deploy
+    needs: [test, collect]
+    if: always() && needs.test.result == 'success' && (needs.collect.result == 'success' || needs.collect.result == 'skipped') && (github.event_name == 'schedule' || github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.deploy))
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:
@@ -115,7 +120,12 @@ jobs:
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
-          ref: data
+          ref: main
+      - name: Overlay latest collected snapshot from data branch
+        run: |
+          if git fetch origin data; then
+            git checkout origin/data -- web/activities.json web/bundle.min.json web/feeds || true
+          fi
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Package static site

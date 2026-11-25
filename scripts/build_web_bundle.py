@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Write a compact relational bundle, static RSS feeds, and a minified activities file.
+"""Write a compact relational v2 bundle, static RSS feeds, and a minified activities file.
 
 The bundle is a browse index. It keeps source URLs and explicit dates and drops
 evidence quotes. It does not invent events.
@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from pathlib import Path
 from xml.sax.saxutils import escape
 
@@ -16,111 +17,11 @@ from enrichment import is_promo_listing
 ROOT = Path(__file__).resolve().parents[1]
 BUNDLE_LIMIT = 1_000_000
 CHANNEL = 'https://github.com/colesteaks/kc-activity-finder'
+_START_RE = re.compile(r'^(\d{4}-\d{2}-\d{2})T(\d{2}:\d{2})(?::\d{2})?([+-]\d{2}):?\d{2}$')
 
 
 def _slug(region: str) -> str:
-    return ''.join(ch.lower() if ch.isalnum() else '-' for ch in region).strip('-')
-
-
-def compact_activity(row: dict) -> dict:
-    schedule = row.get('schedule') or {}
-    geo = row.get('geo') or None
-    item = {
-        'id': row.get('id'),
-        'offering_id': row.get('offering_id') or row.get('id'),
-        'parent_id': row.get('parent_id'),
-        'title': row.get('title'),
-        'venue': row.get('venue'),
-        'city': row.get('city'),
-        'region': row.get('region'),
-        'categories': row.get('categories') or [],
-        'type': row.get('type'),
-        'date': row.get('date'),
-        'end_date': row.get('end_date'),
-        'start': row.get('start'),
-        'end': row.get('end'),
-        'all_day': row.get('all_day'),
-        'status': row.get('status'),
-        'stale': row.get('stale'),
-        'url': row.get('url'),
-        'source_id': row.get('source_id'),
-        'source_name': row.get('source_name'),
-        'source_kind': row.get('source_kind'),
-        'schedule': {
-            'kind': schedule.get('kind'),
-            'start_date': schedule.get('start_date'),
-            'end_date': schedule.get('end_date'),
-            'sessions': schedule.get('sessions') or [],
-            'recurrence': schedule.get('recurrence'),
-            'exceptions': schedule.get('exceptions') or [],
-            'note': schedule.get('note'),
-            'operating_hours': schedule.get('operating_hours'),
-            'kind_inferred': schedule.get('kind_inferred'),
-        },
-        'commitment': row.get('commitment'),
-        'registration': row.get('registration'),
-        'ages': row.get('ages'),
-        'hints': row.get('hints'),
-        'geo_meta': row.get('geo_meta'),
-        'place_id': row.get('place_id'),
-        'first_seen': row.get('first_seen'),
-        'checked_at': row.get('checked_at'),
-        'ticket_status': row.get('ticket_status'),
-        'price': row.get('price'),
-        'currency': row.get('currency'),
-        'description': (row.get('description') or '')[:140],
-        'evidence_format': (row.get('evidence') or {}).get('format'),
-        'conflict_count': len(row.get('conflicts') or []),
-    }
-    if geo:
-        item['geo'] = {
-            'lat': geo.get('lat'),
-            'lng': geo.get('lng'),
-            'precision': geo.get('precision'),
-            'source_url': geo.get('source_url'),
-        }
-    evidence = row.get('evidence') or {}
-    if evidence.get('url'):
-        item['evidence'] = {'url': evidence['url'], 'format': evidence.get('format')}
-    return item
-
-
-def compact_sources(sources: list[dict]) -> list[dict]:
-    rows = []
-    for source in sources:
-        rows.append({
-            'id': source.get('id'),
-            'name': source.get('name'),
-            'region': source.get('region'),
-            'url': source.get('url'),
-            'events': source.get('events', 0),
-            'status': source.get('status'),
-            'visited_count': source.get('visited_count', 0),
-            'horizon_note': source.get('horizon_note'),
-            'truncated': bool(source.get('truncated')),
-            'unparsed_count': source.get('unparsed_count', 0),
-            'errors': (source.get('errors') or [])[:1],
-        })
-    return rows
-
-
-def slim_matrix(matrix: dict | None) -> dict | None:
-    if not matrix:
-        return None
-    return {
-        'summary_metrics': matrix.get('summary_metrics') or {},
-        'category_by_region': [
-            {
-                'region': cell.get('region'),
-                'category': cell.get('category'),
-                'status': cell.get('status'),
-                'depth_tier': cell.get('depth_tier'),
-                'distinct_offerings': cell.get('distinct_offerings', 0),
-            }
-            for cell in matrix.get('category_by_region') or []
-        ],
-        'note': matrix.get('note'),
-    }
+    return re.sub(r'[^a-z0-9]+', '-', region.lower()).strip('-')
 
 
 def _prune(value):
@@ -131,84 +32,148 @@ def _prune(value):
     return value
 
 
-def compact_offering(row: dict) -> dict:
-    schedule = row.get('schedule') or {}
-    hints = row.get('hints') or {}
-    geo = row.get('geo') or None
-    ages = row.get('ages') or {}
-    meta = row.get('geo_meta') or {}
-    kept_hints = {}
-    for key in ('audience', 'free_likely', 'indoor_outdoor', 'standout_score'):
-        if hints.get(key) not in (None, False, [], ''):
-            kept_hints[key] = hints[key]
-    return _prune({
-        'offering_id': row.get('offering_id') or row.get('id'),
-        'title': row.get('title'),
-        'venue': row.get('venue'),
-        'city': row.get('city'),
-        'region': row.get('region'),
-        'categories': row.get('categories') or [],
-        'type': row.get('type'),
-        'url': row.get('url'),
-        'source_id': row.get('source_id'),
-        'source_kind': row.get('source_kind'),
-        'place_id': row.get('place_id'),
-        'schedule': {
-            'kind': schedule.get('kind'),
-            'start_date': schedule.get('start_date'),
-            'end_date': schedule.get('end_date'),
-        },
-        'ages': {
-            'min': ages.get('min'),
-            'max': ages.get('max'),
-            'all_ages': True if ages.get('all_ages') else None,
-        },
-        'hints': kept_hints,
-        'geo_meta': {
-            'corridor': meta.get('corridor'),
-            'drive_band': meta.get('drive_band'),
-            'amtrak_accessible': True if meta.get('amtrak_accessible') else None,
-        },
-        'geo': None if not geo else {
-            'lat': round(float(geo['lat']), 5),
-            'lng': round(float(geo['lng']), 5),
-            'precision': geo.get('precision'),
-        },
-        'price': row.get('price'),
-        'currency': row.get('currency'),
-        'ticket_status': None if row.get('ticket_status') in (None, 'unknown') else row.get('ticket_status'),
-    })
+def compact_sources(sources: list[dict]) -> list[dict]:
+    rows = []
+    for source in sources:
+        rows.append(_prune({
+            'id': source.get('id'),
+            'name': source.get('name'),
+            'region': source.get('region'),
+            'url': source.get('url'),
+            'events': source.get('events', 0),
+            'status': source.get('status'),
+            'visited_count': source.get('visited_count', 0),
+            'horizon_note': source.get('horizon_note'),
+            'truncated': True if source.get('truncated') else None,
+            'unparsed_count': source.get('unparsed_count') or None,
+            'errors': (source.get('errors') or [])[:1] or None,
+        }))
+    return rows
 
 
-def occurrence_row(index: int, row: dict) -> list:
-    end_date = row.get('end_date')
-    if end_date == row.get('date'):
-        end_date = None
-    status = row.get('status')
-    if status == 'scheduled':
-        status = None
-    return _prune([
-        index,
-        row.get('date'),
-        end_date,
-        row.get('start'),
-        status,
-        1 if row.get('stale') else 0,
-    ])
+def _intern(table: list[str], value: str | None):
+    if value is None or value == '':
+        return None
+    try:
+        return table.index(value)
+    except ValueError:
+        table.append(value)
+        return len(table) - 1
+
+
+def _encode_start(date_val: str | None, start_val: str | None, all_day: bool | None) -> str:
+    if all_day or not start_val:
+        return ''
+    m = _START_RE.match(str(start_val))
+    if m and date_val and m[1] == date_val:
+        return f'{m[2]}{m[3]}'
+    return str(start_val)
+
+
+def _age_tuple(ages: dict | None):
+    ag = ages or {}
+    if ag.get('all_ages'):
+        return [1]
+    if ag.get('min') is not None or ag.get('max') is not None:
+        return [0, ag.get('min'), ag.get('max')]
+    return None
 
 
 def build_bundle(data: dict) -> dict:
+    """Build v2 string-interned relational browse bundle (< 1 MB uncompressed)."""
+    tables: dict[str, list[str]] = {
+        'venues': [],
+        'cities': [],
+        'regions': [],
+        'sources': [],
+        'categories': [],
+        'types': [],
+        'kinds': [],
+        'bands': [],
+        'corridors': [],
+        'audiences': [],
+        'io': [],
+    }
     offerings = []
-    index = {}
+    index: dict[str, int] = {}
     occurrences = []
+
     for row in data.get('activities') or []:
-        offering_id = row.get('offering_id') or row.get('id')
-        if offering_id not in index:
-            index[offering_id] = len(offerings)
-            offerings.append(compact_offering(row))
-        occurrences.append(occurrence_row(index[offering_id], row))
+        oid = row.get('offering_id') or row.get('id')
+        if oid not in index:
+            index[oid] = len(offerings)
+            sched = row.get('schedule') or {}
+            hints = row.get('hints') or {}
+            geo_meta = row.get('geo_meta') or {}
+            geo = row.get('geo') or None
+            kind = sched.get('kind') or 'one_off'
+            sk = row.get('source_kind')
+            sk_code = 1 if sk == 'organizer' else (2 if sk == 'official-calendar' else 0)
+            free_raw = hints.get('free_likely')
+            free_code = 1 if free_raw is True else (0 if free_raw is False else None)
+            ranged = (
+                [sched.get('start_date'), sched.get('end_date')]
+                if kind != 'one_off' and (sched.get('start_date') or sched.get('end_date'))
+                else None
+            )
+            conflicts = len(row.get('conflicts') or []) or None
+            item = [
+                oid,
+                row.get('title'),
+                row.get('url'),
+                _intern(tables['venues'], row.get('venue')),
+                _intern(tables['cities'], row.get('city')),
+                _intern(tables['regions'], row.get('region')),
+                _intern(tables['sources'], row.get('source_id')),
+                sk_code,
+                [_intern(tables['categories'], c) for c in (row.get('categories') or [])],
+                _intern(tables['types'], row.get('type')),
+                _intern(tables['kinds'], kind),
+                int(hints.get('standout_score') or 0),
+                [_intern(tables['audiences'], a) for a in (hints.get('audience') or [])],
+                free_code,
+                _intern(tables['io'], hints.get('indoor_outdoor')),
+                _intern(tables['bands'], geo_meta.get('drive_band')),
+                _intern(tables['corridors'], geo_meta.get('corridor')),
+                1 if geo_meta.get('amtrak_accessible') else 0,
+                (row.get('first_seen') or '')[:10] or None,
+                [round(float(geo['lat']), 4), round(float(geo['lng']), 4)] if geo else None,
+                _age_tuple(row.get('ages')),
+                row.get('place_id') or None,
+                row.get('price'),
+                ranged,
+                conflicts,
+            ]
+            while item and item[-1] is None:
+                item.pop()
+            offerings.append(item)
+
+        date_val = row.get('date') or ''
+        end_date = row.get('end_date') or ''
+        end_diff = '' if (not end_date or end_date == date_val) else end_date
+        time_part = _encode_start(date_val, row.get('start'), row.get('all_day'))
+        status = row.get('status') or 'scheduled'
+        st_diff = '' if status == 'scheduled' else status
+        occ = [
+            index[oid],
+            date_val,
+            end_diff,
+            time_part,
+            st_diff,
+            1 if row.get('stale') else 0,
+        ]
+        while occ and occ[-1] in ('', 0, None):
+            occ.pop()
+        occurrences.append(occ)
+
+    matrix = data.get('coverage_matrix') or {}
+    region_gaps: dict[str, list[str]] = {}
+    for cell in matrix.get('category_by_region') or []:
+        if cell.get('status') == 'gap':
+            region_gaps.setdefault(cell['region'], []).append(cell['category'])
+
     return {
-        'version': data.get('version', 1),
+        'version': 2,
         'updated_at': data.get('updated_at'),
         'horizon_start': data.get('horizon_start'),
         'horizon_end': data.get('horizon_end'),
@@ -217,16 +182,23 @@ def build_bundle(data: dict) -> dict:
         'places': data.get('places') or [],
         'sources': compact_sources(data.get('sources') or []),
         'coverage_matrix': {
-            'summary_metrics': (data.get('coverage_matrix') or {}).get('summary_metrics') or {},
-            'note': (data.get('coverage_matrix') or {}).get('note'),
+            'summary_metrics': matrix.get('summary_metrics') or {},
+            'region_gaps': region_gaps,
+            'note': matrix.get('note'),
         },
+        'tables': tables,
         'offerings': offerings,
         'occurrences': occurrences,
     }
 
 
 def _items(activities: list[dict], limit: int = 40) -> list[dict]:
-    dated = [row for row in activities if row.get('date') and row.get('url') and not is_promo_listing(row)]
+    dated = [
+        row for row in activities
+        if row.get('date') and row.get('url')
+        and not row.get('stale') and not row.get('disappeared')
+        and not is_promo_listing(row)
+    ]
     dated.sort(key=lambda row: (row.get('date') or '9999', row.get('title') or ''))
     return dated[:limit]
 
@@ -263,16 +235,11 @@ def write_outputs(data: dict, root: Path = ROOT) -> dict:
     activities_path.write_text(json.dumps(data, ensure_ascii=False, separators=(',', ':')) + '\n')
     bundle = build_bundle(data)
     encoded = json.dumps(bundle, ensure_ascii=False, separators=(',', ':'))
-    if len(encoded.encode('utf-8')) >= BUNDLE_LIMIT:
-        for row in bundle['offerings']:
-            row.pop('description', None)
-            row.pop('commitment', None)
-            row.pop('registration', None)
-        encoded = json.dumps(bundle, ensure_ascii=False, separators=(',', ':'))
     size = len(encoded.encode('utf-8'))
     if size >= BUNDLE_LIMIT:
-        raise RuntimeError(f'bundle.min.json is {size} bytes')
+        raise RuntimeError(f'bundle.min.json is {size} bytes (>= {BUNDLE_LIMIT})')
     (web / 'bundle.min.json').write_text(encoded + '\n')
+
     activities = data.get('activities') or []
     written = []
     catalog = [('all', 'What to do, KC — explicit dates', activities)]
@@ -284,6 +251,10 @@ def write_outputs(data: dict, root: Path = ROOT) -> dict:
         if (row.get('hints') or {}).get('standout_score', 0) >= 70 and not is_promo_listing(row)
     ]
     catalog.append(('standouts', 'What to do, KC — standout hints', standouts))
+    expected_names = {f'{slug}.xml' for slug, _, _ in catalog}
+    for old_xml in feeds.glob('*.xml'):
+        if old_xml.name not in expected_names:
+            old_xml.unlink()
     for slug, title, rows in catalog:
         path = feeds / f'{slug}.xml'
         path.write_text(render_feed(title, rows))

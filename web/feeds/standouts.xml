@@ -5,12 +5,6 @@
 <link>https://github.com/colesteaks/kc-activity-finder</link>
 <description>Explicit-date listings already collected from organizer and official calendars. Confirm details with the source.</description>
 <item>
-<title>Nelson-Atkins Exhibition Explores Lasting Influence of Alphonse Mucha</title>
-<link>https://nelson-atkins.org/nelson-atkins-exhibition-explores-lasting-influence-of-alphonse-mucha/</link>
-<guid isPermaLink="false">68ba78e0e92877366bbf</guid>
-<description>2026-04-01T00:00:00-05:00 · Nelson Atkins » Feed · Kansas City metro</description>
-</item>
-<item>
 <title>Drop-in Tour: Architecture - Crystal Bridges</title>
 <link>https://crystalbridges.org/events/2025-drop-in-tour-architecture</link>
 <guid isPermaLink="false">808745b48e4bc8876e66</guid>
@@ -101,6 +95,30 @@
 <description>2026-11-01T18:00:00-06:00 · Kansas City Zoo &amp; Aquarium · Kansas City</description>
 </item>
 <item>
+<title>Nature Art: Exhibit: Greg Renner's Historic Decoy Collection</title>
+<link>https://mdc-event-web.s3licensing.com/Event/EventDetails/222321</link>
+<guid isPermaLink="false">72c48840a9ef5f2d2e47</guid>
+<description>2026-11-01T08:00:00-06:00 · Runge Conservation Nature Center · Jefferson City</description>
+</item>
+<item>
+<title>Food Chain: Critter Feeding</title>
+<link>https://mdc-event-web.s3licensing.com/Event/EventDetails/221663</link>
+<guid isPermaLink="false">75c8f017f9605335cd5f</guid>
+<description>2026-11-03T14:00:00-06:00 · Burr Oak Woods Conservation Nature Center · Blue Springs</description>
+</item>
+<item>
+<title>Nature Art: Call for Nature's Art Exhibition</title>
+<link>https://mdc-event-web.s3licensing.com/Event/EventDetails/222320</link>
+<guid isPermaLink="false">acc6577e07db9ab70653</guid>
+<description>2026-11-03T08:00:00-06:00 · Runge Conservation Nature Center · Jefferson City</description>
+</item>
+<item>
+<title>Sensory Exploration: Tales on the Trail</title>
+<link>https://mdc-event-web.s3licensing.com/Event/EventDetails/222112</link>
+<guid isPermaLink="false">e1f69e9eef1cbc2061ab</guid>
+<description>2026-11-09T08:00:00-06:00 · Runge Conservation Nature Center · Jefferson City</description>
+</item>
+<item>
 <title>Winter Lights &amp; Market</title>
 <link>https://crystalbridges.org/events/winter-lights-and-market</link>
 <guid isPermaLink="false">50799df2f6fa11f8256b</guid>
@@ -113,88 +131,76 @@
 <description>2026-11-21T10:00:00-06:00 · Museum Wide · Bentonville</description>
 </item>
 <item>
-<title>Conversational Spanish Club</title>
-<link>https://kclibrary.org/calendar/conversational-spanish-club-42</link>
-<guid isPermaLink="false">34ee176fef63d7a72588</guid>
-<description>2026-11-24T17:30:00-06:00 · Irene H. Ruiz Branch · Kansas City</description>
+<title>2026 Fall BFA Thesis &amp; BASA Senior Exhibitions</title>
+<link>https://events.unomaha.edu/event/2026-fall-bfa-thesis-basa-senior-exhibitions</link>
+<guid isPermaLink="false">40b56f424d6e62cd99d6</guid>
+<description>2026-11-25T10:00:00-06:00 · UNO Art Gallery in the Weber Fine Arts Building · Omaha</description>
 </item>
 <item>
-<title>Death Café</title>
-<link>https://kclibrary.org/calendar/death-caf%C3%A9-26</link>
-<guid isPermaLink="false">1311a6be037220c05eb5</guid>
-<description>2026-11-24T16:00:00-06:00 · Southeast Branch · Kansas City</description>
+<title>AFROTC</title>
+<link>https://calendar.ku.edu/event/afrotc-4590</link>
+<guid isPermaLink="false">47cf906c570a9c373620</guid>
+<description>2026-11-25T15:00:00-06:00 · Tennis Court 2 · Lawrence</description>
 </item>
 <item>
-<title>Family Game Night</title>
-<link>https://kclibrary.org/calendar/family-game-night-6</link>
-<guid isPermaLink="false">c600dae515d45de4ab8a</guid>
-<description>2026-11-24T17:30:00-06:00 · Plaza Branch · Kansas City</description>
+<title>AFROTC</title>
+<link>https://calendar.ku.edu/event/afrotc-2886</link>
+<guid isPermaLink="false">9c2d34ca774b46b03232</guid>
+<description>2026-11-25T15:00:00-06:00 · Tennis Court 1 · Lawrence</description>
 </item>
 <item>
-<title>Greater Kansas City Chamber of Commerce 2026 Annual Dinner</title>
-<link>https://kcconvention.com/event/greater-kansas-city-chamber-of-commerce-2026-annual-dinner/</link>
-<guid isPermaLink="false">f4102478e6ea7964724f</guid>
-<description>2026-11-24T16:00:00-06:00 · Kansas City Convention Center · Kansas City</description>
+<title>AFROTC</title>
+<link>https://calendar.ku.edu/event/afrotc-485</link>
+<guid isPermaLink="false">a4722e32a750324165f6</guid>
+<description>2026-11-25T15:00:00-06:00 · Tennis Court 3 · Lawrence</description>
 </item>
 <item>
-<title>Greater Kansas City Chamber of Commerce 2026 Annual Dinner</title>
-<link>https://kcconvention.com/event/greater-kansas-city-chamber-of-commerce-2026-annual-dinner/</link>
-<guid isPermaLink="false">92e5ce2dfbf90ff837f3</guid>
-<description>2026-11-24T17:00:00-06:00 · Kansas City Convention Center · Kansas City</description>
+<title>Academic Calendar: Thanksgiving Student Holiday</title>
+<link>https://events.unomaha.edu/event/thanksgiving-student-holiday</link>
+<guid isPermaLink="false">36c2d9aafa30f982f130</guid>
+<description>2026-11-25T00:00:00-06:00 · University of Nebraska Omaha Events · Omaha</description>
 </item>
 <item>
-<title>Holiday Reflections</title>
-<link>https://www.visitkc.com/events/holiday-reflections/</link>
-<guid isPermaLink="false">c9892cfa552b89114a89</guid>
-<description>2026-11-24T00:00:00-06:00 · Union Station Kansas City · Kansas City</description>
+<title>America 250: The Pursuit of Happiness | Self-guided Gallery Tour</title>
+<link>https://events.k-state.edu/event/america-250-the-pursuit-of-happiness</link>
+<guid isPermaLink="false">340ef72e46b838284e2a</guid>
+<description>2026-11-25T10:00:00-06:00 · Kansas State University Events Calendar · Manhattan</description>
 </item>
 <item>
-<title>INSIGHT Art Talk | Lori Stanziola</title>
-<link>https://lawrenceartscenter.org/event/insight-art-talk-lori-stanziola</link>
-<guid isPermaLink="false">d54477e27d8752763ab8</guid>
-<description>2026-11-24T18:00:00-06:00 · Lawrence Arts Center · Lawrence</description>
+<title>American Ocarinas Before Zelda Exhibit</title>
+<link>https://events.unomaha.edu/event/american-ocarinas-before-zelda-exhibit</link>
+<guid isPermaLink="false">eb48004502da4b25713b</guid>
+<description>2026-11-25T00:00:00-06:00 · Dr. C.C. and Mabel L. Criss Library · Omaha</description>
 </item>
 <item>
-<title>LEGO Club</title>
-<link>https://kclibrary.org/calendar/lego-club-61</link>
-<guid isPermaLink="false">0357ea11f851216f9e32</guid>
-<description>2026-11-24T15:30:00-06:00 · Plaza Branch · Kansas City</description>
-</item>
-<item>
-<title>Let's Get You Covered: Medicare One-on-One Appointment</title>
-<link>https://kclibrary.org/calendar/lets-get-you-covered-medicare-one-one-appointment-4</link>
-<guid isPermaLink="false">1453c609a11748d30e80</guid>
-<description>2026-11-24T13:00:00-06:00 · Lucile H. Bluford Branch · Kansas City</description>
-</item>
-<item>
-<title>Loteria Night</title>
-<link>https://kclibrary.org/calendar/loteria-night-2</link>
-<guid isPermaLink="false">db07782cf2f495c212db</guid>
-<description>2026-11-24T17:30:00-06:00 · North-East Branch · Kansas City</description>
-</item>
-<item>
-<title>Movie: 'Killers of the Flower Moon'</title>
-<link>https://kclibrary.org/calendar/movie-killers-flower-moon</link>
-<guid isPermaLink="false">68368cc032209b1298b1</guid>
-<description>2026-11-24T14:00:00-06:00 · Central Library · Kansas City</description>
-</item>
-<item>
-<title>Tuesday Night Board Games</title>
-<link>https://kclibrary.org/calendar/tuesday-night-board-games-17</link>
-<guid isPermaLink="false">50d1bf9a1796ff0d7467</guid>
-<description>2026-11-24T18:00:00-06:00 · Trails West Branch · Kansas City</description>
-</item>
-<item>
-<title>Tween Tech Club</title>
-<link>https://kclibrary.org/calendar/tween-tech-club-17</link>
-<guid isPermaLink="false">dca28d1bdacce91a299e</guid>
-<description>2026-11-24T16:30:00-06:00 · Southeast Branch · Kansas City</description>
+<title>Asylum to Institution</title>
+<link>https://tscpl.libnet.info/event/17637211</link>
+<guid isPermaLink="false">008845d4100797e35242</guid>
+<description>2026-11-25T09:00:00-06:00 · Topeka Room · Topeka</description>
 </item>
 <item>
 <title>Baby Storytime</title>
 <link>https://kclibrary.org/calendar/baby-storytime-158</link>
 <guid isPermaLink="false">feee1928fe1fc7a0c355</guid>
 <description>2026-11-25T09:30:00-06:00 · Waldo Branch · Kansas City</description>
+</item>
+<item>
+<title>Barre + Pilates</title>
+<link>https://calendar.ku.edu/event/barre-pilates-9798</link>
+<guid isPermaLink="false">80998ef257caf813a094</guid>
+<description>2026-11-25T20:00:00-06:00 · Aerobics Studio · Lawrence</description>
+</item>
+<item>
+<title>Book Club in the Kettle (Wednesday)</title>
+<link>https://calendar.ku.edu/event/book-club-in-the-kettle-wed</link>
+<guid isPermaLink="false">16e341154787ff1853bb</guid>
+<description>2026-11-25T12:00:00-06:00 · Watson Library · Lawrence</description>
+</item>
+<item>
+<title>Bookmobile Stop at Harrisburg</title>
+<link>https://events.dbrl.org/event/17053814</link>
+<guid isPermaLink="false">229930c1c324b8a79bea</guid>
+<description>2026-11-25T13:30:00-06:00 · Lions Club Park · Columbia</description>
 </item>
 <item>
 <title>Bookmobile at Guinotte Manor</title>
@@ -204,9 +210,27 @@
 </item>
 <item>
 <title>Bookmobile at KVC Missouri</title>
-<link>https://kclibrary.org/calendar/bookmobile-kvc-missouri-1</link>
-<guid isPermaLink="false">416c9adb6a8f10f6a2e8</guid>
+<link>https://kclibrary.org/index%2Ephp/calendar/bookmobile-kvc-missouri-1</link>
+<guid isPermaLink="false">b1b01762c207645259db</guid>
 <description>2026-11-25T09:30:00-06:00 · Bookmobile · Kansas City</description>
+</item>
+<item>
+<title>Books &amp; Babies Storytime</title>
+<link>https://lawrence.bibliocommons.com/events/6a72057139d4873e8a4eca87</link>
+<guid isPermaLink="false">4c702b60971aa2f5f1d7</guid>
+<description>2026-11-25T10:30:00-06:00 · Lawrence Public Library · Lawrence</description>
+</item>
+<item>
+<title>Candy Cane Cash</title>
+<link>https://events.k-state.edu/event/candy-cane-cash</link>
+<guid isPermaLink="false">109407c82e97b3db38ab</guid>
+<description>2026-11-25T00:00:00-06:00 · Downtown McPherson · Manhattan</description>
+</item>
+<item>
+<title>Celebrate the 50 States</title>
+<link>https://wichitalibrary.libnet.info/event/16693597</link>
+<guid isPermaLink="false">dce1fd558464bb466073</guid>
+<description>2026-11-25T14:00:00-06:00 · Alford Branch Library · Wichita</description>
 </item>
 <item>
 <title>Chuck Ramirez: Ordinary Wonders</title>
@@ -215,34 +239,10 @@
 <description>2026-11-25T10:00:00-06:00 · The Momentary · Bentonville</description>
 </item>
 <item>
-<title>Coffee &amp; Conversation</title>
-<link>https://kclibrary.org/calendar/coffee-conversation-0</link>
-<guid isPermaLink="false">44c9f0ebbdbcaebd3c81</guid>
-<description>2026-11-25T10:30:00-06:00 · Central Library · Kansas City</description>
-</item>
-<item>
-<title>Downtowners Book Group</title>
-<link>https://kclibrary.org/calendar/downtowners-book-group-17</link>
-<guid isPermaLink="false">3678705908e415330dfe</guid>
-<description>2026-11-25T12:00:00-06:00 · Central Library · Kansas City</description>
-</item>
-<item>
-<title>Family Storytime</title>
-<link>https://kclibrary.org/calendar/family-storytime-229</link>
-<guid isPermaLink="false">2470f1e11ed5eab2be22</guid>
-<description>2026-11-25T10:30:00-06:00 · Waldo Branch · Kansas City</description>
-</item>
-<item>
-<title>Family Storytime</title>
-<link>https://kclibrary.org/calendar/family-storytime-185</link>
-<guid isPermaLink="false">7dc8b7d1fc8f74f5d187</guid>
-<description>2026-11-25T10:30:00-06:00 · Trails West Branch · Kansas City</description>
-</item>
-<item>
-<title>Holiday Reflections</title>
-<link>https://www.visitkc.com/events/holiday-reflections/</link>
-<guid isPermaLink="false">d32f994d3643b63fdfdf</guid>
-<description>2026-11-25T00:00:00-06:00 · Union Station Kansas City · Kansas City</description>
+<title>Clase de Ingles: English Language Class</title>
+<link>https://tscpl.libnet.info/event/17353844</link>
+<guid isPermaLink="false">ad004534c3f71ee44ee1</guid>
+<description>2026-11-25T18:30:00-06:00 · Topeka and Shawnee County Public Library · Topeka</description>
 </item>
 </channel>
 </rss>

@@ -731,7 +731,7 @@ def run(registry, output, cache, now=None, only=None):
     result['places'] = public_places()
     result['coverage_matrix'] = coverage_matrix(all_sources, taxonomy, health, result['activities'])
     output.parent.mkdir(parents=True, exist_ok=True)
-    temp = output.with_suffix('.tmp'); temp.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n'); temp.replace(output)
+    temp = output.with_suffix('.tmp'); temp.write_text(json.dumps(result, ensure_ascii=False, separators=(',', ':')) + '\n'); temp.replace(output)
     return result
 
 

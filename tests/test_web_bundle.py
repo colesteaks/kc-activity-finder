@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
 
 from build_web_bundle import build_bundle, render_feed, write_outputs
+from query_inventory import hydrate_bundle
 
 
 def sample():
@@ -17,7 +18,7 @@ def sample():
         'horizon_start': '2026-11-24',
         'horizon_end': '2027-06-24',
         'timezone': 'America/Chicago',
-        'taxonomy': {'regions': ['Lawrence'], 'categories': []},
+        'taxonomy': {'regions': ['Lawrence', 'Topeka & Flint Hills'], 'categories': []},
         'places': [],
         'sources': [{'id': 'arts', 'name': 'Arts', 'region': 'Lawrence', 'url': 'https://example.test/feed', 'events': 1, 'status': 'checked', 'visited_count': 1}],
         'coverage_matrix': {
@@ -50,7 +51,7 @@ def sample():
             'schedule': {'kind': 'one_off', 'start_date': '2026-12-18', 'end_date': '2026-12-18', 'sessions': [{'start': '2026-12-18T20:00:00-06:00', 'end': None}]},
             'ages': {'min': None, 'max': None, 'all_ages': False, 'label': 'Age not specified'},
             'hints': {'audience': ['adults'], 'standout_score': 80, 'is_promo': False},
-            'geo_meta': {'drive_band': '30-60m'},
+            'geo_meta': {'drive_band': '30-60m', 'corridor': 'Lawrence', 'amtrak_accessible': False},
             'place_id': None,
             'description': 'A long description ' * 20,
             'evidence': {'url': 'https://example.test/jazz', 'format': 'rss', 'quote': 'not for the bundle'},
@@ -65,33 +66,41 @@ def sample():
 
 
 class BundleTests(unittest.TestCase):
-    def test_bundle_drops_quotes_and_feed_uses_real_links(self):
+    def test_v2_bundle_drops_quotes_and_hydrates_cleanly(self):
         bundle = build_bundle(sample())
+        self.assertEqual(bundle['version'], 2)
         self.assertNotIn('quote', json.dumps(bundle))
         self.assertNotIn('routes', json.dumps(bundle['coverage_matrix']))
-        self.assertEqual(bundle['offerings'][0]['title'], 'Winter Jazz Night')
-        self.assertEqual(bundle['occurrences'][0][1], '2026-12-18')
         self.assertNotIn('activities', bundle)
-        self.assertNotIn('routes', json.dumps(bundle['coverage_matrix']))
-        feed = render_feed('Test', sample()['activities'])
+        hydrated = hydrate_bundle(bundle)
+        row = hydrated['activities'][0]
+        self.assertEqual(row['title'], 'Winter Jazz Night')
+        self.assertEqual(row['start'], '2026-12-18T20:00:00-06:00')
+        self.assertEqual(row['hints']['standout_score'], 80)
+
+        data_with_stale = sample()
+        stale_row = dict(data_with_stale['activities'][0], id='stale-1', title='Stale Item', stale=True)
+        data_with_stale['activities'].append(stale_row)
+        feed = render_feed('Test', data_with_stale['activities'])
         self.assertIn('https://example.test/jazz', feed)
         self.assertIn('Winter Jazz Night', feed)
+        self.assertNotIn('Stale Item', feed)
         self.assertNotIn('not for the bundle', feed)
 
-    def test_write_outputs_minifies_and_stays_under_the_bundle_cap(self):
+    def test_write_outputs_cleans_slugs_minifies_and_stays_under_cap(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
-            (root / 'web').mkdir()
+            feeds = root / 'web' / 'feeds'
+            feeds.mkdir(parents=True)
+            (feeds / 'topeka---flint-hills.xml').write_text('<old/>')
             stats = write_outputs(sample(), root)
             text = (root / 'web' / 'activities.json').read_text()
             self.assertNotIn('\n  "', text)
-            bundle = (root / 'web' / 'bundle.min.json').read_text()
             self.assertLess(stats['bundle_bytes'], 1_000_000)
-            self.assertTrue((root / 'web' / 'feeds' / 'lawrence.xml').exists())
-            self.assertTrue((root / 'web' / 'feeds' / 'standouts.xml').exists())
-            parsed = json.loads(bundle)
-            self.assertIn('Winter Jazz Night', json.dumps(parsed['offerings']))
-            self.assertLess(stats['bundle_bytes'], 1_000_000)
+            self.assertTrue((feeds / 'lawrence.xml').exists())
+            self.assertTrue((feeds / 'topeka-flint-hills.xml').exists())
+            self.assertFalse((feeds / 'topeka---flint-hills.xml').exists())
+            self.assertTrue((feeds / 'standouts.xml').exists())
 
 
 if __name__ == '__main__':

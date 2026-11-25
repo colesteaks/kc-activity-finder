@@ -4,7 +4,7 @@ import { hasCoordinates, withinBounds, mapGroups } from "./map-data.mjs";
 import { ActivityMap } from "./map.mjs";
 import { loadInventory } from "./data-loader.mjs";
 import { downloadIcs } from "./ics.mjs";
-import { isSaved, toggleSaved } from "./saved.mjs";
+import { isSaved, savedIds, toggleSaved } from "./saved.mjs";
 import {
   chicagoToday,
   windowDates,
@@ -15,7 +15,7 @@ import {
   coverageStatus,
   PRESETS,
   standoutScore,
-} from "./filters.mjs?v=1.1.0";
+} from "./filters.mjs";
 const $ = (id) => document.getElementById(id);
 let data,
   visible = 30;
@@ -43,6 +43,8 @@ const form = $("filters"),
     free_likely: $("free-likely"),
     indoor_outdoor: $("indoor-outdoor"),
     drive_band: $("drive-band"),
+    amtrak: $("amtrak-only"),
+    saved_only: $("saved-only"),
   };
 const day = new Intl.DateTimeFormat("en-US", {
     timeZone: "America/Chicago",
@@ -72,12 +74,20 @@ function link(url, label) {
   return a;
 }
 function filters() {
-  return Object.fromEntries(
-    Object.entries(inputs).map(([k, e]) => [
-      k,
-      e.type === "checkbox" ? e.checked : e.value,
-    ]),
+  const values = Object.fromEntries(
+    Object.entries(inputs)
+      .filter(([, e]) => e)
+      .map(([k, e]) => [k, e.type === "checkbox" ? e.checked : e.value]),
   );
+  values.saved_ids = new Set(savedIds());
+  return values;
+}
+function refreshSavedPreset() {
+  const btn = document.querySelector('[data-preset="saved"]');
+  if (btn) {
+    const count = savedIds().length;
+    btn.textContent = count ? `Saved (${count})` : "Saved";
+  }
 }
 function card(a) {
   const c = el("article", "", "card"),
@@ -132,7 +142,7 @@ function card(a) {
     tags.append(el("span", "Date range / series — confirm sessions", "tag"));
   if (a.ticket_status !== "unknown")
     tags.append(el("span", a.ticket_status, "tag"));
-  if (a.price !== null)
+  if (a.price !== null && a.price !== undefined)
     tags.append(
       el("span", `${a.currency || "Price"} ${a.price} · check fees`, "tag"),
     );
@@ -154,6 +164,8 @@ function card(a) {
   save.type = "button";
   save.addEventListener("click", () => {
     save.textContent = toggleSaved(a.offering_id || a.id) ? "Saved" : "Save";
+    refreshSavedPreset();
+    if (inputs.saved_only?.checked) render();
   });
   const actions = el("div", "", "card-actions");
   actions.append(save);
@@ -192,9 +204,10 @@ function render() {
   const f = filters(),
     params = new URLSearchParams();
   for (const [k, v] of Object.entries(f)) {
+    if (k === "saved_ids") continue;
     if (k === "unknown_ages" || k === "undated") {
       if (!v) params.set(k, "0");
-    } else if (k === "unavailable" || k === "include_offers") {
+    } else if (k === "unavailable" || k === "include_offers" || k === "amtrak" || k === "saved_only") {
       if (v) params.set(k, "1");
     } else if (v) params.set(k, v);
   }
@@ -279,7 +292,8 @@ function feedSlug(region) {
 function applyPreset(preset) {
   for (const key of ["audience", "free_likely", "indoor_outdoor", "drive_band"])
     if (inputs[key]) inputs[key].value = "";
-  inputs.include_offers.checked = false;
+  for (const key of ["include_offers", "amtrak", "saved_only"])
+    if (inputs[key]) inputs[key].checked = false;
   for (const [key, value] of Object.entries(preset.filters || {})) {
     const input = inputs[key];
     if (!input) continue;
@@ -442,9 +456,11 @@ async function start() {
       for (const preset of PRESETS) {
         const button = el("button", preset.label);
         button.type = "button";
+        button.dataset.preset = preset.id;
         button.addEventListener("click", () => applyPreset(preset));
         presets.append(button);
       }
+      refreshSavedPreset();
     }
     for (const t of data.taxonomy?.categories || []) {
       const o = el("option", t.label);
@@ -508,19 +524,26 @@ async function start() {
     coverage();
     if (data.coverage_matrix) {
       const matrix = data.coverage_matrix.category_by_region;
-      const gaps = matrix.filter((c) => c.status === "gap");
+      const regionGaps = data.coverage_matrix.region_gaps;
+      const gapCount = Array.isArray(matrix)
+        ? matrix.filter((c) => c.status === "gap").length
+        : regionGaps
+          ? Object.values(regionGaps).reduce((n, list) => n + list.length, 0)
+          : data.coverage_matrix.summary_metrics?.depth_tier_counts?.gap ?? 0;
       $("coverage-summary").textContent +=
-        ` · ${gaps.length} category/region gaps`;
+        ` · ${gapCount} category/region gaps`;
       for (const region of data.taxonomy.regions) {
         const row = el("div", "", "source-row");
         row.append(el("strong", region));
-        const missing = matrix
-          .filter((c) => c.region === region && c.status === "gap")
-          .map(
-            (c) =>
-              data.taxonomy.categories.find((t) => t.id === c.category)
-                ?.label || c.category,
-          );
+        const missingIds = Array.isArray(matrix)
+          ? matrix
+              .filter((c) => c.region === region && c.status === "gap")
+              .map((c) => c.category)
+          : regionGaps?.[region] || [];
+        const missing = missingIds.map(
+          (id) =>
+            data.taxonomy.categories.find((t) => t.id === id)?.label || id,
+        );
         row.append(
           el(
             "p",
