@@ -2,6 +2,9 @@ import { KIND_LABELS, scheduleLabel, activityHref } from "./activity-view.mjs";
 import { hoursState, placeFor, persistentActivities } from "./place-hours.mjs";
 import { hasCoordinates, withinBounds, mapGroups } from "./map-data.mjs";
 import { ActivityMap } from "./map.mjs";
+import { loadInventory } from "./data-loader.mjs";
+import { downloadIcs } from "./ics.mjs";
+import { isSaved, toggleSaved } from "./saved.mjs";
 import {
   chicagoToday,
   windowDates,
@@ -10,6 +13,8 @@ import {
   safeLink,
   distinctOfferings,
   coverageStatus,
+  PRESETS,
+  standoutScore,
 } from "./filters.mjs?v=1.1.0";
 const $ = (id) => document.getElementById(id);
 let data,
@@ -34,6 +39,10 @@ const form = $("filters"),
     unknown_ages: $("unknown-ages"),
     unavailable: $("include-unavailable"),
     include_offers: $("include-offers"),
+    audience: $("audience"),
+    free_likely: $("free-likely"),
+    indoor_outdoor: $("indoor-outdoor"),
+    drive_band: $("drive-band"),
   };
 const day = new Intl.DateTimeFormat("en-US", {
     timeZone: "America/Chicago",
@@ -99,14 +108,6 @@ function card(a) {
     el("p", when, "card-date"),
     el("p", a.venue + " · " + a.city, "card-venue"),
   );
-  if (a.description)
-    c.append(
-      el(
-        "p",
-        a.description + (a.description.length === 200 ? "…" : ""),
-        "card-description",
-      ),
-    );
   const tags = el("div", "", "card-meta");
   tags.append(el("span", a.ages.label, "tag"));
   if (a.schedule) tags.append(el("span", KIND_LABELS[a.schedule.kind], "tag"));
@@ -122,7 +123,10 @@ function card(a) {
     tags.append(el("span", a.status, "tag warning"));
   if (a.stale || Date.now() - new Date(a.checked_at) > 72 * 3600e3)
     tags.append(el("span", "Needs a fresh check", "tag warning"));
-  if (a.conflicts?.length)
+  if (standoutScore(a) >= 70) tags.append(el("span", "Standout hint", "tag"));
+  if (a.hints?.audience?.length)
+    tags.append(el("span", `Hint: ${a.hints.audience.join(" · ")}`, "tag"));
+  if (a.conflicts?.length || a.conflict_count)
     tags.append(el("span", "Source conflict", "tag warning"));
   if (a.end_date !== a.date)
     tags.append(el("span", "Date range / series — confirm sessions", "tag"));
@@ -142,6 +146,24 @@ function card(a) {
         el("p", amenities.map((x) => x.name).join(" · "), "place-amenities"),
       );
   }
+  const save = el(
+    "button",
+    isSaved(a.offering_id || a.id) ? "Saved" : "Save",
+    "text-button",
+  );
+  save.type = "button";
+  save.addEventListener("click", () => {
+    save.textContent = toggleSaved(a.offering_id || a.id) ? "Saved" : "Save";
+  });
+  const actions = el("div", "", "card-actions");
+  actions.append(save);
+  if (a.start || a.date) {
+    const calendar = el("button", "Calendar file", "text-button");
+    calendar.type = "button";
+    calendar.addEventListener("click", () => downloadIcs(a));
+    actions.append(calendar);
+  }
+  c.append(actions);
   const bottom = el("div", "", "card-bottom");
   bottom.append(
     el("span", a.source_name),
@@ -248,10 +270,54 @@ function render() {
       });
   }
 }
+function feedSlug(region) {
+  return region
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+function applyPreset(preset) {
+  for (const key of ["audience", "free_likely", "indoor_outdoor", "drive_band"])
+    if (inputs[key]) inputs[key].value = "";
+  inputs.include_offers.checked = false;
+  for (const [key, value] of Object.entries(preset.filters || {})) {
+    const input = inputs[key];
+    if (!input) continue;
+    if (input.type === "checkbox") input.checked = Boolean(value);
+    else input.value = value;
+  }
+  $("sort").value = preset.sort || "standout";
+  visible = 30;
+  render();
+}
 function coverage() {
   const gaps = data.sources.filter((s) => s.status !== "checked").length;
+  const depth = data.coverage_matrix?.summary_metrics?.depth_tier_counts;
   $("coverage-summary").textContent =
-    `${data.sources.length} source routes · ${gaps} with gaps or collection notes`;
+    `${data.sources.length} source routes · ${gaps} with gaps or collection notes` +
+    (depth
+      ? ` · Depth ${Object.entries(depth)
+          .map(([name, count]) => `${count} ${name}`)
+          .join(", ")}`
+      : "");
+  const feeds = $("feed-links");
+  if (feeds) {
+    const links = [
+      ["feeds/all.xml", "All dated listings"],
+      ["feeds/standouts.xml", "Standout hints"],
+      ...(data.taxonomy?.regions || []).map((region) => [
+        `feeds/${feedSlug(region)}.xml`,
+        region,
+      ]),
+    ];
+    feeds.replaceChildren(
+      ...links.map(([href, label]) => {
+        const anchor = el("a", label);
+        anchor.href = href;
+        return anchor;
+      }),
+    );
+  }
   $("horizon").textContent =
     `Collection window: ${data.horizon_start} through ${data.horizon_end} (seven calendar months). This is the search horizon, not a promise of events every month.`;
   for (const s of data.sources) {
@@ -363,11 +429,23 @@ document.querySelectorAll("[data-window]").forEach((b) =>
 );
 async function start() {
   try {
-    const response = await fetch("./activities.json", { cache: "no-cache" });
-    if (!response.ok) throw Error("Data unavailable");
-    data = await response.json();
+    data = await loadInventory();
     if (!Array.isArray(data.activities) || !Array.isArray(data.sources))
       throw Error("Invalid data");
+    while (inputs.location.options.length > 1) inputs.location.remove(1);
+    for (const region of data.taxonomy?.regions || []) {
+      const option = el("option", region);
+      inputs.location.append(option);
+    }
+    const presets = $("presets");
+    if (presets && !presets.childElementCount) {
+      for (const preset of PRESETS) {
+        const button = el("button", preset.label);
+        button.type = "button";
+        button.addEventListener("click", () => applyPreset(preset));
+        presets.append(button);
+      }
+    }
     for (const t of data.taxonomy?.categories || []) {
       const o = el("option", t.label);
       o.value = t.id;

@@ -930,6 +930,31 @@ footer > a:last-child {
     padding: 8px;
   }
 }
+.presets,
+.feed-links,
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.presets {
+  margin: 0 0 12px;
+}
+.presets button,
+.feed-links a {
+  border: 1px solid var(--line);
+  background: white;
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+.card-actions {
+  margin-top: 8px;
+}
+.feed-links {
+  margin: 12px 0 4px;
+}
 .activity-cluster {
   background: var(--accent);
   border: 5px solid #f7f5efb8;

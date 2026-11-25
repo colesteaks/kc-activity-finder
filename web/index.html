@@ -72,11 +72,38 @@
             <label for="location">Where to?</label
             ><select id="location" name="location">
               <option value="">Everywhere</option>
-              <option>Kansas City metro</option>
-              <option>Lawrence</option>
-              <option>Columbia</option>
-              <option>Bentonville</option>
-              <option>surrounding areas</option>
+            </select>
+            <label for="audience">Who is it for?</label>
+            <select id="audience" name="audience">
+              <option value="">Any audience hint</option>
+              <option value="kids">Kids and family hint</option>
+              <option value="teens">Teens hint</option>
+              <option value="adults">Adults hint</option>
+              <option value="all_ages">All-ages hint</option>
+            </select>
+            <p class="hint">
+              Audience, price, and indoor/outdoor choices are discovery hints,
+              not organizer rules.
+            </p>
+            <label for="free-likely">Cost hint</label>
+            <select id="free-likely" name="free_likely">
+              <option value="">Any cost hint</option>
+              <option value="yes">Labeled likely free</option>
+            </select>
+            <label for="indoor-outdoor">Setting hint</label>
+            <select id="indoor-outdoor" name="indoor_outdoor">
+              <option value="">Any setting</option>
+              <option value="indoor">Indoor</option>
+              <option value="outdoor">Outdoor</option>
+              <option value="mixed">Mixed</option>
+            </select>
+            <label for="drive-band">Drive band</label>
+            <select id="drive-band" name="drive_band">
+              <option value="">Any drive band</option>
+              <option value="0-30m">Under 30 minutes</option>
+              <option value="30-60m">30–60 minutes</option>
+              <option value="1-2h">1–2 hours</option>
+              <option value="2-3.5h">2–3.5 hours</option>
             </select>
             <label for="type">What kind of day?</label
             ><select id="type" name="type">
@@ -166,6 +193,7 @@
           </p>
         </aside>
         <div class="activity-area">
+          <div id="presets" class="presets" aria-label="Presets"></div>
           <div class="quick-filters" aria-label="Quick date filters">
             <button type="button" data-window="weekend">This weekend</button
             ><button type="button" data-window="month">Next 30 days</button
@@ -179,6 +207,7 @@
             <label for="sort"
               >Sort
               <select id="sort">
+                <option value="standout" selected>Standouts</option>
                 <option value="date">Soonest first</option>
                 <option value="new">Newly discovered</option>
                 <option value="title">A–Z</option>
@@ -258,6 +287,7 @@
           <a href="activities.json">Download the data ↗</a>
         </div>
         <p id="horizon">Checking the collection window…</p>
+        <div id="feed-links" class="feed-links"></div>
         <p>
           Coverage is growing. Some calendars publish only a few weeks ahead,
           block automated access, or need a new parser. Missing events are
