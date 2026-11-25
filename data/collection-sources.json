@@ -174,7 +174,7 @@
       "city": "Kansas City",
       "kind": "organizer",
       "format": "jsonld",
-      "url": "https://kansascityzoo.org/events/",
+      "url": "https://kansascityzoo.org/events",
       "pattern": "/event/",
       "max_details": 0,
       "categories": [
@@ -193,7 +193,9 @@
         "registration and deadlines",
         "season schedule or exhibit run",
         "hours and closures"
-      ]
+      ],
+      "reviewed_at": "2026-11-25",
+      "collection_note": "Updated to direct /events URL and HTTP 308 handling; parses Next.js special_event activity_time payloads."
     },
     {
       "id": "nelson",
@@ -353,7 +355,11 @@
           "end_date": null,
           "note": "Ongoing place or program offering. Specific season dates, current conditions and registration availability must be confirmed with the source."
         }
-      }
+      },
+      "coverage_regions": [
+        "Kansas City metro",
+        "surrounding areas"
+      ]
     },
     {
       "id": "jcprd-adult-sports",
@@ -846,13 +852,13 @@
     },
     {
       "id": "lawrence-library",
-      "name": "Lawrence Public Library events",
+      "name": "Lawrence Public Library",
       "region": "Lawrence",
       "city": "Lawrence",
-      "url": "https://lplks.org/events/",
+      "url": "https://gateway.bibliocommons.com/v2/libraries/lawrence/events?limit=100",
       "kind": "organizer",
-      "format": "discovery",
-      "pattern": "/",
+      "format": "bibliocommons",
+      "pattern": "/events/",
       "max_details": 0,
       "categories": [
         "libraries_learning",
@@ -865,13 +871,16 @@
         "recurring_program",
         "course"
       ],
-      "reviewed_at": "2026-11-07",
+      "reviewed_at": "2026-11-25",
       "required_leaves": [
         "specific activity or trail",
         "season schedule or exhibit run",
         "opening hours closures and exceptions",
         "registration deadline and participation commitment"
-      ]
+      ],
+      "public_base_url": "https://lawrence.bibliocommons.com",
+      "max_pages": 5,
+      "collection_note": "Promoted to official BiblioCommons events API v2 with verified robots.txt access."
     },
     {
       "id": "bentonville-trails",
@@ -901,13 +910,13 @@
     },
     {
       "id": "naturals-schedule",
-      "name": "Northwest Arkansas Naturals schedule",
+      "name": "Northwest Arkansas Naturals Home Schedule",
       "region": "Bentonville",
       "city": "Springdale",
-      "url": "https://www.milb.com/northwest-arkansas/schedule/downloadable-schedule",
+      "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=12&teamId=1350",
       "kind": "organizer",
-      "format": "discovery",
-      "pattern": "/",
+      "format": "mlb_schedule",
+      "pattern": "/schedule",
       "max_details": 0,
       "categories": [
         "sports_spectating"
@@ -916,13 +925,17 @@
         "sports_season",
         "one_off"
       ],
-      "reviewed_at": "2026-11-07",
+      "reviewed_at": "2026-11-25",
       "required_leaves": [
         "specific activity or trail",
         "season schedule or exhibit run",
         "opening hours closures and exceptions",
         "registration deadline and participation commitment"
-      ]
+      ],
+      "public_url": "https://www.milb.com/northwest-arkansas/schedule",
+      "team_id": 1350,
+      "home_only": true,
+      "collection_note": "Promoted to official MLB/MiLB Stats API home game schedule (teamId=1350)."
     },
     {
       "id": "wonderscope-volunteer",
@@ -1129,7 +1142,7 @@
       "url": "https://kcopera.org/events/",
       "region": "Kansas City metro",
       "city": "Kansas City",
-      "format": "opera",
+      "format": "discovery",
       "pattern": "/event/[^/]+",
       "max_details": 40,
       "kind": "organizer",
@@ -1142,7 +1155,7 @@
         "multi_day",
         "recurring_program"
       ],
-      "reviewed_at": "2026-11-07",
+      "reviewed_at": "2026-11-25",
       "required_leaves": [
         "all events and pagination",
         "official schedule and booking",
@@ -1153,7 +1166,8 @@
           "url": "https://www.kcdaily.com/p/weekend-roundup",
           "relationship": "newsletter-linked provider; source reviewed on 2026-11-07"
         }
-      ]
+      ],
+      "collection_note": "kcopera.org/events/ redirects cross-host to tickets.kcopera.org/events/; linked production pages lack structured JSON-LD dates."
     },
     {
       "id": "mavericks",
@@ -1190,7 +1204,7 @@
       "name": "Independence Japanese Sister City Committee",
       "url": "https://www.indepmojscc.com/events",
       "city": "Independence",
-      "format": "squarespace",
+      "format": "discovery",
       "pattern": "/events/[^/?]+",
       "max_details": 0,
       "categories": [
@@ -1203,7 +1217,7 @@
       ],
       "region": "Kansas City metro",
       "kind": "organizer",
-      "reviewed_at": "2026-11-07",
+      "reviewed_at": "2026-11-25",
       "required_leaves": [
         "official schedule and location",
         "admission options and exceptions"
@@ -1213,7 +1227,8 @@
           "url": "https://thingstodoinkc.com/15-things-to-do-in-kansas-city-this-weekend-november-6-8-2026/",
           "relationship": "weekend listicle lead; official source inspected"
         }
-      ]
+      ],
+      "collection_note": "Seasonal annual festival page returned 404 after November event window."
     },
     {
       "id": "kc-convention",
@@ -1816,256 +1831,649 @@
       ]
     },
     {
-      "id": "kcconvention-events-feed",
-      "name": "Kansas City Convention Center » Events Feed",
+      "id": "jocolibrary",
+      "name": "Johnson County Library",
       "region": "Kansas City metro",
-      "city": "Kansas City metro",
+      "city": "Overland Park",
       "kind": "organizer",
-      "format": "discovery",
-      "url": "https://kcconvention.com/events/feed",
+      "format": "bibliocommons",
+      "url": "https://gateway.bibliocommons.com/v2/libraries/jocolibrary/events?limit=100",
+      "public_base_url": "https://jocolibrary.bibliocommons.com",
+      "max_pages": 5,
+      "max_details": 0,
+      "pattern": "/events/",
       "categories": [
+        "libraries_learning",
+        "film_literature",
+        "classes_skills",
         "community_social"
       ],
       "activity_kinds": [
-        "one_off"
+        "one_off",
+        "recurring_program",
+        "course"
       ],
       "required_leaves": [
-        "specific event or program"
+        "branch location",
+        "explicit start/end time",
+        "registration availability"
       ],
-      "max_details": 0,
-      "collection_note": "Discovery only on 2026-11-24: Feed parsed with no explicit-date events.",
-      "probe": {
-        "checked_at": "2026-11-24",
-        "classification": "discovery",
-        "event_count": 0,
-        "evidence_url": "https://kcconvention.com/events/feed"
-      },
-      "pattern": "/no-automatic-detail/",
-      "max_pages": 1
+      "reviewed_at": "2026-11-25",
+      "collection_note": "Official BiblioCommons events API v2 across 14 Johnson County branches."
     },
     {
-      "id": "kcconvention-events",
-      "name": "Kansas City Convention Center » iCal Feed",
+      "id": "kc-royals",
+      "name": "Kansas City Royals Home Schedule",
       "region": "Kansas City metro",
-      "city": "Kansas City metro",
+      "city": "Kansas City",
       "kind": "organizer",
-      "format": "ics",
-      "url": "https://kcconvention.com/events?ical=1",
+      "format": "mlb_schedule",
+      "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=118",
+      "public_url": "https://www.mlb.com/royals/schedule",
+      "team_id": 118,
+      "home_only": true,
+      "max_details": 0,
+      "pattern": "/royals/schedule",
       "categories": [
-        "community_social"
+        "sports_spectating"
       ],
       "activity_kinds": [
+        "sports_season",
         "one_off"
       ],
       "required_leaves": [
-        "specific event or program"
+        "official home schedule",
+        "venue and first-pitch time"
       ],
-      "max_details": 0,
-      "collection_note": "Promoted 2026-11-24 after probe found 9 explicit-date events.",
-      "probe": {
-        "checked_at": "2026-11-24",
-        "classification": "verified_parser",
-        "event_count": 9,
-        "evidence_url": "https://kcconvention.com/events?ical=1"
-      },
-      "pattern": "/no-automatic-detail/",
-      "max_pages": 1
+      "reviewed_at": "2026-11-25",
+      "collection_note": "Official MLB Stats API home games at Kauffman Stadium (teamId=118)."
     },
     {
-      "id": "kcconvention-feed",
-      "name": "Kansas City Convention Center » Feed",
+      "id": "jcprd-parks",
+      "name": "Johnson County Park & Recreation District",
       "region": "Kansas City metro",
-      "city": "Kansas City metro",
+      "city": "Shawnee",
       "kind": "organizer",
-      "format": "discovery",
-      "url": "https://kcconvention.com/feed",
+      "format": "rss",
+      "url": "https://www.jcprd.com/RSSFeed.aspx?ModID=58&CID=All-calendar.xml",
+      "max_details": 0,
+      "pattern": "/Calendar\\.aspx",
       "categories": [
-        "community_social"
+        "outdoor_recreation",
+        "nature_animals",
+        "sports_participation",
+        "classes_skills",
+        "games_hobbies"
       ],
       "activity_kinds": [
-        "one_off"
+        "one_off",
+        "recurring_program",
+        "course"
       ],
       "required_leaves": [
-        "specific event or program"
+        "explicit calendar event dates",
+        "park or recreation center location"
       ],
-      "max_details": 0,
-      "collection_note": "Discovery only on 2026-11-24: Feed parsed with no explicit-date events.",
-      "probe": {
-        "checked_at": "2026-11-24",
-        "classification": "discovery",
-        "event_count": 0,
-        "evidence_url": "https://kcconvention.com/feed"
-      },
-      "pattern": "/no-automatic-detail/",
-      "max_pages": 1
+      "reviewed_at": "2026-11-25",
+      "collection_note": "Official CivicPlus calendar RSS with explicit calendarEvent start/end timestamps."
     },
     {
-      "id": "kcopera-feed",
-      "name": "Lyric Opera of Kansas City » Feed",
+      "id": "liberty-mo",
+      "name": "City of Liberty Community Calendar",
       "region": "Kansas City metro",
-      "city": "Kansas City metro",
+      "city": "Liberty",
       "kind": "organizer",
-      "format": "discovery",
-      "url": "https://kcopera.org/feed",
+      "format": "rss",
+      "url": "https://www.libertymissouri.gov/RSSFeed.aspx?ModID=58&CID=All-calendar.xml",
+      "max_details": 0,
+      "pattern": "/Calendar\\.aspx",
       "categories": [
-        "community_social"
+        "community_social",
+        "festivals_seasonal",
+        "classes_skills"
       ],
       "activity_kinds": [
-        "one_off"
+        "one_off",
+        "multi_day"
       ],
       "required_leaves": [
-        "specific event or program"
+        "explicit civic calendar date",
+        "venue or municipal location"
       ],
-      "max_details": 0,
-      "collection_note": "Discovery only on 2026-11-24: Feed parsed with no explicit-date events.",
-      "probe": {
-        "checked_at": "2026-11-24",
-        "classification": "discovery",
-        "event_count": 0,
-        "evidence_url": "https://kcopera.org/feed"
-      },
-      "pattern": "/no-automatic-detail/",
-      "max_pages": 1
+      "reviewed_at": "2026-11-25",
+      "collection_note": "Official City of Liberty CivicPlus calendar RSS feed."
     },
     {
-      "id": "lawrenceartscenter-events-at-lawrence-ar",
-      "name": "Lawrence Arts Center » Events Feed",
+      "id": "mdc-events",
+      "name": "Missouri Department of Conservation Events",
+      "region": "Kansas City metro",
+      "coverage_regions": [
+        "Kansas City metro",
+        "Columbia",
+        "St. Joseph & Pony Express",
+        "Springfield & Ozarks",
+        "surrounding areas"
+      ],
+      "city": "Kansas City",
+      "kind": "organizer",
+      "format": "mdc",
+      "url": "https://mdc.mo.gov/events",
+      "max_pages": 6,
+      "max_details": 0,
+      "pattern": "/EventDetails/",
+      "categories": [
+        "nature_animals",
+        "outdoor_recreation",
+        "classes_skills"
+      ],
+      "activity_kinds": [
+        "one_off",
+        "course"
+      ],
+      "required_leaves": [
+        "nature center location",
+        "explicit start/end date",
+        "registration portal"
+      ],
+      "reviewed_at": "2026-11-25",
+      "collection_note": "Official MDC statewide nature programs filtered and routed to covered Missouri corridors."
+    },
+    {
+      "id": "ku-events",
+      "name": "University of Kansas Events Calendar",
       "region": "Lawrence",
       "city": "Lawrence",
       "kind": "organizer",
-      "format": "discovery",
-      "url": "https://lawrenceartscenter.org/events-at-lawrence-arts-center/feed",
+      "format": "localist",
+      "url": "https://calendar.ku.edu/api/2/events",
+      "max_pages": 5,
+      "max_details": 0,
+      "pattern": "/event/",
       "categories": [
+        "arts_exhibits",
+        "music_performance",
+        "classes_skills",
+        "science_technology",
         "community_social"
       ],
       "activity_kinds": [
-        "one_off"
+        "one_off",
+        "exhibit",
+        "recurring_program"
       ],
       "required_leaves": [
-        "specific event or program"
+        "official Localist API listing",
+        "venue and admission metadata"
       ],
-      "max_details": 0,
-      "collection_note": "Discovery only on 2026-11-24: Feed parsed with no explicit-date events.",
-      "probe": {
-        "checked_at": "2026-11-24",
-        "classification": "discovery",
-        "event_count": 0,
-        "evidence_url": "https://lawrenceartscenter.org/events-at-lawrence-arts-center/feed"
-      },
-      "pattern": "/no-automatic-detail/",
-      "max_pages": 1
+      "reviewed_at": "2026-11-25",
+      "collection_note": "Official KU Localist v2 API across campus arts, lectures, museums, and athletics."
     },
     {
-      "id": "midwaygolfgames-feed",
-      "name": "Midway Golf and Games » Feed",
+      "id": "mizzou-events",
+      "name": "University of Missouri Events Calendar",
       "region": "Columbia",
       "city": "Columbia",
       "kind": "organizer",
-      "format": "discovery",
-      "url": "https://midwaygolfgames.com/feed",
+      "format": "livewhale",
+      "url": "https://calendar.missouri.edu/live/json/events/max/100",
+      "max_details": 0,
+      "pattern": "/event/",
       "categories": [
+        "arts_exhibits",
+        "music_performance",
+        "sports_spectating",
+        "classes_skills",
         "community_social"
       ],
       "activity_kinds": [
-        "one_off"
+        "one_off",
+        "exhibit"
       ],
       "required_leaves": [
-        "specific event or program"
+        "LiveWhale JSON feed",
+        "campus venue and timestamp"
       ],
-      "max_details": 0,
-      "collection_note": "Discovery only on 2026-11-24: Feed parsed with no explicit-date events.",
-      "probe": {
-        "checked_at": "2026-11-24",
-        "classification": "discovery",
-        "event_count": 0,
-        "evidence_url": "https://midwaygolfgames.com/feed"
-      },
-      "pattern": "/no-automatic-detail/",
-      "max_pages": 1
+      "reviewed_at": "2026-11-25",
+      "collection_note": "Official University of Missouri LiveWhale JSON events endpoint."
     },
     {
-      "id": "nelson-atkins-feed",
-      "name": "Nelson Atkins » Feed",
-      "region": "Kansas City metro",
-      "city": "Kansas City metro",
+      "id": "dbrl-events",
+      "name": "Daniel Boone Regional Library",
+      "region": "Columbia",
+      "city": "Columbia",
+      "kind": "organizer",
+      "format": "libnet",
+      "url": "https://events.dbrl.org/eeventcaldata",
+      "window_days": 45,
+      "max_details": 0,
+      "pattern": "/event/",
+      "categories": [
+        "libraries_learning",
+        "film_literature",
+        "classes_skills",
+        "community_social",
+        "games_hobbies"
+      ],
+      "activity_kinds": [
+        "one_off",
+        "recurring_program"
+      ],
+      "required_leaves": [
+        "branch library location",
+        "registration and audience metadata"
+      ],
+      "reviewed_at": "2026-11-25",
+      "collection_note": "Official DBRL Communico/LibNet events endpoint (Columbia, Ashland, Fulton, Holts Summit)."
+    },
+    {
+      "id": "uark-events",
+      "name": "University of Arkansas Events Calendar",
+      "region": "Bentonville",
+      "city": "Fayetteville",
+      "kind": "organizer",
+      "format": "localist",
+      "url": "https://calendars.uark.edu/api/2/events",
+      "max_pages": 5,
+      "max_details": 0,
+      "pattern": "/event/",
+      "categories": [
+        "arts_exhibits",
+        "music_performance",
+        "classes_skills",
+        "science_technology",
+        "community_social"
+      ],
+      "activity_kinds": [
+        "one_off",
+        "exhibit"
+      ],
+      "required_leaves": [
+        "official Localist API v2 listing",
+        "Fayetteville venue"
+      ],
+      "reviewed_at": "2026-11-25",
+      "collection_note": "Official University of Arkansas Localist v2 API covering Fayetteville and NWA."
+    },
+    {
+      "id": "warrensburg-mo",
+      "name": "City of Warrensburg Calendar",
+      "region": "surrounding areas",
+      "city": "Warrensburg",
       "kind": "organizer",
       "format": "rss",
-      "url": "https://nelson-atkins.org/feed",
+      "url": "https://www.warrensburg-mo.com/RSSFeed.aspx?ModID=58&CID=All-calendar.xml",
+      "max_details": 0,
+      "pattern": "/calendar",
       "categories": [
+        "community_social",
+        "sports_participation",
+        "festivals_seasonal"
+      ],
+      "activity_kinds": [
+        "one_off",
+        "multi_day"
+      ],
+      "required_leaves": [
+        "official municipal calendar event"
+      ],
+      "reviewed_at": "2026-11-25",
+      "collection_note": "Official City of Warrensburg CivicPlus RSS calendar (Amtrak River Runner corridor)."
+    },
+    {
+      "id": "kstate-events",
+      "name": "Kansas State University Events Calendar",
+      "region": "Topeka & Flint Hills",
+      "city": "Manhattan",
+      "kind": "organizer",
+      "format": "localist",
+      "url": "https://events.k-state.edu/api/2/events",
+      "max_pages": 5,
+      "max_details": 0,
+      "pattern": "/event/",
+      "categories": [
+        "arts_exhibits",
+        "music_performance",
+        "classes_skills",
+        "science_technology",
         "community_social"
       ],
       "activity_kinds": [
-        "one_off"
+        "one_off",
+        "exhibit"
       ],
       "required_leaves": [
-        "specific event or program"
+        "official Localist API v2 listing",
+        "Manhattan / Flint Hills venue"
       ],
-      "max_details": 0,
-      "collection_note": "Promoted 2026-11-24 after probe found 2 explicit-date events.",
-      "probe": {
-        "checked_at": "2026-11-24",
-        "classification": "verified_parser",
-        "event_count": 2,
-        "evidence_url": "https://nelson-atkins.org/feed"
-      },
-      "pattern": "/no-automatic-detail/",
-      "max_pages": 1
+      "reviewed_at": "2026-11-25",
+      "collection_note": "Official Kansas State University Localist v2 API anchoring Topeka & Flint Hills."
     },
     {
-      "id": "wonderscope-feed",
-      "name": "Wonderscope » Feed",
-      "region": "Kansas City metro",
-      "city": "Kansas City metro",
+      "id": "tscpl-events",
+      "name": "Topeka & Shawnee County Public Library",
+      "region": "Topeka & Flint Hills",
+      "city": "Topeka",
+      "kind": "organizer",
+      "format": "libnet",
+      "url": "https://events.tscpl.org/eeventcaldata",
+      "window_days": 21,
+      "max_details": 0,
+      "pattern": "/event/",
+      "categories": [
+        "libraries_learning",
+        "arts_exhibits",
+        "film_literature",
+        "classes_skills",
+        "community_social"
+      ],
+      "activity_kinds": [
+        "one_off",
+        "recurring_program"
+      ],
+      "required_leaves": [
+        "library room/location",
+        "explicit schedule window"
+      ],
+      "reviewed_at": "2026-11-25",
+      "collection_note": "Official TSCPL Communico/LibNet events JSON (21-day window for fast reliable fetches)."
+    },
+    {
+      "id": "stjoe-mo",
+      "name": "City of St. Joseph Calendar",
+      "region": "St. Joseph & Pony Express",
+      "city": "St. Joseph",
       "kind": "organizer",
       "format": "rss",
-      "url": "https://wonderscope.org/feed",
+      "url": "https://www.stjosephmo.gov/RSSFeed.aspx?ModID=58&CID=All-calendar.xml",
+      "max_details": 0,
+      "pattern": "/Calendar\\.aspx",
       "categories": [
-        "community_social"
+        "community_social",
+        "classes_skills",
+        "festivals_seasonal",
+        "nature_animals"
       ],
       "activity_kinds": [
-        "one_off"
+        "one_off",
+        "course"
       ],
       "required_leaves": [
-        "specific event or program"
+        "official St. Joseph CivicPlus calendar event"
       ],
-      "max_details": 0,
-      "collection_note": "Promoted 2026-11-24 after probe found 1 explicit-date events.",
-      "probe": {
-        "checked_at": "2026-11-24",
-        "classification": "verified_parser",
-        "event_count": 1,
-        "evidence_url": "https://wonderscope.org/feed"
-      },
-      "pattern": "/no-automatic-detail/",
-      "max_pages": 1
+      "reviewed_at": "2026-11-25",
+      "collection_note": "Official City of St. Joseph CivicPlus RSS calendar (45-60 min north of KC)."
     },
     {
-      "id": "midlandkc-events-rss",
-      "name": "RSS",
-      "region": "Kansas City metro",
-      "city": "Kansas City metro",
+      "id": "uno-events",
+      "name": "University of Nebraska Omaha Events",
+      "region": "Omaha",
+      "city": "Omaha",
       "kind": "organizer",
-      "format": "discovery",
-      "url": "https://www.midlandkc.com/events/rss",
+      "format": "localist",
+      "url": "https://events.unomaha.edu/api/2/events",
+      "max_pages": 5,
+      "max_details": 0,
+      "pattern": "/event/",
       "categories": [
+        "arts_exhibits",
+        "music_performance",
+        "classes_skills",
         "community_social"
       ],
       "activity_kinds": [
+        "one_off",
+        "exhibit"
+      ],
+      "required_leaves": [
+        "official Localist API v2 listing",
+        "Omaha campus venue"
+      ],
+      "reviewed_at": "2026-11-25",
+      "collection_note": "Official UNO Localist v2 calendar anchoring the Omaha weekend corridor."
+    },
+    {
+      "id": "omaha-library",
+      "name": "Omaha Public Library",
+      "region": "Omaha",
+      "city": "Omaha",
+      "kind": "organizer",
+      "format": "bibliocommons",
+      "url": "https://gateway.bibliocommons.com/v2/libraries/omaha/events?limit=100",
+      "public_base_url": "https://omaha.bibliocommons.com",
+      "max_pages": 5,
+      "max_details": 0,
+      "pattern": "/events/",
+      "categories": [
+        "libraries_learning",
+        "film_literature",
+        "classes_skills",
+        "community_social"
+      ],
+      "activity_kinds": [
+        "one_off",
+        "recurring_program"
+      ],
+      "required_leaves": [
+        "branch library location",
+        "registration and audience metadata"
+      ],
+      "reviewed_at": "2026-11-25",
+      "collection_note": "Official Omaha Public Library BiblioCommons events API v2."
+    },
+    {
+      "id": "omaha-storm-chasers",
+      "name": "Omaha Storm Chasers Home Schedule",
+      "region": "Omaha",
+      "city": "Papillion",
+      "kind": "organizer",
+      "format": "mlb_schedule",
+      "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=11&teamId=541",
+      "public_url": "https://www.milb.com/omaha/schedule",
+      "team_id": 541,
+      "home_only": true,
+      "max_details": 0,
+      "pattern": "/omaha/schedule",
+      "categories": [
+        "sports_spectating"
+      ],
+      "activity_kinds": [
+        "sports_season",
         "one_off"
       ],
       "required_leaves": [
-        "specific event or program"
+        "official Triple-A home schedule at Werner Park"
       ],
+      "reviewed_at": "2026-11-25",
+      "collection_note": "Official MLB/MiLB Stats API home games for Omaha Storm Chasers (teamId=541)."
+    },
+    {
+      "id": "drake-events",
+      "name": "Drake University Events Calendar",
+      "region": "Des Moines",
+      "city": "Des Moines",
+      "kind": "organizer",
+      "format": "localist",
+      "url": "https://calendar.drake.edu/api/2/events",
+      "max_pages": 5,
       "max_details": 0,
-      "collection_note": "Discovery only on 2026-11-24: Feed parsed with no explicit-date events.",
-      "probe": {
-        "checked_at": "2026-11-24",
-        "classification": "discovery",
-        "event_count": 0,
-        "evidence_url": "https://www.midlandkc.com/events/rss"
-      },
-      "pattern": "/no-automatic-detail/",
-      "max_pages": 1
+      "pattern": "/event/",
+      "categories": [
+        "arts_exhibits",
+        "music_performance",
+        "classes_skills",
+        "community_social"
+      ],
+      "activity_kinds": [
+        "one_off",
+        "exhibit"
+      ],
+      "required_leaves": [
+        "official Localist API v2 listing",
+        "Des Moines venue"
+      ],
+      "reviewed_at": "2026-11-25",
+      "collection_note": "Official Drake University Localist v2 calendar anchoring Des Moines."
+    },
+    {
+      "id": "dsm-art-center",
+      "name": "Des Moines Art Center",
+      "region": "Des Moines",
+      "city": "Des Moines",
+      "kind": "organizer",
+      "format": "tribe",
+      "url": "https://desmoinesartcenter.org/wp-json/tribe/events/v1/events",
+      "max_details": 0,
+      "pattern": "/event/",
+      "categories": [
+        "arts_exhibits",
+        "classes_skills"
+      ],
+      "activity_kinds": [
+        "one_off",
+        "exhibit",
+        "course"
+      ],
+      "required_leaves": [
+        "official Tribe Events REST API"
+      ],
+      "reviewed_at": "2026-11-25",
+      "collection_note": "Official Des Moines Art Center Tribe Events REST v1 feed."
+    },
+    {
+      "id": "iowa-cubs",
+      "name": "Iowa Cubs Home Schedule",
+      "region": "Des Moines",
+      "city": "Des Moines",
+      "kind": "organizer",
+      "format": "mlb_schedule",
+      "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=11&teamId=451",
+      "public_url": "https://www.milb.com/iowa/schedule",
+      "team_id": 451,
+      "home_only": true,
+      "max_details": 0,
+      "pattern": "/iowa/schedule",
+      "categories": [
+        "sports_spectating"
+      ],
+      "activity_kinds": [
+        "sports_season",
+        "one_off"
+      ],
+      "required_leaves": [
+        "official Triple-A home schedule at Principal Park"
+      ],
+      "reviewed_at": "2026-11-25",
+      "collection_note": "Official MLB/MiLB Stats API home games for Iowa Cubs (teamId=451)."
+    },
+    {
+      "id": "sgcl-events",
+      "name": "Springfield-Greene County Library",
+      "region": "Springfield & Ozarks",
+      "city": "Springfield",
+      "kind": "organizer",
+      "format": "libnet",
+      "url": "https://thelibrary.libnet.info/eeventcaldata",
+      "window_days": 30,
+      "max_details": 0,
+      "pattern": "/event/",
+      "categories": [
+        "libraries_learning",
+        "film_literature",
+        "classes_skills",
+        "community_social"
+      ],
+      "activity_kinds": [
+        "one_off",
+        "recurring_program"
+      ],
+      "required_leaves": [
+        "branch library location",
+        "registration and audience metadata"
+      ],
+      "reviewed_at": "2026-11-25",
+      "collection_note": "Official Springfield-Greene County Library Communico/LibNet events JSON."
+    },
+    {
+      "id": "springfield-cardinals",
+      "name": "Springfield Cardinals Home Schedule",
+      "region": "Springfield & Ozarks",
+      "city": "Springfield",
+      "kind": "organizer",
+      "format": "mlb_schedule",
+      "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=12&teamId=440",
+      "public_url": "https://www.milb.com/springfield/schedule",
+      "team_id": 440,
+      "home_only": true,
+      "max_details": 0,
+      "pattern": "/springfield/schedule",
+      "categories": [
+        "sports_spectating"
+      ],
+      "activity_kinds": [
+        "sports_season",
+        "one_off"
+      ],
+      "required_leaves": [
+        "official Double-A home schedule at Hammons Field"
+      ],
+      "reviewed_at": "2026-11-25",
+      "collection_note": "Official MLB/MiLB Stats API home games for Springfield Cardinals (teamId=440)."
+    },
+    {
+      "id": "wichita-library",
+      "name": "Wichita Public Library",
+      "region": "Wichita & Hutchinson",
+      "city": "Wichita",
+      "kind": "organizer",
+      "format": "libnet",
+      "url": "https://wichitalibrary.libnet.info/eeventcaldata",
+      "window_days": 45,
+      "max_details": 0,
+      "pattern": "/event/",
+      "categories": [
+        "libraries_learning",
+        "film_literature",
+        "classes_skills",
+        "community_social",
+        "games_hobbies"
+      ],
+      "activity_kinds": [
+        "one_off",
+        "recurring_program"
+      ],
+      "required_leaves": [
+        "branch library location",
+        "registration and audience metadata"
+      ],
+      "reviewed_at": "2026-11-25",
+      "collection_note": "Official Wichita Public Library Communico/LibNet events JSON."
+    },
+    {
+      "id": "wichita-wind-surge",
+      "name": "Wichita Wind Surge Home Schedule",
+      "region": "Wichita & Hutchinson",
+      "city": "Wichita",
+      "kind": "organizer",
+      "format": "mlb_schedule",
+      "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=12&teamId=3898",
+      "public_url": "https://www.milb.com/wichita/schedule",
+      "team_id": 3898,
+      "home_only": true,
+      "max_details": 0,
+      "pattern": "/wichita/schedule",
+      "categories": [
+        "sports_spectating"
+      ],
+      "activity_kinds": [
+        "sports_season",
+        "one_off"
+      ],
+      "required_leaves": [
+        "official Double-A home schedule at Riverfront Stadium"
+      ],
+      "reviewed_at": "2026-11-25",
+      "collection_note": "Official MLB/MiLB Stats API home games for Wichita Wind Surge (teamId=3898)."
     }
-  ]
+  ],
+  "reviewed_at": "2026-11-25"
 }

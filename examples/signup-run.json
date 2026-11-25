@@ -27,7 +27,7 @@
     "regional_wildcards": true,
     "filters": {}
   },
-  "graph_digest": "ee3e36da68db9fbf7fda4cc1965104b6f82517df770786b39a93582a89a50a7d",
+  "graph_digest": "d478dace6c99b9998a1e694ac91a217a2b8d6916e7045a21ead17a3bf5901d0d",
   "completed": [
     "source-graph",
     "deep-first-party-sweep",
@@ -35,8 +35,7 @@
     "broader-web-search",
     "merge",
     "fit-based-ranking",
-    "adversarial-review",
-    "recommendation"
+    "adversarial-review"
   ],
   "coverage": [
     {
@@ -149,6 +148,231 @@
     },
     {
       "node_id": "kc-convention",
+      "status": "checked",
+      "observed_at": "2030-09-05T12:00:00-05:00",
+      "visited_urls": [
+        "https://example.test/synthetic-route"
+      ],
+      "notes": "Synthetic sweep only; not a claim of live visits"
+    },
+    {
+      "node_id": "jocolibrary",
+      "status": "checked",
+      "observed_at": "2030-09-05T12:00:00-05:00",
+      "visited_urls": [
+        "https://example.test/synthetic-route"
+      ],
+      "notes": "Synthetic sweep only; not a claim of live visits"
+    },
+    {
+      "node_id": "kc-royals",
+      "status": "checked",
+      "observed_at": "2030-09-05T12:00:00-05:00",
+      "visited_urls": [
+        "https://example.test/synthetic-route"
+      ],
+      "notes": "Synthetic sweep only; not a claim of live visits"
+    },
+    {
+      "node_id": "jcprd-parks",
+      "status": "checked",
+      "observed_at": "2030-09-05T12:00:00-05:00",
+      "visited_urls": [
+        "https://example.test/synthetic-route"
+      ],
+      "notes": "Synthetic sweep only; not a claim of live visits"
+    },
+    {
+      "node_id": "liberty-mo",
+      "status": "checked",
+      "observed_at": "2030-09-05T12:00:00-05:00",
+      "visited_urls": [
+        "https://example.test/synthetic-route"
+      ],
+      "notes": "Synthetic sweep only; not a claim of live visits"
+    },
+    {
+      "node_id": "mdc-events",
+      "status": "checked",
+      "observed_at": "2030-09-05T12:00:00-05:00",
+      "visited_urls": [
+        "https://example.test/synthetic-route"
+      ],
+      "notes": "Synthetic sweep only; not a claim of live visits"
+    },
+    {
+      "node_id": "ku-events",
+      "status": "checked",
+      "observed_at": "2030-09-05T12:00:00-05:00",
+      "visited_urls": [
+        "https://example.test/synthetic-route"
+      ],
+      "notes": "Synthetic sweep only; not a claim of live visits"
+    },
+    {
+      "node_id": "mizzou-events",
+      "status": "checked",
+      "observed_at": "2030-09-05T12:00:00-05:00",
+      "visited_urls": [
+        "https://example.test/synthetic-route"
+      ],
+      "notes": "Synthetic sweep only; not a claim of live visits"
+    },
+    {
+      "node_id": "dbrl-events",
+      "status": "checked",
+      "observed_at": "2030-09-05T12:00:00-05:00",
+      "visited_urls": [
+        "https://example.test/synthetic-route"
+      ],
+      "notes": "Synthetic sweep only; not a claim of live visits"
+    },
+    {
+      "node_id": "uark-events",
+      "status": "checked",
+      "observed_at": "2030-09-05T12:00:00-05:00",
+      "visited_urls": [
+        "https://example.test/synthetic-route"
+      ],
+      "notes": "Synthetic sweep only; not a claim of live visits"
+    },
+    {
+      "node_id": "warrensburg-mo",
+      "status": "checked",
+      "observed_at": "2030-09-05T12:00:00-05:00",
+      "visited_urls": [
+        "https://example.test/synthetic-route"
+      ],
+      "notes": "Synthetic sweep only; not a claim of live visits"
+    },
+    {
+      "node_id": "kstate-events",
+      "status": "checked",
+      "observed_at": "2030-09-05T12:00:00-05:00",
+      "visited_urls": [
+        "https://example.test/synthetic-route"
+      ],
+      "notes": "Synthetic sweep only; not a claim of live visits"
+    },
+    {
+      "node_id": "tscpl-events",
+      "status": "checked",
+      "observed_at": "2030-09-05T12:00:00-05:00",
+      "visited_urls": [
+        "https://example.test/synthetic-route"
+      ],
+      "notes": "Synthetic sweep only; not a claim of live visits"
+    },
+    {
+      "node_id": "stjoe-mo",
+      "status": "checked",
+      "observed_at": "2030-09-05T12:00:00-05:00",
+      "visited_urls": [
+        "https://example.test/synthetic-route"
+      ],
+      "notes": "Synthetic sweep only; not a claim of live visits"
+    },
+    {
+      "node_id": "uno-events",
+      "status": "checked",
+      "observed_at": "2030-09-05T12:00:00-05:00",
+      "visited_urls": [
+        "https://example.test/synthetic-route"
+      ],
+      "notes": "Synthetic sweep only; not a claim of live visits"
+    },
+    {
+      "node_id": "omaha-library",
+      "status": "checked",
+      "observed_at": "2030-09-05T12:00:00-05:00",
+      "visited_urls": [
+        "https://example.test/synthetic-route"
+      ],
+      "notes": "Synthetic sweep only; not a claim of live visits"
+    },
+    {
+      "node_id": "omaha-storm-chasers",
+      "status": "checked",
+      "observed_at": "2030-09-05T12:00:00-05:00",
+      "visited_urls": [
+        "https://example.test/synthetic-route"
+      ],
+      "notes": "Synthetic sweep only; not a claim of live visits"
+    },
+    {
+      "node_id": "drake-events",
+      "status": "checked",
+      "observed_at": "2030-09-05T12:00:00-05:00",
+      "visited_urls": [
+        "https://example.test/synthetic-route"
+      ],
+      "notes": "Synthetic sweep only; not a claim of live visits"
+    },
+    {
+      "node_id": "dsm-art-center",
+      "status": "checked",
+      "observed_at": "2030-09-05T12:00:00-05:00",
+      "visited_urls": [
+        "https://example.test/synthetic-route"
+      ],
+      "notes": "Synthetic sweep only; not a claim of live visits"
+    },
+    {
+      "node_id": "iowa-cubs",
+      "status": "checked",
+      "observed_at": "2030-09-05T12:00:00-05:00",
+      "visited_urls": [
+        "https://example.test/synthetic-route"
+      ],
+      "notes": "Synthetic sweep only; not a claim of live visits"
+    },
+    {
+      "node_id": "sgcl-events",
+      "status": "checked",
+      "observed_at": "2030-09-05T12:00:00-05:00",
+      "visited_urls": [
+        "https://example.test/synthetic-route"
+      ],
+      "notes": "Synthetic sweep only; not a claim of live visits"
+    },
+    {
+      "node_id": "springfield-cardinals",
+      "status": "checked",
+      "observed_at": "2030-09-05T12:00:00-05:00",
+      "visited_urls": [
+        "https://example.test/synthetic-route"
+      ],
+      "notes": "Synthetic sweep only; not a claim of live visits"
+    },
+    {
+      "node_id": "wichita-library",
+      "status": "checked",
+      "observed_at": "2030-09-05T12:00:00-05:00",
+      "visited_urls": [
+        "https://example.test/synthetic-route"
+      ],
+      "notes": "Synthetic sweep only; not a claim of live visits"
+    },
+    {
+      "node_id": "wichita-wind-surge",
+      "status": "checked",
+      "observed_at": "2030-09-05T12:00:00-05:00",
+      "visited_urls": [
+        "https://example.test/synthetic-route"
+      ],
+      "notes": "Synthetic sweep only; not a claim of live visits"
+    },
+    {
+      "node_id": "lawrence-library",
+      "status": "checked",
+      "observed_at": "2030-09-05T12:00:00-05:00",
+      "visited_urls": [
+        "https://example.test/synthetic-route"
+      ],
+      "notes": "Synthetic sweep only; not a claim of live visits"
+    },
+    {
+      "node_id": "naturals-schedule",
       "status": "checked",
       "observed_at": "2030-09-05T12:00:00-05:00",
       "visited_urls": [
@@ -591,6 +815,6 @@
         }
       ]
     },
-    "digest": "36999c6d8cf95492dc537268d4710ee9c1390a08eff81d241e034c6fd8a09959"
+    "digest": "553d4c6409824aaa30587f1822544eb8aac97b6e6404917e2779d5a67a95669a"
   }
 }

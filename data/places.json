@@ -1084,6 +1084,647 @@
           "Deanna Rose Children’s Farmstead"
         ]
       }
+    },
+    {
+      "id": "union-station-kc",
+      "name": "Union Station Kansas City",
+      "address": "30 W Pershing Rd, Kansas City, MO 64108",
+      "geo": {
+        "lat": 39.083958562379,
+        "lng": -94.584678169511,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=30+W+Pershing+Rd%2C+Kansas+City%2C+MO+64108&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-25T07:19:35.377553-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://unionstation.org/",
+      "match": {
+        "source_ids": [],
+        "venue_aliases": [
+          "Union Station",
+          "Union Station Kansas City",
+          "Union Station KC"
+        ]
+      }
+    },
+    {
+      "id": "kauffman-center",
+      "name": "Kauffman Center for the Performing Arts",
+      "address": "1601 Broadway Blvd, Kansas City, MO 64108",
+      "geo": {
+        "lat": 39.094600931893,
+        "lng": -94.588590498446,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1601+Broadway+Blvd%2C+Kansas+City%2C+MO+64108&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-25T07:19:35.377553-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://www.kauffmancenter.org/",
+      "match": {
+        "source_ids": [],
+        "venue_aliases": [
+          "Kauffman Center",
+          "Kauffman Center for the Performing Arts",
+          "Helzberg Hall",
+          "Muriel Kauffman Theatre"
+        ]
+      }
+    },
+    {
+      "id": "ww1-museum",
+      "name": "National WWI Museum and Memorial",
+      "address": "2 Memorial Dr, Kansas City, MO 64108",
+      "geo": {
+        "lat": 39.077801663738,
+        "lng": -94.584886676032,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=2+Memorial+Dr%2C+Kansas+City%2C+MO+64108&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-25T07:19:35.377553-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://www.theworldwar.org/",
+      "match": {
+        "source_ids": [],
+        "venue_aliases": [
+          "National WWI Museum",
+          "National WWI Museum and Memorial"
+        ]
+      }
+    },
+    {
+      "id": "kemper-museum",
+      "name": "Kemper Museum of Contemporary Art",
+      "address": "4420 Warwick Blvd, Kansas City, MO 64111",
+      "geo": {
+        "lat": 39.046769235053,
+        "lng": -94.584415070639,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=4420+Warwick+Blvd%2C+Kansas+City%2C+MO+64111&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-25T07:19:35.377553-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://www.kemperart.org/",
+      "match": {
+        "source_ids": [],
+        "venue_aliases": [
+          "Kemper Museum of Contemporary Art",
+          "Kemper Museum"
+        ]
+      }
+    },
+    {
+      "id": "nlbm",
+      "name": "Negro Leagues Baseball Museum",
+      "address": "1616 E 18th St, Kansas City, MO 64108",
+      "geo": {
+        "lat": 39.091279259269,
+        "lng": -94.563103497117,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1616+E+18th+St%2C+Kansas+City%2C+MO+64108&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-25T07:19:35.377553-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://www.nlbm.com/",
+      "match": {
+        "source_ids": [],
+        "venue_aliases": [
+          "Negro Leagues Baseball Museum"
+        ]
+      }
+    },
+    {
+      "id": "op-arboretum",
+      "name": "Overland Park Arboretum & Botanical Gardens",
+      "address": "8909 W 179th St, Bucyrus, KS 66013",
+      "geo": {
+        "lat": 38.803559662016,
+        "lng": -94.68878936084,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=8909+W+179th+St%2C+Bucyrus%2C+KS+66013&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-25T07:19:35.377553-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://www.opkansas.gov/recreation-fun/arboretum-botanical-gardens",
+      "match": {
+        "source_ids": [],
+        "venue_aliases": [
+          "Overland Park Arboretum",
+          "Overland Park Arboretum & Botanical Gardens",
+          "Overland Park Arboretum and Botanical Gardens"
+        ]
+      }
+    },
+    {
+      "id": "burr-oak-woods",
+      "name": "Burr Oak Woods Conservation Nature Center",
+      "address": "1401 NW Park Rd, Blue Springs, MO 64015",
+      "geo": {
+        "lat": 39.04665955824,
+        "lng": -94.287510898182,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1401+NW+Park+Rd%2C+Blue+Springs%2C+MO+64015&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-25T07:19:35.377553-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://mdc.mo.gov/discover-nature/places/burr-oak-woods-conservation-area",
+      "match": {
+        "source_ids": [],
+        "venue_aliases": [
+          "Burr Oak Woods Conservation Nature Center",
+          "Burr Oak Woods"
+        ]
+      }
+    },
+    {
+      "id": "gorman-discovery",
+      "name": "Anita B. Gorman Conservation Discovery Center",
+      "address": "4750 Troost Ave, Kansas City, MO 64110",
+      "geo": {
+        "lat": 39.040796518049,
+        "lng": -94.573068247974,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=4750+Troost+Ave%2C+Kansas+City%2C+MO+64110&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-25T07:19:35.377553-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://mdc.mo.gov/discover-nature/places/anita-b-gorman-conservation-discovery-center",
+      "match": {
+        "source_ids": [],
+        "venue_aliases": [
+          "Anita B. Gorman Conservation Discovery Center",
+          "Anita B. Gorman Discovery Center"
+        ]
+      }
+    },
+    {
+      "id": "powell-gardens",
+      "name": "Powell Gardens",
+      "address": "1609 NW US Hwy 50, Kingsville, MO 64061",
+      "geo": {
+        "lat": 38.862279593756,
+        "lng": -94.048584724476,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1609+NW+US+Hwy+50%2C+Kingsville%2C+MO+64061&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-25T07:19:35.377553-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://powellgardens.org/",
+      "match": {
+        "source_ids": [],
+        "venue_aliases": [
+          "Powell Gardens"
+        ]
+      }
+    },
+    {
+      "id": "kauffman-stadium",
+      "name": "Kauffman Stadium",
+      "address": "1 Royal Way, Kansas City, MO 64129",
+      "geo": {
+        "lat": 39.051635474987,
+        "lng": -94.48276689719,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1+Royal+Way%2C+Kansas+City%2C+MO+64129&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-25T07:19:35.377553-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://www.mlb.com/royals/ballpark",
+      "match": {
+        "source_ids": [
+          "kc-royals"
+        ],
+        "venue_aliases": [
+          "Kauffman Stadium"
+        ]
+      }
+    },
+    {
+      "id": "wonderscope",
+      "name": "Wonderscope Children’s Museum of Kansas City",
+      "address": "433 E Red Bridge Rd, Kansas City, MO 64131",
+      "geo": {
+        "lat": 38.926092865189,
+        "lng": -94.587684693589,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=433+E+Red+Bridge+Rd%2C+Kansas+City%2C+MO+64131&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-25T07:19:35.377553-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://wonderscope.org/",
+      "match": {
+        "source_ids": [],
+        "venue_aliases": [
+          "Wonderscope",
+          "Wonderscope Children’s Museum",
+          "Wonderscope Children’s Museum of Kansas City"
+        ]
+      }
+    },
+    {
+      "id": "joco-central-library",
+      "name": "Johnson County Central Resource Library",
+      "address": "9875 W 87th St, Overland Park, KS 66212",
+      "geo": {
+        "lat": 38.971113497079,
+        "lng": -94.699991825967,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=9875+W+87th+St%2C+Overland+Park%2C+KS+66212&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-25T07:19:35.377553-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://jocolibrary.bibliocommons.com/locations",
+      "match": {
+        "source_ids": [],
+        "venue_aliases": [
+          "Central Resource Library"
+        ]
+      }
+    },
+    {
+      "id": "jcprd-shawnee-mission-park",
+      "name": "Shawnee Mission Park",
+      "address": "7900 Renner Rd, Shawnee, KS 66219",
+      "geo": {
+        "lat": 38.985511409581,
+        "lng": -94.779797611821,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=7900+Renner+Rd%2C+Shawnee%2C+KS+66219&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-25T07:19:35.377553-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://www.jcprd.com/facilities/facility/details/Shawnee-Mission-Park-39",
+      "match": {
+        "source_ids": [],
+        "venue_aliases": [
+          "Shawnee Mission Park"
+        ]
+      }
+    },
+    {
+      "id": "spencer-museum",
+      "name": "Spencer Museum of Art",
+      "address": "1301 Mississippi St, Lawrence, KS 66045",
+      "geo": {
+        "lat": 38.961004216243,
+        "lng": -95.244144058112,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1301+Mississippi+St%2C+Lawrence%2C+KS+66045&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-25T07:19:35.377553-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://spencerart.ku.edu/",
+      "match": {
+        "source_ids": [],
+        "venue_aliases": [
+          "Spencer Museum of Art"
+        ]
+      }
+    },
+    {
+      "id": "lawrence-public-library",
+      "name": "Lawrence Public Library",
+      "address": "707 Vermont St, Lawrence, KS 66044",
+      "geo": {
+        "lat": 38.971090391403,
+        "lng": -95.237186669145,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=707+Vermont+St%2C+Lawrence%2C+KS+66044&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-25T07:19:35.377553-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://lawrence.bibliocommons.com/",
+      "match": {
+        "source_ids": [
+          "lawrence-library"
+        ],
+        "venue_aliases": [
+          "Lawrence Public Library"
+        ]
+      }
+    },
+    {
+      "id": "dbrl-columbia",
+      "name": "Daniel Boone Regional Library (Columbia)",
+      "address": "100 W Broadway, Columbia, MO 65203",
+      "geo": {
+        "lat": 38.951528883744,
+        "lng": -92.339048431143,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=100+W+Broadway%2C+Columbia%2C+MO+65203&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-25T07:19:35.377553-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://www.dbrl.org/",
+      "match": {
+        "source_ids": [
+          "dbrl-events"
+        ],
+        "venue_aliases": [
+          "Columbia Public Library",
+          "Daniel Boone Regional Library"
+        ]
+      }
+    },
+    {
+      "id": "runge-conservation",
+      "name": "Runge Conservation Nature Center",
+      "address": "330 Commerce Dr, Jefferson City, MO 65109",
+      "geo": {
+        "lat": 38.589879086971,
+        "lng": -92.227785854439,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=330+Commerce+Dr%2C+Jefferson+City%2C+MO+65109&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-25T07:19:35.377553-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://mdc.mo.gov/discover-nature/places/runge-conservation-nature-center",
+      "match": {
+        "source_ids": [],
+        "venue_aliases": [
+          "Runge Conservation Nature Center"
+        ]
+      }
+    },
+    {
+      "id": "amazeum-bentonville",
+      "name": "Scott Family Amazeum",
+      "address": "1009 Museum Way, Bentonville, AR 72712",
+      "geo": {
+        "lat": 36.381680519915,
+        "lng": -94.201987130503,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1009+Museum+Way%2C+Bentonville%2C+AR+72712&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-25T07:19:35.377553-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://www.amazeum.org/",
+      "match": {
+        "source_ids": [],
+        "venue_aliases": [
+          "Scott Family Amazeum",
+          "Amazeum"
+        ]
+      }
+    },
+    {
+      "id": "arvest-ballpark",
+      "name": "Arvest Ballpark",
+      "address": "3000 S 56th St, Springdale, AR 72762",
+      "geo": {
+        "lat": 36.212669735462,
+        "lng": -94.19176833208,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=3000+S+56th+St%2C+Springdale%2C+AR+72762&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-25T07:19:35.377553-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://www.milb.com/northwest-arkansas",
+      "match": {
+        "source_ids": [
+          "naturals-schedule"
+        ],
+        "venue_aliases": [
+          "Arvest Ballpark"
+        ]
+      }
+    },
+    {
+      "id": "flint-hills-discovery",
+      "name": "Flint Hills Discovery Center",
+      "address": "315 S 3rd St, Manhattan, KS 66502",
+      "geo": {
+        "lat": 39.176818211623,
+        "lng": -96.560158011169,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=315+S+3rd+St%2C+Manhattan%2C+KS+66502&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-25T07:19:35.377553-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://www.flinthillsdiscovery.org/",
+      "match": {
+        "source_ids": [],
+        "venue_aliases": [
+          "Flint Hills Discovery Center"
+        ]
+      }
+    },
+    {
+      "id": "pony-express-museum",
+      "name": "Pony Express National Museum",
+      "address": "914 Penn St, St. Joseph, MO 64503",
+      "geo": {
+        "lat": 39.756238068124,
+        "lng": -94.849151697608,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=914+Penn+St%2C+St.+Joseph%2C+MO+64503&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-25T07:19:35.377553-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://ponyexpress.org/",
+      "match": {
+        "source_ids": [],
+        "venue_aliases": [
+          "Pony Express National Museum"
+        ]
+      }
+    },
+    {
+      "id": "omaha-doorly-zoo",
+      "name": "Omaha’s Henry Doorly Zoo and Aquarium",
+      "address": "3701 S 10th St, Omaha, NE 68107",
+      "geo": {
+        "lat": 41.225325707124,
+        "lng": -95.929648383867,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=3701+S+10th+St%2C+Omaha%2C+NE+68107&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-25T07:19:35.377553-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://www.omahazoo.com/",
+      "match": {
+        "source_ids": [],
+        "venue_aliases": [
+          "Omaha’s Henry Doorly Zoo",
+          "Henry Doorly Zoo"
+        ]
+      }
+    },
+    {
+      "id": "joslyn-art-museum",
+      "name": "Joslyn Art Museum",
+      "address": "2200 Dodge St, Omaha, NE 68102",
+      "geo": {
+        "lat": 41.259803044898,
+        "lng": -95.942450743848,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=2200+Dodge+St%2C+Omaha%2C+NE+68102&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-25T07:19:35.377553-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://joslyn.org/",
+      "match": {
+        "source_ids": [],
+        "venue_aliases": [
+          "Joslyn Art Museum"
+        ]
+      }
+    },
+    {
+      "id": "des-moines-botanical",
+      "name": "Greater Des Moines Botanical Garden",
+      "address": "909 Robert D Ray Dr, Des Moines, IA 50309",
+      "geo": {
+        "lat": 41.595711671932,
+        "lng": -93.615486618045,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=909+Robert+D+Ray+Dr%2C+Des+Moines%2C+IA+50309&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-25T07:19:35.377553-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://www.dmbotanicalgarden.com/",
+      "match": {
+        "source_ids": [],
+        "venue_aliases": [
+          "Greater Des Moines Botanical Garden"
+        ]
+      }
+    },
+    {
+      "id": "wonders-of-wildlife",
+      "name": "Wonders of Wildlife National Museum & Aquarium",
+      "address": "500 W Sunshine St, Springfield, MO 65807",
+      "geo": {
+        "lat": 37.182208235411,
+        "lng": -93.296154292467,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=500+W+Sunshine+St%2C+Springfield%2C+MO+65807&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-25T07:19:35.377553-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://wondersofwildlife.org/",
+      "match": {
+        "source_ids": [],
+        "venue_aliases": [
+          "Wonders of Wildlife",
+          "Wonders of Wildlife National Museum & Aquarium"
+        ]
+      }
+    },
+    {
+      "id": "cosmosphere",
+      "name": "Cosmosphere",
+      "address": "1100 N Plum St, Hutchinson, KS 67501",
+      "geo": {
+        "lat": 38.065063462239,
+        "lng": -97.921961483399,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1100+N+Plum+St%2C+Hutchinson%2C+KS+67501&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-25T07:19:35.377553-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://cosmo.org/",
+      "match": {
+        "source_ids": [],
+        "venue_aliases": [
+          "Cosmosphere"
+        ]
+      }
+    },
+    {
+      "id": "exploration-place",
+      "name": "Exploration Place",
+      "address": "300 N McLean Blvd, Wichita, KS 67203",
+      "geo": {
+        "lat": 37.688724549824,
+        "lng": -97.349231876374,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=300+N+McLean+Blvd%2C+Wichita%2C+KS+67203&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-25T07:19:35.377553-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://exploration.org/",
+      "match": {
+        "source_ids": [],
+        "venue_aliases": [
+          "Exploration Place"
+        ]
+      }
+    },
+    {
+      "id": "wichita-art-museum",
+      "name": "Wichita Art Museum",
+      "address": "1400 W Museum Blvd, Wichita, KS 67203",
+      "geo": {
+        "lat": 37.694165732966,
+        "lng": -97.356606691616,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1400+W+Museum+Blvd%2C+Wichita%2C+KS+67203&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-25T07:19:35.377553-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://wam.org/",
+      "match": {
+        "source_ids": [],
+        "venue_aliases": [
+          "Wichita Art Museum"
+        ]
+      }
     }
   ]
 }
