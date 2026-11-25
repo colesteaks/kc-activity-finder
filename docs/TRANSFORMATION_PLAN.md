@@ -72,7 +72,7 @@
 | M0 | `77d1d1b` | Baseline verified: 100 Python tests, 24 Node tests, 3,478 public records valid |
 | M1 | `65d7634` | 118 Python tests, 24 Node tests, `validate_repo` + `validate_public_data` passing |
 | M2 | `7c2448a` | 127 Python tests, 24 Node tests; 10 platform adapters + fuzzy dedup |
-| M3 | *(in this commit)* | 133 Python tests, 24 Node tests; hints, geo metadata, depth tiers, Census geocoder helper |
+| M3 | `5828003` | 133 Python tests, 24 Node tests; hints, geo metadata, depth tiers, Census geocoder helper |
 
 ---
 
