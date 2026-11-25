@@ -121,6 +121,43 @@ class CollectorTests(unittest.TestCase):
                 with self.assertRaises(RuntimeError):run(registry,out,r/'cache',NOW)
             self.assertEqual(out.read_text(),'{"activities":[]}')
 
+    def test_fetcher_handles_same_host_308_and_blocks_cross_host_308(self):
+        import urllib.error
+        from email.message import Message
+        from http.server import BaseHTTPRequestHandler, HTTPServer
+        import threading
+        from collect_activities import Fetcher
+
+        class Handler(BaseHTTPRequestHandler):
+            def do_GET(self):
+                if self.path == '/robots.txt':
+                    self.send_response(404); self.end_headers(); return
+                if self.path == '/events/':
+                    self.send_response(308); self.send_header('Location', '/events'); self.end_headers(); return
+                if self.path == '/events':
+                    self.send_response(200); self.send_header('Content-Type', 'text/html'); self.end_headers()
+                    self.wfile.write(b'<html>ok-308</html>'); return
+                if self.path == '/cross':
+                    self.send_response(308); self.send_header('Location', 'https://other.example.test/events'); self.end_headers(); return
+            def log_message(self, *args): pass
+
+        srv = HTTPServer(('127.0.0.1', 0), Handler)
+        t = threading.Thread(target=srv.serve_forever, daemon=True); t.start()
+        try:
+            with tempfile.TemporaryDirectory() as tmp:
+                f = Fetcher(Path(tmp))
+                body = f.fetch(f'http://127.0.0.1:{srv.server_port}/events/')
+                self.assertEqual(body, '<html>ok-308</html>')
+                fake_resp = unittest.mock.MagicMock()
+                fake_resp.url = 'https://other.example.test/events'
+                fake_resp.headers = Message()
+                fake_resp.__enter__.return_value = fake_resp
+                with patch('collect_activities.OPENER.open', return_value=fake_resp):
+                    with self.assertRaises(ValueError):
+                        f.fetch(f'http://127.0.0.1:{srv.server_port}/cross', robots=False)
+        finally:
+            srv.shutdown(); srv.server_close()
+
     def test_public_dataset(self):
         if (ROOT/'web/activities.json').exists():validate_public(json.loads((ROOT/'web/activities.json').read_text()))
 

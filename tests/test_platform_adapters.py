@@ -16,6 +16,8 @@ from platform_adapters import (
     civicplus_events,
     ics_events,
     libcal_events,
+    libnet_events,
+    livewhale_events,
     localist_events,
     mdc_events,
     mlb_schedule_events,
@@ -145,6 +147,60 @@ class PlatformAdapterTests(unittest.TestCase):
             rows, health = collect_source(loc_src, date(2026, 11, 24), date(2027, 6, 24), NOW.isoformat(), Path(tmp))
         self.assertEqual(len(rows), 1)
         self.assertEqual(health['status'], 'checked')
+
+    def test_bibliocommons_audience_ids_and_public_base_url(self):
+        bc_json = json.dumps({
+            'events': {'pagination': {'pages': 1, 'page': 1}},
+            'entities': {
+                'locations': {'CORINTH': {'name': 'Corinth Library', 'lat': 38.99, 'lng': -94.64}},
+                'eventAudiences': {'a1': {'name': 'Birth to Six'}, 'a2': {'name': 'All Ages'}},
+                'events': {'ev42': {'id': 'ev42', 'definition': {
+                    'title': 'Family Storytime',
+                    'start': '2026-12-03T10:00',
+                    'branchLocationId': 'CORINTH',
+                    'audienceIds': ['a1'],
+                }}},
+            },
+        })
+        src = dict(BASE_SRC, format='bibliocommons', public_base_url='https://jocolibrary.bibliocommons.com')
+        rows = bibliocommons_events(bc_json, src, 'https://gateway.bibliocommons.com/v2/libraries/jocolibrary/events')
+        self.assertEqual(rows[0]['url'], 'https://jocolibrary.bibliocommons.com/events/ev42')
+        self.assertEqual(rows[0]['location']['address']['addressLocality'], 'Prairie Village')
+        self.assertEqual(rows[0]['typicalAgeRange'], '0–6')
+        self.assertIn('Birth to Six', rows[0]['keywords'])
+
+    def test_libnet_livewhale_and_real_mdc_markup(self):
+        ln_json = json.dumps([
+            {'id': '1', 'title': 'Wings of Fire Hunt', 'private_event': '0', 'allow_reg': '0', 'enable_billing': '0',
+             'registration_cost': '0', 'registration_close': '0', 'event_start': '2026-12-05 00:00:00',
+             'event_end': '2026-12-05 23:59:00', 'location': 'Advanced Learning Library',
+             'ages': 'Children Grades 3-5, Teens Grades 6-12', 'url': 'https://wichitalibrary.libnet.info/event/1'},
+            {'id': '2', 'title': 'Private Hold', 'private_event': '1', 'event_start': '2026-12-05 10:00:00'},
+        ])
+        ln_rows = libnet_events(ln_json, dict(BASE_SRC, city='Wichita', region='Wichita & Hutchinson'), 'https://wichitalibrary.libnet.info/eeventcaldata')
+        self.assertEqual(len(ln_rows), 1)
+        self.assertTrue(ln_rows[0]['_all_day'])
+        self.assertEqual(ln_rows[0]['_registration']['status'], 'unknown')
+        self.assertIsNone(ln_rows[0]['_registration']['deadline'])
+        self.assertNotIn('typicalAgeRange', ln_rows[0])  # Grade ranges never masquerade as numeric age policies
+
+        lw_json = json.dumps({'data': [{'title': 'Museum Gallery Walk', 'date_iso': '2026-12-08T18:00:00-06:00', 'url': 'https://calendar.missouri.edu/event/9', 'location': 'Ellis Library', 'cost': 'Free'}]})
+        lw_rows = livewhale_events(lw_json, dict(BASE_SRC, city='Columbia', region='Columbia'), 'https://calendar.missouri.edu/live/json/events/max/100')
+        self.assertEqual(len(lw_rows), 1)
+        self.assertEqual(lw_rows[0]['offers']['price'], '0')
+
+        mdc_html = (
+            '<div class="views-row"><div class="views-field-field-event-registration-link"><a href="https://mdc-event-web.s3licensing.com/Event/22">Winter Owls</a></div>'
+            '<div class="views-field-field-event-begin-date"><span class="field-content">Saturday, December 12, 2026 6:00 pm - Saturday, December 12, 2026 8:00 pm</span></div>'
+            '<div class="views-field-views-conditional-field"><span class="field-content">Burr Oak Woods Conservation Nature Center</span></div></div>'
+            '<div class="views-row"><div class="views-field-field-event-registration-link"><a href="https://mdc-event-web.s3licensing.com/Event/23">STL Walk</a></div>'
+            '<div class="views-field-field-event-begin-date"><span class="field-content">Saturday, December 12, 2026 9:00 am</span></div>'
+            '<div class="views-field-views-conditional-field"><span class="field-content">Powder Valley Conservation Nature Center</span></div></div>'
+        )
+        mdc_rows = mdc_events(mdc_html, dict(BASE_SRC, id='mdc-events'), 'https://mdc.mo.gov/events')
+        self.assertEqual(len(mdc_rows), 1)
+        self.assertEqual(mdc_rows[0]['location']['address']['addressLocality'], 'Blue Springs')
+        self.assertEqual(mdc_rows[0]['_region'], 'Kansas City metro')
 
 
 if __name__ == '__main__':

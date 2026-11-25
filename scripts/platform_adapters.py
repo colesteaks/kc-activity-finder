@@ -539,10 +539,16 @@ def bibliocommons_events(body_or_data, source: dict, page: str) -> list[dict]:
 
     events_list: list[dict] = []
     locations_map: dict = {}
+    audiences_map: dict = {}
+    places_map: dict = {}
     if isinstance(data, dict):
         entities = data.get('entities') or {}
         if isinstance(entities.get('locations'), dict):
             locations_map = entities['locations']
+        if isinstance(entities.get('eventAudiences'), dict):
+            audiences_map = entities['eventAudiences']
+        if isinstance(entities.get('places'), dict):
+            places_map = entities['places']
         if isinstance(entities.get('events'), dict):
             events_list = list(entities['events'].values())
         elif isinstance(data.get('events'), dict) and isinstance(data['events'].get('items'), list):
@@ -551,6 +557,30 @@ def bibliocommons_events(body_or_data, source: dict, page: str) -> list[dict]:
             events_list = data['items']
         elif isinstance(data.get('events'), list):
             events_list = data['events']
+
+    _bc_city_hints = (
+        ('overland park', 'Overland Park'),
+        ('central resource', 'Overland Park'),
+        ('oak park', 'Overland Park'),
+        ('blue valley', 'Overland Park'),
+        ('antioch', 'Merriam'),
+        ('merriam', 'Merriam'),
+        ('corinth', 'Prairie Village'),
+        ('prairie village', 'Prairie Village'),
+        ('cedar roe', 'Roeland Park'),
+        ('roeland park', 'Roeland Park'),
+        ('shawnee', 'Shawnee'),
+        ('monticello', 'Shawnee'),
+        ('lenexa', 'Lenexa'),
+        ('lackman', 'Lenexa'),
+        ('gardner', 'Gardner'),
+        ('de soto', 'De Soto'),
+        ('edgerton', 'Edgerton'),
+        ('spring hill', 'Spring Hill'),
+        ('olathe', 'Olathe'),
+        ('lawrence', 'Lawrence'),
+    )
+    public_base = (source.get('public_base_url') or page).rstrip('/') + '/'
 
     rows: list[dict] = []
     for ev in events_list:
@@ -564,20 +594,28 @@ def bibliocommons_events(body_or_data, source: dict, page: str) -> list[dict]:
         end_raw = defn.get('end') or ev.get('end') or defn.get('endDate')
         loc_id = str(defn.get('branchLocationId') or ev.get('branchLocationId') or '')
         loc_obj = locations_map.get(loc_id, {}) if loc_id else {}
+        place_id = str(defn.get('placeId') or ev.get('placeId') or '')
+        place_obj = places_map.get(place_id, {}) if place_id else {}
         branch_name = (
             (defn.get('location') or {}).get('name')
             if isinstance(defn.get('location'), dict)
-            else defn.get('locationName') or loc_obj.get('name') or source['name']
+            else defn.get('locationName') or loc_obj.get('name') or place_obj.get('name') or source['name']
         )
-        city = loc_obj.get('city') or source.get('city')
+        city = loc_obj.get('city') or (place_obj.get('address') or {}).get('city')
+        if not city and branch_name:
+            bn_low = str(branch_name).lower()
+            city = next((c for k, c in _bc_city_hints if k in bn_low), None)
+        city = city or source.get('city')
         loc: dict = {'name': str(branch_name)}
         if city:
             loc['address'] = {'addressLocality': str(city)}
-        if loc_obj.get('lat') is not None and loc_obj.get('lng') is not None:
-            loc['geo'] = {'latitude': loc_obj['lat'], 'longitude': loc_obj['lng']}
+        lat = loc_obj.get('lat') or (place_obj.get('coordinates') or {}).get('lat')
+        lng = loc_obj.get('lng') or (place_obj.get('coordinates') or {}).get('lng')
+        if lat is not None and lng is not None:
+            loc['geo'] = {'latitude': lat, 'longitude': lng}
 
         ev_id = ev.get('id') or defn.get('id')
-        link = defn.get('url') or ev.get('url') or (urljoin(page, f'/events/{ev_id}') if ev_id else page)
+        link = defn.get('url') or ev.get('url') or (urljoin(public_base, f'events/{ev_id}') if ev_id else page)
         desc = BeautifulSoup(str(defn.get('description') or ''), 'html.parser').get_text(' ', strip=True)
         aud_labels = []
         for a in defn.get('audiences', []) or []:
@@ -585,10 +623,21 @@ def bibliocommons_events(body_or_data, source: dict, page: str) -> list[dict]:
                 aud_labels.append(a['name'])
             elif isinstance(a, str):
                 aud_labels.append(a)
+        for aid in defn.get('audienceIds', []) or []:
+            aobj = audiences_map.get(str(aid))
+            if isinstance(aobj, dict) and aobj.get('name'):
+                aud_labels.append(aobj['name'])
+        aud_labels = list(dict.fromkeys(aud_labels))
         age_range = None
         for aud in aud_labels:
             if re.search(r'\ball\s*ages\b', aud, re.I):
                 age_range = 'All ages'
+                break
+            if re.search(r'\bbirth\s*(?:to|[-–])\s*(?:five|5)\b', aud, re.I):
+                age_range = '0–5'
+                break
+            if re.search(r'\bbirth\s*(?:to|[-–])\s*(?:six|6)\b', aud, re.I):
+                age_range = '0–6'
                 break
             m_age = re.search(r'(\d{1,2})\s*[-–]\s*(\d{1,2})', aud)
             if m_age:
@@ -610,9 +659,10 @@ def bibliocommons_events(body_or_data, source: dict, page: str) -> list[dict]:
             'name': title,
             'startDate': str(start_raw),
             'endDate': str(end_raw) if end_raw else None,
-            'url': urljoin(page, str(link)),
+            'url': urljoin(public_base, str(link)),
             'location': loc,
             'description': desc,
+            'keywords': ' '.join(aud_labels),
             'offers': {'price': '0', 'priceCurrency': 'USD'},
             'eventStatus': 'EventCancelled' if canceled else 'EventScheduled',
             '_categories': cats,
@@ -621,7 +671,7 @@ def bibliocommons_events(body_or_data, source: dict, page: str) -> list[dict]:
                 'status': reg_status,
                 'opens_at': None,
                 'deadline': None,
-                'url': urljoin(page, str(link)) if reg_info.get('required') else None,
+                'url': urljoin(public_base, str(link)) if reg_info.get('required') else None,
                 'note': 'Public library listing; verify registration and seating with branch.',
             },
         }
@@ -758,7 +808,7 @@ def mlb_schedule_events(data: dict, source: dict, page: str) -> list[dict]:
             rows.append({
                 'name': title,
                 'startDate': game_dt,
-                'url': source.get('tickets_url') or source['url'],
+                'url': source.get('public_url') or source.get('tickets_url') or source.get('url') or page,
                 'location': {'name': venue, 'address': {'addressLocality': source['city']}},
                 'description': f"Official schedule listing: {title} at {venue}. Check official tickets and game-time updates.",
                 'eventStatus': ev_status,
@@ -768,49 +818,337 @@ def mlb_schedule_events(data: dict, source: dict, page: str) -> list[dict]:
     return rows
 
 
+_MDC_VENUE_MAP = (
+    ('burr oak woods', ('Blue Springs', 'Kansas City metro')),
+    ('anita b. gorman', ('Kansas City', 'Kansas City metro')),
+    ('discovery center', ('Kansas City', 'Kansas City metro')),
+    ('parma woods', ('Parkville', 'Kansas City metro')),
+    ('james a. reed', ('Lee’s Summit', 'Kansas City metro')),
+    ('runge', ('Jefferson City', 'Columbia')),
+    ('rock bridge', ('Columbia', 'Columbia')),
+    ('boone county', ('Columbia', 'Columbia')),
+    ('pony express', ('Maysville', 'St. Joseph & Pony Express')),
+    ('st. joseph', ('St. Joseph', 'St. Joseph & Pony Express')),
+    ('northwest regional', ('St. Joseph', 'St. Joseph & Pony Express')),
+    ('springfield conservation', ('Springfield', 'Springfield & Ozarks')),
+    ('andy dalton', ('Ash Grove', 'Springfield & Ozarks')),
+    ('shoal creek', ('Joplin', 'Springfield & Ozarks')),
+    ('shepherd of the hills', ('Branson', 'Springfield & Ozarks')),
+    ('lost valley', ('Warsaw', 'surrounding areas')),
+    ('knob noster', ('Knob Noster', 'surrounding areas')),
+    ('sedalia', ('Sedalia', 'surrounding areas')),
+)
+_MDC_EXCLUDE = (
+    'powder valley', 'columbia bottom', 'august a. busch', 'cape girardeau',
+    'twin pines', 'kirksville', 'hannibal', 'st. louis', 'st. charles', 'southeast regional',
+)
+
+
 def mdc_events(body: str, source: dict, page: str) -> list[dict]:
     """Parse Missouri Dept. of Conservation (/events) calendar cards."""
     soup = BeautifulSoup(body, 'html.parser')
     rows: list[dict] = []
     for card in soup.select('.views-row, article.event, .node--type-event'):
-        link_el = card.select_one('h2 a[href], h3 a[href], .field--name-title a[href], a[href*="/events/"]')
+        link_el = card.select_one(
+            '.views-field-field-event-registration-link a[href], '
+            'h2 a[href], h3 a[href], .field--name-title a[href], a[href*="/events/"]'
+        )
         if not link_el:
             continue
         title = _text(link_el)
+        date_el = card.select_one('.views-field-field-event-begin-date .field-content, .date-display-single')
+        date_blob = _text(date_el) or _text(card)
         blob = _text(card)
-        date_iso = _explicit_date_from_text(blob)
-        if not date_iso:
-            m_us = re.search(r'\b(0?[1-9]|1[0-2])/(0?[1-9]|[12]\d|3[01])/(20\d\d)\b', blob)
-            if m_us:
-                date_iso = f"{m_us[3]}-{int(m_us[1]):02d}-{int(m_us[2]):02d}"
-        if not title or not date_iso:
+        venue = (
+            _text(card.select_one('.views-field-views-conditional-field .field-content'))
+            or _text(card.select_one('.views-field-field-location .field-content, .field--name-field-location, .location, .event-location'))
+            or source['name']
+        )
+        v_low = venue.lower()
+        if any(ex in v_low for ex in _MDC_EXCLUDE):
             continue
-        time_match = re.search(r'(\d{1,2}(?::\d{2})?\s*[ap]\.?m\.?)', blob, re.I)
-        start_val = date_iso
+
+        start_val = None
+        end_val = None
         all_day = True
-        if time_match:
-            try:
-                day = parse(date_iso)
-                clock_str = time_match[1].replace('.', '')
-                start_val = parse(clock_str, default=day).replace(tzinfo=TZ).isoformat()
-                all_day = False
-            except (ValueError, OverflowError):
-                start_val = date_iso
-        venue = _text(card.select_one('.field--name-field-location, .location, .event-location')) or source['name']
-        desc = _text(card.select_one('.field--name-body, .summary, p'))
+        if ' - ' in date_blob and date_el is not None:
+            parts = [p.strip() for p in date_blob.split(' - ', 1)]
+            if re.search(r'\b20\d\d\b', parts[0]):
+                try:
+                    dt_start = parse(parts[0], fuzzy=False)
+                    if dt_start.tzinfo is None:
+                        dt_start = dt_start.replace(tzinfo=TZ)
+                    start_val = dt_start.isoformat()
+                    all_day = bool(re.fullmatch(r'[^0-9:]+20\d\d', parts[0]))
+                    if len(parts) > 1 and re.search(r'\b20\d\d\b', parts[1]):
+                        dt_end = parse(parts[1], fuzzy=False)
+                        if dt_end.tzinfo is None:
+                            dt_end = dt_end.replace(tzinfo=TZ)
+                        if dt_end >= dt_start:
+                            end_val = dt_end.isoformat()
+                except (ValueError, OverflowError):
+                    start_val = None
+        if not start_val:
+            date_iso = _explicit_date_from_text(date_blob)
+            if not date_iso:
+                m_us = re.search(r'\b(0?[1-9]|1[0-2])/(0?[1-9]|[12]\d|3[01])/(20\d\d)\b', date_blob)
+                if m_us:
+                    date_iso = f"{m_us[3]}-{int(m_us[1]):02d}-{int(m_us[2]):02d}"
+            if not date_iso:
+                continue
+            time_match = re.search(r'(\d{1,2}(?::\d{2})?\s*[ap]\.?m\.?)', date_blob, re.I)
+            start_val = date_iso
+            if time_match:
+                try:
+                    day = parse(date_iso)
+                    clock_str = time_match[1].replace('.', '')
+                    start_val = parse(clock_str, default=day).replace(tzinfo=TZ).isoformat()
+                    all_day = False
+                except (ValueError, OverflowError):
+                    start_val = date_iso
+
+        if not title or not start_val:
+            continue
+        desc = _text(card.select_one('.views-field-body .field-content, .field--name-body, .summary, p'))
         cats = list(dict.fromkeys(['nature_animals', 'outdoor_recreation'] + _infer_cats(title, desc)))
+        mapped = next((val for key, val in _MDC_VENUE_MAP if key in v_low), None)
+        city = mapped[0] if mapped else ('St. Joseph' if 'st. joseph' in blob.lower() else source.get('city'))
+        loc: dict = {'name': venue}
+        if city:
+            loc['address'] = {'addressLocality': city}
         row: dict = {
             'name': title,
             'startDate': start_val,
+            'endDate': end_val,
             'url': urljoin(page, link_el['href']),
-            'location': {'name': venue},
+            'location': loc,
             'description': desc,
             '_all_day': all_day,
             '_categories': cats,
-            '_evidence_quote': f'MDC {date_iso}',
+            '_evidence_quote': f'MDC {date_blob[:60]}',
         }
+        if mapped:
+            row['_region'] = mapped[1]
+        elif source.get('id') == 'mdc-events':
+            row['_region'] = 'surrounding areas'
         if re.search(r'\bfree\b', blob, re.I):
             row['offers'] = {'price': '0', 'priceCurrency': 'USD'}
+        rows.append(row)
+    return rows
+
+
+def _is_truthy(val) -> bool:
+    if isinstance(val, bool):
+        return val
+    return str(val or '').strip().lower() in ('1', 'true', 'yes')
+
+
+def _safe_int(val) -> int:
+    try:
+        return int(val)
+    except (TypeError, ValueError):
+        return 0
+
+
+def libnet_events(body_or_data, source: dict, page: str) -> list[dict]:
+    """Parse Communico / LibNet /eeventcaldata JSON arrays."""
+    data = body_or_data
+    if isinstance(body_or_data, str):
+        try:
+            data = json.loads(body_or_data.lstrip())
+        except ValueError:
+            return []
+    if isinstance(data, dict):
+        data = data.get('events') or data.get('data') or []
+    if not isinstance(data, list):
+        return []
+
+    rows: list[dict] = []
+    for item in data:
+        if not isinstance(item, dict) or _is_truthy(item.get('private_event')):
+            continue
+        title = str(item.get('title') or '').strip()
+        start_raw = str(item.get('event_start') or item.get('start_time') or '').strip()
+        if not title or not start_raw or not re.search(r'\b20\d\d\b', start_raw):
+            continue
+        end_raw = str(item.get('event_end') or item.get('end_time') or '').strip() or None
+        try:
+            dt_start = parse(start_raw)
+            if dt_start.tzinfo is None:
+                dt_start = dt_start.replace(tzinfo=TZ)
+        except (ValueError, OverflowError):
+            continue
+        all_day = dt_start.hour == 0 and dt_start.minute == 0 and (
+            not end_raw or '23:59' in end_raw or '00:00:00' in end_raw
+        )
+        start_val = dt_start.date().isoformat() if all_day else dt_start.isoformat()
+        end_val = None
+        if end_raw and re.search(r'\b20\d\d\b', end_raw):
+            try:
+                dt_end = parse(end_raw)
+                if dt_end.tzinfo is None:
+                    dt_end = dt_end.replace(tzinfo=TZ)
+                if dt_end > dt_start and not (all_day and dt_end.date() == dt_start.date()):
+                    end_val = dt_end.date().isoformat() if all_day else dt_end.isoformat()
+            except (ValueError, OverflowError):
+                end_val = None
+
+        venue = str(item.get('location') or item.get('venue_name') or item.get('library') or source['name']).strip()
+        loc: dict = {'name': venue}
+        if source.get('city'):
+            loc['address'] = {'addressLocality': source['city']}
+        desc_raw = item.get('long_description') or item.get('description') or ''
+        desc = BeautifulSoup(str(desc_raw), 'html.parser').get_text(' ', strip=True) if '<' in str(desc_raw) else str(desc_raw)
+
+        ages_text = str(item.get('ages') or '')
+        ages_arr = [str(x) for x in (item.get('agesArray') or []) if x]
+        tags_arr = [str(x) for x in (item.get('tagsArray') or []) if x]
+        ev_type = str(item.get('event_type') or '')
+        keywords = ' '.join(x for x in [ages_text, *ages_arr, *tags_arr, ev_type] if x)
+
+        cleaned_age_src = re.sub(r'\bgrades?\s+\d+\s*[-–to]+\s*\d+\b', '', ages_text, flags=re.I)
+        age_range = None
+        if re.search(r'\ball\s*ages\b', ages_text, re.I):
+            age_range = 'All ages'
+        elif re.search(r'\bbirth\s*(?:to|[-–])\s*(?:five|5)\b', ages_text, re.I):
+            age_range = '0–5'
+        elif re.search(r'\bbirth\s*(?:to|[-–])\s*(?:six|6)\b', ages_text, re.I):
+            age_range = '0–6'
+        else:
+            m_age = re.search(r'\b(?:ages?\s*)?(\d{1,2})\s*(?:[-–]|to)\s*(\d{1,2})\b', cleaned_age_src, re.I)
+            if m_age:
+                age_range = f'{m_age[1]}–{m_age[2]}'
+            else:
+                m_plus = re.search(r'\b(18|21)\+\b', ages_text)
+                if m_plus:
+                    age_range = m_plus[1] + '+'
+
+        changed = str(item.get('changed') or item.get('changed_reason') or '').lower()
+        ev_status = 'EventCancelled' if 'cancel' in changed else 'EventScheduled'
+
+        reg_cost = item.get('registration_cost')
+        billing_on = _is_truthy(item.get('enable_billing'))
+        offers = None
+        if reg_cost is not None and str(reg_cost).strip():
+            if 'free' in str(reg_cost).lower():
+                offers = {'price': '0', 'priceCurrency': 'USD'}
+            else:
+                m_p = re.search(r'(\d+(?:\.\d{1,2})?)', str(reg_cost))
+                if m_p:
+                    offers = {'price': m_p[1], 'priceCurrency': 'USD'}
+        elif not billing_on:
+            offers = {'price': '0', 'priceCurrency': 'USD'}
+
+        reg_open = _is_truthy(item.get('allow_reg'))
+        max_att = _safe_int(item.get('max_attendee'))
+        tot_reg = _safe_int(item.get('total_registrants'))
+        if reg_open and max_att > 0 and tot_reg >= max_att:
+            reg_status = 'waitlist' if _is_truthy(item.get('allow_waitlist')) else 'sold_out'
+        elif reg_open:
+            reg_status = 'open'
+        else:
+            reg_status = 'unknown'
+
+        rc_raw = str(item.get('registration_close') or '').strip()
+        deadline = rc_raw if re.search(r'\b20\d\d\b', rc_raw) else None
+        link = str(item.get('url') or '').strip() or page
+        cats = list(dict.fromkeys(['libraries_learning'] + _infer_cats(title, keywords, desc)))
+        row: dict = {
+            'name': title,
+            'startDate': start_val,
+            'endDate': end_val,
+            'url': urljoin(page, link),
+            'location': loc,
+            'description': desc,
+            'keywords': keywords,
+            'eventStatus': ev_status,
+            '_all_day': all_day,
+            '_categories': cats,
+            '_evidence_quote': f'LibNet {start_raw}',
+            '_registration': {
+                'status': reg_status,
+                'opens_at': None,
+                'deadline': deadline,
+                'url': urljoin(page, str(item.get('reg_url') or link)) if reg_open else None,
+                'note': 'Public library calendar; check registration and branch hours.',
+            },
+        }
+        if offers:
+            row['offers'] = offers
+        if age_range:
+            row['typicalAgeRange'] = age_range
+        rows.append(row)
+    return rows
+
+
+def livewhale_events(body_or_data, source: dict, page: str) -> list[dict]:
+    """Parse LiveWhale /live/json/events API payloads (e.g., University of Missouri)."""
+    data = body_or_data
+    if isinstance(body_or_data, str):
+        try:
+            data = json.loads(body_or_data.lstrip())
+        except ValueError:
+            return []
+    events_list = data if isinstance(data, list) else (data.get('data') or data.get('events') or []) if isinstance(data, dict) else []
+    rows: list[dict] = []
+    for ev in events_list:
+        if not isinstance(ev, dict):
+            continue
+        title = str(ev.get('title') or '').strip()
+        start_raw = ev.get('date_iso') or (ev.get('date_utc') + '+00:00' if ev.get('date_utc') else None)
+        if not title or not start_raw or not re.search(r'\b20\d\d\b', str(start_raw)):
+            continue
+        end_raw = ev.get('date2_iso') or (ev.get('date2_utc') + '+00:00' if ev.get('date2_utc') else None)
+        try:
+            dt_s = isoparse(str(start_raw))
+            if end_raw:
+                dt_e = isoparse(str(end_raw))
+                if dt_e < dt_s:
+                    end_raw = None
+        except (ValueError, TypeError):
+            end_raw = None
+
+        loc_val = ev.get('location')
+        venue = loc_val.get('name') if isinstance(loc_val, dict) else (str(loc_val).strip() if loc_val else source['name'])
+        loc: dict = {'name': venue or source['name']}
+        if source.get('city'):
+            loc['address'] = {'addressLocality': source['city']}
+        lat, lng = ev.get('latitude'), ev.get('longitude')
+        if lat is not None and lng is not None:
+            try:
+                loc['geo'] = {'latitude': float(lat), 'longitude': float(lng)}
+            except (TypeError, ValueError):
+                pass
+
+        desc_raw = ev.get('summary') or ev.get('description') or ''
+        desc = BeautifulSoup(str(desc_raw), 'html.parser').get_text(' ', strip=True) if '<' in str(desc_raw) else str(desc_raw)
+        types = ' '.join(str(t) for t in (ev.get('event_types') or []) if t)
+        cost = str(ev.get('cost') or '')
+        offers = None
+        if ev.get('is_free') or re.search(r'\bfree\b', cost, re.I):
+            offers = {'price': '0', 'priceCurrency': 'USD'}
+        else:
+            m_cost = re.search(r'\$?\s*(\d+(?:\.\d{2})?)', cost)
+            if m_cost:
+                offers = {'price': m_cost[1], 'priceCurrency': 'USD'}
+        ev_status = 'EventCancelled' if ev.get('is_canceled') or str(ev.get('status') or '').lower() == 'canceled' else 'EventScheduled'
+        cats = _infer_cats(title, types, desc)
+        row: dict = {
+            'name': title,
+            'startDate': str(start_raw),
+            'endDate': str(end_raw) if end_raw else None,
+            'url': urljoin(page, str(ev.get('url') or page)),
+            'location': loc,
+            'description': desc,
+            'keywords': types,
+            'eventStatus': ev_status,
+            '_all_day': bool(ev.get('is_all_day')),
+            '_evidence_quote': f'LiveWhale {start_raw}',
+        }
+        if offers:
+            row['offers'] = offers
+        if cats:
+            row['_categories'] = cats
         rows.append(row)
     return rows
 

@@ -45,7 +45,16 @@ from platform_adapters import (
     mlb_schedule_events,
     mdc_events,
     ticketmaster_events,
+    libnet_events,
+    livewhale_events,
 )
+
+class Redirect308Handler(urllib.request.HTTPRedirectHandler):
+    def http_error_308(self, req, fp, code, msg, headers):
+        return self.http_error_301(req, fp, 301, msg, headers)
+
+
+OPENER = urllib.request.build_opener(Redirect308Handler)
 
 ROOT = Path(__file__).resolve().parents[1]
 TZ = ZoneInfo('America/Chicago')
@@ -136,7 +145,7 @@ class Fetcher:
         time.sleep(.25)
         self.requests += 1
         try:
-            with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=20) as response:
+            with OPENER.open(urllib.request.Request(url, headers=headers), timeout=20) as response:
                 if urlsplit(response.url).hostname != p.hostname:
                     raise ValueError('Cross-host redirect requires source registry review')
                 body = response.read(MAX_BYTES + 1)
@@ -293,7 +302,7 @@ def normalize(raw, source, observed, page):
     signature = canonical(link) + '|' + (start or 'offering')
     return enrich({'id': hashlib.sha256(signature.encode()).hexdigest()[:20], 'title': title,
             'start': start, 'end': end, 'date': start[:10] if start else None, 'end_date': end[:10] if end else (start[:10] if start else None),
-            'all_day': bool(all_day), 'region': source['region'], 'city': clean(address.get('addressLocality') or source['city']),
+            'all_day': bool(all_day), 'region': raw.get('_region') or source['region'], 'city': clean(address.get('addressLocality') or source['city']),
             'venue': clean(location.get('name') or source['name']), 'type': classify(title, str(raw.get('keywords', ''))),
             'type_inferred': True, 'ages': age_rules(raw['typicalAgeRange']) if raw.get('typicalAgeRange') else explicit_age_guidance(title, raw.get('description', '')),
             'status': {'EventCancelled':'canceled','EventPostponed':'postponed','EventRescheduled':'rescheduled'}.get(status, 'scheduled' if start else 'listed'),
@@ -424,8 +433,44 @@ def collect_source(source, start, until, observed, cache):
                     if row: records.append(row)
                 except (ValueError, TypeError) as e: errors.append(str(e))
         elif source['format'] == 'bibliocommons':
-            body = f.fetch(source['url']); visited.append(source['url'])
-            for item in bibliocommons_events(body, source, source['url']):
+            limit = source.get('max_pages', 3)
+            base_p = urlsplit(source['url'])
+            base_q = dict(parse_qsl(base_p.query))
+            for page_num in range(1, limit + 1):
+                q = dict(base_q, page=page_num)
+                target = urlunsplit((base_p.scheme, base_p.netloc, base_p.path, urlencode(q), ''))
+                data = json.loads(f.fetch(target)); visited.append(target)
+                for item in bibliocommons_events(data, source, target):
+                    try:
+                        row = normalize(item, source, observed, target)
+                        if row: records.append(row)
+                    except (ValueError, TypeError) as e: errors.append(str(e))
+                pages = (((data.get('events') or {}).get('pagination') or {}).get('pages') or 1)
+                if page_num >= pages: break
+                if page_num == limit: truncated = True
+        elif source['format'] == 'libnet':
+            req_payload = json.dumps({
+                'private': False,
+                'date': start.isoformat(),
+                'days': int(source.get('window_days', 45)),
+                'locations': [],
+                'ages': [],
+                'types': [],
+            }, separators=(',', ':'))
+            base_p = urlsplit(source['url'])
+            q = dict(parse_qsl(base_p.query))
+            q['event_type'] = q.get('event_type', '0')
+            q['req'] = req_payload
+            target = urlunsplit((base_p.scheme, base_p.netloc, base_p.path, urlencode(q), ''))
+            data = json.loads(f.fetch(target)); visited.append(target)
+            for item in libnet_events(data, source, target):
+                try:
+                    row = normalize(item, source, observed, target)
+                    if row: records.append(row)
+                except (ValueError, TypeError) as e: errors.append(str(e))
+        elif source['format'] == 'livewhale':
+            data = json.loads(f.fetch(source['url'])); visited.append(source['url'])
+            for item in livewhale_events(data, source, source['url']):
                 try:
                     row = normalize(item, source, observed, source['url'])
                     if row: records.append(row)
@@ -671,13 +716,16 @@ def run(registry, output, cache, now=None, only=None):
             )
     if only:
         # A repair probe must not mark untouched providers stale or erase their health.
-        fresh.extend(r for r in old['activities'] if r['source_id'] not in selected)
+        active_ids = {s['id'] for s in all_sources}
+        fresh.extend(r for r in old['activities'] if r['source_id'] not in selected and r['source_id'] in active_ids)
         health_by_id={h['id']:h for h in old.get('sources',[])}
         health_by_id.update({h['id']:h for h in health})
         health=[health_by_id[s['id']] for s in all_sources if s['id'] in health_by_id]
+    active_ids = {s['id'] for s in all_sources}
+    kept_old = [r for r in old['activities'] if r.get('source_id') in active_ids]
     result = {'version': 1, 'updated_at': observed, 'horizon_start': start.isoformat(), 'horizon_end': until.isoformat(),
               'timezone': 'America/Chicago', 'collection_mode': 'deterministic-no-llm', 'sources': health,
-              'activities': reconcile(old['activities'], fresh, health, now)}
+              'activities': reconcile(kept_old, fresh, health, now)}
     taxonomy = json.loads((ROOT / 'data/activity-taxonomy.json').read_text())
     result['taxonomy'] = taxonomy
     result['places'] = public_places()
