@@ -27,7 +27,7 @@
     "regional_wildcards": true,
     "filters": {}
   },
-  "graph_digest": "e64ee2f97229efac1c4a1be55ce5953770f73b6d955bb2094368452e25fc322e",
+  "graph_digest": "ee3e36da68db9fbf7fda4cc1965104b6f82517df770786b39a93582a89a50a7d",
   "completed": [
     "source-graph",
     "deep-first-party-sweep",
@@ -35,7 +35,8 @@
     "broader-web-search",
     "merge",
     "fit-based-ranking",
-    "adversarial-review"
+    "adversarial-review",
+    "recommendation"
   ],
   "coverage": [
     {
@@ -585,6 +586,6 @@
         }
       ]
     },
-    "digest": "dced30996ab56d76f2c736c2a8e9cd142f88e53c93e642a55fed49cd75bfde26"
+    "digest": "07545089e7853340782dc4ffc3aab2302332ac703e92261e7f58a30da667e5fb"
   }
 }
