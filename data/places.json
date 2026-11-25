@@ -584,7 +584,14 @@
       "id": "shsmo-columbia-gallery",
       "name": "SHSMO Center for Missouri Studies art gallery",
       "address": "605 Elm Street, Columbia, MO 65201",
-      "geo": null,
+      "geo": {
+        "lat": 38.948607285081,
+        "lng": -92.330747433427,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=605+Elm+Street%2C+Columbia%2C+MO+65201&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-24T22:17:35.454015-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
       "hours": {
         "text": "Art gallery: Tuesday–Friday 10 a.m.–4:30 p.m.; Saturday 10 a.m.–2 p.m.; Sunday/Monday closed. Thanksgiving closure noon November 25–28, 2026; winter break noon December 24, 2026–January 1, 2027. Research-center and bookstore hours differ.",
         "timezone": "America/Chicago",
@@ -717,7 +724,14 @@
       "id": "lawrence-indoor-aquatic",
       "name": "Lawrence Indoor Aquatic Center",
       "address": "4706 Overland Drive, Lawrence, KS",
-      "geo": null,
+      "geo": {
+        "lat": 38.973977358659,
+        "lng": -95.304059769217,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=4706+Overland+Drive%2C+Lawrence%2C+KS&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-24T22:17:35.454015-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
       "source_url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center",
       "hours": {
         "text": "No general building schedule published here. Registration office Monday-Friday 8 a.m.-5 p.m. is not public swimming access. Lap, family, diving and workout schedules differ; use each amenity. Closed November 26-27, 2026.",
@@ -945,7 +959,14 @@
       "id": "midway-mini-golf",
       "name": "Midway Golf & Games miniature golf",
       "address": "5500 W Van Horn Tavern Rd, Columbia, MO 65203",
-      "geo": null,
+      "geo": {
+        "lat": 38.969188005343,
+        "lng": -92.417027136072,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=5500+W+Van+Horn+Tavern+Rd%2C+Columbia%2C+MO+65203&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-24T22:17:35.454015-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
       "source_url": "https://midwaygolfgames.com/golf/miniature-golf/",
       "hours": {
         "text": "Clubhouse/outdoor attractions: Sunday-Thursday 10 a.m.-9 p.m.; Friday/Saturday 10 a.m.-10 p.m. Published hours can change throughout the year; restaurant hours are separate.",
@@ -995,6 +1016,72 @@
         ],
         "venue_aliases": [
           "Midway Golf & Games"
+        ]
+      }
+    },
+    {
+      "id": "gieringer-s-family-farm",
+      "name": "Gieringer’s Family Farm",
+      "address": "39345 W 183rd St, Edgerton, KS 66021",
+      "geo": {
+        "lat": 38.796775890495,
+        "lng": -95.04059660301,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=39345+W+183rd+St%2C+Edgerton%2C+KS+66021&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-24T22:18:23.985378-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://goberryfarm.com",
+      "match": {
+        "source_ids": [],
+        "venue_aliases": [
+          "Gieringer’s Family Farm"
+        ]
+      }
+    },
+    {
+      "id": "cider-hill-family-orchard",
+      "name": "Cider Hill Family Orchard",
+      "address": "3341 N 139th St, Kansas City, KS 66109",
+      "geo": {
+        "lat": 39.147316188851,
+        "lng": -94.90062223944,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=3341+N+139th+St%2C+Kansas+City%2C+KS+66109&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-24T22:18:24.570760-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://www.ciderhillfamilyorchard.com",
+      "match": {
+        "source_ids": [],
+        "venue_aliases": [
+          "Cider Hill Family Orchard"
+        ]
+      }
+    },
+    {
+      "id": "deanna-rose-children-s-farmstead",
+      "name": "Deanna Rose Children’s Farmstead",
+      "address": "13800 Switzer Rd, Overland Park, KS 66221",
+      "geo": {
+        "lat": 38.878275713799,
+        "lng": -94.700551061314,
+        "precision": "address",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=13800+Switzer+Rd%2C+Overland+Park%2C+KS+66221&benchmark=Public_AR_Current&format=json",
+        "checked_at": "2026-11-24T22:18:24.869128-06:00",
+        "note": "US Census street-address match; approximate venue location, not a verified entrance."
+      },
+      "hours": null,
+      "activities": [],
+      "source_url": "https://www.opkansas.org/recreation-fun/deanna-rose-childrens-farmstead",
+      "match": {
+        "source_ids": [],
+        "venue_aliases": [
+          "Deanna Rose Children’s Farmstead"
         ]
       }
     }

@@ -1,7 +1,7 @@
 {
   "$schema": "../schemas/source-graph.schema.json",
   "version": 1,
-  "last_reviewed": "2026-11-07",
+  "last_reviewed": "2026-11-24",
   "seed_material": {
     "path": "data/primary-sources.txt",
     "preservation": "verbatim",
@@ -9,27 +9,10 @@
   },
   "nodes": [
     {
-      "id": "kc-daily",
-      "label": "KC Daily",
       "canonical_url": "https://www.kcdaily.com/",
-      "source_class": "local-editorial",
-      "roles": [
-        "discovery",
-        "graph-expansion"
-      ],
-      "status": "active",
       "coverage": [
         "Kansas City metro"
       ],
-      "provenance": {
-        "kind": "provided-seed",
-        "raw_value": "KC daily",
-        "seed_line": 1
-      },
-      "verification": {
-        "last_checked": "2026-11-07",
-        "evidence_url": "https://www.kcdaily.com/archive"
-      },
       "crawl": {
         "entrypoints": [
           "https://www.kcdaily.com/",
@@ -40,6 +23,23 @@
           "relevant archives containing future announcements",
           "outbound organizer, venue, registration, and ticket links"
         ]
+      },
+      "id": "kc-daily",
+      "label": "KC Daily",
+      "provenance": {
+        "kind": "provided-seed",
+        "raw_value": "KC daily",
+        "seed_line": 1
+      },
+      "roles": [
+        "discovery",
+        "graph-expansion"
+      ],
+      "source_class": "local-editorial",
+      "status": "active",
+      "verification": {
+        "evidence_url": "https://www.kcdaily.com/archive",
+        "last_checked": "2026-11-07"
       }
     },
     {
@@ -459,6 +459,294 @@
         "sweep_targets": [
           "event schedule and dates",
           "organizer ticketing and session access"
+        ]
+      }
+    },
+    {
+      "id": "kcconvention-events-feed",
+      "label": "Kansas City Convention Center » Events Feed",
+      "canonical_url": "https://kcconvention.com/events/feed",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep"
+      ],
+      "status": "deferred",
+      "coverage": [
+        "Kansas City metro"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://kcconvention.com/events/feed",
+        "observed_relation": "Discovery only on 2026-11-24: Feed parsed with no explicit-date events."
+      },
+      "verification": {
+        "last_checked": "2026-11-24",
+        "evidence_url": "https://kcconvention.com/events/feed",
+        "collector_status": "discovery-only",
+        "captured_records": 0
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://kcconvention.com/events/feed"
+        ],
+        "sweep_targets": [
+          "specific event or program"
+        ]
+      }
+    },
+    {
+      "id": "kcconvention-events",
+      "label": "Kansas City Convention Center » iCal Feed",
+      "canonical_url": "https://kcconvention.com/events?ical=1",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep"
+      ],
+      "status": "active",
+      "coverage": [
+        "Kansas City metro"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://kcconvention.com/events?ical=1",
+        "observed_relation": "Promoted 2026-11-24 after probe found 9 explicit-date events."
+      },
+      "verification": {
+        "last_checked": "2026-11-24",
+        "evidence_url": "https://kcconvention.com/events?ical=1",
+        "collector_status": "verified-parser",
+        "captured_records": 9
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://kcconvention.com/events?ical=1"
+        ],
+        "sweep_targets": [
+          "specific event or program"
+        ]
+      }
+    },
+    {
+      "id": "kcconvention-feed",
+      "label": "Kansas City Convention Center » Feed",
+      "canonical_url": "https://kcconvention.com/feed",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep"
+      ],
+      "status": "deferred",
+      "coverage": [
+        "Kansas City metro"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://kcconvention.com/feed",
+        "observed_relation": "Discovery only on 2026-11-24: Feed parsed with no explicit-date events."
+      },
+      "verification": {
+        "last_checked": "2026-11-24",
+        "evidence_url": "https://kcconvention.com/feed",
+        "collector_status": "discovery-only",
+        "captured_records": 0
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://kcconvention.com/feed"
+        ],
+        "sweep_targets": [
+          "specific event or program"
+        ]
+      }
+    },
+    {
+      "id": "kcopera-feed",
+      "label": "Lyric Opera of Kansas City » Feed",
+      "canonical_url": "https://kcopera.org/feed",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep"
+      ],
+      "status": "deferred",
+      "coverage": [
+        "Kansas City metro"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://kcopera.org/feed",
+        "observed_relation": "Discovery only on 2026-11-24: Feed parsed with no explicit-date events."
+      },
+      "verification": {
+        "last_checked": "2026-11-24",
+        "evidence_url": "https://kcopera.org/feed",
+        "collector_status": "discovery-only",
+        "captured_records": 0
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://kcopera.org/feed"
+        ],
+        "sweep_targets": [
+          "specific event or program"
+        ]
+      }
+    },
+    {
+      "id": "lawrenceartscenter-events-at-lawrence-ar",
+      "label": "Lawrence Arts Center » Events Feed",
+      "canonical_url": "https://lawrenceartscenter.org/events-at-lawrence-arts-center/feed",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep"
+      ],
+      "status": "deferred",
+      "coverage": [
+        "Lawrence"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://lawrenceartscenter.org/events-at-lawrence-arts-center/feed",
+        "observed_relation": "Discovery only on 2026-11-24: Feed parsed with no explicit-date events."
+      },
+      "verification": {
+        "last_checked": "2026-11-24",
+        "evidence_url": "https://lawrenceartscenter.org/events-at-lawrence-arts-center/feed",
+        "collector_status": "discovery-only",
+        "captured_records": 0
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://lawrenceartscenter.org/events-at-lawrence-arts-center/feed"
+        ],
+        "sweep_targets": [
+          "specific event or program"
+        ]
+      }
+    },
+    {
+      "id": "midwaygolfgames-feed",
+      "label": "Midway Golf and Games » Feed",
+      "canonical_url": "https://midwaygolfgames.com/feed",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep"
+      ],
+      "status": "deferred",
+      "coverage": [
+        "Columbia"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://midwaygolfgames.com/feed",
+        "observed_relation": "Discovery only on 2026-11-24: Feed parsed with no explicit-date events."
+      },
+      "verification": {
+        "last_checked": "2026-11-24",
+        "evidence_url": "https://midwaygolfgames.com/feed",
+        "collector_status": "discovery-only",
+        "captured_records": 0
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://midwaygolfgames.com/feed"
+        ],
+        "sweep_targets": [
+          "specific event or program"
+        ]
+      }
+    },
+    {
+      "id": "nelson-atkins-feed",
+      "label": "Nelson Atkins » Feed",
+      "canonical_url": "https://nelson-atkins.org/feed",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep"
+      ],
+      "status": "active",
+      "coverage": [
+        "Kansas City metro"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://nelson-atkins.org/feed",
+        "observed_relation": "Promoted 2026-11-24 after probe found 2 explicit-date events."
+      },
+      "verification": {
+        "last_checked": "2026-11-24",
+        "evidence_url": "https://nelson-atkins.org/feed",
+        "collector_status": "verified-parser",
+        "captured_records": 2
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://nelson-atkins.org/feed"
+        ],
+        "sweep_targets": [
+          "specific event or program"
+        ]
+      }
+    },
+    {
+      "id": "wonderscope-feed",
+      "label": "Wonderscope » Feed",
+      "canonical_url": "https://wonderscope.org/feed",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep"
+      ],
+      "status": "active",
+      "coverage": [
+        "Kansas City metro"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://wonderscope.org/feed",
+        "observed_relation": "Promoted 2026-11-24 after probe found 1 explicit-date events."
+      },
+      "verification": {
+        "last_checked": "2026-11-24",
+        "evidence_url": "https://wonderscope.org/feed",
+        "collector_status": "verified-parser",
+        "captured_records": 1
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://wonderscope.org/feed"
+        ],
+        "sweep_targets": [
+          "specific event or program"
+        ]
+      }
+    },
+    {
+      "id": "midlandkc-events-rss",
+      "label": "RSS",
+      "canonical_url": "https://www.midlandkc.com/events/rss",
+      "source_class": "event-organizer",
+      "roles": [
+        "first-party-sweep"
+      ],
+      "status": "deferred",
+      "coverage": [
+        "Kansas City metro"
+      ],
+      "provenance": {
+        "kind": "reviewed-supplement",
+        "discovered_on": "https://www.midlandkc.com/events/rss",
+        "observed_relation": "Discovery only on 2026-11-24: Feed parsed with no explicit-date events."
+      },
+      "verification": {
+        "last_checked": "2026-11-24",
+        "evidence_url": "https://www.midlandkc.com/events/rss",
+        "collector_status": "discovery-only",
+        "captured_records": 0
+      },
+      "crawl": {
+        "entrypoints": [
+          "https://www.midlandkc.com/events/rss"
+        ],
+        "sweep_targets": [
+          "specific event or program"
         ]
       }
     }

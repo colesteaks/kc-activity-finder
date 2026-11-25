@@ -1814,6 +1814,258 @@
           "relationship": "Organizer recreation directory links to this specific mini-golf offering"
         }
       ]
+    },
+    {
+      "id": "kcconvention-events-feed",
+      "name": "Kansas City Convention Center » Events Feed",
+      "region": "Kansas City metro",
+      "city": "Kansas City metro",
+      "kind": "organizer",
+      "format": "discovery",
+      "url": "https://kcconvention.com/events/feed",
+      "categories": [
+        "community_social"
+      ],
+      "activity_kinds": [
+        "one_off"
+      ],
+      "required_leaves": [
+        "specific event or program"
+      ],
+      "max_details": 0,
+      "collection_note": "Discovery only on 2026-11-24: Feed parsed with no explicit-date events.",
+      "probe": {
+        "checked_at": "2026-11-24",
+        "classification": "discovery",
+        "event_count": 0,
+        "evidence_url": "https://kcconvention.com/events/feed"
+      },
+      "pattern": "/no-automatic-detail/",
+      "max_pages": 1
+    },
+    {
+      "id": "kcconvention-events",
+      "name": "Kansas City Convention Center » iCal Feed",
+      "region": "Kansas City metro",
+      "city": "Kansas City metro",
+      "kind": "organizer",
+      "format": "ics",
+      "url": "https://kcconvention.com/events?ical=1",
+      "categories": [
+        "community_social"
+      ],
+      "activity_kinds": [
+        "one_off"
+      ],
+      "required_leaves": [
+        "specific event or program"
+      ],
+      "max_details": 0,
+      "collection_note": "Promoted 2026-11-24 after probe found 9 explicit-date events.",
+      "probe": {
+        "checked_at": "2026-11-24",
+        "classification": "verified_parser",
+        "event_count": 9,
+        "evidence_url": "https://kcconvention.com/events?ical=1"
+      },
+      "pattern": "/no-automatic-detail/",
+      "max_pages": 1
+    },
+    {
+      "id": "kcconvention-feed",
+      "name": "Kansas City Convention Center » Feed",
+      "region": "Kansas City metro",
+      "city": "Kansas City metro",
+      "kind": "organizer",
+      "format": "discovery",
+      "url": "https://kcconvention.com/feed",
+      "categories": [
+        "community_social"
+      ],
+      "activity_kinds": [
+        "one_off"
+      ],
+      "required_leaves": [
+        "specific event or program"
+      ],
+      "max_details": 0,
+      "collection_note": "Discovery only on 2026-11-24: Feed parsed with no explicit-date events.",
+      "probe": {
+        "checked_at": "2026-11-24",
+        "classification": "discovery",
+        "event_count": 0,
+        "evidence_url": "https://kcconvention.com/feed"
+      },
+      "pattern": "/no-automatic-detail/",
+      "max_pages": 1
+    },
+    {
+      "id": "kcopera-feed",
+      "name": "Lyric Opera of Kansas City » Feed",
+      "region": "Kansas City metro",
+      "city": "Kansas City metro",
+      "kind": "organizer",
+      "format": "discovery",
+      "url": "https://kcopera.org/feed",
+      "categories": [
+        "community_social"
+      ],
+      "activity_kinds": [
+        "one_off"
+      ],
+      "required_leaves": [
+        "specific event or program"
+      ],
+      "max_details": 0,
+      "collection_note": "Discovery only on 2026-11-24: Feed parsed with no explicit-date events.",
+      "probe": {
+        "checked_at": "2026-11-24",
+        "classification": "discovery",
+        "event_count": 0,
+        "evidence_url": "https://kcopera.org/feed"
+      },
+      "pattern": "/no-automatic-detail/",
+      "max_pages": 1
+    },
+    {
+      "id": "lawrenceartscenter-events-at-lawrence-ar",
+      "name": "Lawrence Arts Center » Events Feed",
+      "region": "Lawrence",
+      "city": "Lawrence",
+      "kind": "organizer",
+      "format": "discovery",
+      "url": "https://lawrenceartscenter.org/events-at-lawrence-arts-center/feed",
+      "categories": [
+        "community_social"
+      ],
+      "activity_kinds": [
+        "one_off"
+      ],
+      "required_leaves": [
+        "specific event or program"
+      ],
+      "max_details": 0,
+      "collection_note": "Discovery only on 2026-11-24: Feed parsed with no explicit-date events.",
+      "probe": {
+        "checked_at": "2026-11-24",
+        "classification": "discovery",
+        "event_count": 0,
+        "evidence_url": "https://lawrenceartscenter.org/events-at-lawrence-arts-center/feed"
+      },
+      "pattern": "/no-automatic-detail/",
+      "max_pages": 1
+    },
+    {
+      "id": "midwaygolfgames-feed",
+      "name": "Midway Golf and Games » Feed",
+      "region": "Columbia",
+      "city": "Columbia",
+      "kind": "organizer",
+      "format": "discovery",
+      "url": "https://midwaygolfgames.com/feed",
+      "categories": [
+        "community_social"
+      ],
+      "activity_kinds": [
+        "one_off"
+      ],
+      "required_leaves": [
+        "specific event or program"
+      ],
+      "max_details": 0,
+      "collection_note": "Discovery only on 2026-11-24: Feed parsed with no explicit-date events.",
+      "probe": {
+        "checked_at": "2026-11-24",
+        "classification": "discovery",
+        "event_count": 0,
+        "evidence_url": "https://midwaygolfgames.com/feed"
+      },
+      "pattern": "/no-automatic-detail/",
+      "max_pages": 1
+    },
+    {
+      "id": "nelson-atkins-feed",
+      "name": "Nelson Atkins » Feed",
+      "region": "Kansas City metro",
+      "city": "Kansas City metro",
+      "kind": "organizer",
+      "format": "rss",
+      "url": "https://nelson-atkins.org/feed",
+      "categories": [
+        "community_social"
+      ],
+      "activity_kinds": [
+        "one_off"
+      ],
+      "required_leaves": [
+        "specific event or program"
+      ],
+      "max_details": 0,
+      "collection_note": "Promoted 2026-11-24 after probe found 2 explicit-date events.",
+      "probe": {
+        "checked_at": "2026-11-24",
+        "classification": "verified_parser",
+        "event_count": 2,
+        "evidence_url": "https://nelson-atkins.org/feed"
+      },
+      "pattern": "/no-automatic-detail/",
+      "max_pages": 1
+    },
+    {
+      "id": "wonderscope-feed",
+      "name": "Wonderscope » Feed",
+      "region": "Kansas City metro",
+      "city": "Kansas City metro",
+      "kind": "organizer",
+      "format": "rss",
+      "url": "https://wonderscope.org/feed",
+      "categories": [
+        "community_social"
+      ],
+      "activity_kinds": [
+        "one_off"
+      ],
+      "required_leaves": [
+        "specific event or program"
+      ],
+      "max_details": 0,
+      "collection_note": "Promoted 2026-11-24 after probe found 1 explicit-date events.",
+      "probe": {
+        "checked_at": "2026-11-24",
+        "classification": "verified_parser",
+        "event_count": 1,
+        "evidence_url": "https://wonderscope.org/feed"
+      },
+      "pattern": "/no-automatic-detail/",
+      "max_pages": 1
+    },
+    {
+      "id": "midlandkc-events-rss",
+      "name": "RSS",
+      "region": "Kansas City metro",
+      "city": "Kansas City metro",
+      "kind": "organizer",
+      "format": "discovery",
+      "url": "https://www.midlandkc.com/events/rss",
+      "categories": [
+        "community_social"
+      ],
+      "activity_kinds": [
+        "one_off"
+      ],
+      "required_leaves": [
+        "specific event or program"
+      ],
+      "max_details": 0,
+      "collection_note": "Discovery only on 2026-11-24: Feed parsed with no explicit-date events.",
+      "probe": {
+        "checked_at": "2026-11-24",
+        "classification": "discovery",
+        "event_count": 0,
+        "evidence_url": "https://www.midlandkc.com/events/rss"
+      },
+      "pattern": "/no-automatic-detail/",
+      "max_pages": 1
     }
   ]
 }
