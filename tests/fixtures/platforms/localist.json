@@ -1,0 +1,24 @@
+{
+  "events": [
+    {
+      "event": {
+        "id": 101,
+        "title": "KU Astronomy Observatory Night",
+        "localist_url": "https://calendar.ku.edu/event/obs-night",
+        "description_text": "Free public telescope viewing.",
+        "location_name": "Malott Hall",
+        "address": "1251 Wescoe Hall Dr, Lawrence, KS",
+        "free": true,
+        "geo": {"latitude": "38.958", "longitude": "-95.249"},
+        "filters": {
+          "event_types": [{"name": "Science & Lectures"}],
+          "event_audience": [{"name": "All Ages"}]
+        },
+        "event_instances": [
+          {"event_instance": {"start": "2026-12-11T19:00:00-06:00", "end": "2026-12-11T21:00:00-06:00", "all_day": false}}
+        ]
+      }
+    }
+  ],
+  "page": {"current": 1, "size": 50, "total": 1}
+}

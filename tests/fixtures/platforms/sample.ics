@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//KC Test//Events//EN
+BEGIN:VEVENT
+UID:evt-1@example.test
+SUMMARY:Saturday Morning
+  Trail Walk
+DTSTART;TZID=America/Chicago:20261205T090000
+DTEND;TZID=America/Chicago:20261205T110000
+RRULE:FREQ=WEEKLY;COUNT=4
+EXDATE;TZID=America/Chicago:20261212T090000
+LOCATION:Loose Park\, Kansas City
+DESCRIPTION:Guided walk\; bring water.
+CATEGORIES:Outdoor Recreation,Nature
+GEO:39.0268;-94.5944
+URL:https://example.test/trail-walk
+END:VEVENT
+BEGIN:VEVENT
+UID:evt-2@example.test
+SUMMARY:Canceled Winter Lecture
+DTSTART;VALUE=DATE:20261210
+STATUS:CANCELLED
+URL:https://example.test/lecture
+END:VEVENT
+END:VCALENDAR

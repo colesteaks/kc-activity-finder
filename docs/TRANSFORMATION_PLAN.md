@@ -32,9 +32,9 @@
 | `web/activities.json` payload (and relational `bundle.min.json`) | 11 MB (`activities.json` only) | 11 MB | Minified `activities.json` + < 1 MB `bundle.min.json` |
 | Age guidance present (`ages.min`/`all_ages`) vs discovery `hints` | 28 (0.8%) / none | 28 (0.8%) / none | Strict `ages` preserved + >85% `hints.audience` |
 | Stale / disappeared records | 454 (13.1%) | 454 (13.1%) | < 5% (with 14-day TTL + yield-drop guard) |
-| Active live structured parsers vs total routes | 19 / 56 | 21 / 50 (`nelson` TNEW + `bentonville-downtown` ported; 6 Nov 7 zombies purged) | 7 reusable platform adapters + multi-region live sources |
+| Active live structured parsers vs total routes | 19 / 56 | 21 / 50 (10 new platform adapter engines built & wired) | 7 reusable platform adapters + multi-region live sources |
 | `data/places.json` entries (with coordinates) | 12 (9 with coords) | 12 (9 with coords; `crystal-museum` verified hours ported) | 30+ places with US Census verified coordinates |
-| Python unit tests / Node tests | 100 / 24 | 118 / 24 | All green + full coverage of new features |
+| Python unit tests / Node tests | 100 / 24 | 127 / 24 | All green + full coverage of new features |
 
 ---
 
@@ -46,9 +46,9 @@
   - Fixed Brotli (`br`) crash (`truman`), `kc-zoo` compact TZ & end-before-start handling, Drupal load-more selector + `>40%` yield-drop circuit breaker (`status: "degraded"`), 14-day TTL on disappeared records, Visit KC suburban city inference (`infer_metro_city`).
   - Ported `origin/maintain/nelson-tnew-calendar` (`tnew_events`, `detail_hosts`, fixtures/tests), `origin/maintain/bentonville-calendar-2026-W48` (`downtown_events`, fixtures/tests), and `origin/maintain/museum-hours-2026-W47` (`crystal-museum` verified hours + fixture test).
   - Purged 6 dead single-event Nov 7 captures (`kc-pet-fest`, `central-avenue-dia`, `troost-united`, `dfscon`, `crossroads-flea`, `ls-mistletoe`), updated `kcopera` → `https://kcopera.org/events/` and `mavericks` → `https://kcmavericks.com/schedule`, rebuilt `examples/*-run.json` & `*-report.md`.
-- [ ] **M2: 7 Reusable Platform Adapters + Fuzzy Cross-Source Deduplication**
-  - Implement `scripts/platform_adapters.py`: `ics` (with `RRULE` + `EXDATE`), `rss`, `localist`, `simpleview`, `bibliocommons`, `libcal`, `civicplus`, `mlb_schedule`, `mdc`, and env-gated `ticketmaster`.
-  - Wire into `collect_activities.py` + upgrade `reconcile()` with canonical venue aliases + token-set title Jaccard (`>= 0.72`) cross-source deduplication.
+- [x] **M2: 7 Reusable Platform Adapters + Fuzzy Cross-Source Deduplication**
+  - Implemented `scripts/platform_adapters.py`: `ics` (RFC 5545 unfolding + `RRULE` + `EXDATE`), `rss` (RSS 2.0/Atom explicit-date only), `localist`, `simpleview`, `bibliocommons`, `libcal`, `civicplus`, `mlb_schedule` (`home_only`), `mdc`, and env-gated `ticketmaster`.
+  - Wired all 10 platform formats into `scripts/collect_activities.py` and upgraded `reconcile()` with canonical venue normalization + token-set Jaccard (`>= 0.72`) cross-source corroboration while preserving multi-session showtimes. Added fixtures & 9 tests in `tests/test_platform_adapters.py`.
 - [ ] **M3: Two-Layer Transparent Enrichment, 2-Tier Geo Hierarchy, Depth Matrix & Census Geocoder**
   - Implement `scripts/geo_model.py` (`corridor`, `subregion`, `municipality`, `drive_band`, `amtrak_accessible`), `scripts/enrichment.py` (`hints`: `audience`, `free_likely`, `indoor_outdoor`, `time_of_day`, `is_promo`, `novelty`, `standout_score`), and `scripts/geocode_places.py` (US Census Geocoder).
   - Update `activity_model.py`, `schemas/activity.schema.json`, `data/activity-taxonomy.json`, `data/workflow.json`, and `weekly_discovery_brief.py` (depth tiers + `kc-daily-source-map` frequency × platform scoring).
@@ -70,7 +70,8 @@
 | Milestone | Commit SHA | Notes |
 | --- | --- | --- |
 | M0 | `77d1d1b` | Baseline verified: 100 Python tests, 24 Node tests, 3,478 public records valid |
-| M1 | *(in this commit)* | 118 Python tests, 24 Node tests, `validate_repo` + `validate_public_data` passing |
+| M1 | `65d7634` | 118 Python tests, 24 Node tests, `validate_repo` + `validate_public_data` passing |
+| M2 | *(in this commit)* | 127 Python tests, 24 Node tests; 10 platform adapters + fuzzy dedup |
 
 ---
 
